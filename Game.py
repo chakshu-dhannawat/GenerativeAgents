@@ -1,0 +1,282 @@
+import Agent
+from Util import *
+from Queries import *
+from Params import *
+import random
+import pygame
+from pygame.locals import *
+import os
+import sys
+import math
+import cv2
+import numpy as np
+
+
+pygame.font.init()
+pygame.init()
+DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
+speed = FPS*0.6
+
+
+'''
+====================
+Assests
+====================
+'''
+
+font = pygame.font.SysFont('comicsans', 30, True)
+font2 = pygame.font.SysFont('arial', 25)
+
+bg = pygame.image.load(Path+'town2.jpg')
+
+# music = pygame.mixer.music.load(Path+'music.mp3')
+# pygame.mixer.music.play(-1)
+
+
+'''
+====================
+Warewolves Game
+====================
+'''
+
+class Game:
+
+  def __init__(self, agents):
+
+    self.names = [agent.name for agent in agents]
+    self.ids = {}
+    for i,name in enumerate(self.names):
+        self.ids[name] = i
+
+    self.agents = agents
+
+    self.n = len(agents)
+
+    self.alive = [True]*self.n
+    self.warewolf = [False]*self.n
+    self.warewolf[0] = True
+
+    # for agent in self.agents:
+    #     agent.remember(agent.result)
+    #     agent.reflect(2,2)
+
+    self.w = WIN_WIDTH
+    self.h = WIN_HEIGHT
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)    
+    self.win = pygame.display.set_mode((self.w,self.h))
+    pygame.display.set_caption("Warewolves of Miller Hollow")
+    self.clock = pygame.time.Clock()
+    self.InitialPositions = InitialPositions
+    
+    self.reset()
+
+  def getContext(self,name):
+    context = ""
+    sr = 0
+    id = self.ids[name]
+    for i,agent in enumerate(self.agents):
+      if(not self.alive[i]): continue
+      if(name==agent.name): continue
+      sr += 1
+      context = context + f"{sr}) {agent.name}: {self.agents[id].vote_context(agent.name)}\n"
+    context = context[:-1]
+    return context
+
+  def getContextTownfolks(self,name):
+    context = ""
+    sr = 0
+    id = self.ids[name]
+    for i,agent in enumerate(self.agents):
+      if(not self.alive[i]): continue
+      if(self.warewolf[i]): continue
+      sr += 1
+      context = context + f"{sr}) {agent.name}: {self.agents[id].vote_context(agent.name)}\n"
+    context = context[:-1]
+    return context
+
+  def nightVote(self):
+    log("Currently it is Night, the Warewolves will kill a townfolk...\n")
+    votes = [0]*self.n
+    townfolks = []
+    for i in range(self.n):
+      if(self.alive[i] and not self.warewolf[i]):
+        townfolks.append(i)
+    for i in range(self.n):
+      if(not self.warewolf[i]): continue
+      context = self.getContextTownfolks(self.agents[i].name)
+      vote = extractImportance(self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,context))) - 1
+      votes[townfolks[vote]]+=1
+    kick = votes.index(max(votes))
+    self.alive[kick] = 0
+    self.kicked = self.names[kick]
+    log(f"{self.kicked} has been killed by the Warewolves\n\n")
+
+  def dayVote(self):
+
+    log("Currently it is Day, the Villagers will lynch someone...\n")
+
+    context = []
+    voters = []
+    for i in range(self.n):
+      if(self.alive[i]):
+        voters.append(i)
+    for i in range(self.n):
+      if(not self.alive[i]): context.append("")
+      else: context.append(self.getContext(self.agents[i].name))
+
+    conversation = self.groupConversation(context,voters)
+
+    votes = [0]*self.n
+    log()
+    for i,voteId in enumerate(voters):
+      #print("Agent",i)
+      #print(voteId)
+      #print(context[voteId])
+      names = ""
+      j = 1
+      for id in voters:
+        if(id==voteId): continue
+        names = names + f"{j}) {self.names[id]}\n"
+        j += 1
+      names = names[:-1]
+      voteName = self.agents[voteId].brain.query(QUERY_DAY.format(self.agents[voteId].name,context[voteId],conversation,self.agents[voteId].name,names))
+      # vote = extractImportance(agents[voteId].brain.query(QUERY_DAY.format(agents[voteId].name,context[voteId],conversation))) - 1
+      #if(vote>=i): vote += 1
+      try:
+        vote = self.names.index(voteName)
+      except:
+        voteName = self.findName(voteName)
+        vote = self.names.index(voteName)
+      # print(agents[voteId].name,"voted to kick out",self.names[voters[vote]])
+      log(f"{self.agents[voteId].name} voted to kick out {voteName}")
+      votes[vote] += 1
+    #print()
+
+    maxVotes = max(votes)
+    if(votes.count(maxVotes)>1):
+      log("\nNobody was lynched")
+    else:
+      kick = votes.index(maxVotes)
+      self.alive[kick] = 0
+      self.kicked = self.names[kick]
+      log()
+      log(f"{self.kicked} has been lynched by the Villagers")
+
+  def findName(self,currName):
+    for name in self.names:
+      if name in currName:
+        return name
+    raise Exception(f"Invalid Name - {currName}")
+
+  def groupConversation(self, context, voters):
+      history = ""
+      sakuraId = self.names.index("Sakura Kobayashi")
+      if(sakuraId in voters): curr = sakuraId
+      else: curr = random.choice(voters)
+      reply = self.agents[curr].groupconv_init(self.kicked,context[curr])
+      self.agents[curr].msg = reply 
+      self.agents[curr].isSpeaking = True 
+      self.draw_window()
+      prev = curr
+      moderator = GPT()
+      names = ""
+      for i,name in enumerate([self.agents[i].name for i in voters]):
+        names = names + f"{i+1}) " + name + '\n'
+      names = names[:-1]
+      dialogues = 0
+      lastFew = []
+      while curr is not None:
+          dialogues += 1
+          log(reply)
+          history = history + reply
+          lastFew.append(reply)
+          if(len(lastFew)>4): lastFew.pop(0)
+          if(dialogues<MinDialogues): QUERY = QUERY_GROUPCONV_MODERATOR
+          else: QUERY = QUERY_GROUPCONV_MODERATOR_END
+          currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
+          if("End Conversation" in currName): break
+          try:
+            curr = self.ids[currName]
+          except:
+            currName = self.findName(currName)
+            curr = self.ids[currName]
+          reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
+          self.agents[prev].isSpeaking = False 
+          self.agents[curr].msg = reply 
+          self.agents[curr].isSpeaking = True  
+          self.draw_window()
+          prev = curr
+          history = history + '\n'
+          for i in range(self.n):
+            if(self.alive[i]): self.agents[i].remember(reply)
+      log("\nEnd of Conversation")
+      return history
+
+
+  def conversation(self, name1, name2):
+    curr = 0
+    agents = [self.agents[self.ids[name1]], self.agents[self.ids[name2]]]
+    agents[0].talk_context(agents[1].name)
+    agents[1].talk_context(agents[0].name)
+    reply = agents[curr].talk_init(agents[1-curr].name, agents[1-curr].result)
+    history = ""
+    while reply is not None:
+        log(reply)
+        history = history + '\n' + reply
+        curr = 1 - curr
+        reply = agents[curr].talk(agents[1-curr].name, reply, history)
+        history = history + '\n'
+    log("\nEnd of Conversation")
+
+
+  def reset(self) : 
+      for agent in self.agents:
+         agent.graphics_init(self.win)
+      self.run = True
+  
+  def draw_window(self) : 
+      self.win.blit(self.bg,(0,0))
+      for player in self.agents: 
+          player.draw()      
+      pygame.display.update()
+
+  def step(self) :
+
+      for event in pygame.event.get() :
+
+          if event.type == pygame.QUIT : 
+              self.run = False
+              pygame.quit()    
+      
+      keys = pygame.key.get_pressed()
+      self.agents[0].manual_move(keys)
+
+      for player in self.agents[1:]:
+          player.move() 
+      
+      self.draw_window()
+      #self.checkSpeakingProximity()
+        
+  def checkSpeakingProximity(self):
+      for player1 in self.agents:
+          for player2 in self.agents:
+              if(player1!=player2):
+                  if(abs(player1.x - player2.x) <100 and abs(player1.y - player2.y) < 100):
+                      player1.isSpeaking = True
+                      player2.isSpeaking = True
+                      # player1.is_travelling = False
+                      # player2.is_travelling = False
+                      # endConversation = random.choice(['End', 'Continue'])
+                      # if(endConversation=='End'):
+                      #     player1.isSpeaking = False
+                      #     player2.isSpeaking = False
+                      #     player1.is_travelling = True
+                      #     player2.is_travelling = True
+                  else:
+                      player1.isSpeaking = False
+                      player2.isSpeaking = False
+                      # player1.is_travelling = True
+                      # player2.is_travelling = True
+                  
+                
+   

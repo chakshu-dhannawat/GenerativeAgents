@@ -1,0 +1,114 @@
+from GPT import GPT
+import re
+from Graph import Graph
+from Params import *
+
+def log(text=''):
+    print(text)
+    with open("logs.txt", "a") as file:
+        file.write(text + "\n")
+
+def extractImportance(output):
+    numbers = re.findall(r'\d+', output)
+    if numbers:
+        lowest_number = min(map(int, numbers))
+        return lowest_number
+    else:
+        return 0
+
+def extractPlan(hourly):
+    plan = {}
+    sep = '\n\n'
+    if(hourly.count('\n\n')<4): sep = '\n'
+    h = hourly.split(sep)
+    if(not h[0][0].isdigit()):
+      h = h[1:]
+    if(not h[-1][0].isdigit()):
+      h = h[:-1]
+
+    for p in h:
+      try:
+        k,v = p.split(': ')
+        plan[k] = v
+      except:
+        pass
+
+    return plan
+
+def getNextDay(today):
+    gpt = GPT()
+    tomm = gpt.query("Today is Wednesday February 13, tomorrow is")
+    return tomm[:-1]
+
+def printPlan(plan):
+    items = re.split(r'\d+\)', plan)
+    items = [item.strip() for item in items if item.strip()]
+    for i,item in enumerate(items):
+      print(f"{i+1})",item)
+
+# def getAreas(current):
+#     areas = ""
+#     for node in town.getNodes(current):
+#       areas = areas + node + " - " + nodes[node] + '; '
+#     return areas
+
+def getPeople():
+    people = ""
+    for i in range(len(agentsDetails)):
+      people = people + agentsDetails[i]['name'] + " - " + agentsDetails[i]['description'] + '; '
+    return people
+
+def getNames():
+    people = ""
+    for i in range(len(agentsDetails)):
+      people = people + agentsDetails[i]['name'] + '; '
+    return people
+
+def getMemories(stream, n=100):
+    #TODO: Retrieve using timestamp
+    if(len(stream)>n): stream = stream[-n:]
+    memories = ""
+    i = 1
+    for mem in stream:
+      memories = memories + f"{i}) " + mem.observation + "\n"
+      i += 1
+    return memories
+
+def extractQuestions(output):
+    questions = []
+    sep = '\n\n'
+    if(output.count('\n\n')<4): sep = '\n'
+    Q = output.split(sep)
+    if(Q[0]=='' or not Q[0][0].isdigit()):
+      Q = Q[1:]
+    if(Q[-1]=='' or not Q[-1][0].isdigit()):
+      Q = Q[:-1]
+
+    s = 3
+    for i,q in enumerate(Q):
+      try:
+        if((i+1)%10==0): s+=1
+        Q[i] = q[s:]
+      except:
+        pass
+
+    return Q
+
+def getRetrievedMemories(stream):
+    memories = ""
+    i = 1
+    for mem in stream:
+      memories = memories + f"{i}) " + mem + "\n"
+      i += 1
+    return memories
+
+def getDetails():
+    details = ""
+    cover = 'townfolk'
+    for i,agent in enumerate(agentsDetails):
+      if('warewolf' in agent['description']): cover = 'warewolf'
+      else: cover = 'townfolk'
+      details = details + f"{i+1}) {agent['name']}: {cover}\n"
+    return details[:-1]
+
+details = getDetails()
