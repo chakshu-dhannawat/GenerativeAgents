@@ -10,6 +10,7 @@ import sys
 import math
 import cv2
 import numpy as np
+from Memories import calendar
 
 
 pygame.font.init()
@@ -25,7 +26,7 @@ Assests
 '''
 
 font = pygame.font.SysFont('comicsans', 30, True)
-font2 = pygame.font.SysFont('arial', 25)
+font2 = pygame.font.SysFont('consolas', 25, True)
 
 bg = pygame.image.load(Path+'town2.jpg')
 
@@ -193,14 +194,16 @@ class Game:
           if(len(lastFew)>4): lastFew.pop(0)
           if(dialogues<MinDialogues): QUERY = QUERY_GROUPCONV_MODERATOR
           else: QUERY = QUERY_GROUPCONV_MODERATOR_END
-          currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
+          # currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
+          currName = moderator.query(QUERY.format(history,names))
           if("End Conversation" in currName): break
           try:
             curr = self.ids[currName]
           except:
             currName = self.findName(currName)
             curr = self.ids[currName]
-          reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
+          # reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
+          reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 
           self.agents[curr].isSpeaking = True  
@@ -233,11 +236,34 @@ class Game:
       for agent in self.agents:
          agent.graphics_init(self.win)
       self.run = True
+
+  def draw_time(self) :
+      text = f"{calendar.day}\n{calendar.time}"
+      position = (10,10)
+      margin = 1
+
+      text_lines = text.splitlines()  # Split the text into lines
+
+      line_height = font2.get_linesize()
+      y = position[1]
+
+      for line in text_lines:
+          text_surface = font2.render(line, True, BLACK)
+          text_rect = text_surface.get_rect()
+          text_rect.topleft = (position[0]+margin, y+margin)
+          pygame.draw.rect(self.win, WHITE, (position[0], y, text_rect.width+2*margin, text_rect.height+2*margin))
+          self.win.blit(text_surface, text_rect)
+          y += line_height
+      # text_surface = font2.render(text, True, BLACK)
+      # text_rect = text_surface.get_rect()
+      # pygame.draw.rect(self.win, WHITE, (0, 0, text_rect.width, text_rect.height))
+      # self.win.blit(text_surface, text_rect)
   
   def draw_window(self) : 
       self.win.blit(self.bg,(0,0))
       for player in self.agents: 
           player.draw()      
+      self.draw_time()
       pygame.display.update()
 
   def step(self) :
@@ -255,6 +281,7 @@ class Game:
           player.move() 
       
       self.draw_window()
+      calendar.increment(60/FPS)
       #self.checkSpeakingProximity()
         
   def checkSpeakingProximity(self):

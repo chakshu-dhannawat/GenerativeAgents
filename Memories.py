@@ -39,8 +39,8 @@ class Calendar:
     self.day = self.dt.strftime("%A %B %d")
     self.time = self.dt.strftime("%I:%M %p")
 
-  def increment(self, hours=1):
-    self.dt += timedelta(hours=hours)
+  def increment(self, seconds=1):
+    self.dt += timedelta(seconds=seconds)
     self.getString()
 
 calendar = Calendar()

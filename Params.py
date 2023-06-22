@@ -9,7 +9,7 @@ Path = "Assets\\"
 WIN_WIDTH = 1000
 WIN_HEIGHT = 700
 
-FPS = 30
+FPS = 45
 
 LOCATION_MAP = {'House_1':(140,180),'House_2':(350,190),'House_3':(350,350),'Shrine':(800,500),'Cattle Farm':(800,200),'Well':(500,450),'Electricity_House':(110,370),'Town_Square':(250,500),'Fishing_area':(500,60)}
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
@@ -62,9 +62,9 @@ agentsDetails = [
     {"name": "Hiroshi Tanaka", "description": "Hiroshi is a townfolk; Hiroshi gets easily convinced from other's arguments."},
     {"name": "Aya Suzuki", "description": "Aya is a townfolk; Aya is smart and has good deduction skills."},
     {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
-    {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
-    {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
-    {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."}
+    # {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
+    # {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
+    # {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."}
 ]
 
 
