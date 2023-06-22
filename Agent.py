@@ -2,7 +2,7 @@ from Memories import calendar, Memory, Reflection
 from Queries import *
 from Params import *
 from Util import *
-from Graph import Graph
+from Graph import Graph,town
 from GPT import GPT
 import os
 import pygame
@@ -70,12 +70,12 @@ class Agent():
 
     self.folder_name = self.graphics['folder_name']
 
-    self.location_name = None
+    self.location_name = self.graphics['initialLocation']
     self.destination=None
     self.destination_x=None
     self.destination_y=None
     self.is_travelling = True
-    
+    self.destination_path=[]
     # Speaking Bubbles
     self.isSpeaking = False
     self.msg = random.choice(MESSAGES_MAP)
@@ -244,6 +244,7 @@ class Agent():
           self.location_name = self.destination
           self.is_travelling=False
           
+          
               
 
               
@@ -294,14 +295,24 @@ class Agent():
 
       #Random choice to stay in that location or move
       else:
+        
           self.timer+=1
           if(self.timer>20):
               self.timer=0
-              change_location = random.choice(['Move', 'Stay'])
-              if(change_location == 'Move'):
-                  while self.location_name == self.destination:
-                      self.choose_random_location()
-                      self.is_travelling = True
+          #     change_location = random.choice(['Move', 'Stay'])
+          #     if(change_location == 'Move'):
+          #         while self.location_name == self.destination:
+          #             self.choose_random_location()
+          #             self.is_travelling = True
+          self.destination_path.pop(0)
+          if len(self.destination_path)==0:
+            self.choose_random_location()
+          else:
+            self.destination = self.destination_path[0]
+            self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
+            self.is_travelling=True
+            
+            
               
   def manual_move(self,keys):
 
@@ -337,9 +348,12 @@ class Agent():
 
   def choose_random_location(self):
       # Randomly choose a new direction
-      location = random.choice(['House_1', 'House_2', 'House_3', 'Shrine', 'Fishing_area', 'Electricity_House', 'Well', 'Cattle Farm', 'Town_Square'])
-      self.destination = location
-      self.destination_x, self.destination_y = LOCATION_MAP[location]
+      location = random.choice(list(LOCATION_MAP.keys()))
+      self.destination_path = town.shortestPath(self.location_name,location)
+      
+      self.destination = self.destination_path[0]
+      self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
+      
       
   def speech_bubble(self, text):
       x = self.x

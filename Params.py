@@ -9,12 +9,13 @@ Path = "Assets\\"
 WIN_WIDTH = 1000
 WIN_HEIGHT = 700
 
-FPS = 45
+FPS = 20
 
-LOCATION_MAP = {'House_1':(140,180),'House_2':(350,190),'House_3':(350,350),'Shrine':(800,500),'Cattle Farm':(800,200),'Well':(500,450),'Electricity_House':(110,370),'Town_Square':(250,500),'Fishing_area':(500,60)}
+LOCATION_MAP = {'Hut 1':(140,180),'Hut 2':(350,190),'Hut 3':(350,350),'Shrine':(250,500),'Cattle Farm':(800,200),'Well':(500,450),'Electricity House':(110,370),'Tavern':(800,500),'Fishing Pond':(500,60)}
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
-InitialPositions = [LOCATION_MAP['House_1'],LOCATION_MAP['House_2'],LOCATION_MAP['House_3'],LOCATION_MAP['Shrine'],LOCATION_MAP['Well'],LOCATION_MAP['Shrine'],LOCATION_MAP['Shrine']]
+Locations = ['Hut 1','Hut 2','Hut 3','Shrine','Well','Shrine','Shrine']
+InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
 
 
 '''
@@ -36,8 +37,7 @@ Town
 townName = "Mk 1 Village"
 Initial = "Tavern"
 
-nodes = {"Huts": "Area where the townfolks live",
-        "Hut 1": "The first hut",
+nodes = {"Hut 1": "The first hut",
         "Hut 2": "The second hut",
         "Hut 3": "The third hut",
         "Well": "A water source providing clean and fresh water for the townfolks",
@@ -55,7 +55,7 @@ Agents
 ====================
 '''
 
-MinDialogues = 15
+MinDialogues = 10
 
 agentsDetails = [
     {"name": "Takeshi Yamamoto", "description": "Takeshi is a warewolf; Takeshi is smart and is good at lying."},

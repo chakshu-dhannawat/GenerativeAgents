@@ -194,16 +194,16 @@ class Game:
           if(len(lastFew)>4): lastFew.pop(0)
           if(dialogues<MinDialogues): QUERY = QUERY_GROUPCONV_MODERATOR
           else: QUERY = QUERY_GROUPCONV_MODERATOR_END
-          # currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
-          currName = moderator.query(QUERY.format(history,names))
+          currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
+          # currName = moderator.query(QUERY.format(history,names))
           if("End Conversation" in currName): break
           try:
             curr = self.ids[currName]
           except:
             currName = self.findName(currName)
             curr = self.ids[currName]
-          # reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
-          reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
+          reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
+          # reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 
           self.agents[curr].isSpeaking = True  

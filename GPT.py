@@ -45,7 +45,7 @@ class GPT:
           messages = self.messages,
           temperature=0.7,
           max_tokens=1000,
-          request_timeout=25,
+          request_timeout=15,
           top_p=0.95,
           frequency_penalty=0,
           presence_penalty=0,
