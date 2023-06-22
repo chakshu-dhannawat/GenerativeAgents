@@ -36,11 +36,11 @@ Adding Memories for Testing
 '''
 log('\n=======Adding Memories=======\n')
 
-game.agents[0].remember("Takeshi went fishing with Hiroshi")
-game.agents[0].remember("Takeshi stole fish from bucket of Hiroshi")
-game.agents[1].remember("Hiroshi went fishing with Takeshi")
-game.agents[3].remember("Sakura saw Takeshi and Hiroshi Fishing")
-game.agents[3].remember("Sakura saw some fish getting missing from the bucket of Hiroshi")
+# game.agents[0].remember("Takeshi went fishing with Hiroshi")
+# game.agents[0].remember("Takeshi stole fish from bucket of Hiroshi")
+# game.agents[1].remember("Hiroshi went fishing with Takeshi")
+# game.agents[3].remember("Sakura saw Takeshi and Hiroshi Fishing")
+# game.agents[3].remember("Sakura saw some fish getting missing from the bucket of Hiroshi")
 
 
 '''
