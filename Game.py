@@ -11,6 +11,7 @@ import math
 import cv2
 import numpy as np
 from Memories import calendar
+import asyncio
 
 
 pygame.font.init()
@@ -112,6 +113,10 @@ class Game:
     self.kicked = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
 
+  async def test(self):
+    await asyncio.sleep(2)
+    print(calendar.time)
+
   def dayVote(self):
 
     log("Currently it is Day, the Villagers will lynch someone...\n")
@@ -140,18 +145,21 @@ class Game:
         names = names + f"{j}) {self.names[id]}\n"
         j += 1
       names = names[:-1]
-      voteName = self.agents[voteId].brain.query(QUERY_DAY.format(self.agents[voteId].name,context[voteId],conversation,self.agents[voteId].name,names))
-      # vote = extractImportance(agents[voteId].brain.query(QUERY_DAY.format(agents[voteId].name,context[voteId],conversation))) - 1
-      #if(vote>=i): vote += 1
+      voteName = self.agents[voteId].brain.query(
+         QUERY_DAY.format(self.agents[voteId].name,context[voteId],
+                          conversation,self.agents[voteId].name,names))
       try:
         vote = self.names.index(voteName)
       except:
         voteName = self.findName(voteName)
         vote = self.names.index(voteName)
-      # print(agents[voteId].name,"voted to kick out",self.names[voters[vote]])
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
       votes[vote] += 1
+
     #print()
+    # vote = extractImportance(agents[voteId].brain.query(QUERY_DAY.format(agents[voteId].name,context[voteId],conversation))) - 1
+    #if(vote>=i): vote += 1
+    # print(agents[voteId].name,"voted to kick out",self.names[voters[vote]])
 
     maxVotes = max(votes)
     if(votes.count(maxVotes)>1):
@@ -194,8 +202,8 @@ class Game:
           if(len(lastFew)>4): lastFew.pop(0)
           if(dialogues<MinDialogues): QUERY = QUERY_GROUPCONV_MODERATOR
           else: QUERY = QUERY_GROUPCONV_MODERATOR_END
-          currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
           # currName = moderator.query(QUERY.format(history,names))
+          currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
           if("End Conversation" in currName): break
           try:
             curr = self.ids[currName]
@@ -214,6 +222,10 @@ class Game:
             if(self.alive[i]): self.agents[i].remember(reply)
       log("\nEnd of Conversation")
       return history
+
+
+
+
 
 
   def conversation(self, name1, name2):
@@ -282,6 +294,7 @@ class Game:
       
       self.draw_window()
       calendar.increment(60/FPS)
+      asyncio.create_task(self.test())
       #self.checkSpeakingProximity()
         
   def checkSpeakingProximity(self):

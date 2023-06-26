@@ -100,8 +100,10 @@ Format - {}: Dialogue"""
 
 
 QUERY_GROUPCONV_REPLY = """Observation: 
-In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. They are determined to identify the werewolf lurking among them. The recent elimination of {} has left everyone on edge.
-As the discussion begins, the villagers share their suspicions and present their reasoning. They recount their observations, actions, and any clues they have gathered so far. 
+In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. 
+They are determined to identify the werewolf lurking among them. The recent elimination of {} has left everyone on edge.
+As the discussion begins, the villagers share their suspicions and present their reasoning. 
+They recount their observations, actions, and any clues they have gathered so far. 
 The werewolf tries to maintain their innocence while deflecting suspicion. Other werewolves collaborate to protect their own.
 
 Context of Remaining Players in {}'s Memory -
@@ -123,7 +125,8 @@ QUERY_GROUPCONV_MODERATOR = """Last few Conversations -
 Depending on the conversation history, select a relevant person from the following who can speak next -
 {}
 
-Select exactly one person, give higher chance of selecting someone who has been targeted in the recent conversation otherwise someone who hasn't spoken
+Select exactly one person, give higher chance of selecting someone who has been targeted in the recent conversation, otherwise select someone who hasn't spoken a lot
+
 You have to select one person.
 
 Format - <name>
@@ -250,6 +253,11 @@ Give a natural dialogue depending on the conversation history, and longer the co
 
 # TODO: Improve ExtractQuestions or use library
 # TODO: Give info of how many warewolves and townfolks remaining always. Give info if the one lynched was warewolf or townfolk
+
+# TODO: If only 2 dialogues in moderator then give how many dialogues each person has spoken also separately
+# TODO: Add bluff in warewolves
+
+# TODO: Add the observations to the agent's memories and also dialogue context and reflect also
 
 # QUERY_DIALOGUE_REPLY = ("It is {}, {}; {}'s status: {}; Observation: {} has initiatiated "
 # "conversation with {}.; Summary of relevant context from {}'s memory: {};\n\nHere is "
