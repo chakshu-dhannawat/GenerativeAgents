@@ -45,13 +45,13 @@ class GPT:
           messages = self.messages,
           temperature=0.7,
           max_tokens=1000,
-          request_timeout=60,
+          request_timeout=10+10*tries,
           top_p=0.95,
           frequency_penalty=0,
           presence_penalty=0,
           stop=None)
     except: 
-      if(tries>2):
+      if(tries>3):
         raise Exception(f"Query Timeout - {qry}")
       return self.query(qry,remember,tries+1)
 

@@ -79,6 +79,7 @@ Context of Remaining Players in {}'s Memory -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
+The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
 
@@ -115,6 +116,7 @@ Here is a snippet from the dialogue history:
 Player {}, now it's your opportunity to contribute. Share your insights, counterarguments, or suspicions regarding the ongoing investigation.
 
 Give exactly one dialogue from {}.
+The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
 

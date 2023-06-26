@@ -12,6 +12,7 @@ import cv2
 import numpy as np
 from Memories import calendar
 import asyncio
+from multiprocessing import Process
 
 
 pygame.font.init()
@@ -113,8 +114,7 @@ class Game:
     self.kicked = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
 
-  async def test(self):
-    await asyncio.sleep(2)
+  def test(self):
     print(calendar.time)
 
   def dayVote(self):
@@ -294,7 +294,9 @@ class Game:
       
       self.draw_window()
       calendar.increment(60/FPS)
-      asyncio.create_task(self.test())
+      # test_process = Process(target=self.test)
+      # test_process.start()
+      #asyncio.run(self.test())
       #self.checkSpeakingProximity()
         
   def checkSpeakingProximity(self):

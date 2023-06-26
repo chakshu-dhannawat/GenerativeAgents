@@ -3,6 +3,9 @@ from Game import Game
 from Params import *
 from Util import log
 from datetime import datetime as dt
+import threading
+import time
+from queue import Queue
 
 log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
 log(dt.now().strftime("%m/%d/%Y, %H:%M:%S"))
@@ -55,14 +58,32 @@ night = 10*FPS
 day = 20*FPS 
 counter = 0
 
-while game.run : 
 
-    game.clock.tick(FPS)
+def game_logic():
+  global counter, night, day
 
-    game.step()
+  while game.run :
+      if(counter==night):
+        game.nightVote()
+      if(counter==day):
+        game.dayVote()
 
-    counter+=1
-    if(counter==night):
-      game.nightVote()
-    if(counter==day):
-      game.dayVote()
+def render():
+
+  global counter, night, day
+
+  while game.run : 
+
+      game.clock.tick(FPS)
+
+      game.step()
+
+      counter+=1
+
+
+
+logic_thread = threading.Thread(target=game_logic)
+render_thread = threading.Thread(target=render)
+
+logic_thread.start()
+render_thread.start()
