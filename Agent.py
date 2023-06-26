@@ -415,10 +415,10 @@ class Agent():
       bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 -50, bubble_width, bubble_height)
 
       # Draw the bubble outline
-      pygame.draw.ellipse(surface, BLACK, bubble_rect, 2)
+      pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
 
       # Draw the bubble background
-      pygame.draw.ellipse(surface, CREAM, bubble_rect)
+      pygame.draw.ellipse(self.win, CREAM, bubble_rect)
 
       # Blit the text onto the bubble
       current_y = bubble_rect.top + bubble_padding
