@@ -355,26 +355,50 @@ class Agent():
       self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
       
       
+  # def speech_bubble(self, text):
+  #     x = self.x
+  #     y = self.y
+  #     # Render the text
+  #     font_size = 22  # Desired font size
+  #     font = pygame.font.Font(None, font_size)
+  #     text_surface = font.render(text, True, (0,0,0))
+  #     text_rect = text_surface.get_rect(midbottom=(x, y))
+
+  #     # Create the bubble rectangle
+  #     bubble_width = text_rect.width + 20
+  #     bubble_height = text_rect.height + 20
+  #     bubble_rect = pygame.Rect(text_rect.left - 10, text_rect.top - 10, bubble_width, bubble_height)
+
+  #     # Draw the bubble outline
+  #     pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
+
+  #     # Draw the bubble background
+  #     pygame.draw.ellipse(self.win, CREAM, bubble_rect)
+
+
+  #     # Blit the text onto the bubble
+  #     self.win.blit(text_surface, text_rect)
+  
   def speech_bubble(self, text):
-      x = self.x
-      y = self.y
-      # Render the text
-      font_size = 22  # Desired font size
-      font = pygame.font.Font(None, font_size)
-      text_surface = font.render(text, True, (0,0,0))
-      text_rect = text_surface.get_rect(midbottom=(x, y))
+    x = self.x
+    y = self.y
+    # Render the text
+    font_size = 22  # Desired font size
+    font = pygame.font.Font(None, font_size)
+    text_surface = font.render(text, True, (0, 0, 0))
 
-      # Create the bubble rectangle
-      bubble_width = text_rect.width + 20
-      bubble_height = text_rect.height + 20
-      bubble_rect = pygame.Rect(text_rect.left - 10, text_rect.top - 10, bubble_width, bubble_height)
+    # Create the bubble rectangle
+    bubble_width = text_surface.get_width() + 20
+    bubble_height = text_surface.get_height() + 20
+    bubble_rect = pygame.Rect(x, y, bubble_width, bubble_height)
+    bubble_rect.center = (x, y)
 
-      # Draw the bubble outline
-      pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
+    # Draw the bubble outline
+    pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
 
-      # Draw the bubble background
-      pygame.draw.ellipse(self.win, CREAM, bubble_rect)
+    # Draw the bubble background
+    pygame.draw.ellipse(self.win, CREAM, bubble_rect)
 
-
-      # Blit the text onto the bubble
-      self.win.blit(text_surface, text_rect)
+    # Blit the text onto the bubble
+    text_rect = text_surface.get_rect(center=bubble_rect.center)
+    self.win.blit(text_surface, text_rect)
