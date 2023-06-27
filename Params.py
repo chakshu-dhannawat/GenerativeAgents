@@ -19,9 +19,9 @@ LOCATION_MAP = {'Hut 1':(140,180),'Hut 1 task01':(141,246),
                 'Shrine':(285,610),'Shrine task01':(370,557),'Shrine task02':(200,526),'Shrine task03':(376,658),'Shrine task04':(148,602),
                 'Cattle Farm':(867,254),'Cattle Farm task01':(781,327),'Cattle Farm task02':(917,310),'Cattle Farm task03':(914,152),'Cattle Farm task04':(759,168),
                 'Well':(534,452),'Well task01':(446,497),'Well task02':(494,529),'Well task03':(548,513),'Well task04':(458,465),
-                'Electricity House':(117,4.39),'Electricity House task01':(34,478),'Electricity House task02':(77,357),'Electricity House task03':(190,427),'Electricity House task04':(184,477),
+                'Electricity House':(117,439),'Electricity House task01':(34,478),'Electricity House task02':(77,357),'Electricity House task03':(190,427),'Electricity House task04':(184,477),
                 'Tavern':(810,550),
-                'Fishing Pond':(576,45),'Fishing Pond task01':(262,70),'Fishing Pond task02':(111,48),'Fishing Pond task03':(637,89),'Fishing Pond task04':(927,66),
+                'Fishing Pond':(576,80),'Fishing Pond task01':(262,100),'Fishing Pond task02':(111,100),'Fishing Pond task03':(637,100),'Fishing Pond task04':(927,100),
                 }
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
@@ -96,9 +96,9 @@ agentsDetails = [
     {"name": "Takeshi Yamamoto", "description": "Takeshi is a warewolf; Takeshi is smart and is good at lying."},
     {"name": "Hiroshi Tanaka", "description": "Hiroshi is a townfolk; Hiroshi gets easily convinced from other's arguments."},
     {"name": "Aya Suzuki", "description": "Aya is a townfolk; Aya is smart and has good deduction skills."},
-    {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
-    {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
-    {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
+    # {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
+    # {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
+    # {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
     # {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."}
 ]
 

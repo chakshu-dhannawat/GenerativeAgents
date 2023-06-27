@@ -56,13 +56,14 @@ log('\n=======Warewolf Game=======\n')
 
 
 def game_logic():
-  time.sleep(3)
-  game.switchPhase()
-  time.sleep(5)
-  game.nightVote()
-  time.sleep(3)
-  game.switchPhase()
-  game.dayVote()
+  # time.sleep(3)
+  # game.switchPhase()
+  # time.sleep(5)
+  # game.nightVote()
+  # time.sleep(3)
+  # game.switchPhase()
+  # game.dayVote()
+  pass
 
 def render():
 
