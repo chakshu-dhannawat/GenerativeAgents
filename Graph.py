@@ -118,6 +118,32 @@ def makeTown():
     town.addEdge("Well","Hut 1")
     town.addEdge("Well","Hut 2")
     town.addEdge("Well","Hut 3")
+    town.addEdge("Hut 1","Hut 2")
+    town.addEdge("Hut 1","Hut 3")
+    town.addEdge("Hut 2","Hut 3")
+    town.addEdge("Well","Well task01")
+    town.addEdge("Well","Well task02")
+    town.addEdge("Well","Well task03")
+    town.addEdge("Well","Well task04")
+    town.addEdge("Cattle Farm","Cattle Farm task01")
+    town.addEdge("Cattle Farm","Cattle Farm task02")
+    town.addEdge("Cattle Farm","Cattle Farm task03")
+    town.addEdge("Cattle Farm","Cattle Farm task04")
+    town.addEdge("Electricity House","Electricity House task01")
+    town.addEdge("Electricity House","Electricity House task02")
+    town.addEdge("Electricity House","Electricity House task03")
+    town.addEdge("Electricity House","Electricity House task04")
+    town.addEdge("Hut 1","Hut 1 task01")
+    town.addEdge("Hut 2","Hut 2 task01")
+    town.addEdge("Hut 3","Hut 3 task01")
+    town.addEdge("Hut 3","Hut 3 task02")
+    town.addEdge("Shrine","Shrine task01")
+    town.addEdge("Shrine","Shrine task02")
+    town.addEdge("Shrine","Shrine task03")
+    town.addEdge("Shrine","Shrine task04")
+    
+    
+    
 
 
     return town

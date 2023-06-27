@@ -79,7 +79,7 @@ class Agent():
     self.destination_path=[]
     # Speaking Bubbles
     self.isSpeaking = False
-    self.msg = random.choice(MESSAGES_MAP)
+    # self.msg = random.choice(MESSAGES_MAP)
     
     self.walkRight, self.walkLeft, self.walkUp, self.walkDown, self.char = self.graphics_load()
     # self.walkRight, self.walkLeft, self.char = walkRight, walkLeft, char
@@ -214,7 +214,7 @@ class Agent():
   def draw(self):
       if self.isSpeaking:
           
-          self.speech_bubble(self.msg)
+          self.speech_bubble()
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -280,7 +280,7 @@ class Agent():
           if self.right and self.x < WIN_WIDTH - self.vel:
               self.x += self.vel
               self.standing = False
-          if self.up and self.y > self.vel + 50:
+          if self.up and self.y > self.vel:
               self.y -= self.vel
               self.standing = False
               # self.left=True
@@ -294,7 +294,7 @@ class Agent():
       else:
         
           self.timer+=1
-          if(self.timer>20):
+          if(self.timer>50):
               self.timer=0
           #     change_location = random.choice(['Move', 'Stay'])
           #     if(change_location == 'Move'):
@@ -302,14 +302,23 @@ class Agent():
           #             self.choose_random_location()
           #             self.is_travelling = True
           # self.destination_path.pop(0)
+          
           if len(self.destination_path)==0:
             if(self.dest is None):
               self.choose_random_location()
+              self.isSpeaking=True
+              
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
           else:
+            self.isSpeaking=True
+            self.msg = "I want to travel to"+ str(self.destination_path[-1])
+            self.speech_bubble()
+            self.draw()
+            pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
+            
             try:
               self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
             except:
@@ -396,7 +405,8 @@ class Agent():
   #     # Blit the text onto the bubble
   #     self.win.blit(text_surface, text_rect)
   
-  def speech_bubble(self,text):
+  def speech_bubble(self):
+      text=self.msg
       x = self.x
       y = self.y
       # Render the text
