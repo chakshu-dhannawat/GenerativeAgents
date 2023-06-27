@@ -18,6 +18,7 @@ from multiprocessing import Process
 pygame.font.init()
 pygame.init()
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
+
 speed = FPS*0.6
 
 
@@ -36,6 +37,8 @@ bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
 # music = pygame.mixer.music.load(Path+'music.mp3')
 # pygame.mixer.music.play(-1)
+
+
 
 
 '''

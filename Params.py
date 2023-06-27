@@ -8,7 +8,7 @@ Path = "Assets\\"
 
 WIN_WIDTH = 1000
 WIN_HEIGHT = 700
-
+EMOJI_SIZE = (25,25)
 FPS = 100
 
 TavernRadius = 100
