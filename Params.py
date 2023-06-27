@@ -13,7 +13,16 @@ FPS = 100
 
 TavernRadius = 100
 
-LOCATION_MAP = {'Hut 1':(140,180),'Hut 2':(350,190),'Hut 3':(350,350),'Shrine':(250,500),'Cattle Farm':(800,200),'Well':(500,450),'Electricity House':(110,370),'Tavern':(810,550),'Fishing Pond':(500,60)}
+LOCATION_MAP = {'Hut 1':(140,180),'Hut 1 task01':(141,246),
+                'Hut 2':(435,210),'Hut 2 task01':(368,159),
+                'Hut 3':(369,390),'Hut 3 task01':(426,349),'Hut 3 task02':(336,436),
+                'Shrine':(285,610),'Shrine task01':(370,557),'Shrine task02':(200,526),'Shrine task03':(376,658),'Shrine task04':(148,602),
+                'Cattle Farm':(867,254),'Cattle Farm task01':(781,327),'Cattle Farm task02':(917,310),'Cattle Farm task03':(914,152),'Cattle Farm task04':(759,168),
+                'Well':(534,452),'Well task01':(446,497),'Well task02':(494,529),'Well task03':(548,513),'Well task04':(458,465),
+                'Electricity House':(117,4.39),'Electricity House task01':(34,478),'Electricity House task02':(77,357),'Electricity House task03':(190,427),'Electricity House task04':(184,477),
+                'Tavern':(810,550),
+                'Fishing Pond':(576,45),'Fishing Pond task01':(262,70),'Fishing Pond task02':(111,48),'Fishing Pond task03':(637,89),'Fishing Pond task04':(927,66),
+                }
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
 Locations = ['Hut 1','Hut 2','Hut 3','Shrine','Well','Shrine','Shrine']
