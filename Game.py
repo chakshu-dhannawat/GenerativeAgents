@@ -121,9 +121,8 @@ class Game:
     self.alive[kick] = 0
     self.kicked = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
+    self.checkEnd()
 
-  def test(self):
-    print(calendar.time)
 
   def dayVote(self):
 
@@ -183,8 +182,11 @@ class Game:
       log(f"{self.kicked} has been lynched by the Villagers")
 
     for agent in self.agents:
-      agent.dest = None
       agent.location_name = 'Tavern'
+      agent.dest = None
+
+    self.checkEnd()
+      
 
   def findName(self,currName):
     for name in self.names:
@@ -251,8 +253,22 @@ class Game:
       y = LOCATION_MAP['Tavern'][1] + int(TavernRadius * math.sin(theta))
       self.agents[voters[i]].tavern((x,y))
       # self.agents.dest = "Tavern"
-     
 
+  def checkEnd(self):
+    players = [0,0]
+    for i in range(self.n):
+       if(self.alive[i]):
+          players[self.warewolf[i]]+=1
+    if(players[1]==0):
+      self.run = False
+      log('\n=== TOWNFOLKS WIN ===')
+      pygame.quit()
+    if(players[1]>players[0]):
+      self.run = False 
+      log('\n=== WAREWOLVES WIN ===')
+      pygame.quit()
+          
+    
   def switchPhase(self):
     self.changePhase = True
 
@@ -304,8 +320,9 @@ class Game:
   
   def draw_window(self) : 
       self.win.blit(self.bg,(0,0))
-      for player in self.agents: 
-          player.draw()      
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.draw()      
       self.draw_time()
       pygame.display.update()
 
@@ -320,8 +337,9 @@ class Game:
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
 
-      for player in self.agents:
-          player.move() 
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.move() 
       
       if(self.changePhase):
         if(not self.Night):

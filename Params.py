@@ -57,7 +57,7 @@ Agents
 ====================
 '''
 
-MinDialogues = 5
+MinDialogues = 1
 
 agentsDetails = [
     {"name": "Takeshi Yamamoto", "description": "Takeshi is a warewolf; Takeshi is smart and is good at lying."},
@@ -66,7 +66,7 @@ agentsDetails = [
     {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
     {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
     {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
-    # {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."}
+    {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."},
 ]
 
 
