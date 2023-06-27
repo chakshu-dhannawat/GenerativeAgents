@@ -362,6 +362,7 @@ class Agent():
   def choose_random_location(self):
       # Randomly choose a new direction
       location = random.choice(list(LOCATION_MAP.keys()))
+      if(not isinstance(self.location_name, str)): self.location_name = "Tavern"
       self.destination_path = town.shortestPath(self.location_name,location)
       
       # self.destination = self.destination_path[0]
