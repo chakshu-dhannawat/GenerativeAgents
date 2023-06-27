@@ -48,7 +48,7 @@ log('\n=======Adding Memories=======\n')
 
 '''
 ====================
-Warewolf Game
+Warewolf Game [LOGIC]
 ====================
 '''
 log('\n=======Warewolf Game=======\n')
@@ -56,18 +56,30 @@ log('\n=======Warewolf Game=======\n')
 
 
 def game_logic():
-  # time.sleep(3)
-  # game.switchPhase()
-  # time.sleep(5)
-  # game.nightVote()
-  # time.sleep(3)
-  # game.switchPhase()
-  # game.dayVote()
-  pass
+
+  time.sleep(1)
+
+  day = False
+  
+  while game.run:
+     
+    game.switchPhase()
+    
+    if(day):
+      game.dayVote()
+    else:  
+      game.nightVote()
+    
+    day = not day
+
+'''
+====================
+Warewolf Game [GRAPHICS]
+====================
+'''
+
 
 def render():
-
-  global counter, night, day
 
   while game.run : 
 
@@ -76,9 +88,15 @@ def render():
       game.step()
 
 
+'''
+====================
+Running Game using Multi-Threading
+====================
+'''
 
-logic_thread = threading.Thread(target=game_logic)
+
 render_thread = threading.Thread(target=render)
+logic_thread = threading.Thread(target=game_logic)
 
-logic_thread.start()
 render_thread.start()
+logic_thread.start()
