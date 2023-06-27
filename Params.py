@@ -56,7 +56,27 @@ nodes = {"Hut 1": "The first hut",
         "Electricity House": "generates and distributes electricity power to the town",
         "Cattle Farm": "A dedicated area where livestock is raised for milk, meat, or other dairy products",
         "Fishing Pond": "A designated spot for fishing activities",
-        "Shrine": "A sacred place where townfolks can pay homage, meditate, or seek spiritual solace."
+        "Shrine": "A sacred place where townfolks can pay homage, meditate, or seek spiritual solace.",
+        "Well task01": "Drawing water from the well and distributing it to the villagers.",
+        "Well task02": "Ensuring the well is clean and free from any contamination.",
+        "Well task03": "Repairing the pulley system or any damages to the well structure.",
+        "Well task04": "Monitoring the water level and quality of the well.",
+        "Cattle Farm task01": "Feeding the animals and ensuring they have enough water.",
+        "Cattle Farm task02": "Cleaning the animal pens and maintaining their hygiene.",
+        "Cattle Farm task03": "Milking the cows and collecting eggs from the chickens.",
+        "Cattle Farm task04": "Repairing or maintaining the fences and structures in the farm.",
+        "Electricity House task01": "Maintaining the electricity generator or power source.",
+        "Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
+        "Electricity House task03": "Ensuring a stable power supply to the village.",
+        "Electricity House task04": "Managing the distribution of electrical resources.",
+        "Shrine task01": "Offering Rituals: Agents can perform regular rituals and offer prayers at the Shrine to seek divine guidance and protection for the village.",
+        "Shrine task02": "Cleaning and Maintenance: Agents can ensure that the Shrine area is clean and well-maintained, including sweeping, removing debris, and maintaining the altar or sacred objects.",
+        "Shrine task03": "Lighting and Incense: Agents can light candles or oil lamps and burn incense at the Shrine, creating a peaceful and spiritual atmosphere.",
+        "Shrine task04": "Gathering Sacred Herbs: Agents can search for and gather specific herbs or flowers near the Shrine that are used for religious rituals or medicinal purposes.",
+        "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
+        "Hut 2 task01": "Repairing any damages or leaks in the houses.",
+        "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
+        "Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed."
         }
 
 
