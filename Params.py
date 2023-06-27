@@ -76,7 +76,11 @@ nodes = {"Hut 1": "The first hut",
         "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
         "Hut 2 task01": "Repairing any damages or leaks in the houses.",
         "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
-        "Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed."
+        "Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed.",
+        "Fishing Pond task01": "Setting up and checking fishing nets or traps.",
+        "Fishing Pond task02": "Casting lines and catching fish for the village's food supply.",
+        "Fishing Pond task03": "Cleaning and preparing the caught fish for cooking.",
+        "Fishing Pond task04": "Maintaining the fishing equipment and repairing any damages."
         }
 
 
