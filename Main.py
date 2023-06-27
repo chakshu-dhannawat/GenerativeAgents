@@ -54,19 +54,15 @@ Warewolf Game
 log('\n=======Warewolf Game=======\n')
 
 
-night = 10*FPS
-day = 20*FPS 
-counter = 0
-
 
 def game_logic():
-  global counter, night, day
-
-  while game.run :
-      if(counter==night):
-        game.nightVote()
-      if(counter==day):
-        game.dayVote()
+  time.sleep(3)
+  game.switchPhase()
+  time.sleep(5)
+  game.nightVote()
+  time.sleep(3)
+  game.switchPhase()
+  game.dayVote()
 
 def render():
 
@@ -77,8 +73,6 @@ def render():
       game.clock.tick(FPS)
 
       game.step()
-
-      counter+=1
 
 
 

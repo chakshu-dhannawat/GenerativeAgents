@@ -30,7 +30,9 @@ Assests
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
-bg = pygame.image.load(Path+'town2.jpg')
+bg = pygame.image.load(Path+'Town_background_new.png')
+
+bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
 # music = pygame.mixer.music.load(Path+'music.mp3')
 # pygame.mixer.music.play(-1)
@@ -65,7 +67,13 @@ class Game:
 
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
-    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)    
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)   
+    self.bgs = bgs
+    for i in range(100): 
+      self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE)  
+    self.changePhase = False 
+    self.Night = 0
+    self.bgId = -1
     self.win = pygame.display.set_mode((self.w,self.h))
     pygame.display.set_caption("Warewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
@@ -126,6 +134,9 @@ class Game:
     for i in range(self.n):
       if(self.alive[i]):
         voters.append(i)
+
+    self.assembleTavern(voters)
+
     for i in range(self.n):
       if(not self.alive[i]): context.append("")
       else: context.append(self.getContext(self.agents[i].name))
@@ -170,6 +181,10 @@ class Game:
       self.kicked = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
+
+    for agent in self.agents:
+      agent.dest = None
+      agent.location_name = 'Tavern'
 
   def findName(self,currName):
     for name in self.names:
@@ -220,13 +235,26 @@ class Game:
           history = history + '\n'
           for i in range(self.n):
             if(self.alive[i]): self.agents[i].remember(reply)
+      self.agents[prev].isSpeaking = False 
       log("\nEnd of Conversation")
       return history
+  
 
+  def assembleTavern(self, voters):
+    n = len(voters)
+    for i in range(n):
+      self.agents[voters[i]].dest = "Stop"
+    angle = 2 * math.pi / n
+    for i in range(n):
+      theta = i * angle
+      x = LOCATION_MAP['Tavern'][0] + int(TavernRadius * math.cos(theta))
+      y = LOCATION_MAP['Tavern'][1] + int(TavernRadius * math.sin(theta))
+      self.agents[voters[i]].tavern((x,y))
+      # self.agents.dest = "Tavern"
+     
 
-
-
-
+  def switchPhase(self):
+    self.changePhase = True
 
   def conversation(self, name1, name2):
     curr = 0
@@ -242,6 +270,9 @@ class Game:
         reply = agents[curr].talk(agents[1-curr].name, reply, history)
         history = history + '\n'
     log("\nEnd of Conversation")
+
+  # def startNight(self):
+     
 
 
   def reset(self) : 
@@ -287,11 +318,30 @@ class Game:
               pygame.quit()    
       
       keys = pygame.key.get_pressed()
-      self.agents[0].manual_move(keys)
+      # self.agents[0].manual_move(keys)
 
-      for player in self.agents[1:]:
+      for player in self.agents:
           player.move() 
       
+      if(self.changePhase):
+        if(not self.Night):
+          if(self.bgId==0):
+              self.changePhase = False
+              self.bgId=-1
+              self.Night = True
+          else:
+              if(self.bgId==-1): self.bgId=100
+              self.bgId-=1
+              self.bg = self.bgs[self.bgId]
+        else:
+          if(self.bgId==99):
+              self.changePhase = False
+              self.bgId=-1
+              self.Night = False
+          else:
+              self.bgId+=1
+              self.bg = self.bgs[self.bgId]
+
       self.draw_window()
       calendar.increment(60/FPS)
       # test_process = Process(target=self.test)

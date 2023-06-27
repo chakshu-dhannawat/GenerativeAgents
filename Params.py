@@ -9,9 +9,11 @@ Path = "Assets\\"
 WIN_WIDTH = 1000
 WIN_HEIGHT = 700
 
-FPS = 20
+FPS = 100
 
-LOCATION_MAP = {'Hut 1':(140,180),'Hut 2':(350,190),'Hut 3':(350,350),'Shrine':(250,500),'Cattle Farm':(800,200),'Well':(500,450),'Electricity House':(110,370),'Tavern':(800,500),'Fishing Pond':(500,60)}
+TavernRadius = 100
+
+LOCATION_MAP = {'Hut 1':(140,180),'Hut 2':(350,190),'Hut 3':(350,350),'Shrine':(250,500),'Cattle Farm':(800,200),'Well':(500,450),'Electricity House':(110,370),'Tavern':(810,550),'Fishing Pond':(500,60)}
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
 Locations = ['Hut 1','Hut 2','Hut 3','Shrine','Well','Shrine','Shrine']
@@ -55,15 +57,15 @@ Agents
 ====================
 '''
 
-MinDialogues = 10
+MinDialogues = 5
 
 agentsDetails = [
     {"name": "Takeshi Yamamoto", "description": "Takeshi is a warewolf; Takeshi is smart and is good at lying."},
     {"name": "Hiroshi Tanaka", "description": "Hiroshi is a townfolk; Hiroshi gets easily convinced from other's arguments."},
     {"name": "Aya Suzuki", "description": "Aya is a townfolk; Aya is smart and has good deduction skills."},
     {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
-    # {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
-    # {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
+    {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
+    {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
     # {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."}
 ]
 
