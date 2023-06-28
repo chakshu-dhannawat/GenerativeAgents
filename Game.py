@@ -68,6 +68,56 @@ frame_count = 0
 animation_speed = 4  
 
 
+'''
+====================
+Emojis
+====================
+'''
+
+# Load and scale the emoji images
+#eat_emoji = pygame.transform.scale(pygame.image.load(Path + "Eat_emoji.png"), EMOJI_SIZE)
+assistant_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "assistant.png"), EMOJI_SIZE)
+broom_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "broom.png"), EMOJI_SIZE)
+bucket_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "bucket.png"), EMOJI_SIZE)
+bulb_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "bulb.png"), EMOJI_SIZE)
+cook_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "cook.png"), EMOJI_SIZE)
+cow_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "cow.png"), EMOJI_SIZE)
+eggs_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "eggs.png"), EMOJI_SIZE)
+electricRepair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "electricRepair.png"), EMOJI_SIZE)
+fish_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fish.png"), EMOJI_SIZE)
+fishingPole_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fishingPole.png"), EMOJI_SIZE)
+houseMechanic_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "houseMechanic.png"), EMOJI_SIZE)
+houses_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "houses.png"), EMOJI_SIZE)
+lamp_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "lamp.png"), EMOJI_SIZE)
+pick_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "pick.png"), EMOJI_SIZE)
+prayer_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "prayer.png"), EMOJI_SIZE)
+shrine_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "shrine.png"), EMOJI_SIZE)
+wellMechanic_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wellMechanic.png"), EMOJI_SIZE)
+wood_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wood.png"), EMOJI_SIZE)
+
+# Create a dictionary of emojis
+EMOJI = {
+            #'Eat': eat_emoji,
+            'Assistant': assistant_emoji,
+            'Broom': broom_emoji,
+            'Bucket': bucket_emoji,
+            'Bulb': bulb_emoji,
+            'Cook': cook_emoji,
+            'Cow': cow_emoji,
+            'Eggs': eggs_emoji,
+            'Electric Repair': electricRepair_emoji,
+            'Fish': fish_emoji,
+            'Fishing Pole': fishingPole_emoji,
+            'House Mechanic': houseMechanic_emoji,
+            'Houses': houses_emoji,
+            'Lamp': lamp_emoji,
+            'Pick': pick_emoji,
+            'Prayer': prayer_emoji,
+            'Shrine': shrine_emoji,
+            'Well Mechanic': wellMechanic_emoji,
+            'Wood': wood_emoji
+        }
+
 
 
 '''

@@ -5,7 +5,7 @@ Game
 '''
 
 Path = "Assets\\"
-
+Emoji_Path = "Assets\\emojis\\"
 WIN_WIDTH = 1000
 WIN_HEIGHT = 700
 EMOJI_SIZE = (25,25)

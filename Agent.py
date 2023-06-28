@@ -4,6 +4,7 @@ from Params import *
 from Util import *
 from Graph import Graph,town
 from GPT import GPT
+from Game import *
 import os
 import pygame
 import random
@@ -468,9 +469,10 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
-        eat_emoji = pygame.image.load(Path+"Eat_emoji.png")
-        eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
-        EMOJI = {'Eat': eat_emoji }
+
+        #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
+        #EMOJI = {'Eat': eat_emoji }
+        
         x = self.x
         y = self.y
         emoji_surface = EMOJI[emoji]
