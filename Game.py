@@ -33,9 +33,9 @@ Assests
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
-bg = pygame.image.load(Path+'Town_background_new.png')
+bg = pygame.image.load(Path+'town.jpg')
 
-bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
+bgs = [pygame.image.load(Path+'town.jpg') for i in range(100)]
 
 # music = pygame.mixer.music.load(Path+'music.mp3')
 # pygame.mixer.music.play(-1)
@@ -115,51 +115,50 @@ class Game:
     
     self.reset()
 
-  def getContext(self,name):
+  def getContext(self,name,night=False):
     self.contexts[name] = {}
     context = ""
-    sr = 0
     id = self.ids[name]
     for i,agent in enumerate(self.agents):
       if(not self.alive[i]): continue
       if(name==agent.name): continue
-      sr += 1
+      if(night and self.warewolf[i]): continue
       voteContext = self.agents[id].vote_context(agent.name)
       self.contexts[name][agent.name] = voteContext
-      context = context + f"{sr}) {agent.name}: {voteContext}\n"
-    context = context[:-1]
-    return context
 
-  def getContextTownfolks(self,name):
-    context = ""
-    sr = 0
-    id = self.ids[name]
-    for i,agent in enumerate(self.agents):
-      if(not self.alive[i]): continue
-      if(self.warewolf[i]): continue
-      sr += 1
-      context = context + f"{sr}) {agent.name}: {self.agents[id].vote_context(agent.name)}\n"
-    context = context[:-1]
-    return context
+  def nightVoteWarewolf(self,i):
+    self.getContext(self.names[i],True)
+    voteContext = ""
+    sr = 1
+    for key, value in self.contexts[self.names[i]].items():
+        voteContext += f"{sr}) {key}: {value}\n"
+        sr += 1
+    voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext))
+    try:
+      vote = self.names.index(voteName)
+    except:
+      voteName = self.findName(voteName)
+      vote = self.names.index(voteName)
+    self.votes[vote] += 1
 
   def nightVote(self):
     log("Currently it is Night, the Warewolves will kill a townfolk...\n")
-    votes = [0]*self.n
-    townfolks = []
+    self.votes = [0]*self.n
+
+    threads = []
     for i in range(self.n):
-      if(self.alive[i] and not self.warewolf[i]):
-        townfolks.append(i)
-    for i in range(self.n):
-      if(not self.warewolf[i]): continue
-      context = self.getContextTownfolks(self.agents[i].name)
-      vote = extractImportance(self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,context))) - 1
-      votes[townfolks[vote]]+=1
-    kick = votes.index(max(votes))
+        if(not self.warewolf[i]): continue
+        thread = threading.Thread(target=self.nightVoteWarewolf(i))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+
+    kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
     self.kicked = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
-
 
   def dayVote(self):
 
@@ -173,9 +172,24 @@ class Game:
 
     self.assembleTavern(voters)
 
+    threads = []
     for i in range(self.n):
-      if(not self.alive[i]): context.append("")
-      else: context.append(self.getContext(self.agents[i].name))
+        if(not self.alive[i]): continue
+        thread = threading.Thread(target=self.getContext(self.agents[i].name))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+
+    for i in range(self.n):
+       if(not self.alive[i]): context.append("")
+       else: 
+          voteContext = ""
+          sr = 1
+          for key, value in self.contexts[self.agents[i].name].items():
+              voteContext += f"{sr}) {key}: {value}\n"
+              sr += 1
+          context.append(voteContext[:-1])
 
     conversation = self.groupConversation(context,voters)
 
@@ -310,9 +324,14 @@ class Game:
         time.sleep(5)  
 
   def generatePlanDay(self):
+    threads = []
     for i in range(self.n):
-      if(self.alive[i]):
-         self.agents[i].generatePlanDay()
+        if(not self.alive[i]): continue
+        thread = threading.Thread(target=self.agents[i].generatePlanDay)
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
 
   def checkEnd(self):
     players = [0,0]

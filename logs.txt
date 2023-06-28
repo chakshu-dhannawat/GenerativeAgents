@@ -1,0 +1,277 @@
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 13:26:51
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act friendly and gain trust of townfolks. 
+2) Blame other players and manipulate the discussion to kick out townfolks. 
+3) Use my werewolf identity to sow doubt and confusion among townfolks.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen carefully to the arguments and opinions of others before making a decision.
+2) Keep track of who is being accused and who is doing the accusing to identify potential patterns.
+3) Use evidence and logic to persuade others to vote for the person who is most likely to be a warewolf.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns and actions of suspected players to deduce their identity.
+2) Form alliances with trusted players and share information to narrow down the list of suspected warewolves.
+3) Use logical reasoning and deduction to convince others to vote out suspected warewolves during the day.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe and analyze the voting patterns of each player to identify potential warewolves.
+2) Form alliances with other townfolks and share information to increase chances of identifying warewolves.
+3) Use logic and deduction to persuade others to vote for suspected warewolves during the day discussions.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Takeshi Yamamoto's Plan for Tuesday February 13 -
+10:00 AM : Go to the Cattle Farm, act friendly, and gain trust of townfolks.
+11:00 AM : Visit the Shrine and pay homage, sow doubt and confusion among townfolks. 
+12:00 PM : Have lunch at the Tavern, exchange information and manipulate discussion to kick out townfolks. 
+01:00 PM : Visit the Well, act helpful, and gain trust of townfolks.
+02:00 PM : Visit Intermediate01, act friendly, and gain trust of townfolks.
+03:00 PM : Go to the Fishing Pond, act helpful, and gain trust of townfolks.
+04:00 PM : Visit Intermediate07, sow doubt and confusion among townfolks.
+05:00 PM : Go to Hut 2, blame other players and manipulate discussion to kick out townfolks. 
+06:00 PM : Visit the Electricity House, act helpful, and gain trust of townfolks.
+
+.....................
+
+Hiroshi Tanaka's Plan for Tuesday February 13 -
+10:00 AM : Go to the well to fetch water and chat with other townfolks.
+11:00 AM : Visit the shrine to pray for good luck and peace.
+12:00 PM : Have lunch at the tavern and talk to people about the current situation.
+1:00 PM : Check on the cattle farm to see if any help is needed.
+2:00 PM : Take a stroll around the village and gather information.
+3:00 PM : Go to the electricity house to learn how it works and see if anything seems strange.
+4:00 PM : Head to Hut 2 to visit a friend and discuss the recent events.
+5:00 PM : Attend a meeting at Hut 1 to discuss the vote for the night. 
+6:00 PM : Go back home and get some rest before the night vote.
+
+.....................
+
+Aya Suzuki's Plan for Tuesday February 13 -
+10:00 AM : Visit the well and talk to other townfolks gathering there.
+11:00 AM : Investigate Hut 1 and speak with the inhabitants.
+12:00 PM : Take a break and have lunch at the tavern while observing other townfolks' behavior.
+1:00 PM : Check the electricity house and talk to the workers.
+2:00 PM : Visit the cattle farm and ask questions to the farmers.
+3:00 PM : Go to the fishing pond and talk to anyone there.
+4:00 PM : Visit the shrine and meditate for a while.
+5:00 PM : Analyze all the information gathered so far and create a list of suspected warewolves.
+6:00 PM : Share the list with trusted allies and discuss the next course of action.
+
+.....................
+
+Sakura Kobayashi's Plan for Tuesday February 13 -
+10:00 AM : Observe voting patterns and socialize in the Tavern to gather information.
+11:00 AM : Visit the Well and Shrine areas to search for potential clues or evidence.
+12:00 PM : Analyze gathered information and discuss with other townfolks in the Electricity House.
+1:00 PM : Visit the Cattle Farm and Fishing Pond to gather information and observe player behavior.
+2:00 PM : Have lunch and take a break to relax and recharge.
+3:00 PM : Analyze gathered information and discuss with other townfolks in Hut 1.
+4:00 PM : Visit Intermediate areas to gather potential clues or evidence.
+5:00 PM : Analyze gathered information and discuss with other townfolks in Hut 3.
+6:00 PM : Prepare for the night vote and finalize the plan to identify potential warewolves.
+
+.....................
+
+
+Sakura Kobayashi chose to go to Tavern at 10:02 AM
+
+
+Aya Suzuki chose to go to Well at 10:02 AM
+
+
+Takeshi Yamamoto chose to go to Cattle Farm at 10:02 AM
+
+
+Hiroshi Tanaka chose to go to Well at 10:02 AM
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 13:59:59
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a trusted advisor and gain trust by providing logical reasoning for voting out townfolks.
+2) Bluff by accusing other warewolves and gain townfolks' trust by agreeing with their analysis.
+3) Plant doubt by suggesting alternate theories and gain sympathy by appearing to be conflicted during voting.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Gather information by actively listening to others and asking questions to identify patterns.
+2) Form alliances with trusted townfolks to share information and voting decisions.
+3) Be open to changing voting decisions based on new information and persuasive arguments from others.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe behaviors and voting patterns of players to identify possible warewolves.
+2) Collaborate with other townfolks to share information and eliminate suspects.
+3) Use deductive reasoning to narrow down the list of potential warewolves and vote strategically to eliminate them.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe and analyze the behavior of the other players during the discussion and voting phase to identify suspicious patterns.
+2) Keep track of who is voted out and try to connect the dots to reveal the warewolves' identities.
+3) Use logic and reasoning to convince others of your suspicions and form alliances with other townfolks to increase your chances of success.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Aya Suzuki's Plan for Tuesday February 13 -
+10:00 AM : Visit the Tavern to chat with the locals and gather any useful information.
+11:00 AM : Head to the Shrine to meditate and clear my mind for better deduction skills.
+12:00 PM : Go fishing at the Fishing Pond to relax and observe others' behavior.
+1:00 PM : Have lunch with fellow townfolks at Hut 1.
+2:00 PM : Visit the Cattle Farm to check on the livestock and talk to the farmer.
+3:00 PM : Walk around the Intermediate Nodes to observe and gather information.
+4:00 PM : Head to the Well to collect water and interact with others.
+5:00 PM : Visit the Electricity House to learn more about the town's power supply and talk to the operator.
+6:00 PM : Return to Hut 1 to rest and prepare for the night's strategy.
+
+.....................
+
+Sakura Kobayashi's Plan for Tuesday February 13 -
+10:00 AM : Visit the well to fetch water and socialize with other townfolks.
+11:00 AM : Head to the Cattle Farm to collect milk and purchase meat for lunch.
+12:00 PM : Prepare and have lunch at Hut 1.
+1:00 PM : Visit the Shrine to meditate and seek spiritual guidance.
+2:00 PM : Head to the Electricity House to learn about the power generation process.
+3:00 PM : Visit the Fishing Pond and try to catch some fish for dinner.
+4:00 PM : Head to the Tavern to socialize with other townfolks and exchange information.
+5:00 PM : Visit the Intermediate Nodes to explore the outskirts of the village.
+6:00 PM : Return to Hut 1 to prepare and have dinner.
+
+.....................
+
+Hiroshi Tanaka's Plan for Tuesday February 13 -
+10:00 AM : Visit the well and the cattle farm to gather information from fellow townfolks.
+11:00 AM : Visit the tavern to socialize and exchange information with trusted allies.
+12:00 PM : Visit the fishing pond to gather information and observe the behavior of other townfolks.
+1:00 PM : Meet with trusted allies to share information and discuss voting decisions.
+2:00 PM : Visit the shrine to meditate and clear the mind.
+3:00 PM : Visit the electricity house to gather information and observe the behavior of other townfolks.
+4:00 PM : Visit the intermediate nodes to gather information and observe the behavior of other townfolks.
+5:00 PM : Meet with trusted allies to share information and discuss voting decisions.
+
+.....................
+
+Takeshi Yamamoto's Plan for Tuesday February 13 -
+10:00 AM : Gather information by mingling at the tavern, appear friendly, and try to identify townfolks' alliances.
+11:00 AM : Head to the shrine and act as a spiritual guide, gain trust, and gather information.
+12:00 PM : Visit the cattle farm and offer help, plant doubt, and suggest alternate theories.
+1:00 PM : Hide and observe the townfolks, take notes on their movements, and gain knowledge.
+2:00 PM : Visit the fishing pond, offer to help, and gather information while appearing friendly.
+3:00 PM : Act as an electrician and visit the electricity house, gain the trust of townfolks, and plant doubt.
+4:00 PM : Visit the well, offer to help, and gain the trust of the townfolks while gathering information.
+5:00 PM : Roam the town, plant doubt, and suggest alternate theories while appearing conflicted.
+6:00 PM : Attend the vote, act as a trusted advisor, and provide logical reasoning for kicking out a townfolk.
+
+.....................
+
+
+Sakura Kobayashi chose to go to Well at 10:00 AM
+
+
+Hiroshi Tanaka chose to go to Well at 10:00 AM
+
+
+Takeshi Yamamoto chose to go to Tavern at 10:00 AM
+
+
+Aya Suzuki chose to go to Tavern at 10:00 AM
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 14:18:05
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) I will try to blend in with the townfolks by participating in discussions and voting in a way that doesn't draw suspicion.
+2) I will try to manipulate the discussions and shift the blame towards other townfolks to save myself and other warewolves.
+3) I will lie and use my intelligence to create false narratives and alibis to throw off suspicion from myself and other warewolves.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to arguments from different people and take notes to identify patterns.
+2) Form alliances with other townfolks to collectively narrow down suspects.
+3) Use logical deduction to eliminate suspects and vote with the majority to kick out a potential warewolf.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe behavior patterns and voting habits to identify suspicious players.
+2) Form alliances with other townfolks to share information and voting plans.
+3) Use deductive reasoning to analyze voting patterns and narrow down potential warewolves.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe voting patterns to identify possible warewolves and form alliances with trusted townfolks.
+2) Keep track of who has been voted out and who is still alive to narrow down the pool of possible warewolves.
+3) Use logic and deduction to pinpoint the warewolves and convince other townfolks to vote with you.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Sakura Kobayashi has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Hiroshi Tanaka: I've noticed a pattern in Takeshi's arguments. He seems to be deflecting suspicion and not contributing much to the discussion.
+Aya Suzuki: I've noticed that Takeshi has been voting with the werewolves consistently. We need to consider him as a potential suspect.
+Takeshi Yamamoto: I agree with Aya's observation. However, we should also consider the possibility of her being a werewolf trying to frame me.
+Hiroshi Tanaka: I've also noticed that Takeshi has been avoiding eye contact during the discussion. That behavior seems suspicious to me.
+
+End of Conversation
+
+Takeshi Yamamoto voted to kick out Hiroshi Tanaka
+Hiroshi Tanaka voted to kick out Takeshi Yamamoto
+Aya Suzuki voted to kick out Takeshi Yamamoto
+
+Takeshi Yamamoto has been lynched by the Villagers
+
+=== TOWNFOLKS WIN ===

@@ -45,11 +45,12 @@ Format -
 3) <strategy 3>"""
 
 QUERY_NIGHT = """It is currently night.
+
 Context of Remaining Townfolks in {}'s Memory -
 {}
-Select exactly one Townfolk to vote to kick out.
-Format - <serial number>
-Example - 2)"""
+
+Suggest exactly one Townfolk to vote to kick out. 
+Format - <name>"""
 
 QUERY_DAY = """It is currently day.
 
@@ -59,7 +60,7 @@ Context of Remaining Players in {}'s Memory -
 Group Discussion -
 {}
 
-As {}, Select exactly one Player to vote to kick out.
+As {}, Suggest exactly one Player to vote to kick out.
 The vote will be visible to all Players.
 
 Names you can vote to kick out -
