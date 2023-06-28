@@ -485,5 +485,5 @@ class Agent():
         pygame.draw.ellipse(self.win, CREAM, bubble_rect)
 
         # Blit the emoji onto the bubble
-        emoji_rect = emoji_surface.get_rect(center=(x, y))
+        emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
         self.win.blit(emoji_surface, emoji_rect)
