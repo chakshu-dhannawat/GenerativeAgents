@@ -14,6 +14,7 @@ from Memories import calendar
 import asyncio
 from multiprocessing import Process
 import time
+import threading
 
 
 pygame.font.init()
@@ -281,18 +282,26 @@ class Game:
     angle = 2 * math.pi / n
     for i in range(n):
       theta = i * angle
-      x = LOCATION_MAP['Tavern'][0] + int(TavernRadius * math.cos(theta))
-      y = LOCATION_MAP['Tavern'][1] + int(TavernRadius * math.sin(theta))
+      x = TavernCenter[0] + int(TavernRadius * math.cos(theta))
+      y = TavernCenter[1] + int(TavernRadius * math.sin(theta))
       self.agents[voters[i]].tavern((x,y))
-      # self.agents.dest = "Tavern"
 
   def afternoon(self):
     self.generatePlanDay()
     while True:
       if(calendar.dt.minute==0):
+        now = calendar.time
+        threads = []
         for i in range(self.n):
-          if(self.alive[i]):
-             self.agents[i].nextLocation()
+            if(not self.alive[i]): continue
+            thread = threading.Thread(target=self.agents[i].nextLocation, args=(now,))
+            thread.start()
+            threads.append(thread)
+        for thread in threads:
+            thread.join()
+        # for i in range(self.n):
+        #   if(self.alive[i]):
+        #      self.agents[i].nextLocation()
         time.sleep(5)  
 
   def generatePlanDay(self):
