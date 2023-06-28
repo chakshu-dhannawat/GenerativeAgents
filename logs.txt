@@ -275,3 +275,596 @@ Aya Suzuki voted to kick out Takeshi Yamamoto
 Takeshi Yamamoto has been lynched by the Villagers
 
 === TOWNFOLKS WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 14:46:36
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act friendly and helpful towards the townfolks, gaining their trust.
+2) Suggest suspicions of other townfolks to create confusion and suspicion among them.
+3) During the night, manipulate the warewolf vote to kick out the most suspicious townfolk.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to arguments carefully and evaluate them critically before making a decision.
+2) Observe the behavior of each player and note any suspicious actions or inconsistencies.
+3) Form alliances with other townfolks and work together to identify and vote out suspected warewolves.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns and suspicious behavior during discussions to narrow down potential warewolves.
+2) Form alliances with other townfolks and share information to strengthen deductions.
+3) Use logical reasoning and deduction to identify the warewolves and persuade others to vote with evidence.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Analyze voting patterns and behavior to identify possible warewolves.
+2) Observe and communicate with other townfolks to gather information and form alliances.
+3) Use deductive reasoning and logical thinking to make informed decisions during discussions and voting.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 14:47:04
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a townfolk and build trust by defending them during discussions.
+2) Bluff as a townfolk and accuse other townfolks to create confusion and suspicion.
+3) Coordinate with other warewolves to vote out townfolks strategically and avoid suspicion.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to the arguments of others, especially those who seem confident in their accusations.
+2) Keep track of who is being accused and who is doing the accusing to identify potential patterns.
+3) Use my own observations and gut feeling to make the final decision on who to vote out.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe the voting patterns and identify any unusual behavior or alliances among the townfolks. This can help identify potential warewolves.
+2) Use deduction skills to analyze the actions and statements of each person during the day discussions. Look for inconsistencies or suspicious behavior.
+3) Keep track of who has been kicked out and who is still in the game. Use this information to narrow down potential warewolves and work with other townfolks to vote them out.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe patterns of behavior: Note who is consistently trying to redirect conversation or is quick to accuse others. Warewolves often try to steer suspicion away from themselves.
+2) Build alliances: Form a group of trusted townfolks to share information and suspicions with. Use this group to collectively vote out suspected warewolves.
+3) Keep track of voting patterns: Note who is consistently voting against suspected warewolves and who is abstaining from voting. This can help identify potential warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 14:47:58
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act like a townfolk, keep a low profile and only vote against those who are already suspected.
+2) Spread rumors about the innocent townfolks, and agree with the majority to kick them out.
+3) Blame other players for suspicious behavior and accuse them of being a warewolf to draw attention away from myself.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Observe behavior, listen to arguments, and gather evidence before voting.
+2) Collaborate with other townfolks to share information and opinions.
+3) Analyze voting patterns and suspect those who consistently vote against townfolks.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe behavior during the day to identify suspicious actions and build a case against potential warewolves.
+2) Use deductive reasoning to eliminate possibilities and narrow down the potential warewolves.
+3) Collaborate with other townfolks to share information and gather evidence to make informed decisions during voting.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe voting patterns to identify potential warewolves and their alliances.
+2) Use logical reasoning and analysis to identify inconsistencies in statements made by players.
+3) Form alliances with other townfolks to share information and increase chances of identifying warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 14:49:26
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act friendly and helpful towards townfolks, gain their trust.
+2) Blame suspicious actions on innocent players and vote to kick them out.
+3) Convince townfolks to vote for each other, creating confusion and suspicion while protecting fellow warewolves.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to arguments carefully and ask for evidence before making a decision.
+2) Keep track of voting patterns and try to identify suspicious behavior.
+3) Form alliances with other townfolks and work together to identify and vote out suspected warewolves.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns, suspicions, and alibis during the day to identify potential werewolves.
+2) Use the night phase to gather information by observing who the werewolves vote to eliminate.
+3) Build alliances with other townfolks and share suspicions to increase chances of identifying and eliminating werewolves.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe and analyze the voting patterns of the townfolks to identify suspicious behavior and possible warewolves.
+2) Form alliances with other townfolks and share information to increase chances of identifying warewolves.
+3) Use logic and evidence to persuade others during discussions and voting to eliminate suspected warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 14:52:27
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act like a helpful townfolk during the day and vote to kick out fellow townfolks, but at night, vote to kick out other warewolves.
+2) Spread misinformation and rumors about innocent townfolks being warewolves to create confusion and mistrust.
+3) Use my intelligence to deduce the identity of other warewolves and work together to strategically vote out townfolks.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to arguments carefully, ask questions, and observe behavior before making a decision during the day.
+2) Form alliances with other townfolks to share information and vote as a block during the day.
+3) Keep track of who has been voted out and try to identify patterns to determine who the warewolves might be.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns to identify suspicious behavior.
+2) Form alliances and share information with trusted townfolks.
+3) Use deductive reasoning to narrow down suspects and gather evidence before voting.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe suspicious behavior and voting patterns during the day to identify potential werewolves.
+2) Use logic and reasoning to persuade others to vote for suspected werewolves during the day.
+3) Form alliances with other townfolks and share information to increase chances of identifying werewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:04:27
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:05:19
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act friendly and cooperative with townfolks to gain their trust and avoid suspicion.
+2) Bluff and lie during the day discussions to manipulate townfolks into voting out other townfolks.
+3) Coordinate with other warewolves during the night to strategically kick out townfolks and avoid suspicion.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+As Hiroshi Tanaka, my strategy to win as a Townfolk would be:
+
+1) Listen and analyze arguments from all townfolks and try to identify patterns in the accusations.
+2) Form alliances with other townfolks and share information to narrow down the suspects.
+3) Keep track of who has been kicked out and their role, and use that information to make informed decisions during the next vote.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns to deduce the identity of warewolves and form alliances with trustworthy townfolks.
+2) Gather information by asking questions and listening carefully during discussions to identify suspicious behavior and find clues.
+3) Keep track of who has been kicked out and who is still alive to identify any patterns and narrow down the list of potential warewolves.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe voting patterns and communication to identify suspicious behavior.
+2) Form alliances with trusted townfolks to vote together and increase chances of identifying warewolves.
+3) Keep track of who has been voted out and their role to deduce the remaining warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:06:41
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act friendly and cooperative with the townfolks to gain their trust.
+2) Bluff by accusing other townfolks of being warewolves and use their defense against them.
+3) Vote strategically to kick out townfolks who are suspicious of me or are close to identifying me.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to arguments and evidence presented by others, and try to identify inconsistencies or suspicious behavior.
+2) Form alliances with other townfolks to share information and vote together.
+3) Keep track of previous night and day outcomes, and use that information to make informed decisions during future discussions and votes.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe and analyze the voting patterns of the other townfolks to identify potential warewolves.
+2) Use logical deduction skills to identify inconsistencies in the statements made by other townfolks during discussions.
+3) Keep track of the number of warewolves still in the village and use process of elimination to identify them.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe the voting pattern and analyze the behavior of the voters to identify potential warewolves.
+2) Collaborate with other townfolks to share information and suspicions, and vote together to increase chances of kicking out warewolves.
+3) Keep track of who has been voted out and use that information to further narrow down the identity of the remaining warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:11:01
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a helpful townfolk during day discussions, but vote to kick out townfolks secretly with other warewolves at night.
+2) Spread rumors about innocent townfolks being warewolves to create confusion and suspicion among the townfolks.
+3) Bluff as a suspicious townfolk, and accuse others of being warewolves to deflect attention from myself and other warewolves.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to arguments carefully and analyze them logically before making a decision.
+2) Try to communicate and form alliances with other townfolks to gain more information and support.
+3) Keep track of past voting patterns and behaviors of other players to identify potential warewolves.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe suspicious behavior during the day, such as avoidance of eye contact or defensive behavior. 
+2) Keep track of who has been voted out at night and analyze patterns to deduce possible warewolf identities. 
+3) Collaborate with other townfolks to share information and create a strategy to vote out suspected warewolves.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe the voting patterns and behavior of players to identify suspicious activity.
+2) Use logic and deduction to narrow down the possible warewolves and vote them out.
+3) Collaborate with other townfolks to share information and form alliances for better decision-making.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:12:11
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a townfolk during the day, and vote along with the majority to avoid suspicion.
+2) At night, convince other warewolves to vote for the same townfolk to avoid suspicion.
+3) Lure suspicion away from myself by subtly suggesting others as potential warewolves during the day.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Observe the discussion and arguments made by others to identify suspicious behavior and voting patterns.
+2) Use logic and reasoning to convince others to vote in favor of suspected warewolves.
+3) Form alliances with other townfolks to increase chances of identifying and kicking out warewolves.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns to identify potential warewolves.
+2) Pay attention to the behavior and statements of suspected warewolves during discussions.
+3) Collaborate and communicate effectively with other townfolks to gather and share information, and vote strategically.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe and analyze behavior patterns of players during discussions and voting.
+2) Form alliances with other townfolks to share information and suspicions.
+3) Use logical reasoning to identify and vote out players with suspicious behavior or inconsistent stories.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:14:11
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act like a trustworthy townfolk and try to build relationships with other players.
+2) Bluff and accuse others to divert attention from myself.
+3) Try to get townfolks to suspect each other and create chaos to make it harder for them to identify me.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:17:57
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a friendly and helpful townfolk to gain trust and gather information.
+2) Blame other players and manipulate the discussion to get the townfolks to vote out their own.
+3) Use my werewolf identity to intimidate and scare townfolks into submission or silence.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:19:23
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a friendly and helpful townfolk, gaining trust and deflecting suspicion.
+2) Manipulate discussions to target townfolks who seem suspicious, while protecting fellow warewolves.
+3) Occasionally vote to kick out a fellow warewolf to throw off suspicion, while still maintaining majority control.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:20:34
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act friendly and cooperative during the day discussions to gain townfolks' trust and avoid suspicion.
+2) During the night, carefully choose which townfolk to vote out to avoid suspicion and create chaos.
+3) Plant seeds of doubt about other players to create division and distract from my own suspicious behavior.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:23:50
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Bluff as a townfolk during the day discussions to avoid suspicion.
+2) Influence the warewolf group to vote strategically and target key townfolks.
+3) Keep track of who has been kicked out and use that information to deceive townfolks during future discussions.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:25:03
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act like a townfolk, participate in discussions, and vote to kick out other townfolks to avoid suspicion.
+2) Spread rumors and create chaos to confuse the townfolks and divert their attention from identifying me.
+3) Blame other players and manipulate the townfolks to vote them out, while secretly protecting my fellow warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:27:45
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a normal townfolk during the day and suggest that someone else is a warewolf to divert attention.
+2) During the night, coordinate with other warewolves to kick out a townfolk who seems suspicious.
+3) Use my intelligence and lying skills to convince townfolks that I am not a warewolf and that someone else is.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:28:36
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act like a helpful townfolk, participate in discussions, and vote to kick out other townfolks to gain their trust.
+2) Spread rumors and accusations to create confusion among townfolks and shift suspicion towards innocent players.
+3) If suspected, deny and lie convincingly, and try to get others to vouch for your innocence. Use your werewolf knowledge to discredit other players.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 15:35:03
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a townfolk during the day, blend in and avoid suspicion.
+2) During the night, convince other warewolves to vote strategically and eliminate key townfolks.
+3) Lie and manipulate to sow distrust among townfolks, framing innocent players as warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+

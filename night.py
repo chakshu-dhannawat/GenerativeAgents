@@ -8,7 +8,7 @@ def convert_to_nighttime(input_image_path, output_image_path, brightness_factor=
     night_image = enhancer.enhance(brightness_factor)
     night_image.save(output_image_path)
 
-input_path = 'Assets/Town_background_new.png'
+input_path = 'Assets/town.png'
 output_path = 'Assets/Background/{}.png'
 
 N = 100

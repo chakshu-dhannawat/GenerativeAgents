@@ -3,7 +3,7 @@ from PIL import Image
 fire_image = Image.open("Assets\\fire.png")
 
 total_frames = 40
-rotation_angle = 0.2
+rotation_angle = 0.25
 frame_width, frame_height = fire_image.size
 output_frames = []
 

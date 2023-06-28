@@ -33,9 +33,9 @@ Assests
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
-bg = pygame.image.load(Path+'town.jpg')
+bg = pygame.image.load(Path+'town.png')
 
-bgs = [pygame.image.load(Path+'town.jpg') for i in range(100)]
+bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
 # music = pygame.mixer.music.load(Path+'music.mp3')
 # pygame.mixer.music.play(-1)
@@ -46,10 +46,10 @@ Fire
 ====================
 '''
 
-fire_width = 50
-fire_height = 50
-fire_x = 810
-fire_y = 545
+fire_width = FIRE_SIZE[0]
+fire_height = FIRE_SIZE[1]
+fire_x = FIRE_CENTER[0]
+fire_y = FIRE_CENTER[1]
 
 fire_particles = []
 
