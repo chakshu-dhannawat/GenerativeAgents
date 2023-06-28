@@ -12,6 +12,7 @@ EMOJI_SIZE = (25,25)
 FPS = 100
 
 TavernRadius = 100
+TavernCenter = (810,550)
 
 LOCATION_MAP = {'Hut 1':(140,180),'Hut 1 task01':(141,246),
                 'Hut 2':(435,210),'Hut 2 task01':(368,159),
