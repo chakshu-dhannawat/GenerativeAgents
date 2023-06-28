@@ -5,28 +5,31 @@ from Params import agentsDetails
 
 client = MongoClient("mongodb+srv://harshagrawal1046:harsh1234@cluster0.3v5rngf.mongodb.net/?retryWrites=true&w=majority")
 
-# Memories Databse
-memoriesDB = client["memories_DB"]
+
+class DBHandler:
+    def __init__(self):
+        self.memoriesDB = client["memories_DB"]
+        self.agentCollection = {}
+        self.initDB()
+
+    def initDB(self):
+        collection_names = self.memoriesDB.list_collection_names()
+        for collection in collection_names:
+            self.memoriesDB[collection].drop()
+        
+        for agent in agentsDetails:
+            self.agentCollection[agent["name"]]=self.memoriesDB[agent["name"]]
 
 
-def initDB():
-    collection_names = memoriesDB.list_collection_names()
-    for collection in collection_names:
-        memoriesDB[collection].drop()
-    agentCollection = {}   
-    for agent in agentsDetails:
-        agentCollection[agent["name"]]=memoriesDB[agent["name"]]
-
-
-def addMemories(name,observation,creation,lastAccess,importance):
-    d = {'observation':observation,
-         'creation':creation,
-         'lastAccess':lastAccess,
-         'importance':importance
-         }
-    agentCollection[name].insert_one(d)
-   
-def getAllMemories(name):
-    d = agentCollection[name].find()
-    return d
-
+    def addMemories(self, name,observation,creation,lastAccess,importance):
+        d = {'observation':observation,
+            'creation':creation,
+            'lastAccess':lastAccess,
+            'importance':importance}
+        self.agentCollection[name].insert_one(d)
+    
+    def getAllMemories(self, name):
+        d = self.agentCollection[name].find()
+        return d
+DB = DBHandler()
+DB.addMemories(agentsDetails[0]["name"], "Abcsn", "adkcsv", "sncjosnc", 0)
