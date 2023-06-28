@@ -12,6 +12,7 @@ EMOJI_SIZE = (25,25)
 FPS = 100
 
 TavernRadius = 100
+TavernCenter = (810,550)
 
 LOCATION_MAP = {'Hut 1':(228,280),'Hut 1 task01':(148,175),
                 'Hut 2':(500,280),'Hut 2 task01':(471,179),
@@ -110,7 +111,7 @@ agentsDetails = [
     {"name": "Takeshi Yamamoto", "description": "Takeshi is a warewolf; Takeshi is smart and is good at lying."},
     {"name": "Hiroshi Tanaka", "description": "Hiroshi is a townfolk; Hiroshi gets easily convinced from other's arguments."},
     {"name": "Aya Suzuki", "description": "Aya is a townfolk; Aya is smart and has good deduction skills."},
-    # {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
+    {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
     # {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
     # {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
     # {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."},

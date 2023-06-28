@@ -42,8 +42,9 @@ class Agent():
     self.graphics = graphics
 
   def generatePlanDay(self):
-    self.plan =  self.brain.query(QUERY_PLAN.format(self.name, self.summary, getAreas(), self.name),remember=False)
-    log(f"{self.name}'s Plan for {calendar.day} -\n{self.plan}")
+    self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False))
+    log(f"{self.name}'s Plan for {calendar.day} -")
+    printPlan(self.plan)
     log('\n.....................\n')
 
   def graphics_init(self,win):
@@ -178,17 +179,11 @@ class Agent():
         #TODO: Add child nodes
         self.memory.append(Reflection(insight))
 
-  def nextLocation(self):
-    ratings = {}
-    for location in hubs:
-      now = time.time()
-      locationRating = extractImportance(self.brain.query(QUERY_LOCATION.format(calendar.time,self.name,self.plan,self.name,location,location,nodes[location]),remember=False))
-      print(time.time()-now)
-      ratings[location] = locationRating
-    newLocation = max(ratings, key=ratings.get)
+  def nextLocation(self,now):
+    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+    newLocation = extractHub(locationName)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
-
 
   def graphics_load(self):
         walk_right = []

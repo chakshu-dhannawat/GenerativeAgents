@@ -1,6 +1,0 @@
-  # time.sleep(3)
-  # game.switchPhase()
-  # time.sleep(5)
-  # game.nightVote()
-  # time.sleep(3)
-  # game.switchPhase()

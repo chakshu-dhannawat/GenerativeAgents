@@ -197,13 +197,25 @@ Format -
 # TODO (because of 1, 5, 3)) in format and add it to class also
 
 # For rating locations
-QUERY_LOCATION = """Currently the time is {}.
-Here is {}s' hourly plan: 
-{}.
-On a scale of 1 to 10, where 1 indicates least likely to be in that location and 10 indicates most likely to be in that location, how likely is {} to go to {}.
-Description of {}: {}
+# QUERY_LOCATION = """Currently the time is {}.
+# Here is {}s' hourly plan: 
+# {}.
+# On a scale of 1 to 10, where 1 indicates least likely to be in that location and 10 indicates most likely to be in that location, how likely is {} to go to {}.
+# Description of {}: {}
 
-Give a single integer rating from 1 to 10."""
+# Give a single integer rating from 1 to 10."""
+
+QUERY_LOCATION = """Currently the time is {}.
+
+Here is {}s' plan for {}: {}.
+
+Give the name of the location where {} is most likely to go to given the current time.
+
+The list of available locations -  
+{}
+
+Format - <location_name>"""
+
 
 QUERY_CONTEXT = """Task: Give a summary for the given statements
 
@@ -260,6 +272,21 @@ Example 2 - End Conversation
 
 Give a natural dialogue depending on the conversation history, and longer the conversation history, more the chance of ending conversation."""
 
+
+QUERY_EVALUATION_METRICS = """
+Score the following dialogue response by {} on a continuous scale from 0.0 to 5.0, based on the metrics: Appropriateness, Content, Grammer, Relevence
+
+{}'s context about {} - {}
+
+Dialogue from {} - {}
+Response from {} - {}
+
+Format - 
+Appropriateness - <rating>
+Content - <rating> 
+Grammer - <rating> 
+Relevence - <rating> 
+"""
 # TODO: Replace 'name' with actual name
 # TODO: Add 2-3 reflections of conversation instead of exact conversations
 
