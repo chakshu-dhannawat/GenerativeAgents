@@ -5,7 +5,7 @@ from Util import *
 from Graph import Graph,town
 from GPT import GPT
 from Game import *
-from DatabaseHandler import DBHandler
+from DatabaseHandler import DB
 import os
 import pygame
 import random
@@ -97,7 +97,8 @@ class Agent():
   
   def remember(self,observation):
     # self.memory.append(Memory(observation.strip()))
-    DBHandler.addMemories(Memory(observation.strip()))
+    mem =  Memory(observation.strip())
+    DB.addMemories(self.name, mem)
 
   def talk_context(self,person):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",3))
@@ -161,13 +162,15 @@ class Agent():
 
   def retrieve(self, query, n):
     score = []
-    for mem in self.memory:
+    memories_data = DB.getAllMemories(self.name)
+    for mem in memories_data:
       score.append(mem.retrievalScore(query))
     ids = sorted(range(len(score)), key=lambda i: score[i], reverse=True)[:n]
     memories = []
     for id in ids:
-      memories.append(self.memory[id].observation)
-      self.memory[id].lastAccess = calendar.dt
+      memories.append(memories_data[id].observation)
+      #TODO - UPDATE
+      # self.memory[id].lastAccess = calendar.dt
     return memories
 
   def reflect(self,n_questions=3, n_memories=3, n_reflections=5):
