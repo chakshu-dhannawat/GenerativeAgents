@@ -8,7 +8,7 @@ import os
 import pygame
 import random
 import emoji
-
+import time
 
 
 class Agent():
@@ -25,14 +25,14 @@ class Agent():
       for player in details.split('\n'):
         self.remember(player.split(') ')[1])
     else: QUERY_INIT = QUERY_INIT_TOWNFOLK.format(name, name, summary, name)
-    self.plan = self.brain.query(QUERY_INIT)
+    self.strategy = self.brain.query(QUERY_INIT)
 
-    log(f"{self.name}'s Plan for {calendar.day} -\n{self.plan}")
+    log(f"{self.name}'s Strategy for {calendar.day} -\n{self.strategy}")
     # self.action = self.brain.query(QUERY_ACTION.format(name, summary, self.plan, Initial, calendar.time, getNames(), getPeople()))
     # print(f"\n{self.name}'s Action for next hour -\n{self.action}")
     # self.result = self.brain.query(QUERY_PAST_TENSE.format(name, name))
     # print(f"\n{self.name}'s Result of Action for next hour -\n{self.result}")
-    strategies = extractQuestions(self.plan)
+    strategies = extractQuestions(self.strategy)
 
     for strat in strategies:
       self.remember(strat)
@@ -40,6 +40,10 @@ class Agent():
 
     self.graphics = graphics
 
+  def generatePlanDay(self):
+    self.plan =  self.brain.query(QUERY_PLAN.format(self.name, self.summary, getAreas(), self.name),remember=False)
+    log(f"{self.name}'s Plan for {calendar.day} -\n{self.plan}")
+    log('\n.....................\n')
 
   def graphics_init(self,win):
 
@@ -82,7 +86,7 @@ class Agent():
     self.destination_path=[]
     # Speaking Bubbles
     self.isSpeaking = False
-    # self.msg = random.choice(MESSAGES_MAP)
+    self.msg = None
     
     self.walkRight, self.walkLeft, self.walkUp, self.walkDown, self.char = self.graphics_load()
     # self.walkRight, self.walkLeft, self.char = walkRight, walkLeft, char
@@ -174,12 +178,16 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   def nextLocation(self):
-    ratings = []
-    for location in nodes.keys():
-      if(location==self.location): continue
-      locationRating = extractImportance(self.brain.query(QUERY_LOCATION.format(self.name,self.plan,self.location,location,nodes[location])),remember=False)
-      ratings.append(locationRating)
-    #TODO
+    ratings = {}
+    for location in hubs:
+      now = time.time()
+      locationRating = extractImportance(self.brain.query(QUERY_LOCATION.format(calendar.time,self.name,self.plan,self.name,location,location,nodes[location]),remember=False))
+      print(time.time()-now)
+      ratings[location] = locationRating
+    newLocation = max(ratings, key=ratings.get)
+    log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
+    self.dest = newLocation
+
 
   def graphics_load(self):
         walk_right = []
@@ -309,7 +317,6 @@ class Agent():
           if len(self.destination_path)==0:
             if(self.dest is None):
               self.choose_random_location()
-              self.isSpeaking=True
               
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
@@ -318,7 +325,7 @@ class Agent():
             # self.msg = "I want to travel to"+ str(self.destination_path[-1])
             # self.speech_bubble()
             # self.draw()
-            pygame.display.update()
+            # pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
             

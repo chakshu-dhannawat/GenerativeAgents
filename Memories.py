@@ -24,7 +24,7 @@ def getEmbedding(sentence):
 
 class Calendar:
 
-  def __init__(self, day = "Tuesday February 13", time = "8:00 AM"):
+  def __init__(self, day = "Tuesday February 13", time = "9:30 AM"):
     self.day = day
     self.time = time
     self.getDT()

@@ -9,6 +9,20 @@ QUERY_IMPORTANCE = ("On the scale of 1 to 10, where 1 is purely mundane "
 "following piece of memory. Memory: {}\nGive a single rating output from "
 "1 to 10 Rating: <fill in> ")
 
+QUERY_PLAN = """Name: {}. {}. 
+
+The areas in the village are - 
+{}
+
+There is nothing other than these areas. 
+
+Generate {}’s hourly plan from 10 AM to 6 PM for today.
+Plan for each hour should not be more than 20 words. 
+
+Format - 
+10:00 AM: <plan>
+11:00 AM: <plan> """
+
 # The first query given when an agent's llm is initialized, To get an inital plan.
 QUERY_INIT_TOWNFOLK = """Name: {}. Act like {}. {}
 {} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is warewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
@@ -183,10 +197,13 @@ Format -
 # TODO (because of 1, 5, 3)) in format and add it to class also
 
 # For rating locations
-QUERY_LOCATION = ("You are {}. You are planning to: {}.\nYou are currently in "
-"{}.\nOn a scale of 1 to 10, where 1 indicates least likely to go to that "
-"location and 10 indicates most likely to go to that location, how likely are "
-"you to go to {}.\n{}\nGive a single integer from 1 to 10.")
+QUERY_LOCATION = """Currently the time is {}.
+Here is {}s' hourly plan: 
+{}.
+On a scale of 1 to 10, where 1 indicates least likely to be in that location and 10 indicates most likely to be in that location, how likely is {} to go to {}.
+Description of {}: {}
+
+Give a single integer rating from 1 to 10."""
 
 QUERY_CONTEXT = """Task: Give a summary for the given statements
 

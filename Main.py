@@ -63,14 +63,17 @@ def game_logic():
   
   while game.run:
      
-    game.switchPhase()
+    # game.switchPhase()
+
+    # if(day):
+    #   game.dayVote()
+    #   game.afternoon()
+    # else:  
+    #   game.nightVote()
     
-    if(day):
-      game.dayVote()
-    else:  
-      game.nightVote()
-    
-    day = not day
+    # day = not day
+
+    game.afternoon()
 
 '''
 ====================
