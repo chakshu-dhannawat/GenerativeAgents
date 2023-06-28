@@ -19,6 +19,7 @@ import time
 pygame.font.init()
 pygame.init()
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
+
 speed = FPS*0.6
 
 
@@ -65,6 +66,8 @@ fire_animation_frames.extend(fire_animation_frames[::-1])
 current_frame = 0
 frame_count = 0
 animation_speed = 4  
+
+
 
 
 '''
