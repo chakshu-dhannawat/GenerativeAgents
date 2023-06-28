@@ -48,7 +48,7 @@ calendar = Calendar()
 
 class Memory():
 
-  def __init__(self, observation):
+  def __init__(self, observation=''):
     self.observation = observation
     self.creation = calendar.dt
     self.lastAccess = self.creation
