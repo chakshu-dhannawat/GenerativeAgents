@@ -5,6 +5,7 @@ from Util import *
 from Graph import Graph,town
 from GPT import GPT
 from Game import *
+from DatabaseHandler import DBHandler
 import os
 import pygame
 import random
@@ -95,7 +96,8 @@ class Agent():
     self.choose_random_location()     
   
   def remember(self,observation):
-    self.memory.append(Memory(observation.strip()))
+    # self.memory.append(Memory(observation.strip()))
+    DBHandler.addMemories(Memory(observation.strip()))
 
   def talk_context(self,person):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",3))

@@ -7,8 +7,8 @@ client = MongoClient("mongodb+srv://harshagrawal1046:harsh1234@cluster0.3v5rngf.
 
 
 class DBHandler:
-    def __init__(self):
-        self.memoriesDB = client["memories_DB"]
+    def __init__(self,databaseName):
+        self.memoriesDB = client[databaseName]
         self.agentCollection = {}
         self.initDB()
 
@@ -21,15 +21,22 @@ class DBHandler:
             self.agentCollection[agent["name"]]=self.memoriesDB[agent["name"]]
 
 
-    def addMemories(self, name,observation,creation,lastAccess,importance):
-        d = {'observation':observation,
-            'creation':creation,
-            'lastAccess':lastAccess,
-            'importance':importance}
+    def addMemories(self, name, memory):
+        d = {'observation':mecmory.observation,
+            'creation':memory.creation,
+            'lastAccess':memory.lastAccess,
+            'importance':memory.importane}
         self.agentCollection[name].insert_one(d)
     
     def getAllMemories(self, name):
         d = self.agentCollection[name].find()
-        return d
-DB = DBHandler()
-DB.addMemories(agentsDetails[0]["name"], "Abcsn", "adkcsv", "sncjosnc", 0)
+        memories_list = []
+        for item in d:
+            memory = Memory()
+            memory.observation = item['observation']
+            memory.creation = item['creation']
+            memory.lastAccess = item['lastAccess']
+            memory.importance = item['importance']
+            memories_list.append(memory)
+        return memories_list
+DB = DBHandler("memories_DB")
