@@ -7,7 +7,9 @@ from GPT import GPT
 import os
 import pygame
 import random
+import emoji
 import time
+
 
 class Agent():
 
@@ -223,7 +225,7 @@ class Agent():
   def draw(self):
       if self.isSpeaking:
           
-          self.speech_bubble()
+          self.emoji_bubble('Eat')
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -463,3 +465,28 @@ class Agent():
           text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
           self.win.blit(text_surface, text_rect)
           current_y += text_surface.get_height()
+
+
+  def emoji_bubble(self, emoji):
+        eat_emoji = pygame.image.load(Path+"Eat_emoji.png")
+        eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
+        EMOJI = {'Eat': eat_emoji }
+        x = self.x
+        y = self.y
+        emoji_surface = EMOJI[emoji]
+
+        # Calculate the dimensions of the bubble based on the emoji size
+        bubble_padding = 10
+        bubble_width = emoji_surface.get_width() + bubble_padding * 2
+        bubble_height = emoji_surface.get_height() + bubble_padding * 2
+        bubble_rect = pygame.Rect(x - bubble_width // 2, y - bubble_height // 2, bubble_width, bubble_height)
+
+        # Draw the bubble outline
+        pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
+
+        # Draw the bubble background
+        pygame.draw.ellipse(self.win, CREAM, bubble_rect)
+
+        # Blit the emoji onto the bubble
+        emoji_rect = emoji_surface.get_rect(center=(x, y))
+        self.win.blit(emoji_surface, emoji_rect)
