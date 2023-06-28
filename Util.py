@@ -1,6 +1,6 @@
 from GPT import GPT
 import re
-from Graph import Graph
+from Graph import Graph,town
 from Params import *
 from Queries import QUERY_EVALUATION_METRICS
 
@@ -52,8 +52,15 @@ def printPlan(plan):
 def getHubs():
     areas = ""
     for i,node in enumerate(hubs):
-      areas = areas + f"{i+1})" + node + " - " + nodes[node] + '\n'
+      areas = areas + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return areas
+
+def getTasks(hub):
+    tasks = ""
+    tasksList = [node[0] for node in town.graph[hub] if "task" in node[0]]
+    for i,node in enumerate(tasksList):
+      tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
+    return tasks
 
 def getPeople():
     people = ""

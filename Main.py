@@ -75,7 +75,7 @@ def game_logic():
     
     day = not day
 
-    # game.afternoon()
+    game.afternoon()
 
 '''
 ====================

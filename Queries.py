@@ -218,6 +218,20 @@ The list of available locations -
 Format - <location_name>"""
 
 
+QUERY_TASK = """Currently the time is {}.
+
+Here is {}s' plan for {}: {}.
+
+Give the serial number of the task that {} is most likely to do given the current time.
+
+The list of available tasks -  
+{}
+
+Suggest exactly one task from the available tasks only
+
+Format - <sr number>"""
+
+
 QUERY_CONTEXT = """Task: Give a summary for the given statements
 
 Example:

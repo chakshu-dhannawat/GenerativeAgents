@@ -189,6 +189,13 @@ class Agent():
     newLocation = extractHub(locationName)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
+    print(getTasks(newLocation))
+    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,getTasks(newLocation)),remember=False))
+    print(taskSr)
+    tasksList = [node for node in town.graph[newLocation] if "task" in node]
+    newLocation = tasksList[taskSr-1]
+    log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
+    self.dest = newLocation
 
   def graphics_load(self):
         walk_right = []
@@ -226,7 +233,7 @@ class Agent():
   def draw(self):
       if self.isSpeaking:
           
-          self.emoji_bubble('Eat')
+          self.emoji_bubble('Fishing Pole')
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -322,11 +329,11 @@ class Agent():
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
           else:
-            # self.isSpeaking=True
+            self.isSpeaking=True
             # self.msg = "I want to travel to"+ str(self.destination_path[-1])
-            # self.speech_bubble()
-            # self.draw()
-            # pygame.display.update()
+            # self.speech_bubble("Fishing Pole")
+            self.draw()
+            pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
             
@@ -481,7 +488,7 @@ class Agent():
         bubble_padding = 10
         bubble_width = emoji_surface.get_width() + bubble_padding * 2
         bubble_height = emoji_surface.get_height() + bubble_padding * 2
-        bubble_rect = pygame.Rect(x - bubble_width // 2, y - bubble_height // 2, bubble_width, bubble_height)
+        bubble_rect = pygame.Rect(x - bubble_width // 2 -30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
         # Draw the bubble outline
         pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
@@ -490,5 +497,5 @@ class Agent():
         pygame.draw.ellipse(self.win, CREAM, bubble_rect)
 
         # Blit the emoji onto the bubble
-        emoji_rect = emoji_surface.get_rect(center=(x, y))
+        emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
         self.win.blit(emoji_surface, emoji_rect)
