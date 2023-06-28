@@ -260,6 +260,21 @@ Example 2 - End Conversation
 
 Give a natural dialogue depending on the conversation history, and longer the conversation history, more the chance of ending conversation."""
 
+
+QUERY_EVALUATION_METRICS = """
+Score the following dialogue response by {} on a continuous scale from 0.0 to 5.0, based on the metrics: Appropriateness, Content, Grammer, Relevence
+
+{}'s context about {} - {}
+
+Dialogue from {} - {}
+Response from {} - {}
+
+Format - 
+Appropriateness - <rating>
+Content - <rating> 
+Grammer - <rating> 
+Relevence - <rating> 
+"""
 # TODO: Replace 'name' with actual name
 # TODO: Add 2-3 reflections of conversation instead of exact conversations
 

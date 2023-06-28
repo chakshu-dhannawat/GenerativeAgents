@@ -110,10 +110,12 @@ class Game:
     pygame.display.set_caption("Warewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
+    self.contexts = {}
     
     self.reset()
 
   def getContext(self,name):
+    self.contexts[name] = {}
     context = ""
     sr = 0
     id = self.ids[name]
@@ -121,7 +123,9 @@ class Game:
       if(not self.alive[i]): continue
       if(name==agent.name): continue
       sr += 1
-      context = context + f"{sr}) {agent.name}: {self.agents[id].vote_context(agent.name)}\n"
+      voteContext = self.agents[id].vote_context(agent.name)
+      self.contexts[name][agent.name] = voteContext
+      context = context + f"{sr}) {agent.name}: {voteContext}\n"
     context = context[:-1]
     return context
 
@@ -260,6 +264,7 @@ class Game:
             currName = self.findName(currName)
             curr = self.ids[currName]
           reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
+          getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
           # reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 
@@ -467,6 +472,7 @@ class Game:
                       player2.isSpeaking = False
                       # player1.is_travelling = True
                       # player2.is_travelling = True
+    
                   
                 
    

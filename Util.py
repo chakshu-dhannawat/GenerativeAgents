@@ -2,6 +2,7 @@ from GPT import GPT
 import re
 from Graph import Graph
 from Params import *
+from Queries import QUERY_EVALUATION_METRICS
 
 def log(text=''):
     print(text)
@@ -102,6 +103,11 @@ def getRetrievedMemories(stream):
       i += 1
     return memories
 
+def getResponseRating(dialogue, response, context, agent1, agent2):
+  gpt = GPT()
+  rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response))
+  print(rating)
+
 def getDetails():
     details = ""
     cover = 'townfolk'
@@ -112,3 +118,4 @@ def getDetails():
     return details[:-1]
 
 details = getDetails()
+

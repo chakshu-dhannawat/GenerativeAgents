@@ -2,6 +2,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 
+from Queries import *
+
 # --------------------------------------------------------------------------------
 dialogue = """
 Yumi Kimura: "I think we should focus on Kaito Sato, he seems suspicious to me. And we need to act fast if we want to win this game."
