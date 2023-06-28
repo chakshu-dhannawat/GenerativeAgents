@@ -265,7 +265,8 @@ class Game:
             currName = self.findName(currName)
             curr = self.ids[currName]
           reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
-          getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
+          if(prev!=curr):
+            getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
           # reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 

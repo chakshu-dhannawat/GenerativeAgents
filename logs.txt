@@ -1,0 +1,212 @@
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 13:18:32
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a helpful townfolk during the day, suggest voting out other townfolks to shift suspicion.
+2) At night, lie and convince the other warewolves to vote out the most convincing townfolk.
+3) Keep track of voting patterns and suspicions, shift blame onto other warewolves if necessary.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to others' arguments and try to identify inconsistencies.
+2) Observe voting patterns and identify suspicious behavior.
+3) Collaborate with others and gather information to make informed decisions.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior during discussions to identify suspicious players.
+2) Form alliances with trusted players to share information and vote together.
+3) Keep track of who has been kicked out and use deduction to narrow down potential werewolf suspects.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe patterns of behavior and voting during the day to identify suspicious players.
+2) Form alliances with other townfolks and share information to gain a better understanding of who may be a warewolf.
+3) Use logical reasoning and deduction to eliminate suspects and vote strategically to increase the chances of kicking out a warewolf.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Aya Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Sakura Kobayashi: "I noticed Takeshi and Hiroshi voted differently yesterday. One of them could be the werewolf. Let's keep an eye on them."
+Takeshi Yamamoto: "I agree with Sakura, we should observe Hiroshi. But we can't overlook Sakura's suspicious behavior either."
+Hiroshi Tanaka: "I noticed that Takeshi always votes late. Could be a tactic to avoid suspicion. Let's keep an eye on him too."
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 13:44:05
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Establish trust with one or more townfolks by helping them identify another player as a warewolf.
+2) Blame the townfolks' mistakes on each other and create confusion during discussions.
+3) Use my knowledge of the other warewolves to help vote out townfolks and avoid suspicion.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen carefully to all arguments and try to identify inconsistencies in the warewolves' reasoning.
+2) Collaborate with other townfolks to gather information and eliminate suspects one by one.
+3) Be cautious of sudden changes in behavior or accusations, as it may indicate a warewolf trying to throw off suspicion.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe the voting patterns and behavior of players during the day to identify suspicious actions.
+2) Keep track of who has been voted out and who is still in the game to narrow down the list of potential warewolves.
+3) Collaborate with other townfolks to share information and suspicions to make informed decisions during the day vote.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe voting patterns and identify suspicious behavior, especially in the case of a tie.
+2) Keep track of who has been accused and voted out to identify any patterns or connections among the accused.
+3) Collaborate with other townfolks to share information and suspicions, and make strategic decisions based on the information gathered.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hiroshi Tanaka has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Sakura Kobayashi: "I noticed Takeshi and Aya were quick to accuse Hiroshi yesterday. Could be a tactic to divert attention from themselves?"
+Aya Suzuki: "I also noticed that Takeshi seemed overly defensive when questioned about his actions last night."
+Takeshi Yamamoto: "I agree that Hiroshi's elimination was a mistake. But accusing others without evidence is also a mistake."
+
+End of Conversation
+
+Takeshi Yamamoto voted to kick out Sakura Kobayashi
+Aya Suzuki voted to kick out Takeshi Yamamoto
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 13:46:03
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Act as a concerned townfolk during the day discussions, and vote with the majority to avoid suspicion.
+2) At night, suggest kicking out a townfolk who seems suspicious or is likely to identify me as a warewolf.
+3) Spread rumors and lies to create confusion and suspicion among the townfolks, making it difficult for them to trust each other.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to all arguments and try to identify any inconsistencies or contradictions.
+2) Form alliances with other townfolks to share information and suspicions.
+3) Keep track of who has been voted out and use that information to help identify potential warewolves.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns and discussions to identify suspicious behavior and inconsistencies.
+2) Build alliances with other townfolks and share information to increase chances of identifying warewolves.
+3) Use deductive reasoning to analyze the actions of suspected players and make informed decisions during voting.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns and behavior to identify suspicious individuals.
+2) Form alliances with trusted townfolks and share information to narrow down potential warewolves.
+3) Use logical reasoning and evidence to convince others to vote out suspected warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Aya Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/28/2023, 13:46:36
+
+=======Initializing Agents=======
+
+Takeshi Yamamoto's Strategy for Tuesday February 13 -
+1) Build trust with townfolks by being helpful and supportive. 
+2) Act surprised when a townfolk is voted out and accuse others to divert suspicion. 
+3) Use my knowledge as a werewolf to sway discussions and convince townfolks to vote out other townfolks.
+
+-----------------------
+
+Hiroshi Tanaka's Strategy for Tuesday February 13 -
+1) Listen to and consider all arguments before making a decision.
+2) Keep track of who is being accused and who is defending them.
+3) Form alliances with other townfolks to gather information and make informed decisions.
+
+-----------------------
+
+Aya Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns and player behavior to identify suspicious players.
+2) Form alliances with other townfolks to share information and votes.
+3) Use logical deduction to eliminate possible warewolf identities and narrow down suspects.
+
+-----------------------
+
+Sakura Kobayashi's Strategy for Tuesday February 13 -
+1) Observe the behavior of individuals during discussions and voting to identify suspicious behavior.
+2) Form alliances with other townfolks and share information to increase chances of identifying and kicking out warewolves.
+3) Use logic and deduction to analyze patterns and identify potential warewolves, and present evidence during discussions to convince others to vote for their removal.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Sakura Kobayashi has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Hiroshi Tanaka: I agree with Takeshi's argument but I noticed Aya's behavior was odd during the last vote. Can we discuss that?
