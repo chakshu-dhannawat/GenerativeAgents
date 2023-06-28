@@ -6,10 +6,13 @@ Game
 
 Path = "Assets\\"
 Emoji_Path = "Assets\\emojis\\"
-WIN_WIDTH = 1000
-WIN_HEIGHT = 700
+WIN_WIDTH = 1150
+WIN_HEIGHT = 800
 EMOJI_SIZE = (25,25)
 FPS = 100
+
+FIRE_SIZE = (60,60)
+FIRE_CENTER = (855,572)
 
 TavernRadius = 100
 TavernCenter = (810,550)
@@ -109,9 +112,9 @@ MinDialogues = 1
 
 agentsDetails = [
     {"name": "Takeshi Yamamoto", "description": "Takeshi is a warewolf; Takeshi is smart and is good at lying."},
-    {"name": "Hiroshi Tanaka", "description": "Hiroshi is a townfolk; Hiroshi gets easily convinced from other's arguments."},
-    {"name": "Aya Suzuki", "description": "Aya is a townfolk; Aya is smart and has good deduction skills."},
-    {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
+    # {"name": "Hiroshi Tanaka", "description": "Hiroshi is a townfolk; Hiroshi gets easily convinced from other's arguments."},
+    # {"name": "Aya Suzuki", "description": "Aya is a townfolk; Aya is smart and has good deduction skills."},
+    # {"name": "Sakura Kobayashi", "description": "Sakura is a townfolk; Sakura is analytical."},
     # {"name": "Yumi Kimura", "description": "Yumi is a warewolf; Yumi is very smart."},
     # {"name": "Kaito Sato", "description": "Kaito is a townfolk; Kaito is dumb."},
     # {"name": "Akiko Tanaka", "description": "Akiko is a townfolk; Akiko has good convincing skills."},
