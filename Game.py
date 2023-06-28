@@ -13,6 +13,7 @@ import numpy as np
 from Memories import calendar
 import asyncio
 from multiprocessing import Process
+import time
 
 
 pygame.font.init()
@@ -37,6 +38,34 @@ bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
 # music = pygame.mixer.music.load(Path+'music.mp3')
 # pygame.mixer.music.play(-1)
+
+'''
+====================
+Fire 
+====================
+'''
+
+fire_width = 50
+fire_height = 50
+fire_x = 810
+fire_y = 545
+
+fire_particles = []
+
+for _ in range(100):
+    x = random.randint(fire_x, fire_x + fire_width)
+    y = random.randint(fire_y, fire_y + fire_height//2)
+    dx = random.uniform(-0.1, 0.1)
+    dy = random.uniform(-0.2, -0.1)
+    size = random.uniform(0.5,1.5)
+    fire_particles.append((x, y, dx, dy, size))
+
+fire_animation_frames = [pygame.image.load(f'Assets\\Fire\\{i}.png') for i in range(40)]
+fire_animation_frames.extend(fire_animation_frames[::-1])
+
+current_frame = 0
+frame_count = 0
+animation_speed = 4  
 
 
 
@@ -257,6 +286,20 @@ class Game:
       self.agents[voters[i]].tavern((x,y))
       # self.agents.dest = "Tavern"
 
+  def afternoon(self):
+    self.generatePlanDay()
+    while True:
+      if(calendar.dt.minute==0):
+        for i in range(self.n):
+          if(self.alive[i]):
+             self.agents[i].nextLocation()
+        time.sleep(5)  
+
+  def generatePlanDay(self):
+    for i in range(self.n):
+      if(self.alive[i]):
+         self.agents[i].generatePlanDay()
+
   def checkEnd(self):
     players = [0,0]
     for i in range(self.n):
@@ -266,7 +309,7 @@ class Game:
       self.run = False
       log('\n=== TOWNFOLKS WIN ===')
       pygame.quit()
-    if(players[1]>players[0]):
+    if(players[1]>=players[0]):
       self.run = False 
       log('\n=== WAREWOLVES WIN ===')
       pygame.quit()
@@ -327,7 +370,40 @@ class Game:
           if(self.alive[i]):
               player.draw()      
       self.draw_time()
+      self.draw_fire()
       pygame.display.update()
+
+  def draw_fire(self):
+    global current_frame, frame_count, animation_speed
+    # Update fire particles
+    for i in range(len(fire_particles)):
+        x, y, dx, dy, size = fire_particles[i]
+        x += dx
+        y += dy
+        size -= 0.01
+        if size <= 0:
+            fire_particles[i] = (random.randint(fire_x, fire_x + fire_width),
+                                 random.randint(fire_y, fire_y + fire_height//2),
+                                 random.uniform(-0.1, 0.1),
+                                 random.uniform(-0.2, -0.1),
+                                 random.uniform(0.5,1.5))
+        else:
+            fire_particles[i] = (x, y, dx, dy, size)
+
+    # Draw central fire
+    fire_image = pygame.transform.scale(fire_animation_frames[current_frame], (fire_width, fire_height))
+    self.win.blit(fire_image, (fire_x, fire_y))
+
+    # Update fire animation frames
+    frame_count += 1
+    if frame_count >= animation_speed:
+        current_frame = (current_frame + 1) % len(fire_animation_frames)
+        frame_count = 0
+
+    # Draw fire particles
+    for x, y, _, _, size in fire_particles:
+        if size > 0:
+            pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
 
   def step(self) :
 
@@ -364,6 +440,7 @@ class Game:
               self.bg = self.bgs[self.bgId]
 
       self.draw_window()
+      
       calendar.increment(60/FPS)
       # test_process = Process(target=self.test)
       # test_process.start()

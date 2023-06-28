@@ -46,11 +46,11 @@ def printPlan(plan):
     for i,item in enumerate(items):
       print(f"{i+1})",item)
 
-# def getAreas(current):
-#     areas = ""
-#     for node in town.getNodes(current):
-#       areas = areas + node + " - " + nodes[node] + '; '
-#     return areas
+def getAreas():
+    areas = ""
+    for i,node in enumerate(hubs):
+      areas = areas + f"{i+1})" + node + " - " + nodes[node] + '\n'
+    return areas
 
 def getPeople():
     people = ""
