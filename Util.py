@@ -42,12 +42,14 @@ def getNextDay(today):
     return tomm[:-1]
 
 def printPlan(plan):
-    items = re.split(r'\d+\)', plan)
-    items = [item.strip() for item in items if item.strip()]
-    for i,item in enumerate(items):
-      print(f"{i+1})",item)
+    # items = re.split(r'\d+\)', plan)
+    # items = [item.strip() for item in items if item.strip()]
+    # for i,item in enumerate(items):
+    #   log(f"{i+1})",item)
+    for key in plan.keys():
+       log(f"{key} : {plan[key]}")
 
-def getAreas():
+def getHubs():
     areas = ""
     for i,node in enumerate(hubs):
       areas = areas + f"{i+1})" + node + " - " + nodes[node] + '\n'
@@ -74,6 +76,15 @@ def getMemories(stream, n=100):
       memories = memories + f"{i}) " + mem.observation + "\n"
       i += 1
     return memories
+
+def extractHub(output):
+    # try:
+    #   a = nodes[output]
+    #   return output
+    # except:
+    for node in hubs:
+      if(node in output): return node 
+    return "Tavern"
 
 def extractQuestions(output):
     questions = []
