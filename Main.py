@@ -73,8 +73,7 @@ def game_logic():
     
     # day = not day
 
-    # game.afternoon()
-    pass
+    game.afternoon()
 
 '''
 ====================

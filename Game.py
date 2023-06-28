@@ -297,9 +297,7 @@ class Game:
 
   def groupConversation(self, context, voters):
       history = ""
-      sakuraId = self.names.index("Sakura Kobayashi")
-      if(sakuraId in voters): curr = sakuraId
-      else: curr = random.choice(voters)
+      curr = random.choice(voters)
       reply = self.agents[curr].groupconv_init(self.kicked,context[curr])
       self.agents[curr].msg = reply 
       self.agents[curr].isSpeaking = True 
