@@ -13,15 +13,17 @@ FPS = 100
 
 TavernRadius = 100
 
-LOCATION_MAP = {'Hut 1':(140,180),'Hut 1 task01':(141,246),
-                'Hut 2':(435,210),'Hut 2 task01':(368,159),
-                'Hut 3':(369,390),'Hut 3 task01':(426,349),'Hut 3 task02':(336,436),
-                'Shrine':(285,610),'Shrine task01':(370,557),'Shrine task02':(200,526),'Shrine task03':(376,658),'Shrine task04':(148,602),
-                'Cattle Farm':(867,254),'Cattle Farm task01':(781,327),'Cattle Farm task02':(917,310),'Cattle Farm task03':(914,152),'Cattle Farm task04':(759,168),
-                'Well':(534,452),'Well task01':(446,497),'Well task02':(494,529),'Well task03':(548,513),'Well task04':(458,465),
-                'Electricity House':(117,439),'Electricity House task01':(34,478),'Electricity House task02':(77,357),'Electricity House task03':(190,427),'Electricity House task04':(184,477),
-                'Tavern':(810,550),
-                'Fishing Pond':(576,80),'Fishing Pond task01':(262,100),'Fishing Pond task02':(111,100),'Fishing Pond task03':(637,100),'Fishing Pond task04':(927,100),
+LOCATION_MAP = {'Hut 1':(228,280),'Hut 1 task01':(148,175),
+                'Hut 2':(500,280),'Hut 2 task01':(471,179),
+                'Hut 3':(414,452),'Hut 3 task01':(317,382),'Hut 3 task02':(433,352),
+                'Shrine':(379,574),'Shrine task01':(331,659),'Shrine task02':(191,624),'Shrine task03':(219,526),'Shrine task04':(349,515),
+                'Cattle Farm':(751,182),'Cattle Farm task01':(887,182),'Cattle Farm task02':(947,258),'Cattle Farm task03':(895,334),'Cattle Farm task04':(732,334),
+                'Well':(543,469),'Well task01':(543,507),'Well task02':(501,527),'Well task03':(458,495),'Well task04':(494,450),
+                'Electricity House':(107,429),'Electricity House task01':(75,510),'Electricity House task02':(26,438),'Electricity House task03':(64,363),'Electricity House task04':(152,363),
+                'Tavern':(830,533),
+                'Fishing Pond':(576,93),'Fishing Pond task01':(80,34),'Fishing Pond task02':(210,74),'Fishing Pond task03':(652,97),'Fishing Pond task04':(937,71),
+                'Intermediate01':(599,197),'Intermediate02':(599,309),'Intermediate03':(708,426),'Intermediate04':(626,549),'Intermediate05':(477,587),
+                'Intermediate06':(107,578),'Intermediate07':(228,439),'Intermediate08':(107,75),'Intermediate09':(301,97),'Intermediate10':(849,103),
                 }
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
@@ -80,7 +82,17 @@ nodes = {"Hut 1": "The first hut",
         "Fishing Pond task01": "Setting up and checking fishing nets or traps.",
         "Fishing Pond task02": "Casting lines and catching fish for the village's food supply.",
         "Fishing Pond task03": "Cleaning and preparing the caught fish for cooking.",
-        "Fishing Pond task04": "Maintaining the fishing equipment and repairing any damages."
+        "Fishing Pond task04": "Maintaining the fishing equipment and repairing any damages.",
+        "Intermediate01":"Inbetween Nodes",
+        "Intermediate02":"Inbetween Nodes",
+        "Intermediate03":"Inbetween Nodes",
+        "Intermediate04":"Inbetween Nodes",
+        "Intermediate05":"Inbetween Nodes",
+        "Intermediate06":"Inbetween Nodes",
+        "Intermediate07":"Inbetween Nodes",
+        "Intermediate08":"Inbetween Nodes",
+        "Intermediate09":"Inbetween Nodes",
+        "Intermediate10":"Inbetween Nodes",
         }
 
 
