@@ -50,6 +50,10 @@ Context of Remaining Townfolks in {}'s Memory -
 {}
 
 Suggest exactly one Townfolk to vote to kick out. 
+
+Names you can vote to kick out -
+{}
+
 Format - <name>"""
 
 QUERY_DAY = """It is currently day.
@@ -290,6 +294,7 @@ Give a natural dialogue depending on the conversation history, and longer the co
 
 QUERY_EVALUATION_METRICS = """
 Score the following dialogue response by {} on a continuous scale from 0.0 to 5.0, based on the metrics: Appropriateness, Content, Grammer, Relevence
+Be strict in giving the scores. Give a low score if the agent's response is ordinary and give a high score if the response shows high intelligence. 
 
 {}'s context about {} - {}
 

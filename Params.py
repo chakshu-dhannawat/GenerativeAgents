@@ -15,7 +15,7 @@ FIRE_SIZE = (60,60)
 FIRE_CENTER = (855,572)
 
 TavernRadius = 100
-TavernCenter = (810,550)
+TavernCenter = (859,601)
 
 LOCATION_MAP = {'Hut 1':(285,313),#'Hut 1 task01':(148,175),
                 'Hut 2':(577,317),#'Hut 2 task01':(471,179),
@@ -32,7 +32,8 @@ LOCATION_MAP = {'Hut 1':(285,313),#'Hut 1 task01':(148,175),
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
 Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']
-InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
+# InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
+InitialPositions = [LOCATION_MAP['Tavern']]*10
 
 
 '''
@@ -108,16 +109,16 @@ Agents
 ====================
 '''
 
-MinDialogues = 5
+MinDialogues = 8
 
 agentsDetails = [
     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},
     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
-    # {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
-    # {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
-    # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."},
+    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
+    {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
+    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
 ]
 
 

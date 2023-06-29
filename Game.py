@@ -15,6 +15,7 @@ import asyncio
 from multiprocessing import Process
 import time
 import threading
+from evaluation_metric import *
 
 
 pygame.font.init()
@@ -176,14 +177,14 @@ class Game:
       voteContext = self.agents[id].vote_context(agent.name)
       self.contexts[name][agent.name] = voteContext
 
-  def nightVoteWarewolf(self,i):
+  def nightVoteWarewolf(self,i,names):
     self.getContext(self.names[i],True)
     voteContext = ""
     sr = 1
     for key, value in self.contexts[self.names[i]].items():
         voteContext += f"{sr}) {key}: {value}\n"
         sr += 1
-    voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext))
+    voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext,names))
     try:
       vote = self.names.index(voteName)
     except:
@@ -195,10 +196,20 @@ class Game:
     log("Currently it is Night, the Warewolves will kill a townfolk...\n")
     self.votes = [0]*self.n
 
+    names = ""
+    j = 1
+    for i in range(self.n):
+      if(self.warewolf[i]): continue
+      if(not self.alive[i]): continue
+      names = names + f"{j}) {self.names[i]}\n"
+      j += 1
+    names = names[:-1]
+
     threads = []
     for i in range(self.n):
         if(not self.warewolf[i]): continue
-        thread = threading.Thread(target=self.nightVoteWarewolf(i))
+        if(not self.alive[i]): continue
+        thread = threading.Thread(target=self.nightVoteWarewolf(i,names))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -310,6 +321,8 @@ class Game:
       names = names[:-1]
       dialogues = 0
       lastFew = []
+      rating = 0 
+      rating_n = 0
       while curr is not None:
           dialogues += 1
           log(reply)
@@ -328,7 +341,8 @@ class Game:
             curr = self.ids[currName]
           reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
           if(prev!=curr):
-            getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
+            rating += getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
+            rating_n += 1
           # reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 
@@ -340,6 +354,12 @@ class Game:
             if(self.alive[i]): self.agents[i].remember(reply)
       self.agents[prev].isSpeaking = False 
       log("\nEnd of Conversation")
+      if(rating_n==0): self.convRating = 0
+      else: self.convRating = rating/rating_n 
+      log(f"\nConversation Rating - {self.convRating}")
+      log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
+      log(f"Response Relevance - {calculate_response_relevance(history)}")
+      log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       return history
   
 
@@ -357,6 +377,7 @@ class Game:
   def afternoon(self):
     self.generatePlanDay()
     while True:
+      if(calendar.dt.hour in [1,13]): break
       if(calendar.dt.minute==0):
         now = calendar.time
         threads = []
@@ -367,10 +388,18 @@ class Game:
             threads.append(thread)
         for thread in threads:
             thread.join()
+
+        for i in range(self.n):
+            if(not self.alive[i]): continue
+            for j in range(self.n):
+              if(i==j or not self.alive[j]): continue
+              if(self.agents[i].dest == self.agents[j].dest):
+                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} at {calendar.time} - {self.agents[j].plan[now]}")
         # for i in range(self.n):
         #   if(self.alive[i]):
         #      self.agents[i].nextLocation()
-        time.sleep(5)  
+        time.sleep(0.9)
+      time.sleep(0.2)  
 
   def generatePlanDay(self):
     threads = []

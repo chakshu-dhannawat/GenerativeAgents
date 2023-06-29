@@ -105,7 +105,7 @@ class Agent():
     self.context = self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False)
 
   def vote_context(self,person,n_memory=3):
-    relevant_memories = getRetrievedMemories(self.retrieve(f"What does {self.name} think about {person}",n_memory))
+    relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s observations about {person}",n_memory))
     return self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False)
 
   def groupconv_init(self,kicked,context):
@@ -191,13 +191,13 @@ class Agent():
     newLocation = extractHub(locationName)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
-    print(getTasks(newLocation))
-    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,getTasks(newLocation)),remember=False))
-    print(taskSr)
-    tasksList = [node for node in town.graph[newLocation] if "task" in node]
-    newLocation = tasksList[taskSr-1]
-    log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
-    self.dest = newLocation
+    # print(getTasks(newLocation))
+    # taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,getTasks(newLocation)),remember=False))
+    # print(taskSr)
+    # tasksList = [node for node in town.graph[newLocation] if "task" in node]
+    # newLocation = tasksList[taskSr-1]
+    # log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
+    # self.dest = newLocation
 
   def graphics_load(self):
         walk_right = []
@@ -331,11 +331,11 @@ class Agent():
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
           else:
-            # self.isSpeaking=True
-            # self.msg = "I want to travel to"+ str(self.destination_path[-1])
-            # self.speech_bubble("Fishing Pole")
-            # self.draw()
-            # pygame.display.update()
+            self.isSpeaking=True
+            self.msg = "I want to travel to"+ str(self.destination_path[-1])
+            self.speech_bubble()
+            self.draw()
+            pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
             
