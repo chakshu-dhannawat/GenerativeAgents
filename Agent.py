@@ -5,7 +5,7 @@ from Util import *
 from Graph import Graph,town
 from GPT import GPT
 from Game import *
-from DatabaseHandler import DBHandler
+from DatabaseHandler import DB
 import os
 import pygame
 import random
@@ -97,7 +97,8 @@ class Agent():
   
   def remember(self,observation):
     # self.memory.append(Memory(observation.strip()))
-    DBHandler.addMemories(Memory(observation.strip()))
+    mem =  Memory(observation.strip())
+    DB.addMemories(self.name, mem)
 
   def talk_context(self,person):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",3))
@@ -161,13 +162,15 @@ class Agent():
 
   def retrieve(self, query, n):
     score = []
-    for mem in self.memory:
+    memories_data = DB.getAllMemories(self.name)
+    for mem in memories_data:
       score.append(mem.retrievalScore(query))
     ids = sorted(range(len(score)), key=lambda i: score[i], reverse=True)[:n]
     memories = []
     for id in ids:
-      memories.append(self.memory[id].observation)
-      self.memory[id].lastAccess = calendar.dt
+      memories.append(memories_data[id].observation)
+      #TODO - UPDATE
+      # self.memory[id].lastAccess = calendar.dt
     return memories
 
   def reflect(self,n_questions=3, n_memories=3, n_reflections=5):
@@ -185,6 +188,13 @@ class Agent():
     locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
+    self.dest = newLocation
+    print(getTasks(newLocation))
+    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,getTasks(newLocation)),remember=False))
+    print(taskSr)
+    tasksList = [node for node in town.graph[newLocation] if "task" in node]
+    newLocation = tasksList[taskSr-1]
+    log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.dest = newLocation
 
   def graphics_load(self):
@@ -223,7 +233,7 @@ class Agent():
   def draw(self):
       if self.isSpeaking:
           
-          self.emoji_bubble('Eat')
+          self.emoji_bubble('Fishing Pole')
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -319,11 +329,11 @@ class Agent():
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
           else:
-            # self.isSpeaking=True
+            self.isSpeaking=True
             # self.msg = "I want to travel to"+ str(self.destination_path[-1])
-            # self.speech_bubble()
-            # self.draw()
-            # pygame.display.update()
+            # self.speech_bubble("Fishing Pole")
+            self.draw()
+            pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
             
@@ -478,7 +488,7 @@ class Agent():
         bubble_padding = 10
         bubble_width = emoji_surface.get_width() + bubble_padding * 2
         bubble_height = emoji_surface.get_height() + bubble_padding * 2
-        bubble_rect = pygame.Rect(x - bubble_width // 2, y - bubble_height // 2, bubble_width, bubble_height)
+        bubble_rect = pygame.Rect(x - bubble_width // 2 -30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
         # Draw the bubble outline
         pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
@@ -487,5 +497,5 @@ class Agent():
         pygame.draw.ellipse(self.win, CREAM, bubble_rect)
 
         # Blit the emoji onto the bubble
-        emoji_rect = emoji_surface.get_rect(center=(x, y))
+        emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
         self.win.blit(emoji_surface, emoji_rect)

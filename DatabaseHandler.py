@@ -22,10 +22,10 @@ class DBHandler:
 
 
     def addMemories(self, name, memory):
-        d = {'observation':mecmory.observation,
+        d = {'observation':memory.observation,
             'creation':memory.creation,
             'lastAccess':memory.lastAccess,
-            'importance':memory.importane}
+            'importance':memory.importance}
         self.agentCollection[name].insert_one(d)
     
     def getAllMemories(self, name):
