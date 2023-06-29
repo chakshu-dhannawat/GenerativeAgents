@@ -17,7 +17,7 @@ Initializing Agents
 '''
 log('\n=======Initializing Agents=======\n')
 
-graphics = [{'x':InitialPositions[i][0],'y':InitialPositions[i][1],'width':64, 'height':64, 'folder_name': f'character_0{i+1}', 'initialLocation': Locations[i]} for i in range(len(agentsDetails))] 
+graphics = [{'x':InitialPositions[i][0],'y':InitialPositions[i][1],'width':64, 'height':64, 'folder_name': f'character_0{i+1}', 'initialLocation': "Tavern"} for i in range(len(agentsDetails))] 
 
 agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
 
@@ -59,22 +59,18 @@ def game_logic():
 
   time.sleep(1)
 
-  day = False
+  day = 2
   
   while game.run:
      
-    # game.switchPhase()
+    if(day<2): game.switchPhase()
 
-    # if(day):
-    #   game.dayVote()
-    #   game.afternoon()
-    # else:  
-    #   game.nightVote()
+    if(day==0): game.nightVote()
+    if(day==1): game.dayVote()
+    if(day==2): game.afternoon()
     
-    day = not day
+    day = (day+1)%3
 
-    # game.afternoon()
-    pass
 
 '''
 ====================

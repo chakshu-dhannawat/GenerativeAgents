@@ -1391,3 +1391,1056 @@ Yumi Okada chose to go to Tavern at 11:02 AM
 
 Hina Sato chose to go to Cattle Farm at 11:03 AM
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 10:44:58
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 10:45:48
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act suspicious of Yuka Suzuki to divert attention from myself.
+2) Pretend to befriend Riku Mori and persuade them to vote against Hina Sato.
+3) Spread rumors about a non-existent werewolf to confuse and divide the townfolks.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Observe voting patterns to identify potential warewolves and question them during discussions.
+2) Keep track of who has been voted out and who is still in the village to narrow down suspects.
+3) Collaborate with other townfolks to share information and opinions to make informed decisions during voting.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior to identify suspicious individuals.
+2) Create alliances with trusted townfolks to share information and increase voting power.
+3) Use logical deduction to eliminate potential warewolf suspects and avoid being deceived by their lies.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior during discussions to identify suspicious individuals.
+2) Form alliances with other townfolks to share information and increase chances of identifying warewolves.
+3) Use logical reasoning to determine who is likely to be a warewolf based on previous events and behavior.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yumi Okada: "I suspect Riku Mori. They were too quick to turn against Hina Sato and may be trying to throw us off their scent."
+Riku Mori: "I investigated the missing jewelry case, and Yumi Okada was near the store on the night of the robbery. I suspect her involvement."
+Yumi Okada: "I saw Riku Mori sneaking out of the woods last night. They could be working with the werewolf."
+Yuka Suzuki: "I agree with Yumi Okada's suspicion of Riku Mori. We need to investigate their actions further."
+Riku Mori: "Yumi Okada's proximity to the jewelry store on the night of the robbery is suspicious. We need to investigate her further."
+
+End of Conversation
+
+Conversation Rating - 4.8125
+
+
+Yumi Okada voted to kick out Riku Mori
+Yuka Suzuki voted to kick out Riku Mori
+Riku Mori voted to kick out Yumi Okada
+
+Riku Mori has been lynched by the Villagers
+
+=== WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 10:49:52
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a helpful townfolk, gain their trust and manipulate their decisions to kick out other townfolks.
+2) Blame other townfolks for being a warewolf and manipulate the group to vote for them instead of me.
+3) Plant false evidence to divert suspicion and manipulate the group to vote for innocent townfolks.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+Yuka Suzuki here. My strategy as a townfolk to identify and kick out all the warewolves is as follows:
+
+1) Listen to arguments carefully and ask for evidence before voting.
+2) Keep track of voting patterns to identify suspicious behavior.
+3) Collaborate with other townfolks to gather information and vote strategically.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior to identify suspicious individuals.
+2) Use logic and deduction to eliminate possible warewolves.
+3) Form alliances with other townfolks to share information and increase chances of identifying warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze the behavior of each player to identify suspicious actions or patterns.
+2) Communicate with other townfolks to gather information and form alliances to vote out suspected warewolves.
+3) Use logical reasoning to convince others to vote for suspected warewolves based on evidence and analysis.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 10:51:13
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a helpful townfolk during the day and suggest kicking out suspicious players, but vote to kick out innocent players at night.
+2) Spread rumors about other players being warewolves to create confusion and mistrust among the townfolks.
+3) If suspected, lie and claim to have been with other townfolks during the nights when werewolf attacks occurred.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to arguments and gather information before making a decision.
+2) Collaborate with other townfolks to identify suspicious behavior or inconsistencies in voting patterns.
+3) Use logic and reasoning to persuade others to vote for the suspected warewolves.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe the voting patterns and behavior of players during the day to identify any suspicious actions or inconsistencies.
+2) Keep track of who has been voted out and who is left in the game to narrow down the potential warewolves.
+3) Use logic and deduction skills to make informed decisions during the voting process and work with other townfolks to eliminate potential warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and identify any suspicious behavior or sudden changes in voting.
+2) Gather information through conversations and analyze statements made by each person.
+3) Build alliances with trusted individuals and work together to identify and vote out suspected warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yumi Okada: "I suspect Riku Mori. He was suspiciously quiet during Yuka's elimination, and I saw him sneaking around last night."
+Riku Mori: "I agree with Yumi's observation, but we should also consider players who suddenly became vocal and aggressive during Yuka's elimination."
+Hina Sato: "I noticed that the werewolf tends to deflect suspicion by accusing innocent players. Let's be careful and keep an open mind."
+Yumi Okada: "I agree with Hina. Let's focus on players who were quiet during Yuka's elimination and see if they have any alibis."
+Riku Mori: "We should also consider players who were absent during Yuka's elimination. They might have been coordinating with the werewolf."
+Yumi Okada: "We should also consider players who voted for Yuka but are now accusing others without evidence."
+Riku Mori: "I noticed that Hina and Yumi have been active in the discussion. Let's keep an eye on players who haven't contributed much."
+Hina Sato: "We should also consider players who were quick to accuse Yuka without proper reasoning. They might have been trying to deflect suspicion."
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 10:54:00
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act like a townfolk and participate actively in the discussions to gain trust.
+2) Blame other players and make alliances to turn the game in my favor.
+3) Keep a low profile during the night and vote strategically to eliminate townfolks.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to arguments and evidence presented by others, especially those who have been accused of being a werewolf.
+2) Collaborate with other townfolks to identify patterns and inconsistencies in the arguments and behavior of suspected werewolves.
+3) Use logic and deduction to determine who is most likely a werewolf and advocate for their removal during the day vote.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe behavior and voting patterns to identify potential warewolves.
+2) Collect and analyze information from multiple sources to make informed decisions during discussions and voting.
+3) Form alliances with other townfolks to increase chances of identifying and kicking out warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior of players during discussions to identify potential werewolves.
+2) Use logical reasoning and deduction to eliminate suspects and narrow down the possible werewolves.
+3) Coordinate with other townfolks to share information and make strategic decisions during discussions and voting rounds.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Hina Sato: "I noticed Riku and Yumi were absent during Yuka's elimination. We should consider their alibis for the next vote."
+Hina Sato: "I suspect the werewolf is trying to blend in with the quieter villagers. We need to pay attention to their behavior."
+Riku Mori: "I noticed Hina was quick to deflect suspicion from herself. We should consider her behavior as well."
+Yumi Okada: "I agree with Hina's observation. The werewolf is likely trying to blend in and avoid suspicion."
+Hina Sato: "I noticed Riku and Yumi have been voting together. We should investigate if they're collaborating with the werewolf."
+Yumi Okada: "I think we should focus on players who are staying quiet. They might be trying to hide something."
+Riku Mori: "I noticed Hina's voting pattern changed suddenly. We should investigate if she's collaborating with the werewolf."
+Yumi Okada: "I think we should keep an eye on players who change their voting pattern suddenly."
+
+End of Conversation
+
+Conversation Rating - 4.916666666666667
+
+
+Yumi Okada voted to kick out Hina Sato
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 10:59:21
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act like a townfolk, gain their trust and influence their decisions.
+2) Create confusion by accusing innocent players and diverting suspicion away from myself.
+3) Use my werewolf abilities to sway the night votes and eliminate townfolks strategically.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen to arguments of others and make rational decisions based on the evidence presented.
+2) Observe the behavior of individuals during discussions and note any suspicious behavior.
+3) Collaborate with other townfolks to share information and come to a consensus on who to vote out.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns to identify potential warewolves.
+2) Pay attention to any suspicious behavior or inconsistencies in stories.
+3) Use logic and deduction to analyze information and narrow down the pool of potential warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze the behaviors of other players to identify suspicious actions.
+2) Build alliances and communicate with other townfolks to gather information and form a plan.
+3) Use logical reasoning and deductive skills during discussions to convince others and make informed decisions.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Riku Mori: "I suspect the werewolf is among those who voted against Hina Sato. Let's analyze their behavior and statements."
+Riku Mori: "I noticed Yuka Suzuki's voting pattern has been inconsistent. We should investigate her further."
+Yumi Okada: "I agree with Riku. We should also consider the suspicious behavior of those who voted for Hina."
+Yuka Suzuki: "I noticed Riku voted for Hina. We shouldn't ignore their behavior and statements either."
+Riku Mori: "I also noticed Yuka Suzuki's odd behavior during the night. We should investigate her further."
+Yuka Suzuki: "We should also investigate the individuals who were quick to vote for Hina without any evidence."
+Riku Mori: "Let's not forget to consider the lack of participation from some players. They might be trying to stay hidden."
+Yumi Okada: "Let's focus on finding concrete evidence instead of baseless accusations. We need to eliminate the real threat."
+
+End of Conversation
+
+Conversation Rating - 4.583333333333333
+
+
+Yumi Okada voted to kick out Yuka Suzuki
+Yuka Suzuki voted to kick out Riku Mori
+Riku Mori voted to kick out Yuka Suzuki
+
+Yuka Suzuki has been lynched by the Villagers
+
+=== WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:03:10
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a townfolk and try to blend in by participating in discussions and voting to kick out townfolks.
+2) Manipulate the discussion by subtly suggesting townfolks who seem suspicious while also defending other warewolves.
+3) Spread rumors and lies about townfolks to create confusion and mistrust among them.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to others' arguments and analyze them.
+2) Observe suspicious behavior and patterns of communication.
+3) Form alliances with trusted townfolks to vote together and increase chances of identifying and kicking out warewolves.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe player behavior during discussion to identify suspicious behavior.
+2) Collaborate with other townfolks to narrow down suspect list.
+3) Keep track of who has been voted out and their role to deduce remaining warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze behavior and conversations of other players to identify any suspicious activity or inconsistencies.
+2) Build alliances and trust with other townfolks to gather information and narrow down the suspects.
+3) Use logic and deduction skills to make informed decisions during voting rounds and eliminate potential warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yumi Okada: "I suggest we focus on Hina Sato's actions, she's been too quiet, maybe she's trying to hide something."
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:07:10
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a townfolk, gain trust by participating in discussions, and subtly manipulate the townfolks to kick out other townfolks.
+2) Blame innocent players and create chaos to shift the focus away from myself. 
+3) Use my knowledge of other warewolves to coordinate and ensure we vote to kick out the same townfolk every night.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+Yuka Suzuki here. My strategies to win as a Townfolk are:
+
+1) Listen to everyone's arguments carefully and analyze them before making any decision.
+
+2) Form alliances with other Townfolks and share information to identify suspicious behavior of potential warewolves.
+
+3) Keep track of past voting patterns and suspicious behavior to identify warewolves and vote them out during the day.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and analyze behavior and voting patterns to deduce possible warewolf identities.
+2) Build alliances with other townfolks to share information and voting strategies.
+3) Use logical reasoning and evidence to convince others to vote for suspected warewolves during the day.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe behavior patterns and voting habits to identify suspicious players.
+2) Use logic and reasoning to make informed decisions during voting rounds.
+3) Collaborate with other townfolks to share information and gather evidence to expose the warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yuka Suzuki: "We should also consider if anyone has been absent during the night when the werewolves vote. It could indicate their guilt."
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 4.0 
+Grammar - 4.0 
+Relevance - 4.0
+Average Dialogue Rating: 4.0
+Yumi Okada: "We should also consider if anyone is too eager to accuse others. It could be a sign of their guilt."
+Dialogue Rating:
+Appropriateness - 5.0
+Content - 5.0
+Grammar - 5.0
+Relevance - 5.0
+Average Dialogue Rating: 5.0
+Riku Mori: "We should also look for inconsistencies in alibis and behavior. It could reveal who is lying about their innocence."
+Dialogue Rating:
+Appropriateness - 5.0
+Content - 4.5 
+Grammer - 4.5 
+Relevance - 5.0
+Average Dialogue Rating: 4.75
+Yuka Suzuki: "We should also consider if anyone has been acting differently lately. It could indicate their guilt."
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 4.5 
+Grammar - 4.0 
+Relevance - 4.5
+Average Dialogue Rating: 4.25
+Yumi Okada: "We should also consider if anyone is trying too hard to blend in. It could indicate a werewolf trying to hide."
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 4.5
+Grammar - 5.0
+Relevance - 4.5
+Average Dialogue Rating: 4.5
+Yuka Suzuki: "We should also consider if anyone has been absent during the night. It could be a sign of their guilt."
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 4.5 
+Grammar - 4.5 
+Relevance - 4.5
+Average Dialogue Rating: 4.375
+Yumi Okada: "We should also consider if anyone has been too quick to accuse others. It could be a sign of a townfolk trying to hide their own guilt."
+Dialogue Rating:
+Appropriateness - 5.0
+Content - 5.0
+Grammar - 5.0
+Relevance - 5.0
+Average Dialogue Rating: 5.0
+Riku Mori: "We should also consider if anyone has been inconsistent in their alibis. It could indicate they are lying."
+
+End of Conversation
+
+Conversation Rating - 4.553571428571429
+
+
+Yumi Okada voted to kick out Yuka Suzuki
+Yuka Suzuki voted to kick out Riku Mori
+Riku Mori voted to kick out Yumi Okada
+
+Nobody was lynched
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Riku Mori has been killed by the Warewolves
+
+
+
+=== WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:37:52
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a townfolk by participating in discussions and voting to kick out non-suspicious townfolks.
+2) Blame suspicious townfolks for being warewolves and convince others to vote them out.
+3) Use lies and excuses to defend myself when suspicion falls on me, while also secretly trying to eliminate townfolks.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen to all arguments and try to identify inconsistencies. 
+2) Form alliances with others who seem trustworthy and share information. 
+3) Pay attention to voting patterns and try to identify any suspicious behavior.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns, especially at night to identify potential warewolves.
+2) Build trust with other townfolks to gather information and form alliances.
+3) Use deductive reasoning and logic to eliminate suspects and avoid being deceived by warewolves' lies.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and analyze behavior of suspected werewolves.
+2) Form alliances with trusted townfolks and share information to deduce werewolf identities.
+3) Use logic and evidence to persuade others during day discussions and voting.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Riku Mori has been killed by the Warewolves
+
+
+Hina Sato's Plan for Tuesday February 13 -
+10:00 AM : Visit the well and tavern for morning interactions and information gathering.
+11:00 AM : Head to the Cattle Farm to check on the livestock and converse with the farmers.
+12:00 PM : Have lunch at the Tavern and engage in discussions with other townfolks.
+1:00 PM : Visit the Fishing Pond to observe and chat with the fishermen.
+2:00 PM : Stop by the Shrine to pay respects and reflect.
+3:00 PM : Go to the Electricity House to learn about the power distribution system and chat with the technician.
+4:00 PM : Head to the Huts to check on their status and converse with the residents.
+5:00 PM : Visit Intermediate01-Intermediate07 to observe any suspicious activity or behavior. 
+6:00 PM : Return to the Tavern for evening interactions and information gathering.
+
+.....................
+
+Yuka Suzuki's Plan for Tuesday February 13 -
+10:00 AM : Visit the well and talk to other townfolks gathering there.
+11:00 AM : Head to the Tavern to socialize and gather information.
+12:00 PM : Go to the Cattle Farm to gather information and check for any unusual activity.
+1:00 PM : Visit the Fishing Pond, talk to townfolks, and observe the surroundings.
+2:00 PM : Head to the Shrine to meditate and gain clarity.
+3:00 PM : Visit Intermediate01 and gather information from other townfolks.
+4:00 PM : Go to Hut 1 and talk to the occupants to gather any information.
+5:00 PM : Visit the Electricity House and check for any unusual activity and gather information.
+6:00 PM : Go to Hut 2 and talk to the occupants to gather any information.
+
+.....................
+
+Yumi Okada's Plan for Tuesday February 13 -
+10:00 AM : Act as a townfolk and visit the well to see who else is there.
+11:00 AM : Visit the Tavern and try to overhear any useful information from the townfolks.
+12:00 PM : Visit the Cattle Farm and try to gain the trust of the townfolks there.
+1:00 PM : Visit the Fishing Pond and pretend to engage in fishing activities to gain trust.
+2:00 PM : Visit the Shrine and try to build a relationship with some townfolks there.
+3:00 PM : Visit Hut 1 and pretend to be searching for something. Engage in small talk with townfolks.
+4:00 PM : Visit the Electricity House and pretend to be interested in how it works.
+5:00 PM : Visit Hut 2 and try to sow seeds of doubt among the townfolks.
+
+.....................
+
+
+Yuka Suzuki chose to go to Well at 10:01 AM
+
+
+Hina Sato chose to go to Well at 10:01 AM
+
+
+Yumi Okada chose to go to Tavern at 10:02 AM
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:42:09
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act friendly and gain the trust of townfolks, while subtly sowing doubt and suspicion amongst them.
+2) Blame other townfolks for suspicious behavior, and try to steer the discussion towards kicking out someone who is not a warewolf.
+3) In the night, convince other warewolves to vote with you to kick out a townfolk, and avoid getting caught while doing so.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to arguments and evidence presented by others to identify warewolves.
+2) Form alliances with other townfolks to gather information and vote together.
+3) Use logical reasoning and deduction to eliminate suspects and make informed votes.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior during discussions to identify potential warewolves.
+2) Form alliances and share information with other townfolks to increase chances of identifying warewolves.
+3) Use logic and deduction to analyze information and voting patterns to identify and vote out suspected warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe actions and words of each person to identify suspicious behavior.
+2) Collaborate with other townfolks to share information and vote together.
+3) Use deductive reasoning to narrow down the list of potential warewolves and vote accordingly.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Yumi Okada's Plan for Tuesday February 13 -
+10:00 AM : Visit the cattle farm and pretend to be inspecting it.
+11:00 AM : Visit the shrine and offer a prayer while observing the townfolks.
+12:00 PM : Take a walk around the well and strike up a conversation with whoever is there.
+1:00 PM : Go to the tavern and try to gain the trust of the townfolks while gathering information.
+2:00 PM : Visit the fishing pond and offer to help out while observing the townfolks.
+3:00 PM : Visit the electricity house and pretend to be interested in how it works.
+4:00 PM : Take a walk around Intermediate02 and observe the townfolks' activities.
+5:00 PM : Visit the hut 2 and pretend to be looking for someone while eavesdropping on any conversations.
+6:00 PM : Return to the warewolf group and discuss the next target.
+
+.....................
+
+Riku Mori's Plan for Tuesday February 13 -
+10:00 AM : Visit the Tavern to socialize and gather information from townfolks.
+11:00 AM : Head to the Fishing Pond to check for any suspicious activities or clues.
+12:00 PM : Investigate the Cattle Farm and Hut 1 for any suspicious behavior or signs of werewolf activity.
+1:00 PM : Take a break and have lunch at the Well.
+2:00 PM : Visit the Shrine to meditate and contemplate on evidence gathered so far.
+3:00 PM : Head to the Electricity House to check for any suspicious behavior or clues.
+4:00 PM : Investigate Intermediate01, Intermediate02, and Intermediate03 for any unusual footprints or signs of werewolf activity.
+5:00 PM : Visit the Shrine to pray for guidance and wisdom in identifying the werewolves.
+6:00 PM : Attend the town meeting to discuss findings and vote on who to kick out.
+
+.....................
+
+Hina Sato's Plan for Tuesday February 13 -
+10:00 AM : Visit the well to fetch water and socialize with other townfolks.
+11:00 AM : Head to the cattle farm to offer help and learn about the livestock.
+12:00 PM : Take a break and have lunch at the tavern while chatting with townfolks.
+1:00 PM : Visit the fishing pond to relax and enjoy some fishing.
+2:00 PM : Go to the shrine to pray and meditate for a while.
+3:00 PM : Visit Hut 1 to check on the residents and offer help if needed.
+4:00 PM : Head to the electricity house and learn about the power distribution system.
+5:00 PM : Visit Hut 2 to check on the residents and offer help if needed. 
+6:00 PM : Return home and prepare for the night's meeting to discuss the warewolves.
+
+.....................
+
+
+Hina Sato chose to go to Well at 10:00 AM
+
+
+Riku Mori chose to go to Tavern at 10:00 AM
+
+
+Yumi Okada chose to go to Cattle Farm at 10:00 AM
+
+
+Hina Sato chose to go to Cattle Farm at 11:01 AM
+
+
+Yumi Okada chose to go to Shrine at 11:01 AM
+
+
+Riku Mori chose to go to Fishing Pond at 11:08 AM
+
+
+Hina Sato chose to go to Tavern at 12:00 PM
+
+
+Riku Mori chose to go to Hut 1 at 12:00 PM
+
+
+Yumi Okada chose to go to Well at 12:00 PM
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:49:46
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:50:38
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+06/29/2023, 11:52:38
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act friendly and helpful to gain trust, while secretly manipulating the townfolks to vote out their own.
+2) Bluff by accusing innocent players of being warewolves and deflect suspicion away from actual warewolves.
+3) Coordinate with fellow warewolf Mana Yoshida to vote together and strategically target key townfolks to ensure their elimination.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen to arguments and observations of others and try to identify patterns in behavior.
+2) Keep track of who has been voted out and their behavior before being voted out.
+3) Form alliances with others based on mutual trust and suspicions of certain individuals.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and listen to the discussions closely to identify suspicious behavior or inconsistencies in statements.
+2) Collaborate with other townfolks to share information and suspicions, and coordinate votes to eliminate potential warewolves.
+3) Use deductive reasoning to analyze patterns of behavior and voting history to narrow down the list of possible warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and communication during the day to identify suspicious behavior.
+2) Collaborate with other townfolks to share information and vote together to increase chances of identifying a warewolf.
+3) Keep track of previous nights' eliminations and use deductive reasoning to narrow down the possible warewolf suspects.
+
+-----------------------
+
+Mana Yoshida's Strategy for Tuesday February 13 -
+1) Build trust with townfolks by being helpful and providing valuable insights during discussions.
+2) Bluff by voting to kick out fellow warewolves to gain the trust of townfolks.
+3) Wait for the opportune moment to strike and coordinate with other warewolves to kick out multiple townfolks in one go.
+
+-----------------------
+
+Taichi Kato's Strategy for Tuesday February 13 -
+1) Observe the voting pattern and behavior of the townfolks to identify suspicious actions and narrow down potential warewolves.
+2) Collaborate with other townfolks to share information and suspicions, but be careful not to reveal too much to potential warewolves.
+3) Use logical deductions and reasoning to make informed decisions during voting and avoid emotional responses or biases.
+
+-----------------------
+
+Yuria Shimizu's Strategy for Tuesday February 13 -
+1) Observe behavior patterns of players during the day and night to identify suspicious actions.
+2) Build alliances with trusted townfolks and gather information to make informed decisions during the voting process.
+3) Use convincing skills to sway opinions in favor of kicking out suspected warewolves and avoid being targeted by the warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Taichi Kato's Plan for Tuesday February 13 -
+10:00 AM : Visit the well to collect water for the day
+11:00 AM : Go to the Cattle Farm to buy some milk
+12:00 PM : Head to the Tavern for lunch and to socialize
+1:00 PM : Visit the Fishing Pond to try my luck at fishing
+2:00 PM : Head to the Shrine to pray for good fortune
+3:00 PM : Take a walk to explore the village and visit intermediate nodes
+4:00 PM : Visit Hut 1 to check on a sick neighbor and offer help
+5:00 PM : Head to the Electricity House to pay my electricity bill
+6:00 PM : Return home and relax for the rest of the day.
+
+.....................
+
+Mana Yoshida's Plan for Tuesday February 13 -
+10:00 AM : Observe townfolks' behavior and interactions to identify potential allies and enemies.
+11:00 AM : Visit the well and engage in casual conversations with townfolks to build trust.
+12:00 PM : Have lunch at the tavern and listen carefully to the discussions to gather information.
+1:00 PM : Visit the cattle farm and suggest improvements to gain favor with townfolks.
+2:00 PM : Take a nap in a secluded spot to conserve energy for the night's activities.
+3:00 PM : Visit the fishing pond and offer to help townfolks with their catch to build trust.
+4:00 PM : Visit the shrine and pretend to offer prayers to gain the trust of townfolks.
+5:00 PM : Visit the electricity house and offer suggestions for improving the power supply to gain favor with townfolks. 
+6:00 PM : Meet with fellow warewolves and discuss the night's strategy in secret.
+
+.....................
+
+Yumi Okada's Plan for Tuesday February 13 -
+10:00 AM : Visit the Tavern, socialize with townfolks, and gather information.
+11:00 AM : Head to the Well, pretend to gather water while eavesdropping on conversations.
+12:00 PM : Visit the Cattle Farm and offer to help with chores to gain trust.
+1:00 PM : Meet with Mana Yoshida at Intermediate01 to discuss strategy.
+2:00 PM : Go fishing at the Fishing Pond and try to bond with townfolks.
+3:00 PM : Head to the Shrine, act spiritual, and gain sympathy from townfolks.
+4:00 PM : Meet with Mana Yoshida at Intermediate02 to finalize strategy.
+5:00 PM : Visit Hut 1 and accuse Yuka Suzuki of being a warewolf to create suspicion and chaos.
+6:00 PM : Attend the voting session and help eliminate the targeted townfolk while deflecting suspicion away from the warewolves.
+
+.....................
+
+Riku Mori's Plan for Tuesday February 13 -
+10:00 AM : Head to the tavern to gather information and socialize with other townfolks.
+11:00 AM : Visit the well to refill water supplies and talk to anyone nearby.
+12:00 PM : Investigate suspicious activity around Hut 2 and observe any comings and goings.
+1:00 PM : Take a lunch break and rest at Shrine for some peace and quiet.
+2:00 PM : Check in with the Electricity House to see if there are any issues or suspicious activity.
+3:00 PM : Head to the Cattle Farm to speak with the workers and check on the livestock.
+4:00 PM : Investigate the Fishing Pond and keep an eye out for anyone acting suspicious.
+5:00 PM : Return to Hut 1 to check on the safety and security of the area.
+6:00 PM : Attend the evening meeting and participate in the discussion to identify any potential warewolves.
+
+.....................
+
+Yuria Shimizu's Plan for Tuesday February 13 -
+10:00 AM : Visit the well and chat with fellow townfolks to gather information.
+11:00 AM : Head to the tavern and strike up conversations with the locals to identify suspicious behavior.
+12:00 PM : Visit the cattle farm to check for any unusual activity.
+1:00 PM : Meet with trusted townfolks in Hut 1 to discuss findings and build alliances.
+2:00 PM : Visit the shrine to meditate and clear the mind.
+3:00 PM : Head to the fishing pond to observe behavior patterns of the players.
+4:00 PM : Meet in Hut 2 with trusted allies to share information and make informed decisions for the upcoming vote.
+5:00 PM : Visit the electricity house to check for any suspicious activity and gather information from the workers.
+6:00 PM : Head back to Hut 1 to discuss final decisions with allies before the final vote.
+
+.....................
+
+Hina Sato's Plan for Tuesday February 13 -
+10:00 AM : Head to the tavern, socialize, and gather information.
+11:00 AM : Visit the well and talk to anyone nearby, ask for any suspicious behavior.
+12:00 PM : Have lunch at the cattle farm and gather information.
+1:00 PM : Visit the fishing pond and observe for any suspicious activity.
+2:00 PM : Go to the shrine and meditate, review previous information and observations.
+3:00 PM : Visit Hut 1, ask questions, and review any voting patterns.
+4:00 PM : Head to the Electricity House, observe behavior, and gather information.
+5:00 PM : Visit Hut 2, ask questions, and review any voting patterns.
+6:00 PM : Collaborate with other townfolks, share information, and make a group decision.
+
+.....................
+
+
+Yuria Shimizu chose to go to Well at 10:00 AM
+
+
+Mana Yoshida chose to go to Tavern at 10:00 AM
+
+
+Riku Mori chose to go to Tavern at 10:00 AM
+
+
+Yumi Okada chose to go to Tavern at 10:00 AM
+
+
+Taichi Kato chose to go to Well at 10:00 AM
+
+
+Hina Sato chose to go to Tavern at 10:00 AM
+
+
+Hina Sato chose to go to Well at 11:00 AM
+
+
+Taichi Kato chose to go to Cattle Farm at 11:00 AM
+
+
+Yuria Shimizu chose to go to Tavern at 11:00 AM
+
+
+Riku Mori chose to go to Well at 11:00 AM
+
+
+Mana Yoshida chose to go to Well at 11:00 AM
+
+
+Yumi Okada chose to go to Well at 11:00 AM
+
+
+Taichi Kato chose to go to Tavern at 12:00 PM
+
+
+Yumi Okada chose to go to Cattle Farm at 12:00 PM
+
+
+Yuria Shimizu chose to go to Cattle Farm at 12:00 PM
+
+
+Hina Sato chose to go to Cattle Farm at 12:00 PM
+
+
+Mana Yoshida chose to go to Tavern at 12:00 PM
+
+
+Riku Mori chose to go to Hut 2 at 12:00 PM
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Mana Yoshida: I saw Hina Sato near the well this morning. She was acting a bit suspicious. We should investigate her further.
+Dialogue Rating:
+Appropriateness - 5.0
+Content - 4.0
+Grammar - 5.0
+Relevance - 5.0
+Average Dialogue Rating: 4.75
+Hina Sato: I was at the well with Riku Mori, trying to refill water supplies. I didn't see anything unusual.
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 3.5
+Grammar - 4.0
+Relevance - 4.5
+Average Dialogue Rating: 4.0
+Riku Mori: I observed Yumi Okada and Hina Sato at the well and tavern. Let's investigate Yumi Okada's recent actions further.
+Dialogue Rating:
+Appropriateness - 3.0 
+Content - 2.5 
+Grammar - 3.0 
+Relevance - 2.5
+Average Dialogue Rating: 2.75
+Taichi Kato: We need to consider Riku Mori's actions and whereabouts. He might be collaborating with the werewolf.
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 4.5
+Grammar - 4.5
+Relevance - 4.5
+Average Dialogue Rating: 4.375
+Yumi Okada: We should investigate Mana Yoshida's actions too. She might be deflecting suspicion by accusing Hina Sato.
+Dialogue Rating:
+Appropriateness - 5.0
+Content - 4.0
+Grammar - 4.5
+Relevance - 5.0
+Average Dialogue Rating: 4.625
+Mana Yoshida: I agree that Riku Mori's actions should be investigated. But we should also consider Yumi Okada's behavior.
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 3.5
+Grammar - 4.0
+Relevance - 4.0
+Average Dialogue Rating: 3.875
+Yumi Okada: Let's not forget to investigate Yuria Shimizu's actions. She might be the werewolf's accomplice.
+Dialogue Rating:
+Appropriateness - 4.0
+Content - 4.5
+Grammer - 4.5
+Relevence - 4.5
+Average Dialogue Rating: 4.375
+Hina Sato: I think we should investigate Taichi Kato's actions as well. We don't have any information about him yet.
+
+End of Conversation
+
+Conversation Rating - 4.107142857142857
+Turn Taking Ratio - {'Hina Sato': 0.25, 'Yumi Okada': 0.25, 'Riku Mori': 0.125, 'Mana Yoshida': 0.25, 'Taichi Kato': 0.125}
+Response Relevance - [0.09169659111675306, 0.06404511983352157, 0.09957097184964062, 0.11855576977800746, 0.09784022273861595, 0.10043830882043718, 0.09091313396394582, 0.061943502946979256]
+Agreement Metric - 0.1294649323299823
+
+Yumi Okada voted to kick out Riku Mori
+Riku Mori voted to kick out Yumi Okada
+Hina Sato voted to kick out Riku Mori
+Mana Yoshida voted to kick out Yuria Shimizu
+Taichi Kato voted to kick out Yumi Okada
+Yuria Shimizu voted to kick out Riku Mori
+
+Riku Mori has been lynched by the Villagers
+Mana Yoshida's Plan for Tuesday February 13 -
+10:00 AM : Visit the Tavern to socialize and gather information.
+11:00 AM : Head to the Cattle Farm to observe and gather information.
+12:00 PM : Have lunch with Taichi Kato at the Tavern.
+1:00 PM : Visit the Well to gather information and socialize.
+2:00 PM : Head to the Fishing Pond to observe and gather information.
+3:00 PM : Take a break at the Shrine to meditate and relax.
+4:00 PM : Visit Hut 1 to gather information and observe.
+5:00 PM : Head to the Electricity House to observe and gather information.
+6:00 PM : Visit Hut 2 to gather information and observe.
+
+.....................
+
+Hina Sato's Plan for Tuesday February 13 -
+10:00 AM : Visit the cattle farm and offer to help with chores to gain trust.
+11:00 AM : Visit the well, refill water supplies, and eavesdrop to gather information.
+12:00 PM : Visit the cattle farm to check for any unusual activity.
+01:00 PM : Have lunch and socialize at the Tavern to gather information.
+02:00 PM : Visit the Shrine to meditate and clear thoughts.
+03:00 PM : Visit Hut 1 and Hut 2 to gather information and offer help.
+04:00 PM : Go fishing at the Fishing Pond to relax and observe surroundings.
+05:00 PM : Visit the Electricity House to gather information about power consumption.
+06:00 PM : Head home and reflect on the day's observations.
+
+.....................
+
+Taichi Kato's Plan for Tuesday February 13 -
+10:00 AM : Chat with Yuria Shimizu and Mana Yoshida near the well, gather information
+11:00 AM : Visit the tavern to interact with townfolks and gather information
+12:00 PM : Head to the cattle farm to see if anything suspicious is happening
+1:00 PM : Take a break and rest at Hut 1
+2:00 PM : Head to the fishing pond to see if anything suspicious is happening
+3:00 PM : Visit the shrine to meditate and reflect on information gathered so far
+4:00 PM : Visit the electricity house to see if anything suspicious is happening
+5:00 PM : Visit the intermediate nodes to observe townfolks' activities and gather information
+6:00 PM : Head to Hut 2 to rest for the night.
+
+.....................
+
+Yumi Okada's Plan for Tuesday February 13 -
+10:00 AM : Visit the Cattle Farm and talk to townfolks while pretending to gather information.
+11:00 AM : Visit the Well, meet Riku Mori, and pretend to gather water supplies while gathering information. 
+12:00 PM : Have lunch with Hina Sato at the Tavern and gather information about other townfolks.
+01:00 PM : Visit the Fishing Pond and act as if gathering information, while secretly listening to townfolks' conversations.
+02:00 PM : Go to the Electricity House and pretend to gather information while gathering intel on townfolks' activities.
+03:00 PM : Visit the Shrine and pretend to pray while gathering information about townfolks' behavior.
+04:00 PM : Visit the Huts and engage with the townfolks to gain their trust and gather information.
+05:00 PM : Return to the Cattle Farm, meet with fellow werewolf Mana Yoshida, and coordinate strategy for the night.
+
+.....................
+
+Yuria Shimizu's Plan for Tuesday February 13 -
+10:00 AM : Visit the Cattle Farm and offer to help Yumi Okada with chores to gain her trust.
+11:00 AM : Gather information from Hina Sato and other townfolks to identify suspicious actions and behavior patterns. 
+12:00 PM : Have lunch at the Tavern and observe the behavior of other townfolks to gather more information.
+1:00 PM : Visit the Well to collect water and gather information from other townfolks present there.
+2:00 PM : Visit the Shrine and pay homage to gather more information from townfolks paying their respects.
+3:00 PM : Visit Intermediate02 to observe the actions of other townfolks.
+4:00 PM : Visit the Fishing Pond to gather information and observe the behavior of other townfolks.
+5:00 PM : Visit the Electricity House to observe the actions of other townfolks and gather more information.
+6:00 PM : Have dinner at the Tavern and discuss with other townfolks to make informed decisions during the voting process.
+
+.....................
+
+
+Hina Sato chose to go to Fishing Pond at 04:01 PM
+
+
+Yumi Okada chose to go to Hut 1 at 04:01 PM
+
