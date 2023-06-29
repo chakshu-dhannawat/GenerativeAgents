@@ -53,6 +53,7 @@ class Memory():
     self.creation = calendar.dt
     self.lastAccess = self.creation
     self.importance = 0
+    self._id = ''
     # self.getImportance()
 
   def retrievalScore(self, query):
