@@ -221,7 +221,7 @@ class Agent():
   def draw(self):
       if self.isSpeaking:
           
-          self.emoji_bubble('Fishing Pole')
+          self.speech_bubble()
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -317,11 +317,11 @@ class Agent():
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
           else:
-            self.isSpeaking=True
+            # self.isSpeaking=True
             # self.msg = "I want to travel to"+ str(self.destination_path[-1])
             # self.speech_bubble("Fishing Pole")
-            self.draw()
-            pygame.display.update()
+            # self.draw()
+            # pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
             

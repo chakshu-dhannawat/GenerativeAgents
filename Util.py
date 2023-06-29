@@ -117,7 +117,19 @@ def getRetrievedMemories(stream):
 def getResponseRating(dialogue, response, context, agent1, agent2):
   gpt = GPT()
   rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response))
+
+  # pattern = r'\d+(\.\d+)?'
+  lines = rating.split('\n')
+  ratings = []
+  for line in lines:
+      # line_ratings = re.findall(pattern, line)
+      ratings.append(float(line.split(' - ')[1]))
+      # ratings.extend([float(rating) for rating in line_ratings])
+  average_rating = sum(ratings) / len(ratings)
   print(rating)
+  print(ratings)
+  log(f"The average rating is: {average_rating}")
+  return average_rating
 
 def getDetails():
     details = ""

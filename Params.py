@@ -108,13 +108,13 @@ Agents
 ====================
 '''
 
-MinDialogues = 1
+MinDialogues = 5
 
 agentsDetails = [
     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},
-    # {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
-    # {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
-    # {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
+    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
+    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
+    {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
     # {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
     # {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
     # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."},
