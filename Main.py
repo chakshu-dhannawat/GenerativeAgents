@@ -63,14 +63,16 @@ def game_logic():
   
   while game.run:
      
-    if(day<2): game.switchPhase()
+    game.clock.tick(FPS)
+
+    game.step()
 
     if(day==0): game.nightVote()
     if(day==1): game.dayVote()
     if(day==2): game.afternoon()
-    
-    day = (day+1)%3
 
+    day = (day+1)%3
+    
 
 '''
 ====================

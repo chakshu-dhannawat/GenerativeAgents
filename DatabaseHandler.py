@@ -33,10 +33,15 @@ class DBHandler:
         memories_list = []
         for item in d:
             memory = Memory()
+            memory._id = item['_id']
             memory.observation = item['observation']
             memory.creation = item['creation']
             memory.lastAccess = item['lastAccess']
             memory.importance = item['importance']
             memories_list.append(memory)
         return memories_list
+    def updateMemories(self,name,memory_id,field,value):
+        query = {'_id': memory_id}
+        update = {'$set': {field: value}}
+        self.agentCollection[name].update_one(query, update)
 DB = DBHandler("memories_DB")
