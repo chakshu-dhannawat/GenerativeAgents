@@ -169,9 +169,8 @@ class Agent():
     memories = []
     for id in ids:
       memories.append(memories_data[id].observation)
-      #TODO - UPDATE
-      print(memories_data[id]['lastAccess'])
-      DB.updateMemories(self.name,memories_data[id]['_id'],'lastAccess',calendar.dt)
+      # print(memories_data[id].lastAccess)
+      DB.updateMemories(self.name,memories_data[id]._id,'lastAccess',calendar.dt)
       
       # self.memory[id].lastAccess = calendar.dt
     return memories
