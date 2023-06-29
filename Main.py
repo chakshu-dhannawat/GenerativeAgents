@@ -79,13 +79,19 @@ Warewolf Game [GRAPHICS]
 '''
 
 
-def render():
+day = 2
 
-  while game.run : 
+while game.run : 
 
-      game.clock.tick(FPS)
+    game.clock.tick(FPS)
 
-      game.step()
+    game.step()
+
+    if(day==0): game.nightVote()
+    if(day==1): game.dayVote()
+    if(day==2): game.afternoon()
+
+    day = (day+1)%3
 
 
 '''
