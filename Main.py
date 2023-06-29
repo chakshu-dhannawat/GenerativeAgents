@@ -63,16 +63,14 @@ def game_logic():
   
   while game.run:
      
-    game.clock.tick(FPS)
-
-    game.step()
+    if(day<2): game.switchPhase()
 
     if(day==0): game.nightVote()
     if(day==1): game.dayVote()
     if(day==2): game.afternoon()
-
-    day = (day+1)%3
     
+    day = (day+1)%3
+
 
 '''
 ====================
@@ -81,19 +79,13 @@ Warewolf Game [GRAPHICS]
 '''
 
 
-day = 2
+def render():
 
-while game.run : 
+  while game.run : 
 
-    game.clock.tick(FPS)
+      game.clock.tick(FPS)
 
-    game.step()
-
-    if(day==0): game.nightVote()
-    if(day==1): game.dayVote()
-    if(day==2): game.afternoon()
-
-    day = (day+1)%3
+      game.step()
 
 
 '''
