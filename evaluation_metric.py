@@ -23,6 +23,7 @@ Yumi Kimura: "I agree with Aya. We should keep an eye on Kaito's behavior and ga
 Hiroshi Tanaka: "I agree with Akiko and Yumi. We should observe Kaito's behavior closely. However, I think Takeshi's opinion is valuable too. Maybe we can work together to gather more information and make the right decision."
 """
 
+
 # Turn-taking ratio metric
 def get_turn_taking_ratio(dialogue):
     agents = set([line.split(":")[0].strip() for line in dialogue.split("\n")])
@@ -62,16 +63,19 @@ def calculate_response_relevance(dialogue):
     similarity_matrix = cosine_similarity(tfidf_matrix)
 
     response_relevance_scores = []
-
+    
+    total = 0
     for i in range(num_utterances):
         response_relevance = sum(similarity_matrix[i]) - similarity_matrix[i][i]
-        response_relevance_scores.append(response_relevance/10)
+        response_relevance_scores.append(response_relevance)
+        total += response_relevance
 
-    return response_relevance_scores
+    return response_relevance_scores, total/num_utterances
 
 # Example usage
-response_relevance = calculate_response_relevance(dialogue)
+response_relevance, avg = calculate_response_relevance(dialogue)
 print("Response Relevance:", response_relevance)
+print("Average Response Relevance:", avg)
 
 # --------------------------------------------------------------------------------
 
@@ -115,4 +119,4 @@ def calculate_agreement_metric(dialogue):
 
 
 agreement_metric = calculate_agreement_metric(dialogue)
-print("Agreement Metric:", agreement_metric)
+print("Agreement Metric:", agreement_metric*10)
