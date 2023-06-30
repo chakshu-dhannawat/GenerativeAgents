@@ -13,6 +13,7 @@ import numpy as np
 from Memories import calendar
 import asyncio
 from multiprocessing import Process
+import multiprocessing
 import time
 import threading
 from evaluation_metric import *
@@ -143,7 +144,9 @@ class Game:
 
     self.alive = [True]*self.n
     self.warewolf = [False]*self.n
-    self.warewolf[0] = True
+    for i in range(self.n):
+      if("warewolf" in self.agents[i].summary.split(';')[0]):
+         self.warewolf[i] = True
 
     # for agent in self.agents:
     #     agent.remember(agent.result)
@@ -166,16 +169,46 @@ class Game:
     
     self.reset()
 
+  def getSingleContext(self,name1,name2):
+      self.contexts[name1][name2] = self.agents[self.ids[name1]].vote_context(name2)
+     
+  # def getContext(self,name,night=False):
+  #   self.contexts[name] = {}
+  #   threads = []
+  #   for i in range(self.n):
+  #       if(not self.alive[i]): continue
+  #       if(name==self.names[i]): continue
+  #       if(night and self.warewolf[i]): continue
+  #       thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i]))
+  #       thread.start()
+  #       threads.append(thread)
+  #   for thread in threads:
+  #       thread.join()
+
   def getContext(self,name,night=False):
     self.contexts[name] = {}
-    context = ""
-    id = self.ids[name]
-    for i,agent in enumerate(self.agents):
-      if(not self.alive[i]): continue
-      if(name==agent.name): continue
-      if(night and self.warewolf[i]): continue
-      voteContext = self.agents[id].vote_context(agent.name)
-      self.contexts[name][agent.name] = voteContext
+    for i in range(self.n):
+        if(not self.alive[i]): continue
+        if(name==self.names[i]): continue
+        if(night and self.warewolf[i]): continue
+        self.getSingleContext(name, self.names[i])
+
+
+  # def getContext(self, name, night=False):
+  #     self.contexts[name] = {}
+  #     processes = []
+  #     for i in range(self.n):
+  #         if not self.alive[i]:
+  #             continue
+  #         if name == self.names[i]:
+  #             continue
+  #         if night and self.warewolf[i]:
+  #             continue
+  #         process = multiprocessing.Process(target=self.getSingleContext, args=(name, self.names[i]))
+  #         process.start()
+  #         processes.append(process)
+  #     for process in processes:
+  #         process.join()
 
   def nightVoteWarewolf(self,i,names):
     self.getContext(self.names[i],True)
@@ -209,7 +242,7 @@ class Game:
     for i in range(self.n):
         if(not self.warewolf[i]): continue
         if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.nightVoteWarewolf(i,names))
+        thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -236,7 +269,7 @@ class Game:
     threads = []
     for i in range(self.n):
         if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.getContext(self.agents[i].name))
+        thread = threading.Thread(target=self.getContext, args=(self.names[i],False))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -247,10 +280,31 @@ class Game:
        else: 
           voteContext = ""
           sr = 1
-          for key, value in self.contexts[self.agents[i].name].items():
+          for key, value in self.contexts[self.names[i]].items():
               voteContext += f"{sr}) {key}: {value}\n"
               sr += 1
           context.append(voteContext[:-1])
+
+    votes = [0]*self.n
+    log()
+    for i,voteId in enumerate(voters):
+      names = ""
+      j = 1
+      for id in voters:
+        if(id==voteId): continue
+        names = names + f"{j}) {self.names[id]}\n"
+        j += 1
+      names = names[:-1]
+      voteName = self.agents[voteId].brain.query(
+         QUERY_DAY_BEFORE.format(self.agents[voteId].name,context[voteId]
+                                 ,self.agents[voteId].name,names))
+      try:
+        vote = self.names.index(voteName)
+      except:
+        voteName = self.findName(voteName)
+        vote = self.names.index(voteName)
+      log(f"{self.agents[voteId].name} voted to kick out {voteName}")
+      votes[vote] += 1
 
     conversation = self.groupConversation(context,voters)
 
@@ -377,7 +431,7 @@ class Game:
   def afternoon(self):
     self.generatePlanDay()
     while True:
-      if(calendar.dt.hour in [1,13]): break
+      if(calendar.dt.hour in [11,12]): break
       if(calendar.dt.minute==0):
         now = calendar.time
         threads = []
@@ -391,6 +445,12 @@ class Game:
 
         for i in range(self.n):
             if(not self.alive[i]): continue
+            self.agents[i].nextLocation(now)
+
+
+
+        for i in range(self.n):
+            if(not self.alive[i]): continue
             for j in range(self.n):
               if(i==j or not self.alive[j]): continue
               if(self.agents[i].dest == self.agents[j].dest):
@@ -398,8 +458,8 @@ class Game:
         # for i in range(self.n):
         #   if(self.alive[i]):
         #      self.agents[i].nextLocation()
-        time.sleep(0.9)
-      time.sleep(0.2)  
+        calendar.increment40()
+      time.sleep(0.3)  
 
   def generatePlanDay(self):
     threads = []
@@ -479,9 +539,12 @@ class Game:
       self.win.blit(self.bg,(0,0))
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
-              player.draw()      
+              player.draw() 
+      self.draw_fire()  
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.drawBubble()   
       self.draw_time()
-      self.draw_fire()
       pygame.display.update()
 
   def draw_fire(self):

@@ -33,8 +33,8 @@ def get_turn_taking_ratio(dialogue):
         return 0
     return {agent: turns / total_turns for agent, turns in agent_turns.items()}
 
-turn_taking_ratio = get_turn_taking_ratio(dialogue)
-print("Turn-taking ratio:", turn_taking_ratio)
+# turn_taking_ratio = get_turn_taking_ratio(dialogue)
+# print("Turn-taking ratio:", turn_taking_ratio)
 
 # --------------------------------------------------------------------------------
  
@@ -73,9 +73,9 @@ def calculate_response_relevance(dialogue):
     return response_relevance_scores, total/num_utterances
 
 # Example usage
-response_relevance, avg = calculate_response_relevance(dialogue)
-print("Response Relevance:", response_relevance)
-print("Average Response Relevance:", avg)
+# response_relevance, avg = calculate_response_relevance(dialogue)
+# print("Response Relevance:", response_relevance)
+# print("Average Response Relevance:", avg)
 
 # --------------------------------------------------------------------------------
 
@@ -118,5 +118,5 @@ def calculate_agreement_metric(dialogue):
     return agreement_metric
 
 
-agreement_metric = calculate_agreement_metric(dialogue)
-print("Agreement Metric:", agreement_metric*10)
+# agreement_metric = calculate_agreement_metric(dialogue)
+# print("Agreement Metric:", agreement_metric*10)

@@ -51,7 +51,7 @@ Context of Remaining Townfolks in {}'s Memory -
 
 Suggest exactly one Townfolk to vote to kick out. 
 
-Names you can vote to kick out -
+Here is the list of Townfolks you can vote to kick out -
 {}
 
 Format - <name>"""
@@ -62,6 +62,19 @@ Context of Remaining Players in {}'s Memory -
 {}
 
 Group Discussion -
+{}
+
+As {}, Suggest exactly one Player to vote to kick out.
+The vote will be visible to all Players.
+
+Names you can vote to kick out -
+{}
+
+Format - <name>"""
+
+QUERY_DAY_BEFORE = """It is currently day.
+
+Context of Remaining Players in {}'s Memory -
 {}
 
 As {}, Suggest exactly one Player to vote to kick out.
@@ -326,6 +339,7 @@ Relevence - <rating>
 # TODO: Add bluff in warewolves
 
 # TODO: Add the observations to the agent's memories and also dialogue context and reflect also
+# TODO: In retrieval, first only take memories containing name of both agents, if they are less, take with name2 -> name1 -> others
 
 # QUERY_DIALOGUE_REPLY = ("It is {}, {}; {}'s status: {}; Observation: {} has initiatiated "
 # "conversation with {}.; Summary of relevant context from {}'s memory: {};\n\nHere is "
