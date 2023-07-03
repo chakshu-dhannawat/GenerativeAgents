@@ -17,6 +17,7 @@ import multiprocessing
 import time
 import threading
 from evaluation_metric import *
+from gtts import gTTS
 
 
 pygame.font.init()
@@ -24,6 +25,14 @@ pygame.init()
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
 speed = FPS*0.6
+
+def generate_voiceover_japanese(text):
+    tts = gTTS(text, lang='ja')
+    tts.save("voiceover_japanese.mp3")
+
+    # pygame.mixer.init()
+    music = pygame.mixer.music.load("voiceover_japanese.mp3")
+    pygame.mixer.music.play(1)
 
 
 '''
@@ -42,6 +51,8 @@ bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
 music = pygame.mixer.music.load(Path+'music.mp3')
 pygame.mixer.music.play(-1)
+
+# generate_voiceover_japanese("アジェイは私の愛です")
 
 '''
 ====================
