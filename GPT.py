@@ -7,7 +7,10 @@ from pymongo import MongoClient
 import re
 import random
 from threading import Lock
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 lock = Lock()
 
 def addUsage(tokens):
@@ -20,13 +23,13 @@ def addUsage(tokens):
 # with open('usage.json', 'w') as f:
 #     json.dump(0, f)
 
-os.environ['OPENAI_API_KEY'] = 'ee5ee43275804e3db6a1c9f98a532a5d'
+os.environ['OPENAI_API_KEY'] = os.getenv('OpenAI_API_KEY')
 
-openai.api_type = "azure"
+openai.api_type = os.getenv('OpenAI_Type')
 
-openai.api_base = "https://openaifor-intershipteama.openai.azure.com/"
+openai.api_base = os.getenv('OpenAI_Base')
 
-openai.api_version = "2023-03-15-preview"
+openai.api_version = os.getenv('OpenAI_Version')
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 

@@ -155,7 +155,8 @@ class Game:
 
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
-    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)   
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
+    self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
     for i in range(100): 
       self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE)  
@@ -540,7 +541,9 @@ class Game:
         text = self.elimination + " has been lynched"
         text_surface = font.render(text,True,WHITE)
         self.win.blit(text_surface,(500,400))
+        pygame.display.update()
         time.sleep(5)
+        self.elimination = None
         
       else:
         self.win.blit(self.bg,(0,0))
