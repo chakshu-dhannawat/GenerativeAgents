@@ -45,7 +45,11 @@ font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
 bg = pygame.image.load(Path+'town.png')
-bg2 = pygame.image.load(Path+'blackbg.png')
+# bg2 = pygame.image.load(Path+'killing.gif')
+# clock = pygame.time.Clock()
+black_bg = pygame.image.load(Path+'blackbg.png')
+
+killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
@@ -167,10 +171,16 @@ class Game:
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
     self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
-    self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
+    # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
     for i in range(100): 
-      self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE)  
+      self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE) 
+    self.fire = True
+    self.killing = False
+    self.killId = 0
+    self.killframes = killframes
+    for i in range(N_Killing): 
+      self.killframes[i] =  pygame.transform.scale(self.killframes[i], DEFAULT_IMAGE_SIZE)  
     self.changePhase = False 
     self.Night = 0
     self.bgId = -1
@@ -265,6 +275,7 @@ class Game:
     kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
     self.kicked = self.names[kick]
+    self.killing = True
     self.night_elimination = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
@@ -359,6 +370,7 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+      self.killing = True
       self.elimination = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
@@ -546,35 +558,50 @@ class Game:
       # text_rect = text_surface.get_rect()
       # pygame.draw.rect(self.win, WHITE, (0, 0, text_rect.width, text_rect.height))
       # self.win.blit(text_surface, text_rect)
+
+  def drawKilling(self):
+        if(self.fire): self.fire = False
+        if(self.killId==N_Killing*Speed_Killing):
+            self.killing = False
+            self.killId = 0
+            if(self.Night):
+              self.bg = self.bgs[0]
+            else:
+              self.bg = self.bgs[99] 
+            self.fire = True
+        else:
+          self.bg = self.killframes[self.killId//Speed_Killing]
+          self.killId+=1
   
   def draw_window(self) : 
-      if(self.elimination):
-        self.win.blit(self.bg2,(0,0))
-        text = self.elimination + " has been lynched"
-        text_surface = font.render(text,True,WHITE)
-        self.win.blit(text_surface,(400,400))
-        pygame.display.update()
-        time.sleep(5)
-        self.elimination = None
-      elif(self.night_elimination):
-          self.win.blit(self.bg2,(0,0))
-          text = self.night_elimination + " has been killed by the warewolves"
-          text_surface = font.render(text,True,WHITE)
-          self.win.blit(text_surface,(400,400))
-          pygame.display.update()
-          time.sleep(5)
-          self.night_elimination = None
-      else:
-        self.win.blit(self.bg,(0,0))
-        for i,player in enumerate(self.agents): 
-            if(self.alive[i]):
-                player.draw() 
+      # if(self.elimination):
+      #   self.win.blit(self.bg2,(0,0))
+      #   text = self.elimination + " has been lynched"
+      #   text_surface = font.render(text,True,RED)
+      #   self.win.blit(text_surface,(400,400))
+      #   pygame.display.update()
+      #   time.sleep(5)
+      #   self.elimination = None
+      # elif(self.night_elimination):
+      #     self.win.blit(self.bg2,(0,0))
+      #     text = self.night_elimination + " has been killed by the warewolves"
+      #     text_surface = font.render(text,True,RED)
+      #     self.win.blit(text_surface,(400,400))
+      #     pygame.display.flip()
+      #     time.sleep(5)
+      #     self.night_elimination = None
+      # else:
+      self.win.blit(self.bg,(0,0))
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.draw() 
+      if(self.fire):
         self.draw_fire()  
-        for i,player in enumerate(self.agents): 
-            if(self.alive[i]):
-                player.drawBubble()   
-        self.draw_time()
-        pygame.display.update()
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.drawBubble()   
+      self.draw_time()
+      pygame.display.update()
 
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
@@ -641,6 +668,9 @@ class Game:
           else:
               self.bgId+=1
               self.bg = self.bgs[self.bgId]
+
+      if(self.killing):
+        self.drawKilling()
 
       self.draw_window()
       
