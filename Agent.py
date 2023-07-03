@@ -96,9 +96,8 @@ class Agent():
     self.choose_random_location()     
   
   def remember(self,observation):
-    # self.memory.append(Memory(observation.strip()))
-    mem =  Memory(observation.strip())
-    DB.addMemories(self.name, mem)
+    #self.memory.append(Memory(observation.strip()))
+    DB.addMemories(self.name, Memory(observation.strip()))
 
   def talk_context(self,person):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",3))
@@ -232,10 +231,12 @@ class Agent():
                 walk_down.append(temp)
         return walk_right, walk_left, walk_up, walk_down, walk_down[0]
   
-  def draw(self):
-      if self.isSpeaking:
-          
+  def drawBubble(self):
+     if self.isSpeaking:
           self.speech_bubble()
+  
+  def draw(self):
+      
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -331,11 +332,11 @@ class Agent():
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
           else:
-            self.isSpeaking=True
-            self.msg = "I want to travel to"+ str(self.destination_path[-1])
-            self.speech_bubble()
-            self.draw()
-            pygame.display.update()
+            # self.isSpeaking=True
+            # self.msg = "I want to travel to"+ str(self.destination_path[-1])
+            # self.speech_bubble()
+            # self.draw()
+            # pygame.display.update()
             self.destination = self.destination_path[0]
             self.destination_path.pop(0)
             
