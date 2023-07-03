@@ -36,6 +36,7 @@ font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
 bg = pygame.image.load(Path+'town.png')
+bg2 = pygame.image.load(Path+'blackbg.png')
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
@@ -166,7 +167,7 @@ class Game:
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
     self.contexts = {}
-    
+    self.elimination = None
     self.reset()
 
   def getSingleContext(self,name1,name2):
@@ -344,6 +345,7 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+      self.elimination = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
 
@@ -533,16 +535,24 @@ class Game:
       # self.win.blit(text_surface, text_rect)
   
   def draw_window(self) : 
-      self.win.blit(self.bg,(0,0))
-      for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
-              player.draw() 
-      self.draw_fire()  
-      for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
-              player.drawBubble()   
-      self.draw_time()
-      pygame.display.update()
+      if(self.elimination):
+        self.win.blit(self.bg2,(0,0))
+        text = self.elimination + " has been lynched"
+        text_surface = font.render(text,True,WHITE)
+        self.win.blit(text_surface,(500,400))
+        time.sleep(5)
+        
+      else:
+        self.win.blit(self.bg,(0,0))
+        for i,player in enumerate(self.agents): 
+            if(self.alive[i]):
+                player.draw() 
+        self.draw_fire()  
+        for i,player in enumerate(self.agents): 
+            if(self.alive[i]):
+                player.drawBubble()   
+        self.draw_time()
+        pygame.display.update()
 
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
