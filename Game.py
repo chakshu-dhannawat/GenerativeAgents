@@ -542,6 +542,7 @@ class Game:
         text_surface = font.render(text,True,WHITE)
         self.win.blit(text_surface,(500,400))
         time.sleep(5)
+        self.elimination = None
         
       else:
         self.win.blit(self.bg,(0,0))
