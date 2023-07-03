@@ -132,7 +132,10 @@ def getResponseRating(dialogue, response, context, agent1, agent2):
   lines = rating.split('\n')
   ratings = []
   for line in lines:
-      ratings.append(float(line.split(' - ')[1]))
+      try:
+        ratings.append(float(line.split('-')[1].strip()))
+      except:
+        pass
   average_rating = sum(ratings) / len(ratings)
   # log(f"Average Dialogue Rating: {average_rating}")
   return average_rating
@@ -145,6 +148,7 @@ def getDetails():
       else: cover = 'townfolk'
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
+    
 
 details = getDetails()
 
