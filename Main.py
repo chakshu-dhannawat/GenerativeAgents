@@ -37,8 +37,8 @@ class getAgents():
         thread.join()  
     return self.agents 
 
-# agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
-agents = getAgents().get()
+agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
+# agents = getAgents().get()
 
 
 '''
