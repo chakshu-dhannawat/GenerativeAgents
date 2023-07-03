@@ -38,6 +38,7 @@ font2 = pygame.font.SysFont('consolas', 25, True)
 bg = pygame.image.load(Path+'town.png')
 # bg2 = pygame.image.load(Path+'killing.gif')
 # clock = pygame.time.Clock()
+black_bg = pygame.image.load(Path+'blackbg.png')
 
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
 
