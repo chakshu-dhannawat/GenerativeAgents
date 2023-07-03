@@ -64,28 +64,28 @@ nodes = {"Hut 1": "The first hut",
         "Cattle Farm": "A dedicated area where livestock is raised for milk, meat, or other dairy products",
         "Fishing Pond": "A designated spot for fishing activities",
         "Shrine": "A sacred place where townfolks can pay homage, meditate, or seek spiritual solace.",
-        "Well task01": "Drawing water from the well and distributing it to the villagers.",
-        "Well task02": "Ensuring the well is clean and free from any contamination.",
+        "Well task01": "Drawing water from the well.",
+        "Well task02": "Cleaning the well.",
         "Well task03": "Repairing the pulley system or any damages to the well structure.",
         #"Well task04": "Monitoring the water level and quality of the well.",
-        "Cattle Farm task01": "Feeding the animals and ensuring they have enough water.",
-        "Cattle Farm task02": "Cleaning the animal pens and maintaining their hygiene.",
+        "Cattle Farm task01": "Feeding the animals.",
+        "Cattle Farm task02": "Cleaning the animals.",
         "Cattle Farm task03": "Milking the cows and collecting eggs from the chickens.",
-        "Cattle Farm task04": "Repairing or maintaining the fences and structures in the farm.",
+        "Cattle Farm task04": "Repairing the fences.",
         #"Electricity House task01": "Maintaining the electricity generator or power source.",
         #"Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
         #"Electricity House task03": "Ensuring a stable power supply to the village.",
         #"Electricity House task04": "Managing the distribution of electrical resources.",
-        "Shrine task01": "Offering Rituals: Agents can perform regular rituals and offer prayers at the Shrine to seek divine guidance and protection for the village.",
-        "Shrine task02": "Cleaning and Maintenance: Agents can ensure that the Shrine area is clean and well-maintained, including sweeping, removing debris, and maintaining the altar or sacred objects.",
-        "Shrine task03": "Lighting and Incense: Agents can light candles or oil lamps and burn incense at the Shrine, creating a peaceful and spiritual atmosphere.",
-        "Shrine task04": "Gathering Sacred Herbs: Agents can search for and gather specific herbs or flowers near the Shrine that are used for religious rituals or medicinal purposes.",
+        "Shrine task01": "Offering Rituals",
+        "Shrine task02": "Cleaning and Maintenance of the Shrine",
+        "Shrine task03": "Lighting Candles at the Shrine",
+        "Shrine task04": "Gathering Sacred Herbs",
         # "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
         # "Hut 2 task01": "Repairing any damages or leaks in the houses.",
         # "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
         #"Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed.",
-        "Fishing Pond task01": "Setting up and checking fishing nets or traps.",
-        "Fishing Pond task02": "Casting lines and catching fish for the village's food supply.",
+        "Fishing Pond task01": "Setting up fishing nets",
+        "Fishing Pond task02": "Catching fish",
         "Fishing Pond task03": "Cleaning and preparing the caught fish for cooking.",
         "Fishing Pond task04": "Maintaining the fishing equipment and repairing any damages.",
         "Intermediate01":"Inbetween Nodes",
@@ -111,25 +111,25 @@ Agents
 
 MinDialogues = 8
 
-# agentsDetails = [
-#     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},
-#     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
-#     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
-#     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
-#     {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
-#     {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
-#     {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
-# ]
-
 agentsDetails = [
-    {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
-    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka is a perceptive and open-minded townfolk. While Yuka tends to get easily convinced by other's arguments, their high IQ allows them to analyze information critically and adapt their perspective accordingly."},
-    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is a brilliant and observant townfolk. With exceptional deductive reasoning skills and a sharp intellect, Riku excels in analyzing complex situations, making them an asset in identifying the werewolf."},
-    {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is an analytical townfolk who possesses exceptional problem-solving abilities. With their high IQ, Hina carefully evaluates evidence and applies logical thinking to unravel the mysteries of the village."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is an exceptionally intelligent werewolf with a razor-sharp mind. Their high IQ enables them to devise intricate plans and manipulate others effectively, making it challenging for the townsfolks to identify their true identity."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is a townfolk with an astute and intuitive mind. While not conventionally book-smart, Taichi possesses a remarkable talent for pattern recognition and thinking outside the box. Their unique perspective often leads to unconventional yet effective solutions, contributing valuable insights to the discussions and investigations within the village. Taichi's ability to approach problems from different angles and uncover hidden connections showcases their high IQ and intellectual prowess."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria is a charismatic and persuasive townfolk. Yuria's high IQ, combined with excellent convincing skills, allows them to sway others with well-thought-out arguments and logical reasoning."}
+    {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},
+    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
+    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
+    {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
+    # {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
+    # {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
+    # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
 ]
+
+# agentsDetails = [
+#     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
+#     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka is a perceptive and open-minded townfolk. While Yuka tends to get easily convinced by other's arguments, their high IQ allows them to analyze information critically and adapt their perspective accordingly."},
+#     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is a brilliant and observant townfolk. With exceptional deductive reasoning skills and a sharp intellect, Riku excels in analyzing complex situations, making them an asset in identifying the werewolf."},
+#     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is an analytical townfolk who possesses exceptional problem-solving abilities. With their high IQ, Hina carefully evaluates evidence and applies logical thinking to unravel the mysteries of the village."},
+#     {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is an exceptionally intelligent werewolf with a razor-sharp mind. Their high IQ enables them to devise intricate plans and manipulate others effectively, making it challenging for the townsfolks to identify their true identity."},
+#     {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is a townfolk with an astute and intuitive mind. While not conventionally book-smart, Taichi possesses a remarkable talent for pattern recognition and thinking outside the box. Their unique perspective often leads to unconventional yet effective solutions, contributing valuable insights to the discussions and investigations within the village. Taichi's ability to approach problems from different angles and uncover hidden connections showcases their high IQ and intellectual prowess."},
+#     {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria is a charismatic and persuasive townfolk. Yuria's high IQ, combined with excellent convincing skills, allows them to sway others with well-thought-out arguments and logical reasoning."}
+# ]
 
 
 '''

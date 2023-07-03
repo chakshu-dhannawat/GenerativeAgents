@@ -36,6 +36,7 @@ font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
 bg = pygame.image.load(Path+'town.png')
+bg2 = pygame.image.load(Path+'blackbg.png')
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
@@ -166,7 +167,7 @@ class Game:
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
     self.contexts = {}
-    
+    self.elimination = None
     self.reset()
 
   def getSingleContext(self,name1,name2):
@@ -285,8 +286,8 @@ class Game:
               sr += 1
           context.append(voteContext[:-1])
 
-    votes = [0]*self.n
-    log()
+    # votes = [0]*self.n
+    # log()
     # for i,voteId in enumerate(voters):
     #   names = ""
     #   j = 1
@@ -344,6 +345,7 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+      self.elimination = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
 
@@ -366,7 +368,7 @@ class Game:
       reply = self.agents[curr].groupconv_init(self.kicked,context[curr])
       self.agents[curr].msg = reply 
       self.agents[curr].isSpeaking = True 
-      self.draw_window()
+      # self.draw_window()
       prev = curr
       moderator = GPT()
       names = ""
@@ -401,7 +403,7 @@ class Game:
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 
           self.agents[curr].isSpeaking = True  
-          self.draw_window()
+          # self.draw_window()
           prev = curr
           history = history + '\n'
           for i in range(self.n):
@@ -411,9 +413,9 @@ class Game:
       if(rating_n==0): self.convRating = 0
       else: self.convRating = rating/rating_n 
       log(f"\nConversation Rating - {self.convRating}")
-      log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
-      log(f"Response Relevance - {calculate_response_relevance(history)}")
-      log(f"Agreement Metric - {calculate_agreement_metric(history)}")
+      # log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
+      # log(f"Response Relevance - {calculate_response_relevance(history)}")
+      # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       return history
   
 
@@ -431,7 +433,7 @@ class Game:
   def afternoon(self):
     self.generatePlanDay()
     while True:
-      if(calendar.dt.hour in [11,12]): break
+      if(calendar.dt.hour in [1,13]): break
       if(calendar.dt.minute==0):
         now = calendar.time
         threads = []
@@ -443,23 +445,20 @@ class Game:
         for thread in threads:
             thread.join()
 
-        for i in range(self.n):
-            if(not self.alive[i]): continue
-            self.agents[i].nextLocation(now)
+        self.observe(now)
 
-
-
-        for i in range(self.n):
-            if(not self.alive[i]): continue
-            for j in range(self.n):
-              if(i==j or not self.alive[j]): continue
-              if(self.agents[i].dest == self.agents[j].dest):
-                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} at {calendar.time} - {self.agents[j].plan[now]}")
-        # for i in range(self.n):
-        #   if(self.alive[i]):
-        #      self.agents[i].nextLocation()
-        calendar.increment40()
+        calendar.incrementMins(20)
       time.sleep(0.3)  
+
+  def observe(self,now=None):
+    if(now is None): now = calendar.time
+    for i in range(self.n):
+        if(not self.alive[i]): continue
+        for j in range(self.n):
+          if(i==j or not self.alive[j]): continue
+          if(self.agents[i].dest == self.agents[j].dest):
+            if(self.agents[j].task is not None):
+              self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")     
 
   def generatePlanDay(self):
     threads = []
@@ -536,16 +535,24 @@ class Game:
       # self.win.blit(text_surface, text_rect)
   
   def draw_window(self) : 
-      self.win.blit(self.bg,(0,0))
-      for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
-              player.draw() 
-      self.draw_fire()  
-      for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
-              player.drawBubble()   
-      self.draw_time()
-      pygame.display.update()
+      if(self.elimination):
+        self.win.blit(self.bg2,(0,0))
+        text = self.elimination + " has been lynched"
+        text_surface = font.render(text,True,WHITE)
+        self.win.blit(text_surface,(500,400))
+        time.sleep(5)
+        
+      else:
+        self.win.blit(self.bg,(0,0))
+        for i,player in enumerate(self.agents): 
+            if(self.alive[i]):
+                player.draw() 
+        self.draw_fire()  
+        for i,player in enumerate(self.agents): 
+            if(self.alive[i]):
+                player.drawBubble()   
+        self.draw_time()
+        pygame.display.update()
 
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
