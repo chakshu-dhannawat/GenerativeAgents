@@ -169,6 +169,7 @@ class Game:
     self.InitialPositions = InitialPositions
     self.contexts = {}
     self.elimination = None
+    self.night_elimination = None
     self.reset()
 
   def getSingleContext(self,name1,name2):
@@ -253,6 +254,7 @@ class Game:
     kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
     self.kicked = self.names[kick]
+    self.night_elimination = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
 
@@ -539,11 +541,18 @@ class Game:
         self.win.blit(self.bg2,(0,0))
         text = self.elimination + " has been lynched"
         text_surface = font.render(text,True,WHITE)
-        self.win.blit(text_surface,(500,400))
+        self.win.blit(text_surface,(400,400))
         pygame.display.update()
         time.sleep(5)
         self.elimination = None
-        
+      elif(self.night_elimination):
+          self.win.blit(self.bg2,(0,0))
+          text = self.night_elimination + " has been killed by the warewolves"
+          text_surface = font.render(text,True,WHITE)
+          self.win.blit(text_surface,(400,400))
+          pygame.display.update()
+          time.sleep(5)
+          self.night_elimination = None
       else:
         self.win.blit(self.bg,(0,0))
         for i,player in enumerate(self.agents): 
