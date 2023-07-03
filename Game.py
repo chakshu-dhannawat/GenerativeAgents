@@ -287,24 +287,24 @@ class Game:
 
     votes = [0]*self.n
     log()
-    for i,voteId in enumerate(voters):
-      names = ""
-      j = 1
-      for id in voters:
-        if(id==voteId): continue
-        names = names + f"{j}) {self.names[id]}\n"
-        j += 1
-      names = names[:-1]
-      voteName = self.agents[voteId].brain.query(
-         QUERY_DAY_BEFORE.format(self.agents[voteId].name,context[voteId]
-                                 ,self.agents[voteId].name,names))
-      try:
-        vote = self.names.index(voteName)
-      except:
-        voteName = self.findName(voteName)
-        vote = self.names.index(voteName)
-      log(f"{self.agents[voteId].name} voted to kick out {voteName}")
-      votes[vote] += 1
+    # for i,voteId in enumerate(voters):
+    #   names = ""
+    #   j = 1
+    #   for id in voters:
+    #     if(id==voteId): continue
+    #     names = names + f"{j}) {self.names[id]}\n"
+    #     j += 1
+    #   names = names[:-1]
+    #   voteName = self.agents[voteId].brain.query(
+    #      QUERY_DAY_BEFORE.format(self.agents[voteId].name,context[voteId]
+    #                              ,self.agents[voteId].name,names))
+    #   try:
+    #     vote = self.names.index(voteName)
+    #   except:
+    #     voteName = self.findName(voteName)
+    #     vote = self.names.index(voteName)
+    #   log(f"{self.agents[voteId].name} voted to kick out {voteName}")
+    #   votes[vote] += 1
 
     conversation = self.groupConversation(context,voters)
 
