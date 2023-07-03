@@ -285,8 +285,8 @@ class Game:
               sr += 1
           context.append(voteContext[:-1])
 
-    votes = [0]*self.n
-    log()
+    # votes = [0]*self.n
+    # log()
     # for i,voteId in enumerate(voters):
     #   names = ""
     #   j = 1
@@ -411,9 +411,9 @@ class Game:
       if(rating_n==0): self.convRating = 0
       else: self.convRating = rating/rating_n 
       log(f"\nConversation Rating - {self.convRating}")
-      log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
-      log(f"Response Relevance - {calculate_response_relevance(history)}")
-      log(f"Agreement Metric - {calculate_agreement_metric(history)}")
+      # log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
+      # log(f"Response Relevance - {calculate_response_relevance(history)}")
+      # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       return history
   
 
@@ -431,7 +431,7 @@ class Game:
   def afternoon(self):
     self.generatePlanDay()
     while True:
-      if(calendar.dt.hour in [11,12]): break
+      if(calendar.dt.hour in [1,13]): break
       if(calendar.dt.minute==0):
         now = calendar.time
         threads = []
@@ -443,23 +443,20 @@ class Game:
         for thread in threads:
             thread.join()
 
-        for i in range(self.n):
-            if(not self.alive[i]): continue
-            self.agents[i].nextLocation(now)
+        self.observe(now)
 
-
-
-        for i in range(self.n):
-            if(not self.alive[i]): continue
-            for j in range(self.n):
-              if(i==j or not self.alive[j]): continue
-              if(self.agents[i].dest == self.agents[j].dest):
-                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} at {calendar.time} - {self.agents[j].plan[now]}")
-        # for i in range(self.n):
-        #   if(self.alive[i]):
-        #      self.agents[i].nextLocation()
-        calendar.increment40()
+        calendar.incrementMins(20)
       time.sleep(0.3)  
+
+  def observe(self,now=None):
+    if(now is None): now = calendar.time
+    for i in range(self.n):
+        if(not self.alive[i]): continue
+        for j in range(self.n):
+          if(i==j or not self.alive[j]): continue
+          if(self.agents[i].dest == self.agents[j].dest):
+            if(self.agents[j].task is not None):
+              self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")     
 
   def generatePlanDay(self):
     threads = []

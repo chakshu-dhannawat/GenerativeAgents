@@ -57,10 +57,10 @@ def getHubs():
 
 def getTasks(hub):
     tasks = ""
-    tasksList = [node[0] for node in town.graph[hub] if "task" in node[0]]
+    tasksList = [node for node in nodes if "task" in node and hub in node]
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
-    return tasks
+    return tasks,tasksList
 
 def getPeople():
     people = ""
@@ -124,13 +124,13 @@ def getRetrievedMemories(stream):
 def getResponseRating(dialogue, response, context, agent1, agent2):
   gpt = GPT()
   rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response))
-  log(f"Dialogue Rating:\n{rating}")
+  # log(f"Dialogue Rating:\n{rating}")
   lines = rating.split('\n')
   ratings = []
   for line in lines:
       ratings.append(float(line.split(' - ')[1]))
   average_rating = sum(ratings) / len(ratings)
-  log(f"Average Dialogue Rating: {average_rating}")
+  # log(f"Average Dialogue Rating: {average_rating}")
   return average_rating
 
 def getDetails():

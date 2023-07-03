@@ -146,10 +146,10 @@ Context of Remaining Players in {}'s Memory -
 Here is a snippet from the dialogue history:
 {}
 
-Player {}, now it's your opportunity to contribute. Share your insights, counterarguments, or suspicions regarding the ongoing investigation.
+Now it's {}'s opportunity to speak, and to change the conversation in their favour. Share your insights or counterarguments or suspicions regarding the ongoing investigation.
 
-Give exactly one dialogue from {}.
-The dialogue should be on point, instead of saying you agree with someone, say what you want to add to the conversation.
+Suggest exactly one dialogue from {}.
+The dialogue should be on point, instead of saying you agree with someone, say something new and specific to add to the conversation.
 The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
@@ -190,6 +190,10 @@ QUERY_ACTION = ("You are {}. {}. You are planning to: {}. You are currently in "
 # To convert a sentence to past tense
 QUERY_PAST_TENSE = ("Convert this to past tense in maximum 25 words with the "
 "name {} (for example - 'drink coffee' becomes '{} drank coffee') -\n")
+
+# To convert a sentence to past tense
+# QUERY_Observe = ("Convert this to an observation in maximum 25 words with the "
+# "name {} (for example - ' water' becomes '{} saw {} drawing water at {}') -\n")
 
 # High-Level Questions for Reflections
 QUERY_REFLECT_QUESTIONS = """Given Memories -

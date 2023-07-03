@@ -43,8 +43,8 @@ class Calendar:
     self.dt += timedelta(seconds=seconds)
     self.getString()
 
-  def increment40(self):
-    self.dt += timedelta(minutes=40)
+  def incrementMins(self, mins=40):
+    self.dt += timedelta(minutes=mins)
     self.getString()
 
 calendar = Calendar()

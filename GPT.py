@@ -6,12 +6,16 @@ import pymongo
 from pymongo import MongoClient
 import re
 import random
+from threading import Lock
+
+lock = Lock()
 
 def addUsage(tokens):
-  f = open('usage.json')
-  usage = json.load(f) + tokens
-  with open('usage.json', 'w') as f:
-    json.dump(usage, f)
+  with lock:
+    f = open('usage.json')
+    usage = json.load(f) + tokens
+    with open('usage.json', 'w') as f:
+      json.dump(usage, f)
 
 # with open('usage.json', 'w') as f:
 #     json.dump(0, f)
