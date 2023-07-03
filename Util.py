@@ -3,11 +3,15 @@ import re
 from Graph import Graph,town
 from Params import *
 from Queries import QUERY_EVALUATION_METRICS
+from threading import Lock
+
+lock = Lock()
 
 def log(text=''):
     print(text)
-    with open("logs.txt", "a") as file:
-        file.write(text + "\n")
+    with lock:
+      with open("logs.txt", "a") as file:
+          file.write(text + "\n")
 
 def extractImportance(output):
     numbers = re.findall(r'\d+', output)

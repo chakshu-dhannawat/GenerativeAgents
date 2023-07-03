@@ -368,7 +368,7 @@ class Game:
       reply = self.agents[curr].groupconv_init(self.kicked,context[curr])
       self.agents[curr].msg = reply 
       self.agents[curr].isSpeaking = True 
-      self.draw_window()
+      # self.draw_window()
       prev = curr
       moderator = GPT()
       names = ""
@@ -403,7 +403,7 @@ class Game:
           self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = reply 
           self.agents[curr].isSpeaking = True  
-          self.draw_window()
+          # self.draw_window()
           prev = curr
           history = history + '\n'
           for i in range(self.n):
