@@ -39,8 +39,8 @@ bg = pygame.image.load(Path+'town.png')
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
 
-# music = pygame.mixer.music.load(Path+'music.mp3')
-# pygame.mixer.music.play(-1)
+music = pygame.mixer.music.load(Path+'music.mp3')
+pygame.mixer.music.play(-1)
 
 '''
 ====================

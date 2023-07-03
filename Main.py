@@ -67,7 +67,7 @@ def game_logic():
 
     if(day==0): game.nightVote()
     if(day==1): game.dayVote()
-    if(day==2): game.afternoon()
+    #if(day==2): game.afternoon()
     
     day = (day+1)%3
 
