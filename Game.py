@@ -155,7 +155,8 @@ class Game:
 
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
-    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)   
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
+    self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
     for i in range(100): 
       self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE)  
@@ -168,31 +169,32 @@ class Game:
     self.InitialPositions = InitialPositions
     self.contexts = {}
     self.elimination = None
+    self.night_elimination = None
     self.reset()
 
   def getSingleContext(self,name1,name2):
       self.contexts[name1][name2] = self.agents[self.ids[name1]].vote_context(name2)
      
-  # def getContext(self,name,night=False):
-  #   self.contexts[name] = {}
-  #   threads = []
-  #   for i in range(self.n):
-  #       if(not self.alive[i]): continue
-  #       if(name==self.names[i]): continue
-  #       if(night and self.warewolf[i]): continue
-  #       thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i]))
-  #       thread.start()
-  #       threads.append(thread)
-  #   for thread in threads:
-  #       thread.join()
-
   def getContext(self,name,night=False):
     self.contexts[name] = {}
+    threads = []
     for i in range(self.n):
         if(not self.alive[i]): continue
         if(name==self.names[i]): continue
         if(night and self.warewolf[i]): continue
-        self.getSingleContext(name, self.names[i])
+        thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i],))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+
+  # def getContext(self,name,night=False):
+  #   self.contexts[name] = {}
+  #   for i in range(self.n):
+  #       if(not self.alive[i]): continue
+  #       if(name==self.names[i]): continue
+  #       if(night and self.warewolf[i]): continue
+  #       self.getSingleContext(name, self.names[i])
 
 
   # def getContext(self, name, night=False):
@@ -243,7 +245,7 @@ class Game:
     for i in range(self.n):
         if(not self.warewolf[i]): continue
         if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names))
+        thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names,))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -252,6 +254,7 @@ class Game:
     kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
     self.kicked = self.names[kick]
+    self.night_elimination = self.names[kick]
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
 
@@ -270,7 +273,7 @@ class Game:
     threads = []
     for i in range(self.n):
         if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.getContext, args=(self.names[i],False))
+        thread = threading.Thread(target=self.getContext, args=(self.names[i],False,))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -504,8 +507,7 @@ class Game:
     log("\nEnd of Conversation")
 
   # def startNight(self):
-     
-
+    
 
   def reset(self) : 
       for agent in self.agents:
@@ -539,9 +541,18 @@ class Game:
         self.win.blit(self.bg2,(0,0))
         text = self.elimination + " has been lynched"
         text_surface = font.render(text,True,WHITE)
-        self.win.blit(text_surface,(500,400))
+        self.win.blit(text_surface,(400,400))
+        pygame.display.update()
         time.sleep(5)
-        
+        self.elimination = None
+      elif(self.night_elimination):
+          self.win.blit(self.bg2,(0,0))
+          text = self.night_elimination + " has been killed by the warewolves"
+          text_surface = font.render(text,True,WHITE)
+          self.win.blit(text_surface,(400,400))
+          pygame.display.update()
+          time.sleep(5)
+          self.night_elimination = None
       else:
         self.win.blit(self.bg,(0,0))
         for i,player in enumerate(self.agents): 

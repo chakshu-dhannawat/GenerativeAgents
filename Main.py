@@ -19,7 +19,26 @@ log('\n=======Initializing Agents=======\n')
 
 graphics = [{'x':InitialPositions[i][0],'y':InitialPositions[i][1],'width':64, 'height':64, 'folder_name': f'character_0{i+1}', 'initialLocation': "Tavern"} for i in range(len(agentsDetails))] 
 
+class getAgents():
+   
+  def __init__(self):
+    self.agents = [None]*len(agentsDetails)
+
+  def makeAgent(self,i):
+    self.agents[i] = Agent(agentsDetails[i]['name'],agentsDetails[i]['description'],graphics[i])
+
+  def get(self):
+    threads = []
+    for i in range(len(agentsDetails)):
+        thread = threading.Thread(target=self.makeAgent, args=(i,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()  
+    return self.agents 
+
 agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
+# agents = getAgents().get()
 
 
 '''
@@ -67,7 +86,7 @@ def game_logic():
 
     if(day==0): game.nightVote()
     if(day==1): game.dayVote()
-    if(day==2): game.afternoon()
+    # if(day==2): game.afternoon()
     
     day = (day+1)%3
 
