@@ -155,7 +155,8 @@ class Game:
 
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
-    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)   
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
+    self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
     for i in range(100): 
       self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE)  

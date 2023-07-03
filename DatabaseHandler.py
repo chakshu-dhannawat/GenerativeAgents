@@ -2,6 +2,7 @@ from pymongo import MongoClient
 from Memories import *
 from Params import agentsDetails
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
