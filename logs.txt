@@ -3843,3 +3843,12 @@ Riku Mori chose to do the task : Well task03 at 10:02 AM
 Yumi Okada chose to go to Tavern at 10:11 AM
 
 No Tasks at Tavern
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 14:25:27
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+

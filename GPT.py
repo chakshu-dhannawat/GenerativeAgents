@@ -17,10 +17,6 @@ def addUsage(tokens):
     with open('usage.json', 'w') as f:
       json.dump(usage, f)
 
-# with open('usage.json', 'w') as f:
-#     json.dump(0, f)
-
-os.environ['OPENAI_API_KEY'] = 'ee5ee43275804e3db6a1c9f98a532a5d'
 
 openai.api_type = "azure"
 

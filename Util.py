@@ -145,6 +145,7 @@ def getDetails():
       else: cover = 'townfolk'
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
+    
 
 details = getDetails()
 
