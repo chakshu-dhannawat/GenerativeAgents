@@ -4243,3 +4243,452 @@ Taichi Kato has been killed by the Warewolves
 
 
 === WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:06:57
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act friendly and gain the trust of townfolks.
+2) Blame other players and manipulate the discussion to avoid suspicion.
+3) Vote with the majority to appear innocent, but avoid being the deciding vote.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:07:43
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a helpful townfolk, frequently suggesting who to vote out and leading discussions.
+2) Bluff and accuse other players of being warewolves, while subtly defending myself and other warewolves.
+3) Keep track of who has been voted out and use that information to determine which townfolks are most suspicious and should be targeted next.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:12:54
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act suspicious during the day, but try to make connections with townfolks privately at night.
+2) Blame other players for suspicious behavior and try to get them kicked out.
+3) Pretend to be a townfolk and vote with the majority to avoid suspicion.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:14:02
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a townfolk during the day by participating in discussions and voting to build trust.
+2) At night, convince other warewolves to vote for the most suspicious-looking townfolk to kick out.
+3) Use lies and misdirection to sow confusion among the townfolks and prevent them from identifying me as a warewolf.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:14:34
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a cooperative townfolk during the day, gain trust, and influence the vote to kick out another townfolk.
+2) At night, work with other warewolves to strategically kick out townfolks to gain majority.
+3) Plant seeds of doubt and misinformation during discussions to confuse and mislead townfolks.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:20:55
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act friendly and cooperative during the day discussions, gain the trust of townfolks.
+2) During night, convince other warewolves to choose the most suspicious townfolk.
+3) Blame other players and sow seeds of doubt to shift suspicion away from myself.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:21:52
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a townfolk in discussions and accuse other players of being warewolves to divert suspicion from myself.
+2) Manipulate the voting by convincing townfolks to kick out other townfolks who may be a threat to the warewolves.
+3) Use my werewolf abilities to target townfolks strategically during the night to weaken their chances of identifying me as a warewolf.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:22:54
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a townfolk during the day and create chaos by accusing other townfolks.
+2) At night, convince Mana to vote with me to kick out a townfolk.
+3) Use my lying skills to deflect suspicion and gain the trust of the townfolks.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to everyone's arguments and try to identify any inconsistencies or suspicious behavior.
+2) Form alliances with other townfolks to share information and vote together.
+3) Keep track of who has been kicked out and who is still in the village to narrow down potential suspects.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns and try to identify any suspicious behavior or alliances among townfolks.
+2) Keep track of who has been voted out and their suspected affiliations to help narrow down potential warewolves.
+3) Use deductive reasoning and information gathered to make informed accusations and arguments during discussions.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior to identify suspicious individuals.
+2) Form alliances and communicate with other townfolks to share information and suspicions.
+3) Use logical reasoning and deduction to analyze clues and vote strategically to eliminate potential warewolves.
+
+-----------------------
+
+Mana Yoshida's Strategy for Tuesday February 13 -
+1) Act like a townfolk in discussions and try to sway the votes towards kicking out other townfolks.
+2) Bluff and accuse others of being warewolves to create confusion and suspicion among the townfolks.
+3) Coordinate with Yumi Okada, the other warewolf, to make sure our votes align and we have a higher chance of kicking out townfolks.
+
+-----------------------
+
+Taichi Kato's Strategy for Tuesday February 13 -
+1) Observe the voting patterns and behavior of the other townfolks to identify who might be a warewolf.
+2) Keep track of who has been kicked out and who has claimed to be a townfolk to catch any inconsistencies.
+3) Collaborate with other townfolks to share information and eliminate suspicious individuals while staying cautious of potential warewolf manipulation.
+
+-----------------------
+
+Yuria Shimizu's Strategy for Tuesday February 13 -
+1) Observe the voting pattern and behavior of the villagers during discussions to identify suspicious individuals.
+2) Form alliances with other townfolks and share information to increase chances of identifying warewolves.
+3) Use convincing skills to sway the opinions of other villagers and vote out suspected warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:26:54
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act helpful and trustworthy during the day discussions, gain townfolks' trust.
+2) At night, convince Mana to vote with me to kick out a townfolk.
+3) Bluff and accuse innocent townfolks to create chaos and mistrust amongst them.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+Yuka Suzuki: 
+
+1) Observe and analyze the voting patterns to identify suspicious behavior.
+2) Collaborate with other townfolks to share information and make informed decisions.
+3) Use logical reasoning and evidence to persuade others to vote for suspected warewolves.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and analyze the behavior of villagers during the day. Look for inconsistencies or odd behavior that may indicate someone is a werewolf.
+2) Keep track of who has been voted out at night and during the day, and who has accused whom. Use this information to deduce who the werewolves might be.
+3) Form alliances with other townfolks and share information, but be cautious of potential werewolf spies. Use logic and evidence to persuade others during voting.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze the voting patterns to identify suspicious behavior and potential warewolves.
+2) Communicate and collaborate with other townfolks to share information and suspicions.
+3) Use logic and deduction to determine who is most likely to be a warewolf and vote to kick them out during the day.
+
+-----------------------
+
+Mana Yoshida's Strategy for Tuesday February 13 -
+1) Act as a townfolk and try to gain their trust by participating in discussions and voting.
+2) Bluff as a townfolk and manipulate the discussion to kick out other townfolks to create chaos.
+3) Use information from the other warewolf to identify and kick out townfolks to create a situation where only warewolves are left.
+
+-----------------------
+
+Taichi Kato's Strategy for Tuesday February 13 -
+1) Observe behaviors of players during discussions and voting to identify suspicious activities.
+2) Form alliances with trusted players to discuss and share information, but also remain open to new information.
+3) Use logical reasoning and deduction to eliminate suspects and vote strategically to increase the chances of catching a warewolf.
+
+-----------------------
+
+Yuria Shimizu's Strategy for Tuesday February 13 -
+1) Observe and analyze behavior during discussions and voting to identify suspicious individuals.
+2) Form alliances with trusted townfolks to gather information and vote together.
+3) Use convincing skills to sway opinions and rally townfolks to vote out identified warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 17:28:39
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act like a townfolk and be friendly with everyone. 
+2) Blame other players and spread rumors to create confusion and suspicion.
+3) Vote strategically to kick out the townfolks who are most likely to identify me as a warewolf.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Observe and listen to conversations carefully to identify any suspicious behavior or inconsistencies in statements.
+2) Form alliances with other townfolks and share information to collectively identify and vote out suspected warewolves.
+3) Keep a record of previous voting patterns and use it to identify any patterns or trends that may indicate the presence of warewolves.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior during discussions to identify suspicious players.
+2) Keep track of who has been voted out and who is still in the game to narrow down the potential warewolves.
+3) Try to build alliances with other townfolks to increase the chances of successfully identifying and kicking out the warewolves.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze behavior patterns of individuals during discussions and voting to identify potential warewolves.
+2) Form alliances and communicate privately with trusted townfolks to share information and suspicions.
+3) Use logical reasoning and evidence to convince others to vote for suspected warewolves during the day.
+
+-----------------------
+
+Mana Yoshida's Strategy for Tuesday February 13 -
+1) Act as a trusted townfolk, gain their trust by being helpful and participating in discussions.
+2) Blame and vote against players who seem suspicious, but not too obviously. 
+3) Use the cover of being a townfolk to sway the discussion towards kicking out other townfolks instead of warewolves.
+
+-----------------------
+
+Taichi Kato's Strategy for Tuesday February 13 -
+1) Observe the discussions and voting patterns to identify suspicious behavior and voting alliances.
+2) Gather information from previous nights' voting results and any clues provided by the game moderator.
+3) Work with other townfolks to share information and narrow down the suspects, while also being cautious of potential warewolf deception.
+
+-----------------------
+
+Yuria Shimizu's Strategy for Tuesday February 13 -
+1) Observe and analyze behaviors and voting patterns of other players to identify potential werewolves.
+2) Build alliances with other townfolks to gather information and increase voting power.
+3) Use convincing skills to sway the opinions of other players and eliminate suspected werewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yumi Okada: I agree with Riku, but we should also consider that the townfolks could be trying to deceive us.
+Hina Sato: We should focus on the actions and behavior of those who were quick to vote for Yuka, it could be a werewolf tactic.
+Mana Yoshida: I noticed that Yumi and Yuka were often seen together. Could Yumi be trying to protect Yuka?
+Taichi Kato: I noticed that Yuria and Mana were both absent during the last vote. Could they be collaborating with the werewolves?
+Yuria Shimizu: I noticed that Taichi and Hina voted differently in the last round. Could one of them be a werewolf?
+Riku Mori: I noticed that Yumi changed her vote to Yuka at the last minute. Could she be trying to shift suspicion onto someone else?
+Yumi Okada: I suspect Hina Sato. She has been too quiet and hasn't contributed much to the discussion.
+Hina Sato: I noticed that Riku was quick to accuse Yumi, but hasn't contributed much else. Could Riku be trying to deflect suspicion from themselves?
+
+End of Conversation
+
+Conversation Rating - 4.285714285714286
+
+Yumi Okada voted to kick out Hina Sato
+Riku Mori voted to kick out Hina Sato
+Hina Sato voted to kick out Yumi Okada
+Mana Yoshida voted to kick out Yumi Okada
+Taichi Kato voted to kick out Yumi Okada
+Yuria Shimizu voted to kick out Hina Sato
+
+Nobody was lynched
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Riku Mori has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Hina Sato: I suspect Yuria Shimizu. She has been quick to accuse others and deflect suspicion from herself.
+Yumi Okada: I suspect Mana Yoshida. She's been quick to cast suspicion on others and seems to be deflecting attention from herself.
+Taichi Kato: I agree with Hina's suspicion of Yuria and also suspect Yumi for her association with Yuka.
+Mana Yoshida: Yumi's accusations towards Hina seem misplaced. Let's focus on finding the werewolf instead of accusing each other.
+Yuria Shimizu: Hina's accusation towards me is a deflection tactic. Let's focus on identifying the werewolf instead of accusing each other.
+Hina Sato: Yumi's sudden change of vote in the last round was suspicious. She could be trying to shift suspicion onto someone else.
+Taichi Kato: Yumi's association with Yuka is too coincidental. We must consider her a prime suspect.
+Mana Yoshida: Yumi's sudden change of vote and association with Yuka are concerning. We must consider her a prime suspect.
+
+End of Conversation
+
+Conversation Rating - 4.25
+
+Yumi Okada voted to kick out Mana Yoshida
+Hina Sato voted to kick out Yumi Okada
+Mana Yoshida voted to kick out Yumi Okada
+Taichi Kato voted to kick out Yumi Okada
+Yuria Shimizu voted to kick out Yumi Okada
+
+Yumi Okada has been lynched by the Villagers
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Taichi Kato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yuria Shimizu: We must focus on identifying the werewolf and stop accusing each other. Let's gather more evidence.
+Yuria Shimizu: I noticed that Hina has been deflecting suspicion onto me. Let's focus on finding the werewolf instead.
+Hina Sato: I suspect Mana Yoshida. She's been deflecting attention from herself and trying to protect Yumi.
+Mana Yoshida: Yumi was seen with Yuka often. It's too coincidental. We must focus on her, not me.
+Hina Sato: Yumi's sudden change of vote last round is suspicious. Let's consider her association with Yuka and gather more evidence.
+Yuria Shimizu: Yumi's sudden change of vote could be a tactic to deflect suspicion from herself. Let's gather more evidence before making a decision.
+Hina Sato: Yuria, you've been quick to accuse others. What have you contributed to this investigation besides accusations?
+Mana Yoshida: I agree with Hina and Yuria. Let's gather evidence instead of accusing each other.
+
+End of Conversation
+
+Conversation Rating - 4.354166666666667
+
+Hina Sato voted to kick out Yuria Shimizu
+Mana Yoshida voted to kick out Yumi Okada
+Yuria Shimizu voted to kick out Mana Yoshida
+
+Nobody was lynched
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+
+=== WAREWOLVES WIN ===

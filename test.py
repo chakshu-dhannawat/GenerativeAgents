@@ -1,27 +1,50 @@
-# from gtts import gTTS
-# from Params import *
-# import pygame
-# from pygame.locals import *
-# from Game import *
+import pygame
+import math
 
-# pygame.font.init()
-# pygame.init()
+pygame.init()
 
-# def generate_voiceover_japanese(text):
-#     tts = gTTS(text, lang='ja')
-#     tts.save("voiceover_japanese.mp3")
+# Set up the display
+screen_width = 800
+screen_height = 400
+screen = pygame.display.set_mode((screen_width, screen_height))
+clock = pygame.time.Clock()
 
-#     pygame.mixer.init()
-#     pygame.mixer.music.load("voiceover_japanese.mp3")
-#     pygame.mixer.music.play(-1)
+# Load the character image
+character_image = pygame.image.load("Assets\\character_01\\D1.png")
+character_rect = character_image.get_rect()
 
-# # Example usage
-# text = "Hello, I am the virtual agent."
-# generate_voiceover_japanese(text)
+# Set the initial position and rotation of the character
+character_x = -character_rect.width
+character_y = screen_height // 2 - character_rect.height // 2
+rotation_angle = 0
 
+# Set the animation variables
+speed = 5
+rotation_speed = 5
 
-from GPT import GPT 
+# Game loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
-gpt = GPT()
+    # Update character position and rotation
+    character_x += speed
+    rotation_angle += rotation_speed
+    if character_x > screen_width:
+        character_x = -character_rect.width
 
-print(gpt.query("Capital of Japan is "))
+    # Clear the screen
+    screen.fill((255, 255, 255))
+
+    # Rotate the character image
+    rotated_image = pygame.transform.rotate(character_image, rotation_angle)
+
+    # Draw the rotated character image
+    screen.blit(rotated_image, (character_x, character_y))
+
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()
