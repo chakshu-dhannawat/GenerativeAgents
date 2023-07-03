@@ -1,7 +1,5 @@
-from Util import getTasks
-from Graph import town 
-import threading
+from GPT import GPT
 
-a =  [1.3638909662870797, 0.6425087171767215, 1.4333980471645762, 0.8045703544838898, 1.1889319244453485, 1.0241693205620537, 1.5049854300170376, 1.3923080721449148, 1.4796382885585897]
+gpt = GPT()
 
-print(sum(a)/len(a))
+print(gpt.query("What is the capital of Japan"))

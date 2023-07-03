@@ -4167,3 +4167,411 @@ Yumi Okada has been killed by the Warewolves
 
 Currently it is Day, the Villagers will lynch someone...
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:08:06
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:09:06
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Blame a townfolk every day and vote to kick them out to cause chaos and confusion.
+2) Form an alliance with Mana Yoshida and vote together to kick out townfolks.
+3) Act helpful and trustworthy during discussions to gain the trust of townfolks and avoid suspicion.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+Yuka Suzuki: 
+
+1) Observe voting patterns and arguments made during discussions to identify potential warewolves. 
+2) Collaborate with other townfolks to gather information and make informed decisions during voting. 
+3) Keep track of previous voting outcomes and remember who has been kicked out to avoid repeating mistakes.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe behavior during discussions and vote patterns to identify suspicious players.
+2) Keep track of who has been voted out and who is still in the game to narrow down potential werewolves.
+3) Use logic and deduction to eliminate players one by one until all werewolves are identified and kicked out.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze behavior: Watch for any suspicious behavior or inconsistencies in actions and statements.
+2) Collaborate with others: Share observations and theories with other townfolks and work together to identify and vote out potential warewolves.
+3) Use logic and deduction: Evaluate voting patterns and use process of elimination to narrow down potential warewolves.
+
+-----------------------
+
+Mana Yoshida's Strategy for Tuesday February 13 -
+1) Act like a townfolk, participate in discussions and support the opinions of other townfolks.
+2) Blame other players, especially townfolks, for being warewolves to create confusion and shift suspicion.
+3) During the night, vote with Yumi Okada to kick out the most suspicious townfolk and create distrust among the remaining townfolks.
+
+-----------------------
+
+Taichi Kato's Strategy for Tuesday February 13 -
+1) Observe patterns and behavior of players to identify suspicious activity.
+2) Coordinate with other townfolks and share information to narrow down suspects.
+3) Use logic and deduction to make informed voting decisions and eliminate potential warewolves.
+
+-----------------------
+
+Yuria Shimizu's Strategy for Tuesday February 13 -
+1) Observe and analyze the behavior of players during the day and night to identify suspicious activities.
+2) Build alliances with other townfolks and share information to make informed decisions during voting.
+3) Use convincing skills to sway the opinions of other players and gather support for kicking out suspected warewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yumi Okada has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:11:39
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:12:27
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:12:48
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:13:49
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:14:29
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:16:18
+
+=======Initializing Agents=======
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act like a concerned townfolk and try to blend in, while secretly encouraging suspicions on other townfolks.
+2) Build trust with one or two townfolks by pretending to share information and help them identify other warewolves.
+3) When it's time to vote, lie and manipulate to convince the townfolks to kick out someone who is not a warewolf, while protecting myself and other warewolf.
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to the arguments of others, especially those who seem confident in their suspicions.
+2) Make note of any suspicious behavior or inconsistencies in alibis.
+3) Try to form alliances with other townfolks to coordinate suspicions and votes.
+
+-----------------------
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and analyze the voting patterns of the townfolks and the warewolves to identify suspicious behavior.
+2) Build alliances with other townfolks and share information to increase chances of identifying warewolves.
+3) Keep track of who has been voted out and their role to make better deductions about the remaining players.
+
+-----------------------
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and identify suspicious behavior.
+2) Form alliances with trusted townfolks to share information and voting decisions.
+3) Keep track of who has been voted out and analyze if they were a townfolk or warewolf to make better decisions.
+
+-----------------------
+
+Mana Yoshida's Strategy for Tuesday February 13 -
+1) Act like a townfolk during discussions to avoid suspicion.
+2) Blame other players and push for their elimination.
+3) Coordinate with Yumi Okada to eliminate townfolks and gain majority.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+
+=== WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:41:06
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:41:43
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:42:41
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:43:44
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:44:27
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:45:02
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:45:45
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:48:16
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:50:22
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:52:29
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:54:53
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:55:19
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:56:02
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:57:04
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:58:44
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 15:59:46
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 16:05:03
+
+=======Initializing Agents=======
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 16:05:46
+
+=======Initializing Agents=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 16:11:43
+
+=======Initializing Agents=======
+
