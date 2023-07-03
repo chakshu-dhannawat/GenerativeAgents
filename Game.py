@@ -185,26 +185,26 @@ class Game:
   def getSingleContext(self,name1,name2):
       self.contexts[name1][name2] = self.agents[self.ids[name1]].vote_context(name2)
      
-  # def getContext(self,name,night=False):
-  #   self.contexts[name] = {}
-  #   threads = []
-  #   for i in range(self.n):
-  #       if(not self.alive[i]): continue
-  #       if(name==self.names[i]): continue
-  #       if(night and self.warewolf[i]): continue
-  #       thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i]))
-  #       thread.start()
-  #       threads.append(thread)
-  #   for thread in threads:
-  #       thread.join()
-
   def getContext(self,name,night=False):
     self.contexts[name] = {}
+    threads = []
     for i in range(self.n):
         if(not self.alive[i]): continue
         if(name==self.names[i]): continue
         if(night and self.warewolf[i]): continue
-        self.getSingleContext(name, self.names[i])
+        thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i],))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+
+  # def getContext(self,name,night=False):
+  #   self.contexts[name] = {}
+  #   for i in range(self.n):
+  #       if(not self.alive[i]): continue
+  #       if(name==self.names[i]): continue
+  #       if(night and self.warewolf[i]): continue
+  #       self.getSingleContext(name, self.names[i])
 
 
   # def getContext(self, name, night=False):
@@ -255,7 +255,7 @@ class Game:
     for i in range(self.n):
         if(not self.warewolf[i]): continue
         if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names))
+        thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names,))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -284,7 +284,7 @@ class Game:
     threads = []
     for i in range(self.n):
         if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.getContext, args=(self.names[i],False))
+        thread = threading.Thread(target=self.getContext, args=(self.names[i],False,))
         thread.start()
         threads.append(thread)
     for thread in threads:
@@ -519,8 +519,7 @@ class Game:
     log("\nEnd of Conversation")
 
   # def startNight(self):
-     
-
+    
 
   def reset(self) : 
       for agent in self.agents:
