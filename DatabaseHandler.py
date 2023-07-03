@@ -1,9 +1,11 @@
 from pymongo import MongoClient
 from Memories import *
 from Params import agentsDetails
+from dotenv import load_dotenv
 
+load_dotenv()
 
-client = MongoClient("mongodb+srv://teamA:mitulacutie@cluster0.43f1bfz.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient(os.getenv('MongoDB_ID'))
 
 
 class DBHandler:
