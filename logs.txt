@@ -3928,3 +3928,54 @@ Hina Sato: We should also consider those who consistently vote for innocent peop
 Yuka Suzuki: We should also consider who's been consistently absent from voting. They might be trying to avoid suspicion.
 Mana Yoshida: I noticed Yumi Okada's absence in the past votes. Let's consider those who didn't vote.
 Taichi Kato: I noticed Yuria Shimizu voted against Riku, and now she's trying to redirect attention. Suspicious much?
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/03/2023, 14:36:46
+
+=======Initializing Agents=======
+
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe behavior patterns and voting patterns of players to identify suspicious activity.
+2) Form alliances with other townfolks to share information and increase chances of identifying warewolves.
+3) Use logic and deductive reasoning to narrow down the list of potential warewolves and vote accordingly.
+Taichi Kato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and behavior to identify suspicious players.
+2) Collaborate with other townfolks to share information and vote together.
+3) Take calculated risks to eliminate potential warewolves, but avoid blindly accusing innocent players.
+Yuria Shimizu's Strategy for Tuesday February 13 -
+1) Observe and analyze the behavior and actions of other players during the day and night to identify suspicious behavior.
+2) Build alliances with other townfolks to share information and increase chances of identifying warewolves.
+3) Use convincing skills to persuade the group to vote out suspected warewolves based on evidence and analysis.
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe voting patterns and speech during the day to identify suspicious behavior and potential werewolves.
+2) Keep track of who is voted out at night and use deduction to narrow down the list of potential werewolves.
+3) Collaborate with other townfolks to share information and make informed decisions during the day voting process.
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to each person's argument during the day and take note of inconsistencies or suspicious behavior.
+2) Form alliances with other townfolks and share information to make better decisions during voting.
+3) Keep track of who has been voted out and who is still alive to identify any patterns or potential warewolf behavior.
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act like a helpful townfolk by suggesting who to vote out and who might be the werewolf, while subtly steering the conversation away from yourself.
+2) Form an alliance with the other werewolf, Mana Yoshida, and coordinate who to vote out at night to avoid suspicion.
+3) Pay close attention to the voting patterns and accusations of the townfolks, and use that information to manipulate the discussion and sway the votes in favor of kicking out townfolks who are not suspicious of you.
+
+-----------------------
+
+
+=======Initializing Game=======
+

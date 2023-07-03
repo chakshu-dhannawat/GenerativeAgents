@@ -1,7 +1,25 @@
-from Util import getTasks
-from Graph import town 
-import threading
+from Game import *
 
-a =  [1.3638909662870797, 0.6425087171767215, 1.4333980471645762, 0.8045703544838898, 1.1889319244453485, 1.0241693205620537, 1.5049854300170376, 1.3923080721449148, 1.4796382885585897]
+pygame.font.init()
+pygame.init()
+DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
-print(sum(a)/len(a))
+speed = FPS*0.6
+
+
+'''
+====================
+Assests
+====================
+'''
+
+font = pygame.font.SysFont('comicsans', 30, True)
+font2 = pygame.font.SysFont('consolas', 25, True)
+
+bg = pygame.image.load(Path+'town.png')
+bg2 = pygame.image.load(Path+'blackbg.png')
+
+bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
+
+music = pygame.mixer.music.load(Path+'music.mp3')
+pygame.mixer.music.play(-1)
