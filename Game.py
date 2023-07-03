@@ -541,6 +541,7 @@ class Game:
         text = self.elimination + " has been lynched"
         text_surface = font.render(text,True,WHITE)
         self.win.blit(text_surface,(500,400))
+        pygame.display.update()
         time.sleep(5)
         self.elimination = None
         
