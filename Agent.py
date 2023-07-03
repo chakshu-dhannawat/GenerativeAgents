@@ -196,7 +196,7 @@ class Agent():
        log(f"No Tasks at {newLocation}")
        return
     taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False))
-    print(taskSr)
+    # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
     newLocation = tasksList[taskSr-1]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
