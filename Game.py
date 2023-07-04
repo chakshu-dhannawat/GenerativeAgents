@@ -36,6 +36,8 @@ font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
 bg = pygame.image.load(Path+'town.png')
+
+bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # bg2 = pygame.image.load(Path+'killing.gif')
 # clock = pygame.time.Clock()
 black_bg = pygame.image.load(Path+'blackbg.png')
@@ -160,6 +162,7 @@ class Game:
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
     self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
+    self.bg_nodes = pygame.transform.scale(bg_nodes, DEFAULT_IMAGE_SIZE) 
     # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
     for i in range(100): 
@@ -437,6 +440,7 @@ class Game:
   def assembleTavern(self, voters):
     n = len(voters)
     for i in range(n):
+      self.agents[voters[i]].destination_path = []
       self.agents[voters[i]].dest = "Stop"
     angle = 2 * math.pi / n
     for i in range(n):
@@ -563,23 +567,7 @@ class Game:
           self.killId+=1
   
   def draw_window(self) : 
-      # if(self.elimination):
-      #   self.win.blit(self.bg2,(0,0))
-      #   text = self.elimination + " has been lynched"
-      #   text_surface = font.render(text,True,RED)
-      #   self.win.blit(text_surface,(400,400))
-      #   pygame.display.update()
-      #   time.sleep(5)
-      #   self.elimination = None
-      # elif(self.night_elimination):
-      #     self.win.blit(self.bg2,(0,0))
-      #     text = self.night_elimination + " has been killed by the warewolves"
-      #     text_surface = font.render(text,True,RED)
-      #     self.win.blit(text_surface,(400,400))
-      #     pygame.display.flip()
-      #     time.sleep(5)
-      #     self.night_elimination = None
-      # else:
+      self.bg = self.bg_nodes
       self.win.blit(self.bg,(0,0))
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
