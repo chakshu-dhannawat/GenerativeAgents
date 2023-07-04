@@ -18,6 +18,7 @@ import time
 import threading
 from evaluation_metric import *
 from gtts import gTTS
+from translate import Translator
 
 
 pygame.font.init()
@@ -26,13 +27,7 @@ DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
 speed = FPS*0.6
 
-def generate_voiceover_japanese(text):
-    tts = gTTS(text, lang='ja')
-    tts.save("voiceover_japanese.mp3")
-
-    # pygame.mixer.init()
-    music = pygame.mixer.music.load("voiceover_japanese.mp3")
-    pygame.mixer.music.play(1)
+translator = Translator(to_lang='ja')
 
 
 '''
@@ -53,10 +48,10 @@ killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killi
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
-music = pygame.mixer.music.load(Path+'music.mp3')
-pygame.mixer.music.play(-1)
 
-# generate_voiceover_japanese("アジェイは私の愛です")
+# music = pygame.mixer.music.load(Path+'music.mp3')
+# pygame.mixer.music.play(-1)
+
 
 '''
 ====================
@@ -237,6 +232,17 @@ class Game:
   #     for process in processes:
   #         process.join()
 
+  def speak(self,text):
+    voicePath = "Assets\\voice.mp3"
+    translation = translator.translate(text)
+    tts = gTTS(translation, lang='ja')
+    tts.save(voicePath)
+    music = pygame.mixer.music.load(voicePath)
+    pygame.mixer.music.play(1)
+    while pygame.mixer.music.get_busy():
+      time.sleep(0.1)
+    pygame.mixer.music.unload()
+  
   def nightVoteWarewolf(self,i,names):
     self.getContext(self.names[i],True)
     voteContext = ""
@@ -395,7 +401,13 @@ class Game:
       history = ""
       curr = random.choice(voters)
       reply = self.agents[curr].groupconv_init(self.kicked,context[curr])
-      self.agents[curr].msg = reply 
+      try:
+        replyMsg = extract_dialogue(reply)
+      except: 
+        replyMsg = reply
+      thread = threading.Thread(target=self.speak, args=(replyMsg,))
+      thread.start()
+      self.agents[curr].msg = replyMsg 
       self.agents[curr].isSpeaking = True 
       # self.draw_window()
       prev = curr
@@ -428,9 +440,16 @@ class Game:
           if(prev!=curr):
             rating += getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
             rating_n += 1
+          thread.join()
+          try:
+            replyMsg = extract_dialogue(reply)
+          except: 
+            replyMsg = reply
+          thread = threading.Thread(target=self.speak, args=(replyMsg,))
+          thread.start()
           # reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
           self.agents[prev].isSpeaking = False 
-          self.agents[curr].msg = reply 
+          self.agents[curr].msg = replyMsg 
           self.agents[curr].isSpeaking = True  
           # self.draw_window()
           prev = curr
@@ -445,6 +464,7 @@ class Game:
       # log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
       # log(f"Response Relevance - {calculate_response_relevance(history)}")
       # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
+      thread.join()
       return history
   
 
@@ -500,6 +520,8 @@ class Game:
         thread.join()
 
   def checkEnd(self):
+    while(self.killing or self.elimination is not None):
+      time.sleep(0.1)
     players = [0,0]
     for i in range(self.n):
        if(self.alive[i]):

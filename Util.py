@@ -141,6 +141,19 @@ def getResponseRating(dialogue, response, context, agent1, agent2):
   # log(f"Average Dialogue Rating: {average_rating}")
   return average_rating
 
+def extract_dialogue(string):
+    dialogue = re.search(': "(.*?)"', string)
+    if dialogue:
+        return dialogue.group(1)
+    elif(re.search(':"(.*?)"', string)):
+        return re.search(':"(.*?)"', string).group(1)
+    elif(re.search(": '(.*?)'", string)):
+        return re.search(": '(.*?)'", string).group(1)
+    elif(re.search(":'(.*?)'", string)):
+        return re.search(":'(.*?)'", string).group(1)
+    
+    return None
+
 def getDetails():
     details = ""
     cover = 'townfolk'

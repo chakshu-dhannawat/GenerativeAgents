@@ -1,5 +1,4 @@
-import os
+from Util import *
 
-folder_path = 
-file_count = 
-print(file_count)
+
+print(extract_dialogue('Taichi Kato:"I\'ve noticed Mana has been very quiet during these discussions. Could she be avoiding suspicion?"'))

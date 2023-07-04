@@ -37,8 +37,8 @@ class getAgents():
         thread.join()  
     return self.agents 
 
-agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
-# agents = getAgents().get()
+# agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
+agents = getAgents().get()
 
 
 '''
@@ -79,11 +79,6 @@ def game_logic():
   time.sleep(1)
 
   day = 2
-
-  # game.kicked = "Yumi Okada"
-  # game.killing = True
-  # game.elimination = game.kicked
-  # game.elim = 0
 
   while game.run:
      
