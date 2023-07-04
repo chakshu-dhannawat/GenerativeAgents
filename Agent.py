@@ -24,6 +24,8 @@ class Agent():
     self.brain = GPT(context=CONTEXT_AGENT)
 
     self.warewolf = False
+    self.task = None
+    self.taskReach = False
     if "warewolf" in summary:
       self.warewolf = True
       QUERY_INIT = QUERY_INIT_WAREWOLF.format(name, name, summary, name, details)
@@ -366,6 +368,9 @@ class Agent():
           # self.destination_path.pop(0)
           
           if len(self.destination_path)==0:
+
+            if(self.destination==self.task): self.taskReach = True
+
             if(self.dest is None):
               self.choose_random_location()
               

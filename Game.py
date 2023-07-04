@@ -516,6 +516,8 @@ class Game:
         threads = []
         for i in range(self.n):
             if(not self.alive[i]): continue
+            self.agents[i].task = None
+            self.agents[i].taskReach = False
             thread = threading.Thread(target=self.agents[i].nextLocation, args=(now,))
             thread.start()
             threads.append(thread)
@@ -525,7 +527,11 @@ class Game:
         self.observe(now)
 
         calendar.incrementMins(20)
-      time.sleep(0.3)  
+      time.sleep(0.3)
+      
+    for i in range(self.n):
+       self.agents[i].task = None 
+       self.agents[i].taskReach = False  
 
   def observe(self,now=None):
     if(now is None): now = calendar.time
@@ -658,6 +664,12 @@ class Game:
           self.bgId+=1
           self.bg = self.bgs[self.bgId]
 
+  def drawTaskEmoji(self):
+    for i in range(self.n):
+      if(not self.alive[i]): continue
+      if self.agents[i].taskReach:
+         self.agents[i].emoji_bubble('Cow')
+
   def drawElimination(self):
 
       if(self.elim==0):
@@ -727,7 +739,10 @@ class Game:
         self.draw_fire()  
         for i,player in enumerate(self.agents): 
             if(self.alive[i]):
-                player.drawBubble()   
+                player.drawBubble() 
+
+        self.drawTaskEmoji()  
+
         self.draw_time()
 
       pygame.display.update()
