@@ -414,8 +414,10 @@ class Agent():
       # self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
 
   def tavern(self,point):
+      closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
       self.dest = "Stop"
-      self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
+      self.destination_path = self.destination_path + town.shortestPath(self.location_name,TavernNodes[closest_index])
+      
       # self.destination = self.destination_path[0]
       # self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
       # self.destination_x, self.destination_y = point
@@ -523,6 +525,17 @@ class Agent():
         self.win.blit(emoji_surface, emoji_rect)
 
   
+  
+  def generate_voiceover(self, text):
+      generate_voiceover(self.name, text)
+
+  # # Create an instance of Agent
+  # agent1 = Agent('Agent1')
+
+  # # Generate voiceover for a specific text in the voice of agent1
+  # text = "Hello, I am Agent1."
+  # agent1.generate_voiceover(text)
+
 
   
 

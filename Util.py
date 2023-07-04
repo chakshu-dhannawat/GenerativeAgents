@@ -151,6 +151,10 @@ def extract_dialogue(string):
         return re.search(": '(.*?)'", string).group(1)
     elif(re.search(":'(.*?)'", string)):
         return re.search(":'(.*?)'", string).group(1)
+    elif(re.search(":(.*?)", string)):
+        return re.search(":(.*?)", string).group(1)
+    elif(re.search(": (.*?)", string)):
+        return re.search(": (.*?)", string).group(1)
     
     return None
 
