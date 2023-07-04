@@ -23,15 +23,14 @@ def addUsage(tokens):
 # with open('usage.json', 'w') as f:
 #     json.dump(0, f)
 
-os.environ['OPENAI_API_KEY'] = os.getenv('OpenAI_API_KEY')
-
 openai.api_type = os.getenv('OpenAI_Type')
 
 openai.api_base = os.getenv('OpenAI_Base')
 
 openai.api_version = os.getenv('OpenAI_Version')
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OpenAI_API_KEY")
+
 
 class GPT:
 

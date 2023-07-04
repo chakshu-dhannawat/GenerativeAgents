@@ -1,3 +1,5 @@
+import os
+
 '''
 ====================
 Game
@@ -11,7 +13,8 @@ WIN_HEIGHT = 800
 EMOJI_SIZE = (25,25)
 FPS = 100
 
-N_Killing = 12
+N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
+N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 Speed_Killing = 10
 
 FIRE_SIZE = (60,60)

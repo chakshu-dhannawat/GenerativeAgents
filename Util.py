@@ -4,6 +4,7 @@ from Graph import Graph,town
 from Params import *
 from Queries import QUERY_EVALUATION_METRICS
 from threading import Lock
+import os
 
 lock = Lock()
 
