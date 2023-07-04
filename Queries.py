@@ -108,10 +108,19 @@ The werewolf tries to maintain their innocence while deflecting suspicion. Other
 Context of Remaining Players in {}'s Memory -
 {}
 
+These Players are still remaining in the village - 
+{}
+
+{}'s Strategy for Winning -
+{}
+
+{} is a {}
+
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
 The dialogue should be on point, instead of saying you agree with someone, say what you want to add to the conversation.
+You can also suggest to kick someone out it your dialogue.
 The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
@@ -146,10 +155,19 @@ Context of Remaining Players in {}'s Memory -
 Here is a snippet from the dialogue history:
 {}
 
-Now it's {}'s opportunity to speak, and to change the conversation in their favour. Share your insights or counterarguments or suspicions regarding the ongoing investigation.
+These Players are still remaining in the village - 
+{}
+
+{}'s Strategy for Winning -
+{}
+
+{} is a {}
+
+It is {}'s opportunity to speak, and to change the conversation in their favour. Share your insights or counterarguments or suspicions regarding the ongoing investigation.
 
 Suggest exactly one dialogue from {}.
 The dialogue should be on point, instead of saying you agree with someone, say something new and specific to add to the conversation.
+You can also suggest to kick someone out it your dialogue.
 The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""

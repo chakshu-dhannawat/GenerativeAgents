@@ -397,18 +397,27 @@ class Game:
 
   def findName(self,currName):
     for name in self.names:
-      if name in currName:
+      if name in currName or currName in name:
+        return name
+    for name in self.names:
+      if name.split(' ')[0] in currName:
         return name
     raise Exception(f"Invalid Name - {currName}")
 
   def groupConversation(self, context, voters):
       history = ""
+      
+      remainingTownfolk = getDetails(self)
+      remainingWarewolf = getDetails(self,True)
+
       curr = random.choice(voters)
-      reply = self.agents[curr].groupconv_init(self.kicked,context[curr])
+      remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
+      reply = self.agents[curr].groupconv_init(self.kicked,context[curr],remaining)
       try:
         replyMsg = extract_dialogue(reply)
       except: 
         replyMsg = reply
+
       thread = threading.Thread(target=self.speak, args=(replyMsg,))
       thread.start()
       self.agents[curr].msg = replyMsg 
@@ -440,7 +449,8 @@ class Game:
           except:
             currName = self.findName(currName)
             curr = self.ids[currName]
-          reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew))
+          remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
+          reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew), remaining)
           if(prev!=curr):
             rating += getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
             rating_n += 1

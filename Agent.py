@@ -22,7 +22,9 @@ class Agent():
     self.memory = [Memory(obs.strip()) for obs in summary.split(';')]
     self.brain = GPT(context=CONTEXT_AGENT)
 
+    self.warewolf = False
     if "warewolf" in summary:
+      self.warewolf = True
       QUERY_INIT = QUERY_INIT_WAREWOLF.format(name, name, summary, name, details)
       for player in details.split('\n'):
         self.remember(player.split(') ')[1])
@@ -120,13 +122,15 @@ class Agent():
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s observations about {person}",n_memory))
     return self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False)
 
-  def groupconv_init(self,kicked,context):
-    dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,self.name,self.name,self.name),remember=False)
+  def groupconv_init(self,kicked,context,remaining):
+    cover = "Warewolf" if self.warewolf else "Townfolk"
+    dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False)
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
-  def groupconv(self,kicked,context,history):
-    dialogue = self.brain.query(QUERY_GROUPCONV_REPLY.format(kicked,self.name,context,history,self.name,self.name,self.name),remember=False)
+  def groupconv(self,kicked,context,history,remaining):
+    cover = "Warewolf" if self.warewolf else "Townfolk"
+    dialogue = self.brain.query(QUERY_GROUPCONV_REPLY.format(kicked,self.name,context,history,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False)
     dialogue = dialogue.replace('\n', '')
     return dialogue
 

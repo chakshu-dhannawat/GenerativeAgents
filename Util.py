@@ -158,7 +158,20 @@ def extract_dialogue(string):
     
     return None
 
-def getDetails():
+def getDetails(game,includeCover=False):
+    details = ""
+    cover = 'townfolk'
+    for i in range(game.n):
+      if(not game.alive[i]): continue
+      if(not includeCover):
+         details = details + f"{i+1}) {game.names[i]}\n"
+         continue
+      if(game.warewolf[i]): cover = 'warewolf'
+      else: cover = 'townfolk'
+      details = details + f"{i+1}) {game.names[i]}: {cover}\n"
+    return details[:-1]
+
+def getAllDetails():
     details = ""
     cover = 'townfolk'
     for i,agent in enumerate(agentsDetails):
@@ -168,5 +181,4 @@ def getDetails():
     return details[:-1]
     
 
-details = getDetails()
-
+details = getAllDetails()

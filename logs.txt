@@ -291,3 +291,81 @@ Mana Yoshida: "I find it suspicious that Riku's suspicions were always directed 
 Yuka Suzuki: "I noticed Yuria defended Hina without evidence. Could she be trying to deflect suspicion and protect a fellow werewolf?"
 Riku Mori: "I noticed Yuria whispering with Hina before. Could she be collaborating with Hina to protect her as a werewolf?"
 Taichi Kato: "I noticed Yuria's voting pattern last night was suspicious. Let's focus on her actions and who she may be protecting."
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/04/2023, 15:04:35
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns to identify suspicious behavior.
+2) Encourage open communication and information sharing among townfolks to gather clues.
+3) Use deductive reasoning to eliminate suspects and focus on those who display suspicious behavior consistently.
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns to identify suspicious behavior and potential warewolves.
+2) Use logic and reasoning to persuade others to vote out suspected warewolves during the day.
+3) Maintain good relationships with other townfolks to build trust and work together to identify and eliminate the warewolves.
+
+-----------------------
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Blame someone else for the first night's vote and try to appear innocent.
+2) Befriend Yuka to gain trust and use her to sway votes towards townfolks.
+3) Try to frame Riku or Hina as the other warewolf to get them voted out.
+
+-----------------------
+
+
+-----------------------
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Observe and keep track of voting patterns and arguments made by different players.
+2) Form alliances with players who seem trustworthy and logical in their arguments.
+3) Use information gathered to make educated guesses and vote as a unified group to kick out suspected werewolves.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Riku Mori has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yumi Okada: "I think we should focus on Hina Sato. She's been quiet and hasn't contributed much to the discussion."
+Hina Sato: "I noticed Yumi Okada was quick to suggest me. Is she trying to deflect suspicion from herself?"
+Yumi Okada: "I noticed Hina's lack of participation, but Yuka's behavior seems suspicious too. What do you think, Hina?"
+Yuka Suzuki: "I noticed Hina and Yumi both voted to eliminate Riku, who turned out to be a townfolk. Suspicious, don't you think?"
+Hina Sato: "I noticed Yuka's voting pattern has been consistent with that of the townfolks, indicating her trustworthiness. What do you think, Yumi?"
+Hina Sato: "I noticed Yuka's consistency in voting patterns has been helpful. What other observations have we made about Yumi's behavior?"
+Yumi Okada: "I agree with Hina's observation about Yuka's voting pattern, but let's not forget her suspicious behavior towards Riku."
+Yuka Suzuki: "I noticed Yumi was quiet during the discussion yesterday. Does anyone have any observations about her behavior during the night phase?"
+Yuka Suzuki: "I noticed Yumi was quick to deflect suspicion towards me. Is she trying to hide something?"
+Hina Sato: "I noticed Yumi was quick to vote against Riku yesterday. Has anyone else observed her voting patterns?"
+Yumi Okada: "We should focus on Hina's sudden change in behavior towards Yuka. Is she trying to protect her?"
+Hina Sato: "I noticed Yumi was quick to vote against Riku yesterday. Has anyone else observed her voting patterns?"
+Yuka Suzuki: "I noticed Hina has been quiet about her voting patterns. Is she trying to hide something?"
+Hina Sato: "I noticed Yuka's voting pattern has changed after Riku's elimination. Is she trying to distance herself from the situation?"
+Yuka Suzuki: "Yumi, Hina, if we don't vote together, we risk letting the werewolf manipulate our votes. Let's trust each other."
+Yumi Okada: "I don't trust Hina's voting patterns. She may be trying to pin the blame on me."
+
+End of Conversation
+
+Conversation Rating - 4.144230769230769
+
+Yumi Okada voted to kick out Hina Sato
+Yuka Suzuki voted to kick out Yumi Okada
+Hina Sato voted to kick out Yumi Okada
+
+Yumi Okada has been lynched by the Villagers
+
+=== TOWNFOLKS WIN ===
