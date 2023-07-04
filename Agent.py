@@ -9,9 +9,10 @@ from DatabaseHandler import DB
 import os
 import pygame
 import random
+import math
 import emoji
 import time
-# from Generate_voiceover import generate_voiceover
+from Generate_voiceover import generate_voiceover
 
 class Agent():
 
@@ -56,6 +57,8 @@ class Agent():
     self.width = self.graphics['width']
     self.height = self.graphics['height']
     self.vel = 1
+    self.vel_x = 1
+    self.vel_y = 1
     self.left = True
     self.right = False
     self.walkCount = 0
@@ -83,8 +86,8 @@ class Agent():
 
     self.location_name = self.graphics['initialLocation']
     self.destination=None
-    self.destination_x=None
-    self.destination_y=None
+    self.destination_x=-10
+    self.destination_y=-10
     self.is_travelling = False
     self.destination_path=[]
     # Speaking Bubbles
@@ -261,23 +264,23 @@ class Agent():
 
       if not(self.standing):
           if self.left:
-              self.win.blit(self.walkLeft[self.walkCount//10], (self.x,self.y))
+              self.win.blit(self.walkLeft[self.walkCount//10], (int(self.x),int(self.y)))
               self.walkCount += 1
           elif self.right:
-              self.win.blit(self.walkRight[self.walkCount//10], (self.x,self.y))
+              self.win.blit(self.walkRight[self.walkCount//10], (int(self.x),int(self.y)))
               self.walkCount +=1
           elif self.up:
-              self.win.blit(self.walkUp[self.walkCount//10], (self.x,self.y))
+              self.win.blit(self.walkUp[self.walkCount//10], (int(self.x),int(self.y)))
               self.walkCount += 1
           elif self.down:
-              self.win.blit(self.walkDown[self.walkCount//10], (self.x,self.y))
+              self.win.blit(self.walkDown[self.walkCount//10], (int(self.x),int(self.y)))
               self.walkCount += 1
       else:
-          self.win.blit(self.char, (self.x, self.y))
+          self.win.blit(self.char, (int(self.x), int(self.y)))
 
   def move(self):
       #If agent has reached location
-      if(self.x == self.destination_x and self.y == self.destination_y):
+      if(abs(self.x - self.destination_x)<1 and abs(self.y - self.destination_y)<1):
           self.left=False
           self.right=False
           self.up=False
@@ -289,10 +292,21 @@ class Agent():
           
       # Move towards the destination
       if self.is_travelling:
-          if self.destination_x>self.x:
+          
+          # Calculate the slope between the current position and the destination
+          # slope = (self.destination_y - self.y) / (self.destination_x - self.x)
+
+          # Calculate theta from the slope
+          # theta = math.atan(slope)
+          theta = math.atan2(self.destination_y - self.y, self.destination_x - self.x)
+          self.vel_x = abs(math.cos(theta) * self.vel)
+          self.vel_y = abs(math.sin(theta) * self.vel)
+
+
+          if self.destination_x-self.x>1:
               self.right=True
               self.left=False
-          elif self.destination_x<self.x:
+          elif self.x-self.destination_x>1:
               self.left = True
               self.right = False
           else:
@@ -304,29 +318,32 @@ class Agent():
                   self.right=False
                   self.left = False
                   self.was_left=True
-          if self.destination_y>self.y:
+          if self.destination_y-self.y>1:
               self.down = True
               self.up = False
-          elif self.destination_y<self.y:
+          elif self.y-self.destination_y>1:
               self.up=True
               self.down=False
           else:
               self.up=False
               self.down = False
           
+          
 
+          # print(self.name, self.x)
+          # print(self.name, self.y)
           if self.left and self.x > self.vel:
-              self.x -= self.vel
+              self.x -= self.vel_x
               self.standing = False
           if self.right and self.x < WIN_WIDTH - self.vel:
-              self.x += self.vel
+              self.x += self.vel_x
               self.standing = False
           if self.up and self.y > self.vel:
-              self.y -= self.vel
+              self.y -= self.vel_y
               self.standing = False
               # self.left=True
           if self.down and self.y < WIN_HEIGHT - self.vel:
-              self.y += self.vel
+              self.y += self.vel_y
               self.standing = False
               # self.right=True
           self.standing = not(self.left or self.right or self.up or self.down)
@@ -524,16 +541,6 @@ class Agent():
         emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
         self.win.blit(emoji_surface, emoji_rect)
 
-  
-  def generate_voiceover(self, text):
-      generate_voiceover(self.name, text)
-
-  # # Create an instance of Agent
-  # agent1 = Agent('Agent1')
-
-  # # Generate voiceover for a specific text in the voice of agent1
-  # text = "Hello, I am Agent1."
-  # agent1.generate_voiceover(text)
 
 
   

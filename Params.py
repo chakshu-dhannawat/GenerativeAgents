@@ -31,7 +31,7 @@ LOCATION_MAP = {'Hut 1':(285,313),#'Hut 1 task01':(148,175),
                 'Cattle Farm':(859,334),'Cattle Farm task01':(844,256),'Cattle Farm task02':(1127,330),'Cattle Farm task03':(1108,251),'Cattle Farm task04':(1098,444),
                 'Well':(556,495),'Well task01':(416,482),'Well task02':(442,533),'Well task03':(528,537),#'Well task04':(494,450),
                 'Electricity House':(192,501),#'Electricity House task01':(75,510),'Electricity House task02':(26,438),'Electricity House task03':(64,363),'Electricity House task04':(152,363),
-                'Tavern':(791,662), 'Predetermined 01': (809, 520), 'Predetermined 02': (956, 548),'Predetermined 03': (1005, 706), 
+                'Tavern':(791,662), 'Predetermined 01': (809, 520), 'Predetermined 02': (956, 548),'Predetermined 03': (1005, 700), 
                 'Fishing Pond':(666,69),'Fishing Pond task01':(643,101),'Fishing Pond task02':(742,108),'Fishing Pond task03':(859,118),'Fishing Pond task04':(1036,103),
                 'Intermediate01':(660,618),'Intermediate02':(511,618),'Intermediate03':(397,550),'Intermediate04':(287,362),'Intermediate05':(539,357),
                 'Intermediate06':(738,374),'Intermediate07':(670,186),#'Intermediate08':(107,75),'Intermediate09':(301,97),'Intermediate10':(849,103),
@@ -40,7 +40,7 @@ MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takes
 
 Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']
 # InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
-InitialPositions = [LOCATION_MAP['Tavern']]*10
+
 
 TavernNodes = [key for key in LOCATION_MAP.keys() if 'Predetermined' in key]
 TavernNodes.append('Tavern')
@@ -64,7 +64,8 @@ Town
 '''
 
 townName = "Mk 1 Village"
-Initial = "Tavern"
+Initial = "Well"
+InitialPositions = [LOCATION_MAP[Initial]]*10
 
 nodes = {"Hut 1": "The first hut",
         "Hut 2": "The second hut",
@@ -130,9 +131,9 @@ agentsDetails = [
     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
+    # {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
+    # {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
+    # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
 ]
 
 # agentsDetails = [
