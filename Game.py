@@ -214,6 +214,7 @@ class Game:
     self.night_phase_show = False
     self.voting_phase_show = False
     self.start_phase_show = True
+    self.nobodyLynch = False
 
     self.reset()
 
@@ -408,6 +409,7 @@ class Game:
     maxVotes = max(votes)
     if(votes.count(maxVotes)>1):
       log("\nNobody was lynched")
+      self.nobodyLynch = True
     else:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
@@ -728,6 +730,19 @@ class Game:
       self.elimination.animationKillStep()
 
   
+  def draw_nobody_lynch(self) :
+      if(not self.nobodyLynch): return
+      self.win.blit(self.black_bg,(0,0))
+      text_surface = font2.render("Nobody was Lynched", True, WHITE)
+      text_rect = text_surface.get_rect()
+      text_rect.centerx = WIN_WIDTH // 2
+      text_rect.centery = WIN_HEIGHT // 2
+      self.win.blit(text_surface,text_rect)
+      self.nobodyLynch = False
+      pygame.display.update()
+      time.sleep(3)     
+  
+  
   def draw_window(self) : 
       # if(self.elimination):
       #   self.win.blit(self.bg2,(0,0))
@@ -753,6 +768,7 @@ class Game:
 
       if(not self.killing and self.elimination is None):
 
+        self.draw_nobody_lynch()
         self.draw_phase()
 
         for i,player in enumerate(self.agents): 
