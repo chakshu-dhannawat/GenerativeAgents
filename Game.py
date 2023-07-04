@@ -420,6 +420,7 @@ class Game:
       curr = random.choice(voters)
       remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
       reply = self.agents[curr].groupconv_init(self.kicked,context[curr],remaining)
+
       try:
         replyMsg = extract_dialogue(reply)
       except: 
@@ -477,7 +478,6 @@ class Game:
           history = history + '\n'
           for i in range(self.n):
             if(self.alive[i]): self.agents[i].remember(reply)
-      self.agents[prev].isSpeaking = False 
       log("\nEnd of Conversation")
       if(rating_n==0): self.convRating = 0
       else: self.convRating = rating/rating_n 
@@ -486,6 +486,7 @@ class Game:
       # log(f"Response Relevance - {calculate_response_relevance(history)}")
       # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       thread.join()
+      self.agents[prev].isSpeaking = False 
       return history
   
 
@@ -621,10 +622,10 @@ class Game:
           self.fire = True
       else:
         if(self.farewell):
-          self.bg = self.farewellframes[self.farewellId//Speed_Killing]
+          self.bg = self.farewellframes[self.killId//Speed_Killing]
         else:
           self.bg = self.killframes[self.killId//Speed_Killing]
-          self.killId+=1
+        self.killId+=1
 
   def stepPhase(self):
     if(not self.Night):

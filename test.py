@@ -1,4 +1,3 @@
 from Util import *
 
-
-print(extract_dialogue('Taichi Kato:"I\'ve noticed Mana has been very quiet during these discussions. Could she be avoiding suspicion?"'))
+print(extract_dialogue('Yuka Suzuki: I agree with Hina, but we need to consider Yumi\'s point as well. I suspect Ryuichi, he\'s been quiet and evasive.'))
