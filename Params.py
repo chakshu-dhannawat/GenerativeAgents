@@ -15,7 +15,8 @@ FPS = 100
 
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
-N_Farewell = sum([len(files) for _, _, files in os.walk('Assets\\Farewell')])
+N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
+N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
 Speed_Killing = 10
 
 FIRE_SIZE = (60,60)
@@ -146,6 +147,24 @@ agentsDetails = [
 #     {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria is a charismatic and persuasive townfolk. Yuria's high IQ, combined with excellent convincing skills, allows them to sway others with well-thought-out arguments and logical reasoning."}
 # ]
 
+
+TASK_EMOJI_MAP = {
+    'Well task01': 'Bucket',
+    'Well task02': 'Broom',
+    'Well task03': 'Well Mechanic',
+    'Cattle Farm task01': 'Cow',
+    'Cattle Farm task02': 'Cow',
+    'Cattle Farm task03': 'Eggs',
+    'Cattle Farm task04': 'Wood',
+    'Shrine task01': 'Prayer',
+    'Shrine task02': 'Broom',
+    'Shrine task03': 'Lamp',
+    'Shrine task04': 'Pick',
+    'Fishing Pond task01': 'Fishing Pole',
+    'Fishing Pond task02': 'Fish',
+    'Fishing Pond task03': 'Fishing Pole',
+    'Fishing Pond task04': 'Wood'
+}
 
 '''
 ====================

@@ -24,6 +24,8 @@ class Agent():
     self.brain = GPT(context=CONTEXT_AGENT)
 
     self.warewolf = False
+    self.task = None
+    self.taskReach = False
     if "warewolf" in summary:
       self.warewolf = True
       QUERY_INIT = QUERY_INIT_WAREWOLF.format(name, name, summary, name, details)
@@ -104,8 +106,8 @@ class Agent():
     self.kill_x = -self.char_rect.width
     self.kill_y = WIN_HEIGHT // 2 - self.char_rect.height // 2
     self.killRotationAngle = 0
-    self.killSpeed = 5
-    self.killRotationSpeed = 3
+    self.killSpeed = 4
+    self.killRotationSpeed = 2
 
   def animationKillStep(self):
     self.kill_x += self.killSpeed
@@ -366,6 +368,9 @@ class Agent():
           # self.destination_path.pop(0)
           
           if len(self.destination_path)==0:
+
+            if(self.destination==self.task): self.taskReach = True
+
             if(self.dest is None):
               self.choose_random_location()
               
@@ -509,7 +514,7 @@ class Agent():
       pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
 
       # Draw the bubble background
-      pygame.draw.ellipse(self.win, CREAM, bubble_rect)
+      pygame.draw.ellipse(self.win, WHITE, bubble_rect)
 
       # Blit the text onto the bubble
       current_y = bubble_rect.top + bubble_padding
@@ -539,7 +544,7 @@ class Agent():
         pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
 
         # Draw the bubble background
-        pygame.draw.ellipse(self.win, CREAM, bubble_rect)
+        pygame.draw.ellipse(self.win, WHITE, bubble_rect)
 
         # Blit the emoji onto the bubble
         emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
