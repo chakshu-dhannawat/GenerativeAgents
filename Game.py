@@ -51,7 +51,7 @@ black_bg = pygame.image.load(Path+'blackbg.png')
 
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
 
-bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
+bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
 music = pygame.mixer.music.load(Path+'music.mp3')
 pygame.mixer.music.play(-1)
@@ -174,7 +174,7 @@ class Game:
     self.black_bg = pygame.transform.scale(black_bg, DEFAULT_IMAGE_SIZE) 
     # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
-    for i in range(100): 
+    for i in range(N_Background): 
       self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE) 
     self.fire = True
     self.killing = False
@@ -562,7 +562,7 @@ class Game:
       # pygame.draw.rect(self.win, WHITE, (0, 0, text_rect.width, text_rect.height))
       # self.win.blit(text_surface, text_rect)
 
-  def drawKilling(self):
+  def stepKilling(self):
       if(self.fire): self.fire = False
       if(self.killId==N_Killing*Speed_Killing):
           self.killing = False
@@ -575,6 +575,25 @@ class Game:
       else:
         self.bg = self.killframes[self.killId//Speed_Killing]
         self.killId+=1
+
+  def stepPhase(self):
+    if(not self.Night):
+      if(self.bgId==0):
+          self.changePhase = False
+          self.bgId=-1
+          self.Night = True
+      else:
+          if(self.bgId==-1): self.bgId=N_Background
+          self.bgId-=1
+          self.bg = self.bgs[self.bgId]
+    else:
+      if(self.bgId==N_Background-1):
+          self.changePhase = False
+          self.bgId=-1
+          self.Night = False
+      else:
+          self.bgId+=1
+          self.bg = self.bgs[self.bgId]
 
   def drawElimination(self):
 
@@ -682,33 +701,15 @@ class Game:
               player.move() 
       
       if(self.changePhase):
-        if(not self.Night):
-          if(self.bgId==0):
-              self.changePhase = False
-              self.bgId=-1
-              self.Night = True
-          else:
-              if(self.bgId==-1): self.bgId=100
-              self.bgId-=1
-              self.bg = self.bgs[self.bgId]
-        else:
-          if(self.bgId==99):
-              self.changePhase = False
-              self.bgId=-1
-              self.Night = False
-          else:
-              self.bgId+=1
-              self.bg = self.bgs[self.bgId]
+        self.stepPhase()
 
       if(self.killing):
-        self.drawKilling()
+        self.stepKilling()
 
       self.draw_window()
       
       calendar.increment(60/FPS)
-      # test_process = Process(target=self.test)
-      # test_process.start()
-      #asyncio.run(self.test())
+
       #self.checkSpeakingProximity()
         
   def checkSpeakingProximity(self):
