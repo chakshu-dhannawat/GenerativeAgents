@@ -168,7 +168,7 @@ class Game:
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
     self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
-    self.bg_nodes = pygame.transform.scale(bg_nodes, DEFAULT_IMAGE_SIZE) 
+    self.black_bg = pygame.transform.scale(black_bg, DEFAULT_IMAGE_SIZE)
     # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
     for i in range(N_Background): 
@@ -258,6 +258,8 @@ class Game:
     except:
       voteName = self.findName(voteName)
       vote = self.names.index(voteName)
+    if(self.warewolf[self.ids[voteName]]):
+      vote = random.choice([index for index, value in enumerate(self.warewolf) if value is False and self.alive[index]])
     self.votes[vote] += 1
 
   def nightVote(self):
