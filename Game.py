@@ -46,6 +46,11 @@ bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # clock = pygame.time.Clock()
 black_bg = pygame.image.load(Path+'blackbg.png')
 
+night_pahse = pygame.image.load('Assets\\Phases\\Night_Phase.png')
+day_phase = pygame.image.load('Assets\\Phases\\Day_Phase.png')
+voting_phase = pygame.image.load('Assets\\Phases\\Voting Phase.png')
+start_phase = pygame.image.load('Assets\\Phases\\START~2.png')
+
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
 farewellframesW = [pygame.image.load(Path+f'Farewell\\Warewolf\\{i}.png') for i in range(N_Farewell_W)]
 farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i in range(N_Farewell_T)]
@@ -201,6 +206,15 @@ class Game:
     self.elimination = None
     self.elim = 0
     self.night_elimination = None
+    self.day_phase = pygame.transform.scale(day_phase, DEFAULT_IMAGE_SIZE)
+    self.night_phase = pygame.transform.scale(night_pahse, DEFAULT_IMAGE_SIZE)
+    self.voting_phase = pygame.transform.scale(voting_phase, DEFAULT_IMAGE_SIZE)
+    self.start_phase = pygame.transform.scale(start_phase, DEFAULT_IMAGE_SIZE)
+    self.day_phase_show = False
+    self.night_phase_show = False
+    self.voting_phase_show = False
+    self.start_phase_show = True
+
     self.reset()
 
   def getSingleContext(self,name1,name2):
@@ -273,6 +287,9 @@ class Game:
     self.votes[vote] += 1
 
   def nightVote(self):
+
+    self.night_phase_show = True
+
     log("Currently it is Night, the Warewolves will kill a townfolk...\n")
     self.votes = [0]*self.n
 
@@ -304,6 +321,8 @@ class Game:
     self.checkEnd()
 
   def dayVote(self):
+
+    self.voting_phase_show = True
 
     log("Currently it is Day, the Villagers will lynch someone...\n")
 
@@ -508,6 +527,7 @@ class Game:
       self.agents[voters[i]].tavern((x,y))
 
   def afternoon(self):
+    self.day_phase_show = True
     self.generatePlanDay()
     while True:
       if(calendar.dt.hour in [1,13]): break
@@ -668,7 +688,7 @@ class Game:
     for i in range(self.n):
       if(not self.alive[i]): continue
       if self.agents[i].taskReach:
-         self.agents[i].emoji_bubble('Cow')
+         self.agents[i].emoji_bubble(TASK_EMOJI_MAP[self.agents[i].task])
 
   def drawElimination(self):
 
@@ -779,6 +799,24 @@ class Game:
         if size > 0:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
 
+  def draw_phase(self):
+      if(self.night_phase_show):
+        self.win.blit(self.night_phase,(0,0))
+        self.night_phase_show = False
+      elif(self.day_phase_show):
+        self.win.blit(self.day_phase,(0,0))
+        self.day_phase_show = False
+      elif(self.voting_phase_show):
+        self.win.blit(self.voting_phase,(0,0))
+        self.voting_phase_show = False
+      elif(self.start_phase_show):
+        self.win.blit(self.start_phase,(0,0))
+        self.start_phase_show = False
+      else:
+         return
+      pygame.display.update()
+      time.sleep(2)
+
   def step(self) :
 
       for event in pygame.event.get() :
@@ -789,6 +827,8 @@ class Game:
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
+
+      self.draw_phase()
 
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
