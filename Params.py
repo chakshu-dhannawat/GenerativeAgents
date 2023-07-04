@@ -41,6 +41,10 @@ Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']
 # InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
 InitialPositions = [LOCATION_MAP['Tavern']]*10
 
+TavernNodes = [key for key in LOCATION_MAP.keys() if 'Predetermined' in key]
+TavernNodes.append('Tavern')
+TavernCoordinates = [LOCATION_MAP[key] for key in TavernNodes]
+
 
 '''
 ====================
@@ -101,6 +105,9 @@ nodes = {"Hut 1": "The first hut",
         "Intermediate05":"Inbetween Nodes",
         "Intermediate06":"Inbetween Nodes",
         "Intermediate07":"Inbetween Nodes",
+        "Predetermined 01":"Pre determined inbetween Nodes",
+        "Predetermined 02":"Pre determined inbetween Nodes",
+        "Predetermined 03":"Pre determined inbetween Nodes",
         #"Intermediate08":"Inbetween Nodes",
         #"Intermediate09":"Inbetween Nodes",
         #"Intermediate10":"Inbetween Nodes",

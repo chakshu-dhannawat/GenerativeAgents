@@ -460,6 +460,7 @@ class Game:
       theta = i * angle
       x = TavernCenter[0] + int(TavernRadius * math.cos(theta))
       y = TavernCenter[1] + int(TavernRadius * math.sin(theta))
+      
       self.agents[voters[i]].tavern((x,y))
 
   def afternoon(self):
