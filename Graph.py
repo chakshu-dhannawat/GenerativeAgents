@@ -151,7 +151,10 @@ def makeTown():
     town.addEdge("Well task01","Well task02"),
     town.addEdge("Well task02","Well task03"),
     town.addEdge("Intermediate01","Tavern"),
-
+    town.addEdge("Tavern","Predetermined 01"),
+    town.addEdge("Predetermined 02","Predetermined 01"),
+    town.addEdge("Predetermined 02","Predetermined 03"),
+    town.addEdge("Tavern","Predetermined 03"),
     return town
 
 town = makeTown()

@@ -26,11 +26,11 @@ TavernCenter = (859,601)
 LOCATION_MAP = {'Hut 1':(285,313),#'Hut 1 task01':(148,175),
                 'Hut 2':(577,317),#'Hut 2 task01':(471,179),
                 #'Hut 3':(414,452),'Hut 3 task01':(317,382),'Hut 3 task02':(433,352),
-                'Shrine':(327,743),'Shrine task01':(162,698),'Shrine task02':(228,764),'Shrine task03':(382,764),'Shrine task04':(446,679),
+                'Shrine':(327,735),'Shrine task01':(162,698),'Shrine task02':(228,750),'Shrine task03':(382,755),'Shrine task04':(446,679),
                 'Cattle Farm':(859,334),'Cattle Farm task01':(844,256),'Cattle Farm task02':(1127,330),'Cattle Farm task03':(1108,251),'Cattle Farm task04':(1098,444),
                 'Well':(556,495),'Well task01':(416,482),'Well task02':(442,533),'Well task03':(528,537),#'Well task04':(494,450),
                 'Electricity House':(192,501),#'Electricity House task01':(75,510),'Electricity House task02':(26,438),'Electricity House task03':(64,363),'Electricity House task04':(152,363),
-                'Tavern':(791,662),
+                'Tavern':(791,662), 'Predetermined 01': (809, 520), 'Predetermined 02': (956, 548),'Predetermined 03': (1005, 706), 
                 'Fishing Pond':(666,69),'Fishing Pond task01':(643,101),'Fishing Pond task02':(742,108),'Fishing Pond task03':(859,118),'Fishing Pond task04':(1036,103),
                 'Intermediate01':(660,618),'Intermediate02':(511,618),'Intermediate03':(397,550),'Intermediate04':(287,362),'Intermediate05':(539,357),
                 'Intermediate06':(738,374),'Intermediate07':(670,186),#'Intermediate08':(107,75),'Intermediate09':(301,97),'Intermediate10':(849,103),
@@ -40,6 +40,10 @@ MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takes
 Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']
 # InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
 InitialPositions = [LOCATION_MAP['Tavern']]*10
+
+TavernNodes = [key for key in LOCATION_MAP.keys() if 'Predetermined' in key]
+TavernNodes.append('Tavern')
+TavernCoordinates = [LOCATION_MAP[key] for key in TavernNodes]
 
 
 '''
@@ -101,6 +105,9 @@ nodes = {"Hut 1": "The first hut",
         "Intermediate05":"Inbetween Nodes",
         "Intermediate06":"Inbetween Nodes",
         "Intermediate07":"Inbetween Nodes",
+        "Predetermined 01":"Pre determined inbetween Nodes",
+        "Predetermined 02":"Pre determined inbetween Nodes",
+        "Predetermined 03":"Pre determined inbetween Nodes",
         #"Intermediate08":"Inbetween Nodes",
         #"Intermediate09":"Inbetween Nodes",
         #"Intermediate10":"Inbetween Nodes",
