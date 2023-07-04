@@ -1671,3 +1671,78 @@ Yumi Okada chose to do the task : Shrine task01 at 12:02 PM
 
 Hina Sato chose to do the task : Cattle Farm task03 at 12:02 PM
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/04/2023, 17:07:34
+
+=======Initializing Agents=======
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to others' arguments and opinions to gain insight into their thought process.
+2) Collaborate with other townfolks to share information and suspicions, and vote as a unified group.
+3) Keep track of voting patterns and try to identify any inconsistencies or suspicious behavior.
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe voting patterns and interactions to identify suspicious behavior and potential warewolves.
+2) Form alliances with other townfolks and share information to strengthen voting decisions.
+3) Keep track of past votes and outcomes to analyze and adjust strategies for future rounds.
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and gather information by listening to people's conversations.
+2) Keep track of voting patterns and suspect players who consistently vote against townfolks.
+3) Collaborate with other townfolks and strategize to catch the warewolves in a lie during discussions.
+
+-----------------------
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act friendly and helpful towards the townfolks to gain their trust.
+2) Blame other townfolks for being werewolves to create confusion and mistrust.
+3) Vote strategically to kick out townfolks who are likely to identify me as a werewolf.
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Yuka Suzuki has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Hina Sato: "I noticed Yumi voted against Yuka last round, suspicious. Riku and I will vote to kick her out."
+Yumi Okada: "Riku, why did you not vote to kick out Hina yesterday? She seems to be trying too hard to appear innocent."
+Riku Mori: "Yumi and Hina, why did both of you vote against Yuka? Seems like a coordinated effort."
+Hina Sato: "I suspect Riku, as they have been quiet and voted with the werewolves before. Let's consider their actions carefully."
+Yumi Okada: "I agree with Hina's suspicion of Riku. They have been quiet and defensive. Let's vote to kick out Riku."
+Hina Sato: "I noticed Riku was the only one who didn't vote to kick out Yuka. Suspicious, let's vote to kick them out."
+Riku Mori: "Hina, I noticed you voted against Yuka too. Let's focus on the werewolves and not turn against each other."
+Hina Sato: "Yumi, I noticed you voted against both Yuka and Riku. Let's discuss your reasoning and voting patterns before making a decision."
+
+End of Conversation
+
+Conversation Rating - 4.321428571428571
+
+Yumi Okada voted to kick out Yumi Okada
+Riku Mori voted to kick out Hina Sato
+Hina Sato voted to kick out Riku Mori
+
+Nobody was lynched
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Riku Mori has been killed by the Warewolves
+
+
+
+=== WAREWOLVES WIN ===

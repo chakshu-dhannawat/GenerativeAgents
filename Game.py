@@ -753,6 +753,8 @@ class Game:
 
       if(not self.killing and self.elimination is None):
 
+        self.draw_phase()
+
         for i,player in enumerate(self.agents): 
             if(self.alive[i]):
                 player.draw() 
@@ -827,8 +829,6 @@ class Game:
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
-
-      self.draw_phase()
 
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
