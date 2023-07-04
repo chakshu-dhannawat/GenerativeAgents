@@ -47,7 +47,7 @@ bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 black_bg = pygame.image.load(Path+'blackbg.png')
 
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
-farewellframes = [pygame.image.load(Path+f'Farewell\\{i}.png') for i in range(N_Farewell)]
+farewellframes = [pygame.image.load(Path+f'Farewell\\Farewell\\{i}.png') for i in range(N_Farewell)]
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
@@ -182,7 +182,7 @@ class Game:
     for i in range(N_Killing): 
       self.killframes[i] =  pygame.transform.scale(self.killframes[i], DEFAULT_IMAGE_SIZE)  
     self.farewell = False
-    self.farewellID = 0
+    self.farewellId = 0
     self.farewellframes = farewellframes
     for i in range(N_Farewell): 
       self.farewellframes[i] =  pygame.transform.scale(self.farewellframes[i], DEFAULT_IMAGE_SIZE) 
