@@ -47,6 +47,7 @@ bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 black_bg = pygame.image.load(Path+'blackbg.png')
 
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
+farewellframes = [pygame.image.load(Path+f'Farewell\\{i}.png') for i in range(N_Farewell)]
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
@@ -180,6 +181,11 @@ class Game:
     self.killframes = killframes
     for i in range(N_Killing): 
       self.killframes[i] =  pygame.transform.scale(self.killframes[i], DEFAULT_IMAGE_SIZE)  
+    self.farewell = False
+    self.farewellID = 0
+    self.farewellframes = farewellframes
+    for i in range(N_Farewell): 
+      self.farewellframes[i] =  pygame.transform.scale(self.farewellframes[i], DEFAULT_IMAGE_SIZE) 
     self.changePhase = False 
     self.Night = 0
     self.bgId = -1
@@ -383,6 +389,7 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+      self.farewell = True
       self.killing = True
       self.elimination = self.names[kick]
       log()
@@ -592,17 +599,22 @@ class Game:
 
   def stepKilling(self):
       if(self.fire): self.fire = False
-      if(self.killId==N_Killing*Speed_Killing):
+      n = N_Farewell if self.farewell else N_Killing
+      if(self.killId==n*Speed_Killing):
           self.killing = False
+          self.farewell = False
           self.killId = 0
           if(self.Night):
             self.bg = self.bgs[0]
           else:
-            self.bg = self.bgs[99] 
+            self.bg = self.bgs[N_Background-1] 
           self.fire = True
       else:
-        self.bg = self.killframes[self.killId//Speed_Killing]
-        self.killId+=1
+        if(self.farewell):
+          self.bg = self.farewellframes[self.farewellId//Speed_Killing]
+        else:
+          self.bg = self.killframes[self.killId//Speed_Killing]
+          self.killId+=1
 
   def stepPhase(self):
     if(not self.Night):
