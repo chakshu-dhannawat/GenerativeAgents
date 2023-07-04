@@ -541,16 +541,6 @@ class Agent():
         emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
         self.win.blit(emoji_surface, emoji_rect)
 
-  
-  def generate_voiceover(self, text):
-      generate_voiceover(self.name, text)
-
-  # # Create an instance of Agent
-  # agent1 = Agent('Agent1')
-
-  # # Generate voiceover for a specific text in the voice of agent1
-  # text = "Hello, I am Agent1."
-  # agent1.generate_voiceover(text)
 
 
   
