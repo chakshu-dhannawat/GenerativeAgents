@@ -93,7 +93,20 @@ class Agent():
     
     self.walkRight, self.walkLeft, self.walkUp, self.walkDown, self.char = self.graphics_load()
     # self.walkRight, self.walkLeft, self.char = walkRight, walkLeft, char
-    self.choose_random_location()     
+    self.choose_random_location()   
+
+  def animationKillInit(self):
+    self.kill_x = -self.char_rect.width
+    self.kill_y = WIN_HEIGHT // 2 - self.char_rect.height // 2
+    self.killRotationAngle = 0
+    self.killSpeed = 5
+    self.killRotationSpeed = 3
+
+  def animationKillStep(self):
+    self.kill_x += self.killSpeed
+    self.killRotationAngle += self.killRotationSpeed
+    rotated_image = pygame.transform.rotate(self.char, self.killRotationAngle)
+    self.win.blit(rotated_image, (self.kill_x, self.kill_y))
   
   def remember(self,observation):
     #self.memory.append(Memory(observation.strip()))
@@ -234,6 +247,7 @@ class Agent():
                 temp = pygame.image.load(os.path.join(folder_path, file_name))
                 temp = pygame.transform.scale(temp, (40,40))
                 walk_down.append(temp)
+        self.char_rect = walk_down[0].get_rect() 
         return walk_right, walk_left, walk_up, walk_down, walk_down[0]
   
   def drawBubble(self):
@@ -507,6 +521,17 @@ class Agent():
         # Blit the emoji onto the bubble
         emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
         self.win.blit(emoji_surface, emoji_rect)
+
+  
+  def generate_voiceover(self, text):
+      generate_voiceover(self.name, text)
+
+  # Create an instance of Agent
+  # agent1 = Agent('Agent1')
+
+  # # Generate voiceover for a specific text in the voice of agent1
+  # text = "Hello, I am Agent1."
+  # agent1.generate_voiceover(text)
 
 
   

@@ -1,3 +1,4 @@
+import os
 from gtts import gTTS
 from googletrans import Translator
 import os
@@ -17,15 +18,17 @@ def text_to_speech(message, language='en'):
     # Convert the voice recording to raw audio data
     audio_data = voice_recording.raw_data
 
-    # Generate the speech using your voice recording
-    def custom_voice(text, lang):
-        return audio_data
+pygame.font.init()
+pygame.init()
 
-    tts = gTTS(text=translated_message, lang=language, slow=False, tld='com', pre_processor_funcs=[custom_voice])
-    tts.save('output.mp3')
+def generate_voiceover_japanese(text):
+    tts = gTTS(text, lang='ja')
+    tts.save("voiceover_japanese.mp3")
 
-    # Play the speech
-    os.system('start output.mp3')
+    pygame.mixer.init()
+    pygame.mixer.music.load("voiceover_japanese.mp3")
+    pygame.mixer.music.play(-1)
 
 # Example usage
-text_to_speech('Hello, how are you doing today?', language='en')
+text = "Hello, I am the virtual agent."
+generate_voiceover_japanese(text)

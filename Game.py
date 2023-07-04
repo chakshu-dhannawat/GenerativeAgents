@@ -17,6 +17,7 @@ import multiprocessing
 import time
 import threading
 from evaluation_metric import *
+from gtts import gTTS
 
 
 pygame.font.init()
@@ -24,6 +25,14 @@ pygame.init()
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
 speed = FPS*0.6
+
+def generate_voiceover_japanese(text):
+    tts = gTTS(text, lang='ja')
+    tts.save("voiceover_japanese.mp3")
+
+    # pygame.mixer.init()
+    music = pygame.mixer.music.load("voiceover_japanese.mp3")
+    pygame.mixer.music.play(1)
 
 
 '''
@@ -36,12 +45,18 @@ font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 
 bg = pygame.image.load(Path+'town.png')
-bg2 = pygame.image.load(Path+'blackbg.png')
+# bg2 = pygame.image.load(Path+'killing.gif')
+# clock = pygame.time.Clock()
+black_bg = pygame.image.load(Path+'blackbg.png')
 
-bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(100)]
+killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
+
+bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
 music = pygame.mixer.music.load(Path+'music.mp3')
 pygame.mixer.music.play(-1)
+
+# generate_voiceover_japanese("アジェイは私の愛です")
 
 '''
 ====================
@@ -156,10 +171,18 @@ class Game:
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
     self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
-    self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
+    self.black_bg = pygame.transform.scale(black_bg, DEFAULT_IMAGE_SIZE) 
+    # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
-    for i in range(100): 
-      self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE)  
+    for i in range(N_Background): 
+      self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE) 
+    self.fire = True
+    self.killing = False
+    self.killId = 0
+    self.elim = 0
+    self.killframes = killframes
+    for i in range(N_Killing): 
+      self.killframes[i] =  pygame.transform.scale(self.killframes[i], DEFAULT_IMAGE_SIZE)  
     self.changePhase = False 
     self.Night = 0
     self.bgId = -1
@@ -169,6 +192,7 @@ class Game:
     self.InitialPositions = InitialPositions
     self.contexts = {}
     self.elimination = None
+    self.elim = 0
     self.night_elimination = None
     self.reset()
 
@@ -254,7 +278,8 @@ class Game:
     kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
     self.kicked = self.names[kick]
-    self.night_elimination = self.names[kick]
+    self.killing = True
+    self.elimination = self.kicked
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
 
@@ -348,6 +373,7 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+      self.killing = True
       self.elimination = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
@@ -535,26 +561,87 @@ class Game:
       # text_rect = text_surface.get_rect()
       # pygame.draw.rect(self.win, WHITE, (0, 0, text_rect.width, text_rect.height))
       # self.win.blit(text_surface, text_rect)
+
+  def stepKilling(self):
+      if(self.fire): self.fire = False
+      if(self.killId==N_Killing*Speed_Killing):
+          self.killing = False
+          self.killId = 0
+          if(self.Night):
+            self.bg = self.bgs[0]
+          else:
+            self.bg = self.bgs[99] 
+          self.fire = True
+      else:
+        self.bg = self.killframes[self.killId//Speed_Killing]
+        self.killId+=1
+
+  def stepPhase(self):
+    if(not self.Night):
+      if(self.bgId==0):
+          self.changePhase = False
+          self.bgId=-1
+          self.Night = True
+      else:
+          if(self.bgId==-1): self.bgId=N_Background
+          self.bgId-=1
+          self.bg = self.bgs[self.bgId]
+    else:
+      if(self.bgId==N_Background-1):
+          self.changePhase = False
+          self.bgId=-1
+          self.Night = False
+      else:
+          self.bgId+=1
+          self.bg = self.bgs[self.bgId]
+
+  def drawElimination(self):
+
+      if(self.elim==0):
+        self.bg = self.black_bg
+        self.win.blit(self.bg,(0,0))
+        self.text1 = self.elimination + " has been Killed"
+        if(self.warewolf[self.ids[self.elimination]]):
+          self.text2 = self.elimination + " was a Warewolf"
+        else: self.text2 = self.text2 = self.elimination + " was a Townfolk"
+        self.elimination = self.agents[self.ids[self.elimination]]
+        self.elimination.animationKillInit()
+        self.elim = 1
+        return 
+
+      if(self.elimination.kill_x > WIN_WIDTH):
+        self.elimination = None 
+        self.elim = 0
+        if(self.Night):
+          self.bg = self.bgs[0]
+        else:
+          self.bg = self.bgs[99] 
+        return
+      
+      text_surface = font2.render(self.text1, True, WHITE)
+      text_rect = text_surface.get_rect()
+      text_rect.centerx = WIN_WIDTH // 2
+      text_rect.centery = WIN_HEIGHT // 4
+      self.win.blit(text_surface,text_rect)
+
+      text_surface = font2.render(self.text2, True, WHITE)
+      text_rect = text_surface.get_rect()
+      text_rect.centerx = WIN_WIDTH // 2
+      text_rect.centery = 3*WIN_HEIGHT // 4
+      self.win.blit(text_surface,text_rect)
+      
+      self.elimination.animationKillStep()
+
   
   def draw_window(self) : 
-      if(self.elimination):
-        self.win.blit(self.bg2,(0,0))
-        text = self.elimination + " has been lynched"
-        text_surface = font.render(text,True,WHITE)
-        self.win.blit(text_surface,(400,400))
-        pygame.display.update()
-        time.sleep(5)
-        self.elimination = None
-      elif(self.night_elimination):
-          self.win.blit(self.bg2,(0,0))
-          text = self.night_elimination + " has been killed by the warewolves"
-          text_surface = font.render(text,True,WHITE)
-          self.win.blit(text_surface,(400,400))
-          pygame.display.update()
-          time.sleep(5)
-          self.night_elimination = None
-      else:
-        self.win.blit(self.bg,(0,0))
+      
+      self.win.blit(self.bg,(0,0))
+
+      if(self.elimination is not None and not self.killing):
+        self.drawElimination()
+
+      if(not self.killing and self.elimination is None):
+
         for i,player in enumerate(self.agents): 
             if(self.alive[i]):
                 player.draw() 
@@ -563,7 +650,8 @@ class Game:
             if(self.alive[i]):
                 player.drawBubble()   
         self.draw_time()
-        pygame.display.update()
+
+      pygame.display.update()
 
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
@@ -613,30 +701,15 @@ class Game:
               player.move() 
       
       if(self.changePhase):
-        if(not self.Night):
-          if(self.bgId==0):
-              self.changePhase = False
-              self.bgId=-1
-              self.Night = True
-          else:
-              if(self.bgId==-1): self.bgId=100
-              self.bgId-=1
-              self.bg = self.bgs[self.bgId]
-        else:
-          if(self.bgId==99):
-              self.changePhase = False
-              self.bgId=-1
-              self.Night = False
-          else:
-              self.bgId+=1
-              self.bg = self.bgs[self.bgId]
+        self.stepPhase()
+
+      if(self.killing):
+        self.stepKilling()
 
       self.draw_window()
       
       calendar.increment(60/FPS)
-      # test_process = Process(target=self.test)
-      # test_process.start()
-      #asyncio.run(self.test())
+
       #self.checkSpeakingProximity()
         
   def checkSpeakingProximity(self):

@@ -79,7 +79,12 @@ def game_logic():
   time.sleep(1)
 
   day = 2
-  
+
+  # game.kicked = "Yumi Okada"
+  # game.killing = True
+  # game.elimination = game.kicked
+  # game.elim = 0
+
   while game.run:
      
     if(day<2): game.switchPhase()
