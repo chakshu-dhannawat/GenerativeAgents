@@ -668,7 +668,7 @@ class Game:
     for i in range(self.n):
       if(not self.alive[i]): continue
       if self.agents[i].taskReach:
-         self.agents[i].emoji_bubble('Cow')
+         self.agents[i].emoji_bubble(TASK_EMOJI_MAP[self.agents[i].task])
 
   def drawElimination(self):
 
