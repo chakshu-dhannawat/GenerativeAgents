@@ -15,7 +15,8 @@ FPS = 100
 
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
-N_Farewell = sum([len(files) for _, _, files in os.walk('Assets\\Farewell')])
+N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
+N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
 Speed_Killing = 10
 
 FIRE_SIZE = (60,60)

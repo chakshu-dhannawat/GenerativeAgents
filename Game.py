@@ -47,7 +47,8 @@ bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 black_bg = pygame.image.load(Path+'blackbg.png')
 
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
-farewellframes = [pygame.image.load(Path+f'Farewell\\{i}.png') for i in range(N_Farewell)]
+farewellframesW = [pygame.image.load(Path+f'Farewell\\Warewolf\\{i}.png') for i in range(N_Farewell_W)]
+farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i in range(N_Farewell_T)]
 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
@@ -183,9 +184,12 @@ class Game:
       self.killframes[i] =  pygame.transform.scale(self.killframes[i], DEFAULT_IMAGE_SIZE)  
     self.farewell = False
     self.farewellID = 0
-    self.farewellframes = farewellframes
-    for i in range(N_Farewell): 
-      self.farewellframes[i] =  pygame.transform.scale(self.farewellframes[i], DEFAULT_IMAGE_SIZE) 
+    self.farewellframesT = farewellframesT
+    self.farewellframesW = farewellframesW
+    for i in range(N_Farewell_T): 
+      self.farewellframesT[i] =  pygame.transform.scale(self.farewellframesT[i], DEFAULT_IMAGE_SIZE) 
+    for i in range(N_Farewell_W): 
+      self.farewellframesW[i] =  pygame.transform.scale(self.farewellframesW[i], DEFAULT_IMAGE_SIZE) 
     self.changePhase = False 
     self.Night = 0
     self.bgId = -1
@@ -610,7 +614,12 @@ class Game:
 
   def stepKilling(self):
       if(self.fire): self.fire = False
-      n = N_Farewell if self.farewell else N_Killing
+      n = N_Killing
+      if(self.farewell):
+        if(self.warewolf[self.ids[self.kicked]]):
+          n = N_Farewell_W 
+        else: 
+          n = N_Farewell_T
       if(self.killId==n*Speed_Killing):
           self.killing = False
           self.farewell = False
@@ -622,7 +631,10 @@ class Game:
           self.fire = True
       else:
         if(self.farewell):
-          self.bg = self.farewellframes[self.killId//Speed_Killing]
+          if(self.warewolf[self.ids[self.kicked]]):
+              self.bg = self.farewellframesW[self.killId//Speed_Killing]
+          else:
+              self.bg = self.farewellframesT[self.killId//Speed_Killing]
         else:
           self.bg = self.killframes[self.killId//Speed_Killing]
         self.killId+=1

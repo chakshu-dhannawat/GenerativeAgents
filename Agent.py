@@ -104,8 +104,8 @@ class Agent():
     self.kill_x = -self.char_rect.width
     self.kill_y = WIN_HEIGHT // 2 - self.char_rect.height // 2
     self.killRotationAngle = 0
-    self.killSpeed = 5
-    self.killRotationSpeed = 3
+    self.killSpeed = 4
+    self.killRotationSpeed = 2
 
   def animationKillStep(self):
     self.kill_x += self.killSpeed
