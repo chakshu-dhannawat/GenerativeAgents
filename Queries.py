@@ -25,7 +25,7 @@ Format -
 
 # The first query given when an agent's llm is initialized, To get an inital plan.
 QUERY_INIT_TOWNFOLK = """Name: {}. Act like {}. {}
-{} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is warewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
+{} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is werewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
 Your objective is to win as a Townfolk by identifying and kicking out all warewolves.
 Give your strategy in 3 points, with each point not more than 20 words.
 Format -
@@ -33,9 +33,9 @@ Format -
 2) <strategy 2>
 3) <strategy 3>"""
 
-QUERY_INIT_WAREWOLF = """Name: {}. Act like {}. {}
-{} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is warewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
-Your objective is to win as a Warewolf by kicking out all townfolks before getting identified as a warewolf.
+QUERY_INIT_WEREWOLF = """Name: {}. Act like {}. {}
+{} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is werewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
+Your objective is to win as a Werewolf by kicking out all townfolks before getting identified as a werewolf.
 Detail of other Players -
 {}
 Give your strategy in 3 points, with each point not more than 20 words (your strategy can include things like bluffing).

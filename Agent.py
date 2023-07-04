@@ -28,7 +28,7 @@ class Agent():
     self.taskReach = False
     if "warewolf" in summary:
       self.warewolf = True
-      QUERY_INIT = QUERY_INIT_WAREWOLF.format(name, name, summary, name, details)
+      QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
       for player in details.split('\n'):
         self.remember(player.split(') ')[1])
     else: QUERY_INIT = QUERY_INIT_TOWNFOLK.format(name, name, summary, name)
