@@ -500,6 +500,7 @@ class Agent():
       self.sleepSoon = True
 
   def tavern(self,point):
+      (x,y) = point
       closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
       self.dest = "Stop"
       if(not isinstance(self.location_name, str)): self.location_name = "Tavern"
