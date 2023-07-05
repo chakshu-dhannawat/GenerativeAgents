@@ -239,7 +239,7 @@ class Game:
 
     self.reset()
 
-    self.playBgMusic()    
+    self.playBgMusic()  
 
 
   def getSingleContext(self,name1,name2):
@@ -318,6 +318,11 @@ class Game:
     for i in range(self.n):
       if(not self.alive[i] or self.warewolf[i]): continue
       self.agents[i].sleep()
+
+  def wakeUp(self):
+    for i in range(self.n):
+      if(not self.alive[i] or self.warewolf[i]): continue
+      self.agents[i].sleeping = False
   
   def nightVote(self):
 
@@ -325,6 +330,8 @@ class Game:
     self.night_phase_japanese_show = True
     log("Currently it is Night, the Warewolves will kill a townfolk...\n")
     self.votes = [0]*self.n
+
+    self.sleep()
 
     names = ""
     j = 1
@@ -391,6 +398,8 @@ class Game:
     self.elimination = self.kicked
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
+
+    self.wakeUp()
 
   def dayVote(self):
 
@@ -524,6 +533,8 @@ class Game:
       Clock_Speed_Prev = Clock_Speed
       Clock_Speed = 1
 
+      self.waitAssemble(voters)
+
       thread = threading.Thread(target=self.speak, args=(replyMsg,curr,))
       thread.start()
       self.agents[curr].msg = replyMsg 
@@ -614,6 +625,17 @@ class Game:
       y = TavernCenter[1] + int(TavernRadius * math.sin(theta))
       
       self.agents[voters[i]].tavern((x,y))
+
+  def waitAssemble(self, voters):
+    n = len(voters)
+    wait = True 
+    while wait:
+      wait = False
+      for i in range(n):
+        if len(self.agents[voters[i]].destination_path)!=0:
+          wait = True 
+          break
+      time.sleep(0.1) 
 
   def afternoon(self):
     # self.day_phase_show = True

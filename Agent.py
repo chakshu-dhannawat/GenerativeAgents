@@ -306,6 +306,7 @@ class Agent():
 
 
   def drawBubble(self):
+     if(self.sleeping): return
      if self.isSpeaking:
           self.speech_bubble()
   
@@ -496,7 +497,7 @@ class Agent():
 
   def sleep(self):
       self.destination_path = []
-      self.dest = random.choice['Hut 1','Hut 2']
+      self.dest = random.choice(['Hut 1','Hut 2'])
       self.sleepSoon = True
 
   def tavern(self,point):
@@ -586,7 +587,6 @@ class Agent():
   #         current_y += text_surface.get_height()
   
   def speech_bubble(self):
-      if(self.sleeping): return
       text = self.msg
       x = self.x
       y = self.y
