@@ -640,29 +640,30 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
+    #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
+    #EMOJI = {'Eat': eat_emoji }
 
-        #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
-        #EMOJI = {'Eat': eat_emoji }
-        
-        x = self.x
-        y = self.y
-        emoji_surface = EMOJI[emoji]
+    x = self.x
+    y = self.y
+    emoji_surface = EMOJI[emoji]
 
-        # Calculate the dimensions of the bubble based on the emoji size
-        bubble_padding = 10
-        bubble_width = emoji_surface.get_width() + bubble_padding * 2
-        bubble_height = emoji_surface.get_height() + bubble_padding * 2
-        bubble_rect = pygame.Rect(x - bubble_width // 2 -30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    # Calculate the dimensions of the bubble based on the emoji size
+    bubble_padding = 10
+    bubble_width = emoji_surface.get_width() + bubble_padding * 2
+    bubble_height = emoji_surface.get_height() + bubble_padding * 2
+    bubble_rect = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    bubble_rect2 = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
-        # Draw the bubble outline
-        pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
+    # Draw the bubble outline
+    outline_width = 3  # Adjust the line width as desired
+    pygame.draw.ellipse(self.win, BLACK, bubble_rect, outline_width)
+    bubble_rect.inflate_ip(-outline_width, -outline_width)
+    # Draw the bubble background
+    pygame.draw.ellipse(self.win, WHITE, bubble_rect,0)
 
-        # Draw the bubble background
-        pygame.draw.ellipse(self.win, WHITE, bubble_rect)
-
-        # Blit the emoji onto the bubble
-        emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
-        self.win.blit(emoji_surface, emoji_rect)
+    # Blit the emoji onto the bubble
+    emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
+    self.win.blit(emoji_surface, emoji_rect)
 
 
 

@@ -10,7 +10,7 @@ Path = "Assets\\"
 Emoji_Path = "Assets\\emojis\\"
 WIN_WIDTH = 1150
 WIN_HEIGHT = 800
-EMOJI_SIZE = (25,25)
+EMOJI_SIZE = (35,35)
 FPS = 60
 Clock_Speed = 60
 
