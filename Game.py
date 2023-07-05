@@ -379,6 +379,7 @@ class Game:
 
     votes = [0]*self.n
     log()
+    prev = None
     for i,voteId in enumerate(voters):
       #print("Agent",i)
       #print(voteId)
@@ -400,10 +401,14 @@ class Game:
         vote = self.names.index(voteName)
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
       votes[vote] += 1
+      if prev is not None: self.agents[prev].isSpeaking = False
+      self.agents[voteId].isSpeaking = True
       self.agents[voteId].msg = f"I vote to kick out {voteName}"
-      self.agents[voteId].speech_bubble()
-      self.agents[voteId].draw()
-      pygame.display.update()
+      prev = voteId
+      time.sleep(0.25)
+      # self.agents[voteId].speech_bubble()
+      # self.agents[voteId].draw()
+      # pygame.display.update()
 
     #print()
     # vote = extractImportance(agents[voteId].brain.query(QUERY_DAY.format(agents[voteId].name,context[voteId],conversation))) - 1

@@ -2360,3 +2360,204 @@ Yumi Okada: I suspect Riku Mori. Their voting pattern is suspicious, and we shou
 Riku Mori: I suspect Hina Sato. They have been quiet and haven't contributed much to the discussion.
 Hina Sato: Riku, your voting pattern is suspicious. Yumi, let's form an alliance to investigate and kick out the werewolf.
 Hina Sato: Riku, your voting pattern is suspicious. Yumi, let's form an alliance to investigate and kick out Riku.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/05/2023, 10:39:48
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe behavior and voting patterns during the day to identify suspicious individuals.
+2) Collaborate with other townfolks to share information and suspicions, but also be cautious of potential werewolf accomplices.
+3) Keep track of who has been voted out and their roles to eliminate possibilities and avoid repeating mistakes.
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze the voting patterns and behaviors of all players during the day to identify suspicious individuals.
+2) Collaborate with other townfolks to share information and confirm suspicions. Avoid sharing information with potential warewolves.
+3) Use logical reasoning to defend accusations and avoid voting out innocent players. Keep track of all players' actions and statements to make informed decisions.
+Yuka Suzuki's Strategy for Tuesday February 13 -
+Yuka Suzuki: 
+
+1) Listen carefully to arguments and opinions of others to identify patterns and inconsistencies.
+2) Form alliances with other townfolks to share information and suspicions.
+3) Keep track of who has been voted out and who has been accused, and use this information to make informed decisions.
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Pretend to be a helpful townfolk by suggesting a target for the night vote.
+2) Spread rumors and lies to create confusion and mistrust among the townfolks.
+3) Vote strategically to keep suspicion off of myself and onto other players.
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Riku Mori: Yumi and Yuka, let's review past votes and behavior. We need to eliminate potential wolves. I suggest we investigate Takeshi.
+Yumi Okada: "I find Takeshi suspicious too. But let's not forget about Yuka's voting pattern. I propose we vote to kick her out next."
+Riku Mori: "I noticed Kenta's behavior change after Hina's elimination. Let's investigate him instead of focusing on Yuka's voting pattern."
+Yuka Suzuki: "I noticed Kenta's behavior change after Hina's elimination. Let's investigate him instead of focusing on my voting pattern."
+Yumi Okada: "I noticed Yuka Suzuki's suspicious behavior during the last vote. Let's investigate her instead of Takeshi or Kenta."
+Yuka Suzuki: "I noticed Riku Mori's voting pattern has been consistent. Let's investigate Kenta and Takeshi instead of targeting each other."
+Riku Mori: "I agree with Yumi, but let's not overlook Yuka's suspicious behavior. Let's eliminate potential wolves before they strike again."
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/05/2023, 10:43:36
+
+=======Initializing Agents=======
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+Yuka Suzuki: 
+
+1) Listen to arguments carefully and consider the logic behind them before making a decision. 
+2) Observe the behavior of individuals and note any suspicious activity or inconsistencies in their stories. 
+3) Work with other townfolks to gather information and form a strong case against potential warewolves before voting to kick them out.
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe the voting patterns and behavior of players to deduce the werewolves' identities.
+2) Form alliances with other townfolks and share information to increase chances of identifying werewolves.
+3) Use logical reasoning and evidence to convince others to vote for suspected werewolves during the day discussions.
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe the voting pattern and behavior of players during the day to identify suspicious individuals.
+2) Collaborate with other townfolks to gather information and confirm suspicions.
+3) Keep track of who has been voted out and use that information to narrow down the potential warewolves.
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a helpful townfolk and offer suggestions to divert suspicion from myself.
+2) Create an alliance with another warewolf and work together to sway the votes in our favor.
+3) Blame the most vocal townfolks as the werewolves and create chaos to confuse them.
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Riku Mori: Yumi, you seem to be deflecting suspicion. Let's hear your reasoning for why you're not the werewolf.
+Yumi Okada: I suspect Riku Mori, he's been quiet and his actions are suspicious. Let's vote him out.
+Yuka Suzuki: "Yumi, your reasoning for suspecting Riku is weak. I think you're deflecting suspicion. Let's gather more evidence before voting."
+Riku Mori: "Yumi, your suspicion of me is baseless. I suspect Yuka, her voting pattern is inconsistent with her actions."
+Yumi Okada: "I agree with Riku's suspicion of Yuka. She's been inconsistent, and her actions suggest she's hiding something. Let's vote her out."
+Riku Mori: "I've noticed Yumi and Yuka always vote together. They might be collaborating. Let's consider them as potential werewolves."
+Yumi Okada: "Riku, you've been quiet about your actions. Suspicious. I suggest we vote you out."
+Yuka Suzuki: "Riku, you've been quiet about your actions. Suspicious. Yumi and I work together for the town's benefit. Let's vote Riku out."
+
+End of Conversation
+
+Conversation Rating - 4.017857142857143
+
+Yumi Okada voted to kick out Riku Mori
+Yuka Suzuki voted to kick out Riku Mori
+Riku Mori voted to kick out Yuka Suzuki
+
+Riku Mori has been lynched by the Villagers
+
+=== WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/05/2023, 11:05:57
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe and note the behavior of each person to identify suspicious patterns.
+2) Use deduction skills to analyze the voting patterns during the night and day.
+3) Form alliances with other townfolks and share information to narrow down the list of possible werewolves.
+Hina Sato's Strategy for Tuesday February 13 -
+1) Observe and analyze voting patterns to identify suspicious behavior.
+2) Form alliances with other townfolks and share information to narrow down suspects.
+3) Pay attention to the werewolf's body language and reactions during discussions and voting.
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen to everyone's arguments and try to identify inconsistencies in the werewolf's claims.
+2) Collaborate with others to gather information and suspicions on potential werewolves.
+3) Use evidence to persuade others to vote for suspected werewolves and try to avoid being swayed by emotional arguments.
+
+-----------------------
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act like a helpful townfolk, suggest kicking out suspicious players who are actually townfolks.
+2) Create confusion by accusing random players of being warewolves, while protecting fellow warewolves.
+3) Use my werewolf identity to gain trust of townfolks and manipulate their votes, ultimately kicking them out one by one.
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Riku Mori has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yuka Suzuki: I think we should focus on analyzing Hina's actions and claims more closely to see if they align with her role as a townsperson.
+Yumi Okada: Hina, you seem too quiet. Are you hiding something? I suggest we vote to kick out Hina Sato.
+Hina Sato: I noticed Yumi voted against Riku, who turned out to be innocent. Let's consider Yumi's voting pattern suspicious.
+Yumi Okada: I agree with Hina. Let's analyze Yuka's actions too. I suggest we vote to kick out Yuka Suzuki.
+Yuka Suzuki: I noticed Hina was the only one absent during the last vote. Can you explain where you were and why you didn't participate?
+Yumi Okada: Hina, your defense seems too rehearsed. Are you trying to cover your tracks? I suggest we vote to kick out Hina Sato.
+Yuka Suzuki: Hina, why did you miss the last vote? Your absence is suspicious and needs explanation.
+Hina Sato: Yuka, I was gathering information on the werewolves. Yumi, your accusations seem baseless. Let's analyze your voting patterns.
+
+End of Conversation
+
+Conversation Rating - 4.446428571428571
+
+Yumi Okada voted to kick out Hina Sato
+Yuka Suzuki voted to kick out Hina Sato
+Hina Sato voted to kick out Yumi Okada
+
+Hina Sato has been lynched by the Villagers
+
+=== WAREWOLVES WIN ===
