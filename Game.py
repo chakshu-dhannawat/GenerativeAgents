@@ -646,7 +646,7 @@ class Game:
       self.run = False
       log('\n=== TOWNFOLKS WIN ===')
       pygame.quit()
-    if(players[1]>=players[0]):
+    if(players[1]>=players[0] or (not self.Night and players[1]>=players[0]-1)):
       self.run = False 
       log('\n=== WAREWOLVES WIN ===')
       pygame.quit()
