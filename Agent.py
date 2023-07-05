@@ -235,40 +235,74 @@ class Agent():
     self.dest = newLocation
     self.task = newLocation
 
-  def graphics_load(self):
-        walk_right = []
-        walk_left = []
-        walk_up = []
-        walk_down =[]
-        temp = None
-        # Get the list of image files in the specified folder
-        # folder_path = os.path.join(os.getcwd(), self.folder_name)
-        folder_path = Path + self.folder_name 
-        image_files = os.listdir(folder_path)
 
-        # Load images into walkRight,walkLeft, walkUP, walkDown arrays
-        for file_name in image_files:
-            if file_name.startswith('R'):
-                # self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
-                temp = pygame.image.load(os.path.join(folder_path, file_name))
-                temp = pygame.transform.scale(temp, (40,40))
-                walk_right.append(temp)
-            elif file_name.startswith('L'):
-                temp = pygame.image.load(os.path.join(folder_path, file_name))
-                temp = pygame.transform.scale(temp, (40,40))
-                walk_left.append(temp)
-            elif file_name.startswith('U'):
-                temp = pygame.image.load(os.path.join(folder_path, file_name))
-                temp = pygame.transform.scale(temp, (40,40))
-                walk_up.append(temp)
-            elif file_name.startswith('D'):
-                # walk_down.append(pygame.image.load(os.path.join(folder_path, file_name)))
-                temp = pygame.image.load(os.path.join(folder_path, file_name))
-                temp = pygame.transform.scale(temp, (40,40))
-                walk_down.append(temp)
-        self.char_rect = walk_down[0].get_rect() 
-        return walk_right, walk_left, walk_up, walk_down, walk_down[0]
-  
+  def graphics_load(self):
+    walk_right = []
+    walk_left = []
+    walk_up = []
+    walk_down = []
+    temp = None
+    folder_path = Path + self.folder_name
+    image_files = os.listdir(folder_path)
+
+    #Detect if werewolf
+
+
+    if self.warewolf:
+       
+      # Load images into walkRight, walkLeft, walkUp, walkDown arrays
+      for file_name in image_files:
+          if file_name.startswith('R'):
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40, 40))
+              outline_image = outline_character(temp)
+              walk_right.append(outline_image)
+          elif file_name.startswith('L'):
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40, 40))
+              outline_image = outline_character(temp)
+              walk_left.append(outline_image)
+          elif file_name.startswith('U'):
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40, 40))
+              outline_image = outline_character(temp)
+              walk_up.append(outline_image)
+          elif file_name.startswith('D'):
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40, 40))
+              outline_image = outline_character(temp)
+              walk_down.append(outline_image)
+      self.char_rect = walk_down[0].get_rect()
+      return walk_right, walk_left, walk_up, walk_down, walk_down[0]
+    
+    else:
+      # Townfolk
+      # Load images into walkRight,walkLeft, walkUP, walkDown arrays
+      for file_name in image_files:
+          if file_name.startswith('R'):
+              # self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40,40))
+              walk_right.append(temp)
+          elif file_name.startswith('L'):
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40,40))
+              walk_left.append(temp)
+          elif file_name.startswith('U'):
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40,40))
+              walk_up.append(temp)
+          elif file_name.startswith('D'):
+              # walk_down.append(pygame.image.load(os.path.join(folder_path, file_name)))
+              temp = pygame.image.load(os.path.join(folder_path, file_name))
+              temp = pygame.transform.scale(temp, (40,40))
+              walk_down.append(temp)
+      self.char_rect = walk_down[0].get_rect() 
+      return walk_right, walk_left, walk_up, walk_down, walk_down[0]
+      
+
+
+
   def drawBubble(self):
      if self.isSpeaking:
           self.speech_bubble()

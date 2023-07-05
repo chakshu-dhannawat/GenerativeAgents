@@ -5,6 +5,7 @@ from Params import *
 from Queries import QUERY_EVALUATION_METRICS
 from threading import Lock
 import os
+import pygame
 
 lock = Lock()
 
@@ -199,5 +200,38 @@ def getAllDetails():
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
     
+def outline_character(image):
+    # Convert the image to a surface with per-pixel alpha
+    image = image.convert_alpha()
+    # Get the width and height of the image
+    width, height = image.get_size()
+    # Create a blank surface with per-pixel alpha
+    outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
+    # Iterate over each pixel in the image
+    for x in range(width):
+        for y in range(height):
+            # Get the color of the current pixel
+            color = image.get_at((x, y))
+            # Check if the pixel is fully opaque
+            if color.a > 0:
+                # Check if any of the neighboring pixels are transparent
+                if (
+                    get_alpha(image, x - 1, y) == 0
+                    or get_alpha(image, x + 1, y) == 0
+                    or get_alpha(image, x, y - 1) == 0
+                    or get_alpha(image, x, y + 1) == 0
+                ):
+                    # Set the color of the current pixel to red
+                    color = (255, 0, 0, 255)
+            # Set the color of the current pixel on the outline image
+            outline_image.set_at((x, y), color)
+    return outline_image
+
+def get_alpha(image, x, y):
+    width, height = image.get_size()
+    if 0 <= x < width and 0 <= y < height:
+        return image.get_at((x, y)).a
+    return 0
+
 
 details = getAllDetails()
