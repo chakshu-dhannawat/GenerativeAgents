@@ -400,6 +400,10 @@ class Game:
         vote = self.names.index(voteName)
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
       votes[vote] += 1
+      self.agents[voteId].msg = f"I vote to kick out {voteName}"
+      self.agents[voteId].speech_bubble()
+      self.agents[voteId].draw()
+      pygame.display.update()
 
     #print()
     # vote = extractImportance(agents[voteId].brain.query(QUERY_DAY.format(agents[voteId].name,context[voteId],conversation))) - 1
