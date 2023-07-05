@@ -2561,3 +2561,73 @@ Hina Sato voted to kick out Yumi Okada
 Hina Sato has been lynched by the Villagers
 
 === WAREWOLVES WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/05/2023, 11:11:27
+
+=======Initializing Agents=======
+
+Yuka Suzuki's Strategy for Tuesday February 13 -
+1) Listen carefully to all arguments and reasoning presented by other townfolks during the day.
+2) Keep track of voting patterns and suspicious behaviors of players during both day and night phases.
+3) Use collected information to form alliances and make strategic votes to eliminate suspected warewolves.
+Riku Mori's Strategy for Tuesday February 13 -
+1) Observe behavior patterns of players during discussions and voting to identify suspicious activity.
+2) Keep track of who has been voted out and who is still in the game to narrow down potential werewolves.
+3) Collaborate with other townfolks to share information and come to a consensus on who to vote out.
+Hina Sato's Strategy for Tuesday February 13 -
+1) Pay attention to voting patterns and try to identify any suspicious behavior or alliances among the players.
+2) Keep track of who has been voted out and who is still alive to narrow down the list of possible warewolves.
+3) Use logical reasoning and deduction to identify and eliminate potential warewolves and try to encourage other townfolks to do the same.
+
+-----------------------
+
+
+-----------------------
+
+
+-----------------------
+
+Yumi Okada's Strategy for Tuesday February 13 -
+1) Act as a helpful and cooperative townfolk, gaining their trust and deflecting suspicion.
+2) Blame and vote out other townfolks, stirring up confusion and mistrust among them.
+3) Convince the other warewolves to vote strategically and target the most suspicious townfolks first.
+
+-----------------------
+
+
+=======Initializing Game=======
+
+
+=======Adding Memories=======
+
+
+=======Warewolf Game=======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Hina Sato has been killed by the Warewolves
+
+
+Currently it is Day, the Villagers will lynch someone...
+
+Yuka Suzuki: I noticed Yumi was quiet during Hina's accusation. I think we should focus on her this round.
+Yumi Okada: I noticed Riku defending Yuka when she was accused. Maybe they are in cahoots. Let's vote Riku.
+Yuka Suzuki: Riku, you voted for Hina last round, but now you're defending Yumi. Why the change? I think we should vote Riku.
+Riku Mori: Yumi, your voting patterns have been suspicious. Let's vote you out next and see if the werewolf count goes down.
+Yumi Okada: Riku, you're trying too hard to convince everyone that I'm the werewolf. Are you trying to deflect suspicion from yourself?
+Riku Mori: Yumi, your voting pattern seems inconsistent. Let's vote Yumi out and see if the werewolf count goes down.
+Yuka Suzuki: Yumi, you voted for Hina last round. Can you explain your reasoning? Let's hear everyone out before making any decisions.
+Riku Mori: Yumi, you mentioned investigating Hina's voting patterns. Let's focus on that and see if it leads to any new leads.
+
+End of Conversation
+
+Conversation Rating - 4.267857142857143
+
+Yumi Okada voted to kick out Riku Mori
+Yuka Suzuki voted to kick out Yumi Okada
+Riku Mori voted to kick out Yumi Okada
+
+Yumi Okada has been lynched by the Villagers
+
+=== TOWNFOLKS WIN ===

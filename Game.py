@@ -405,7 +405,7 @@ class Game:
       self.agents[voteId].isSpeaking = True
       self.agents[voteId].msg = f"I vote to kick out {voteName}"
       prev = voteId
-      time.sleep(0.25)
+      time.sleep(0.5)
       # self.agents[voteId].speech_bubble()
       # self.agents[voteId].draw()
       # pygame.display.update()
