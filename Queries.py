@@ -117,7 +117,8 @@ The werewolves involved in the discussion are -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
-The dialogue should be on point, instead of saying you agree with someone, say something intelligently that adds to the conversation to maximize the chance of werewolves winning.
+Don't add any observation in the dialogue which has not been provided in this prompt. 
+Say something smart that adds to the conversation to maximize the chance of werewolves winning.
 The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
@@ -144,7 +145,8 @@ The werewolves involved in the discussion are -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
-The dialogue should be on point, instead of saying you agree with someone, say something intelligently that adds to the conversation to maximize the chance of werewolves winning.
+Don't add any observation in the dialogue which has not been provided in this prompt. 
+Say something smart that adds to the conversation to maximize the chance of werewolves winning.
 The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
@@ -170,9 +172,11 @@ These Players are still remaining in the village -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
-The dialogue should be on point, instead of saying you agree with someone, say what you want to add to the conversation.
-You can also suggest to kick someone out it your dialogue.
-The dialogue should be of maximum 25 words.
+The dialogue should be smart to ensure your win.
+Don't include any observation in the dialogue which has not been provided in this prompt. 
+You can ask questions to other remaining players.
+The dialogue should sound casual.
+The dialogue should be of maximum 25 words. But it can be just a few words long also.
 
 Format - {}: Dialogue"""
 
@@ -187,7 +191,7 @@ The werewolf tries to maintain their innocence while deflecting suspicion. Other
 Context of Remaining Players in {}'s Memory -
 {}
 
-Here is a snippet from the dialogue history:
+Here is a snippet from the Dialogue History:
 {}
 
 These Players are still remaining in the village - 
@@ -201,9 +205,14 @@ These Players are still remaining in the village -
 It is {}'s opportunity to speak, and to change the conversation in their favour. Share your insights or counterarguments or suspicions regarding the ongoing investigation.
 
 Suggest exactly one dialogue from {}.
-The dialogue should be on point, instead of saying you agree with someone, say something new and specific to add to the conversation.
-You can also suggest to kick someone out it your dialogue.
-The dialogue should be of maximum 25 words.
+Analyse the Dialogue History properly, so form your dialogue based on it. 
+You can ask questions to other remaining players. 
+Don't include any observation in the dialogue which has not been provided in this prompt. 
+You can also suggest to kick someone out it your dialogue. 
+The dialogue should sound like a human and should be an intelligent analyis of the Observation, Contexts, Dialogue History, and Strategy.
+The dialogue should be smart to ensure your win.
+The dialogue should sound casual.
+The dialogue should be of maximum 25 words. But it can be just a few words long also.
 
 Format - {}: Dialogue"""
 

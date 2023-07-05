@@ -67,10 +67,6 @@ farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
 
-# music = pygame.mixer.music.load(Path+'music.mp3')
-# pygame.mixer.music.play(-1)
-
-
 '''
 ====================
 Fire 
@@ -243,6 +239,9 @@ class Game:
 
     self.reset()
 
+    self.playBgMusic()    
+
+
   def getSingleContext(self,name1,name2):
       self.contexts[name1][name2] = self.agents[self.ids[name1]].vote_context(name2)
      
@@ -284,16 +283,18 @@ class Game:
   #     for process in processes:
   #         process.join()
 
-  def speak(self,text):
+  def speak(self,text,curr):
     voicePath = "Assets\\voice.mp3"
     translation = translator.translate(text)
     tts = gTTS(translation, lang='ja')
     tts.save(voicePath)
+    self.agents[curr].isSpeaking = True
     music = pygame.mixer.music.load(voicePath)
     pygame.mixer.music.play(1)
     while pygame.mixer.music.get_busy():
       time.sleep(0.1)
     pygame.mixer.music.unload()
+    self.agents[curr].isSpeaking = False
   
   def nightVoteWarewolf(self,i,names):
     # self.getContext(self.names[i],True)
@@ -329,26 +330,26 @@ class Game:
       names = names + f"{j}) {self.names[i]}\n"
       j += 1
     names = names[:-1]
-    
-    if(werewolves>1):
       
-      voters = []
-      for i in range(self.n):
-        if(self.alive[i] and self.warewolf[i]):
-          voters.append(i)
+    voters = []
+    for i in range(self.n):
+      if(self.alive[i] and self.warewolf[i]):
+        voters.append(i)
 
-      self.assembleTavern(voters)
+    self.assembleTavern(voters)
 
-      context = []
+    context = []
 
-      threads = []
-      for i in range(self.n):
-          if(not self.alive[i] or not self.warewolf[i]): continue
-          thread = threading.Thread(target=self.getContext, args=(self.names[i],True,))
-          thread.start()
-          threads.append(thread)
-      for thread in threads:
-          thread.join()
+    threads = []
+    for i in range(self.n):
+        if(not self.alive[i] or not self.warewolf[i]): continue
+        thread = threading.Thread(target=self.getContext, args=(self.names[i],True,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+
+    if(werewolves>1):
 
       for i in range(self.n):
         if(not self.alive[i] or not self.warewolf[i]): context.append("")
@@ -360,7 +361,13 @@ class Game:
                 sr += 1
             context.append(voteContext[:-1])
 
+      global MinDialogues
+      MinDialoguesPrev = MinDialogues
+      MinDialogues = 4
+
       conversation = self.groupConversation(context,voters,True)
+
+      MinDialogues = MinDialoguesPrev
 
     threads = []
     for i in range(self.n):
@@ -507,12 +514,13 @@ class Game:
 
       global Clock_Speed
       
-      Clock_Speed = 2
+      Clock_Speed_Prev = Clock_Speed
+      Clock_Speed = 1
 
-      thread = threading.Thread(target=self.speak, args=(replyMsg,))
+      thread = threading.Thread(target=self.speak, args=(replyMsg,curr,))
       thread.start()
       self.agents[curr].msg = replyMsg 
-      self.agents[curr].isSpeaking = True 
+      # self.agents[curr].isSpeaking = True 
       # self.draw_window()
       prev = curr
       moderator = GPT()
@@ -552,19 +560,22 @@ class Game:
             reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew), remaining)
 
           if(prev!=curr):
-            rating += getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
-            rating_n += 1
+            try:
+              rating += getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
+              rating_n += 1
+            except:
+              pass
           thread.join()
           try:
             replyMsg = extract_dialogue(reply)
           except: 
             replyMsg = reply
-          thread = threading.Thread(target=self.speak, args=(replyMsg,))
+          thread = threading.Thread(target=self.speak, args=(replyMsg,curr,))
           thread.start()
           # reply = self.agents[curr].groupconv(self.kicked, context[curr], history)
-          self.agents[prev].isSpeaking = False 
+          # self.agents[prev].isSpeaking = False 
           self.agents[curr].msg = replyMsg 
-          self.agents[curr].isSpeaking = True  
+          # self.agents[curr].isSpeaking = True  
           # self.draw_window()
           prev = curr
           history = history + '\n'
@@ -578,8 +589,9 @@ class Game:
       # log(f"Response Relevance - {calculate_response_relevance(history)}")
       # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       thread.join()
-      self.agents[prev].isSpeaking = False 
-      Clock_Speed = 60
+      # self.agents[prev].isSpeaking = False 
+      Clock_Speed = Clock_Speed_Prev
+      self.playBgMusic()
       return history
   
 
@@ -652,12 +664,16 @@ class Game:
        if(self.alive[i]):
           players[self.warewolf[i]]+=1
     if(players[1]==0):
-      self.run = False
       log('\n=== TOWNFOLKS WIN ===')
+      self.townfolks_win_japanese_show = True
+      time.sleep(5)
+      self.run = False
       pygame.quit()
     if(players[1]>=players[0] or (not self.Night and players[1]>=players[0]-1)):
-      self.run = False 
       log('\n=== WAREWOLVES WIN ===')
+      self.warewolves_win_japanese_show = True
+      time.sleep(5)
+      self.run = False 
       pygame.quit()
           
     
@@ -737,6 +753,11 @@ class Game:
           self.bg = self.killframes[self.killId//Speed_Killing]
         self.killId+=1
 
+  def playBgMusic(self):
+    music = pygame.mixer.music.load(Path+'music.mp3')
+    pygame.mixer.music.play(-1)
+     
+  
   def stepPhase(self):
     if(not self.Night):
       if(self.bgId==0):
@@ -814,46 +835,39 @@ class Game:
   
   
   def draw_window(self) : 
-      # if(self.elimination):
-      #   self.win.blit(self.bg2,(0,0))
-      #   text = self.elimination + " has been lynched"
-      #   text_surface = font.render(text,True,RED)
-      #   self.win.blit(text_surface,(400,400))
-      #   pygame.display.update()
-      #   time.sleep(5)
-      #   self.elimination = None
-      # elif(self.night_elimination):
-      #     self.win.blit(self.bg2,(0,0))
-      #     text = self.night_elimination + " has been killed by the warewolves"
-      #     text_surface = font.render(text,True,RED)
-      #     self.win.blit(text_surface,(400,400))
-      #     pygame.display.flip()
-      #     time.sleep(5)
-      #     self.night_elimination = None
-      # else:
-      self.win.blit(self.bg,(0,0))
 
-      if(self.elimination is not None and not self.killing):
-        self.drawElimination()
-
-      if(not self.killing and self.elimination is None):
-
-        self.draw_nobody_lynch()
-        self.draw_phase()
-
-        for i,player in enumerate(self.agents): 
-            if(self.alive[i]):
-                player.draw() 
-        self.draw_fire()  
-        for i,player in enumerate(self.agents): 
-            if(self.alive[i]):
-                player.drawBubble() 
-
-        self.drawTaskEmoji()  
-
-        self.draw_time()
-
+    if(self.warewolves_win_japanese_show):
+      self.win.blit(self.warewolves_win_japanese,(0,0))
       pygame.display.update()
+      return
+    if(self.townfolks_win_japanese_show):
+      self.win.blit(self.townfolks_win_japanese,(0,0))
+      pygame.display.update()
+      return
+
+    self.win.blit(self.bg,(0,0))
+
+    if(self.elimination is not None and not self.killing):
+      self.drawElimination()
+
+    if(not self.killing and self.elimination is None):
+
+      self.draw_nobody_lynch()
+      self.draw_phase()
+
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.draw() 
+      self.draw_fire()  
+      for i,player in enumerate(self.agents): 
+          if(self.alive[i]):
+              player.drawBubble() 
+
+      self.drawTaskEmoji()  
+
+      self.draw_time()
+
+    pygame.display.update()
 
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
