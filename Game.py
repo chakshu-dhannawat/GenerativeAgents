@@ -50,6 +50,15 @@ night_pahse = pygame.image.load('Assets\\Phases\\Night_Phase.png')
 day_phase = pygame.image.load('Assets\\Phases\\Day_Phase.png')
 voting_phase = pygame.image.load('Assets\\Phases\\Voting Phase.png')
 start_phase = pygame.image.load('Assets\\Phases\\START~2.png')
+game_end = pygame.image.load('Assets\\Phases\\Game_End.png')
+warewolves_win = pygame.image.load('Assets\\Phases\\Warewolves_Win.png')
+townfolks_win = pygame.image.load('Assets\\Phases\\Townfolks_Win.png')
+
+night_phase_japanese = pygame.image.load('Assets\\Phases\\Night_Phase_Japanese.png')
+day_phase_japanese = pygame.image.load('Assets\\Phases\\Day_Phase_Japanese.png')
+voting_phase_japanese = pygame.image.load('Assets\\Phases\\Voting_Phase_Japanese.png')
+townfolks_win_japanese = pygame.image.load('Assets\\Phases\\Townfolks_Win_Japanese.png')
+warewolves_win_japanese = pygame.image.load('Assets\\Phases\\Warewolves_Win_Japanese.png')
 
 killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
 farewellframesW = [pygame.image.load(Path+f'Farewell\\Warewolf\\{i}.png') for i in range(N_Farewell_W)]
@@ -207,13 +216,29 @@ class Game:
     self.elim = 0
     self.night_elimination = None
     self.day_phase = pygame.transform.scale(day_phase, DEFAULT_IMAGE_SIZE)
+    self.day_phase_japanese = pygame.transform.scale(day_phase_japanese, DEFAULT_IMAGE_SIZE)
     self.night_phase = pygame.transform.scale(night_pahse, DEFAULT_IMAGE_SIZE)
+    self.night_phase_japanese = pygame.transform.scale(night_phase_japanese, DEFAULT_IMAGE_SIZE)
     self.voting_phase = pygame.transform.scale(voting_phase, DEFAULT_IMAGE_SIZE)
+    self.voting_phase_japanese = pygame.transform.scale(voting_phase_japanese, DEFAULT_IMAGE_SIZE)
+    self.townfolks_win = pygame.transform.scale(townfolks_win, DEFAULT_IMAGE_SIZE)
+    self.townfolks_win_japanese = pygame.transform.scale(townfolks_win_japanese, DEFAULT_IMAGE_SIZE)
+    self.warewolves_win = pygame.transform.scale(warewolves_win, DEFAULT_IMAGE_SIZE)
+    self.warewolves_win_japanese = pygame.transform.scale(warewolves_win_japanese, DEFAULT_IMAGE_SIZE)
     self.start_phase = pygame.transform.scale(start_phase, DEFAULT_IMAGE_SIZE)
+    self.end_phase = pygame.transform.scale(game_end, DEFAULT_IMAGE_SIZE)
     self.day_phase_show = False
+    self.day_phase_japanese_show = False
     self.night_phase_show = False
+    self.night_phase_japanese_show = False
     self.voting_phase_show = False
+    self.voting_phase_japanese_show = False
+    self.townfolks_win_show = False
+    self.townfolks_win_japanese_show = False
+    self.warewolves_win_show = False
+    self.warewolves_win_japanese_show = False
     self.start_phase_show = True
+    self.end_phase_show = False
     self.nobodyLynch = False
 
     self.reset()
@@ -289,8 +314,8 @@ class Game:
 
   def nightVote(self):
 
-    self.night_phase_show = True
-
+    # self.night_phase_show = True
+    self.night_phase_japanese_show = True
     log("Currently it is Night, the Warewolves will kill a townfolk...\n")
     self.votes = [0]*self.n
 
@@ -323,8 +348,8 @@ class Game:
 
   def dayVote(self):
 
-    self.voting_phase_show = True
-
+    # self.voting_phase_show = True
+    self.voting_phase_japanese_show = True
     log("Currently it is Day, the Villagers will lynch someone...\n")
 
     context = []
@@ -529,7 +554,8 @@ class Game:
       self.agents[voters[i]].tavern((x,y))
 
   def afternoon(self):
-    self.day_phase_show = True
+    # self.day_phase_show = True
+    self.day_phase_japanese_show = True
     self.generatePlanDay()
     while True:
       if(calendar.dt.hour in [1,13]): break
@@ -818,18 +844,33 @@ class Game:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
 
   def draw_phase(self):
-      if(self.night_phase_show):
-        self.win.blit(self.night_phase,(0,0))
-        self.night_phase_show = False
-      elif(self.day_phase_show):
-        self.win.blit(self.day_phase,(0,0))
-        self.day_phase_show = False
-      elif(self.voting_phase_show):
-        self.win.blit(self.voting_phase,(0,0))
-        self.voting_phase_show = False
+      if(self.night_phase_japanese_show):
+        # self.win.blit(self.night_phase,(0,0))
+        # self.night_phase_show = False
+        self.win.blit(self.night_phase_japanese,(0,0))
+        self.night_phase_japanese_show = False
+      elif(self.day_phase_japanese_show):
+        # self.win.blit(self.day_phase,(0,0))
+        # self.day_phase_show = False
+        self.win.blit(self.day_phase_japanese,(0,0))
+        self.day_phase_japanese_show = False
+      elif(self.voting_phase_japanese_show):
+        # self.win.blit(self.voting_phase,(0,0))
+        # self.voting_phase_show = False
+        self.win.blit(self.voting_phase_japanese,(0,0))
+        self.voting_phase_japanese_show = False
       elif(self.start_phase_show):
         self.win.blit(self.start_phase,(0,0))
         self.start_phase_show = False
+      elif(self.townfolks_win_japanese_show):
+        self.win.blit(self.townfolks_win_japanese,(0,0))
+        self.townfolks_win_japanese_show = False
+      elif(self.warewolves_win_japanese_show):
+        self.win.blit(self.warewolves_win_japanese,(0,0))
+        self.warewolves_win_japanese_show = False
+      elif(self.end_phase_show):
+        self.win.blit(self.end_phase,(0,0))
+        self.end_phase_show = False
       else:
          return
       pygame.display.update()
