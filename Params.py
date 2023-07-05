@@ -67,7 +67,9 @@ Town
 
 townName = "Mk 1 Village"
 Initial = "Well"
-InitialPositions = [LOCATION_MAP[Initial]]*10
+# InitialPositions = [LOCATION_MAP[Initial]]*10
+InitialPositions = ["Tavern","Well","Shrine","Fishing Pond","Electricity House","Cattle Farm","Tavern","Well","Shrine","Fishing Pond"]
+InitialPositions = [LOCATION_MAP[pos] for pos in InitialPositions]
 
 nodes = {"Hut 1": "The first hut",
         "Hut 2": "The second hut",
@@ -136,9 +138,9 @@ agentsDetails = [
     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
+    # {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
+    # {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
+    # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
 ]
 
 # agentsDetails = [
