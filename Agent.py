@@ -127,6 +127,16 @@ class Agent():
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s observations about {person}",n_memory))
     return self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False)
 
+  def nightconv_init(self,context,remainingT,remainingW):
+    dialogue = self.brain.query(QUERY_NIGHTCONV_INIT.format(self.name,context,remainingT,remainingW,self.name,self.strategy,self.name,self.name,self.name),remember=False)
+    dialogue = dialogue.replace('\n', '')
+    return dialogue
+
+  def nightconv(self,context,history,remainingT,remainingW):
+    dialogue = self.brain.query(QUERY_NIGHTCONV_INIT.format(self.name,context,history,remainingT,remainingW,self.name,self.strategy,self.name,self.name,self.name),remember=False)
+    dialogue = dialogue.replace('\n', '')
+    return dialogue
+
   def groupconv_init(self,kicked,context,remaining):
     cover = "Warewolf" if self.warewolf else "Townfolk"
     dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False)
@@ -435,6 +445,7 @@ class Agent():
       # self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
 
   def choose_location(self,location):
+      if(not isinstance(self.location_name, str)): self.location_name = "Tavern"
       self.destination_path = town.shortestPath(self.location_name,location)
       # self.destination = self.destination_path[0]
       # self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
@@ -442,6 +453,7 @@ class Agent():
   def tavern(self,point):
       closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
       self.dest = "Stop"
+      if(not isinstance(self.location_name, str)): self.location_name = "Tavern"
       self.destination_path = self.destination_path + town.shortestPath(self.location_name,TavernNodes[closest_index])
       
       # self.destination = self.destination_path[0]

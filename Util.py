@@ -73,11 +73,11 @@ def getPeople():
       people = people + agentsDetails[i]['name'] + " - " + agentsDetails[i]['description'] + '; '
     return people
 
-def getNames():
-    people = ""
-    for i in range(len(agentsDetails)):
-      people = people + agentsDetails[i]['name'] + '; '
-    return people
+# def getNames():
+#     people = ""
+#     for i in range(len(agentsDetails)):
+#       people = people + agentsDetails[i]['name'] + '; '
+#     return people
 
 def getMemories(stream, n=100):
     #TODO: Retrieve using timestamp
@@ -141,7 +141,7 @@ def getResponseRating(dialogue, response, context, agent1, agent2):
   # log(f"Average Dialogue Rating: {average_rating}")
   return average_rating
 
-def extract_dialogue(string):
+def extract_dialogue(dialogue):
     # dialogue = re.search(': "(.*?)"', string)
     # if dialogue:
     #     return dialogue.group(1)
@@ -157,20 +157,38 @@ def extract_dialogue(string):
     #     return re.search(": (.*?)", string).group(1)
     # return None
 
-    return string.split(':')[1].strip()
+    dialogue = dialogue.split(':')[1].strip()
+    if(dialogue[0] in ['\'','"']):
+      dialogue = dialogue[1:-1]
+    return dialogue
 
 def getDetails(game,includeCover=False):
     details = ""
     cover = 'townfolk'
+    sr = 0
     for i in range(game.n):
       if(not game.alive[i]): continue
+      sr += 1
       if(not includeCover):
-         details = details + f"{i+1}) {game.names[i]}\n"
+         details = details + f"{sr}) {game.names[i]}\n"
          continue
       if(game.warewolf[i]): cover = 'warewolf'
       else: cover = 'townfolk'
-      details = details + f"{i+1}) {game.names[i]}: {cover}\n"
+      details = details + f"{sr}) {game.names[i]}: {cover}\n"
     return details[:-1]
+
+def getNames(game,townfolks=True):
+    details = ""
+    sr = 0
+    for i in range(game.n):
+      if(not game.alive[i]): continue
+      if(townfolks and not game.warewolf[i]):
+        sr += 1
+        details = details + f"{sr}) {game.names[i]}\n"
+      if(not townfolks and game.warewolf[i]):
+        sr += 1
+        details = details + f"{sr}) {game.names[i]}\n"
+    return details[:-1]   
 
 def getAllDetails():
     details = ""

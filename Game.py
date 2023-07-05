@@ -227,7 +227,7 @@ class Game:
     for i in range(self.n):
         if(not self.alive[i]): continue
         if(name==self.names[i]): continue
-        if(night and self.warewolf[i]): continue
+        #if(night and self.warewolf[i]): continue
         thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i],))
         thread.start()
         threads.append(thread)
@@ -271,7 +271,7 @@ class Game:
     pygame.mixer.music.unload()
   
   def nightVoteWarewolf(self,i,names):
-    self.getContext(self.names[i],True)
+    # self.getContext(self.names[i],True)
     voteContext = ""
     sr = 1
     for key, value in self.contexts[self.names[i]].items():
@@ -296,17 +296,50 @@ class Game:
 
     names = ""
     j = 1
+    werewolves = 0
     for i in range(self.n):
+      if(self.warewolf[i] and self.alive[i]): werewolves+=1
       if(self.warewolf[i]): continue
       if(not self.alive[i]): continue
       names = names + f"{j}) {self.names[i]}\n"
       j += 1
     names = names[:-1]
+    
+    if(werewolves>1):
+      
+      voters = []
+      for i in range(self.n):
+        if(self.alive[i] and self.warewolf[i]):
+          voters.append(i)
+
+      self.assembleTavern(voters)
+
+      context = []
+
+      threads = []
+      for i in range(self.n):
+          if(not self.alive[i] or not self.warewolf[i]): continue
+          thread = threading.Thread(target=self.getContext, args=(self.names[i],True,))
+          thread.start()
+          threads.append(thread)
+      for thread in threads:
+          thread.join()
+
+      for i in range(self.n):
+        if(not self.alive[i] or not self.warewolf[i]): context.append("")
+        else: 
+            voteContext = ""
+            sr = 1
+            for key, value in self.contexts[self.names[i]].items():
+                voteContext += f"{sr}) {key}: {value}\n"
+                sr += 1
+            context.append(voteContext[:-1])
+
+      conversation = self.groupConversation(context,voters,True)
 
     threads = []
     for i in range(self.n):
-        if(not self.warewolf[i]): continue
-        if(not self.alive[i]): continue
+        if(not self.warewolf[i] or not self.alive[i]): continue
         thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names,))
         thread.start()
         threads.append(thread)
@@ -353,27 +386,6 @@ class Game:
               voteContext += f"{sr}) {key}: {value}\n"
               sr += 1
           context.append(voteContext[:-1])
-
-    # votes = [0]*self.n
-    # log()
-    # for i,voteId in enumerate(voters):
-    #   names = ""
-    #   j = 1
-    #   for id in voters:
-    #     if(id==voteId): continue
-    #     names = names + f"{j}) {self.names[id]}\n"
-    #     j += 1
-    #   names = names[:-1]
-    #   voteName = self.agents[voteId].brain.query(
-    #      QUERY_DAY_BEFORE.format(self.agents[voteId].name,context[voteId]
-    #                              ,self.agents[voteId].name,names))
-    #   try:
-    #     vote = self.names.index(voteName)
-    #   except:
-    #     voteName = self.findName(voteName)
-    #     vote = self.names.index(voteName)
-    #   log(f"{self.agents[voteId].name} voted to kick out {voteName}")
-    #   votes[vote] += 1
 
     conversation = self.groupConversation(context,voters)
 
@@ -436,20 +448,32 @@ class Game:
         return name
     raise Exception(f"Invalid Name - {currName}")
 
-  def groupConversation(self, context, voters):
+  def groupConversation(self, context, voters, night=False):
       history = ""
-      
-      remainingTownfolk = getDetails(self)
-      remainingWarewolf = getDetails(self,True)
+
+      if(night):
+        remainingTownfolk = getNames(self,True)
+        remainingWarewolf = getNames(self,False)
+      else:
+        remainingTownfolk = getDetails(self)
+        remainingWarewolf = getDetails(self,True)         
 
       curr = random.choice(voters)
-      remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
-      reply = self.agents[curr].groupconv_init(self.kicked,context[curr],remaining)
+
+      if(night):
+        reply = self.agents[curr].nightconv_init(context[curr],remainingTownfolk,remainingWarewolf)
+      else:
+        remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
+        reply = self.agents[curr].groupconv_init(self.kicked,context[curr],remaining)
 
       try:
         replyMsg = extract_dialogue(reply)
       except: 
         replyMsg = reply
+
+      global Clock_Speed
+      
+      Clock_Speed = 2
 
       thread = threading.Thread(target=self.speak, args=(replyMsg,))
       thread.start()
@@ -477,13 +501,22 @@ class Game:
           # currName = moderator.query(QUERY.format(history,names))
           currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
           if("End Conversation" in currName): break
+          
           try:
             curr = self.ids[currName]
           except:
-            currName = self.findName(currName)
-            curr = self.ids[currName]
-          remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
-          reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew), remaining)
+            try:
+              currName = self.findName(currName)
+              curr = self.ids[currName]
+            except:
+              break
+          
+          if(night):
+            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew), remainingTownfolk, remainingWarewolf)
+          else:
+            remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
+            reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew), remaining)
+
           if(prev!=curr):
             rating += getResponseRating(lastFew[-1], reply, self.contexts[self.names[curr]][self.names[prev]], self.names[prev], self.names[curr])
             rating_n += 1
@@ -512,6 +545,7 @@ class Game:
       # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       thread.join()
       self.agents[prev].isSpeaking = False 
+      Clock_Speed = 60
       return history
   
 
@@ -619,7 +653,8 @@ class Game:
       self.run = True
 
   def draw_time(self) :
-      text = f"{calendar.day}\n{calendar.time}"
+      timePrecise = calendar.dt.strftime("%I:%M:%S %p")
+      text = f"{calendar.day}\n{timePrecise}"
       position = (10,10)
       margin = 1
 
@@ -858,7 +893,7 @@ class Game:
 
       self.draw_window()
       
-      calendar.increment(60/FPS)
+      calendar.increment(Clock_Speed/FPS)
 
       #self.checkSpeakingProximity()
         
