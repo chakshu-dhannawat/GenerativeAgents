@@ -484,6 +484,11 @@ class Agent():
       # self.destination = self.destination_path[0]
       # self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
 
+  def sleep(self):
+      self.destination_path = []
+      self.dest = "Stop"
+      self.dest = random.choice['Hut 1','Hut 2']
+
   def tavern(self,point):
       closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
       self.dest = "Stop"

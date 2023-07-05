@@ -313,6 +313,12 @@ class Game:
       vote = random.choice([index for index, value in enumerate(self.warewolf) if value is False and self.alive[index]])
     self.votes[vote] += 1
 
+  
+  def sleep(self):
+    for i in range(self.n):
+      if(not self.alive[i] or self.warewolf[i]): continue
+      self.agents[i].sleep()
+  
   def nightVote(self):
 
     # self.night_phase_show = True
@@ -435,9 +441,10 @@ class Game:
         names = names + f"{j}) {self.names[id]}\n"
         j += 1
       names = names[:-1]
+      cover = "Warewolf" if self.agents[voteId].warewolf else "Townfolk"
       voteName = self.agents[voteId].brain.query(
-         QUERY_DAY.format(self.agents[voteId].name,context[voteId],
-                          conversation,self.agents[voteId].name,names))
+         QUERY_DAY.format(self.kicked,self.agents[voteId].name,context[voteId],
+                          conversation,self.agents[voteId].name,cover,self.agents[voteId].name,names))
       try:
         vote = self.names.index(voteName)
       except:

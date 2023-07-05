@@ -56,14 +56,20 @@ Here is the list of Townfolks you can vote to kick out -
 
 Format - <name>"""
 
-QUERY_DAY = """It is currently day.
+QUERY_DAY = """Observation:
+In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. They are determined to identify the werewolf lurking among them. 
+The recent elimination of {} has left everyone on edge.
+As the discussion begins, the villagers share their suspicions and present their reasoning. They recount their observations, actions, and any clues they have gathered so far. 
+The werewolf tries to maintain their innocence while deflecting suspicion. Other werewolves collaborate to protect their own.
 
 Context of Remaining Players in {}'s Memory -
 {}
 
-Group Discussion -
+Group Discussion Transcript -
 {}
 
+You ({}) are a {}
+ 
 As {}, Suggest exactly one Player to vote to kick out.
 The vote will be visible to all Players.
 
