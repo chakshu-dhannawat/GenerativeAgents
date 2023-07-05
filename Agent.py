@@ -528,7 +528,7 @@ class Agent():
       text = self.msg
       x = self.x
       y = self.y
-      bubble_image = pygame.image.load(Path+"speechbubble.png")  # Replace "bubble.png" with the path to your predetermined image
+      bubble_image = pygame.image.load(Path+"speechbubble_png_blue.png")  # Replace "bubble.png" with the path to your predetermined image
 
       # Render the text
       font_size = 22  # Desired font size
@@ -557,14 +557,14 @@ class Agent():
           total_height += text_surface.get_height()
 
       # Create the bubble rectangle around the text
-      bubble_padding = 10
-      bubble_width = max_width + bubble_padding * 2
-      bubble_height = total_height + bubble_padding * 2
-      bubble_rect = pygame.Rect(x - bubble_width // 2, y - bubble_height // 2, bubble_width, bubble_height)
+      bubble_padding = 20
+      bubble_width = max_width + bubble_padding * 10
+      bubble_height = total_height + bubble_padding * 4
+      # bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 - 50, bubble_width, bubble_height)
 
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
-      bubble_rect = scaled_bubble_image.get_rect(center=(x, y))
+      bubble_rect = scaled_bubble_image.get_rect(bottomright=(x+bubble_width//4, y))
       self.win.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
