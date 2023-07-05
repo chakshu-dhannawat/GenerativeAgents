@@ -98,8 +98,59 @@ Format - <name>"""
 
 # Format - {}: Dialogue"""
 
-QUERY_GROUPCONV_INIT = """
-Observation:
+
+QUERY_NIGHTCONV_INIT = """In the small village of Miller's Hollow, it is currently night phase, the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
+The werewolves will try to decide which townfolk to kick out so that it maximizes their chance of winning. 
+
+Context of Remaining Players in {}'s Memory -
+{}
+
+The remaining Townfolks in the village are - 
+{}
+
+The werewolves involved in the discussion are - 
+{}
+
+{}'s Strategy for Winning -
+{}
+
+Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
+
+Give exactly one dialogue from {}.
+The dialogue should be on point, instead of saying you agree with someone, say something intelligently that adds to the conversation to maximize the chance of werewolves winning.
+The dialogue should be of maximum 25 words.
+
+Format - {}: Dialogue"""
+
+
+QUERY_NIGHTCONV_REPLY = """In the small village of Miller's Hollow, it is currently night phase, the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
+The werewolves will try to decide which townfolk to kick out so that it maximizes their chance of winning. 
+
+Context of Remaining Players in {}'s Memory -
+{}
+
+Here is a snippet from the dialogue history:
+{}
+
+The remaining Townfolks in the village are - 
+{}
+
+The werewolves involved in the discussion are - 
+{}
+
+{}'s Strategy for Winning -
+{}
+
+Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
+
+Give exactly one dialogue from {}.
+The dialogue should be on point, instead of saying you agree with someone, say something intelligently that adds to the conversation to maximize the chance of werewolves winning.
+The dialogue should be of maximum 25 words.
+
+Format - {}: Dialogue"""
+
+
+QUERY_GROUPCONV_INIT = """Observation:
 In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. They are determined to identify the werewolf lurking among them. 
 The recent elimination of {} has left everyone on edge.
 As the discussion begins, the villagers share their suspicions and present their reasoning. They recount their observations, actions, and any clues they have gathered so far. 
@@ -124,22 +175,6 @@ You can also suggest to kick someone out it your dialogue.
 The dialogue should be of maximum 25 words.
 
 Format - {}: Dialogue"""
-
-
-
-# QUERY_GROUPCONV_REPLY = """Observation: Yesterday the Warewolves kicked out {}.
-
-# Context of Remaining Players in {}'s Memory -
-# {}
-
-# Here is the dialogue history -
-# {}
-
-# What would {} say?
-
-# Give exactly one dialogue from {}
-
-# Format - {}: Dialogue"""
 
 
 QUERY_GROUPCONV_REPLY = """Observation: 
@@ -193,7 +228,7 @@ Depending on the conversation history, select a relevant person from the followi
 {}
 
 Select exactly one person, give higher chance of selecting someone who hasnt spoken or has been targeted in the recent conversation.
-If it seems like the conversation should end from the last few conversations, then end it.
+If it seems like the conversation should end from the last few conversations, then you can also end it.
 
 Format [If conversation continues] - <name>
 Format [If conversation ends] - End Conversation
