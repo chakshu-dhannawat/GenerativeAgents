@@ -97,6 +97,8 @@ class Agent():
     # Speaking Bubbles
     self.isSpeaking = False
     self.msg = None
+    self.sleeping = False
+    self.sleepSoon = False
     
     self.walkRight, self.walkLeft, self.walkUp, self.walkDown, self.char = self.graphics_load()
     # self.walkRight, self.walkLeft, self.char = walkRight, walkLeft, char
@@ -309,6 +311,8 @@ class Agent():
   
   def draw(self):
       
+      if(self.sleeping): return
+      
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
 
@@ -329,6 +333,7 @@ class Agent():
           self.win.blit(self.char, (int(self.x), int(self.y)))
 
   def move(self):
+      if(self.sleeping): return
       #If agent has reached location
       if(abs(self.x - self.destination_x)<1 and abs(self.y - self.destination_y)<1):
           self.left=False
@@ -420,6 +425,11 @@ class Agent():
               
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
+
+            if(self.sleepSoon and self.location_name in ["Hut 1","Hut 2"]):
+              self.sleepSoon = False
+              self.sleeping = True
+
           else:
             # self.isSpeaking=True
             # self.msg = "I want to travel to"+ str(self.destination_path[-1])
@@ -486,8 +496,8 @@ class Agent():
 
   def sleep(self):
       self.destination_path = []
-      self.dest = "Stop"
       self.dest = random.choice['Hut 1','Hut 2']
+      self.sleepSoon = True
 
   def tavern(self,point):
       closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
@@ -576,6 +586,7 @@ class Agent():
   #         current_y += text_surface.get_height()
   
   def speech_bubble(self):
+      if(self.sleeping): return
       text = self.msg
       x = self.x
       y = self.y
