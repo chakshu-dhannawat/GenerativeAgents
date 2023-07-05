@@ -642,7 +642,6 @@ class Game:
     # self.day_phase_show = True
     self.day_phase_japanese_show = True
     self.generatePlanDay()
-    calendar.dt = calendar.dt.replace(hour=9, minute=35)
     while True:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
@@ -660,7 +659,7 @@ class Game:
 
         self.observe(now)
 
-        calendar.incrementMins(30)
+        # calendar.incrementMins(30)
       time.sleep(0.3)
       
     for i in range(self.n):
@@ -938,19 +937,23 @@ class Game:
         # self.night_phase_show = False
         self.win.blit(self.night_phase_japanese,(0,0))
         self.night_phase_japanese_show = False
+        calendar.night()
       elif(self.day_phase_japanese_show):
         # self.win.blit(self.day_phase,(0,0))
         # self.day_phase_show = False
         self.win.blit(self.day_phase_japanese,(0,0))
         self.day_phase_japanese_show = False
+        if(calendar.dt.hour>20): calendar.nextDay()
+        calendar.tasks()
       elif(self.voting_phase_japanese_show):
         # self.win.blit(self.voting_phase,(0,0))
         # self.voting_phase_show = False
         self.win.blit(self.voting_phase_japanese,(0,0))
         self.voting_phase_japanese_show = False
+        if(calendar.dt.hour>20): calendar.nextDay()
+        calendar.voting()
       elif(self.start_phase_show):
         self.win.blit(self.start_phase,(0,0))
-
         self.start_phase_show = False
       elif(self.townfolks_win_japanese_show):
         self.win.blit(self.townfolks_win_japanese,(0,0))
@@ -965,6 +968,10 @@ class Game:
          return
       pygame.display.update()
       time.sleep(4)
+
+  def nextDay(self):
+     calendar.nextDay()
+     calendar.dt = calendar.dt.replace(hour=7, minute=30)
 
   def step(self) :
 

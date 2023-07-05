@@ -24,7 +24,7 @@ def getEmbedding(sentence):
 
 class Calendar:
 
-  def __init__(self, day = "Tuesday February 13", time = "9:35 AM"):
+  def __init__(self, day = "Tuesday February 13", time = "9:50 AM"):
     self.day = day
     self.time = time
     self.getDT()
@@ -46,6 +46,23 @@ class Calendar:
   def incrementMins(self, mins=40):
     self.dt += timedelta(minutes=mins)
     self.getString()
+
+  def nextDay(self):
+    self.dt += timedelta(days=1)
+    self.getString()
+
+  def voting(self):
+    self.dt = self.dt.replace(hour=8, minute=0)
+    self.getString()
+
+  def tasks(self):
+    self.dt = self.dt.replace(hour=9, minute=50)
+    self.getString()
+
+  def night(self):
+    self.dt = self.dt.replace(hour=21, minute=0)
+    self.getString()
+    
 
 calendar = Calendar()
 
