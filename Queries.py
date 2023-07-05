@@ -243,7 +243,7 @@ Depending on the conversation history, select a relevant person from the followi
 {}
 
 Select exactly one person, give higher chance of selecting someone who hasnt spoken or has been targeted in the recent conversation.
-If it seems like the conversation should end from the last few conversations, then you can also end it.
+If it seems like the conversation should end from the last few conversations, then end it.
 
 Format [If conversation continues] - <name>
 Format [If conversation ends] - End Conversation

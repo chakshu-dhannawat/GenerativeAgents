@@ -531,9 +531,10 @@ class Game:
       global Clock_Speed
       
       Clock_Speed_Prev = Clock_Speed
-      Clock_Speed = 1
 
       self.waitAssemble(voters)
+
+      Clock_Speed = 1
 
       thread = threading.Thread(target=self.speak, args=(replyMsg,curr,))
       thread.start()
@@ -641,8 +642,9 @@ class Game:
     # self.day_phase_show = True
     self.day_phase_japanese_show = True
     self.generatePlanDay()
+    calendar.dt = calendar.dt.replace(hour=9, minute=35)
     while True:
-      if(calendar.dt.hour in [1,13]): break
+      if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
         threads = []
@@ -658,7 +660,7 @@ class Game:
 
         self.observe(now)
 
-        calendar.incrementMins(20)
+        calendar.incrementMins(30)
       time.sleep(0.3)
       
     for i in range(self.n):
@@ -948,6 +950,7 @@ class Game:
         self.voting_phase_japanese_show = False
       elif(self.start_phase_show):
         self.win.blit(self.start_phase,(0,0))
+
         self.start_phase_show = False
       elif(self.townfolks_win_japanese_show):
         self.win.blit(self.townfolks_win_japanese,(0,0))
@@ -961,7 +964,7 @@ class Game:
       else:
          return
       pygame.display.update()
-      time.sleep(2)
+      time.sleep(4)
 
   def step(self) :
 

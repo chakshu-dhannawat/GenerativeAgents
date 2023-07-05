@@ -86,7 +86,7 @@ def game_logic():
 
     if(day==0): game.nightVote()
     if(day==1): game.dayVote()
-    # if(day==2): game.afternoon()
+    if(day==2): game.afternoon()
     
     day = (day+1)%3
 
@@ -114,8 +114,13 @@ Running Game using Multi-Threading
 '''
 
 
-render_thread = threading.Thread(target=render)
+# render_thread = threading.Thread(target=render)
 logic_thread = threading.Thread(target=game_logic)
 
-render_thread.start()
+# render_thread.start()
 logic_thread.start()
+
+if __name__ == '__main__':
+
+  render()
+
