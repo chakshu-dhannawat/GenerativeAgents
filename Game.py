@@ -203,7 +203,7 @@ class Game:
     self.changePhase = False 
     self.Night = 0
     self.bgId = -1
-    self.win = pygame.display.set_mode((self.w,self.h))
+    self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
     pygame.display.set_caption("Warewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
@@ -440,21 +440,29 @@ class Game:
     votes = [0]*self.n
     log()
     prev = None
+    # remainingTownfolk = getDetails(self)
+    # remainingWarewolf = getDetails(self,True)  
     for i,voteId in enumerate(voters):
       #print("Agent",i)
       #print(voteId)
       #print(context[voteId])
+      cover = "Warewolf" if self.warewolf[voteId] else "Townfolk"
       names = ""
       j = 1
       for id in voters:
         if(id==voteId): continue
-        names = names + f"{j}) {self.names[id]}\n"
+        if(self.warewolf[voteId]):
+          idCover = "Warewolf" if self.warewolf[id] else "Townfolk"
+          names = names + f"{j}) {self.names[id]} - {idCover}\n"
+        else:
+          names = names + f"{j}) {self.names[id]}\n"
         j += 1
       names = names[:-1]
-      cover = "Warewolf" if self.agents[voteId].warewolf else "Townfolk"
+      # remaining = remainingWarewolf if cover is "Warewolf" else remainingTownfolk
       voteName = self.agents[voteId].brain.query(
-         QUERY_DAY.format(self.kicked,self.agents[voteId].name,context[voteId],
-                          conversation,self.agents[voteId].name,cover,self.agents[voteId].name,names))
+         QUERY_DAY.format(self.agents[voteId].name,context[voteId],
+                          conversation,self.agents[voteId].name,cover,
+                          names,self.agents[voteId].name,self.agents[voteId].name,self.agents[voteId].name))
       try:
         vote = self.names.index(voteName)
       except:
@@ -517,6 +525,7 @@ class Game:
         remainingWarewolf = getDetails(self,True)         
 
       curr = random.choice(voters)
+      votersN = len(voters)
 
       if(night):
         reply = self.agents[curr].nightconv_init(context[curr],remainingTownfolk,remainingWarewolf)
@@ -558,20 +567,27 @@ class Game:
           history = history + reply
           lastFew.append(reply)
           if(len(lastFew)>4): lastFew.pop(0)
+          if(dialogues>MaxDialogues): break
           if(dialogues<MinDialogues): QUERY = QUERY_GROUPCONV_MODERATOR
           else: QUERY = QUERY_GROUPCONV_MODERATOR_END
           # currName = moderator.query(QUERY.format(history,names))
-          currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names))
-          if("End Conversation" in currName): break
           
-          try:
-            curr = self.ids[currName]
-          except:
+          if(votersN>2):
+            currName = moderator.query(QUERY.format('\n'.join(lastFew[:3]),names))
+            if("End Conversation" in currName): break
             try:
-              currName = self.findName(currName)
               curr = self.ids[currName]
             except:
-              break
+              try:
+                currName = self.findName(currName)
+                curr = self.ids[currName]
+              except:
+                break
+          else:
+            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:3]))))
+            if(dialogues+EndScore>12): return
+            if(dialogues==5): return 
+            curr = voters[1-voters.index(curr)]
           
           if(night):
             reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew), remainingTownfolk, remainingWarewolf)

@@ -6,6 +6,7 @@ from Queries import QUERY_EVALUATION_METRICS
 from threading import Lock
 import os
 import pygame
+import random
 
 lock = Lock()
 
@@ -40,7 +41,9 @@ def extractPlan(hourly):
       except:
         pass
 
-    return plan
+    # return plan
+    # TODO
+    return shuffle_plan(plan)
 
 def getNextDay(today):
     gpt = GPT()
@@ -63,6 +66,13 @@ def getHubs():
     for i,node in enumerate(hubs):
       areas = areas + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return areas
+
+def shuffle_plan(dictionary):
+    keys = list(dictionary.keys())
+    values = list(dictionary.values())
+    random.shuffle(values)
+    shuffled_dict = {k: v for k, v in zip(keys, values)}
+    return shuffled_dict
 
 def getTasks(hub,game):
     tasks = ""

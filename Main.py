@@ -75,7 +75,7 @@ log('\n=======Warewolf Game=======\n')
 
 
 def game_logic():
-
+  
   time.sleep(1)
 
   day = 2

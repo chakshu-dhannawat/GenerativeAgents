@@ -57,10 +57,8 @@ Here is the list of Townfolks you can vote to kick out -
 Format - <name>"""
 
 QUERY_DAY = """Observation:
-In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. They are determined to identify the werewolf lurking among them. 
-The recent elimination of {} has left everyone on edge.
-As the discussion begins, the villagers share their suspicions and present their reasoning. They recount their observations, actions, and any clues they have gathered so far. 
-The werewolf tries to maintain their innocence while deflecting suspicion. Other werewolves collaborate to protect their own.
+In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square to identify the werewolf lurking among them. 
+The townfolks need to kick out the werewolves and the warewolves need to kick out the townfolks. But the werewolves can vote another werewolf to avoid suspiction.
 
 Context of Remaining Players in {}'s Memory -
 {}
@@ -69,12 +67,13 @@ Group Discussion Transcript -
 {}
 
 You ({}) are a {}
- 
-As {}, Suggest exactly one Player to vote to kick out.
-The vote will be visible to all Players.
 
 Names you can vote to kick out -
 {}
+
+As {}, Suggest exactly one Player to vote to kick out.
+Focus on {}'s Dialogues in the Group Discussion to suggest one Player that {} wants to vote.
+The vote will be visible to all Players.
 
 Format - <name>"""
 
@@ -247,6 +246,15 @@ If it seems like the conversation should end from the last few conversations, th
 
 Format [If conversation continues] - <name>
 Format [If conversation ends] - End Conversation
+"""
+
+QUERY_GROUPCONV_END = """Last few Conversations -
+{}
+
+Depending on the conversation history, give a score from 0 to 10 which suggests if the conversation should end or not.
+A score of 0 should indicate high chance that conversation should continue, and score of 10 should indicate high chance that conversation should end. 
+
+Format - <score>
 """
 
 # To get action using the agent's plan.
