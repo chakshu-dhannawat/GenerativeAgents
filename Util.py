@@ -222,7 +222,7 @@ def outline_character(image):
                     or get_alpha(image, x, y + 1) == 0
                 ):
                     # Set the color of the current pixel to red
-                    color = (255, 0, 0, 255)
+                    color = DARK_RED
             # Set the color of the current pixel on the outline image
             outline_image.set_at((x, y), color)
     return outline_image
