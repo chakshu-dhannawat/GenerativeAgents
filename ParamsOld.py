@@ -39,12 +39,14 @@ Game
 
 Path = "Assets\\"
 Emoji_Path = "Assets\\emojis\\"
-WIN_WIDTH = 1920
-WIN_HEIGHT = 1080
-FPS = 60
-Clock_Speed = 60
+WIN_WIDTH = 1150
+WIN_HEIGHT = 800
 
 Character_Speed = 2
+
+EMOJI_SIZE = (35,35)
+FPS = 60
+Clock_Speed = 60
 
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
@@ -52,14 +54,26 @@ N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Tow
 N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
 Speed_Killing = 10
 
-EMOJI_SIZE = (58, 47)
-FIRE_SIZE = (100, 81)
-FIRE_CENTER = (1427, 772)
-TavernCenter = (1434, 811)
-Character_Size = (66, 54)
-TavernRadius = 150
+FIRE_SIZE = (60,60)
+FIRE_CENTER = (855,572)
 
-LOCATION_MAP = {'Hut 1': (475, 422), 'Hut 2': (963, 427), 'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916), 'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 'Well': (928, 668), 'Well task01': (694, 650), 'Well task02': (737, 719), 'Well task03': (881, 724), 'Electricity House': (320, 676), 'Tavern': (1320, 893), 'Predetermined 01': (1325, 816), 'Predetermined 02': (1389, 737), 'Predetermined 03': (1557, 718), 'Predetermined 04': (1654, 823), 'Predetermined 05': (1589, 947), 'Predetermined 06': (1407, 958), 'Fishing Pond': (1111, 93), 'Fishing Pond task01': (1073, 136), 'Fishing Pond task02': (1238, 145), 'Fishing Pond task03': (1434, 159), 'Fishing Pond task04': (1729, 139), 'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488), 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251)}
+TavernRadius = 100
+TavernCenter = (859,601)
+
+Character_Size = (40,40)
+
+LOCATION_MAP = {'Hut 1':(285,313),#'Hut 1 task01':(148,175),
+                'Hut 2':(577,317),#'Hut 2 task01':(471,179),
+                #'Hut 3':(414,452),'Hut 3 task01':(317,382),'Hut 3 task02':(433,352),
+                'Shrine':(327,735),'Shrine task01':(162,698),'Shrine task02':(228,750),'Shrine task03':(382,755),'Shrine task04':(446,679),
+                'Cattle Farm':(859,334),'Cattle Farm task01':(844,256),'Cattle Farm task02':(1127,330),'Cattle Farm task03':(1108,251),'Cattle Farm task04':(1098,444),
+                'Well':(556,495),'Well task01':(416,482),'Well task02':(442,533),'Well task03':(528,537),#'Well task04':(494,450),
+                'Electricity House':(192,501),#'Electricity House task01':(75,510),'Electricity House task02':(26,438),'Electricity House task03':(64,363),'Electricity House task04':(152,363),
+                'Tavern':(791,662), 'Predetermined 01': (794, 605), 'Predetermined 02': (832, 546),'Predetermined 03': (933, 532), 'Predetermined 04': (991, 610), 'Predetermined 05': (952, 702), 'Predetermined 06': (843, 710), 
+                'Fishing Pond':(666,69),'Fishing Pond task01':(643,101),'Fishing Pond task02':(742,108),'Fishing Pond task03':(859,118),'Fishing Pond task04':(1036,103),
+                'Intermediate01':(660,618),'Intermediate02':(511,618),'Intermediate03':(397,550),'Intermediate04':(287,362),'Intermediate05':(539,357),
+                'Intermediate06':(738,374),'Intermediate07':(670,186),#'Intermediate08':(107,75),'Intermediate09':(301,97),'Intermediate10':(849,103),
+                }
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
 Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']

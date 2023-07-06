@@ -19,6 +19,7 @@ import threading
 from evaluation_metric import *
 from gtts import gTTS
 from translate import Translator
+import pyautogui
 
 
 pygame.font.init()
@@ -38,6 +39,7 @@ Assests
 
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
+font3 = pygame.font.Font(None, 40)
 
 bg = pygame.image.load(Path+'town.png')
 
@@ -241,6 +243,10 @@ class Game:
     self.reset()
 
     self.playBgMusic()  
+
+    pyautogui.click(500, 500, button='left')
+    time.sleep(0.01)
+    pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
 
   def getSingleContext(self,name1,name2):
@@ -881,6 +887,11 @@ class Game:
       time.sleep(3)     
   
   
+  def draw_fps(self):
+    fps_text = font3.render(f"FPS: {int(self.clock.get_fps())}", True, (0, 85, 255))
+    fps_text_rect = fps_text.get_rect(bottomright=(self.win.get_width() - 10, self.win.get_height() - 10))
+    self.win.blit(fps_text, fps_text_rect)
+  
   def draw_window(self) : 
 
     if(self.warewolves_win_japanese_show):
@@ -913,6 +924,7 @@ class Game:
       self.drawTaskEmoji()  
 
       self.draw_time()
+      self.draw_fps()
 
     pygame.display.update()
 

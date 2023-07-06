@@ -58,9 +58,9 @@ class Agent():
     self.y = self.graphics['y']
     self.width = self.graphics['width']
     self.height = self.graphics['height']
-    self.vel = 1
-    self.vel_x = 1
-    self.vel_y = 1
+    self.vel = Character_Speed
+    self.vel_x = self.vel / math.sqrt(2)
+    self.vel_y = self.vel_x
     self.left = True
     self.right = False
     self.walkCount = 0

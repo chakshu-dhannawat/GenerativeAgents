@@ -1,7 +1,12 @@
 import math
+import ParamsOld as old
 from Params import *
 
-def update_coordinate(coord, original_size, new_size):
+original_size = (old.WIN_WIDTH,old.WIN_HEIGHT)
+new_size = (WIN_WIDTH, WIN_HEIGHT)
+
+
+def update_coordinate(coord):
     original_x, original_y = original_size
     new_x, new_y = new_size
 
@@ -15,7 +20,7 @@ def update_coordinate(coord, original_size, new_size):
 
     return updated_x, updated_y
 
-def update_radius(radius, original_size, new_size):
+def update_radius(radius):
     original_x, original_y = original_size
     new_x, new_y = new_size
 
@@ -25,38 +30,11 @@ def update_radius(radius, original_size, new_size):
 
     # Update the radius based on the scaling factors
     updated_radius = int(radius * scale_x * scale_y)
-
+    # print(updated_radius)
     return updated_radius
 
 
-
-#####Coordinate change
-
-original_coord = (100, 200)
-original_window_size = (1150, 800)
-new_window_size = (2000, 1500)
-
-updated_coord = update_coordinate(original_coord, original_window_size, new_window_size)
-print(updated_coord)  # Output: (128, 256)
-
-
-############################################################
-
-#Radius (1 variable change)
-original_radius = 100
-original_window_size = (1150, 800)
-new_window_size = (2000, 1500)
-
-updated_radius = update_radius(original_radius, original_window_size, new_window_size)
-print(updated_radius)  # Output: 63
-
-
-
-##################################################################################
-
-# LOCATION_MAP change
-
-def update_location_map(location_map, original_size, new_size):
+def update_location_map(location_map):
     updated_location_map = {}
     original_x, original_y = original_size
     new_x, new_y = new_size
@@ -74,14 +52,29 @@ def update_location_map(location_map, original_size, new_size):
 
     return map_string
 
+############################################################
+
+# Coordinate Change
+
+print("EMOJI_SIZE =",update_coordinate(old.EMOJI_SIZE))
+print("FIRE_SIZE =",update_coordinate(old.FIRE_SIZE))
+print("FIRE_CENTER =",update_coordinate(old.FIRE_CENTER))
+print("TavernCenter =",update_coordinate(old.TavernCenter))
+print("Character_Size =",update_coordinate(old.Character_Size))
 
 
-original_window_size = (800, 600)
-new_window_size = (1024, 768)
+############################################################
 
-updated_map_string = update_location_map(LOCATION_MAP, original_window_size, new_window_size)
-print(updated_map_string)
+# Radius Change
 
+print("TavernRadius =",update_radius(old.TavernRadius))
+
+
+##################################################################################
+
+# LOCATION_MAP change
+
+print("LOCATION_MAP =",update_location_map(old.LOCATION_MAP))
 
 
 
