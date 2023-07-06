@@ -204,32 +204,98 @@ def getAllDetails():
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
     
+# def outline_character(image):
+#     # Convert the image to a surface with per-pixel alpha
+#     image = image.convert_alpha()
+#     # Get the width and height of the image
+#     width, height = image.get_size()
+#     # Create a blank surface with per-pixel alpha
+#     outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
+#     # Iterate over each pixel in the image
+#     for x in range(width):
+#         for y in range(height):
+#             # Get the color of the current pixel
+#             color = image.get_at((x, y))
+#             # Check if the pixel is fully opaque
+#             if color.a > 0:
+#                 # Check if any of the neighboring pixels are transparent
+#                 if (
+#                     get_alpha(image, x - 1, y) == 0
+#                     or get_alpha(image, x + 1, y) == 0
+#                     or get_alpha(image, x, y - 1) == 0
+#                     or get_alpha(image, x, y + 1) == 0
+#                 ):
+#                     # Set the color of the current pixel to red
+#                     color = DARK_RED
+#             # Set the color of the current pixel on the outline image
+#             outline_image.set_at((x, y), color)
+
+#     # Create a copy of the outline image to apply the border width
+#     bordered_image = pygame.Surface((width + 2 * border_width, height + 2 * border_width), pygame.SRCALPHA)
+
+#     # Paste the outline image onto the bordered image with the specified border width
+#     bordered_image.blit(outline_image, (border_width, border_width))
+
+#     return bordered_image
+
 def outline_character(image):
-    # Convert the image to a surface with per-pixel alpha
-    image = image.convert_alpha()
-    # Get the width and height of the image
-    width, height = image.get_size()
-    # Create a blank surface with per-pixel alpha
-    outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
-    # Iterate over each pixel in the image
-    for x in range(width):
-        for y in range(height):
-            # Get the color of the current pixel
-            color = image.get_at((x, y))
-            # Check if the pixel is fully opaque
-            if color.a > 0:
-                # Check if any of the neighboring pixels are transparent
-                if (
-                    get_alpha(image, x - 1, y) == 0
-                    or get_alpha(image, x + 1, y) == 0
-                    or get_alpha(image, x, y - 1) == 0
-                    or get_alpha(image, x, y + 1) == 0
-                ):
-                    # Set the color of the current pixel to red
-                    color = (255, 0, 0, 255)
-            # Set the color of the current pixel on the outline image
-            outline_image.set_at((x, y), color)
-    return outline_image
+  border_width = 2
+  # Convert the image to a surface with per-pixel alpha
+  image = image.convert_alpha()
+
+  # Get the width and height of the image
+  width, height = image.get_size()
+
+  # Create a blank surface with per-pixel alpha
+  outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
+
+  # Iterate over each pixel in the image
+  for x in range(width):
+      for y in range(height):
+          # Get the color of the current pixel
+          color = image.get_at((x, y))
+
+          # Check if the pixel is fully opaque
+          if color.a > 0:
+              # Check if any of the neighboring pixels are transparent
+              if (
+                  get_alpha(image, x - 1, y) == 0
+                  or get_alpha(image, x + 1, y) == 0
+                  or get_alpha(image, x, y - 1) == 0
+                  or get_alpha(image, x, y + 1) == 0
+              ):
+                  # Set the color of the current pixel to the border color
+                  color = RED
+
+          # Set the color of the current pixel on the outline image
+          outline_image.set_at((x, y), color)
+
+  # Create a copy of the outline image to apply an additional border
+  bordered_image = outline_image.copy()
+
+  # Iterate over each pixel in the outline image
+  for x in range(width):
+      for y in range(height):
+          # Get the color of the current pixel
+          color = outline_image.get_at((x, y))
+
+          # Check if the pixel has the DARK_RED color
+          if color == RED:
+              # Add an additional border to the pixel
+              for i in range(border_width):
+                  if (
+                      x - i >= 0
+                      and y - i >= 0
+                      and x + i < width
+                      and y + i < height
+                  ):
+                      bordered_image.set_at((x - i, y - i), RED)
+                      bordered_image.set_at((x + i, y - i), RED)
+                      bordered_image.set_at((x - i, y + i), RED)
+                      bordered_image.set_at((x + i, y + i), RED)
+
+  return bordered_image
+
 
 def get_alpha(image, x, y):
     width, height = image.get_size()
