@@ -236,6 +236,7 @@ class Game:
     self.start_phase_show = True
     self.end_phase_show = False
     self.nobodyLynch = False
+    # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
 
     self.reset()
 
@@ -651,7 +652,7 @@ class Game:
             if(not self.alive[i]): continue
             self.agents[i].task = None
             self.agents[i].taskReach = False
-            thread = threading.Thread(target=self.agents[i].nextLocation, args=(now,))
+            thread = threading.Thread(target=self.agents[i].nextLocation, args=(now,self,))
             thread.start()
             threads.append(thread)
         for thread in threads:
@@ -661,11 +662,11 @@ class Game:
 
         # calendar.incrementMins(30)
       time.sleep(0.3)
-      
+      # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     for i in range(self.n):
-       self.agents[i].task = None 
-       self.agents[i].taskReach = False  
-
+      self.agents[i].task = None 
+      self.agents[i].taskReach = False  
+    
   def observe(self,now=None):
     if(now is None): now = calendar.time
     for i in range(self.n):

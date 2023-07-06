@@ -56,7 +56,7 @@ game = Game(agents)
 Adding Memories for Testing
 ====================
 '''
-log('\n=======Adding Memories=======\n')
+# log('\n=======Adding Memories=======\n')
 
 # game.agents[0].remember("Takeshi went fishing with Hiroshi")
 # game.agents[0].remember("Takeshi stole fish from bucket of Hiroshi")
@@ -84,9 +84,15 @@ def game_logic():
      
     if(day<2): game.switchPhase()
 
-    if(day==0): game.nightVote()
-    if(day==1): game.dayVote()
-    if(day==2): game.afternoon()
+    if(day==0): 
+      log('\n======= Night Phase =======\n') 
+      game.nightVote()
+    if(day==1): 
+      log('\n======= Morning Voting Phase =======\n')
+      game.dayVote()
+    if(day==2): 
+      log('\n======= Day Tasks Phase =======\n')
+      game.afternoon()
     
     day = (day+1)%3
 

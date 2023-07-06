@@ -1,3 +1,3 @@
-a = [True,True,False]
+from Util import *
 
-print(sum(a))
+print(getHubs())

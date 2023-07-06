@@ -34,7 +34,7 @@ class Agent():
     else: QUERY_INIT = QUERY_INIT_TOWNFOLK.format(name, name, summary, name)
     self.strategy = self.brain.query(QUERY_INIT)
 
-    log(f"{self.name}'s Strategy for {calendar.day} -\n{self.strategy}")
+    log(f"{self.name}'s Strategy for {calendar.day} -\n\n{self.strategy}\n\n-----------------------\n\n")
     # self.action = self.brain.query(QUERY_ACTION.format(name, summary, self.plan, Initial, calendar.time, getNames(), getPeople()))
     # print(f"\n{self.name}'s Action for next hour -\n{self.action}")
     # self.result = self.brain.query(QUERY_PAST_TENSE.format(name, name))
@@ -43,15 +43,13 @@ class Agent():
 
     for strat in strategies:
       self.remember(strat)
-    log('\n-----------------------\n')
+    # log('\n-----------------------\n')
 
     self.graphics = graphics
 
   def generatePlanDay(self):
     self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False))
-    log(f"{self.name}'s Plan for {calendar.day} -")
-    printPlan(self.plan)
-    log('\n.....................\n')
+    printPlan(self.plan,self.name,calendar.day)
 
   def graphics_init(self,win):
 
@@ -219,12 +217,14 @@ class Agent():
         #TODO: Add child nodes
         self.memory.append(Reflection(insight))
 
-  def nextLocation(self,now):
-    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+  def nextLocation(self,now,game):
+    #TODO - location Name as per plan
+    #locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
-    tasks, tasksList = getTasks(newLocation)
+    tasks, tasksList = getTasks(newLocation,game)
     if(len(tasksList)==0):
        self.task = None
        log(f"No Tasks at {newLocation}")
@@ -232,6 +232,7 @@ class Agent():
     taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False))
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
+    # game.taskOccupied[newLocation][taskSr-1] = True
     newLocation = tasksList[taskSr-1]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.dest = newLocation
@@ -640,29 +641,30 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
+    #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
+    #EMOJI = {'Eat': eat_emoji }
 
-        #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
-        #EMOJI = {'Eat': eat_emoji }
-        
-        x = self.x
-        y = self.y
-        emoji_surface = EMOJI[emoji]
+    x = self.x
+    y = self.y
+    emoji_surface = EMOJI[emoji]
 
-        # Calculate the dimensions of the bubble based on the emoji size
-        bubble_padding = 10
-        bubble_width = emoji_surface.get_width() + bubble_padding * 2
-        bubble_height = emoji_surface.get_height() + bubble_padding * 2
-        bubble_rect = pygame.Rect(x - bubble_width // 2 -30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    # Calculate the dimensions of the bubble based on the emoji size
+    bubble_padding = 10
+    bubble_width = emoji_surface.get_width() + bubble_padding * 2
+    bubble_height = emoji_surface.get_height() + bubble_padding * 2
+    bubble_rect = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    bubble_rect2 = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
-        # Draw the bubble outline
-        pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
+    # Draw the bubble outline
+    outline_width = 3  # Adjust the line width as desired
+    pygame.draw.ellipse(self.win, BLACK, bubble_rect, outline_width)
+    bubble_rect.inflate_ip(-outline_width, -outline_width)
+    # Draw the bubble background
+    pygame.draw.ellipse(self.win, WHITE, bubble_rect,0)
 
-        # Draw the bubble background
-        pygame.draw.ellipse(self.win, WHITE, bubble_rect)
-
-        # Blit the emoji onto the bubble
-        emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
-        self.win.blit(emoji_surface, emoji_rect)
+    # Blit the emoji onto the bubble
+    emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
+    self.win.blit(emoji_surface, emoji_rect)
 
 
 
