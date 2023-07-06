@@ -203,40 +203,6 @@ def getAllDetails():
       else: cover = 'townfolk'
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
-    
-# def outline_character(image):
-#     # Convert the image to a surface with per-pixel alpha
-#     image = image.convert_alpha()
-#     # Get the width and height of the image
-#     width, height = image.get_size()
-#     # Create a blank surface with per-pixel alpha
-#     outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
-#     # Iterate over each pixel in the image
-#     for x in range(width):
-#         for y in range(height):
-#             # Get the color of the current pixel
-#             color = image.get_at((x, y))
-#             # Check if the pixel is fully opaque
-#             if color.a > 0:
-#                 # Check if any of the neighboring pixels are transparent
-#                 if (
-#                     get_alpha(image, x - 1, y) == 0
-#                     or get_alpha(image, x + 1, y) == 0
-#                     or get_alpha(image, x, y - 1) == 0
-#                     or get_alpha(image, x, y + 1) == 0
-#                 ):
-#                     # Set the color of the current pixel to red
-#                     color = DARK_RED
-#             # Set the color of the current pixel on the outline image
-#             outline_image.set_at((x, y), color)
-
-#     # Create a copy of the outline image to apply the border width
-#     bordered_image = pygame.Surface((width + 2 * border_width, height + 2 * border_width), pygame.SRCALPHA)
-
-#     # Paste the outline image onto the bordered image with the specified border width
-#     bordered_image.blit(outline_image, (border_width, border_width))
-
-#     return bordered_image
 
 def outline_character(image):
   border_width = 2
