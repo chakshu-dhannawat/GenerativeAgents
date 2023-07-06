@@ -34,7 +34,7 @@ class Agent():
     else: QUERY_INIT = QUERY_INIT_TOWNFOLK.format(name, name, summary, name)
     self.strategy = self.brain.query(QUERY_INIT)
 
-    log(f"{self.name}'s Strategy for {calendar.day} -\n{self.strategy}")
+    log(f"{self.name}'s Strategy for {calendar.day} -\n\n{self.strategy}\n\n-----------------------\n\n")
     # self.action = self.brain.query(QUERY_ACTION.format(name, summary, self.plan, Initial, calendar.time, getNames(), getPeople()))
     # print(f"\n{self.name}'s Action for next hour -\n{self.action}")
     # self.result = self.brain.query(QUERY_PAST_TENSE.format(name, name))
@@ -43,15 +43,13 @@ class Agent():
 
     for strat in strategies:
       self.remember(strat)
-    log('\n-----------------------\n')
+    # log('\n-----------------------\n')
 
     self.graphics = graphics
 
   def generatePlanDay(self):
     self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False))
-    log(f"{self.name}'s Plan for {calendar.day} -")
-    printPlan(self.plan)
-    log('\n.....................\n')
+    printPlan(self.plan,self.name,calendar.day)
 
   def graphics_init(self,win):
 
@@ -219,12 +217,14 @@ class Agent():
         #TODO: Add child nodes
         self.memory.append(Reflection(insight))
 
-  def nextLocation(self,now):
-    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+  def nextLocation(self,now,game):
+    #TODO - location Name as per plan
+    #locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
-    tasks, tasksList = getTasks(newLocation)
+    tasks, tasksList = getTasks(newLocation,game)
     if(len(tasksList)==0):
        self.task = None
        log(f"No Tasks at {newLocation}")
@@ -232,6 +232,7 @@ class Agent():
     taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False))
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
+    # game.taskOccupied[newLocation][taskSr-1] = True
     newLocation = tasksList[taskSr-1]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.dest = newLocation

@@ -47,13 +47,16 @@ def getNextDay(today):
     tomm = gpt.query("Today is Wednesday February 13, tomorrow is")
     return tomm[:-1]
 
-def printPlan(plan):
+def printPlan(plan,name,day):
     # items = re.split(r'\d+\)', plan)
     # items = [item.strip() for item in items if item.strip()]
     # for i,item in enumerate(items):
     #   log(f"{i+1})",item)
+    planString = f"{name}'s Plan for {day} -\n\n"
     for key in plan.keys():
-       log(f"{key} : {plan[key]}")
+       planString += f"{key} : {plan[key]}\n"
+    planString += '\n.....................\n\n'
+    log(planString)
 
 def getHubs():
     areas = ""
@@ -61,9 +64,10 @@ def getHubs():
       areas = areas + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return areas
 
-def getTasks(hub):
+def getTasks(hub,game):
     tasks = ""
     tasksList = [node for node in nodes if "task" in node and hub in node]
+    # tasksList = [task for i,task in enumerate(tasksList) if not game.taskOccupied[hub][i]]
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return tasks,tasksList
