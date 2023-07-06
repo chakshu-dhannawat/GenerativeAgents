@@ -305,14 +305,17 @@ class Game:
     pygame.mixer.music.unload()
     self.agents[curr].isSpeaking = False
   
-  def nightVoteWarewolf(self,i,names):
+  def nightVoteWarewolf(self,i,names,history=None):
     # self.getContext(self.names[i],True)
     voteContext = ""
     sr = 1
     for key, value in self.contexts[self.names[i]].items():
         voteContext += f"{sr}) {key}: {value}\n"
         sr += 1
-    voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext,names))
+    if history is None:
+      voteName = self.agents[i].brain.query(QUERY_NIGHT_SINGLE.format(self.agents[i].name,voteContext,names))
+    else: 
+      voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext,history,names))
     try:
       vote = self.names.index(voteName)
     except:
@@ -335,6 +338,8 @@ class Game:
   
   def nightVote(self):
 
+    self.threadNight = threading.Thread(target=self.nightVoteContext)
+    self.threadNight.start()
     # self.night_phase_show = True
     self.night_phase_japanese_show = True
     log("Currently it is Night, the Warewolves will kill a townfolk...\n")
@@ -362,14 +367,10 @@ class Game:
 
     context = []
 
-    threads = []
-    for i in range(self.n):
-        if(not self.alive[i] or not self.warewolf[i]): continue
-        thread = threading.Thread(target=self.getContext, args=(self.names[i],True,))
-        thread.start()
-        threads.append(thread)
-    for thread in threads:
-        thread.join()
+    self.threadNight.join()
+
+    self.threadDay = threading.Thread(target=self.dayVoteContext)
+    self.threadDay.start()
 
     if(werewolves>1):
 
@@ -391,14 +392,19 @@ class Game:
 
       MinDialogues = MinDialoguesPrev
 
-    threads = []
-    for i in range(self.n):
+      threads = []
+      for i in range(self.n):
+          if(not self.warewolf[i] or not self.alive[i]): continue
+          thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names,conversation,))
+          thread.start()
+          threads.append(thread)
+      for thread in threads:
+          thread.join()
+    
+    else: 
+      for i in range(self.n):
         if(not self.warewolf[i] or not self.alive[i]): continue
-        thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names,))
-        thread.start()
-        threads.append(thread)
-    for thread in threads:
-        thread.join()
+        self.nightVoteWarewolf(i,names)
 
     kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
@@ -409,6 +415,26 @@ class Game:
     self.checkEnd()
 
     self.wakeUp()
+
+  def nightVoteContext(self):
+    threads = []
+    for i in range(self.n):
+        if(not self.alive[i] or not self.warewolf[i]): continue
+        thread = threading.Thread(target=self.getContext, args=(self.names[i],True,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join() 
+
+  def dayVoteContext(self):
+    threads = []
+    for i in range(self.n):
+        if(not self.alive[i]): continue
+        thread = threading.Thread(target=self.getContext, args=(self.names[i],False,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()     
 
   def dayVote(self):
 
@@ -424,14 +450,10 @@ class Game:
 
     self.assembleTavern(voters)
 
-    threads = []
-    for i in range(self.n):
-        if(not self.alive[i]): continue
-        thread = threading.Thread(target=self.getContext, args=(self.names[i],False,))
-        thread.start()
-        threads.append(thread)
-    for thread in threads:
-        thread.join()
+    # thread = threading.Thread(target=self.dayVoteContext)
+    # thread.start()
+    # thread.join()
+    self.threadDay.join()
 
     for i in range(self.n):
        if(not self.alive[i]): context.append("")
@@ -509,6 +531,7 @@ class Game:
     for agent in self.agents:
       agent.location_name = 'Tavern'
       agent.dest = None
+      agent.isSpeaking = False
 
     self.checkEnd()
       
@@ -593,8 +616,8 @@ class Game:
                 break
           else:
             EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:3]))))
-            if(dialogues+EndScore>12): return
-            if(dialogues==5): return 
+            if(dialogues+EndScore>10): break
+            if(dialogues==4): break 
             curr = voters[1-voters.index(curr)]
           
           if(night):
@@ -667,6 +690,7 @@ class Game:
     # self.day_phase_show = True
     self.day_phase_japanese_show = True
     self.generatePlanDay()
+    first = True
     while True:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
@@ -683,6 +707,11 @@ class Game:
             thread.join()
 
         self.observe(now)
+
+        # if(first):
+        #   first = False
+        #   self.threadNight = threading.Thread(target=self.nightVoteContext)
+        #   self.threadNight.start()
 
         # calendar.incrementMins(30)
       time.sleep(0.3)

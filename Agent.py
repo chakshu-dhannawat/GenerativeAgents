@@ -26,6 +26,7 @@ class Agent():
     self.warewolf = False
     self.task = None
     self.taskReach = False
+    self.now = None
     if "warewolf" in summary:
       self.warewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -218,9 +219,10 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   def nextLocation(self,now,game):
-    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False)
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
+    if(newLocation=="Tavern"): newLocation = random.choice(hubs)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     tasks, tasksList = getTasks(newLocation,game)

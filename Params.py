@@ -7,8 +7,8 @@ Agents
 ====================
 '''
 
-MinDialogues = 7
-MaxDialogues = 10
+MinDialogues = 5
+MaxDialogues = 8
 
 agentsDetails = [
     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},

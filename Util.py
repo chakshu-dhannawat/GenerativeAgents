@@ -175,7 +175,7 @@ def extract_dialogue(dialogue):
     dialogue = dialogue.split(':')[1].strip()
     if(dialogue[0] in ['\'','"']):
       dialogue = dialogue[1:-1]
-    return dialogue
+    return dialogue.split('(')[0]
 
 def getDetails(game,includeCover=False):
     details = ""
