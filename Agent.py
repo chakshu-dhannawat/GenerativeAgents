@@ -59,7 +59,7 @@ class Agent():
     self.width = self.graphics['width']
     self.height = self.graphics['height']
     self.vel = Character_Speed
-    self.vel_x = self.vel / math.sqrt(2)
+    self.vel_x = Character_Speed / math.sqrt(2)
     self.vel_y = self.vel_x
     self.left = True
     self.right = False
@@ -106,8 +106,8 @@ class Agent():
     self.kill_x = -self.char_rect.width
     self.kill_y = WIN_HEIGHT // 2 - self.char_rect.height // 2
     self.killRotationAngle = 0
-    self.killSpeed = 4
-    self.killRotationSpeed = 2
+    self.killSpeed = 12
+    self.killRotationSpeed = 5
 
   def animationKillStep(self):
     self.kill_x += self.killSpeed
@@ -333,10 +333,122 @@ class Agent():
       else:
           self.win.blit(self.char, (int(self.x), int(self.y)))
 
-  def move(self):
+  # def move(self,VelFactor):
+  #     if(self.sleeping): return
+  #     #If agent has reached location
+  #     if(abs(self.x - self.destination_x)<1 and abs(self.y - self.destination_y)<1):
+  #         self.left=False
+  #         self.right=False
+  #         self.up=False
+  #         self.down = False
+  #         self.standing=True
+  #         self.location_name = self.destination
+  #         self.is_travelling=False
+          
+          
+  #     # Move towards the destination
+  #     if self.is_travelling:
+          
+  #         # Calculate the slope between the current position and the destination
+  #         # slope = (self.destination_y - self.y) / (self.destination_x - self.x)
+
+  #         # Calculate theta from the slope
+  #         # theta = math.atan(slope)
+  #         theta = math.atan2(self.destination_y - self.y, self.destination_x - self.x)
+  #         self.vel_x = abs(math.cos(theta) * Character_Speed * VelFactor)
+  #         self.vel_y = abs(math.sin(theta) * Character_Speed * VelFactor)
+          
+  #         if self.destination_x-self.x>1+int(self.vel_x):
+  #             self.right=True
+  #             self.left=False
+  #         elif self.x-self.destination_x>1+int(self.vel_x):
+  #             self.left = True
+  #             self.right = False
+  #         else:
+  #             if(self.right):
+  #                 self.right=False
+  #                 self.left = False
+  #                 self.was_right=True
+  #             else:
+  #                 self.right=False
+  #                 self.left = False
+  #                 self.was_left=True
+  #         if self.destination_y-self.y>1+int(self.vel_y):
+  #             self.down = True
+  #             self.up = False
+  #         elif self.y-self.destination_y>1+int(self.vel_y):
+  #             self.up=True
+  #             self.down=False
+  #         else:
+  #             self.up=False
+  #             self.down = False
+          
+          
+
+  #         # print(self.name, self.x)
+  #         # print(self.name, self.y)
+  #         if self.left and self.x > Character_Speed * VelFactor:
+  #             self.x -= self.vel_x
+  #             self.standing = False
+  #         if self.right and self.x < WIN_WIDTH - Character_Speed * VelFactor:
+  #             self.x += self.vel_x
+  #             self.standing = False
+  #         if self.up and self.y > Character_Speed * VelFactor:
+  #             self.y -= self.vel_y
+  #             self.standing = False
+  #             # self.left=True
+  #         if self.down and self.y < WIN_HEIGHT - Character_Speed * VelFactor:
+  #             self.y += self.vel_y
+  #             self.standing = False
+  #             # self.right=True
+  #         self.standing = not(self.left or self.right or self.up or self.down)
+
+  #     #Random choice to stay in that location or move
+  #     else:
+        
+  #         self.timer+=1
+  #         if(self.timer>50):
+  #             self.timer=0
+  #         #     change_location = random.choice(['Move', 'Stay'])
+  #         #     if(change_location == 'Move'):
+  #         #         while self.location_name == self.destination:
+  #         #             self.choose_random_location()
+  #         #             self.is_travelling = True
+  #         # self.destination_path.pop(0)
+          
+  #         if len(self.destination_path)==0:
+
+  #           if(self.destination==self.task): self.taskReach = True
+
+  #           if(self.dest is None):
+  #             self.choose_random_location()
+              
+  #           elif(self.dest != "Stop"):
+  #             self.choose_location(self.dest)
+
+  #           if(self.sleepSoon and self.location_name in ["Hut 1","Hut 2"]):
+  #             self.sleepSoon = False
+  #             self.sleeping = True
+
+  #         else:
+  #           # self.isSpeaking=True
+  #           # self.msg = "I want to travel to"+ str(self.destination_path[-1])
+  #           # self.speech_bubble()
+  #           # self.draw()
+  #           # pygame.display.update()
+  #           self.destination = self.destination_path[0]
+  #           self.destination_path.pop(0)
+            
+  #           try:
+  #             self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
+  #           except:
+  #             self.destination_x, self.destination_y = self.destination
+  #           self.is_travelling=True
+            
+  def move(self, VelFactor):
       if(self.sleeping): return
       #If agent has reached location
-      if(abs(self.x - self.destination_x)<1 and abs(self.y - self.destination_y)<1):
+      if(abs(self.x - self.destination_x)<1+int(self.vel_x) and abs(self.y - self.destination_y)<1+int(self.vel_y)):
           self.left=False
           self.right=False
           self.up=False
@@ -355,14 +467,14 @@ class Agent():
           # Calculate theta from the slope
           # theta = math.atan(slope)
           theta = math.atan2(self.destination_y - self.y, self.destination_x - self.x)
-          self.vel_x = abs(math.cos(theta) * self.vel)
-          self.vel_y = abs(math.sin(theta) * self.vel)
+          self.vel_x = abs(math.cos(theta) * self.vel * VelFactor)
+          self.vel_y = abs(math.sin(theta) * self.vel * VelFactor)
 
 
-          if self.destination_x-self.x>1:
+          if self.destination_x-self.x>1+int(self.vel_x):
               self.right=True
               self.left=False
-          elif self.x-self.destination_x>1:
+          elif self.x-self.destination_x>1+int(self.vel_x):
               self.left = True
               self.right = False
           else:
@@ -374,10 +486,10 @@ class Agent():
                   self.right=False
                   self.left = False
                   self.was_left=True
-          if self.destination_y-self.y>1:
+          if self.destination_y-self.y>1+int(self.vel_y):
               self.down = True
               self.up = False
-          elif self.y-self.destination_y>1:
+          elif self.y-self.destination_y>1+int(self.vel_x):
               self.up=True
               self.down=False
           else:
@@ -388,17 +500,17 @@ class Agent():
 
           # print(self.name, self.x)
           # print(self.name, self.y)
-          if self.left and self.x > self.vel:
+          if self.left and self.x > self.vel_x:
               self.x -= self.vel_x
               self.standing = False
-          if self.right and self.x < WIN_WIDTH - self.vel:
+          if self.right and self.x < WIN_WIDTH - self.vel_x:
               self.x += self.vel_x
               self.standing = False
-          if self.up and self.y > self.vel:
+          if self.up and self.y > self.vel_y:
               self.y -= self.vel_y
               self.standing = False
               # self.left=True
-          if self.down and self.y < WIN_HEIGHT - self.vel:
+          if self.down and self.y < WIN_HEIGHT - self.vel_y:
               self.y += self.vel_y
               self.standing = False
               # self.right=True
@@ -444,9 +556,7 @@ class Agent():
               self.destination_x, self.destination_y = LOCATION_MAP[self.destination]
             except:
               self.destination_x, self.destination_y = self.destination
-            self.is_travelling=True
-            
-            
+            self.is_travelling=True         
               
   def manual_move(self,keys):
 

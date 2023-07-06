@@ -188,6 +188,7 @@ class Game:
     for i in range(N_Background): 
       self.bgs[i] =  pygame.transform.scale(self.bgs[i], DEFAULT_IMAGE_SIZE) 
     self.fire = True
+    self.fps = FPS
     self.killing = False
     self.killId = 0
     self.elim = 0
@@ -205,6 +206,7 @@ class Game:
     self.changePhase = False 
     self.Night = 0
     self.bgId = -1
+    self.VelFactor = 1
     self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
     pygame.display.set_caption("Warewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
@@ -888,9 +890,11 @@ class Game:
   
   
   def draw_fps(self):
-    fps_text = font3.render(f"FPS: {int(self.clock.get_fps())}", True, (0, 85, 255))
-    fps_text_rect = fps_text.get_rect(bottomright=(self.win.get_width() - 10, self.win.get_height() - 10))
+    self.fps = int(self.clock.get_fps())
+    fps_text = font3.render(f"FPS: {self.fps}", True, (0, 85, 255))
+    fps_text_rect = fps_text.get_rect(bottomright=(10+fps_text.get_width(), self.win.get_height() - 10))
     self.win.blit(fps_text, fps_text_rect)
+    if(self.fps>15): self.VelFactor = FPS/self.fps
   
   def draw_window(self) : 
 
@@ -1015,7 +1019,7 @@ class Game:
 
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
-              player.move() 
+              player.move(self.VelFactor) 
       
       if(self.changePhase):
         self.stepPhase()
@@ -1025,7 +1029,7 @@ class Game:
 
       self.draw_window()
       
-      calendar.increment(Clock_Speed/FPS)
+      calendar.increment(self.VelFactor*Clock_Speed/FPS)
 
       #self.checkSpeakingProximity()
         

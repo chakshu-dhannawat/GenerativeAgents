@@ -44,7 +44,8 @@ WIN_HEIGHT = 1080
 FPS = 60
 Clock_Speed = 60
 
-Character_Speed = 2
+Character_Speed = 1.25
+# VelFactor = 1
 
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
