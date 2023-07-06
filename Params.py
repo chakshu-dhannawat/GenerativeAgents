@@ -59,6 +59,8 @@ FIRE_CENTER = (855,572)
 TavernRadius = 100
 TavernCenter = (859,601)
 
+Character_Size = (40,40)
+
 LOCATION_MAP = {'Hut 1':(285,313),#'Hut 1 task01':(148,175),
                 'Hut 2':(577,317),#'Hut 2 task01':(471,179),
                 #'Hut 3':(414,452),'Hut 3 task01':(317,382),'Hut 3 task02':(433,352),
@@ -196,5 +198,6 @@ WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 CREAM = (255,203,164)
 RED = (255, 0, 0)
+DARK_RED = (179,25,25,255)
 ORANGE = (255, 165, 0)
 YELLOW = (255, 255, 0)

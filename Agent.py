@@ -256,22 +256,22 @@ class Agent():
       for file_name in image_files:
           if file_name.startswith('R'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40, 40))
+              temp = pygame.transform.scale(temp, Character_Size)
               outline_image = outline_character(temp)
               walk_right.append(outline_image)
           elif file_name.startswith('L'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40, 40))
+              temp = pygame.transform.scale(temp, Character_Size)
               outline_image = outline_character(temp)
               walk_left.append(outline_image)
           elif file_name.startswith('U'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40, 40))
+              temp = pygame.transform.scale(temp, Character_Size)
               outline_image = outline_character(temp)
               walk_up.append(outline_image)
           elif file_name.startswith('D'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40, 40))
+              temp = pygame.transform.scale(temp, Character_Size)
               outline_image = outline_character(temp)
               walk_down.append(outline_image)
       self.char_rect = walk_down[0].get_rect()
@@ -284,20 +284,20 @@ class Agent():
           if file_name.startswith('R'):
               # self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40,40))
+              temp = pygame.transform.scale(temp, Character_Size)
               walk_right.append(temp)
           elif file_name.startswith('L'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40,40))
+              temp = pygame.transform.scale(temp, Character_Size)
               walk_left.append(temp)
           elif file_name.startswith('U'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40,40))
+              temp = pygame.transform.scale(temp, Character_Size)
               walk_up.append(temp)
           elif file_name.startswith('D'):
               # walk_down.append(pygame.image.load(os.path.join(folder_path, file_name)))
               temp = pygame.image.load(os.path.join(folder_path, file_name))
-              temp = pygame.transform.scale(temp, (40,40))
+              temp = pygame.transform.scale(temp, Character_Size)
               walk_down.append(temp)
       self.char_rect = walk_down[0].get_rect() 
       return walk_right, walk_left, walk_up, walk_down, walk_down[0]
