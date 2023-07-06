@@ -225,9 +225,13 @@ def outline_character(image):
                     color = DARK_RED
             # Set the color of the current pixel on the outline image
             outline_image.set_at((x, y), color)
-    bordered_image = outline_image.copy()
-    for _ in range(5):
-        bordered_image = pygame.transform.scale2x(bordered_image)
+
+    # Create a copy of the outline image to apply the border width
+    bordered_image = pygame.Surface((width + 2 * border_width, height + 2 * border_width), pygame.SRCALPHA)
+
+    # Paste the outline image onto the bordered image with the specified border width
+    bordered_image.blit(outline_image, (border_width, border_width))
+
     return bordered_image
 
 def get_alpha(image, x, y):
