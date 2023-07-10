@@ -12,6 +12,7 @@ Agents
 MinDialogues = 5
 MaxDialogues = 8
 
+# Diff IQ
 agentsDetails = [
     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},
     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
@@ -22,6 +23,7 @@ agentsDetails = [
     # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
 ]
 
+# Same IQ - High IQ (7-8)
 # agentsDetails = [
 #     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
 #     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka is a perceptive and open-minded townfolk. While Yuka tends to get easily convinced by other's arguments, their high IQ allows them to analyze information critically and adapt their perspective accordingly."},
@@ -32,6 +34,15 @@ agentsDetails = [
 #     {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria is a charismatic and persuasive townfolk. Yuria's high IQ, combined with excellent convincing skills, allows them to sway others with well-thought-out arguments and logical reasoning."}
 # ]
 
+# Same IQ - Low IQ (3-4)
+# agentsDetails = [
+#     {"name": "Yumi Okada", "description": "Yumi is an average-intelligence werewolf. While not exceptionally smart, Yumi relies on their instincts and basic deception skills to survive in the game."},
+#     {"name": "Yuka Suzuki", "description": "Yuka is an average-intelligence townfolk who tends to go along with the majority. Their analytical skills are moderate, and they try their best to contribute to the discussions based on the information available."},
+#     {"name": "Riku Mori", "description": "Riku is an average-intelligence townfolk with limited deductive reasoning skills. They rely more on intuition and observations rather than advanced analytical thinking."},
+#     {"name": "Hina Sato", "description": "Hina is an average-intelligence townfolk who approaches situations with a practical mindset. While not highly analytical, Hina tries to make logical decisions based on common sense."},
+#     {"name": "Mana Yoshida", "description": "Mana is an average-intelligence werewolf who relies on basic strategies and manipulation tactics. While not highly intelligent, Mana can blend in with the townfolks and create confusion during discussions."},
+#     {"name": "Taichi Kato", "description": "Taichi is an average-intelligence townfolk who sometimes struggles to grasp complex information. Their contributions may be simple and straightforward, but they genuinely try to participate and support the town's decision-making process."},
+#     {"name": "Yuria Shimizu", "description": "Yuria is an average-intelligence townfolk with decent persuasive skills. They can present their ideas convincingly but may not excel in complex problem-solving or critical thinking."}
 
 '''
 ====================
