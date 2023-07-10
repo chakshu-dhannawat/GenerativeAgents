@@ -241,6 +241,7 @@ class Agent():
 
 
   def graphics_load(self):
+    Character_Size = random.choice(Character_Sizes)
     walk_right = []
     walk_left = []
     walk_up = []
