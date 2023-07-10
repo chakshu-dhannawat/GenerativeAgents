@@ -7,6 +7,7 @@ import threading
 import time
 from queue import Queue
 
+with open("Logs\\logs.txt", 'w') as file: pass
 log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
 log(dt.now().strftime("%m/%d/%Y, %H:%M:%S"))
 

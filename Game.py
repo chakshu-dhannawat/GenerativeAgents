@@ -178,7 +178,7 @@ class Game:
     # for agent in self.agents:
     #     agent.remember(agent.result)
     #     agent.reflect(2,2)
-
+    
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
     self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 

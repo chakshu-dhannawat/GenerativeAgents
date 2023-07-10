@@ -9,6 +9,9 @@ import random
 from threading import Lock
 from dotenv import load_dotenv
 import os
+import time
+from fpdf import FPDF
+from Params import PDF_Name
 
 load_dotenv()
 lock = Lock()
@@ -39,11 +42,14 @@ class GPT:
 
     self.context = context
     self.messages = [{"role": "system", "content": context}]
+    self.input_ts = None 
 
 
   def query(self,qry,remember=True,tries=0):
 
     self.messages.append({"role":"user", "content":qry})
+    if(self.input_ts is None):
+      self.input_ts = time.time()
 
     try:
       response = openai.ChatCompletion.create(
@@ -68,6 +74,9 @@ class GPT:
         print(qry)
         raise Exception("Error in Query Response")
       return self.query(qry,remember,tries+1)
+    
+    self.log(qry,answer,self.input_ts,time.time(),response["usage"]["total_tokens"])
+    self.input_ts = None
 
     if(remember):
       self.messages.append({"role":"assistant", "content":answer})
@@ -77,6 +86,19 @@ class GPT:
     addUsage(response["usage"]["total_tokens"])
 
     return answer
+  
+  def log(self, input, output, input_ts, output_ts, tokens):
+    text = f'=====================================================\n=====================================================\nResponse Time : {round(output_ts-input_ts,2)} s\nTokens Used : {tokens}\n\n------------\nQUERY [{time.strftime("%H:%M:%S", time.localtime(input_ts))}]\n------------\n{input}\n\n------------\nOUTPUT [{time.strftime("%H:%M:%S", time.localtime(output_ts))}]\n------------\n{output}\n\n\n\n'
+    with lock:
+      with open("Logs\\logs.txt", "a") as file:
+          file.write(text)
+      pdf = FPDF()
+      pdf.add_page()
+      pdf.set_font("Times", size=12)
+      with open("Logs\\logs.txt", "r") as file:
+          text = file.read()
+      pdf.multi_cell(0, 10, text.encode('utf-8').decode('latin-1'))
+      pdf.output(PDF_Name)
 
 
   def reset(self):
