@@ -313,13 +313,13 @@ class Game:
         voteContext += f"{sr}) {key}: {value}\n"
         sr += 1
     if history is None:
-      voteName = self.agents[i].brain.query(QUERY_NIGHT_SINGLE.format(self.agents[i].name,voteContext,names))
+      voteName = self.agents[i].brain.query(QUERY_NIGHT_SINGLE.format(self.agents[i].name,voteContext,names),name='QUERY_NIGHT_SINGLE')
     else: 
-      voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext,history,names))
+      voteName = self.agents[i].brain.query(QUERY_NIGHT.format(self.agents[i].name,voteContext,history,names),name='QUERY_NIGHT')
     try:
       vote = self.names.index(voteName)
     except:
-      voteName = self.findName(voteName)
+      voteName = self.findName(voteName,self.names[i])
       vote = self.names.index(voteName)
     if(self.warewolf[self.ids[voteName]]):
       vote = random.choice([index for index, value in enumerate(self.warewolf) if value is False and self.alive[index]])
@@ -405,16 +405,29 @@ class Game:
       for i in range(self.n):
         if(not self.warewolf[i] or not self.alive[i]): continue
         self.nightVoteWarewolf(i,names)
+      self.waitAssemble(voters)
 
     kick = self.votes.index(max(self.votes))
     self.alive[kick] = 0
     self.kicked = self.names[kick]
     self.killing = True
     self.elimination = self.kicked
+    threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been eliminated by the Warewolves on {calendar.day} during the Night Phase",))
+    threadObs.start()
     log(f"{self.kicked} has been killed by the Warewolves\n\n")
     self.checkEnd()
 
     self.wakeUp()
+
+  def addObservationAll(self,observation):
+    threads = []
+    for i in range(self.n):
+        if(not self.alive[i]): continue
+        thread = threading.Thread(target=self.agents[i].remember, args=(observation,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
 
   def nightVoteContext(self):
     threads = []
@@ -492,13 +505,15 @@ class Game:
       voteName = self.agents[voteId].brain.query(
          QUERY_DAY.format(self.agents[voteId].name,context[voteId],
                           conversation,self.agents[voteId].name,cover,
-                          names,self.agents[voteId].name,self.agents[voteId].name,self.agents[voteId].name))
+                          names,self.agents[voteId].name,self.agents[voteId].name,self.agents[voteId].name),name='QUERY_DAY')
       try:
         vote = self.names.index(voteName)
       except:
-        voteName = self.findName(voteName)
+        voteName = self.findName(voteName,self.names[voteId])
         vote = self.names.index(voteName)
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
+      threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.agents[voteId].name} voted to lynch {voteName} on {calendar.day} during the day phase",))
+      threadObs.start()
       votes[vote] += 1
       if prev is not None: self.agents[prev].isSpeaking = False
       self.agents[voteId].isSpeaking = True
@@ -518,6 +533,8 @@ class Game:
     if(votes.count(maxVotes)>1):
       log("\nNobody was lynched")
       self.nobodyLynch = True
+      threadObs = threading.Thread(target=self.addObservationAll, args=(f"Nobody was lynched on {calendar.day} during the day phase",))
+      threadObs.start()
     else:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
@@ -527,6 +544,9 @@ class Game:
       self.elimination = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
+      kickedCover = "Werewolf" if self.warewolf[kick] else "Townfolk"
+      threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been lynched on {calendar.day} during the day phase.\n{self.kicked} was a {kickedCover}",))
+      threadObs.start()
 
     for agent in self.agents:
       agent.location_name = 'Tavern'
@@ -536,11 +556,13 @@ class Game:
     self.checkEnd()
       
 
-  def findName(self,currName):
+  def findName(self,currName,voterName=None):
     for name in self.names:
+      if(voterName is not None and name==voterName): continue
       if name in currName or currName in name:
         return name
     for name in self.names:
+      if(voterName is not None and name==voterName): continue
       if name.split(' ')[0] in currName:
         return name
     raise Exception(f"Invalid Name - {currName}")
@@ -599,12 +621,16 @@ class Game:
           lastFew.append(reply)
           if(len(lastFew)>4): lastFew.pop(0)
           if(dialogues>MaxDialogues): break
-          if(dialogues<MinDialogues): QUERY = QUERY_GROUPCONV_MODERATOR
-          else: QUERY = QUERY_GROUPCONV_MODERATOR_END
+          if(dialogues<MinDialogues): 
+            QUERY = QUERY_GROUPCONV_MODERATOR
+            queryName = 'QUERY_GROUPCONV_MODERATOR'
+          else: 
+            QUERY = QUERY_GROUPCONV_MODERATOR_END
+            queryName = 'QUERY_GROUPCONV_MODERATOR_END'
           # currName = moderator.query(QUERY.format(history,names))
           
           if(votersN>2):
-            currName = moderator.query(QUERY.format('\n'.join(lastFew[:3]),names))
+            currName = moderator.query(QUERY.format('\n'.join(lastFew[:3]),names),name=queryName)
             if("End Conversation" in currName): break
             try:
               curr = self.ids[currName]
@@ -615,7 +641,7 @@ class Game:
               except:
                 break
           else:
-            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:3]))))
+            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:3])),name='QUERY_GROUPCONV_END'))
             if(dialogues+EndScore>10): break
             if(dialogues==4): break 
             curr = voters[1-voters.index(curr)]

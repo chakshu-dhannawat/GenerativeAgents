@@ -143,7 +143,7 @@ def getRetrievedMemories(stream):
 
 def getResponseRating(dialogue, response, context, agent1, agent2):
   gpt = GPT()
-  rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response))
+  rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response),name='QUERY_EVALUATION_METRICS')
   # log(f"Dialogue Rating:\n{rating}")
   lines = rating.split('\n')
   ratings = []

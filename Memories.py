@@ -93,7 +93,7 @@ class Memory():
       output = ""
       try:
         gpt = GPT()
-        output = gpt.query(QUERY_IMPORTANCE.format(self.observation))
+        output = gpt.query(QUERY_IMPORTANCE.format(self.observation),name='QUERY_IMPORTANCE')
         self.importance = extractImportance(output)
       except:
         print(output)

@@ -52,7 +52,7 @@ N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')]
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
 N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
-Speed_Killing = 10
+Speed_Killing = 1200//FPS
 
 EMOJI_SIZE = (58, 47)
 FIRE_SIZE = (100, 81)
