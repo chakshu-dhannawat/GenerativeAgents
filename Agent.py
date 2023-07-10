@@ -26,13 +26,14 @@ class Agent():
     self.warewolf = False
     self.task = None
     self.taskReach = False
+    self.now = None
     if "warewolf" in summary:
       self.warewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
       for player in details.split('\n'):
         self.remember(player.split(') ')[1])
     else: QUERY_INIT = QUERY_INIT_TOWNFOLK.format(name, name, summary, name)
-    self.strategy = self.brain.query(QUERY_INIT)
+    self.strategy = self.brain.query(QUERY_INIT,name='QUERY_INIT')
 
     log(f"{self.name}'s Strategy for {calendar.day} -\n\n{self.strategy}\n\n-----------------------\n\n")
     # self.action = self.brain.query(QUERY_ACTION.format(name, summary, self.plan, Initial, calendar.time, getNames(), getPeople()))
@@ -48,7 +49,7 @@ class Agent():
     self.graphics = graphics
 
   def generatePlanDay(self):
-    self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False))
+    self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False,name='QUERY_PLAN'))
     printPlan(self.plan,self.name,calendar.day)
 
   def graphics_init(self,win):
@@ -121,43 +122,43 @@ class Agent():
 
   def talk_context(self,person):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",3))
-    self.context = self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False)
+    self.context = self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False,name='QUERY_CONTEXT')
 
   def vote_context(self,person,n_memory=3):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s observations about {person}",n_memory))
-    return self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False)
+    return self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False,name='QUERY_CONTEXT')
 
   def nightconv_init(self,context,remainingT,remainingW):
-    dialogue = self.brain.query(QUERY_NIGHTCONV_INIT.format(self.name,context,remainingT,remainingW,self.name,self.strategy,self.name,self.name,self.name),remember=False)
+    dialogue = self.brain.query(QUERY_NIGHTCONV_INIT.format(self.name,context,remainingT,remainingW,self.name,self.strategy,self.name,self.name,self.name),remember=False,name='QUERY_NIGHTCONV_INIT')
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
   def nightconv(self,context,history,remainingT,remainingW):
-    dialogue = self.brain.query(QUERY_NIGHTCONV_INIT.format(self.name,context,history,remainingT,remainingW,self.name,self.strategy,self.name,self.name,self.name),remember=False)
+    dialogue = self.brain.query(QUERY_NIGHTCONV_REPLY.format(self.name,context,history,remainingT,remainingW,self.name,self.strategy,self.name,self.name,self.name),remember=False,name='QUERY_NIGHTCONV_REPLY')
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
   def groupconv_init(self,kicked,context,remaining):
     cover = "Warewolf" if self.warewolf else "Townfolk"
-    dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False)
+    dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False,name='QUERY_GROUPCONV_INIT')
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
   def groupconv(self,kicked,context,history,remaining):
     cover = "Warewolf" if self.warewolf else "Townfolk"
-    dialogue = self.brain.query(QUERY_GROUPCONV_REPLY.format(kicked,self.name,context,history,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False)
+    dialogue = self.brain.query(QUERY_GROUPCONV_REPLY.format(kicked,self.name,context,history,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False,name='QUERY_GROUPCONV_REPLY')
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
   def talk_init(self,person,observation):
-    dialogue = self.brain.query(QUERY_DIALOGUE_INIT.format(self.name,person,calendar.day,calendar.time,self.name,self.result,observation,self.name,self.context,person,self.name,self.name),remember=False)
+    dialogue = self.brain.query(QUERY_DIALOGUE_INIT.format(self.name,person,calendar.day,calendar.time,self.name,self.result,observation,self.name,self.context,person,self.name,self.name),remember=False,name='QUERY_DIALOGUE_INIT')
     dialogue = dialogue.replace('\n', '')
     self.remember(dialogue)
     return dialogue
 
   def talk(self,person,last_dialogue,history):
     self.remember(last_dialogue)
-    dialogue = self.brain.query(QUERY_DIALOGUE_REPLY.format(calendar.day,calendar.time,self.name,self.result,person,self.name,self.name,self.context,history,person,self.name,self.name,self.name),remember=False)
+    dialogue = self.brain.query(QUERY_DIALOGUE_REPLY.format(calendar.day,calendar.time,self.name,self.result,person,self.name,self.name,self.context,history,person,self.name,self.name,self.name),remember=False,name='QUERY_DIALOGUE_REPLY')
     dialogue = dialogue.replace('\n', '')
     if("End Conversation" in dialogue): return None
     self.remember(dialogue)
@@ -207,20 +208,21 @@ class Agent():
     return memories
 
   def reflect(self,n_questions=3, n_memories=3, n_reflections=5):
-    questions = extractQuestions(self.brain.query(QUERY_REFLECT_QUESTIONS.format(getMemories(self.memory),n_questions),remember=False))
+    questions = extractQuestions(self.brain.query(QUERY_REFLECT_QUESTIONS.format(getMemories(self.memory),n_questions),remember=False,name='QUERY_REFLECT_QUESTIONS'))
     for question in questions:
       if(question==''): continue
       memories = self.retrieve(question,n_memories)
-      insights = extractQuestions(self.brain.query(QUERY_REFLECT_INSIGHTS.format(self.name,getRetrievedMemories(memories),n_reflections),remember=False))
+      insights = extractQuestions(self.brain.query(QUERY_REFLECT_INSIGHTS.format(self.name,getRetrievedMemories(memories),n_reflections),remember=False,name='QUERY_REFLECT_INSIGHTS'))
       for insight in insights:
         if(insight==''): continue
         #TODO: Add child nodes
         self.memory.append(Reflection(insight))
 
   def nextLocation(self,now,game):
-    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],self.name,getHubs()),remember=False)
+    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
+    if(newLocation=="Tavern"): newLocation = random.choice(hubs)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     tasks, tasksList = getTasks(newLocation,game)
@@ -228,7 +230,7 @@ class Agent():
        self.task = None
        log(f"No Tasks at {newLocation}")
        return
-    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False))
+    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False,name='QUERY_TASK'))
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
     # game.taskOccupied[newLocation][taskSr-1] = True

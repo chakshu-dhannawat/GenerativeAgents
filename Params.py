@@ -1,4 +1,5 @@
 import os
+import time
 
 
 '''
@@ -7,8 +8,8 @@ Agents
 ====================
 '''
 
-MinDialogues = 7
-MaxDialogues = 10
+MinDialogues = 5
+MaxDialogues = 8
 
 # Diff IQ
 agentsDetails = [
@@ -16,9 +17,9 @@ agentsDetails = [
     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
+    # {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
+    # {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
+    # {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
 ]
 
 # Same IQ - High IQ (7-8)
@@ -62,7 +63,7 @@ N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')]
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
 N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
-Speed_Killing = 10
+Speed_Killing = 1200//FPS
 
 EMOJI_SIZE = (58, 47)
 FIRE_SIZE = (100, 81)
@@ -200,3 +201,5 @@ RED = (255, 0, 0)
 DARK_RED = (179,25,25,255)
 ORANGE = (255, 165, 0)
 YELLOW = (255, 255, 0)
+
+PDF_Name = time.strftime("Logs\\%Y-%m-%d %H-%M-%S.pdf", time.localtime(time.time()))

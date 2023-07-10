@@ -44,12 +44,27 @@ Format -
 2) <strategy 2>
 3) <strategy 3>"""
 
+QUERY_NIGHT_SINGLE = """It is currently night.
+
+Context of Remaining Townfolks in {}'s Memory -
+{}
+
+Suggest exactly one Townfolk to vote to kick out.
+
+Here is the list of Townfolks you can vote to kick out -
+{}
+
+Format - <name>"""
+
 QUERY_NIGHT = """It is currently night.
 
 Context of Remaining Townfolks in {}'s Memory -
 {}
 
-Suggest exactly one Townfolk to vote to kick out. 
+Group Discussion Transcript -
+{}
+
+Suggest exactly one Townfolk to vote to kick out, depending on the disucssion.
 
 Here is the list of Townfolks you can vote to kick out -
 {}
@@ -307,10 +322,12 @@ QUERY_LOCATION = """Currently the time is {}.
 
 Here is {}s' plan for {}: {}.
 
-Give the name of the location where {} is most likely to go to given the current time.
-
 The list of available locations -  
 {}
+
+Give the name of the location where {} is most likely to go to given the current time.
+
+{} can only go to one of the available locations
 
 Format - <location_name>"""
 
