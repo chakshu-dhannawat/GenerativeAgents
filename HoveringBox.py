@@ -1,4 +1,5 @@
 import pygame
+from Params import *
 
 class HoverTextBox:
     def __init__(self, rectangle, text, font, text_color, box_color):
@@ -26,6 +27,7 @@ class HoverTextBox:
         self.rectangle.y = y
         
     def hover_bubble(self,surface):
+      Path = "Assets\\"
       text = self.text
       x = self.rectangle.x
       y = self.rectangle.y
