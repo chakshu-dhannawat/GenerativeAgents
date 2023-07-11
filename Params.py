@@ -1,6 +1,8 @@
 import os
 import time
 import random
+import pygame
+from HoveringBox import HoverTextBox
 
 
 '''
@@ -210,6 +212,7 @@ YELLOW = (255, 255, 0)
 Hovering Text Box [GRAPHIC]
 ====================
 '''
+pygame.font.init()
 font = pygame.font.Font(None, 24)
 
 # Shrine

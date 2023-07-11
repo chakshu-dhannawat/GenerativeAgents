@@ -1075,12 +1075,12 @@ class Game:
 
   def step(self) :
 
-    for event in pygame.event.get():
-      if event.type == pygame.QUIT : 
-        self.run = False
-        pygame.quit()  
+      for event in pygame.event.get():
+        if event.type == pygame.QUIT : 
+          self.run = False
+          pygame.quit()  
 
-      self.handleHovers(event) 
+        self.handleHovers(event) 
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
