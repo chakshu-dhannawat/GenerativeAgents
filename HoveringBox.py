@@ -31,7 +31,7 @@ class HoverTextBox:
         
     def hover_bubble(self,surface):
       Path = "Assets\\"
-      text = self.text
+    #   text = self.text
       x = self.rectangle.x
       y = self.rectangle.y
       bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
@@ -57,12 +57,13 @@ class HoverTextBox:
               text_lines.append(line.strip())
               line = word
       text_lines.append(line.strip())
-      temp_task = tasks.split(':')
-      tasks = temp_tasks[1].split('.')
+      temp_task = self.tasks.split(':')
+      if len(temp_task)>=2:
+        tasks = temp_task[1].split('.')
       
-      text_lines.append('Available Tasks:')
-      for task in tasks[1:]:
-          text_lines.append(task)
+        text_lines.append('Available Tasks:')
+        for task in tasks:
+            text_lines.append(task)
 
       # Calculate the maximum width and height for all lines
       max_width = 0
@@ -84,7 +85,7 @@ class HoverTextBox:
       surface.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
-      current_y = bubble_rect.top + bubble_padding
+      current_y = bubble_rect.top + bubble_padding*1.5
       for line in text_lines:
           text_surface = font.render(line, True, (0, 0, 0))
           text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
