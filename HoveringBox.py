@@ -57,13 +57,24 @@ class HoverTextBox:
               text_lines.append(line.strip())
               line = word
       text_lines.append(line.strip())
+
       temp_task = self.tasks.split(':')
       if len(temp_task)>=2:
         tasks = temp_task[1].split('.')
+        # print(tasks)
       
         text_lines.append('Available Tasks:')
-        for task in tasks:
-            text_lines.append(task)
+        for task in tasks[:-1]:
+            # print(task)
+            task = "-> " + task
+            line = ""
+            for word in task.split():
+                if len(line.split()) < 6:
+                    line += " " + word
+                else:
+                    text_lines.append(line.strip())
+                    line = word
+            text_lines.append(line.strip())
 
       # Calculate the maximum width and height for all lines
       max_width = 0
@@ -76,16 +87,22 @@ class HoverTextBox:
       # Create the bubble rectangle around the text
       bubble_padding = 20
       bubble_width = max_width + bubble_padding * 10
-      bubble_height = total_height + bubble_padding * 4
+      bubble_height = total_height + bubble_padding * 5
       # bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 - 50, bubble_width, bubble_height)
 
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
-      bubble_rect = scaled_bubble_image.get_rect(bottomright=(x+bubble_width//4, y))
+      if(self.name == "Electricity House" or self.name =="Shrine"):
+        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x, y))
+      elif(self.name == "Fishing Pond"):
+        bubble_rect = scaled_bubble_image.get_rect(topleft=(x, y))
+      else:
+          
+        bubble_rect = scaled_bubble_image.get_rect(bottomright=(x, y))
       surface.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
-      current_y = bubble_rect.top + bubble_padding*1.5
+      current_y = bubble_rect.top + bubble_padding*2.3
       for line in text_lines:
           text_surface = font.render(line, True, (0, 0, 0))
           text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)

@@ -111,14 +111,14 @@ Initial = "Well"
 InitialPositions = ["Tavern","Well","Shrine","Fishing Pond","Electricity House","Cattle Farm","Tavern","Well","Shrine","Fishing Pond"]
 InitialPositions = [LOCATION_MAP[pos] for pos in InitialPositions]
 
-nodes = {"Hut 1": "The first hut",
-        "Hut 2": "The second hut",
+nodes = {"Hut 1": "The first hut.",
+        "Hut 2": "The second hut.",
         #"Hut 3": "The third hut",
-        "Well": "A water source providing clean and fresh water for the townfolks",
-        "Tavern": "A lively place where townfolks can socialize, exchange information",
-        "Electricity House": "generates and distributes electricity power to the town",
-        "Cattle Farm": "A dedicated area where livestock is raised for milk, meat, or other dairy products",
-        "Fishing Pond": "A designated spot for fishing activities",
+        "Well": "A water source providing clean and fresh water for the townfolks.",
+        "Tavern": "A lively place where townfolks can socialize, exchange information.",
+        "Electricity House": "generates and distributes electricity power to the town.",
+        "Cattle Farm": "A dedicated area where livestock is raised for milk, meat, or other dairy products.",
+        "Fishing Pond": "A designated spot for fishing activities.",
         "Shrine": "A sacred place where townfolks can pay homage, meditate, or seek spiritual solace.",
         "Well task01": "Drawing water from the well.",
         "Well task02": "Cleaning the well.",
@@ -132,16 +132,16 @@ nodes = {"Hut 1": "The first hut",
         #"Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
         #"Electricity House task03": "Ensuring a stable power supply to the village.",
         #"Electricity House task04": "Managing the distribution of electrical resources.",
-        "Shrine task01": "Offering Rituals",
-        "Shrine task02": "Cleaning and Maintenance of the Shrine",
-        "Shrine task03": "Lighting Candles at the Shrine",
-        "Shrine task04": "Gathering Sacred Herbs",
+        "Shrine task01": "Offering Rituals.",
+        "Shrine task02": "Cleaning and Maintenance of the Shrine.",
+        "Shrine task03": "Lighting Candles at the Shrine.",
+        "Shrine task04": "Gathering Sacred Herbs.",
         # "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
         # "Hut 2 task01": "Repairing any damages or leaks in the houses.",
         # "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
         #"Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed.",
-        "Fishing Pond task01": "Setting up fishing nets",
-        "Fishing Pond task02": "Catching fish",
+        "Fishing Pond task01": "Setting up fishing nets.",
+        "Fishing Pond task02": "Catching fish.",
         "Fishing Pond task03": "Cleaning and preparing the caught fish for cooking.",
         "Fishing Pond task04": "Maintaining the fishing equipment and repairing any damages.",
         "Intermediate01":"Inbetween Nodes",
@@ -232,7 +232,7 @@ house2_rect = pygame.Rect(662, 167, 250, 200)
 house2_hover_textbox = HoverTextBox(house2_rect, font, (255, 255, 255), (0, 0, 255), 'Hut 2', nodes['Hut 2'], "")
 
 # Fishing Pond
-fishing_pond_rect = pygame.Rect(662, 11, 100, 100)
+fishing_pond_rect = pygame.Rect(1000, 50, 400, 60)
 fishing_pond_hover_textbox = HoverTextBox(fishing_pond_rect, font, (255, 255, 255), (0, 0, 255), 'Fishing Pond', nodes['Fishing Pond'], f"Available Tasks: {nodes['Fishing Pond task01']}{nodes['Fishing Pond task02']}{nodes['Fishing Pond task03']}{nodes['Fishing Pond task04']}")
 
 # Cattle Farm
