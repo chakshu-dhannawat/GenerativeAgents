@@ -689,9 +689,9 @@ class Game:
       if(rating_n==0): self.convRating = 0
       else: self.convRating = rating/rating_n 
       log(f"\nConversation Rating - {self.convRating}")
-      # log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
-      # log(f"Response Relevance - {calculate_response_relevance(history)}")
-      # log(f"Agreement Metric - {calculate_agreement_metric(history)}")
+      log(f"Turn Taking Ratio - {get_turn_taking_ratio(history)}")
+      log(f"Response Relevance - {calculate_response_relevance(history)}")
+      log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       thread.join()
       # self.agents[prev].isSpeaking = False 
       Clock_Speed = Clock_Speed_Prev
