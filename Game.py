@@ -635,7 +635,7 @@ class Game:
           # currName = moderator.query(QUERY.format(history,names))
           
           if(votersN>2):
-            currName = moderator.query(QUERY.format('\n'.join(lastFew[:3]),names),name=queryName)
+            currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names),name=queryName)
             if("End Conversation" in currName): break
             try:
               curr = self.ids[currName]
@@ -646,16 +646,16 @@ class Game:
               except:
                 break
           else:
-            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:3])),name='QUERY_GROUPCONV_END'))
+            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:2])),name='QUERY_GROUPCONV_END'))
             if(dialogues+EndScore>10): break
             if(dialogues==4): break 
             curr = voters[1-voters.index(curr)]
           
           if(night):
-            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew), remainingTownfolk, remainingWarewolf)
+            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew[:3]), remainingTownfolk, remainingWarewolf)
           else:
             remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
-            reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew), remaining)
+            reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew[:3]), remaining)
 
           if(prev!=curr):
             try:
@@ -817,6 +817,11 @@ class Game:
     reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
     while(not agents[0].taskReach and not agents[1].taskReach):
       time.sleep(0.2)
+    # if(agents[0].task==agents[1].task):
+    #   dest1 = agents[0].destination
+    #   dest2 = agents[1].destination
+    #   agents[0].destination_path = [(int(agents[0].x-5),int(agents[0].y))]
+    #   agents[1].destination_path = [(int(agents[1].x+5),int(agents[1].y))]
     try:
       replyMsg = extract_dialogue(reply)
     except: 
@@ -824,11 +829,15 @@ class Game:
     agents[curr].msg = replyMsg 
     agents[curr].isSpeaking = True
     history = ""
+    lastFew = []
+    conv_n = 0
     while reply is not None:
         log(reply)
+        lastFew.append(reply)
+        conv_n += 1
         history = history + '\n' + reply
         curr = 1 - curr
-        reply = agents[curr].talk(agents[1-curr].name, reply, history, self.contexts[names[curr]][names[1-curr]])
+        reply = agents[curr].talk(agents[1-curr].name, reply, '\n'.join(lastFew[:3]), self.contexts[names[curr]][names[1-curr]], conv_n)
         if(reply is None): break
         try:
           replyMsg = extract_dialogue(reply)
@@ -844,6 +853,9 @@ class Game:
     agents[1].isSpeaking = False 
     agents[0].busy = False 
     agents[1].busy = False
+    # if(agents[0].task==agents[1].task):
+    #   agents[0].destination = dest1
+    #   agents[1].destination = dest2
     if(not self.convs): Clock_Speed = self.ClockPrev
 
   # def startNight(self):
@@ -1100,7 +1112,7 @@ class Game:
   def draw_hover(self):
     for key in hover_dict:
       if hover_dict[key].hovered:
-        hover_dict[key].draw(self.win)
+        hover_dict[key].hover_bubble(self.win)
 
   def nextDay(self):
      calendar.nextDay()
