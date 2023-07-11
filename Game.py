@@ -125,6 +125,7 @@ prayer_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "prayer.png
 shrine_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "shrine.png"), EMOJI_SIZE)
 wellMechanic_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wellMechanic.png"), EMOJI_SIZE)
 wood_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wood.png"), EMOJI_SIZE)
+sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage.png"), EMOJI_SIZE)
 
 # Create a dictionary of emojis
 EMOJI = {
@@ -146,7 +147,8 @@ EMOJI = {
             'Prayer': prayer_emoji,
             'Shrine': shrine_emoji,
             'Well Mechanic': wellMechanic_emoji,
-            'Wood': wood_emoji
+            'Wood': wood_emoji,
+            'Sabotage': sabotage_emoji
         }
 
 
