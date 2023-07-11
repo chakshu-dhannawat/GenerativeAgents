@@ -1115,7 +1115,7 @@ class Game:
   def draw_hover(self):
     for key in hover_dict:
       if hover_dict[key].hovered:
-        hover_dict[key].draw(self.win)
+        hover_dict[key].hover_bubble(self.win)
 
   def nextDay(self):
      calendar.nextDay()
