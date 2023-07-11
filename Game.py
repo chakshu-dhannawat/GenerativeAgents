@@ -149,16 +149,6 @@ EMOJI = {
             'Wood': wood_emoji
         }
 
-'''
-====================
-Hovering Text Box [GRAPHIC]
-====================
-'''
-
-rectangle = pygame.Rect(500, 900, 100, 100)
-font = pygame.font.Font(None, 24)
-
-hover_textbox = HoverTextBox(rectangle, "Hover over me!", font, (255, 255, 255), (0, 0, 255))
 
 
 '''
@@ -1069,22 +1059,28 @@ class Game:
       time.sleep(4)
 
   def draw_hover(self):
-     if hover_textbox.hovered:
-        hover_textbox.draw(self.win)
+    for key in hover_dict:
+      if hover_dict[key].hovered:
+        hover_dict[key].draw(self.win)
 
   def nextDay(self):
      calendar.nextDay()
      calendar.dt = calendar.dt.replace(hour=7, minute=30)
+     
+  def handleHovers(self,event):
+    for key in hover_dict:
+      hover_dict[key].handle_event(event)
+
+      
 
   def step(self) :
 
-      for event in pygame.event.get() :
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT : 
+        self.run = False
+        pygame.quit()  
 
-        if event.type == pygame.QUIT : 
-          self.run = False
-          pygame.quit()  
-
-        hover_textbox.handle_event(event)  
+      self.handleHovers(event) 
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
