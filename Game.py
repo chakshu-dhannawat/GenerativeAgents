@@ -20,6 +20,7 @@ from evaluation_metric import *
 from gtts import gTTS
 from translate import Translator
 import pyautogui
+from HoveringBox import HoverTextBox
 
 
 pygame.font.init()
@@ -1021,7 +1022,7 @@ class Game:
 
       self.draw_time()
       self.draw_fps()
-
+      self.draw_hover()
     pygame.display.update()
 
   def draw_fire(self):
@@ -1094,17 +1095,29 @@ class Game:
       pygame.display.update()
       time.sleep(4)
 
+  def draw_hover(self):
+    for key in hover_dict:
+      if hover_dict[key].hovered:
+        hover_dict[key].draw(self.win)
+
   def nextDay(self):
      calendar.nextDay()
      calendar.dt = calendar.dt.replace(hour=7, minute=30)
+     
+  def handleHovers(self,event):
+    for key in hover_dict:
+      hover_dict[key].handle_event(event)
+
+      
 
   def step(self) :
 
-      for event in pygame.event.get() :
+      for event in pygame.event.get():
+        if event.type == pygame.QUIT : 
+          self.run = False
+          pygame.quit()  
 
-          if event.type == pygame.QUIT : 
-              self.run = False
-              pygame.quit()    
+        self.handleHovers(event) 
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
