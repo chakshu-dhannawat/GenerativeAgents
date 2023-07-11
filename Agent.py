@@ -27,6 +27,7 @@ class Agent():
     self.task = None
     self.taskReach = False
     self.now = None
+    self.busy = False
     if "warewolf" in summary:
       self.warewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -150,15 +151,15 @@ class Agent():
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
-  def talk_init(self,person,observation):
-    dialogue = self.brain.query(QUERY_DIALOGUE_INIT.format(self.name,person,calendar.day,calendar.time,self.name,self.result,observation,self.name,self.context,person,self.name,self.name),remember=False,name='QUERY_DIALOGUE_INIT')
+  def talk_init(self,person,observation,context):
+    dialogue = self.brain.query(QUERY_DIALOGUE_INIT.format(self.name,person,calendar.day,calendar.time,self.name,nodes[self.task],observation,self.name,context,person,self.name,self.name),remember=False,name='QUERY_DIALOGUE_INIT')
     dialogue = dialogue.replace('\n', '')
     self.remember(dialogue)
     return dialogue
 
-  def talk(self,person,last_dialogue,history):
+  def talk(self,person,last_dialogue,history,context,n_conv):
     self.remember(last_dialogue)
-    dialogue = self.brain.query(QUERY_DIALOGUE_REPLY.format(calendar.day,calendar.time,self.name,self.result,person,self.name,self.name,self.context,history,person,self.name,self.name,self.name),remember=False,name='QUERY_DIALOGUE_REPLY')
+    dialogue = self.brain.query(QUERY_DIALOGUE_REPLY.format(calendar.day,calendar.time,self.name,nodes[self.task],person,self.name,self.name,context,history,person,self.name,self.name,n_conv,self.name),remember=False,name='QUERY_DIALOGUE_REPLY')
     dialogue = dialogue.replace('\n', '')
     if("End Conversation" in dialogue): return None
     self.remember(dialogue)
@@ -224,6 +225,7 @@ class Agent():
     newLocation = extractHub(locationName)
     if(newLocation=="Tavern"): newLocation = random.choice(hubs)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
+    self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     tasks, tasksList = getTasks(newLocation,game)
     if(len(tasksList)==0):
@@ -236,6 +238,7 @@ class Agent():
     # game.taskOccupied[newLocation][taskSr-1] = True
     newLocation = tasksList[taskSr-1]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
+    self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     self.task = newLocation
 
@@ -537,7 +540,8 @@ class Agent():
             if(self.destination==self.task): self.taskReach = True
 
             if(self.dest is None):
-              self.choose_random_location()
+              # self.choose_random_location()
+              pass
               
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)

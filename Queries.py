@@ -373,15 +373,16 @@ Format - {}: Dialogue"""
 
 QUERY_DIALOGUE_REPLY = """It is {}, {};
 {}'s status: {};
-Observation: {} has initiatiated conversation with {}.;
+Observation: {} is having a conversation with {}.;
 Summary of relevant context from {}'s memory: {};
 
-Here is the dialogue history -
+Here is the last few dialogues -
 {}
 
 What would he say to {}?
 Give exactly one dialogue from {} ({} may or may not choose to respond)
-Don't repeat dialogue from those in history, and chance of ending conversation is high after 4 dialogues in history.
+Don't repeat dialogue from those in history, and chance of ending conversation is high after 4 dialogues have completed.
+Number of Dialogues Completed - {}
 
 Format (If he chooses to respond) - {}: Dialogue
 Format (If he dosent choose to respond) - End Conversation"""
