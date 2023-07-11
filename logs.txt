@@ -9799,3 +9799,136 @@ Hina Sato voted to kick out Yumi Okada
 Yumi Okada has been lynched by the Villagers
 
 === TOWNFOLKS WIN ===
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/10/2023, 17:14:44
+
+=======Initializing Agents=======
+
+Yuka Suzuki's Strategy for Tuesday July 10 -
+
+1) Listen to arguments from all players before making a decision. 
+2) Keep track of who has been accused and what their defense was. 
+3) Try to identify patterns in behavior and voting to identify potential werewolves.
+
+-----------------------
+
+
+Riku Mori's Strategy for Tuesday July 10 -
+
+1) Observe the voting patterns and analyze the reasons behind each vote.
+2) Keep track of who speaks up during discussions and who remains silent.
+3) Use deduction skills to identify suspicious behavior and form alliances with other townfolks to kick out suspected warewolves.
+
+-----------------------
+
+
+Hina Sato's Strategy for Tuesday July 10 -
+
+1) Analyze voting patterns and behavior to identify suspicious players.
+2) Collaborate with other townfolks to share information and votes.
+3) Keep track of who has been kicked out and use process of elimination to narrow down the remaining warewolves.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Tuesday July 10 -
+
+1) Act like a helpful townfolk by participating in discussions and providing logical reasoning for kicking out other players.
+2) Bluff by accusing innocent townfolks and using their trust to manipulate the voting process in favor of the warewolves.
+3) Keep track of who the other warewolves are and work together to sway the votes towards kicking out the townfolks one by one.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Warewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Riku Mori's Plan for Tuesday July 10 -
+
+10:00 AM : Visit the shrine for morning prayers and meditation.
+11:00 AM : Visit the fishing pond to catch fish for dinner.
+12:00 PM : Relax and unwind by taking a walk in the village.
+1:00 PM : Help a neighbor with their farming chores.
+2:00 PM : Head to the well to collect water for the day.
+3:00 PM : Cook dinner using fresh ingredients and share with neighbors.
+4:00 PM : Visit the cattle farm to buy fresh milk and cheese.
+5:00 PM : Take a lunch break and rest at home.
+6:00 PM : Read books on farming techniques to improve crop yield.
+
+.....................
+
+
+Yuka Suzuki's Plan for Tuesday July 10 -
+
+10:00 AM : Help a neighbor with their garden.
+11:00 AM : Head to the Cattle Farm to buy some fresh milk.
+12:00 PM : Go fishing at the Fishing Pond.
+1:00 PM : Visit a friend's house to catch up.
+2:00 PM : Visit the Shrine to pray and meditate.
+3:00 PM : Take a walk around the village to enjoy the scenery.
+4:00 PM : Take a break and have lunch at home.
+5:00 PM : Have dinner with family and discuss the day's events.
+6:00 PM : Read a book by the Well.
+
+.....................
+
+
+Yumi Okada's Plan for Tuesday July 10 -
+
+10:00 AM : Attend the town meeting and try to sway the voting process in favor of the warewolves.
+11:00 AM : Visit the well again and offer to help townfolks with their daily water needs.
+12:00 PM : Visit the well and engage in small talk with the townfolks while pretending to fetch water.
+1:00 PM : Take a break and rest at the shrine while pretending to pray.
+2:00 PM : Visit the cattle farm again and offer to help with more chores.
+3:00 PM : Keep a low profile and observe the townfolks from a distance.
+4:00 PM : Visit the cattle farm and offer to help with livestock chores to gain the trust of the townfolks.
+5:00 PM : Visit the fishing pond and strike up a conversation with townfolks while pretending to fish.
+
+.....................
+
+
+Hina Sato's Plan for Tuesday July 10 -
+
+10:00 AM : Visit the well to collect water for the day's needs.
+11:00 AM : Have lunch at the cattle farm and chat with the farmers.
+12:00 PM : Attend a town meeting to discuss and strategize for the night's vote.
+1:00 PM : Help out at the cattle farm and assist in the daily chores.
+2:00 PM : Have a discussion with other townfolks to share information about the warewolves.
+3:00 PM : Visit the fishing pond to relax and maybe catch some fish.
+4:00 PM : Head to the shrine to meditate and clear the mind.
+5:00 PM : Take a walk around the village to observe and analyze the surroundings.
+
+.....................
+
+
+
+Yumi Okada chose to go to Shrine at 10:01 AM
+
+
+Riku Mori chose to go to Shrine at 10:01 AM
+
+
+Hina Sato chose to go to Cattle Farm at 10:02 AM
+
+
+Riku Mori chose to do the task : Shrine task01 at 10:02 AM
+
+
+Yuka Suzuki chose to go to Cattle Farm at 10:02 AM
+
+
+Yumi Okada chose to do the task : Shrine task04 at 10:03 AM
+
+
+Hina Sato chose to do the task : Cattle Farm task04 at 10:03 AM
+
+
+Yuka Suzuki chose to do the task : Cattle Farm task04 at 10:04 AM
+
