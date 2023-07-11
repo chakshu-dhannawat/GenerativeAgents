@@ -212,6 +212,8 @@ class Game:
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
     self.contexts = {}
+    for i in range(self.n):
+      self.contexts[self.names[i]] = {}
     self.elimination = None
     self.elim = 0
     self.night_elimination = None
@@ -240,6 +242,8 @@ class Game:
     self.start_phase_show = True
     self.end_phase_show = False
     self.nobodyLynch = False
+    self.convs = 0
+    self.ClockPrev = Clock_Speed
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
 
     self.reset()
@@ -255,7 +259,7 @@ class Game:
       self.contexts[name1][name2] = self.agents[self.ids[name1]].vote_context(name2)
      
   def getContext(self,name,night=False):
-    self.contexts[name] = {}
+    # self.contexts[name] = {}
     threads = []
     for i in range(self.n):
         if(not self.alive[i]): continue
@@ -592,8 +596,6 @@ class Game:
         replyMsg = reply
 
       global Clock_Speed
-      
-      Clock_Speed_Prev = Clock_Speed
 
       self.waitAssemble(voters)
 
@@ -683,7 +685,7 @@ class Game:
       log(f"Agreement Metric - {calculate_agreement_metric(history)}")
       thread.join()
       # self.agents[prev].isSpeaking = False 
-      Clock_Speed = Clock_Speed_Prev
+      Clock_Speed = self.ClockPrev
       self.playBgMusic()
       return history
   
@@ -754,7 +756,10 @@ class Game:
           if(i==j or not self.alive[j]): continue
           if(self.agents[i].dest == self.agents[j].dest):
             if(self.agents[j].task is not None):
-              self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")     
+              self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
+            if(self.agents[i].task is not None and self.agents[j].task is not None and not self.agents[i].busy and not self.agents[j].busy):  
+              threadConv = threading.Thread(target=self.conversation, args=(self.names[i],self.names[j],))
+              threadConv.start()   
 
   def generatePlanDay(self):
     threads = []
@@ -791,22 +796,54 @@ class Game:
     self.changePhase = True
 
   def conversation(self, name1, name2):
+    global Clock_Speed
+    Clock_Speed = 1
+    self.convs+=1
+    names = [name1,name2]
     curr = 0
     agents = [self.agents[self.ids[name1]], self.agents[self.ids[name2]]]
-    agents[0].talk_context(agents[1].name)
-    agents[1].talk_context(agents[0].name)
-    reply = agents[curr].talk_init(agents[1-curr].name, agents[1-curr].result)
+    agents[0].busy = True 
+    agents[1].busy = True
+    thread1 = threading.Thread(target=self.getSingleContext, args=(name1,name2,))
+    thread1.start()
+    thread2 = threading.Thread(target=self.getSingleContext, args=(name2,name1,))
+    thread2.start()
+    thread1.join() 
+    thread2.join()
+    observation = f"{agents[curr].name} saw {agents[1-curr].name} {nodes[agents[1-curr].task]} at {calendar.time}"
+    reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
+    while(not agents[0].taskReach and not agents[1].taskReach):
+      time.sleep(0.2)
+    try:
+      replyMsg = extract_dialogue(reply)
+    except: 
+      replyMsg = reply
+    agents[curr].msg = replyMsg 
+    agents[curr].isSpeaking = True
     history = ""
     while reply is not None:
         log(reply)
         history = history + '\n' + reply
         curr = 1 - curr
-        reply = agents[curr].talk(agents[1-curr].name, reply, history)
+        reply = agents[curr].talk(agents[1-curr].name, reply, history, self.contexts[names[curr]][names[1-curr]])
+        if(reply is None): break
+        try:
+          replyMsg = extract_dialogue(reply)
+        except: 
+          replyMsg = reply
+        agents[curr].msg = replyMsg 
+        agents[1-curr].isSpeaking = False
+        agents[curr].isSpeaking = True
         history = history + '\n'
     log("\nEnd of Conversation")
+    self.convs-=1
+    agents[0].isSpeaking = False 
+    agents[1].isSpeaking = False 
+    agents[0].busy = False 
+    agents[1].busy = False
+    if(not self.convs): Clock_Speed = self.ClockPrev
 
   # def startNight(self):
-    
 
   def reset(self) : 
       for agent in self.agents:

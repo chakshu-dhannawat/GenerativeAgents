@@ -373,7 +373,7 @@ Format - {}: Dialogue"""
 
 QUERY_DIALOGUE_REPLY = """It is {}, {};
 {}'s status: {};
-Observation: {} has initiatiated conversation with {}.;
+Observation: {} is having a conversation with {}.;
 Summary of relevant context from {}'s memory: {};
 
 Here is the dialogue history -
