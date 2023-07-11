@@ -2,9 +2,12 @@ import pygame
 from Params import *
 
 class HoverTextBox:
-    def __init__(self, rectangle, text, font, text_color, box_color):
+    def __init__(self, rectangle, font, text_color, box_color, name=None, desc=None, tasks=None):
         self.rectangle = rectangle
-        self.text = text
+        # self.text = text
+        self.name = name
+        self.desc = desc
+        self.tasks = tasks
         self.font = font
         self.text_color = text_color
         self.box_color = box_color
@@ -31,21 +34,21 @@ class HoverTextBox:
       text = self.text
       x = self.rectangle.x
       y = self.rectangle.y
-      bubble_image = pygame.image.load(Path+"speechbubble_png_blue.png")  # Replace "bubble.png" with the path to your predetermined image
+      bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
 
       # Render the text
       font_size = 22  # Desired font size
       font = pygame.font.Font(None, font_size)
 
       # Split text into words
-      words = text.split()
+      words = self.desc.split()
 
       # Create lines of text with a maximum of 6 words per line
       text_lines = []
       line = ""
       
-      text_lines.append(words[0])
-      words = words[1:]
+      text_lines.append(self.name)
+    #   words = words[1:]
       
       for word in words:
           if len(line.split()) < 6:
@@ -54,6 +57,12 @@ class HoverTextBox:
               text_lines.append(line.strip())
               line = word
       text_lines.append(line.strip())
+      temp_task = tasks.split(':')
+      tasks = temp_tasks[1].split('.')
+      
+      text_lines.append('Available Tasks:')
+      for task in tasks[1:]:
+          text_lines.append(task)
 
       # Calculate the maximum width and height for all lines
       max_width = 0

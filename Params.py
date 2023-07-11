@@ -217,35 +217,36 @@ font = pygame.font.Font(None, 24)
 
 # Shrine
 shrine_rect = pygame.Rect(386, 728, 100, 100)
-shrine_hover_textbox = HoverTextBox(shrine_rect, f"Shrine {nodes['Shrine']} Available Tasks:- {nodes['Shrine task01']},{nodes['Shrine task02']}, {nodes['Shrine task03']}, {nodes['Shrine task04']}", font, (255, 255, 255), (0, 0, 255))
+shrine_hover_textbox = HoverTextBox(shrine_rect, font, (255, 255, 255), (0, 0, 255), 'Shrine', nodes['Shrine'], f"Available Tasks: {nodes['Shrine task01']}, {nodes['Shrine task02']}, {nodes['Shrine task03']}, {nodes['Shrine task04']}")
 
 # Electricity House
 electricity_house_rect = pygame.Rect(67, 514, 100, 100)
-electricity_house_hover_textbox = HoverTextBox(electricity_house_rect, f"Electricity House {nodes['Electricity House']}", font, (255, 255, 255), (0, 0, 255))
+electricity_house_hover_textbox = HoverTextBox(electricity_house_rect, font, (255, 255, 255), (0, 0, 255), 'Electricity House', nodes['Electricity House'], "")
 
 # House 1
 house1_rect = pygame.Rect(187, 156, 100, 100)
-house1_hover_textbox = HoverTextBox(house1_rect, f"Hut 1 {nodes['Hut 1']}", font, (255, 255, 255), (0, 0, 255))
+house1_hover_textbox = HoverTextBox(house1_rect, font, (255, 255, 255), (0, 0, 255), 'Hut 1', nodes['Hut 1'], "")
 
 # House 2
 house2_rect = pygame.Rect(662, 167, 100, 100)
-house2_hover_textbox = HoverTextBox(house2_rect, f"Hut 2 {nodes['Hut 2']}", font, (255, 255, 255), (0, 0, 255))
+house2_hover_textbox = HoverTextBox(house2_rect, font, (255, 255, 255), (0, 0, 255), 'Hut 2', nodes['Hut 2'], "")
 
 # Fishing Pond
 fishing_pond_rect = pygame.Rect(662, 11, 100, 100)
-fishing_pond_hover_textbox = HoverTextBox(fishing_pond_rect, f"Fishing Pond {nodes['Fishing Pond']} Available Tasks: {nodes['Fishing Pond task01']}, {nodes['Fishing Pond task02']}, {nodes['Fishing Pond task03']}, {nodes['Fishing Pond task04']}", font, (255, 255, 255), (0, 0, 255))
+fishing_pond_hover_textbox = HoverTextBox(fishing_pond_rect, font, (255, 255, 255), (0, 0, 255), 'Fishing Pond', nodes['Fishing Pond'], f"Available Tasks: {nodes['Fishing Pond task01']}, {nodes['Fishing Pond task02']}, {nodes['Fishing Pond task03']}, {nodes['Fishing Pond task04']}")
 
 # Cattle Farm
 cattle_farm_rect = pygame.Rect(1600, 347, 100, 100)
-cattle_farm_hover_textbox = HoverTextBox(cattle_farm_rect, f"Cattle Farm {nodes['Cattle Farm']} Available Tasks: {nodes['Cattle Farm task01']}, {nodes['Cattle Farm task02']}, {nodes['Cattle Farm task03']}, {nodes['Cattle Farm task04']}", font, (255, 255, 255), (0, 0, 255))
+cattle_farm_hover_textbox = HoverTextBox(cattle_farm_rect, font, (255, 255, 255), (0, 0, 255), 'Cattle Farm', nodes['Cattle Farm'], f"Available Tasks: {nodes['Cattle Farm task01']}, {nodes['Cattle Farm task02']}, {nodes['Cattle Farm task03']}, {nodes['Cattle Farm task04']}")
 
 # Tavern
 tavern_rect = pygame.Rect(1413, 723, 100, 100)
-tavern_hover_textbox = HoverTextBox(tavern_rect, f"Tavern {nodes['Tavern']}", font, (255, 255, 255), (0, 0, 255))
+tavern_hover_textbox = HoverTextBox(tavern_rect, font, (255, 255, 255), (0, 0, 255), 'Tavern', nodes['Tavern'], "")
 
 # Well
 well_rect = pygame.Rect(774, 487, 100, 100)
-well_hover_textbox = HoverTextBox(well_rect, f"Well {nodes['Well']} Available Tasks: {nodes['Well task01']}, {nodes['Well task02']}, {nodes['Well task03']}", font, (255, 255, 255), (0, 0, 255))
+well_hover_textbox = HoverTextBox(well_rect, font, (255, 255, 255), (0, 0, 255), 'Well', nodes['Well'], f"Available Tasks: {nodes['Well task01']}, {nodes['Well task02']}, {nodes['Well task03']}")
+
 
 hover_dict = {
     'Shrine': shrine_hover_textbox,
