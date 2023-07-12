@@ -254,6 +254,8 @@ class Game:
     self.start_phase_show = True
     self.end_phase_show = False
     self.nobodyLynch = False
+
+    self.housePopup = False
     self.convs = 0
     self.ClockPrev = Clock_Speed
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
