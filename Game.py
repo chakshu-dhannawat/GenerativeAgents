@@ -79,7 +79,7 @@ button Assests
 
 button_width = 100
 button_height = 50
-button_color = (255, 0, 0)  # Red
+button_color = (255, 153, 153) 
 button_text = "House 1"
 button_font = pygame.font.Font(None, 24)
 button_x, button_y =  LOCATION_MAP['Hut 1']
