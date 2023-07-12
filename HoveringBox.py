@@ -37,8 +37,11 @@ class HoverTextBox:
       bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
 
       # Render the text
-      font_size = 22  # Desired font size
+      font_size = 20  # Desired font size
       font = pygame.font.Font(None, font_size)
+      font2 = pygame.font.Font(None, font_size+1,bold=True)
+      font3 = pygame.font.Font(None, font_size+3,bold=True)
+      
 
       # Split text into words
       words = self.desc.split()
@@ -103,8 +106,19 @@ class HoverTextBox:
 
       # Blit the text onto the bubble
       current_y = bubble_rect.top + bubble_padding*2.3
-      for line in text_lines:
-          text_surface = font.render(line, True, (0, 0, 0))
-          text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
-          surface.blit(text_surface, text_rect)
-          current_y += text_surface.get_height()
+      for i,line in enumerate(text_lines):
+        if(line == 'Available Tasks:'):
+            text_surface = font2.render(line, True, (0, 0, 0))
+            text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
+            surface.blit(text_surface, text_rect)
+            current_y += text_surface.get_height()
+        elif(i==0):
+            text_surface = font3.render(line, True, (0, 0, 0))
+            text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
+            surface.blit(text_surface, text_rect)
+            current_y += text_surface.get_height()           
+        else:
+            text_surface = font.render(line, True, (0, 0, 0))
+            text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
+            surface.blit(text_surface, text_rect)
+            current_y += text_surface.get_height()
