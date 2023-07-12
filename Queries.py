@@ -35,7 +35,7 @@ Format -
 
 QUERY_INIT_WEREWOLF = """Name: {}. Act like {}. {}
 {} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is werewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
-Your objective is to win as a Werewolf by kicking out all townfolks before getting identified as a werewolf.
+Your objective is to win as a Werewolf by kicking out all townfolks before getting identified as a werewolf. Also, you need to sabotage the townfolks' tasks in the village smartly  whenever you get the chance without getting caught.
 Detail of other Players -
 {}
 Give your strategy in 3 points, with each point not more than 20 words (your strategy can include things like bluffing).
