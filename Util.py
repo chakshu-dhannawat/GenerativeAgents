@@ -79,7 +79,7 @@ def getTasks(hub,game,werewolf=False):
     if(werewolf):
       tasksList = [node for node in nodes if "task" in node and hub in node]
     else:
-      tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" != TASK_EMOJI_MAP[node]] 
+      tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" not in TASK_EMOJI_MAP[node]] 
     # tasksList = [task for i,task in enumerate(tasksList) if not game.taskOccupied[hub][i]]
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
