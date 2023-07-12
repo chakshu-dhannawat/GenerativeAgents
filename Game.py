@@ -20,7 +20,7 @@ from evaluation_metric import *
 from gtts import gTTS
 from translate import Translator
 import pyautogui
-from HoveringBox import HoverTextBox
+from HoveringBox import *
 
 
 pygame.font.init()
@@ -218,6 +218,7 @@ class Game:
     self.Night = 0
     self.bgId = -1
     self.VelFactor = 1
+    self.planNow = None
     self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
     pygame.display.set_caption("Warewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
@@ -259,11 +260,28 @@ class Game:
     self.HoverBox_agents = {}
     self.reset()
 
+    self.initHover()
+
     self.playBgMusic()  
 
     pyautogui.click(500, 500, button='left')
     time.sleep(0.01)
     pyautogui.moveTo(pyautogui.size()[0]-1,0)
+
+
+  def initHover(self):
+    '''
+      ====================
+      Initializing Agents Hover Box
+      ====================
+    '''
+    for i,agent in enumerate(self.agents):
+      # init_x,init_y = InitialPositions[i][0], InitialPositions[i][1]
+      init_x,init_y = agent.x,agent.y
+      size_x, size_y = 50, 50
+      player_rect = pygame.Rect(init_x, init_y, size_x, size_y)
+      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent.name, agent.summary,"")
+      self.HoverBox_agents[agent.name] = hover_box_player
 
 
   def getSingleContext(self,name1,name2):
@@ -736,6 +754,7 @@ class Game:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
+        self.planNow = now
         if(not planGen):
            threadPlan.join()
            planGen = True
@@ -762,7 +781,8 @@ class Game:
       # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     for i in range(self.n):
       self.agents[i].task = None 
-      self.agents[i].taskReach = False  
+      self.agents[i].taskReach = False 
+    self.planNow = None 
     
   def observe(self,now=None):
     if(now is None): now = calendar.time
@@ -1056,8 +1076,19 @@ class Game:
       self.draw_time()
       self.draw_fps()
       self.draw_hover()
+
+      self.move_hover_box()
+
     pygame.display.update()
 
+
+  def move_hover_box(self):
+     for key in self.HoverBox_agents:
+        agent = self.agents[self.ids[key]]
+        self.HoverBox_agents[key].update_position(agent.x, agent.y)
+        if self.planNow is not None:
+          self.HoverBox_agents[key].plans = agent.nextHourPlan(self.planNow)
+        
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
     # Update fire particles
@@ -1132,6 +1163,9 @@ class Game:
     for key in hover_dict:
       if hover_dict[key].hovered:
         hover_dict[key].hover_bubble(self.win)
+    for key in self.HoverBox_agents:
+      if self.HoverBox_agents[key].hovered:
+        self.HoverBox_agents[key].hover_bubble(self.win)
 
   def nextDay(self):
      calendar.nextDay()
@@ -1140,6 +1174,9 @@ class Game:
   def handleHovers(self,event):
     for key in hover_dict:
       hover_dict[key].handle_event(event)
+
+    for key in self.HoverBox_agents:
+      self.HoverBox_agents[key].handle_event(event)
 
       
 

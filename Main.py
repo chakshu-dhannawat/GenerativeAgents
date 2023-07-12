@@ -59,17 +59,7 @@ log('\n=======Initializing Game=======\n')
 game = Game(agents)
 
 
-'''
-====================
-Initializing Agents Hover Box
-====================
-'''
-for i,agent in enumerate(game.agents):
-  init_x,init_y = InitialPositions[i][0], InitialPositions[i][1]
-  size_x, size_y = agent.Character_Size[0], agent.Character_Size[1] 
-  player_rect = pygame.Rect(init_x, init_y, size_x, size_y)
-  hover_box_player = HoverTextBox_Agent(well_rect, font, (255, 255, 255), (0, 0, 255), agent.name, agent.summary,"")
-  game.HoverBox_agents[agent.name] = hover_box_player
+
 
 
 
