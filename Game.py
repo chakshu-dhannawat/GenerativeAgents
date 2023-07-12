@@ -126,6 +126,10 @@ shrine_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "shrine.png
 wellMechanic_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wellMechanic.png"), EMOJI_SIZE)
 wood_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wood.png"), EMOJI_SIZE)
 sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage.png"), EMOJI_SIZE)
+bucket_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "bucket_sabotage.png"), EMOJI_SIZE)
+broom_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage_broom.png"), EMOJI_SIZE)
+fishingpole_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fishingPole_sabotage.png"), EMOJI_SIZE)
+fence_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fence_sabotage.png"), EMOJI_SIZE)
 
 # Create a dictionary of emojis
 EMOJI = {
@@ -148,7 +152,11 @@ EMOJI = {
             'Shrine': shrine_emoji,
             'Well Mechanic': wellMechanic_emoji,
             'Wood': wood_emoji,
-            'Sabotage': sabotage_emoji
+            'Sabotage': sabotage_emoji,
+            'Bucket_Sabotage': bucket_sabotage_emoji,
+            'Broom_Sabotage': broom_sabotage_emoji,
+            'FishingPole_Sabotage': fishingpole_sabotage_emoji,
+            'Fence_Sabotage': fence_sabotage_emoji
         }
 
 
@@ -738,13 +746,18 @@ class Game:
   def afternoon(self):
     # self.day_phase_show = True
     self.day_phase_japanese_show = True
-    self.generatePlanDay()
+    threadPlan = threading.Thread(target=self.generatePlanDay)
+    threadPlan.start()   
+    planGen = False   
     first = True
     while True:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
         self.planNow = now
+        if(not planGen):
+           threadPlan.join()
+           planGen = True
         threads = []
         for i in range(self.n):
             if(not self.alive[i]): continue
@@ -779,7 +792,10 @@ class Game:
           if(i==j or not self.alive[j]): continue
           if(self.agents[i].dest == self.agents[j].dest):
             if(self.agents[j].task is not None):
-              self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
+              if(self.agents[j].warewolf and not self.agents[i].warewolf and "Sabotage" == TASK_EMOJI_MAP[self.agents[j].task]):
+                self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
+              else:  
+                self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
             if(self.agents[i].task is not None and self.agents[j].task is not None and not self.agents[i].busy and not self.agents[j].busy):  
               threadConv = threading.Thread(target=self.conversation, args=(self.names[i],self.names[j],))
               threadConv.start()   
@@ -820,7 +836,6 @@ class Game:
 
   def conversation(self, name1, name2):
     global Clock_Speed
-    Clock_Speed = 1
     self.convs+=1
     names = [name1,name2]
     curr = 0
@@ -837,11 +852,12 @@ class Game:
     reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
     while(not agents[0].taskReach or not agents[1].taskReach):
       time.sleep(0.2)
-    # if(agents[0].task==agents[1].task):
-    #   dest1 = agents[0].destination
-    #   dest2 = agents[1].destination
-    #   agents[0].destination_path = [(int(agents[0].x-5),int(agents[0].y))]
-    #   agents[1].destination_path = [(int(agents[1].x+5),int(agents[1].y))]
+    if(agents[0].task==agents[1].task):
+      agents[0].destination_path = [(agents[0].x-15,agents[0].y+10)]
+      agents[1].destination_path = [(agents[1].x+15,agents[1].y-10)]
+      agents[0].dest = "Stop"
+      agents[1].dest = "Stop"
+    Clock_Speed = 1
     try:
       replyMsg = extract_dialogue(reply)
     except: 
@@ -876,9 +892,9 @@ class Game:
     agents[1].isSpeaking = False 
     agents[0].busy = False 
     agents[1].busy = False
-    # if(agents[0].task==agents[1].task):
-    #   agents[0].destination = dest1
-    #   agents[1].destination = dest2
+    if(agents[0].task==agents[1].task):
+      agents[0].destination = agents[0].task
+      agents[1].destination = agents[1].task
     if(not self.convs): Clock_Speed = self.ClockPrev
 
   # def startNight(self):

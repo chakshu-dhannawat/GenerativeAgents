@@ -70,7 +70,7 @@ N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')]
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
 N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
-Speed_Killing = 1200//FPS
+Speed_Killing = FPS//10
 
 EMOJI_SIZE = (58, 47)
 FIRE_SIZE = (100, 81)
@@ -135,10 +135,10 @@ nodes = {"Hut 1": "The first hut.",
         #"Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
         #"Electricity House task03": "Ensuring a stable power supply to the village.",
         #"Electricity House task04": "Managing the distribution of electrical resources.",
-        "Shrine task01": "Offering Rituals.",
-        "Shrine task02": "Cleaning and Maintenance of the Shrine.",
-        "Shrine task03": "Lighting Candles at the Shrine.",
-        "Shrine task04": "Make the floors of the Shrine dirty.",
+        "Shrine task01": "Offering Rituals",
+        "Shrine task02": "Cleaning and Maintenance of the Shrine",
+        "Shrine task03": "Lighting Candles at the Shrine",
+        "Shrine task04": "Break the broomstick",
         # "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
         # "Hut 2 task01": "Repairing any damages or leaks in the houses.",
         # "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
@@ -180,16 +180,16 @@ Emoji
 TASK_EMOJI_MAP = {
     'Well task01': 'Bucket',
     'Well task02': 'Broom',
-    'Well task03': 'Sabotage',
+    'Well task03': 'Bucket_Sabotage',
     'Cattle Farm task01': 'Cow',
-    'Cattle Farm task02': 'Sabotage',
+    'Cattle Farm task02': 'Fence_Sabotage',
     'Cattle Farm task03': 'Eggs',
     'Cattle Farm task04': 'Wood',
     'Shrine task01': 'Prayer',
     'Shrine task02': 'Broom',
     'Shrine task03': 'Lamp',
-    'Shrine task04': 'Sabotage',
-    'Fishing Pond task01': 'Sabotage',
+    'Shrine task04': 'Broom_Sabotage',
+    'Fishing Pond task01': 'FishingPole_Sabotage',
     'Fishing Pond task02': 'Fish',
     'Fishing Pond task03': 'Fishing Pole',
     'Fishing Pond task04': 'Wood'
