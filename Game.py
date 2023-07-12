@@ -70,14 +70,19 @@ farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
 
-# Button Assests
+
+'''
+====================
+button Assests
+====================
+'''
+
 button_width = 100
 button_height = 50
 button_color = (255, 0, 0)  # Red
-button_text = "Click Me"
+button_text = "House 1"
 button_font = pygame.font.Font(None, 24)
-button_x = 200
-button_y = 200
+button_x, button_y =  LOCATION_MAP['Hut 1']
 
 
 '''
@@ -1078,7 +1083,8 @@ class Game:
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.draw() 
-      self.draw_fire()  
+      self.draw_fire()
+      self.draw_button()  
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.drawBubble() 
@@ -1134,10 +1140,10 @@ class Game:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
             
   def draw_button(self):
-      pygame.draw.rect(screen, button_color, (button_x, button_y, button_width, button_height))
+      pygame.draw.rect(self.win, button_color, (button_x, button_y, button_width, button_height))
       text_surface = button_font.render(button_text, True, (255, 255, 255))  # Render the button text
       text_rect = text_surface.get_rect(center=(button_x + button_width // 2, button_y + button_height // 2))
-      screen.blit(text_surface, text_rect)
+      self.win.blit(text_surface, text_rect)
 
   def draw_phase(self):
       if(self.night_phase_japanese_show):
@@ -1145,14 +1151,14 @@ class Game:
         # self.night_phase_show = False
         self.win.blit(self.night_phase_japanese,(0,0))
         self.night_phase_japanese_show = False
-        self.draw_button()
+        
         calendar.night()
       elif(self.day_phase_japanese_show):
         # self.win.blit(self.day_phase,(0,0))
         # self.day_phase_show = False
         self.win.blit(self.day_phase_japanese,(0,0))
         self.day_phase_japanese_show = False
-        self.draw_button()
+        
         if(calendar.dt.hour>20): calendar.nextDay()
         calendar.tasks()
       elif(self.voting_phase_japanese_show):
@@ -1160,7 +1166,7 @@ class Game:
         # self.voting_phase_show = False
         self.win.blit(self.voting_phase_japanese,(0,0))
         self.voting_phase_japanese_show = False
-        self.draw_button()
+        
         if(calendar.dt.hour>20): calendar.nextDay()
         calendar.voting()
       elif(self.start_phase_show):
