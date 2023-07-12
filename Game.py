@@ -126,6 +126,10 @@ shrine_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "shrine.png
 wellMechanic_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wellMechanic.png"), EMOJI_SIZE)
 wood_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wood.png"), EMOJI_SIZE)
 sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage.png"), EMOJI_SIZE)
+bucket_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "bucket_sabotage.png"), EMOJI_SIZE)
+broom_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage_broom.png"), EMOJI_SIZE)
+fishingpole_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fishingPole_sabotage.png"), EMOJI_SIZE)
+fence_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fence_sabotage.png"), EMOJI_SIZE)
 
 # Create a dictionary of emojis
 EMOJI = {
@@ -148,7 +152,11 @@ EMOJI = {
             'Shrine': shrine_emoji,
             'Well Mechanic': wellMechanic_emoji,
             'Wood': wood_emoji,
-            'Sabotage': sabotage_emoji
+            'Sabotage': sabotage_emoji,
+            'Bucket_Sabotage': bucket_sabotage_emoji,
+            'Broom_Sabotage': broom_sabotage_emoji,
+            'FishingPole_Sabotage': fishingpole_sabotage_emoji,
+            'Fence_Sabotage': fence_sabotage_emoji
         }
 
 
