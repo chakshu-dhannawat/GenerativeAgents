@@ -73,7 +73,7 @@ bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Backgroun
 
 '''
 ====================
-button Assests
+Button Assests [POPUP]
 ====================
 '''
 
@@ -83,7 +83,7 @@ button_color = (255, 0, 0)  # Red
 button_text = "House 1"
 button_font = pygame.font.Font(None, 24)
 button_x, button_y =  LOCATION_MAP['Hut 1']
-
+house_1_popup = pygame.image.load('Assets\\house_popup_graphed.png')
 
 '''
 ====================
@@ -1058,7 +1058,13 @@ class Game:
     fps_text_rect = fps_text.get_rect(bottomright=(10+fps_text.get_width(), self.win.get_height() - 10))
     self.win.blit(fps_text, fps_text_rect)
     if(self.fps>15): self.VelFactor = FPS/self.fps
+
+  def draw_popup(self):
+    # Get the rect of the image
+    image_rect = house_1_popup.get_rect()
+    self.win.blit(house_1_popup)
   
+
   def draw_window(self) : 
 
     if(self.warewolves_win_japanese_show):
@@ -1079,6 +1085,8 @@ class Game:
 
       self.draw_nobody_lynch()
       self.draw_phase()
+      if(self.housePopup):
+         self.draw_popup()
 
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
@@ -1207,7 +1215,7 @@ class Game:
       
   def is_button_clicked(self,mouse_pos):
     if button_x <= mouse_pos[0] <= button_x + button_width and button_y <= mouse_pos[1] <= button_y + button_height:
-        self.housePopup = True
+        self.housePopup = not self.housePopup
         print("Button Clicked!")
 
   def step(self) :
