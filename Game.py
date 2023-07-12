@@ -70,6 +70,28 @@ farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i 
 bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
 
 
+
+'''
+====================
+Button Assests [POPUP]
+====================
+'''
+# Hut common
+button_font = pygame.font.Font(None, 24)
+button_color = (255, 153, 153) 
+house_popup = pygame.transform.scale(pygame.image.load('Assets\\house_popup_graphed.png'), HOUSE_POPUP_SIZE)
+hut_button = pygame.transform.scale(pygame.image.load("Assets\\button_house.png"), HOUSE_POPUP_SIZE)
+hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
+# Hut 1
+hut1_button_x, hut1_button_y =  LOCATION_MAP['Hut 1']
+# hut1_button_x = hut1_button_x - 50
+hut1_button_y = hut1_button_y - 50
+
+# Hut 2
+hut2_button_x, hut2_button_y =  LOCATION_MAP['Hut 2']
+hut2_button_x = hut2_button_x - 20
+hut2_button_y = hut2_button_y - 50
+
 '''
 ====================
 Fire 
@@ -254,6 +276,9 @@ class Game:
     self.start_phase_show = True
     self.end_phase_show = False
     self.nobodyLynch = False
+
+    self.house1Popup = False
+    self.house2Popup = False
     self.convs = 0
     self.ClockPrev = Clock_Speed
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
@@ -1041,7 +1066,23 @@ class Game:
     fps_text_rect = fps_text.get_rect(bottomright=(10+fps_text.get_width(), self.win.get_height() - 10))
     self.win.blit(fps_text, fps_text_rect)
     if(self.fps>15): self.VelFactor = FPS/self.fps
-  
+
+  def draw_popup(self):
+    # Get the rect of the image
+    if(self.house1Popup==True):
+      image_rect = house_popup.get_rect()
+      image_rect.center = (hut1_button_x, hut1_button_y)
+      self.win.blit(house_popup, image_rect)
+    elif(self.house2Popup==True):
+      image_rect = house_popup.get_rect()
+      image_rect.center = (hut2_button_x, hut2_button_y)
+      self.win.blit(house_popup, image_rect)   
+
+  def draw_agent_in_popup(self):
+     for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup):
+              player.draw() 
+
   def draw_window(self) : 
 
     if(self.warewolves_win_japanese_show):
@@ -1062,11 +1103,12 @@ class Game:
 
       self.draw_nobody_lynch()
       self.draw_phase()
+      
 
       for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
+          if(self.alive[i] and not player.inPopup):
               player.draw() 
-      self.draw_fire()  
+      self.draw_fire()
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.drawBubble() 
@@ -1078,7 +1120,13 @@ class Game:
       self.draw_hover()
 
       self.move_hover_box()
-
+      self.draw_button() 
+      
+      if(self.house1Popup or self.house2Popup):
+         self.draw_popup()
+         self.draw_agent_in_popup()
+      
+      
     pygame.display.update()
 
 
@@ -1120,6 +1168,23 @@ class Game:
     for x, y, _, _, size in fire_particles:
         if size > 0:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
+            
+  def draw_button(self):
+      button_radius = 25
+
+      # Hut 1
+      button_center1 = (hut1_button_x + button_radius, hut1_button_y + button_radius)
+      pygame.draw.circle(self.win, button_color, button_center1, button_radius)
+      hut_button_rect = hut_button.get_rect(center=button_center1)
+      self.win.blit(hut_button, hut_button_rect)
+
+      #Hut 2
+      button_center2 = (hut2_button_x + button_radius, hut2_button_y + button_radius)
+      pygame.draw.circle(self.win, button_color, button_center2, button_radius)
+      hut_button_rect = hut_button.get_rect(center=button_center2)
+      self.win.blit(hut_button, hut_button_rect)
+
+
 
   def draw_phase(self):
       if(self.night_phase_japanese_show):
@@ -1127,12 +1192,14 @@ class Game:
         # self.night_phase_show = False
         self.win.blit(self.night_phase_japanese,(0,0))
         self.night_phase_japanese_show = False
+        
         calendar.night()
       elif(self.day_phase_japanese_show):
         # self.win.blit(self.day_phase,(0,0))
         # self.day_phase_show = False
         self.win.blit(self.day_phase_japanese,(0,0))
         self.day_phase_japanese_show = False
+        
         if(calendar.dt.hour>20): calendar.nextDay()
         calendar.tasks()
       elif(self.voting_phase_japanese_show):
@@ -1140,6 +1207,7 @@ class Game:
         # self.voting_phase_show = False
         self.win.blit(self.voting_phase_japanese,(0,0))
         self.voting_phase_japanese_show = False
+        
         if(calendar.dt.hour>20): calendar.nextDay()
         calendar.voting()
       elif(self.start_phase_show):
@@ -1177,21 +1245,52 @@ class Game:
 
     for key in self.HoverBox_agents:
       self.HoverBox_agents[key].handle_event(event)
-
       
+  def is_button_clicked(self,mouse_pos):
+    if hut1_button_x <= mouse_pos[0] <= hut1_button_x + 50 and hut1_button_y <= mouse_pos[1] <= hut1_button_y + 50:
+        self.house1Popup = not self.house1Popup
+        print("Button Clicked!")
+    if hut2_button_x <= mouse_pos[0] <= hut2_button_x + 50 and hut2_button_y <= mouse_pos[1] <= hut2_button_y + 50:
+        self.house2Popup = not self.house2Popup
+        print("Button Clicked!")
 
+  def exit_agent_popup(self, agent, node):
+     agent.x,agent.y = LOCATION_MAP[node]
+     agent.destination = node
+     agent.location_name = node
+  
+  def check_agent_in_popup(self):
+     for agent in self.agents:
+        if agent.destination == "Hut 1 Main":
+          agent.inPopup = True
+        if agent.destination == "Hut 1":
+          self.exit_agent_popup(agent, 'Hut 1')
+          agent.inPopup = False
+
+        if agent.destination == "Hut 2 Main":
+          agent.inPopup = True
+        if agent.destination == "Hut 2":
+          self.exit_agent_popup(agent, 'Hut 2')
+          agent.inPopup = False
+  
   def step(self) :
 
       for event in pygame.event.get():
         if event.type == pygame.QUIT : 
           self.run = False
-          pygame.quit()  
+          pygame.quit()
+        
+        if event.type == pygame.MOUSEBUTTONDOWN:
+          mouse_pos = pygame.mouse.get_pos()
+          self.is_button_clicked(mouse_pos)
+        
+  
 
         self.handleHovers(event) 
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
-
+      self.check_agent_in_popup()
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.move(self.VelFactor) 

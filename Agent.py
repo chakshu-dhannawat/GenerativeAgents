@@ -22,7 +22,7 @@ class Agent():
     self.location = Initial
     self.memory = [Memory(obs.strip()) for obs in summary.split(';')]
     self.brain = GPT(context=CONTEXT_AGENT)
-
+    self.inPopup = False
     self.warewolf = False
     self.task = None
     self.taskReach = False
@@ -570,6 +570,7 @@ class Agent():
             # self.draw()
             # pygame.display.update()
             self.destination = self.destination_path[0]
+
             self.destination_path.pop(0)
             
             try:

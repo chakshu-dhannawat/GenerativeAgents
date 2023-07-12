@@ -283,4 +283,5 @@ def get_alpha(image, x, y):
     return 0
 
 
+
 details = getAllDetails()
