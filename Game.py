@@ -248,7 +248,7 @@ class Game:
     self.convs = 0
     self.ClockPrev = Clock_Speed
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
-
+    self.HoverBox_agents = {}
     self.reset()
 
     self.playBgMusic()  
