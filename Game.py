@@ -545,7 +545,7 @@ class Game:
         voteName = self.findName(voteName,self.names[voteId])
         vote = self.names.index(voteName)
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
-      threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.agents[voteId].name} voted to lynch {voteName} on {calendar.day} during the day phase",))
+      threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.agents[voteId].name} voted to kick out {voteName} on {calendar.day} during the day phase",))
       threadObs.start()
       votes[vote] += 1
       if prev is not None: self.agents[prev].isSpeaking = False
@@ -754,10 +754,10 @@ class Game:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
-        self.planNow = now
         if(not planGen):
            threadPlan.join()
            planGen = True
+        self.planNow = now
         threads = []
         for i in range(self.n):
             if(not self.alive[i]): continue
