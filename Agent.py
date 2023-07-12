@@ -50,6 +50,14 @@ class Agent():
     self.graphics = graphics
     self.Character_Size = None
 
+  def nextHourPlan(self,now):
+     keys = list(self.plan.keys())
+     try:
+      nextKey = keys(keys.index(now)+1)
+     except:
+      return ""
+     return self.plan(nextKey)
+
   def generatePlanDay(self):
     self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False,name='QUERY_PLAN'))
     printPlan(self.plan,self.name,calendar.day)
@@ -237,7 +245,10 @@ class Agent():
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
     # game.taskOccupied[newLocation][taskSr-1] = True
-    newLocation = tasksList[taskSr-1]
+    try:
+      newLocation = tasksList[taskSr-1]
+    except:
+      newLocation = tasksList[0]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.dest = newLocation
@@ -630,80 +641,6 @@ class Agent():
       # self.destination_x, self.destination_y = point
       # self.is_travelling = True
       self.destination_path.append(point)
-      
-  # def speech_bubble(self, text):
-  #     x = self.x
-  #     y = self.y
-  #     # Render the text
-  #     font_size = 22  # Desired font size
-  #     font = pygame.font.Font(None, font_size)
-  #     text_surface = font.render(text, True, (0,0,0))
-  #     text_rect = text_surface.get_rect(midbottom=(x, y))
-
-  #     # Create the bubble rectangle
-  #     bubble_width = text_rect.width + 20
-  #     bubble_height = text_rect.height + 20
-  #     bubble_rect = pygame.Rect(text_rect.left - 10, text_rect.top - 10, bubble_width, bubble_height)
-
-  #     # Draw the bubble outline
-  #     pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
-
-  #     # Draw the bubble background
-  #     pygame.draw.ellipse(self.win, CREAM, bubble_rect)
-
-
-  #     # Blit the text onto the bubble
-  #     self.win.blit(text_surface, text_rect)
-  
-  # def speech_bubble(self):
-  #     text=self.msg
-  #     x = self.x
-  #     y = self.y
-  #     # Render the text
-  #     font_size = 22  # Desired font size
-  #     font = pygame.font.Font(None, font_size)
-
-  #     # Split text into words
-  #     words = text.split()
-
-  #     # Create lines of text with a maximum of 6 words per line
-  #     text_lines = []
-  #     line = ""
-  #     for word in words:
-  #         if len(line.split()) < 6:
-  #             line += " " + word
-  #         else:
-  #             text_lines.append(line.strip())
-  #             line = word
-  #     text_lines.append(line.strip())
-
-  #     # Calculate the maximum width and height for all lines
-  #     max_width = 0
-  #     total_height = 0
-  #     for line in text_lines:
-  #         text_surface = font.render(line, True, (0, 0, 0))
-  #         max_width = max(max_width, text_surface.get_width())
-  #         total_height += text_surface.get_height()
-
-  #     # Create the bubble rectangle around the text
-  #     bubble_padding = 10
-  #     bubble_width = max_width + bubble_padding * 2
-  #     bubble_height = total_height + bubble_padding * 2
-  #     bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 -50, bubble_width, bubble_height)
-
-  #     # Draw the bubble outline
-  #     pygame.draw.ellipse(self.win, BLACK, bubble_rect, 2)
-
-  #     # Draw the bubble background
-  #     pygame.draw.ellipse(self.win, WHITE, bubble_rect)
-
-  #     # Blit the text onto the bubble
-  #     current_y = bubble_rect.top + bubble_padding
-  #     for line in text_lines:
-  #         text_surface = font.render(line, True, (0, 0, 0))
-  #         text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
-  #         self.win.blit(text_surface, text_rect)
-  #         current_y += text_surface.get_height()
   
   def speech_bubble(self):
       text = self.msg
@@ -722,7 +659,7 @@ class Agent():
       text_lines = []
       line = ""
       for word in words:
-          if len(line.split()) < 6:
+          if len(line.split()) < CONVERSATION_WORD_LIMIT:
               line += " " + word
           else:
               text_lines.append(line.strip())
