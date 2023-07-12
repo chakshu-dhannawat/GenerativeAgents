@@ -817,7 +817,7 @@ class Game:
           if(i==j or not self.alive[j]): continue
           if(self.agents[i].dest == self.agents[j].dest):
             if(self.agents[j].task is not None):
-              if(self.agents[j].warewolf and not self.agents[i].warewolf and "Sabotage" == TASK_EMOJI_MAP[self.agents[j].task]):
+              if(self.agents[j].warewolf and not self.agents[i].warewolf and "Sabotage" in TASK_EMOJI_MAP[self.agents[j].task]):
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
               else:  
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
