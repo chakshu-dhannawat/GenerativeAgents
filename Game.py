@@ -805,7 +805,6 @@ class Game:
 
   def conversation(self, name1, name2):
     global Clock_Speed
-    Clock_Speed = 1
     self.convs+=1
     names = [name1,name2]
     curr = 0
@@ -823,10 +822,11 @@ class Game:
     while(not agents[0].taskReach or not agents[1].taskReach):
       time.sleep(0.2)
     if(agents[0].task==agents[1].task):
-      dest1 = agents[0].destination
-      dest2 = agents[1].destination
-      agents[0].destination_path.append((agents[0].x-25,agents[0].y))
-      agents[1].destination_path.append((agents[1].x+25,agents[1].y))
+      agents[0].destination_path = [(agents[0].x-15,agents[0].y+10)]
+      agents[1].destination_path = [(agents[1].x+15,agents[1].y-10)]
+      agents[0].dest = "Stop"
+      agents[1].dest = "Stop"
+    Clock_Speed = 1
     try:
       replyMsg = extract_dialogue(reply)
     except: 
@@ -862,8 +862,8 @@ class Game:
     agents[0].busy = False 
     agents[1].busy = False
     if(agents[0].task==agents[1].task):
-      agents[0].destination = dest1
-      agents[1].destination = dest2
+      agents[0].destination = agents[0].task
+      agents[1].destination = agents[1].task
     if(not self.convs): Clock_Speed = self.ClockPrev
 
   # def startNight(self):
