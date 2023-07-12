@@ -37,12 +37,12 @@ class HoverTextBox:
       bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
 
       # Render the text
-      font_size = 20  # Desired font size
+      font_size = 22  # Desired font size
       font = pygame.font.Font(None, font_size)
-      font2 = pygame.font.SysFont('Comic Sans MS', font_size+1, pygame.font.Font.bold)
-      font3 = font2
-    #   font2 = pygame.font.Font(None, font_size+1,pygame.font.Font.bold)
-    #   font3 = pygame.font.Font(None, font_size+3,pygame.font.Font.bold)
+      font2 = pygame.font.SysFont('Comic Sans MS', font_size+0.5, pygame.font.Font.bold)
+      font3 = pygame.font.SysFont('Comic Sans MS', font_size+0.7, pygame.font.Font.bold)
+    #   font2 = pygame.font.Font(None, font_size+0.5,pygame.font.Font.bold)
+    #   font3 = pygame.font.Font(None, font_size+1,pygame.font.Font.bold)
       
 
       # Split text into words
