@@ -186,19 +186,19 @@ class HoverTextBox_Agent:
               line = word
       text_lines.append(line.strip())
 
-      if self.plans is not None and self.plans != "": #Check if Plan is none
-        # tasks = self.plans
-        # print(tasks)
+    #   if self.plans is not None and self.plans != "": #Check if Plan is none
+    #     # tasks = self.plans
+    #     # print(tasks)
       
-        text_lines.append('My PLans:')
-        line = ""
-        for word in self.plans.split():
-            if len(line.split()) < 8:
-                line += " " + word
-            else:
-                text_lines.append(line.strip())
-                line = word
-        text_lines.append(line.strip())
+    #     text_lines.append('My PLans:')
+    #     line = ""
+    #     for word in self.plans.split():
+    #         if len(line.split()) < 8:
+    #             line += " " + word
+    #         else:
+    #             text_lines.append(line.strip())
+    #             line = word
+    #     text_lines.append(line.strip())
 
       # Calculate the maximum width and height for all lines
       max_width = 0
