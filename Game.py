@@ -125,7 +125,7 @@ prayer_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "prayer.png
 shrine_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "shrine.png"), EMOJI_SIZE)
 wellMechanic_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wellMechanic.png"), EMOJI_SIZE)
 wood_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "wood.png"), EMOJI_SIZE)
-sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage.png"), EMOJI_SIZE)
+sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage.jpg"), EMOJI_SIZE)
 
 # Create a dictionary of emojis
 EMOJI = {
@@ -815,7 +815,7 @@ class Game:
     thread2.join()
     observation = f"{agents[curr].name} saw {agents[1-curr].name} {nodes[agents[1-curr].task]} at {calendar.time}"
     reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
-    while(not agents[0].taskReach and not agents[1].taskReach):
+    while(not agents[0].taskReach or not agents[1].taskReach):
       time.sleep(0.2)
     # if(agents[0].task==agents[1].task):
     #   dest1 = agents[0].destination
@@ -831,10 +831,13 @@ class Game:
     history = ""
     lastFew = []
     conv_n = 0
+    moderator = GPT()
     while reply is not None:
         log(reply)
         lastFew.append(reply)
         conv_n += 1
+        EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:2])),name='QUERY_GROUPCONV_END'))
+        if(conv_n+EndScore>10): break
         history = history + '\n' + reply
         curr = 1 - curr
         reply = agents[curr].talk(agents[1-curr].name, reply, '\n'.join(lastFew[:3]), self.contexts[names[curr]][names[1-curr]], conv_n)
