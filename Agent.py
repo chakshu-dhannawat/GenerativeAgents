@@ -237,6 +237,7 @@ class Agent():
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     tasks, tasksList = getTasks(newLocation,game,self.warewolf)
+    print(self.name,tasksList,self.warewolf)
     if(len(tasksList)==0):
        self.task = None
        log(f"No Tasks at {newLocation}")
