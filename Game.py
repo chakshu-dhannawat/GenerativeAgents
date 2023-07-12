@@ -772,7 +772,10 @@ class Game:
           if(i==j or not self.alive[j]): continue
           if(self.agents[i].dest == self.agents[j].dest):
             if(self.agents[j].task is not None):
-              self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
+              if(self.agents[j].warewolf and not self.agents[i].warewolf and "Sabotage" == TASK_EMOJI_MAP[self.agents[j].task]):
+                self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
+              else:  
+                self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
             if(self.agents[i].task is not None and self.agents[j].task is not None and not self.agents[i].busy and not self.agents[j].busy):  
               threadConv = threading.Thread(target=self.conversation, args=(self.names[i],self.names[j],))
               threadConv.start()   
