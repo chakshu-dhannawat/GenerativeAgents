@@ -20,7 +20,7 @@ from evaluation_metric import *
 from gtts import gTTS
 from translate import Translator
 import pyautogui
-from HoveringBox import HoverTextBox
+from HoveringBox import *
 
 
 pygame.font.init()
@@ -252,11 +252,28 @@ class Game:
     self.HoverBox_agents = {}
     self.reset()
 
+    self.initHover()
+
     self.playBgMusic()  
 
     pyautogui.click(500, 500, button='left')
     time.sleep(0.01)
     pyautogui.moveTo(pyautogui.size()[0]-1,0)
+
+
+  def initHover(self):
+    '''
+      ====================
+      Initializing Agents Hover Box
+      ====================
+    '''
+    for i,agent in enumerate(self.agents):
+      # init_x,init_y = InitialPositions[i][0], InitialPositions[i][1]
+      init_x,init_y = agent.x,agent.y
+      size_x, size_y = 50, 50
+      player_rect = pygame.Rect(init_x, init_y, size_x, size_y)
+      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent.name, agent.summary,"")
+      self.HoverBox_agents[agent.name] = hover_box_player
 
 
   def getSingleContext(self,name1,name2):
@@ -1141,6 +1158,7 @@ class Game:
   def handleHovers(self,event):
     for key in hover_dict:
       hover_dict[key].handle_event(event)
+
     for key in self.HoverBox_agents:
       self.HoverBox_agents[key].handle_event(event)
 

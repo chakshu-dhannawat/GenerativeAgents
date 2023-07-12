@@ -245,7 +245,10 @@ class Agent():
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
     # game.taskOccupied[newLocation][taskSr-1] = True
-    newLocation = tasksList[taskSr-1]
+    try:
+      newLocation = tasksList[taskSr-1]
+    except:
+      newLocation = tasksList[0]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.dest = newLocation

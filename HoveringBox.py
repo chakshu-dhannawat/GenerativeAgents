@@ -39,8 +39,8 @@ class HoverTextBox:
       # Render the text
       font_size = 22  # Desired font size
       font = pygame.font.Font(None, font_size)
-      font2 = pygame.font.SysFont('Comic Sans MS', font_size+0.5, pygame.font.Font.bold)
-      font3 = pygame.font.SysFont('Comic Sans MS', font_size+0.7, pygame.font.Font.bold)
+      font2 = pygame.font.SysFont('Comic Sans MS', font_size, pygame.font.Font.bold)
+      font3 = pygame.font.SysFont('Comic Sans MS', font_size, pygame.font.Font.bold)
     #   font2 = pygame.font.Font(None, font_size+0.5,pygame.font.Font.bold)
     #   font3 = pygame.font.Font(None, font_size+1,pygame.font.Font.bold)
       
@@ -155,13 +155,13 @@ class HoverTextBox_Agent:
       Path = "Assets\\"
       x = self.rectangle.x
       y = self.rectangle.y
-      bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
+      bubble_image = pygame.image.load(Path+"agent_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
 
       # Render the text
       font_size = 20  # Desired font size
       font = pygame.font.Font(None, font_size)
-      font2 = pygame.font.Font(None, font_size+1,bold=True)
-      font3 = pygame.font.Font(None, font_size+3,bold=True)
+      font2 = pygame.font.SysFont('Comic Sans MS', font_size, pygame.font.Font.bold)
+      font3 = pygame.font.SysFont('Comic Sans MS', font_size, pygame.font.Font.bold)
       
 
       # Split text into words
@@ -182,23 +182,19 @@ class HoverTextBox_Agent:
               line = word
       text_lines.append(line.strip())
 
-      temp_task = self.tasks.split(':')
-      if len(temp_task)>=2:
-        tasks = temp_task[1].split('.')
+      if self.plans is not None and self.plans != "": #Check if Plan is none
+        # tasks = self.plans
         # print(tasks)
       
-        text_lines.append('Available Tasks:')
-        for task in tasks[:-1]:
-            # print(task)
-            task = "-> " + task
-            line = ""
-            for word in task.split():
-                if len(line.split()) < 6:
-                    line += " " + word
-                else:
-                    text_lines.append(line.strip())
-                    line = word
-            text_lines.append(line.strip())
+        text_lines.append('My PLans:')
+        line = ""
+        for word in self.plans.split():
+            if len(line.split()) < 6:
+                line += " " + word
+            else:
+                text_lines.append(line.strip())
+                line = word
+        text_lines.append(line.strip())
 
       # Calculate the maximum width and height for all lines
       max_width = 0
@@ -216,19 +212,15 @@ class HoverTextBox_Agent:
 
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
-      if(self.name == "Electricity House" or self.name =="Shrine"):
-        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x, y))
-      elif(self.name == "Fishing Pond"):
-        bubble_rect = scaled_bubble_image.get_rect(topleft=(x, y))
-      else:
+      
           
-        bubble_rect = scaled_bubble_image.get_rect(bottomright=(x, y))
+      bubble_rect = scaled_bubble_image.get_rect(bottomright=(x, y))
       surface.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
       current_y = bubble_rect.top + bubble_padding*2.3
       for i,line in enumerate(text_lines):
-        if(line == 'Available Tasks:'):
+        if(line == 'My PLans:'):
             text_surface = font2.render(line, True, (0, 0, 0))
             text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
             surface.blit(text_surface, text_rect)
