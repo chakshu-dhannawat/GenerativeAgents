@@ -210,6 +210,7 @@ class Game:
     self.Night = 0
     self.bgId = -1
     self.VelFactor = 1
+    self.planNow = None
     self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
     pygame.display.set_caption("Warewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
@@ -726,6 +727,7 @@ class Game:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
+        self.planNow = now
         threads = []
         for i in range(self.n):
             if(not self.alive[i]): continue
@@ -749,7 +751,8 @@ class Game:
       # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     for i in range(self.n):
       self.agents[i].task = None 
-      self.agents[i].taskReach = False  
+      self.agents[i].taskReach = False 
+    self.planNow = None 
     
   def observe(self,now=None):
     if(now is None): now = calendar.time
@@ -1040,8 +1043,19 @@ class Game:
       self.draw_time()
       self.draw_fps()
       self.draw_hover()
+
+      self.move_hover_box()
+
     pygame.display.update()
 
+
+  def move_hover_box(self):
+     for key in self.HoverBox_agents:
+        agent = self.agents[self.ids[key]]
+        self.HoverBox_agents[key].update_position(agent.x, agent.y)
+        if self.planNow is not None:
+          self.HoverBox_agents[key].plans = agent.nextHourPlan(self.planNow)
+        
   def draw_fire(self):
     global current_frame, frame_count, animation_speed
     # Update fire particles
@@ -1116,6 +1130,9 @@ class Game:
     for key in hover_dict:
       if hover_dict[key].hovered:
         hover_dict[key].hover_bubble(self.win)
+    for key in self.HoverBox_agents:
+      if self.HoverBox_agents[key].hovered:
+        self.HoverBox_agents[key].hover_bubble(self.win)
 
   def nextDay(self):
      calendar.nextDay()
@@ -1124,6 +1141,8 @@ class Game:
   def handleHovers(self,event):
     for key in hover_dict:
       hover_dict[key].handle_event(event)
+    for key in self.HoverBox_agents:
+      self.HoverBox_agents[key].handle_event(event)
 
       
 

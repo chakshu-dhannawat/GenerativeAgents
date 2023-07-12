@@ -50,6 +50,14 @@ class Agent():
     self.graphics = graphics
     self.Character_Size = None
 
+  def nextHourPlan(self,now):
+     keys = list(self.plan.keys())
+     try:
+      nextKey = keys(keys.index(now)+1)
+     except:
+      return ""
+     return self.plan(nextKey)
+
   def generatePlanDay(self):
     self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False,name='QUERY_PLAN'))
     printPlan(self.plan,self.name,calendar.day)
