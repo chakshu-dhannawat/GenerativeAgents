@@ -16,13 +16,13 @@ MaxDialogues = 8
 
 # Diff IQ
 agentsDetails = [
-    {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying."},
-    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments."},
-    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills."},
-    {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is dumb."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills."}
+    {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},
+    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments and takes care of the well and its maintainenance."},
+    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills and loves to do fishing in the Fishing area."},
+    {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine."},
+    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart and an electrician who work in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks."},
+    {"name": "Taichi Kato", "description": "Taichi is a townfolk and an electricain who does tasks at the Electricity House; Taichi is dumb."},
+    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills and a farmer who works in the Cattle Farm."}
 ]
 
 # Same IQ - High IQ (7-8)
