@@ -62,10 +62,18 @@ Clock_Speed = 60
 
 Character_Speed = 1.25
 
+
+HOUSE_POPUP_SIZE = (1024,748)
 HOVER_WORD_LIMIT = 8
 CONVERSATION_WORD_LIMIT = 6
 # VelFactor = 1
 POPUP_BUTTON_SIZE = (35,35)
+
+
+
+HUT1_POPUP_CLOSE = (976, 19)
+HUT2_POPUP_CLOSE = ()
+
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
@@ -80,7 +88,20 @@ TavernCenter = (1434, 811)
 Character_Sizes = [(random.randint(55, 66), random.randint(44, 54)) for _ in range(len(agentsDetails))]
 TavernRadius = 150
 
-LOCATION_MAP = {'Hut 1': (475, 422), 'Hut 2': (963, 427), 'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916), 'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 'Well': (928, 668), 'Well task01': (694, 650), 'Well task02': (737, 719), 'Well task03': (881, 724), 'Electricity House': (320, 676), 'Tavern': (1320, 893), 'Predetermined 01': (1325, 816), 'Predetermined 02': (1389, 737), 'Predetermined 03': (1557, 718), 'Predetermined 04': (1654, 823), 'Predetermined 05': (1589, 947), 'Predetermined 06': (1407, 958), 'Fishing Pond': (1111, 93), 'Fishing Pond task01': (1073, 136), 'Fishing Pond task02': (1238, 145), 'Fishing Pond task03': (1434, 159), 'Fishing Pond task04': (1729, 139), 'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488), 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251)}
+LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376), 
+                "Hut 1 Intermediate01":(305, 376), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 376),"Hut 1 Intermediate05":(686, 376), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
+                "Hut 1 task01":(217,157),"Hut 1 task02":(508,302), "Hut 1 task03":(698,300), "Hut 1 task04":(327,542),
+                'Hut 2': (963, 427), "Hut 2 Main": (623, 381),
+                "Hut 2 Intermediate01": (793, 381), "Hut 2 Intermediate02": (812, 250), "Hut 2 Intermediate03": (812, 162), "Hut 2 Intermediate04": (997, 381), "Hut 2 Intermediate05": (1174, 381), "Hut 2 Intermediate06": (630, 469), "Hut 2 Intermediate07": (713, 546),
+                "Hut 2 task01": (705, 162), "Hut 2 task02": (996, 307), "Hut 2 task03": (1186, 305), "Hut 2 task04": (815, 547),
+                'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916),
+                'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 
+                'Well': (928, 668), 'Well task01': (694, 650), 'Well task02': (737, 719), 'Well task03': (881, 724), 
+                'Electricity House': (320, 676), 'Tavern': (1320, 893), 
+                'Predetermined 01': (1325, 816), 'Predetermined 02': (1389, 737), 'Predetermined 03': (1557, 718), 'Predetermined 04': (1654, 823), 'Predetermined 05': (1589, 947), 'Predetermined 06': (1407, 958), 
+                'Fishing Pond': (1111, 93), 'Fishing Pond task01': (1073, 136), 'Fishing Pond task02': (1238, 145), 'Fishing Pond task03': (1434, 159), 'Fishing Pond task04': (1729, 139), 
+                'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488), 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251)
+                }
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
 Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']
@@ -115,8 +136,31 @@ InitialPositions = ["Tavern","Well","Shrine","Fishing Pond","Electricity House",
 InitialPositions = [LOCATION_MAP[pos] for pos in InitialPositions]
 
 nodes = {"Hut 1": "The first hut.",
+        "Hut 1 Main": "Connection between inside and outside of house",
+        "Hut 1 Intermediate01":"Inbetween Nodes",
+        "Hut 1 Intermediate02":"Inbetween Nodes",
+        "Hut 1 Intermediate03":"Inbetween Nodes",
+        "Hut 1 Intermediate04":"Inbetween Nodes",
+        "Hut 1 Intermediate05":"Inbetween Nodes",
+        "Hut 1 Intermediate06":"Inbetween Nodes",
+        "Hut 1 Intermediate07":"Inbetween Nodes",
+        "Hut 1 task01": "Reading Books",
+        "Hut 1 task02": "Sleeping",
+        "Hut 1 task03": "Sleeping",
+        "Hut 1 task04": "Cooking",
         "Hut 2": "The second hut.",
-        #"Hut 3": "The third hut",
+        "Hut 2 Main": "Connection between inside and outside of house",
+        "Hut 2 Intermediate01": "Inbetween Nodes",
+        "Hut 2 Intermediate02": "Inbetween Nodes",
+        "Hut 2 Intermediate03": "Inbetween Nodes",
+        "Hut 2 Intermediate04": "Inbetween Nodes",
+        "Hut 2 Intermediate05": "Inbetween Nodes",
+        "Hut 2 Intermediate06": "Inbetween Nodes",
+        "Hut 2 Intermediate07": "Inbetween Nodes",
+        "Hut 2 task01": "Reading Books",
+        "Hut 2 task02": "Sleeping",
+        "Hut 2 task03": "Sleeping",
+        "Hut 2 task04": "Cooking",
         "Well": "A water source providing clean and fresh water for the townfolks.",
         "Tavern": "A lively place where townfolks can socialize, exchange information.",
         "Electricity House": "generates and distributes electricity power to the town.",

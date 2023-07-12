@@ -79,8 +79,8 @@ Button Assests [POPUP]
 # Hut common
 button_font = pygame.font.Font(None, 24)
 button_color = (255, 153, 153) 
-house_popup = pygame.image.load('Assets\\house_popup_graphed.png')
-hut_button = pygame.image.load("Assets\\button_house.png")
+house_popup = pygame.transform.scale(pygame.image.load('Assets\\house_popup_graphed.png'), HOUSE_POPUP_SIZE)
+hut_button = pygame.transform.scale(pygame.image.load("Assets\\button_house.png"), HOUSE_POPUP_SIZE)
 hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
 # Hut 1
 hut1_button_x, hut1_button_y =  LOCATION_MAP['Hut 1']
@@ -89,7 +89,7 @@ hut1_button_y = hut1_button_y - 50
 
 # Hut 2
 hut2_button_x, hut2_button_y =  LOCATION_MAP['Hut 2']
-# hut1_button_x = hut1_button_x - 50
+hut2_button_x = hut2_button_x - 20
 hut2_button_y = hut2_button_y - 50
 
 '''
@@ -1076,7 +1076,12 @@ class Game:
     elif(self.house2Popup==True):
       image_rect = house_popup.get_rect()
       image_rect.center = (hut2_button_x, hut2_button_y)
-      self.win.blit(house_popup, image_rect)    
+      self.win.blit(house_popup, image_rect)   
+
+  def draw_agent_in_popup(self):
+     for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup):
+              player.draw() 
 
   def draw_window(self) : 
 
@@ -1101,10 +1106,9 @@ class Game:
       
 
       for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
+          if(self.alive[i] and not player.inPopup):
               player.draw() 
       self.draw_fire()
-      self.draw_button()  
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.drawBubble() 
@@ -1116,10 +1120,13 @@ class Game:
       self.draw_hover()
 
       self.move_hover_box()
-
-      if(self.housePopup):
+      self.draw_button() 
+      
+      if(self.house1Popup or self.house2Popup):
          self.draw_popup()
-
+         self.draw_agent_in_popup()
+      
+      
     pygame.display.update()
 
 
@@ -1164,12 +1171,19 @@ class Game:
             
   def draw_button(self):
       button_radius = 25
-      button_center = (hut1_button_x + button_radius, hut1_button_y + button_radius)
-      
 
-      pygame.draw.circle(self.win, button_color, button_center, button_radius)
-      hut_button_rect = hut_button.get_rect(center=button_center)
+      # Hut 1
+      button_center1 = (hut1_button_x + button_radius, hut1_button_y + button_radius)
+      pygame.draw.circle(self.win, button_color, button_center1, button_radius)
+      hut_button_rect = hut_button.get_rect(center=button_center1)
       self.win.blit(hut_button, hut_button_rect)
+
+      #Hut 2
+      button_center2 = (hut2_button_x + button_radius, hut2_button_y + button_radius)
+      pygame.draw.circle(self.win, button_color, button_center2, button_radius)
+      hut_button_rect = hut_button.get_rect(center=button_center2)
+      self.win.blit(hut_button, hut_button_rect)
+
 
 
   def draw_phase(self):
@@ -1240,6 +1254,25 @@ class Game:
         self.house2Popup = not self.house2Popup
         print("Button Clicked!")
 
+  def exit_agent_popup(self, agent, node):
+     agent.x,agent.y = LOCATION_MAP[node]
+     agent.destination = node
+     agent.location_name = node
+  
+  def check_agent_in_popup(self):
+     for agent in self.agents:
+        if agent.destination == "Hut 1 Main":
+          agent.inPopup = True
+        if agent.destination == "Hut 1":
+          self.exit_agent_popup(agent, 'Hut 1')
+          agent.inPopup = False
+
+        if agent.destination == "Hut 2 Main":
+          agent.inPopup = True
+        if agent.destination == "Hut 2":
+          self.exit_agent_popup(agent, 'Hut 2')
+          agent.inPopup = False
+  
   def step(self) :
 
       for event in pygame.event.get():
@@ -1257,7 +1290,7 @@ class Game:
       
       keys = pygame.key.get_pressed()
       # self.agents[0].manual_move(keys)
-
+      self.check_agent_in_popup()
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.move(self.VelFactor) 
