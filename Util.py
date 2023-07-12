@@ -77,7 +77,7 @@ def shuffle_plan(dictionary):
 def getTasks(hub,game,werewolf=False):
     tasks = ""
     if(werewolf):
-      tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" == TASK_EMOJI_MAP[node]]
+      tasksList = [node for node in nodes if "task" in node and hub in node]
     else:
       tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" != TASK_EMOJI_MAP[node]] 
     # tasksList = [task for i,task in enumerate(tasksList) if not game.taskOccupied[hub][i]]

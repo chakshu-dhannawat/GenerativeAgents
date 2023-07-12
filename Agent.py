@@ -540,8 +540,8 @@ class Agent():
             if(self.destination==self.task): self.taskReach = True
 
             if(self.dest is None):
-              # self.choose_random_location()
-              pass
+              self.choose_random_location()
+              # pass
               
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)

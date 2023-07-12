@@ -720,12 +720,17 @@ class Game:
   def afternoon(self):
     # self.day_phase_show = True
     self.day_phase_japanese_show = True
-    self.generatePlanDay()
+    threadPlan = threading.Thread(target=self.generatePlanDay)
+    threadPlan.start()   
+    planGen = False   
     first = True
     while True:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
+        if(not planGen):
+           threadPlan.join()
+           planGen = True
         threads = []
         for i in range(self.n):
             if(not self.alive[i]): continue
@@ -817,11 +822,11 @@ class Game:
     reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
     while(not agents[0].taskReach or not agents[1].taskReach):
       time.sleep(0.2)
-    # if(agents[0].task==agents[1].task):
-    #   dest1 = agents[0].destination
-    #   dest2 = agents[1].destination
-    #   agents[0].destination_path = [(int(agents[0].x-5),int(agents[0].y))]
-    #   agents[1].destination_path = [(int(agents[1].x+5),int(agents[1].y))]
+    if(agents[0].task==agents[1].task):
+      dest1 = agents[0].destination
+      dest2 = agents[1].destination
+      agents[0].destination_path.append((agents[0].x-25,agents[0].y))
+      agents[1].destination_path.append((agents[1].x+25,agents[1].y))
     try:
       replyMsg = extract_dialogue(reply)
     except: 
@@ -856,9 +861,9 @@ class Game:
     agents[1].isSpeaking = False 
     agents[0].busy = False 
     agents[1].busy = False
-    # if(agents[0].task==agents[1].task):
-    #   agents[0].destination = dest1
-    #   agents[1].destination = dest2
+    if(agents[0].task==agents[1].task):
+      agents[0].destination = dest1
+      agents[1].destination = dest2
     if(not self.convs): Clock_Speed = self.ClockPrev
 
   # def startNight(self):
