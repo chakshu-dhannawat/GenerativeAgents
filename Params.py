@@ -61,6 +61,9 @@ FPS = 60
 Clock_Speed = 60
 
 Character_Speed = 1.25
+
+HOVER_WORD_LIMIT = 8
+CONVERSATION_WORD_LIMIT = 6
 # VelFactor = 1
 
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
@@ -132,16 +135,16 @@ nodes = {"Hut 1": "The first hut.",
         #"Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
         #"Electricity House task03": "Ensuring a stable power supply to the village.",
         #"Electricity House task04": "Managing the distribution of electrical resources.",
-        "Shrine task01": "Offering Rituals",
-        "Shrine task02": "Cleaning and Maintenance of the Shrine",
-        "Shrine task03": "Lighting Candles at the Shrine",
+        "Shrine task01": "Offering Rituals.",
+        "Shrine task02": "Cleaning and Maintenance of the Shrine.",
+        "Shrine task03": "Lighting Candles at the Shrine.",
         "Shrine task04": "Make the floors of the Shrine dirty.",
         # "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
         # "Hut 2 task01": "Repairing any damages or leaks in the houses.",
         # "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
         #"Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed.",
-        "Fishing Pond task01": "Breaking the Fishing Rod",
-        "Fishing Pond task02": "Catching fish",
+        "Fishing Pond task01": "Breaking the Fishing Rod.",
+        "Fishing Pond task02": "Catching fish.",
         "Fishing Pond task03": "Cleaning and preparing the caught fish for cooking.",
         "Fishing Pond task04": "Maintaining the fishing equipment and repairing any damages.",
         "Intermediate01":"Inbetween Nodes",
