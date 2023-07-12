@@ -39,8 +39,8 @@ class HoverTextBox:
       # Render the text
       font_size = 20  # Desired font size
       font = pygame.font.Font(None, font_size)
-      font2 = pygame.font.Font(None, font_size+1,bold=True)
-      font3 = pygame.font.Font(None, font_size+3,bold=True)
+      font2 = pygame.font.Font(None, font_size+1).bold
+      font3 = pygame.font.Font(None, font_size+3).bold
       
 
       # Split text into words
