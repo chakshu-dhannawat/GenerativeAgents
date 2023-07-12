@@ -83,7 +83,11 @@ button_color = (255, 153, 153)
 button_text = "House 1"
 button_font = pygame.font.Font(None, 24)
 button_x, button_y =  LOCATION_MAP['Hut 1']
+# button_x = button_x - 50
+button_y = button_y - 50
 house_1_popup = pygame.image.load('Assets\\house_popup_graphed.png')
+button_image = pygame.image.load("Assets\\button_house.png")
+button_image = pygame.transform.scale(button_image, POPUP_BUTTON_SIZE)
 
 '''
 ====================
@@ -771,10 +775,10 @@ class Game:
       if(calendar.dt.hour in [11]): break
       if(calendar.dt.minute==0):
         now = calendar.time
-        self.planNow = now
         if(not planGen):
            threadPlan.join()
            planGen = True
+        self.planNow = now
         threads = []
         for i in range(self.n):
             if(not self.alive[i]): continue
@@ -1062,7 +1066,8 @@ class Game:
   def draw_popup(self):
     # Get the rect of the image
     image_rect = house_1_popup.get_rect()
-    self.win.blit(house_1_popup)
+    image_rect.center = (button_x, button_y)
+    self.win.blit(house_1_popup, image_rect)
   
 
   def draw_window(self) : 
@@ -1085,8 +1090,7 @@ class Game:
 
       self.draw_nobody_lynch()
       self.draw_phase()
-      if(self.housePopup):
-         self.draw_popup()
+      
 
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
@@ -1104,6 +1108,9 @@ class Game:
       self.draw_hover()
 
       self.move_hover_box()
+
+      if(self.housePopup):
+         self.draw_popup()
 
     pygame.display.update()
 
@@ -1148,9 +1155,9 @@ class Game:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
             
   def draw_button(self):
-      button_radius = 50
+      button_radius = 25
       button_center = (button_x + button_radius, button_y + button_radius)
-      button_image = pygame.image.load("button_house.png")
+      
 
       pygame.draw.circle(self.win, button_color, button_center, button_radius)
       button_image_rect = button_image.get_rect(center=button_center)
@@ -1218,7 +1225,7 @@ class Game:
       self.HoverBox_agents[key].handle_event(event)
       
   def is_button_clicked(self,mouse_pos):
-    if button_x <= mouse_pos[0] <= button_x + button_width and button_y <= mouse_pos[1] <= button_y + button_height:
+    if button_x <= mouse_pos[0] <= button_x + 50 and button_y <= mouse_pos[1] <= button_y + 50:
         self.housePopup = not self.housePopup
         print("Button Clicked!")
 

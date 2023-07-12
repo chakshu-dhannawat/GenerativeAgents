@@ -65,7 +65,7 @@ Character_Speed = 1.25
 HOVER_WORD_LIMIT = 8
 CONVERSATION_WORD_LIMIT = 6
 # VelFactor = 1
-
+POPUP_BUTTON_SIZE = (35,35)
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
