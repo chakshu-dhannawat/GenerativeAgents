@@ -768,8 +768,8 @@ class Agent():
     bubble_padding = 10
     bubble_width = emoji_surface.get_width() + bubble_padding * 2
     bubble_height = emoji_surface.get_height() + bubble_padding * 2
-    bubble_rect = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
-    bubble_rect2 = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    bubble_rect = pygame.Rect(x + bubble_width // 2 + 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    # bubble_rect2 = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
     # Draw the bubble outline
     outline_width = 3  # Adjust the line width as desired
