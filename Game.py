@@ -76,18 +76,21 @@ bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Backgroun
 Button Assests [POPUP]
 ====================
 '''
-
-button_width = 100
-button_height = 50
-button_color = (255, 153, 153) 
-button_text = "House 1"
+# Hut common
 button_font = pygame.font.Font(None, 24)
-button_x, button_y =  LOCATION_MAP['Hut 1']
-# button_x = button_x - 50
-button_y = button_y - 50
-house_1_popup = pygame.image.load('Assets\\house_popup_graphed.png')
-button_image = pygame.image.load("Assets\\button_house.png")
-button_image = pygame.transform.scale(button_image, POPUP_BUTTON_SIZE)
+button_color = (255, 153, 153) 
+house_popup = pygame.image.load('Assets\\house_popup_graphed.png')
+hut_button = pygame.image.load("Assets\\button_house.png")
+hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
+# Hut 1
+hut1_button_x, hut1_button_y =  LOCATION_MAP['Hut 1']
+# hut1_button_x = hut1_button_x - 50
+hut1_button_y = hut1_button_y - 50
+
+# Hut 2
+hut2_button_x, hut2_button_y =  LOCATION_MAP['Hut 2']
+# hut1_button_x = hut1_button_x - 50
+hut2_button_y = hut2_button_y - 50
 
 '''
 ====================
@@ -274,7 +277,8 @@ class Game:
     self.end_phase_show = False
     self.nobodyLynch = False
 
-    self.housePopup = False
+    self.house1Popup = False
+    self.house2Popup = False
     self.convs = 0
     self.ClockPrev = Clock_Speed
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
@@ -1065,10 +1069,14 @@ class Game:
 
   def draw_popup(self):
     # Get the rect of the image
-    image_rect = house_1_popup.get_rect()
-    image_rect.center = (button_x, button_y)
-    self.win.blit(house_1_popup, image_rect)
-  
+    if(self.house1Popup==True):
+      image_rect = house_popup.get_rect()
+      image_rect.center = (hut1_button_x, hut1_button_y)
+      self.win.blit(house_popup, image_rect)
+    elif(self.house2Popup==True):
+      image_rect = house_popup.get_rect()
+      image_rect.center = (hut2_button_x, hut2_button_y)
+      self.win.blit(house_popup, image_rect)    
 
   def draw_window(self) : 
 
@@ -1156,12 +1164,12 @@ class Game:
             
   def draw_button(self):
       button_radius = 25
-      button_center = (button_x + button_radius, button_y + button_radius)
+      button_center = (hut1_button_x + button_radius, hut1_button_y + button_radius)
       
 
       pygame.draw.circle(self.win, button_color, button_center, button_radius)
-      button_image_rect = button_image.get_rect(center=button_center)
-      self.win.blit(button_image, button_image_rect)
+      hut_button_rect = hut_button.get_rect(center=button_center)
+      self.win.blit(hut_button, hut_button_rect)
 
 
   def draw_phase(self):
@@ -1225,8 +1233,11 @@ class Game:
       self.HoverBox_agents[key].handle_event(event)
       
   def is_button_clicked(self,mouse_pos):
-    if button_x <= mouse_pos[0] <= button_x + 50 and button_y <= mouse_pos[1] <= button_y + 50:
-        self.housePopup = not self.housePopup
+    if hut1_button_x <= mouse_pos[0] <= hut1_button_x + 50 and hut1_button_y <= mouse_pos[1] <= hut1_button_y + 50:
+        self.house1Popup = not self.house1Popup
+        print("Button Clicked!")
+    if hut2_button_x <= mouse_pos[0] <= hut2_button_x + 50 and hut2_button_y <= mouse_pos[1] <= hut2_button_y + 50:
+        self.house2Popup = not self.house2Popup
         print("Button Clicked!")
 
   def step(self) :
