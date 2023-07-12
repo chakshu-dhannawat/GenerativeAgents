@@ -79,7 +79,7 @@ Button Assests [POPUP]
 
 button_width = 100
 button_height = 50
-button_color = (255, 0, 0)  # Red
+button_color = (255, 153, 153) 
 button_text = "House 1"
 button_font = pygame.font.Font(None, 24)
 button_x, button_y =  LOCATION_MAP['Hut 1']
@@ -1148,10 +1148,14 @@ class Game:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
             
   def draw_button(self):
-      pygame.draw.rect(self.win, button_color, (button_x, button_y, button_width, button_height))
-      text_surface = button_font.render(button_text, True, (255, 255, 255))  # Render the button text
-      text_rect = text_surface.get_rect(center=(button_x + button_width // 2, button_y + button_height // 2))
-      self.win.blit(text_surface, text_rect)
+      button_radius = 50
+      button_center = (button_x + button_radius, button_y + button_radius)
+      button_image = pygame.image.load("button_house.png")
+
+      pygame.draw.circle(self.win, button_color, button_center, button_radius)
+      button_image_rect = button_image.get_rect(center=button_center)
+      self.win.blit(button_image, button_image_rect)
+
 
   def draw_phase(self):
       if(self.night_phase_japanese_show):
