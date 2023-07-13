@@ -79,7 +79,7 @@ Button Assests [POPUP]
 # Hut common
 button_font = pygame.font.Font(None, 24)
 button_color = (255, 153, 153) 
-house_popup = pygame.transform.scale(pygame.image.load('Assets\\house_popup_graphed.png'), HOUSE_POPUP_SIZE)
+house_popup = pygame.transform.scale(pygame.image.load('Assets\\house_popup.png'), HOUSE_POPUP_SIZE)
 hut_button = pygame.transform.scale(pygame.image.load("Assets\\button_house.png"), HOUSE_POPUP_SIZE)
 hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
 # Hut 1
