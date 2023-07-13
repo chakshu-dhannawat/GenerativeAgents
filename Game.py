@@ -1095,6 +1095,13 @@ class Game:
     self.win.blit(fps_text, fps_text_rect)
     if(self.fps>15): self.VelFactor = FPS/self.fps
 
+  def draw_conversation_in_popup(self, name):
+     for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house1 and name=='Hut 1'): #Drawing speech bubble for agents in house_1
+              player.drawBubble() 
+          elif(self.alive[i] and player.inPopup_house2 and name=='Hut 2'): #Drawing speech bubble for agents in house_2
+             player.drawBubble()
+
   def draw_popup(self):
     # Get the rect of the image
     if(self.house1Popup==True):
@@ -1139,11 +1146,12 @@ class Game:
       
 
       for i,player in enumerate(self.agents): 
-          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2):
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2): #Drawing agents not inside house
               player.draw() 
       self.draw_fire()
+
       for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2): #Drawing speech bubble for agents not in house
               player.drawBubble() 
 
       self.drawTaskEmoji()
@@ -1160,13 +1168,19 @@ class Game:
       if(self.house1Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 1')
+         self.draw_taskbar()
+         self.draw_conversation_in_popup('Hut 1')
          self.drawTaskEmoji_InsidePopup('Hut 1')
+         
          self.draw_hover_agents_insidePopup('Hut 1')
          
       elif(self.house2Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 2')
+         self.draw_taskbar()
+         self.draw_conversation_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
+         
          self.draw_hover_agents_insidePopup('Hut 2')
       
       self.draw_button() 
