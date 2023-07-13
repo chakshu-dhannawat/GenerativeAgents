@@ -1,0 +1,287 @@
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/13/2023, 10:58:28
+
+=======Initializing Agents=======
+
+Hina Sato's Strategy for Friday July 13 -
+
+1) Observe and analyze voting patterns to identify potential warewolves. 
+2) Form alliances with trusted townfolks and share information to gain clarity. 
+3) Use deductive reasoning and critical thinking to evaluate evidence and make informed decisions during discussions and voting rounds.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Friday July 13 -
+
+1) Observe and ask questions to gather information about everyone's behavior and actions.
+2) Collaborate with other townfolks to identify suspicious individuals and create a voting plan.
+3) Use convincing skills to sway the opinions of others and vote out suspected warewolves.
+
+-----------------------
+
+
+Riku Mori's Strategy for Friday July 13 -
+
+1) Observe voting patterns and track who is accused and who accuses. Suspect those who remain quiet or change their votes frequently.
+2) Build relationships with other townfolks to exchange information and form alliances. Share suspicions and gather intel.
+3) Use logical deduction to eliminate suspects and make informed decisions during voting. Analyze behavior and actions to identify warewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 13 -
+
+1) Observe patterns of behavior and voting to identify suspicious individuals. 
+2) Build alliances and trust with other townfolks to share information and coordinate efforts. 
+3) Prioritize the well-being of the village by ensuring maintenance of the well, but also remain vigilant and prepared for any potential werewolf attacks.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 13 -
+
+1) Observe and listen carefully during the discussion to identify any suspicious behavior or contradictions.
+2) Form alliances with other townfolks and share information to narrow down the suspects.
+3) Use logic and deduction to make informed and strategic votes during the day to eliminate potential warewolf suspects.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 13 -
+
+1) Act as an innocent electrician and help the townfolks fix electrical issues to gain trust.
+2) Manipulate the conversation during the day to make the townfolks suspect each other instead of the werewolves.
+3) Use my knowledge as an electrician to sabotage tasks secretly and make it look like accidents, while avoiding suspicion.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/13/2023, 11:01:44
+
+=======Initializing Agents=======
+
+Yuria Shimizu's Strategy for Friday July 13 -
+
+1) Observe and analyze suspicious behavior of other players during discussions.
+2) Form alliances and build trust with other townfolks to share information and vote together.
+3) Use my convincing skills to sway votes towards suspected warewolves and gather evidence to support my arguments.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 13 -
+
+1) Observe and analyze behavior patterns of other players during discussions.
+2) Form alliances with players who seem trustworthy and share information with them.
+3) Use logical reasoning and evidence to convince others to vote out suspected warewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 13 -
+
+1) Observe and gather information about the behaviors and actions of the other players during the day and night.
+2) Participate actively in discussions and debates to share observations and opinions, and question suspicious behavior.
+3) Keep track of voting patterns and use logic and deduction to identify and vote out suspected werewolves.
+
+-----------------------
+
+
+Hina Sato's Strategy for Friday July 13 -
+
+1) Observe voting patterns and behavior to identify suspicious individuals.
+2) Keep track of who has been voted out and use that information to narrow down the suspects.
+3) Contribute to group discussions and ask questions to gather information and identify possible lies or inconsistencies in the warewolves' stories.
+
+-----------------------
+
+
+Riku Mori's Strategy for Friday July 13 -
+
+1) Observe and note down suspicious behavior and actions of individuals during discussions and voting.
+2) Collaborate with other townfolks to share information and suspicions to identify and vote out the potential warewolves.
+3) Use deduction skills to analyze the voting patterns and behavior of individuals to make informed decisions during the day.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 13 -
+
+1) Act as a helpful electrician and gain the trust of townfolks, while secretly sabotaging their tasks.
+2) Blame Yumi Okada for any suspicious activity and create confusion among townfolks to divert attention from myself.
+3) During voting, try to convince townfolks to kick out Yuka Suzuki, Riku Mori, and Hina Sato first, as they seem more suspicious.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 13 -
+
+1) Act like a helpful townfolk by contributing to discussions and trying to identify other werewolves.
+2) Sabotage the townfolks' tasks subtly by suggesting alternate ideas or causing confusion.
+3) Bluff effectively by accusing innocent townfolks of being werewolves and gaining their trust to ensure their elimination.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Warewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Mana Yoshida's Plan for Friday July 13 -
+
+10:00 AM : End work and meet with other werewolves to discuss strategy.
+11:00 AM : Check the electrical wiring at the Shrine.
+12:00 PM : Sabotage the water pump at the Well.
+1:00 PM : Create a power outage and blame it on faulty wiring at the Fishing Pond.
+2:00 PM : Repair the electrical wiring at the Fishing Pond.
+3:00 PM : Check the electrical supply at the Cattle Farm.
+4:00 PM : Take a lunch break.
+5:00 PM : Check the electricity supply at the Well and Cattle Farm.
+6:00 PM : Sabotage the milking machine at the Cattle Farm.
+
+.....................
+
+
+Yuria Shimizu's Plan for Friday July 13 -
+
+10:00 AM : Help other farmers with their tasks and exchange tips.
+11:00 AM : Sell farm produce at the market and negotiate prices.
+12:00 PM : Attend a town meeting to discuss village issues.
+1:00 PM : Gather ingredients for dinner and cook a meal.
+2:00 PM : Harvest crops from farm and bring them to market.
+3:00 PM : Take a break and have lunch by the fishing pond.
+4:00 PM : Enjoy dinner with family and rest for the night.
+5:00 PM : Check on cattle farm and tend to animals.
+6:00 PM : Visit the shrine and pray for a bountiful harvest.
+
+.....................
+
+
+Yuka Suzuki's Plan for Friday July 13 -
+
+10:00 AM : Check the water level and cleanliness of the well. 
+11:00 AM : Visit the fishing pond with neighbors for leisure and to catch fish.
+12:00 PM : Have dinner with family and rest for the day.
+1:00 PM : Return home and rest for a while.
+2:00 PM : Gather with other townfolks at the shrine for morning prayer.
+3:00 PM : Water the plants and flowers in the garden near the well.
+4:00 PM : Attend the meeting at the shrine to discuss village matters.
+5:00 PM : Help clean up the shrine after the meeting.
+6:00 PM : Prepare lunch for the family, using fresh milk from the cattle farm.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 13 -
+
+10:00 AM : Start work at Electricity House, check wiring and circuits.
+11:00 AM : Return to Electricity House, test circuits and connections.
+12:00 PM : Head to the fishing pond to catch some fish for dinner.
+1:00 PM : Take a break and go to the well for fresh water.
+2:00 PM : Return home, cook dinner and enjoy a meal with family.
+3:00 PM : Lunch break, go to the cattle farm and buy some milk.
+4:00 PM : Take a break and visit the shrine for peaceful meditation.
+5:00 PM : Resume work at Electricity House, replace faulty wiring.
+6:00 PM : Relax and unwind before going to bed.
+
+.....................
+
+
+Hina Sato's Plan for Friday July 13 -
+
+10:00 AM : Walk around the village, converse with neighbors, and gather any necessary supplies.
+11:00 AM : Take a break and enjoy some quiet time by the Fishing Pond.
+12:00 PM : Visit the Well and help gather water for the village.
+1:00 PM : Attend a meeting with other town leaders to discuss village matters.
+2:00 PM : Continue working in the Shrine, cleaning and maintaining the sacred area.
+3:00 PM : Pray and meditate in the Shrine for inner peace and guidance.
+4:00 PM : Visit the Cattle Farm and offer to help with any necessary chores.
+5:00 PM : Have lunch near the Well and converse with other townfolks.
+6:00 PM : Return to the Shrine for evening prayers and meditation.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 13 -
+
+10:00 AM : Spend some time reading books and gaining knowledge about the village's history and culture.
+11:00 AM : Head back to the fishing pond and spend an hour fishing for more catch.
+12:00 PM : Take a break and have lunch with some cooked fish and fresh milk.
+1:00 PM : Take the fresh catch to the cattle farm and trade for some fresh milk.
+2:00 PM : Visit the shrine and offer prayers for good health and fortune.
+3:00 PM : Visit the well and collect some fresh water for daily use.
+4:00 PM : Head to the fishing pond and spend an hour fishing for fresh catch.
+5:00 PM : Cook dinner with the fresh catch and enjoy a meal with family and friends.
+6:00 PM : Walk around the village and greet other townfolks to build better relationships.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 13 -
+
+10:00 AM : Take a break and visit the Well, chat with the townfolks and gain their trust
+11:00 AM : Join the town meeting, try to gain their trust by providing helpful suggestions
+12:00 PM : Return to the Cattle Farm, try to sabotage their work again and create chaos.
+1:00 PM : Join the town meeting, try to divert their attention from identifying werewolves
+2:00 PM : Take a break and visit the Shrine, mingle with the townfolks
+3:00 PM : Start working in the Cattle Farm, try to be friendly with other townfolks
+4:00 PM : Visit the Fishing Pond, try to create confusion among townfolks about the fishing rules
+5:00 PM : Return to the Cattle Farm, try to sabotage their work subtly
+
+.....................
+
+
+
+Taichi Kato chose to go to Fishing Pond at 10:35 AM
+
+
+Yuka Suzuki chose to go to Well at 10:35 AM
+
+
+Hina Sato chose to go to Well at 10:36 AM
+
+
+Mana Yoshida chose to go to Cattle Farm at 10:36 AM
+
+
+Yuria Shimizu chose to go to Cattle Farm at 10:36 AM
+
+
+Riku Mori chose to go to Shrine at 10:37 AM
+
+
+Yuka Suzuki chose to do the task : Well task02 at 10:37 AM
+
+
+Taichi Kato chose to do the task : Fishing Pond task04 at 10:37 AM
+
+
+Hina Sato chose to do the task : Well task02 at 10:38 AM
+
+
+Yuria Shimizu chose to do the task : Cattle Farm task04 at 10:38 AM
+
+
+Mana Yoshida chose to do the task : Cattle Farm task04 at 10:38 AM
+
+
+Riku Mori chose to do the task : Shrine task03 at 10:39 AM
+
+
+Yumi Okada chose to go to Well at 10:47 AM
+
+
+Yumi Okada chose to do the task : Well task03 at 10:49 AM
+

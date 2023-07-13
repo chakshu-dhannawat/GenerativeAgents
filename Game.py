@@ -179,6 +179,9 @@ EMOJI = {
             'Broom_Sabotage': broom_sabotage_emoji,
             'FishingPole_Sabotage': fishingpole_sabotage_emoji,
             'Fence_Sabotage': fence_sabotage_emoji
+            'Reading_Books': reading_emoji,
+            'Sleeping': sleeping_emoji,
+            'Cooking' : cooking_emoji,
         }
 
 

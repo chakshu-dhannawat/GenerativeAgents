@@ -236,7 +236,15 @@ TASK_EMOJI_MAP = {
     'Fishing Pond task01': 'FishingPole_Sabotage',
     'Fishing Pond task02': 'Fish',
     'Fishing Pond task03': 'Fishing Pole',
-    'Fishing Pond task04': 'Wood'
+    'Fishing Pond task04': 'Wood',
+    "Hut 1 task01": "Reading_Books",
+    "Hut 1 task02": "Sleeping",
+    "Hut 1 task03": "Sleeping",
+    "Hut 1 task04": "Cooking",
+    "Hut 2 task01": "Reading_Books",
+    "Hut 2 task02": "Sleeping",
+    "Hut 2 task03": "Sleeping",
+    "Hut 2 task04": "Cooking",
 }
 
 '''
