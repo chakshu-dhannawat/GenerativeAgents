@@ -1,9 +1,9 @@
-from GPT import GPT
-from Util import extractImportance
+from GPT import GPT,getEmbedding
+from Util import extractImportance,log
 from Queries import *
 from Params import *
 import re
-from transformers import BertTokenizer, BertModel
+# from transformers import BertTokenizer, BertModel
 import numpy as np
 import torch
 from sklearn.metrics.pairwise import cosine_similarity
@@ -11,15 +11,21 @@ from datetime import datetime, timedelta
 
 # For Relevancy -
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained('bert-base-uncased')
+# tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+# model = BertModel.from_pretrained('bert-base-uncased')
 
-def getEmbedding(sentence):
-    inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
-    with torch.no_grad():
-        outputs = model(**inputs)
-    sentence_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze().detach().numpy()
-    return sentence_embedding
+# def getEmbedding(sentence):
+#   response = openai.Embedding.create(
+#       input="Your text string goes here",
+#       engine="text-embedding-ada-002" 
+#   )
+#   embeddings = response['data'][0]['embedding']
+#   return embeddings
+  # inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
+  # with torch.no_grad():
+  #     outputs = model(**inputs)
+  # sentence_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze().detach().numpy()
+  # return sentence_embedding
 
 
 class Calendar:
@@ -99,10 +105,11 @@ class Memory():
         print(output)
 
   def getRelevancy(self, query):
-    sentence_embedding = getEmbedding(self.observation)
-    query_embedding = getEmbedding(query)
+    sentence_embedding = np.array(getEmbedding(self.observation))
+    query_embedding = np.array(getEmbedding(query))
     similarity_score = cosine_similarity(sentence_embedding.reshape(1, -1), query_embedding.reshape(1, -1))
     relevance_score = similarity_score[0][0]
+    # log(f"Relevancy - \n{query}\nMemory - \n{self.observation}\nRelevance Score- {relevance_score}")
     return 10*relevance_score
 
 class Reflection(Memory):

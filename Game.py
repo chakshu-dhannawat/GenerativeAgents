@@ -300,6 +300,10 @@ class Game:
 
     self.playBgMusic()  
 
+    for i in range(self.n):
+      self.agents[i].game = self
+    self.tasksDone = 0
+
     pyautogui.click(500, 500, button='left')
     time.sleep(0.01)
     pyautogui.moveTo(pyautogui.size()[0]-1,0)
@@ -884,7 +888,10 @@ class Game:
     thread2.start()
     thread1.join() 
     thread2.join()
-    observation = f"{agents[curr].name} saw {agents[1-curr].name} {nodes[agents[1-curr].task]} at {calendar.time}"
+    try:
+      observation = f"{agents[curr].name} saw {agents[1-curr].name} {nodes[agents[1-curr].task]} at {calendar.time}"
+    except:
+      observation = f"{agents[curr].name} saw {agents[1-curr].name} at {calendar.time}"
     reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
     while(not agents[0].taskReach or not agents[1].taskReach):
       time.sleep(0.2)
@@ -1145,8 +1152,10 @@ class Game:
       self.draw_fps()
       self.draw_static_hover()
       self.draw_hover_agents()
+      self.draw_taskbar()
+
       self.move_hover_box()
-      self.draw_button() 
+      
       
       if(self.house1Popup):
          self.draw_popup()
@@ -1159,6 +1168,8 @@ class Game:
          self.draw_agent_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
          self.draw_hover_agents_insidePopup('Hut 2')
+      
+      self.draw_button() 
         
       
       
@@ -1204,6 +1215,22 @@ class Game:
         if size > 0:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
             
+  def draw_taskbar(self):
+    progressWidth = (self.tasksDone/TasksWin) * TasksBarWidth
+    progressWidth = max(0,progressWidth)
+    if(progressWidth>=TasksBarWidth):
+      log('\n=== TOWNFOLKS WIN ===')
+      self.townfolks_win_japanese_show = True
+      time.sleep(5)
+      self.run = False
+      pygame.quit()
+    pygame.draw.rect(self.win, BLACK, (TaskBarX, TaskBarY, TasksBarWidth, TasksBarHeight), 2)
+    pygame.draw.rect(self.win, (34, 139, 24), (TaskBarX+2, TaskBarY+2, progressWidth-4, TasksBarHeight-4))
+    text_surface = font2.render(f"Tasks Progress", True, BLACK)
+    text_rect = text_surface.get_rect()
+    text_rect.center = (math.ceil(TaskBarX + TasksBarWidth/2), math.ceil(TaskBarY + TasksBarHeight/2))
+    self.win.blit(text_surface, text_rect)
+  
   def draw_button(self):
       button_radius = 25
 

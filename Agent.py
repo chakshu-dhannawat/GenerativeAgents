@@ -238,7 +238,7 @@ class Agent():
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     tasks, tasksList = getTasks(newLocation,game,self.warewolf)
-    print(self.name,tasksList,self.warewolf)
+    # print(self.name,tasksList,self.warewolf)
     if(len(tasksList)==0):
        self.task = None
        log(f"No Tasks at {newLocation}")
@@ -551,7 +551,10 @@ class Agent():
           
           if len(self.destination_path)==0:
 
-            if(self.destination==self.task): self.taskReach = True
+            if(not self.taskReach and self.destination==self.task): 
+              self.taskReach = True
+              if("Sabotage" in TASK_EMOJI_MAP[self.task]): self.game.tasksDone -= 1
+              elif(not self.warewolf): self.game.tasksDone += 1
 
             if(self.dest is None):
               self.choose_random_location()

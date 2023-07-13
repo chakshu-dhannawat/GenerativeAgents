@@ -89,10 +89,10 @@ Character_Sizes = [(random.randint(55, 66), random.randint(44, 54)) for _ in ran
 TavernRadius = 150
 
 LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376), 
-                "Hut 1 Intermediate01":(305, 376), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 376),"Hut 1 Intermediate05":(686, 376), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
+                "Hut 1 Intermediate01":(305, 366), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 366),"Hut 1 Intermediate05":(686, 366), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
                 "Hut 1 task01":(217,157),"Hut 1 task02":(508,302), "Hut 1 task03":(698,300), "Hut 1 task04":(327,542),
                 'Hut 2': (963, 427), "Hut 2 Main": (623, 381),
-                "Hut 2 Intermediate01": (793, 381), "Hut 2 Intermediate02": (812, 250), "Hut 2 Intermediate03": (812, 162), "Hut 2 Intermediate04": (997, 381), "Hut 2 Intermediate05": (1174, 381), "Hut 2 Intermediate06": (630, 469), "Hut 2 Intermediate07": (713, 546),
+                "Hut 2 Intermediate01": (793, 371), "Hut 2 Intermediate02": (812, 250), "Hut 2 Intermediate03": (812, 162), "Hut 2 Intermediate04": (997, 371), "Hut 2 Intermediate05": (1174, 371), "Hut 2 Intermediate06": (630, 469), "Hut 2 Intermediate07": (713, 546),
                 "Hut 2 task01": (705, 162), "Hut 2 task02": (996, 307), "Hut 2 task03": (1186, 305), "Hut 2 task04": (815, 547),
                 'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916),
                 'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 
@@ -112,6 +112,12 @@ TavernNodes = [key for key in LOCATION_MAP.keys() if 'Predetermined' in key]
 TavernNodes.append('Tavern')
 TavernCoordinates = [LOCATION_MAP[key] for key in TavernNodes]
 
+TasksWin = 20
+TasksBarWidth = int(WIN_WIDTH*0.4)
+TasksBarHeight = 40
+TaskBarX = (WIN_WIDTH-TasksBarWidth)//2
+TaskBarY = 25
+
 
 '''
 ====================
@@ -119,7 +125,7 @@ Retrieval Alpha
 ====================
 '''
 
-Alpha_Recency = 0.3
+Alpha_Recency = 0.2
 Alpha_Importance = 0
 Alpha_Relevance = 0.8
 
@@ -246,6 +252,7 @@ TASK_EMOJI_MAP = {
     "Hut 2 task03": "Sleeping",
     "Hut 2 task04": "Cooking",
 }
+
 
 '''
 ====================

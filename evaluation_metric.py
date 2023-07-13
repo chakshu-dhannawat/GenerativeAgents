@@ -24,7 +24,7 @@ def get_turn_taking_ratio(dialogue):
     total_turns = sum(agent_turns.values())
     if total_turns == 0:
         return 0
-    return {agent: turns / total_turns for agent, turns in agent_turns.items()}
+    return sum(list({agent: turns / total_turns for agent, turns in agent_turns.items()}.values()))
 
 # turn_taking_ratio = get_turn_taking_ratio(dialogue)
 # print("Turn-taking ratio:", turn_taking_ratio)
