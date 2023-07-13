@@ -152,6 +152,14 @@ bucket_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "b
 broom_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "sabotage_broom.png"), EMOJI_SIZE)
 fishingpole_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fishingPole_sabotage.png"), EMOJI_SIZE)
 fence_sabotage_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "fence_sabotage.png"), EMOJI_SIZE)
+cooking_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiCooking.png"), EMOJI_SIZE)
+sleeping_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiSleeping.png"), EMOJI_SIZE)
+reading_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiReading.png"), EMOJI_SIZE)
+reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseReading2.png"), EMOJI_SIZE)
+cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
+house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
+bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
+
 
 # Create a dictionary of emojis
 EMOJI = {
