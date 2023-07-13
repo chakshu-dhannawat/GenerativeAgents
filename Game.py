@@ -289,6 +289,10 @@ class Game:
 
     self.playBgMusic()  
 
+    for i in range(self.n):
+      self.agents[i].game = self
+    self.tasksDone = 0
+
     pyautogui.click(500, 500, button='left')
     time.sleep(0.01)
     pyautogui.moveTo(pyautogui.size()[0]-1,0)
@@ -1117,6 +1121,7 @@ class Game:
 
       self.draw_time()
       self.draw_fps()
+      self.draw_taskbar()
       self.draw_hover()
 
       self.move_hover_box()
@@ -1169,6 +1174,22 @@ class Game:
         if size > 0:
             pygame.draw.circle(self.win, YELLOW, (int(x), int(y)), int(size))
             
+  def draw_taskbar(self):
+    progressWidth = (self.tasksDone/TasksWin) * TasksBarWidth
+    progressWidth = max(0,progressWidth)
+    if(progressWidth>=1):
+      log('\n=== TOWNFOLKS WIN ===')
+      self.townfolks_win_japanese_show = True
+      time.sleep(5)
+      self.run = False
+      pygame.quit()
+    pygame.draw.rect(self.win, BLACK, (TaskBarX, TaskBarY, TasksBarWidth, TasksBarHeight), 2)
+    pygame.draw.rect(self.win, (34, 139, 24), (TaskBarX+2, TaskBarY+2, progressWidth-4, TasksBarHeight-4))
+    text_surface = font2.render(f"Tasks Progress", True, BLACK)
+    text_rect = text_surface.get_rect()
+    text_rect.center = (math.ceil(TaskBarX + TasksBarWidth/2), math.ceil(TaskBarY + TasksBarHeight/2))
+    self.win.blit(text_surface, text_rect)
+  
   def draw_button(self):
       button_radius = 25
 
