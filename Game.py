@@ -1017,9 +1017,19 @@ class Game:
   def drawTaskEmoji(self):
     for i in range(self.n):
       if(not self.alive[i]): continue
-      if self.agents[i].taskReach:
+      if self.agents[i].taskReach and not self.agents[i].inPopup_house1 and not self.agents[i].inPopup_house2:
          self.agents[i].emoji_bubble(TASK_EMOJI_MAP[self.agents[i].task])
 
+  def drawTaskEmoji_InsidePopup(self, name):
+    for i in range(self.n):
+      if(not self.alive[i]): continue
+      if name == 'Hut 1':
+        if self.agents[i].taskReach and self.agents[i].inPopup_house1:
+          self.agents[i].emoji_bubble(TASK_EMOJI_MAP[self.agents[i].task])
+      elif name == 'Hut 2':
+        if self.agents[i].taskReach and self.agents[i].inPopup_house2:
+          self.agents[i].emoji_bubble(TASK_EMOJI_MAP[self.agents[i].task])
+         
   def drawElimination(self):
 
       if(self.elim==0):
@@ -1089,9 +1099,14 @@ class Game:
       image_rect.center = (hut2_button_x, hut2_button_y)
       self.win.blit(house_popup, image_rect)   
 
-  def draw_agent_in_popup(self):
+  def draw_agent_in_popup(self,name):
+    if(name == 'Hut 1'):
      for i,player in enumerate(self.agents): 
-          if(self.alive[i] and player.inPopup):
+          if(self.alive[i] and player.inPopup_house1):
+              player.draw()
+    elif(name == 'Hut 2'):
+     for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house2):
               player.draw() 
 
   def draw_window(self) : 
@@ -1117,25 +1132,34 @@ class Game:
       
 
       for i,player in enumerate(self.agents): 
-          if(self.alive[i] and not player.inPopup):
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2):
               player.draw() 
       self.draw_fire()
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
               player.drawBubble() 
 
-      self.drawTaskEmoji()  
+      self.drawTaskEmoji()
 
       self.draw_time()
       self.draw_fps()
-      self.draw_hover()
-
+      self.draw_static_hover()
+      self.draw_hover_agents()
       self.move_hover_box()
       self.draw_button() 
       
-      if(self.house1Popup or self.house2Popup):
+      if(self.house1Popup):
          self.draw_popup()
-         self.draw_agent_in_popup()
+         self.draw_agent_in_popup('Hut 1')
+         self.drawTaskEmoji_InsidePopup('Hut 1')
+         self.draw_hover_agents_insidePopup('Hut 1')
+         
+      elif(self.house2Popup):
+         self.draw_popup()
+         self.draw_agent_in_popup('Hut 2')
+         self.drawTaskEmoji_InsidePopup('Hut 2')
+         self.draw_hover_agents_insidePopup('Hut 2')
+        
       
       
     pygame.display.update()
@@ -1237,14 +1261,22 @@ class Game:
          return
       pygame.display.update()
       time.sleep(4)
-
-  def draw_hover(self):
+      
+  def draw_hover_agents(self):
+    for key in self.HoverBox_agents:
+      if self.HoverBox_agents[key].hovered and not agentMap[key].inPopup_house1 and not agentMap[key].inPopup_house2:
+        self.HoverBox_agents[key].hover_bubble(self.win)
+  def draw_hover_agents_insidePopup(self,name):
+    for key in self.HoverBox_agents:
+      if self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house1 and name == 'Hut 1':
+        self.HoverBox_agents[key].hover_bubble(self.win)
+      elif self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house2 and name == 'Hut 2':
+        self.HoverBox_agents[key].hover_bubble(self.win)
+        
+  def draw_static_hover(self):
     for key in hover_dict:
       if hover_dict[key].hovered:
         hover_dict[key].hover_bubble(self.win)
-    for key in self.HoverBox_agents:
-      if self.HoverBox_agents[key].hovered:
-        self.HoverBox_agents[key].hover_bubble(self.win)
 
   def nextDay(self):
      calendar.nextDay()
@@ -1260,10 +1292,10 @@ class Game:
   def is_button_clicked(self,mouse_pos):
     if hut1_button_x <= mouse_pos[0] <= hut1_button_x + 50 and hut1_button_y <= mouse_pos[1] <= hut1_button_y + 50:
         self.house1Popup = not self.house1Popup
-        print("Button Clicked!")
+        # print("Button Clicked!")
     if hut2_button_x <= mouse_pos[0] <= hut2_button_x + 50 and hut2_button_y <= mouse_pos[1] <= hut2_button_y + 50:
         self.house2Popup = not self.house2Popup
-        print("Button Clicked!")
+        # print("Button Clicked!")
 
   def exit_agent_popup(self, agent, node):
      agent.x,agent.y = LOCATION_MAP[node]
@@ -1273,16 +1305,16 @@ class Game:
   def check_agent_in_popup(self):
      for agent in self.agents:
         if agent.destination == "Hut 1 Main":
-          agent.inPopup = True
+          agent.inPopup_house1 = True
         if agent.destination == "Hut 1":
           self.exit_agent_popup(agent, 'Hut 1')
-          agent.inPopup = False
+          agent.inPopup_house1 = False
 
         if agent.destination == "Hut 2 Main":
-          agent.inPopup = True
+          agent.inPopup_house2 = True
         if agent.destination == "Hut 2":
           self.exit_agent_popup(agent, 'Hut 2')
-          agent.inPopup = False
+          agent.inPopup_house2 = False
   
   def step(self) :
 

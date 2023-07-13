@@ -10,7 +10,7 @@ from HoveringBox import HoverTextBox
 Agents
 ====================
 '''
-
+agentMap = {}
 MinDialogues = 5
 MaxDialogues = 8
 

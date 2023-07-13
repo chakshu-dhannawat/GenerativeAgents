@@ -31,6 +31,7 @@ class getAgents():
 
   def makeAgent(self,i):
     self.agents[i] = Agent(agentsDetails[i]['name'],agentsDetails[i]['description'],graphics[i])
+    agentMap[agentsDetails[i]['name']] = self.agents[i]
 
   def get(self):
     threads = []
