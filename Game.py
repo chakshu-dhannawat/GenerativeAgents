@@ -1146,7 +1146,7 @@ class Game:
       self.draw_static_hover()
       self.draw_hover_agents()
       self.move_hover_box()
-      self.draw_button() 
+      
       
       if(self.house1Popup):
          self.draw_popup()
@@ -1159,6 +1159,8 @@ class Game:
          self.draw_agent_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
          self.draw_hover_agents_insidePopup('Hut 2')
+      
+      self.draw_button() 
         
       
       
