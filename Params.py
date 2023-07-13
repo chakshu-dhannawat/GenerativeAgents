@@ -216,7 +216,7 @@ nodes = {"Hut 1": "The first hut.",
         }
 
 # hubs = [x for x in nodes.keys() if "task" not in x and "Intermediate" not in x]  
-hubs = ["Well","Cattle Farm","Shrine","Fishing Pond","Hut 1","Hut 2"]
+hubs = ["Well","Cattle Farm","Shrine","Fishing Pond"]
 
 
 

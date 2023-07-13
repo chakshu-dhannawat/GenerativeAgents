@@ -109,7 +109,7 @@ class Memory():
     query_embedding = np.array(getEmbedding(query))
     similarity_score = cosine_similarity(sentence_embedding.reshape(1, -1), query_embedding.reshape(1, -1))
     relevance_score = similarity_score[0][0]
-    log(f"Relevancy - \n{query}\nMemory - \n{self.observation}\nRelevance Score- {relevance_score}")
+    # log(f"Relevancy - \n{query}\nMemory - \n{self.observation}\nRelevance Score- {relevance_score}")
     return 10*relevance_score
 
 class Reflection(Memory):

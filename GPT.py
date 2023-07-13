@@ -12,9 +12,13 @@ import os
 import time
 from fpdf import FPDF
 from Params import PDF_Name
+from transformers import BertTokenizer, BertModel
 
 load_dotenv()
 lock = Lock()
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
 
 def addUsage(tokens):
   with lock:
@@ -34,14 +38,20 @@ openai.api_version = os.getenv('OpenAI_Version')
 
 openai.api_key = os.getenv("OpenAI_API_KEY")
 
-def getEmbedding(sentence):
-  response = openai.Embedding.create(
-      input=sentence,
-      engine="text-embedding-ada-002" 
-  )
-  embeddings = response['data'][0]['embedding']
-  return embeddings
+# def getEmbedding(sentence):
+#   response = openai.Embedding.create(
+#       input=sentence,
+#       engine="text-embedding-ada-002" 
+#   )
+#   embeddings = response['data'][0]['embedding']
+#   return embeddings
 
+def getEmbedding(sentence):
+    inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
+    with torch.no_grad():
+        outputs = model(**inputs)
+    sentence_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze().detach().numpy()
+    return sentence_embedding
 
 class GPT:
 
