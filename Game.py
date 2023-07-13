@@ -888,7 +888,10 @@ class Game:
     thread2.start()
     thread1.join() 
     thread2.join()
-    observation = f"{agents[curr].name} saw {agents[1-curr].name} {nodes[agents[1-curr].task]} at {calendar.time}"
+    try:
+      observation = f"{agents[curr].name} saw {agents[1-curr].name} {nodes[agents[1-curr].task]} at {calendar.time}"
+    except:
+      observation = f"{agents[curr].name} saw {agents[1-curr].name} at {calendar.time}"
     reply = agents[curr].talk_init(agents[1-curr].name, observation, self.contexts[names[curr]][names[1-curr]])
     while(not agents[0].taskReach or not agents[1].taskReach):
       time.sleep(0.2)
@@ -1150,7 +1153,6 @@ class Game:
       self.draw_static_hover()
       self.draw_hover_agents()
       self.draw_taskbar()
-      self.draw_hover()
 
       self.move_hover_box()
       
@@ -1216,7 +1218,7 @@ class Game:
   def draw_taskbar(self):
     progressWidth = (self.tasksDone/TasksWin) * TasksBarWidth
     progressWidth = max(0,progressWidth)
-    if(progressWidth>=1):
+    if(progressWidth>=TasksBarWidth):
       log('\n=== TOWNFOLKS WIN ===')
       self.townfolks_win_japanese_show = True
       time.sleep(5)

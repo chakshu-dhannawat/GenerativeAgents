@@ -125,7 +125,7 @@ Retrieval Alpha
 ====================
 '''
 
-Alpha_Recency = 0.3
+Alpha_Recency = 0.2
 Alpha_Importance = 0
 Alpha_Relevance = 0.8
 
@@ -216,7 +216,7 @@ nodes = {"Hut 1": "The first hut.",
         }
 
 # hubs = [x for x in nodes.keys() if "task" not in x and "Intermediate" not in x]  
-hubs = ["Well","Cattle Farm","Shrine","Fishing Pond"]
+hubs = ["Well","Cattle Farm","Shrine","Fishing Pond","Hut 1","Hut 2"]
 
 
 

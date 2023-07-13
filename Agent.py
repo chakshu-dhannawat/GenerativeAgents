@@ -554,7 +554,7 @@ class Agent():
             if(not self.taskReach and self.destination==self.task): 
               self.taskReach = True
               if("Sabotage" in TASK_EMOJI_MAP[self.task]): self.game.tasksDone -= 1
-              else: self.game.tasksDone += 1
+              elif(not self.warewolf): self.game.tasksDone += 1
 
             if(self.dest is None):
               self.choose_random_location()

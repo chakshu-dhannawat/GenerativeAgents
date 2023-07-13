@@ -34,6 +34,14 @@ openai.api_version = os.getenv('OpenAI_Version')
 
 openai.api_key = os.getenv("OpenAI_API_KEY")
 
+def getEmbedding(sentence):
+  response = openai.Embedding.create(
+      input=sentence,
+      engine="text-embedding-ada-002" 
+  )
+  embeddings = response['data'][0]['embedding']
+  return embeddings
+
 
 class GPT:
 
