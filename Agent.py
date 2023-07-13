@@ -22,7 +22,8 @@ class Agent():
     self.location = Initial
     self.memory = [Memory(obs.strip()) for obs in summary.split(';')]
     self.brain = GPT(context=CONTEXT_AGENT)
-    self.inPopup = False
+    self.inPopup_house1 = False
+    self.inPopup_house2 = False
     self.warewolf = False
     self.task = None
     self.taskReach = False
