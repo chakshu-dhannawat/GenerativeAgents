@@ -104,7 +104,7 @@ LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376),
                 'Electricity House': (320, 676), 'Tavern': (1320, 893), 
                 'Predetermined 01': (1325, 816), 'Predetermined 02': (1389, 737), 'Predetermined 03': (1557, 718), 'Predetermined 04': (1654, 823), 'Predetermined 05': (1589, 947), 'Predetermined 06': (1407, 958), 
                 'Fishing Pond': (1111, 93), 'Fishing Pond task01': (1073, 136), 'Fishing Pond task02': (1238, 145), 'Fishing Pond task03': (1434, 159), 'Fishing Pond task04': (1729, 139), 
-                'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488), 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251)
+                'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488) , 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251), 'Intermediate08': (475,425), 'Intermediate09': (963,430), 
                 }
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
@@ -208,6 +208,8 @@ nodes = {"Hut 1": "The first hut.",
         "Intermediate05":"Inbetween Nodes",
         "Intermediate06":"Inbetween Nodes",
         "Intermediate07":"Inbetween Nodes",
+        "Intermediate08":"Inbetween Nodes",
+        "Intermediate09":"Inbetween Nodes",
         "Predetermined 01":"Pre determined inbetween Nodes",
         "Predetermined 02":"Pre determined inbetween Nodes",
         "Predetermined 03":"Pre determined inbetween Nodes",
