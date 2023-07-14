@@ -408,6 +408,14 @@ class Game:
     for i in range(self.n):
       if(not self.alive[i] or self.warewolf[i]): continue
       self.agents[i].sleeping = False
+
+  def draw_sleep(self, name):
+     for i in range(self.n):
+        if(self.agents[i].sleeping and name=='Hut 1' and self.agents[i].inPopup_house1):
+           self.agents[i].emoji_bubble('Sleeping')
+        elif(self.agents[i].sleeping and name=='Hut 2' and self.agents[i].inPopup_house2):
+           self.agents[i].emoji_bubble('Sleeping')
+        
   
   def nightVote(self):
 
@@ -1172,6 +1180,7 @@ class Game:
          self.draw_taskbar()
          self.draw_conversation_in_popup('Hut 1')
          self.drawTaskEmoji_InsidePopup('Hut 1')
+         self.draw_sleep('Hut 1')
          
          self.draw_hover_agents_insidePopup('Hut 1')
          
@@ -1181,6 +1190,7 @@ class Game:
          self.draw_taskbar()
          self.draw_conversation_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
+         self.draw_sleep('Hut 2')
          
          self.draw_hover_agents_insidePopup('Hut 2')
       
