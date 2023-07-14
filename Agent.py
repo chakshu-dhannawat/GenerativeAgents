@@ -29,6 +29,7 @@ class Agent():
     self.taskReach = False
     self.now = None
     self.busy = False
+    self.hub = None
     if "warewolf" in summary:
       self.warewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -237,6 +238,7 @@ class Agent():
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
+    self.hub = newLocation
     tasks, tasksList = getTasks(newLocation,game,self.warewolf)
     # print(self.name,tasksList,self.warewolf)
     if(len(tasksList)==0):

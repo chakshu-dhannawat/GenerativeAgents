@@ -13,6 +13,7 @@ import time
 from fpdf import FPDF
 from Params import PDF_Name
 from transformers import BertTokenizer, BertModel
+import torch
 
 load_dotenv()
 lock = Lock()

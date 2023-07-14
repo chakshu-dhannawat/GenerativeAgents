@@ -325,7 +325,7 @@ Here is {}s' plan for {}: {}.
 The list of available locations -  
 {}
 
-Give the name of the location where {} is most likely to go to given the current time.
+Suggest the name of the location where {} is most likely to go to given the current time.
 
 {} can only go to one of the available locations
 

@@ -830,7 +830,7 @@ class Game:
         if(not self.alive[i]): continue
         for j in range(self.n):
           if(i==j or not self.alive[j]): continue
-          if(self.agents[i].dest == self.agents[j].dest):
+          if(self.agents[i].hub == self.agents[j].hub):
             if(self.agents[j].task is not None):
               if(self.agents[j].warewolf and not self.agents[i].warewolf and "Sabotage" in TASK_EMOJI_MAP[self.agents[j].task]):
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
@@ -839,6 +839,7 @@ class Game:
             if(self.agents[i].task is not None and self.agents[j].task is not None and not self.agents[i].busy and not self.agents[j].busy):  
               threadConv = threading.Thread(target=self.conversation, args=(self.names[i],self.names[j],))
               threadConv.start()   
+              log(f"{self.names[i]} has started a conversation with {self.names[j]} at {calendar.time}")
 
   def generatePlanDay(self):
     threads = []
