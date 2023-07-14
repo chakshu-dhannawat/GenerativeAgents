@@ -31,7 +31,6 @@ class HoverTextBox:
         
     def hover_bubble(self,surface):
       Path = "Assets\\"
-    #   text = self.text
       x = self.rectangle.x
       y = self.rectangle.y
       bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
@@ -41,20 +40,14 @@ class HoverTextBox:
       font = pygame.font.Font(None, font_size)
       font2 = pygame.font.SysFont('Comic Sans MS', font_size, pygame.font.Font.bold)
       font3 = pygame.font.SysFont('Comic Sans MS', font_size, pygame.font.Font.bold)
-    #   font2 = pygame.font.Font(None, font_size+0.5,pygame.font.Font.bold)
-    #   font3 = pygame.font.Font(None, font_size+1,pygame.font.Font.bold)
       
-
       # Split text into words
       words = self.desc.split()
 
       # Create lines of text with a maximum of 6 words per line
       text_lines = []
       line = ""
-      
       text_lines.append(self.name)
-    #   words = words[1:]
-      
       for word in words:
           if len(line.split()) < 8:
               line += " " + word
@@ -62,15 +55,11 @@ class HoverTextBox:
               text_lines.append(line.strip())
               line = word
       text_lines.append(line.strip())
-
       temp_task = self.tasks.split(':')
       if len(temp_task)>=2:
         tasks = temp_task[1].split('.')
-        # print(tasks)
-      
         text_lines.append('Available Tasks:')
         for task in tasks[:-1]:
-            # print(task)
             task = "-> " + task
             line = ""
             for word in task.split():
@@ -93,8 +82,7 @@ class HoverTextBox:
       bubble_padding = 20
       bubble_width = max_width + bubble_padding * 10 
       bubble_height = total_height + bubble_padding * 5 + 40
-      # bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 - 50, bubble_width, bubble_height)
-
+      
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
       if(self.name == "Electricity House" or self.name =="Shrine" or self.name == "Hut 1"):
@@ -174,9 +162,7 @@ class HoverTextBox_Agent:
       # Create lines of text with a maximum of 6 words per line
       text_lines = []
       line = ""
-      
       text_lines.append(self.name)
-    #   words = words[1:]
       
       for word in words:
           if len(line.split()) < 8:
@@ -185,22 +171,6 @@ class HoverTextBox_Agent:
               text_lines.append(line.strip())
               line = word
       text_lines.append(line.strip())
-
-    #   if self.plans is not None and self.plans != "": #Check if Plan is none
-    #     # tasks = self.plans
-    #     # print(tasks)
-      
-    #     text_lines.append('My PLans:')
-    #     line = ""
-    #     for word in self.plans.split():
-    #         if len(line.split()) < 8:
-    #             line += " " + word
-    #         else:
-    #             text_lines.append(line.strip())
-    #             line = word
-    #     text_lines.append(line.strip())
-
-      # Calculate the maximum width and height for all lines
       max_width = 0
       total_height = 0
       for line in text_lines:

@@ -1096,6 +1096,13 @@ class Game:
     self.win.blit(fps_text, fps_text_rect)
     if(self.fps>15): self.VelFactor = FPS/self.fps
 
+  def draw_conversation_in_popup(self, name):
+     for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house1 and name=='Hut 1'): #Drawing speech bubble for agents in house_1
+              player.drawBubble() 
+          elif(self.alive[i] and player.inPopup_house2 and name=='Hut 2'): #Drawing speech bubble for agents in house_2
+             player.drawBubble()
+
   def draw_popup(self):
     # Get the rect of the image
     if(self.house1Popup==True):
@@ -1140,11 +1147,12 @@ class Game:
       
 
       for i,player in enumerate(self.agents): 
-          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2):
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2): #Drawing agents not inside house
               player.draw() 
       self.draw_fire()
+
       for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2): #Drawing speech bubble for agents not in house
               player.drawBubble() 
 
       self.drawTaskEmoji()
@@ -1161,13 +1169,19 @@ class Game:
       if(self.house1Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 1')
+         self.draw_taskbar()
+         self.draw_conversation_in_popup('Hut 1')
          self.drawTaskEmoji_InsidePopup('Hut 1')
+         
          self.draw_hover_agents_insidePopup('Hut 1')
          
       elif(self.house2Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 2')
+         self.draw_taskbar()
+         self.draw_conversation_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
+         
          self.draw_hover_agents_insidePopup('Hut 2')
       
       self.draw_button() 
@@ -1294,6 +1308,7 @@ class Game:
     for key in self.HoverBox_agents:
       if self.HoverBox_agents[key].hovered and not agentMap[key].inPopup_house1 and not agentMap[key].inPopup_house2:
         self.HoverBox_agents[key].hover_bubble(self.win)
+        
   def draw_hover_agents_insidePopup(self,name):
     for key in self.HoverBox_agents:
       if self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house1 and name == 'Hut 1':
@@ -1320,10 +1335,8 @@ class Game:
   def is_button_clicked(self,mouse_pos):
     if hut1_button_x <= mouse_pos[0] <= hut1_button_x + 50 and hut1_button_y <= mouse_pos[1] <= hut1_button_y + 50:
         self.house1Popup = not self.house1Popup
-        # print("Button Clicked!")
     if hut2_button_x <= mouse_pos[0] <= hut2_button_x + 50 and hut2_button_y <= mouse_pos[1] <= hut2_button_y + 50:
         self.house2Popup = not self.house2Popup
-        # print("Button Clicked!")
 
   def exit_agent_popup(self, agent, node):
      agent.x,agent.y = LOCATION_MAP[node]
@@ -1354,13 +1367,10 @@ class Game:
         if event.type == pygame.MOUSEBUTTONDOWN:
           mouse_pos = pygame.mouse.get_pos()
           self.is_button_clicked(mouse_pos)
-        
-  
-
+     
         self.handleHovers(event) 
       
       keys = pygame.key.get_pressed()
-      # self.agents[0].manual_move(keys)
       self.check_agent_in_popup()
       for i,player in enumerate(self.agents): 
           if(self.alive[i]):
@@ -1375,8 +1385,6 @@ class Game:
       self.draw_window()
       
       calendar.increment(self.VelFactor*Clock_Speed/FPS)
-
-      #self.checkSpeakingProximity()
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:
@@ -1385,19 +1393,9 @@ class Game:
                   if(abs(player1.x - player2.x) <100 and abs(player1.y - player2.y) < 100):
                       player1.isSpeaking = True
                       player2.isSpeaking = True
-                      # player1.is_travelling = False
-                      # player2.is_travelling = False
-                      # endConversation = random.choice(['End', 'Continue'])
-                      # if(endConversation=='End'):
-                      #     player1.isSpeaking = False
-                      #     player2.isSpeaking = False
-                      #     player1.is_travelling = True
-                      #     player2.is_travelling = True
                   else:
                       player1.isSpeaking = False
                       player2.isSpeaking = False
-                      # player1.is_travelling = True
-                      # player2.is_travelling = True
     
                   
                 
