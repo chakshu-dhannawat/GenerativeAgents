@@ -14,6 +14,10 @@ agentMap = {}
 MinDialogues = 5
 MaxDialogues = 8
 
+N_Questions=3
+N_Memories=3
+N_Reflections=5
+
 # Diff IQ
 agentsDetails = [
     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},

@@ -133,10 +133,10 @@ class Agent():
     DB.addMemories(self.name, Memory(observation.strip()))
 
   def talk_context(self,person):
-    relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",3))
+    relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s relationship with {person}",N_Memories))
     self.context = self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False,name='QUERY_CONTEXT')
 
-  def vote_context(self,person,n_memory=3):
+  def vote_context(self,person,n_memory=N_Memories):
     relevant_memories = getRetrievedMemories(self.retrieve(f"What is {self.name}'s observations about {person}",n_memory))
     return self.brain.query(QUERY_CONTEXT.format(relevant_memories,self.name,person),remember=False,name='QUERY_CONTEXT')
 
@@ -219,7 +219,7 @@ class Agent():
       # self.memory[id].lastAccess = calendar.dt
     return memories
 
-  def reflect(self,n_questions=3, n_memories=3, n_reflections=5):
+  def reflect(self,n_questions=N_Questions, n_memories=N_Memories, n_reflections=N_Reflections):
     questions = extractQuestions(self.brain.query(QUERY_REFLECT_QUESTIONS.format(getMemories(self.memory),n_questions),remember=False,name='QUERY_REFLECT_QUESTIONS'))
     for question in questions:
       if(question==''): continue
