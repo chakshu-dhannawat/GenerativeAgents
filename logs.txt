@@ -7934,3 +7934,383 @@ Retrieved Memories-
 2) Mana Yoshida saw Taichi Kato Cooking at 10:51 AM
 3) Yuria Shimizu: townfolk
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/14/2023, 17:56:23
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Saturday July 14 -
+
+1) Observe and keep track of suspicious behavior during the day and night.
+2) Collaborate with other townfolks to share information and identify patterns.
+3) Use deduction skills and voting wisely to eliminate potential warewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Saturday July 14 -
+
+1) Observe voting patterns and arguments to identify suspicious behavior and potential werewolves.
+2) Encourage open communication and information sharing among townfolks to gather intel and make informed decisions.
+3) Keep track of past voting results and eliminated players to better analyze and predict future behavior.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Saturday July 14 -
+
+1) Observe and listen carefully during the day discussions to identify suspicious behavior and voting patterns.
+2) Collaborate with other townfolks to gather information and share suspicions to narrow down the potential werewolf candidates.
+3) Use logical deduction to identify the werewolves and vote them out during the day while being mindful of potential deceptive tactics.
+
+-----------------------
+
+
+Hina Sato's Strategy for Saturday July 14 -
+
+1) Analyze voting patterns and behavior of players to identify potential werewolves.
+2) Form alliances with other townfolks to share information and increase voting power.
+3) Use deductive reasoning and logic to eliminate suspects and avoid being deceived by werewolves.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Saturday July 14 -
+
+1) Observe and analyze the actions and behavior of each player, looking for inconsistencies and suspicious behavior.
+2) Build alliances with other players and share information to narrow down the list of possible werewolves.
+3) Use persuasive communication skills to convince others of your suspicions and sway the vote towards kicking out potential werewolves.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Saturday July 14 -
+
+1) Act as an active townfolk by participating in discussions and voting to blend in and gain trust.
+2) Sabotage tasks subtly, such as tampering with electricity, to cause chaos and create distrust among townfolks.
+3) Bluff and accuse innocent players to mislead townfolks and protect fellow werewolves.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Saturday July 14 -
+
+1) Act as a helpful and trustworthy townfolk, gain the trust of the other townfolks to avoid suspicion.
+2) Sabotage tasks of townfolks by subtly altering their work without getting caught, causing confusion and mistrust.
+3) Bluff and accuse other townfolks of being werewolves, sow discord and confusion among the townfolks to deflect attention from myself.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Warewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Mana Yoshida's Plan for Saturday July 14 -
+
+10:00 AM : Offer help to Yumi Okada, the other werewolf, to gain trust.
+11:00 AM : Check electricity in Hut 1. Sabotage if possible.
+12:00 PM : End workday and rest.
+1:00 PM : Attend town meeting, try to mislead.
+2:00 PM : Check electricity in Hut 2. Sabotage if possible.
+3:00 PM : Check electricity in Cattle Farm. Sabotage if possible.
+4:00 PM : Have lunch.
+5:00 PM : Visit Shrine, act pious to gain trust.
+6:00 PM : Visit Fishing Pond, act friendly to gain trust.
+
+.....................
+
+
+Riku Mori's Plan for Saturday July 14 -
+
+10:00 AM : Take a break and relax at Hut 2.
+11:00 AM : Visit the Shrine again and meditate for a while.
+12:00 PM : Return to Hut 1 and prepare for dinner.
+1:00 PM : Go to the Cattle Farm and help with chores for a while.
+2:00 PM : Go to the Shrine and offer prayers for good luck.
+3:00 PM : Head to the Fishing Pond and fish for some time.
+4:00 PM : Visit the Well and fill a bucket with fresh water.
+5:00 PM : Go back to the Fishing Pond and continue fishing.
+6:00 PM : Take a break and have lunch at Hut 1.
+
+.....................
+
+
+Taichi Kato's Plan for Saturday July 14 -
+
+10:00 AM : Take a break and visit the Shrine for spiritual solace.
+11:00 AM : Check and maintain the electrical equipment at the Electricity House.
+12:00 PM : Continue electrical maintenance work at the Electricity House.
+1:00 PM : Take a break and have a snack.
+2:00 PM : Visit the Well to fetch water for the Electricity House.
+3:00 PM : Visit the Fishing Pond to relax and unwind after a long day at work.
+4:00 PM : Take a break and have lunch.
+5:00 PM : Return home after a fulfilling day.
+6:00 PM : Visit the Cattle Farm to check electrical equipment and offer help if needed.
+
+.....................
+
+
+Yuka Suzuki's Plan for Saturday July 14 -
+
+10:00 AM : Clean the well and test the water quality.
+11:00 AM : Take a break and have lunch at Hut 1.
+12:00 PM : Assist in preparing dinner for the townfolks.
+1:00 PM : Collect firewood for the evening.
+2:00 PM : Relax and unwind for the night.
+3:00 PM : Help repair the fence around the Fishing Pond.
+4:00 PM : Take a break and have some snacks at Hut 2.
+5:00 PM : Check the cattle farm for any signs of illness or injury.
+6:00 PM : Visit the Shrine and offer prayers for the well-being of the townfolks.
+
+.....................
+
+
+Yuria Shimizu's Plan for Saturday July 14 -
+
+10:00 AM : End workday, head back to Hut 1 for dinner and rest.
+11:00 AM : Attend the morning meeting to discuss the day's tasks and distribute work among Cattle Farm workers.
+12:00 PM : Take a break and have lunch at Hut 1.
+1:00 PM : Head to the Cattle Farm and check on the livestock, ensure they have enough food and water.
+2:00 PM : Return to the Cattle Farm to complete pending tasks and milk the cows.
+3:00 PM : Visit the Shrine and offer prayers for a good harvest and well-being of the village.
+4:00 PM : Assist with harvesting crops and storing them in the storage area. 
+5:00 PM : Go to the Well and fetch water for Hut 2 residents.
+6:00 PM : Help with fishing activities at the Fishing Pond.
+
+.....................
+
+
+Hina Sato's Plan for Saturday July 14 -
+
+10:00 AM : Return to the Shrine and meditate before retiring for the day.
+11:00 AM : Visit the Fishing Pond and help out other townfolks with fishing.
+12:00 PM : Continue analyzing players' behavior and discuss findings with other townfolks.
+1:00 PM : Meditate at the Shrine and pray for the well-being of the village.
+2:00 PM : Visit the Well and check if it needs any maintenance.
+3:00 PM : Visit the Cattle Farm to get fresh milk for the Shrine.
+4:00 PM : Attend a town meeting to discuss the progress and strategies for identifying werewolves.
+5:00 PM : Analyze voting patterns and behavior of players to identify potential werewolves.
+6:00 PM : Have lunch at Hut 1 with fellow townfolks and discuss the ongoing situation.
+
+.....................
+
+
+Yumi Okada's Plan for Saturday July 14 -
+
+10:00 AM : Visit Well, pretend to draw water, but secretly add dirt to contaminate it.
+11:00 AM : Visit Fishing Pond, pretend to be fishing while secretly distracting other townfolks.
+12:00 PM : Visit Fishing Pond, pretend to be fishing while secretly distracting other townfolks.
+1:00 PM : Visit Hut 1, offer to help with chores while secretly sabotaging the work.
+2:00 PM : Visit Cattle Farm, sabotage the feeding process.
+3:00 PM : Visit Shrine, act pious and gain the trust of the townfolks.
+4:00 PM : Visit Shrine, act pious and gain the trust of the townfolks.
+5:00 PM : Visit Cattle Farm, sabotage the milking process.
+6:00 PM : Visit Hut 2, offer to help with chores while secretly sabotaging the work. 
+
+.....................
+
+
+
+Hina Sato chose to go to Shrine at 10:02 AM
+
+
+Riku Mori chose to go to Hut 2 at 10:02 AM
+
+
+Taichi Kato chose to go to Shrine at 10:02 AM
+
+
+Mana Yoshida chose to go to Hut 1 at 10:02 AM
+
+
+Yumi Okada chose to go to Well at 10:02 AM
+
+
+Yuria Shimizu chose to go to Hut 1 at 10:03 AM
+
+
+Taichi Kato chose to do the task : Shrine task01 at 10:03 AM
+
+
+Riku Mori chose to do the task : Hut 2 task01 at 10:03 AM
+
+
+Mana Yoshida chose to do the task : Hut 1 task01 at 10:03 AM
+
+
+Yumi Okada chose to do the task : Well task01 at 10:04 AM
+
+
+Hina Sato chose to do the task : Shrine task02 at 10:04 AM
+
+
+Yuria Shimizu chose to do the task : Hut 1 task01 at 10:04 AM
+
+
+Yuka Suzuki chose to go to Well at 10:13 AM
+
+
+Yuka Suzuki chose to do the task : Well task02 at 10:15 AM
+
+Yumi Okada has started a conversation with Yuka Suzuki at 10:15 AM
+Hina Sato has started a conversation with Taichi Kato at 10:16 AM
+Mana Yoshida has started a conversation with Yuria Shimizu at 10:16 AM
+Query -
+What is Yuria Shimizu's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuria Shimizu chose to go to Hut 1 at 10:03 AM
+2) Yuria Shimizu chose to do the task : Hut 1 task01 at 10:04 AM
+3) Use persuasive communication skills to convince others of your suspicions and sway the vote towards kicking out potential werewolves.
+
+Query -
+What is Taichi Kato's observations about Hina Sato
+Retrieved Memories-
+1) Taichi Kato chose to go to Shrine at 10:02 AM
+2) Taichi Kato chose to do the task : Shrine task01 at 10:03 AM
+3) Use logical deduction to identify the werewolves and vote them out during the day while being mindful of potential deceptive tactics.
+
+Query -
+What is Yuka Suzuki's observations about Yumi Okada
+Retrieved Memories-
+1) Yuka Suzuki chose to go to Well at 10:13 AM
+2) Yuka Suzuki chose to do the task : Well task02 at 10:15 AM
+3) Observe voting patterns and arguments to identify suspicious behavior and potential werewolves.
+
+Query -
+What is Hina Sato's observations about Taichi Kato
+Retrieved Memories-
+1) Hina Sato saw Taichi Kato Offering Rituals. at 10:16 AM
+2) Hina Sato chose to go to Shrine at 10:02 AM
+3) Hina Sato chose to do the task : Shrine task02 at 10:04 AM
+
+Hina Sato: "Good morning, Taichi. I noticed you were performing rituals earlier. Is there anything I can help you with?"
+Taichi Kato: "Oh, no thank you, Hina. I'm just finishing up some offerings. How about you? Have you noticed anything strange going on in the village lately?"
+Hina Sato: "Actually, I've heard rumors about werewolves in the village. We should be careful and keep an eye out."
+Query -
+What is Mana Yoshida's observations about Yuria Shimizu
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Yuria Shimizu: townfolk
+3) Yumi Okada: warewolf
+
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+2) Yuka Suzuki: townfolk
+3) Yuria Shimizu: townfolk
+
+Taichi Kato: "Yes, I heard about the rumors too. We need to be cautious and work together as a community to identify any potential werewolves."
+Yumi Okada: "Hey Yuka, I saw you cleaning the well earlier. You did a good job. It's important to keep our water source clean."
+Hina Sato: "We should keep a record of everyone's voting patterns to identify any suspicious behavior."
+Mana Yoshida: "Good morning Yuria, I couldn't help but notice you reading at 10:46 AM. Were you also reading earlier at 10:16 AM?"
+Yuka Suzuki: Thank you, Yumi. I take great pride in maintaining the well for the good of our community.
+Yuria Shimizu: "Yes, I was. I enjoy reading in the morning before starting my work on the farm."
+Yumi Okada: "Do you think we should have a schedule for cleaning the well to make sure it stays clean?"
+
+End of Conversation
+Mana Yoshida: "That's interesting. I find it hard to believe you spend so much time reading. What kind of books are you interested in?"
+Yuria Shimizu: "I prefer books about farming and agriculture. It's important to keep learning and improving in my work."
+
+End of Conversation
+Taichi Kato: "Yes, I've heard the rumors too. We need to be vigilant and work together to protect the village."
+Hina Sato: "Do you have any suspicions about who the werewolves might be? It's important that we work together to identify them."
+Taichi Kato: "Yes, I've heard the rumors too. It's important that we work together to keep the village safe."
+
+End of Conversation
+
+======= Night Phase =======
+
+Currently it is Night, the Warewolves will kill a townfolk...
+
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+2) Yumi Okada: "Do you think we should have a schedule for cleaning the well to make sure it stays clean?"
+3) Yumi Okada: "Hey Yuka, I saw you cleaning the well earlier. You did a good job. It's important to keep our water source clean."
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yuria Shimizu: townfolk
+2) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+3) Yumi Okada: warewolf
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+2) Yumi Okada: "Do you think we should have a schedule for cleaning the well to make sure it stays clean?"
+3) Yumi Okada: "Hey Yuka, I saw you cleaning the well earlier. You did a good job. It's important to keep our water source clean."
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+2) Yumi Okada: "Do you think we should have a schedule for cleaning the well to make sure it stays clean?"
+3) Yumi Okada: "Hey Yuka, I saw you cleaning the well earlier. You did a good job. It's important to keep our water source clean."
+
+Query -
+What is Mana Yoshida's observations about Taichi Kato
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Mana Yoshida: "That's interesting. I find it hard to believe you spend so much time reading. What kind of books are you interested in?"
+3) Yuria Shimizu: townfolk
+
+Query -
+What is Mana Yoshida's observations about Yumi Okada
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Yuria Shimizu: townfolk
+3) Mana Yoshida: "That's interesting. I find it hard to believe you spend so much time reading. What kind of books are you interested in?"
+
+Query -
+What is Mana Yoshida's observations about Yuria Shimizu
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Yuria Shimizu: townfolk
+3) Yuria Shimizu: "I prefer books about farming and agriculture. It's important to keep learning and improving in my work."
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+2) Yuria Shimizu: townfolk
+3) Yumi Okada: "Do you think we should have a schedule for cleaning the well to make sure it stays clean?"
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Mana Yoshida: "That's interesting. I find it hard to believe you spend so much time reading. What kind of books are you interested in?"
+3) Yuria Shimizu: "Yes, I was. I enjoy reading in the morning before starting my work on the farm."
+
+Query -
+What is Mana Yoshida's observations about Hina Sato
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Mana Yoshida: "That's interesting. I find it hard to believe you spend so much time reading. What kind of books are you interested in?"
+3) Hina Sato: townfolk
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada saw Yuka Suzuki Cleaning the well. at 10:15 AM
+2) Yumi Okada: "Do you think we should have a schedule for cleaning the well to make sure it stays clean?"
+3) Yumi Okada: "Hey Yuka, I saw you cleaning the well earlier. You did a good job. It's important to keep our water source clean."
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Reading Books at 10:16 AM
+2) Mana Yoshida: "That's interesting. I find it hard to believe you spend so much time reading. What kind of books are you interested in?"
+3) Yuria Shimizu: "Yes, I was. I enjoy reading in the morning before starting my work on the farm."
+
