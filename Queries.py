@@ -9,10 +9,32 @@ QUERY_IMPORTANCE = ("On the scale of 1 to 10, where 1 is purely mundane "
 "following piece of memory. Memory: {}\nGive a single rating output from "
 "1 to 10 Rating: <fill in> ")
 
-QUERY_PLAN = """Name: {}. {}. 
+QUERY_PLAN_TOWNFOLK = """Name: {}. {}. 
 
 The areas in the village are - 
 {}
+
+These are the only tasks that are available in the village. You need to make your plan accordingly and do not plan anything apart from these tasks -
+{}
+
+There is nothing other than these areas. 
+
+Generate {}’s hourly plan from 10 AM to 6 PM for today.
+Plan for each hour should be at most 20 words. 
+
+Format - 
+10:00 AM: <plan>
+11:00 AM: <plan> """
+
+QUERY_PLAN_WEREWOLVES = """Name: {}. {}. 
+
+The areas in the village are - 
+{}
+
+These are the only tasks that are available in the village. You need to make your plan accordingly and do not plan anything apart from these tasks -
+{}
+
+Try to take as many sabotage tasks as possible to increase your chance of winning. By sabotaging tasks, you get more time to kick out townfolks. Whereas if townfolks complete all the tasks, they will win.
 
 There is nothing other than these areas. 
 

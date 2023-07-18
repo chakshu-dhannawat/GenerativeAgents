@@ -61,7 +61,10 @@ class Agent():
      return self.plan(nextKey)
 
   def generatePlanDay(self):
-    self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False,name='QUERY_PLAN'))
+    if(self.werewolf):
+      self.plan =  extractPlan(self.brain.query(QUERY_PLAN_WEREWOLVES.format(self.name, self.summary, getHubs(),getAllTasks(True), self.name),remember=False,name='QUERY_PLAN'))
+    else:
+      self.plan =  extractPlan(self.brain.query(QUERY_PLAN_TOWNFOLK.format(self.name, self.summary, getHubs(),getAllTasks(False), self.name),remember=False,name='QUERY_PLAN'))
     printPlan(self.plan,self.name,calendar.day)
 
   def graphics_init(self,win):

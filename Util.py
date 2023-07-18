@@ -84,6 +84,16 @@ def getTasks(hub,game,werewolf=False):
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return tasks,tasksList
+  
+def getAllTasks(werewolf=False):
+    tasks = ""
+    if(werewolf):
+      tasksList = [node for node in nodes if "task" in node]
+    else:
+      tasksList = [node for node in nodes if "task" in node and "Sabotage" not in TASK_EMOJI_MAP[node]]
+    for i,node in enumerate(tasksList):
+      tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
+    return tasks,tasksList
 
 def getPeople():
     people = ""
