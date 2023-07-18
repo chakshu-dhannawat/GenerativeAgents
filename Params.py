@@ -20,33 +20,33 @@ N_Reflections=5
 
 # Diff IQ
 agentsDetails = [
-    {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},
-    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments and takes care of the well and its maintainenance."},
-    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills and loves to do fishing in the Fishing area."},
+    {"name": "Yumi Okada", "description": "Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},
+    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance."},
+    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area."},
     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart and an electrician who work in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk and an electricain who does tasks at the Electricity House; Taichi is dumb."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills and a farmer who works in the Cattle Farm."}
+    {"name": "Mana Yoshida", "description": "Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks."},
+    {"name": "Taichi Kato", "description": "Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb."},
+    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm."}
 ]
 
 # Same IQ - High IQ (7-8)
 # agentsDetails = [
-#     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
+#     {"name": "Yumi Okada", "description": "Yumi is a werewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
 #     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka is a perceptive and open-minded townfolk. While Yuka tends to get easily convinced by other's arguments, their high IQ allows them to analyze information critically and adapt their perspective accordingly."},
 #     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is a brilliant and observant townfolk. With exceptional deductive reasoning skills and a sharp intellect, Riku excels in analyzing complex situations, making them an asset in identifying the werewolf."},
 #     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is an analytical townfolk who possesses exceptional problem-solving abilities. With their high IQ, Hina carefully evaluates evidence and applies logical thinking to unravel the mysteries of the village."},
-#     {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is an exceptionally intelligent werewolf with a razor-sharp mind. Their high IQ enables them to devise intricate plans and manipulate others effectively, making it challenging for the townsfolks to identify their true identity."},
+#     {"name": "Mana Yoshida", "description": "Mana is a werewolf; Mana is an exceptionally intelligent werewolf with a razor-sharp mind. Their high IQ enables them to devise intricate plans and manipulate others effectively, making it challenging for the townsfolks to identify their true identity."},
 #     {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is a townfolk with an astute and intuitive mind. While not conventionally book-smart, Taichi possesses a remarkable talent for pattern recognition and thinking outside the box. Their unique perspective often leads to unconventional yet effective solutions, contributing valuable insights to the discussions and investigations within the village. Taichi's ability to approach problems from different angles and uncover hidden connections showcases their high IQ and intellectual prowess."},
 #     {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria is a charismatic and persuasive townfolk. Yuria's high IQ, combined with excellent convincing skills, allows them to sway others with well-thought-out arguments and logical reasoning."}
 # ]
 
 # Same IQ - Low IQ (3-4)
 # agentsDetails = [
-#     {"name": "Yumi Okada", "description": "Yumi is an average-intelligence warewolf. While not exceptionally smart, Yumi relies on their instincts and basic deception skills to survive in the game."},
+#     {"name": "Yumi Okada", "description": "Yumi is an average-intelligence werewolf. While not exceptionally smart, Yumi relies on their instincts and basic deception skills to survive in the game."},
 #     {"name": "Yuka Suzuki", "description": "Yuka is an average-intelligence townfolk who tends to go along with the majority. Their analytical skills are moderate, and they try their best to contribute to the discussions based on the information available."},
 #     {"name": "Riku Mori", "description": "Riku is an average-intelligence townfolk with limited deductive reasoning skills. They rely more on intuition and observations rather than advanced analytical thinking."},
 #     {"name": "Hina Sato", "description": "Hina is an average-intelligence townfolk who approaches situations with a practical mindset. While not highly analytical, Hina tries to make logical decisions based on common sense."},
-#     {"name": "Mana Yoshida", "description": "Mana is an average-intelligence warewolf who relies on basic strategies and manipulation tactics. While not highly intelligent, Mana can blend in with the townfolks and create confusion during discussions."},
+#     {"name": "Mana Yoshida", "description": "Mana is an average-intelligence werewolf who relies on basic strategies and manipulation tactics. While not highly intelligent, Mana can blend in with the townfolks and create confusion during discussions."},
 #     {"name": "Taichi Kato", "description": "Taichi is an average-intelligence townfolk who sometimes struggles to grasp complex information. Their contributions may be simple and straightforward, but they genuinely try to participate and support the town's decision-making process."},
 #     {"name": "Yuria Shimizu", "description": "Yuria is an average-intelligence townfolk with decent persuasive skills. They can present their ideas convincingly but may not excel in complex problem-solving or critical thinking."}
 # ]
@@ -81,7 +81,7 @@ HUT2_POPUP_CLOSE = ()
 N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
-N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
+N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Werewolf')])
 Speed_Killing = FPS//10
 
 EMOJI_SIZE = (58, 47)

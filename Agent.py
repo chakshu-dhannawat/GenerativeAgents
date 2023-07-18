@@ -24,14 +24,14 @@ class Agent():
     self.brain = GPT(context=CONTEXT_AGENT)
     self.inPopup_house1 = False
     self.inPopup_house2 = False
-    self.warewolf = False
+    self.werewolf = False
     self.task = None
     self.taskReach = False
     self.now = None
     self.busy = False
     self.hub = None
-    if "warewolf" in summary:
-      self.warewolf = True
+    if "werewolf" in summary:
+      self.werewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
       for player in details.split('\n'):
         self.remember(player.split(') ')[1])
@@ -151,13 +151,13 @@ class Agent():
     return dialogue
 
   def groupconv_init(self,kicked,context,remaining):
-    cover = "Warewolf" if self.warewolf else "Townfolk"
+    cover = "werewolf" if self.werewolf else "Townfolk"
     dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False,name='QUERY_GROUPCONV_INIT')
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
   def groupconv(self,kicked,context,history,remaining):
-    cover = "Warewolf" if self.warewolf else "Townfolk"
+    cover = "werewolf" if self.werewolf else "Townfolk"
     dialogue = self.brain.query(QUERY_GROUPCONV_REPLY.format(kicked,self.name,context,history,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False,name='QUERY_GROUPCONV_REPLY')
     dialogue = dialogue.replace('\n', '')
     return dialogue
@@ -242,8 +242,8 @@ class Agent():
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     self.hub = newLocation
-    tasks, tasksList = getTasks(newLocation,game,self.warewolf)
-    # print(self.name,tasksList,self.warewolf)
+    tasks, tasksList = getTasks(newLocation,game,self.werewolf)
+    # print(self.name,tasksList,self.werewolf)
     if(len(tasksList)==0):
        self.task = None
        log(f"No Tasks at {newLocation}")
@@ -275,7 +275,7 @@ class Agent():
     #Detect if werewolf
 
 
-    if self.warewolf:
+    if self.werewolf:
        
       # Load images into walkRight, walkLeft, walkUp, walkDown arrays
       for file_name in image_files:
@@ -559,7 +559,7 @@ class Agent():
             if(not self.taskReach and self.destination==self.task): 
               self.taskReach = True
               if("Sabotage" in TASK_EMOJI_MAP[self.task]): self.game.tasksDone -= 1
-              elif(not self.warewolf): self.game.tasksDone += 1
+              elif(not self.werewolf): self.game.tasksDone += 1
 
             if(self.dest is None):
               self.choose_random_location()
