@@ -24,14 +24,14 @@ class Agent():
     self.brain = GPT(context=CONTEXT_AGENT)
     self.inPopup_house1 = False
     self.inPopup_house2 = False
-    self.warewolf = False
+    self.werewolf = False
     self.task = None
     self.taskReach = False
     self.now = None
     self.busy = False
     self.hub = None
-    if "warewolf" in summary:
-      self.warewolf = True
+    if "werewolf" in summary:
+      self.werewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
       for player in details.split('\n'):
         self.remember(player.split(') ')[1])
@@ -61,7 +61,10 @@ class Agent():
      return self.plan(nextKey)
 
   def generatePlanDay(self):
-    self.plan =  extractPlan(self.brain.query(QUERY_PLAN.format(self.name, self.summary, getHubs(), self.name),remember=False,name='QUERY_PLAN'))
+    if(self.werewolf):
+      self.plan =  extractPlan(self.brain.query(QUERY_PLAN_WEREWOLVES.format(self.name, self.summary, getHubs(),getAllTasks(True), self.name),remember=False,name='QUERY_PLAN'))
+    else:
+      self.plan =  extractPlan(self.brain.query(QUERY_PLAN_TOWNFOLK.format(self.name, self.summary, getHubs(),getAllTasks(False), self.name),remember=False,name='QUERY_PLAN'))
     printPlan(self.plan,self.name,calendar.day)
 
   def graphics_init(self,win):
@@ -151,13 +154,13 @@ class Agent():
     return dialogue
 
   def groupconv_init(self,kicked,context,remaining):
-    cover = "Warewolf" if self.warewolf else "Townfolk"
+    cover = "werewolf" if self.werewolf else "Townfolk"
     dialogue = self.brain.query(QUERY_GROUPCONV_INIT.format(kicked,self.name,context,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False,name='QUERY_GROUPCONV_INIT')
     dialogue = dialogue.replace('\n', '')
     return dialogue
 
   def groupconv(self,kicked,context,history,remaining):
-    cover = "Warewolf" if self.warewolf else "Townfolk"
+    cover = "werewolf" if self.werewolf else "Townfolk"
     dialogue = self.brain.query(QUERY_GROUPCONV_REPLY.format(kicked,self.name,context,history,remaining,self.name,self.strategy,self.name,cover,self.name,self.name,self.name),remember=False,name='QUERY_GROUPCONV_REPLY')
     dialogue = dialogue.replace('\n', '')
     return dialogue
@@ -234,6 +237,8 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   def nextLocation(self,now,game):
+    self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
+    # move agent to tavern in start of afternoon phase
     locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
@@ -242,8 +247,8 @@ class Agent():
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.dest = newLocation
     self.hub = newLocation
-    tasks, tasksList = getTasks(newLocation,game,self.warewolf)
-    # print(self.name,tasksList,self.warewolf)
+    tasks, tasksList = getTasks(newLocation,game,self.werewolf)
+    # print(self.name,tasksList,self.werewolf)
     if(len(tasksList)==0):
        self.task = None
        log(f"No Tasks at {newLocation}")
@@ -275,7 +280,7 @@ class Agent():
     #Detect if werewolf
 
 
-    if self.warewolf:
+    if self.werewolf:
        
       # Load images into walkRight, walkLeft, walkUp, walkDown arrays
       for file_name in image_files:
@@ -558,8 +563,28 @@ class Agent():
 
             if(not self.taskReach and self.destination==self.task): 
               self.taskReach = True
-              if("Sabotage" in TASK_EMOJI_MAP[self.task]): self.game.tasksDone -= 1
-              elif(not self.warewolf): self.game.tasksDone += 1
+              taskCompleted[self.task] = True
+              if("Bucket_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Well task01", "Well task02"])
+                taskCompleted[location] = False
+            
+              elif("Fence_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Cattle Farm task01", "Cattle Farm task03", "Cattle Farm task04"])
+                taskCompleted[location] = False
+
+              elif("Broom_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Shrine task01", "Shrine task02", "Shrine task03"])
+                taskCompleted[location] = False
+                
+              elif("FishingPole_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Fishing Pond task02", "Fishing Pond task03", "Fishing Pond task04"])
+                taskCompleted[location] = False
+
+              elif(not self.werewolf): self.game.tasksDone += 1
 
             if(self.dest is None):
               self.choose_random_location()
@@ -570,6 +595,7 @@ class Agent():
 
             if(self.sleepSoon and self.location_name in SLEEPING_NODES):
               self.sleepSoon = False
+
               self.sleeping = True
 
           else:
@@ -638,6 +664,7 @@ class Agent():
   def sleep(self):
       self.destination_path = []
       self.dest = random.choice(SLEEPING_NODES)
+      self.task = self.dest
       self.sleepSoon = True
 
   def tavern(self,point):
@@ -706,6 +733,7 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
+
     #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
     #EMOJI = {'Eat': eat_emoji }
 

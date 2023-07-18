@@ -49,25 +49,25 @@ bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # clock = pygame.time.Clock()
 black_bg = pygame.image.load(Path+'blackbg.png')
 
-night_pahse = pygame.image.load('Assets\\Phases\\Night_Phase.png')
-day_phase = pygame.image.load('Assets\\Phases\\Day_Phase.png')
-voting_phase = pygame.image.load('Assets\\Phases\\Voting Phase.png')
-start_phase = pygame.image.load('Assets\\Phases\\START~2.png')
-game_end = pygame.image.load('Assets\\Phases\\Game_End.png')
-warewolves_win = pygame.image.load('Assets\\Phases\\Warewolves_Win.png')
-townfolks_win = pygame.image.load('Assets\\Phases\\Townfolks_Win.png')
+night_pahse = pygame.image.load('Assets/Phases/Night_Phase.png')
+day_phase = pygame.image.load('Assets/Phases/Day_Phase.png')
+voting_phase = pygame.image.load('Assets/Phases/Voting Phase.png')
+start_phase = pygame.image.load('Assets/Phases/START~2.png')
+game_end = pygame.image.load('Assets/Phases/Game_End.png')
+werewolves_win = pygame.image.load('Assets/Phases/Werewolves_Win.png')
+townfolks_win = pygame.image.load('Assets/Phases/Townfolks_Win.png')
 
-night_phase_japanese = pygame.image.load('Assets\\Phases\\Night_Phase_Japanese.png')
-day_phase_japanese = pygame.image.load('Assets\\Phases\\Day_Phase_Japanese.png')
-voting_phase_japanese = pygame.image.load('Assets\\Phases\\Voting_Phase_Japanese.png')
-townfolks_win_japanese = pygame.image.load('Assets\\Phases\\Townfolks_Win_Japanese.png')
-warewolves_win_japanese = pygame.image.load('Assets\\Phases\\Warewolves_Win_Japanese.png')
+night_phase_japanese = pygame.image.load('Assets/Phases/Night_Phase_Japanese.png')
+day_phase_japanese = pygame.image.load('Assets/Phases/Day_Phase_Japanese.png')
+voting_phase_japanese = pygame.image.load('Assets/Phases/Voting_Phase_Japanese.png')
+townfolks_win_japanese = pygame.image.load('Assets/Phases/Townfolks_Win_Japanese.png')
+werewolves_win_japanese = pygame.image.load('Assets/Phases/Werewolves_Win_Japanese.png')
 
-killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
-farewellframesW = [pygame.image.load(Path+f'Farewell\\Warewolf\\{i}.png') for i in range(N_Farewell_W)]
-farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i in range(N_Farewell_T)]
+killframes = [pygame.image.load(Path+f'killing/{i}.png') for i in range(N_Killing)]
+farewellframesW = [pygame.image.load(Path+f'Farewell/Werewolf/{i}.png') for i in range(N_Farewell_W)]
+farewellframesT = [pygame.image.load(Path+f'Farewell/Townfolk/{i}.png') for i in range(N_Farewell_T)]
 
-bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
+bgs = [pygame.image.load(Path+f'Background/{i}.png') for i in range(N_Background)]
 
 
 
@@ -79,8 +79,8 @@ Button Assests [POPUP]
 # Hut common
 button_font = pygame.font.Font(None, 24)
 button_color = (255, 153, 153) 
-house_popup = pygame.transform.scale(pygame.image.load('Assets\\house_popup.png'), HOUSE_POPUP_SIZE)
-hut_button = pygame.transform.scale(pygame.image.load("Assets\\button_house.png"), HOUSE_POPUP_SIZE)
+house_popup = pygame.transform.scale(pygame.image.load('Assets/house_popup.png'), HOUSE_POPUP_SIZE)
+hut_button = pygame.transform.scale(pygame.image.load("Assets/button_house.png"), HOUSE_POPUP_SIZE)
 hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
 # Hut 1
 hut1_button_x, hut1_button_y =  LOCATION_MAP['Hut 1']
@@ -113,7 +113,7 @@ for _ in range(100):
     size = random.uniform(0.5,1.5)
     fire_particles.append((x, y, dx, dy, size))
 
-fire_animation_frames = [pygame.image.load(f'Assets\\Fire\\{i}.png') for i in range(40)]
+fire_animation_frames = [pygame.image.load(f'Assets/Fire/{i}.png') for i in range(40)]
 fire_animation_frames.extend(fire_animation_frames[::-1])
 
 current_frame = 0
@@ -196,7 +196,7 @@ EMOJI = {
 
 '''
 ====================
-Warewolves Game
+Werewolves Game
 ====================
 '''
 
@@ -214,10 +214,10 @@ class Game:
     self.n = len(agents)
 
     self.alive = [True]*self.n
-    self.warewolf = [False]*self.n
+    self.werewolf = [False]*self.n
     for i in range(self.n):
-      if("warewolf" in self.agents[i].summary.split(';')[0]):
-         self.warewolf[i] = True
+      if("werewolf" in self.agents[i].summary.split(';')[0]):
+         self.werewolf[i] = True
 
     # for agent in self.agents:
     #     agent.remember(agent.result)
@@ -253,7 +253,7 @@ class Game:
     self.VelFactor = 1
     self.planNow = None
     self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
-    pygame.display.set_caption("Warewolves of Miller Hollow")
+    pygame.display.set_caption("Werewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
     self.contexts = {}
@@ -270,8 +270,8 @@ class Game:
     self.voting_phase_japanese = pygame.transform.scale(voting_phase_japanese, DEFAULT_IMAGE_SIZE)
     self.townfolks_win = pygame.transform.scale(townfolks_win, DEFAULT_IMAGE_SIZE)
     self.townfolks_win_japanese = pygame.transform.scale(townfolks_win_japanese, DEFAULT_IMAGE_SIZE)
-    self.warewolves_win = pygame.transform.scale(warewolves_win, DEFAULT_IMAGE_SIZE)
-    self.warewolves_win_japanese = pygame.transform.scale(warewolves_win_japanese, DEFAULT_IMAGE_SIZE)
+    self.werewolves_win = pygame.transform.scale(werewolves_win, DEFAULT_IMAGE_SIZE)
+    self.werewolves_win_japanese = pygame.transform.scale(werewolves_win_japanese, DEFAULT_IMAGE_SIZE)
     self.start_phase = pygame.transform.scale(start_phase, DEFAULT_IMAGE_SIZE)
     self.end_phase = pygame.transform.scale(game_end, DEFAULT_IMAGE_SIZE)
     self.day_phase_show = False
@@ -282,8 +282,8 @@ class Game:
     self.voting_phase_japanese_show = False
     self.townfolks_win_show = False
     self.townfolks_win_japanese_show = False
-    self.warewolves_win_show = False
-    self.warewolves_win_japanese_show = False
+    self.werewolves_win_show = False
+    self.werewolves_win_japanese_show = False
     self.start_phase_show = True
     self.end_phase_show = False
     self.nobodyLynch = False
@@ -303,12 +303,28 @@ class Game:
     for i in range(self.n):
       self.agents[i].game = self
     self.tasksDone = 0
+    
+    self.rememberInit()
 
     pyautogui.click(500, 500, button='left')
     time.sleep(0.01)
     pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
 
+  def rememberInit(self):
+    threads = []
+    for i in range(self.n):
+        thread = threading.Thread(target=self.rememberAgent, args=(i,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+  
+  def rememberAgent(self,id):
+    for i in range(self.n):
+      if(i==id): continue
+      self.agents[id].remember(f"About {self.agents[i].name}: {self.agents[i].summary}")
+  
   def initHover(self):
     '''
       ====================
@@ -333,7 +349,7 @@ class Game:
     for i in range(self.n):
         if(not self.alive[i]): continue
         if(name==self.names[i]): continue
-        #if(night and self.warewolf[i]): continue
+        #if(night and self.werewolf[i]): continue
         thread = threading.Thread(target=self.getSingleContext, args=(name, self.names[i],))
         thread.start()
         threads.append(thread)
@@ -345,7 +361,7 @@ class Game:
   #   for i in range(self.n):
   #       if(not self.alive[i]): continue
   #       if(name==self.names[i]): continue
-  #       if(night and self.warewolf[i]): continue
+  #       if(night and self.werewolf[i]): continue
   #       self.getSingleContext(name, self.names[i])
 
 
@@ -357,7 +373,7 @@ class Game:
   #             continue
   #         if name == self.names[i]:
   #             continue
-  #         if night and self.warewolf[i]:
+  #         if night and self.werewolf[i]:
   #             continue
   #         process = multiprocessing.Process(target=self.getSingleContext, args=(name, self.names[i]))
   #         process.start()
@@ -366,7 +382,7 @@ class Game:
   #         process.join()
 
   def speak(self,text,curr):
-    voicePath = "Assets\\voice.mp3"
+    voicePath = "Assets/voice.mp3"
     translation = translator.translate(text)
     tts = gTTS(translation, lang='ja')
     tts.save(voicePath)
@@ -378,7 +394,7 @@ class Game:
     pygame.mixer.music.unload()
     self.agents[curr].isSpeaking = False
   
-  def nightVoteWarewolf(self,i,names,history=None):
+  def nightVoteWerewolf(self,i,names,history=None):
     # self.getContext(self.names[i],True)
     voteContext = ""
     sr = 1
@@ -394,28 +410,20 @@ class Game:
     except:
       voteName = self.findName(voteName,self.names[i])
       vote = self.names.index(voteName)
-    if(self.warewolf[self.ids[voteName]]):
-      vote = random.choice([index for index, value in enumerate(self.warewolf) if value is False and self.alive[index]])
+    if(self.werewolf[self.ids[voteName]]):
+      vote = random.choice([index for index, value in enumerate(self.werewolf) if value is False and self.alive[index]])
     self.votes[vote] += 1
 
   
   def sleep(self):
     for i in range(self.n):
-      if(not self.alive[i] or self.warewolf[i]): continue
+      if(not self.alive[i] or self.werewolf[i]): continue
       self.agents[i].sleep()
 
   def wakeUp(self):
     for i in range(self.n):
-      if(not self.alive[i] or self.warewolf[i]): continue
+      if(not self.alive[i] or self.werewolf[i]): continue
       self.agents[i].sleeping = False
-
-  def draw_sleep(self, name):
-     for i in range(self.n):
-        if(self.agents[i].sleeping and name=='Hut 1' and self.agents[i].inPopup_house1):
-           self.agents[i].emoji_bubble('Sleeping')
-        elif(self.agents[i].sleeping and name=='Hut 2' and self.agents[i].inPopup_house2):
-           self.agents[i].emoji_bubble('Sleeping')
-        
   
   def nightVote(self):
 
@@ -423,7 +431,7 @@ class Game:
     self.threadNight.start()
     # self.night_phase_show = True
     self.night_phase_japanese_show = True
-    log("Currently it is Night, the Warewolves will kill a townfolk...\n")
+    log("Currently it is Night, the Werewolves will kill a townfolk...\n")
     self.votes = [0]*self.n
 
     self.sleep()
@@ -432,8 +440,8 @@ class Game:
     j = 1
     werewolves = 0
     for i in range(self.n):
-      if(self.warewolf[i] and self.alive[i]): werewolves+=1
-      if(self.warewolf[i]): continue
+      if(self.werewolf[i] and self.alive[i]): werewolves+=1
+      if(self.werewolf[i]): continue
       if(not self.alive[i]): continue
       names = names + f"{j}) {self.names[i]}\n"
       j += 1
@@ -441,7 +449,7 @@ class Game:
       
     voters = []
     for i in range(self.n):
-      if(self.alive[i] and self.warewolf[i]):
+      if(self.alive[i] and self.werewolf[i]):
         voters.append(i)
 
     self.assembleTavern(voters)
@@ -456,7 +464,7 @@ class Game:
     if(werewolves>1):
 
       for i in range(self.n):
-        if(not self.alive[i] or not self.warewolf[i]): context.append("")
+        if(not self.alive[i] or not self.werewolf[i]): context.append("")
         else: 
             voteContext = ""
             sr = 1
@@ -475,8 +483,8 @@ class Game:
 
       threads = []
       for i in range(self.n):
-          if(not self.warewolf[i] or not self.alive[i]): continue
-          thread = threading.Thread(target=self.nightVoteWarewolf, args=(i,names,conversation,))
+          if(not self.werewolf[i] or not self.alive[i]): continue
+          thread = threading.Thread(target=self.nightVoteWerewolf, args=(i,names,conversation,))
           thread.start()
           threads.append(thread)
       for thread in threads:
@@ -484,8 +492,8 @@ class Game:
     
     else: 
       for i in range(self.n):
-        if(not self.warewolf[i] or not self.alive[i]): continue
-        self.nightVoteWarewolf(i,names)
+        if(not self.werewolf[i] or not self.alive[i]): continue
+        self.nightVoteWerewolf(i,names)
       self.waitAssemble(voters)
 
     kick = self.votes.index(max(self.votes))
@@ -493,9 +501,9 @@ class Game:
     self.kicked = self.names[kick]
     self.killing = True
     self.elimination = self.kicked
-    threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been eliminated by the Warewolves on {calendar.day} during the Night Phase",))
+    threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been eliminated by the Werewolves on {calendar.day} during the Night Phase",))
     threadObs.start()
-    log(f"{self.kicked} has been killed by the Warewolves\n\n")
+    log(f"{self.kicked} has been killed by the Werewolves\n\n")
     self.checkEnd()
 
     self.wakeUp()
@@ -513,7 +521,7 @@ class Game:
   def nightVoteContext(self):
     threads = []
     for i in range(self.n):
-        if(not self.alive[i] or not self.warewolf[i]): continue
+        if(not self.alive[i] or not self.werewolf[i]): continue
         thread = threading.Thread(target=self.getContext, args=(self.names[i],True,))
         thread.start()
         threads.append(thread)
@@ -565,24 +573,24 @@ class Game:
     log()
     prev = None
     # remainingTownfolk = getDetails(self)
-    # remainingWarewolf = getDetails(self,True)  
+    # remainingWerewolf = getDetails(self,True)  
     for i,voteId in enumerate(voters):
       #print("Agent",i)
       #print(voteId)
       #print(context[voteId])
-      cover = "Warewolf" if self.warewolf[voteId] else "Townfolk"
+      cover = "Werewolf" if self.werewolf[voteId] else "Townfolk"
       names = ""
       j = 1
       for id in voters:
         if(id==voteId): continue
-        if(self.warewolf[voteId]):
-          idCover = "Warewolf" if self.warewolf[id] else "Townfolk"
+        if(self.werewolf[voteId]):
+          idCover = "Werewolf" if self.werewolf[id] else "Townfolk"
           names = names + f"{j}) {self.names[id]} - {idCover}\n"
         else:
           names = names + f"{j}) {self.names[id]}\n"
         j += 1
       names = names[:-1]
-      # remaining = remainingWarewolf if cover is "Warewolf" else remainingTownfolk
+      # remaining = remainingWerewolf if cover is "Werewolf" else remainingTownfolk
       voteName = self.agents[voteId].brain.query(
          QUERY_DAY.format(self.agents[voteId].name,context[voteId],
                           conversation,self.agents[voteId].name,cover,
@@ -625,7 +633,7 @@ class Game:
       self.elimination = self.names[kick]
       log()
       log(f"{self.kicked} has been lynched by the Villagers")
-      kickedCover = "Werewolf" if self.warewolf[kick] else "Townfolk"
+      kickedCover = "Werewolf" if self.werewolf[kick] else "Townfolk"
       threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been lynched on {calendar.day} during the day phase.\n{self.kicked} was a {kickedCover}",))
       threadObs.start()
 
@@ -653,18 +661,18 @@ class Game:
 
       if(night):
         remainingTownfolk = getNames(self,True)
-        remainingWarewolf = getNames(self,False)
+        remainingWerewolf = getNames(self,False)
       else:
         remainingTownfolk = getDetails(self)
-        remainingWarewolf = getDetails(self,True)         
+        remainingWerewolf = getDetails(self,True)         
 
       curr = random.choice(voters)
       votersN = len(voters)
 
       if(night):
-        reply = self.agents[curr].nightconv_init(context[curr],remainingTownfolk,remainingWarewolf)
+        reply = self.agents[curr].nightconv_init(context[curr],remainingTownfolk,remainingWerewolf)
       else:
-        remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
+        remaining = remainingWerewolf if self.werewolf[curr] else remainingTownfolk
         reply = self.agents[curr].groupconv_init(self.kicked,context[curr],remaining)
 
       try:
@@ -726,9 +734,9 @@ class Game:
             curr = voters[1-voters.index(curr)]
           
           if(night):
-            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew[:3]), remainingTownfolk, remainingWarewolf)
+            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew[:3]), remainingTownfolk, remainingWerewolf)
           else:
-            remaining = remainingWarewolf if self.warewolf[curr] else remainingTownfolk
+            remaining = remainingWerewolf if self.werewolf[curr] else remainingTownfolk
             reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew[:3]), remaining)
 
           if(prev!=curr):
@@ -800,7 +808,11 @@ class Game:
     first = True
     while True:
       if(calendar.dt.hour in [11]): break
+      hours = 0
       if(calendar.dt.minute==0):
+        hours = hours+1
+      if(hours==2):
+        hours = 0
         now = calendar.time
         if(not planGen):
            threadPlan.join()
@@ -838,16 +850,15 @@ class Game:
         if(not self.alive[i]): continue
         for j in range(self.n):
           if(i==j or not self.alive[j]): continue
-          if(self.agents[i].hub == self.agents[j].hub):
+          if(self.agents[i].dest == self.agents[j].dest):
             if(self.agents[j].task is not None):
-              if(self.agents[j].warewolf and not self.agents[i].warewolf and "Sabotage" in TASK_EMOJI_MAP[self.agents[j].task]):
+              if(self.agents[j].werewolf and not self.agents[i].werewolf and "Sabotage" in TASK_EMOJI_MAP[self.agents[j].task]):
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
               else:  
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} {nodes[self.agents[j].task]} at {calendar.time}")  
             if(self.agents[i].task is not None and self.agents[j].task is not None and not self.agents[i].busy and not self.agents[j].busy):  
               threadConv = threading.Thread(target=self.conversation, args=(self.names[i],self.names[j],))
               threadConv.start()   
-              log(f"{self.names[i]} has started a conversation with {self.names[j]} at {calendar.time}")
 
   def generatePlanDay(self):
     threads = []
@@ -865,7 +876,7 @@ class Game:
     players = [0,0]
     for i in range(self.n):
        if(self.alive[i]):
-          players[self.warewolf[i]]+=1
+          players[self.werewolf[i]]+=1
     if(players[1]==0):
       log('\n=== TOWNFOLKS WIN ===')
       self.townfolks_win_japanese_show = True
@@ -873,8 +884,8 @@ class Game:
       self.run = False
       pygame.quit()
     if(players[1]>=players[0] or (not self.Night and players[1]>=players[0]-1)):
-      log('\n=== WAREWOLVES WIN ===')
-      self.warewolves_win_japanese_show = True
+      log('\n=== WeREWOLVES WIN ===')
+      self.werewolves_win_japanese_show = True
       time.sleep(5)
       self.run = False 
       pygame.quit()
@@ -983,7 +994,7 @@ class Game:
       if(self.fire): self.fire = False
       n = N_Killing
       if(self.farewell):
-        if(self.warewolf[self.ids[self.kicked]]):
+        if(self.werewolf[self.ids[self.kicked]]):
           n = N_Farewell_W 
         else: 
           n = N_Farewell_T
@@ -998,7 +1009,7 @@ class Game:
           self.fire = True
       else:
         if(self.farewell):
-          if(self.warewolf[self.ids[self.kicked]]):
+          if(self.werewolf[self.ids[self.kicked]]):
               self.bg = self.farewellframesW[self.killId//Speed_Killing]
           else:
               self.bg = self.farewellframesT[self.killId//Speed_Killing]
@@ -1052,8 +1063,8 @@ class Game:
         self.bg = self.black_bg
         self.win.blit(self.bg,(0,0))
         self.text1 = self.elimination + " has been Killed"
-        if(self.warewolf[self.ids[self.elimination]]):
-          self.text2 = self.elimination + " was a Warewolf"
+        if(self.werewolf[self.ids[self.elimination]]):
+          self.text2 = self.elimination + " was a Werewolf"
         else: self.text2 = self.text2 = self.elimination + " was a Townfolk"
         self.elimination = self.agents[self.ids[self.elimination]]
         self.elimination.animationKillInit()
@@ -1096,20 +1107,22 @@ class Game:
       pygame.display.update()
       time.sleep(3)     
   
-  
+  def draw_coordinates(self):
+    dot_radius = 3
+    for name, coord in LOCATION_MAP.items():
+        x, y = coord
+        if('Hut 1' in name):
+          pygame.draw.circle(self.win, RED, (x, y), dot_radius)
+        if('Hut 2' in name):
+          pygame.draw.circle(self.win, BLUE, (x, y), dot_radius)
+
+
   def draw_fps(self):
     self.fps = int(self.clock.get_fps())
     fps_text = font3.render(f"FPS: {self.fps}", True, (0, 85, 255))
     fps_text_rect = fps_text.get_rect(bottomright=(10+fps_text.get_width(), self.win.get_height() - 10))
     self.win.blit(fps_text, fps_text_rect)
     if(self.fps>15): self.VelFactor = FPS/self.fps
-
-  def draw_conversation_in_popup(self, name):
-     for i,player in enumerate(self.agents): 
-          if(self.alive[i] and player.inPopup_house1 and name=='Hut 1'): #Drawing speech bubble for agents in house_1
-              player.drawBubble() 
-          elif(self.alive[i] and player.inPopup_house2 and name=='Hut 2'): #Drawing speech bubble for agents in house_2
-             player.drawBubble()
 
   def draw_popup(self):
     # Get the rect of the image
@@ -1134,8 +1147,8 @@ class Game:
 
   def draw_window(self) : 
 
-    if(self.warewolves_win_japanese_show):
-      self.win.blit(self.warewolves_win_japanese,(0,0))
+    if(self.werewolves_win_japanese_show):
+      self.win.blit(self.werewolves_win_japanese,(0,0))
       pygame.display.update()
       return
     if(self.townfolks_win_japanese_show):
@@ -1155,12 +1168,11 @@ class Game:
       
 
       for i,player in enumerate(self.agents): 
-          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2): #Drawing agents not inside house
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2):
               player.draw() 
       self.draw_fire()
-
       for i,player in enumerate(self.agents): 
-          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2): #Drawing speech bubble for agents not in house
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2):
               player.drawBubble() 
 
       self.drawTaskEmoji()
@@ -1177,26 +1189,26 @@ class Game:
       if(self.house1Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 1')
-         self.draw_taskbar()
-         self.draw_conversation_in_popup('Hut 1')
          self.drawTaskEmoji_InsidePopup('Hut 1')
-         self.draw_sleep('Hut 1')
-         
+
+         for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house1):
+              player.drawBubble() 
          self.draw_hover_agents_insidePopup('Hut 1')
+
          
       elif(self.house2Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 2')
-         self.draw_taskbar()
-         self.draw_conversation_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
-         self.draw_sleep('Hut 2')
-         
+         for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house2):
+              player.drawBubble() 
          self.draw_hover_agents_insidePopup('Hut 2')
       
       self.draw_button() 
-        
-      
+      # Only for testing 
+      # self.draw_coordinates()
       
     pygame.display.update()
 
@@ -1303,9 +1315,9 @@ class Game:
       elif(self.townfolks_win_japanese_show):
         self.win.blit(self.townfolks_win_japanese,(0,0))
         self.townfolks_win_japanese_show = False
-      elif(self.warewolves_win_japanese_show):
-        self.win.blit(self.warewolves_win_japanese,(0,0))
-        self.warewolves_win_japanese_show = False
+      elif(self.werewolves_win_japanese_show):
+        self.win.blit(self.werewolves_win_japanese,(0,0))
+        self.werewolves_win_japanese_show = False
       elif(self.end_phase_show):
         self.win.blit(self.end_phase,(0,0))
         self.end_phase_show = False

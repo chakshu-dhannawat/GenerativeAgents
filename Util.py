@@ -84,6 +84,16 @@ def getTasks(hub,game,werewolf=False):
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return tasks,tasksList
+  
+def getAllTasks(werewolf=False):
+    tasks = ""
+    if(werewolf):
+      tasksList = [node for node in nodes if "task" in node]
+    else:
+      tasksList = [node for node in nodes if "task" in node and "Sabotage" not in TASK_EMOJI_MAP[node]]
+    for i,node in enumerate(tasksList):
+      tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
+    return tasks,tasksList
 
 def getPeople():
     people = ""
@@ -190,7 +200,7 @@ def getDetails(game,includeCover=False):
       if(not includeCover):
          details = details + f"{sr}) {game.names[i]}\n"
          continue
-      if(game.warewolf[i]): cover = 'warewolf'
+      if(game.werewolf[i]): cover = 'werewolf'
       else: cover = 'townfolk'
       details = details + f"{sr}) {game.names[i]}: {cover}\n"
     return details[:-1]
@@ -200,10 +210,10 @@ def getNames(game,townfolks=True):
     sr = 0
     for i in range(game.n):
       if(not game.alive[i]): continue
-      if(townfolks and not game.warewolf[i]):
+      if(townfolks and not game.werewolf[i]):
         sr += 1
         details = details + f"{sr}) {game.names[i]}\n"
-      if(not townfolks and game.warewolf[i]):
+      if(not townfolks and game.werewolf[i]):
         sr += 1
         details = details + f"{sr}) {game.names[i]}\n"
     return details[:-1]   
@@ -212,7 +222,7 @@ def getAllDetails():
     details = ""
     cover = 'townfolk'
     for i,agent in enumerate(agentsDetails):
-      if('warewolf' in agent['description']): cover = 'warewolf'
+      if('werewolf' in agent['description']): cover = 'werewolf'
       else: cover = 'townfolk'
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
