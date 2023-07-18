@@ -94,11 +94,11 @@ TavernRadius = 150
 
 SLEEPING_NODES = ['Hut 1 Sleeping01', 'Hut 1 Sleeping02', 'Hut 1 Sleeping03', 'Hut 1 Sleeping04', 'Hut 1 Sleeping05','Hut 2 Sleeping01', 'Hut 2 Sleeping02', 'Hut 2 Sleeping03', 'Hut 2 Sleeping04', 'Hut 2 Sleeping05']
 LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376), 
-                "Hut 1 Intermediate01":(305, 366), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 366),"Hut 1 Intermediate05":(686, 366), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
-                "Hut 1 task01":(217,157),"Hut 1 SleepIntermediate01":(508,302), "Hut 1 SleepIntermediate02":(698,300), "Hut 1 task04":(327,542), "Hut 1 Sleeping01":(794, 156), "Hut 1 Sleeping02":(890, 156), "Hut 1 Sleeping03":(846, 189), "Hut 1 Sleeping04":(615,140), "Hut 1 Sleeping05":(616,198),
+                "Hut 1 Intermediate01":(305, 336), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 336),"Hut 1 Intermediate05":(686, 336), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
+                "Hut 1 task01":(217,127), "Hut 1 task04":(287,542),"Hut 1 SleepIntermediate01":(478,282), "Hut 1 SleepIntermediate02":(678,280), "Hut 1 Sleeping01":(794, 156), "Hut 1 Sleeping02":(890, 156), "Hut 1 Sleeping03":(846, 189), "Hut 1 Sleeping04":(615,140), "Hut 1 Sleeping05":(616,198),
                 'Hut 2': (963, 427), "Hut 2 Main": (623, 381),
                 "Hut 2 Intermediate01": (793, 371), "Hut 2 Intermediate02": (812, 250), "Hut 2 Intermediate03": (812, 162), "Hut 2 Intermediate04": (997, 371), "Hut 2 Intermediate05": (1174, 371), "Hut 2 Intermediate06": (630, 469), "Hut 2 Intermediate07": (713, 546),
-                "Hut 2 task01": (705, 162), "Hut 2 SleepIntermediate01": (996, 307), "Hut 2 SleepIntermediate02": (1186, 305), "Hut 2 task04": (815, 547),"Hut 2 Sleeping01": (1282, 161), "Hut 2 Sleeping02": (1378, 161), "Hut 2 Sleeping03": (1334, 194), "Hut 2 Sleeping04": (1103, 145), "Hut 2 Sleeping05": (1104, 203),
+                "Hut 2 task01": (705, 162), "Hut 2 task04": (815, 547), "Hut 2 SleepIntermediate01": (996, 307), "Hut 2 SleepIntermediate02": (1186, 305), "Hut 2 Sleeping01": (1282, 161), "Hut 2 Sleeping02": (1378, 161), "Hut 2 Sleeping03": (1334, 194), "Hut 2 Sleeping04": (1103, 145), "Hut 2 Sleeping05": (1104, 203),
                 'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916),
                 'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 
                 'Well': (928, 668), 'Well task01': (694, 650), 'Well task02': (737, 719), 'Well task03': (881, 724), 

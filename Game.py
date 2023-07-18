@@ -1087,7 +1087,16 @@ class Game:
       pygame.display.update()
       time.sleep(3)     
   
-  
+  def draw_coordinates(self):
+    dot_radius = 3
+    for name, coord in LOCATION_MAP.items():
+        x, y = coord
+        if('Hut 1' in name):
+          pygame.draw.circle(self.win, RED, (x, y), dot_radius)
+        if('Hut 2' in name):
+          pygame.draw.circle(self.win, BLUE, (x, y), dot_radius)
+
+
   def draw_fps(self):
     self.fps = int(self.clock.get_fps())
     fps_text = font3.render(f"FPS: {self.fps}", True, (0, 85, 255))
@@ -1171,7 +1180,7 @@ class Game:
       
       self.draw_button() 
         
-      
+      self.draw_coordinates()
       
     pygame.display.update()
 
