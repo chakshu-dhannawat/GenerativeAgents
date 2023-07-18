@@ -49,25 +49,25 @@ bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # clock = pygame.time.Clock()
 black_bg = pygame.image.load(Path+'blackbg.png')
 
-night_pahse = pygame.image.load('Assets\\Phases\\Night_Phase.png')
-day_phase = pygame.image.load('Assets\\Phases\\Day_Phase.png')
-voting_phase = pygame.image.load('Assets\\Phases\\Voting Phase.png')
-start_phase = pygame.image.load('Assets\\Phases\\START~2.png')
-game_end = pygame.image.load('Assets\\Phases\\Game_End.png')
-werewolves_win = pygame.image.load('Assets\\Phases\\Werewolves_Win.png')
-townfolks_win = pygame.image.load('Assets\\Phases\\Townfolks_Win.png')
+night_pahse = pygame.image.load('Assets/Phases/Night_Phase.png')
+day_phase = pygame.image.load('Assets/Phases/Day_Phase.png')
+voting_phase = pygame.image.load('Assets/Phases/Voting Phase.png')
+start_phase = pygame.image.load('Assets/Phases/START~2.png')
+game_end = pygame.image.load('Assets/Phases/Game_End.png')
+werewolves_win = pygame.image.load('Assets/Phases/Werewolves_Win.png')
+townfolks_win = pygame.image.load('Assets/Phases/Townfolks_Win.png')
 
-night_phase_japanese = pygame.image.load('Assets\\Phases\\Night_Phase_Japanese.png')
-day_phase_japanese = pygame.image.load('Assets\\Phases\\Day_Phase_Japanese.png')
-voting_phase_japanese = pygame.image.load('Assets\\Phases\\Voting_Phase_Japanese.png')
-townfolks_win_japanese = pygame.image.load('Assets\\Phases\\Townfolks_Win_Japanese.png')
-werewolves_win_japanese = pygame.image.load('Assets\\Phases\\Werewolves_Win_Japanese.png')
+night_phase_japanese = pygame.image.load('Assets/Phases/Night_Phase_Japanese.png')
+day_phase_japanese = pygame.image.load('Assets/Phases/Day_Phase_Japanese.png')
+voting_phase_japanese = pygame.image.load('Assets/Phases/Voting_Phase_Japanese.png')
+townfolks_win_japanese = pygame.image.load('Assets/Phases/Townfolks_Win_Japanese.png')
+werewolves_win_japanese = pygame.image.load('Assets/Phases/Werewolves_Win_Japanese.png')
 
-killframes = [pygame.image.load(Path+f'killing\\{i}.png') for i in range(N_Killing)]
-farewellframesW = [pygame.image.load(Path+f'Farewell\\Werewolf\\{i}.png') for i in range(N_Farewell_W)]
-farewellframesT = [pygame.image.load(Path+f'Farewell\\Townfolk\\{i}.png') for i in range(N_Farewell_T)]
+killframes = [pygame.image.load(Path+f'killing/{i}.png') for i in range(N_Killing)]
+farewellframesW = [pygame.image.load(Path+f'Farewell/Werewolf/{i}.png') for i in range(N_Farewell_W)]
+farewellframesT = [pygame.image.load(Path+f'Farewell/Townfolk/{i}.png') for i in range(N_Farewell_T)]
 
-bgs = [pygame.image.load(Path+f'Background\\{i}.png') for i in range(N_Background)]
+bgs = [pygame.image.load(Path+f'Background/{i}.png') for i in range(N_Background)]
 
 
 
@@ -79,8 +79,8 @@ Button Assests [POPUP]
 # Hut common
 button_font = pygame.font.Font(None, 24)
 button_color = (255, 153, 153) 
-house_popup = pygame.transform.scale(pygame.image.load('Assets\\house_popup.png'), HOUSE_POPUP_SIZE)
-hut_button = pygame.transform.scale(pygame.image.load("Assets\\button_house.png"), HOUSE_POPUP_SIZE)
+house_popup = pygame.transform.scale(pygame.image.load('Assets/house_popup.png'), HOUSE_POPUP_SIZE)
+hut_button = pygame.transform.scale(pygame.image.load("Assets/button_house.png"), HOUSE_POPUP_SIZE)
 hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
 # Hut 1
 hut1_button_x, hut1_button_y =  LOCATION_MAP['Hut 1']
@@ -113,7 +113,7 @@ for _ in range(100):
     size = random.uniform(0.5,1.5)
     fire_particles.append((x, y, dx, dy, size))
 
-fire_animation_frames = [pygame.image.load(f'Assets\\Fire\\{i}.png') for i in range(40)]
+fire_animation_frames = [pygame.image.load(f'Assets/Fire/{i}.png') for i in range(40)]
 fire_animation_frames.extend(fire_animation_frames[::-1])
 
 current_frame = 0
@@ -303,12 +303,28 @@ class Game:
     for i in range(self.n):
       self.agents[i].game = self
     self.tasksDone = 0
+    
+    self.rememberInit()
 
     pyautogui.click(500, 500, button='left')
     time.sleep(0.01)
     pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
 
+  def rememberInit(self):
+    threads = []
+    for i in range(self.n):
+        thread = threading.Thread(target=self.rememberAgent, args=(i,))
+        thread.start()
+        threads.append(thread)
+    for thread in threads:
+        thread.join()
+  
+  def rememberAgent(self,id):
+    for i in range(self.n):
+      if(i==id): continue
+      self.agents[id].remember(f"About {self.agents[i].name}: {self.agents[i].summary}")
+  
   def initHover(self):
     '''
       ====================
@@ -366,7 +382,7 @@ class Game:
   #         process.join()
 
   def speak(self,text,curr):
-    voicePath = "Assets\\voice.mp3"
+    voicePath = "Assets/voice.mp3"
     translation = translator.translate(text)
     tts = gTTS(translation, lang='ja')
     tts.save(voicePath)

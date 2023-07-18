@@ -30,7 +30,7 @@ class HoverTextBox:
         self.rectangle.y = y
         
     def hover_bubble(self,surface):
-      Path = "Assets\\"
+      Path = "Assets/"
       x = self.rectangle.x
       y = self.rectangle.y
       bubble_image = pygame.image.load(Path+"hover_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
@@ -144,7 +144,7 @@ class HoverTextBox_Agent:
         self.rectangle.y = y
         
     def hover_bubble(self,surface):
-      Path = "Assets\\"
+      Path = "Assets/"
       x = self.rectangle.x
       y = self.rectangle.y
       bubble_image = pygame.image.load(Path+"agent_bubble.png")  # Replace "bubble.png" with the path to your predetermined image

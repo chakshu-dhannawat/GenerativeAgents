@@ -57,8 +57,9 @@ Game
 ====================
 '''
 
-Path = "Assets\\"
-Emoji_Path = "Assets\\emojis\\"
+# Path = "Assets\\"
+Path = "Assets/"
+Emoji_Path = "Assets/emojis/"
 WIN_WIDTH = 1920
 WIN_HEIGHT = 1080
 FPS = 60
@@ -78,10 +79,11 @@ POPUP_BUTTON_SIZE = (35,35)
 HUT1_POPUP_CLOSE = (976, 19)
 HUT2_POPUP_CLOSE = ()
 
-N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
-N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
-N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
-N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Werewolf')])
+N_Background = sum([len(files) for _, _, files in os.walk('Assets/Background')])
+
+N_Killing = sum([len(files) for _, _, files in os.walk('Assets/killing')])
+N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Townfolk')])
+N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Werewolf')])
 Speed_Killing = FPS//10
 
 EMOJI_SIZE = (58, 47)
