@@ -17324,3 +17324,582 @@ Retrieved Memories-
 5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
 
 Yumi Okada: "I propose we kick out Riku Mori. He's too smart and might identify us. What do you think, Mana?"
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/18/2023, 17:23:43
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Wednesday July 18 -
+
+1) Observe voting patterns and behavior to identify suspicious players.
+2) Collaborate with other townfolks to share information and suspicions.
+3) Deduce and eliminate werewolves by analyzing task completion and sabotage.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Wednesday July 18 -
+
+1) Observe behaviors and voting patterns to identify werewolves.
+2) Build trust with other townfolks and share suspicions in private.
+3) Use convincing skills to sway the town's decisions and eliminate suspected werewolves.
+
+-----------------------
+
+
+Hina Sato's Strategy for Wednesday July 18 -
+
+1) Observe voting patterns and player behavior to identify werewolves.
+2) Cooperate with other townfolks and share information to narrow down suspects.
+3) Complete tasks efficiently to prevent sabotage and gain trust as a townfolk.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Wednesday July 18 -
+
+1) Observe and listen to others' arguments carefully to identify suspicious behavior.
+2) Collaborate with other townfolks to gather information and confirm suspicions.
+3) Prioritize completing tasks to ensure the safety and well-being of the town while also identifying werewolves through their sabotage attempts.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Wednesday July 18 -
+
+Taichi Kato is an electrician and not very good at strategy games. However, he thinks the following could help the townfolks win:
+
+1) Observe and analyze voting patterns to identify werewolves and their allies.
+2) Work together with trusted townfolks to complete tasks quickly and prevent werewolf sabotage.
+3) Use logic and deduction to defend against false accusations and identify werewolves.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Wednesday July 18 -
+
+1) Act as a friendly and helpful electrician during the day, while secretly sabotaging tasks at night.
+2) Blame other townfolks for sabotages to create distrust among them and avoid suspicion.
+3) Convince the other werewolf to vote together and kick out a townfolk every night.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Wednesday July 18 -
+
+1) Act friendly and helpful to gain townfolks' trust while secretly sabotaging their tasks.
+2) Bluff about being suspicious of other players to shift attention away from myself.
+3) Vote to kick out players who are suspected of being werewolves but not my fellow werewolf Mana Yoshida.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuria Shimizu's Plan for Wednesday July 18 -
+
+10:00 AM : Head to the Well, draw water and clean it. 
+11:00 AM : Complete Shrine task01 - Offering Rituals.
+12:00 PM : Visit Fishing Pond, catch fish, and clean them.
+1:00 PM : Complete Hut 2 task04 - Cooking.
+2:00 PM : Complete Cattle Farm task04 - Repairing fences.
+3:00 PM : Rest and spend time with family.
+4:00 PM : Complete Hut 1 task01 - Reading books.
+5:00 PM : Complete Shrine task03 - Lighting candles at the Shrine.
+6:00 PM : Visit Cattle Farm, feed the animals, and collect eggs.
+
+.....................
+
+
+Mana Yoshida's Plan for Wednesday July 18 -
+
+10:00 AM : Go to Hut 1 and offer help with cooking.
+11:00 AM : Take the task of cooking at Hut 1 and sabotage it.
+12:00 PM : Go back to the Electricity House and check all the electrical equipment once again before leaving.
+1:00 PM : Take a break and go to the Shrine to offer some rituals.
+2:00 PM : Act helpful and go to the Cattle Farm to help with feeding the animals.
+3:00 PM : Take the task of doing a hole in the bucket at the well and sabotage it.
+4:00 PM : Start the day by going to the Electricity House and checking all the electrical equipment.
+5:00 PM : Take the task of breaking the broomstick at the Shrine and sabotage it.
+6:00 PM : Take the task of breaking the fences at the Cattle Farm and sabotage it.
+
+.....................
+
+
+Yumi Okada's Plan for Wednesday July 18 -
+
+10:00 AM : Sabotage Shrine task02 by not cleaning the shrine and blaming it on someone else.
+11:00 AM : Sabotage Cattle Farm task02 by breaking the fences.
+12:00 PM : Vote to kick out Hina Sato, a suspected townfolk.
+1:00 PM : Take a break from sabotaging tasks and act normal to avoid suspicion.
+2:00 PM : Sabotage Fishing Pond task01 by breaking the fishing rod.
+3:00 PM : Bluff about being suspicious of Riku Mori to shift attention away from myself.
+4:00 PM : Bluff about being suspicious of Yuka Suzuki to shift attention away from myself.
+5:00 PM : Act friendly and offer to help with Well task02 while secretly sabotaging it.
+6:00 PM : Act helpful and offer to assist with Cattle Farm task04 while secretly sabotaging it.
+
+.....................
+
+
+Riku Mori's Plan for Wednesday July 18 -
+
+10:00 AM : Head to the well and assist with cleaning and drawing water.
+11:00 AM : Go to Hut 1 and complete the reading task.
+12:00 PM : Check on the progress at the Shrine and assist with any cleaning or maintenance tasks.
+1:00 PM : Head to the Fishing Pond and help with maintaining the equipment.
+2:00 PM : Take a break and have lunch near the Fishing Pond.
+3:00 PM : Visit the Cattle Farm and help feed the animals.
+4:00 PM : Head back to the Cattle Farm and help with milking and egg collection.
+5:00 PM : End the day by catching fish and preparing them for dinner.
+6:00 PM : Visit Hut 2 and complete the reading task.
+
+.....................
+
+
+Yuka Suzuki's Plan for Wednesday July 18 -
+
+10:00 AM : Clean the well and prepare for dinner while reviewing the day's activities.
+11:00 AM : Light candles at the shrine and repair any damages at the fishing pond.
+12:00 PM : Complete Hut 1 task04 and Hut 2 task04 by cooking.
+1:00 PM : Milk the cows and collect eggs from the chickens and clean and prepare the caught fish for cooking.
+2:00 PM : Cook lunch using the food items collected and repair the cattle farm fences.
+3:00 PM : Offer rituals at the shrine and catch fish at the fishing pond.
+4:00 PM : Draw water from the well and feed the animals at the cattle farm.
+5:00 PM : Complete Hut 1 task01 and Hut 2 task01 by reading books.
+6:00 PM : Clean and maintain the shrine and fishing equipment.
+
+.....................
+
+
+Hina Sato's Plan for Wednesday July 18 -
+
+10:00 AM : Complete Hut 1 task04 and Hut 2 task04.
+11:00 AM : Observe player behavior and discuss suspicious activity.
+12:00 PM : Complete Well task02 and Shrine task02.
+1:00 PM : Participate in Shrine task01 and Fishing Pond task03.
+2:00 PM : Complete Well task01, then observe player behavior.
+3:00 PM : Cooperate with other townfolks to complete Cattle Farm task04 and Shrine task03.
+4:00 PM : Complete Fishing Pond task02 and Cattle Farm task03.
+5:00 PM : Cooperate with other townfolks to complete Cattle Farm task01 and Hut 2 task01.
+6:00 PM : Discuss and identify suspicious player behavior.
+
+.....................
+
+
+Taichi Kato's Plan for Wednesday July 18 -
+
+10:00 AM : Cook lunch with Hut 1 mates and clean the Shrine.
+11:00 AM : End the day and rest for tomorrow's tasks.
+12:00 PM : Repair the fences at the Cattle Farm and catch fish at the Fishing Pond.
+1:00 PM : Read books at Hut 1 and maintain the fishing equipment.
+2:00 PM : Clean and prepare the caught fish for cooking and offer rituals at the Shrine.
+3:00 PM : Read books at Hut 2 and milk the cows and collect eggs from the chickens.
+4:00 PM : Clean the well and repair any damages at the Fishing Pond.
+5:00 PM : Cook dinner with Hut 2 mates and light candles at the Shrine.
+6:00 PM : Draw water from the well and feed the animals at the Cattle Farm.
+
+.....................
+
+
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuka Suzuki: townfolk
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Yumi Okada: werewolf
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: townfolk
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuka Suzuki: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuria Shimizu: townfolk
+4) Yuka Suzuki: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Mana Yoshida's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yuria Shimizu: townfolk
+2) Yumi Okada: werewolf
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Mana Yoshida: werewolf
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Mana Yoshida's observations about Taichi Kato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuria Shimizu: townfolk
+4) Yuka Suzuki: townfolk
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuka Suzuki: townfolk
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuria Shimizu: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yuria Shimizu: townfolk
+
+Query -
+What is Mana Yoshida's observations about Yumi Okada
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuria Shimizu: townfolk
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuria Shimizu: townfolk
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Mana Yoshida's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) Hina Sato: townfolk
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Mana Yoshida: werewolf
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: townfolk
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuka Suzuki: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Mana Yoshida: "I suggest we kick out Riku Mori. He loves fishing, which means he has free time to observe us during the day."
+Yumi Okada: "I agree with Mana's point. Riku is a smart townfolk. He might identify us. Let's kick him out."
+Mana Yoshida: "I think we should kick out Yuka Suzuki. She seems too observant and might identify us."
+Yumi Okada: "I think we should kick out Yuka Suzuki. She's observant and might be onto us. What do you think, Mana?"
+
+End of Conversation
+
+Conversation Rating - 4.0
+Turn Taking Ratio - 1.0
+Response Relevance - ([0.3584287096156492, 0.513900116123887, 0.8948659423910488, 0.8383833636782421], 0.6513945329522067)
+Agreement Metric - 0.21713151098406894
+Query -
+What is Hina Sato's observations about Riku Mori
+Retrieved Memories-
+1) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuka Suzuki's observations about Riku Mori
+Retrieved Memories-
+1) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Riku Mori's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Riku Mori's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Riku Mori's observations about Taichi Kato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuka Suzuki's observations about Yuria Shimizu
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuria Shimizu's observations about Riku Mori
+Retrieved Memories-
+1) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Hina Sato's observations about Taichi Kato
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuka Suzuki's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuka Suzuki's observations about Taichi Kato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Yuria Shimizu's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Mana Yoshida
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Taichi Kato's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Riku Mori's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Riku Mori's observations about Mana Yoshida
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Hina Sato's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Hina Sato's observations about Mana Yoshida
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Hina Sato's observations about Yuria Shimizu
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuria Shimizu's observations about Yumi Okada
+Retrieved Memories-
+1) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuria Shimizu's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuria Shimizu's observations about Mana Yoshida
+Retrieved Memories-
+1) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Hina Sato's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Riku Mori's observations about Yuria Shimizu
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Taichi Kato's observations about Riku Mori
+Retrieved Memories-
+1) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuka Suzuki's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Yuria Shimizu
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Yuria Shimizu's observations about Taichi Kato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Yuka Suzuki's observations about Mana Yoshida
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+

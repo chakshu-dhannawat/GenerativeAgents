@@ -237,7 +237,7 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   def nextLocation(self,now,game):
-    self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
+    # self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
     # move agent to tavern in start of afternoon phase
     locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
