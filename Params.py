@@ -92,7 +92,7 @@ TavernCenter = (1434, 811)
 Character_Sizes = [(random.randint(55, 66), random.randint(44, 54)) for _ in range(len(agentsDetails))]
 TavernRadius = 150
 
-SLEEPING_NODES = ['Hut 1 Sleeping01', 'Hut 1 Sleeping02', 'Hut 1 Sleeping03', 'Hut 1 Sleeping04', 'Hut 1 Sleeping05','Hut 2 Sleeping01', 'Hut 2 Sleeping02', 'Hut 2 Sleeping03', 'Hut 2 Sleeping04', 'Hut 2 Sleeping05']
+SLEEPING_NODES = ['Hut 1 Sleeping01', 'Hut 1 Sleeping02', 'Hut 1 Sleeping03', 'Hut 1 Sleeping04','Hut 2 Sleeping01', 'Hut 2 Sleeping02', 'Hut 2 Sleeping03', 'Hut 2 Sleeping04']
 LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376), 
                 "Hut 1 Intermediate01":(305, 336), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 336),"Hut 1 Intermediate05":(686, 336), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
                 "Hut 1 task01":(217,127), "Hut 1 task04":(287,542),"Hut 1 SleepIntermediate01":(478,282), "Hut 1 SleepIntermediate02":(678,280), "Hut 1 SleepIntermediate03":(712,142), "Hut 1 SleepIntermediate04":(862,245), "Hut 1 SleepIntermediate05":(929,222),
