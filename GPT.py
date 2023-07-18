@@ -107,12 +107,12 @@ class GPT:
   def log(self, input, output, input_ts, output_ts, tokens, name):
     text = f'=====================================================\n{name}\n=====================================================\nResponse Time : {round(output_ts-input_ts,2)} s\nTokens Used : {tokens}\n\n------------\nQUERY [{time.strftime("%H:%M:%S", time.localtime(input_ts))}]\n------------\n{input}\n\n------------\nOUTPUT [{time.strftime("%H:%M:%S", time.localtime(output_ts))}]\n------------\n{output}\n\n\n\n'
     with lock:
-      with open("Logs\\logs.txt", "a") as file:
+      with open("Logs/logs.txt", "a") as file:
           file.write(text)
       pdf = FPDF()
       pdf.add_page()
       pdf.set_font("Times", size=12)
-      with open("Logs\\logs.txt", "r") as file:
+      with open("Logs/logs.txt", "r") as file:
           text = file.read()
       pdf.multi_cell(0, 10, text.encode('utf-8').decode('latin-1'))
       pdf.output(PDF_Name)
