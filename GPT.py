@@ -12,9 +12,14 @@ import os
 import time
 from fpdf import FPDF
 from Params import PDF_Name
+from transformers import BertTokenizer, BertModel
+import torch
 
 load_dotenv()
 lock = Lock()
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
 
 def addUsage(tokens):
   with lock:
@@ -34,6 +39,20 @@ openai.api_version = os.getenv('OpenAI_Version')
 
 openai.api_key = os.getenv("OpenAI_API_KEY")
 
+# def getEmbedding(sentence):
+#   response = openai.Embedding.create(
+#       input=sentence,
+#       engine="text-embedding-ada-002" 
+#   )
+#   embeddings = response['data'][0]['embedding']
+#   return embeddings
+
+def getEmbedding(sentence):
+    inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
+    with torch.no_grad():
+        outputs = model(**inputs)
+    sentence_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze().detach().numpy()
+    return sentence_embedding
 
 class GPT:
 
@@ -88,12 +107,12 @@ class GPT:
   def log(self, input, output, input_ts, output_ts, tokens, name):
     text = f'=====================================================\n{name}\n=====================================================\nResponse Time : {round(output_ts-input_ts,2)} s\nTokens Used : {tokens}\n\n------------\nQUERY [{time.strftime("%H:%M:%S", time.localtime(input_ts))}]\n------------\n{input}\n\n------------\nOUTPUT [{time.strftime("%H:%M:%S", time.localtime(output_ts))}]\n------------\n{output}\n\n\n\n'
     with lock:
-      with open("Logs\\logs.txt", "a") as file:
+      with open("Logs/logs.txt", "a") as file:
           file.write(text)
       pdf = FPDF()
       pdf.add_page()
       pdf.set_font("Times", size=12)
-      with open("Logs\\logs.txt", "r") as file:
+      with open("Logs/logs.txt", "r") as file:
           text = file.read()
       pdf.multi_cell(0, 10, text.encode('utf-8').decode('latin-1'))
       pdf.output(PDF_Name)

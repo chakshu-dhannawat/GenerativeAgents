@@ -6,6 +6,7 @@ from datetime import datetime as dt
 import threading
 import time
 from queue import Queue
+from HoveringBox import *
 
 try: 
   with open("Logs\\logs.txt", 'w') as file: pass
@@ -30,6 +31,7 @@ class getAgents():
 
   def makeAgent(self,i):
     self.agents[i] = Agent(agentsDetails[i]['name'],agentsDetails[i]['description'],graphics[i])
+    agentMap[agentsDetails[i]['name']] = self.agents[i]
 
   def get(self):
     threads = []
@@ -45,6 +47,9 @@ class getAgents():
 agents = getAgents().get()
 
 
+
+
+
 '''
 ====================
 Initializing Game
@@ -53,6 +58,12 @@ Initializing Game
 log('\n=======Initializing Game=======\n')
 
 game = Game(agents)
+
+
+
+
+
+
 
 
 '''
@@ -69,12 +80,14 @@ Adding Memories for Testing
 # game.agents[3].remember("Sakura saw some fish getting missing from the bucket of Hiroshi")
 
 
+
+
 '''
 ====================
-Warewolf Game [LOGIC]
+Werewolf Game [LOGIC]
 ====================
 '''
-log('\n=======Warewolf Game=======\n')
+log('\n=======Werewolf Game=======\n')
 
 
 
@@ -103,7 +116,7 @@ def game_logic():
 
 '''
 ====================
-Warewolf Game [GRAPHICS]
+Werewolf Game [GRAPHICS]
 ====================
 '''
 

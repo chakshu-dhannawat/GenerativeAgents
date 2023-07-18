@@ -1,8 +1,6 @@
-from GPT import GPT
-import time
+import os
+N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Townfolk')])
+print(N_Farewell_T)
 
-with open("Logs\\logs.txt", 'w') as file: pass
-
-gpt = GPT()
-print(gpt.query("What is the Capital of Japan"))
-print(gpt.query("What is the Capital of India"))
+for _, _, files in os.walk('Assets/Farewell/Townfolk'):
+    print(files)

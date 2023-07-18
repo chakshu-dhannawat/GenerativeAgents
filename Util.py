@@ -74,10 +74,23 @@ def shuffle_plan(dictionary):
     shuffled_dict = {k: v for k, v in zip(keys, values)}
     return shuffled_dict
 
-def getTasks(hub,game):
+def getTasks(hub,game,werewolf=False):
     tasks = ""
-    tasksList = [node for node in nodes if "task" in node and hub in node]
+    if(werewolf):
+      tasksList = [node for node in nodes if "task" in node and hub in node]
+    else:
+      tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" not in TASK_EMOJI_MAP[node]] 
     # tasksList = [task for i,task in enumerate(tasksList) if not game.taskOccupied[hub][i]]
+    for i,node in enumerate(tasksList):
+      tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
+    return tasks,tasksList
+  
+def getAllTasks(werewolf=False):
+    tasks = ""
+    if(werewolf):
+      tasksList = [node for node in nodes if "task" in node]
+    else:
+      tasksList = [node for node in nodes if "task" in node and "Sabotage" not in TASK_EMOJI_MAP[node]]
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return tasks,tasksList
@@ -187,7 +200,7 @@ def getDetails(game,includeCover=False):
       if(not includeCover):
          details = details + f"{sr}) {game.names[i]}\n"
          continue
-      if(game.warewolf[i]): cover = 'warewolf'
+      if(game.werewolf[i]): cover = 'werewolf'
       else: cover = 'townfolk'
       details = details + f"{sr}) {game.names[i]}: {cover}\n"
     return details[:-1]
@@ -197,10 +210,10 @@ def getNames(game,townfolks=True):
     sr = 0
     for i in range(game.n):
       if(not game.alive[i]): continue
-      if(townfolks and not game.warewolf[i]):
+      if(townfolks and not game.werewolf[i]):
         sr += 1
         details = details + f"{sr}) {game.names[i]}\n"
-      if(not townfolks and game.warewolf[i]):
+      if(not townfolks and game.werewolf[i]):
         sr += 1
         details = details + f"{sr}) {game.names[i]}\n"
     return details[:-1]   
@@ -209,7 +222,7 @@ def getAllDetails():
     details = ""
     cover = 'townfolk'
     for i,agent in enumerate(agentsDetails):
-      if('warewolf' in agent['description']): cover = 'warewolf'
+      if('werewolf' in agent['description']): cover = 'werewolf'
       else: cover = 'townfolk'
       details = details + f"{i+1}) {agent['name']}: {cover}\n"
     return details[:-1]
@@ -278,6 +291,7 @@ def get_alpha(image, x, y):
     if 0 <= x < width and 0 <= y < height:
         return image.get_at((x, y)).a
     return 0
+
 
 
 details = getAllDetails()
