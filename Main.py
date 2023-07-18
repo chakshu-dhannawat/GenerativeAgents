@@ -84,10 +84,10 @@ Adding Memories for Testing
 
 '''
 ====================
-Warewolf Game [LOGIC]
+Werewolf Game [LOGIC]
 ====================
 '''
-log('\n=======Warewolf Game=======\n')
+log('\n=======Werewolf Game=======\n')
 
 
 
@@ -116,7 +116,7 @@ def game_logic():
 
 '''
 ====================
-Warewolf Game [GRAPHICS]
+Werewolf Game [GRAPHICS]
 ====================
 '''
 

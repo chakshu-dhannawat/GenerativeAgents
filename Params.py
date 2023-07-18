@@ -20,33 +20,33 @@ N_Reflections=5
 
 # Diff IQ
 agentsDetails = [
-    {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is smart and is good at lying and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},
-    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced from other's arguments and takes care of the well and its maintainenance."},
-    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart and has good deduction skills and loves to do fishing in the Fishing area."},
+    {"name": "Yumi Okada", "description": "Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},
+    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance."},
+    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area."},
     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine."},
-    {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is very smart and an electrician who work in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks."},
-    {"name": "Taichi Kato", "description": "Taichi is a townfolk and an electricain who does tasks at the Electricity House; Taichi is dumb."},
-    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills and a farmer who works in the Cattle Farm."}
+    {"name": "Mana Yoshida", "description": "Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks."},
+    {"name": "Taichi Kato", "description": "Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb."},
+    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm."}
 ]
 
 # Same IQ - High IQ (7-8)
 # agentsDetails = [
-#     {"name": "Yumi Okada", "description": "Yumi is a warewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
+#     {"name": "Yumi Okada", "description": "Yumi is a werewolf; Yumi is a highly intelligent and strategic werewolf. With a keen analytical mind and exceptional lying skills, Yumi easily manipulates situations to deceive others."},
 #     {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka is a perceptive and open-minded townfolk. While Yuka tends to get easily convinced by other's arguments, their high IQ allows them to analyze information critically and adapt their perspective accordingly."},
 #     {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is a brilliant and observant townfolk. With exceptional deductive reasoning skills and a sharp intellect, Riku excels in analyzing complex situations, making them an asset in identifying the werewolf."},
 #     {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is an analytical townfolk who possesses exceptional problem-solving abilities. With their high IQ, Hina carefully evaluates evidence and applies logical thinking to unravel the mysteries of the village."},
-#     {"name": "Mana Yoshida", "description": "Mana is a warewolf; Mana is an exceptionally intelligent werewolf with a razor-sharp mind. Their high IQ enables them to devise intricate plans and manipulate others effectively, making it challenging for the townsfolks to identify their true identity."},
+#     {"name": "Mana Yoshida", "description": "Mana is a werewolf; Mana is an exceptionally intelligent werewolf with a razor-sharp mind. Their high IQ enables them to devise intricate plans and manipulate others effectively, making it challenging for the townsfolks to identify their true identity."},
 #     {"name": "Taichi Kato", "description": "Taichi is a townfolk; Taichi is a townfolk with an astute and intuitive mind. While not conventionally book-smart, Taichi possesses a remarkable talent for pattern recognition and thinking outside the box. Their unique perspective often leads to unconventional yet effective solutions, contributing valuable insights to the discussions and investigations within the village. Taichi's ability to approach problems from different angles and uncover hidden connections showcases their high IQ and intellectual prowess."},
 #     {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria is a charismatic and persuasive townfolk. Yuria's high IQ, combined with excellent convincing skills, allows them to sway others with well-thought-out arguments and logical reasoning."}
 # ]
 
 # Same IQ - Low IQ (3-4)
 # agentsDetails = [
-#     {"name": "Yumi Okada", "description": "Yumi is an average-intelligence warewolf. While not exceptionally smart, Yumi relies on their instincts and basic deception skills to survive in the game."},
+#     {"name": "Yumi Okada", "description": "Yumi is an average-intelligence werewolf. While not exceptionally smart, Yumi relies on their instincts and basic deception skills to survive in the game."},
 #     {"name": "Yuka Suzuki", "description": "Yuka is an average-intelligence townfolk who tends to go along with the majority. Their analytical skills are moderate, and they try their best to contribute to the discussions based on the information available."},
 #     {"name": "Riku Mori", "description": "Riku is an average-intelligence townfolk with limited deductive reasoning skills. They rely more on intuition and observations rather than advanced analytical thinking."},
 #     {"name": "Hina Sato", "description": "Hina is an average-intelligence townfolk who approaches situations with a practical mindset. While not highly analytical, Hina tries to make logical decisions based on common sense."},
-#     {"name": "Mana Yoshida", "description": "Mana is an average-intelligence warewolf who relies on basic strategies and manipulation tactics. While not highly intelligent, Mana can blend in with the townfolks and create confusion during discussions."},
+#     {"name": "Mana Yoshida", "description": "Mana is an average-intelligence werewolf who relies on basic strategies and manipulation tactics. While not highly intelligent, Mana can blend in with the townfolks and create confusion during discussions."},
 #     {"name": "Taichi Kato", "description": "Taichi is an average-intelligence townfolk who sometimes struggles to grasp complex information. Their contributions may be simple and straightforward, but they genuinely try to participate and support the town's decision-making process."},
 #     {"name": "Yuria Shimizu", "description": "Yuria is an average-intelligence townfolk with decent persuasive skills. They can present their ideas convincingly but may not excel in complex problem-solving or critical thinking."}
 # ]
@@ -57,8 +57,9 @@ Game
 ====================
 '''
 
-Path = "Assets\\"
-Emoji_Path = "Assets\\emojis\\"
+# Path = "Assets\\"
+Path = "Assets/"
+Emoji_Path = "Assets/emojis/"
 WIN_WIDTH = 1920
 WIN_HEIGHT = 1080
 FPS = 60
@@ -78,10 +79,11 @@ POPUP_BUTTON_SIZE = (35,35)
 HUT1_POPUP_CLOSE = (976, 19)
 HUT2_POPUP_CLOSE = ()
 
-N_Background = sum([len(files) for _, _, files in os.walk('Assets\\Background')])
-N_Killing = sum([len(files) for _, _, files in os.walk('Assets\\killing')])
-N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Townfolk')])
-N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets\\Farewell\\Warewolf')])
+N_Background = sum([len(files) for _, _, files in os.walk('Assets/Background')])
+
+N_Killing = sum([len(files) for _, _, files in os.walk('Assets/killing')])
+N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Townfolk')])
+N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Werewolf')])
 Speed_Killing = FPS//10
 
 EMOJI_SIZE = (58, 47)
@@ -92,13 +94,15 @@ TavernCenter = (1434, 811)
 Character_Sizes = [(random.randint(55, 66), random.randint(44, 54)) for _ in range(len(agentsDetails))]
 TavernRadius = 150
 
-SLEEPING_NODES = ['Hut 1 Sleeping01', 'Hut 1 Sleeping02', 'Hut 1 Sleeping03', 'Hut 1 Sleeping04', 'Hut 1 Sleeping05','Hut 2 Sleeping01', 'Hut 2 Sleeping02', 'Hut 2 Sleeping03', 'Hut 2 Sleeping04', 'Hut 2 Sleeping05']
+SLEEPING_NODES = ['Hut 1 Sleeping01', 'Hut 1 Sleeping02', 'Hut 1 Sleeping03', 'Hut 1 Sleeping04','Hut 2 Sleeping01', 'Hut 2 Sleeping02', 'Hut 2 Sleeping03', 'Hut 2 Sleeping04']
 LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376), 
-                "Hut 1 Intermediate01":(305, 366), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 366),"Hut 1 Intermediate05":(686, 366), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
-                "Hut 1 task01":(217,157),"Hut 1 SleepIntermediate01":(508,302), "Hut 1 SleepIntermediate02":(698,300), "Hut 1 task04":(327,542), "Hut 1 Sleeping01":(794, 156), "Hut 1 Sleeping02":(890, 156), "Hut 1 Sleeping03":(846, 189), "Hut 1 Sleeping04":(615,140), "Hut 1 Sleeping05":(616,198),
+                "Hut 1 Intermediate01":(305, 336), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 336),"Hut 1 Intermediate05":(686, 336), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
+                "Hut 1 task01":(217,127), "Hut 1 task04":(287,542),"Hut 1 SleepIntermediate01":(478,282), "Hut 1 SleepIntermediate02":(678,280), "Hut 1 SleepIntermediate03":(712,142), "Hut 1 SleepIntermediate04":(862,245), "Hut 1 SleepIntermediate05":(929,222),
+                "Hut 1 Sleeping01":(590,118), "Hut 1 Sleeping02":(766, 121), "Hut 1 Sleeping03":(820, 120), "Hut 1 Sleeping04":(862, 124), #"Hut 1 Sleeping05":(616,198),
                 'Hut 2': (963, 427), "Hut 2 Main": (623, 381),
                 "Hut 2 Intermediate01": (793, 371), "Hut 2 Intermediate02": (812, 250), "Hut 2 Intermediate03": (812, 162), "Hut 2 Intermediate04": (997, 371), "Hut 2 Intermediate05": (1174, 371), "Hut 2 Intermediate06": (630, 469), "Hut 2 Intermediate07": (713, 546),
-                "Hut 2 task01": (705, 162), "Hut 2 SleepIntermediate01": (996, 307), "Hut 2 SleepIntermediate02": (1186, 305), "Hut 2 task04": (815, 547),"Hut 2 Sleeping01": (1282, 161), "Hut 2 Sleeping02": (1378, 161), "Hut 2 Sleeping03": (1334, 194), "Hut 2 Sleeping04": (1103, 145), "Hut 2 Sleeping05": (1104, 203),
+                "Hut 2 task01": (670, 130), "Hut 2 task04": (780, 547), "Hut 2 SleepIntermediate01":(936,287), "Hut 2 SleepIntermediate02":(1136,285), "Hut 2 SleepIntermediate03":(1170,147), "Hut 2 SleepIntermediate04":(1320,250), "Hut 2 SleepIntermediate05":(1387,227),
+                "Hut 2 Sleeping01":(1048,123), "Hut 2 Sleeping02":(1224, 126), "Hut 2 Sleeping03":(1278, 125), "Hut 2 Sleeping04":(1320, 129), #"Hut 2 Sleeping05": (1104, 203),
                 'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916),
                 'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 
                 'Well': (928, 668), 'Well task01': (694, 650), 'Well task02': (737, 719), 'Well task03': (881, 724), 
@@ -159,12 +163,15 @@ nodes = {"Hut 1": "The first hut.",
         "Hut 1 Sleeping02":"Sleeping Node",
         "Hut 1 Sleeping03":"Sleeping Node",
         "Hut 1 Sleeping04":"Sleeping Node",
-        "Hut 1 Sleeping05":"Sleeping Node",
+        # "Hut 1 Sleeping05":"Sleeping Node",
         "Hut 1 task01": "Reading Books",
         # "Hut 1 task02": "Sleeping",
         # "Hut 1 task03": "Sleeping",
         "Hut 1 SleepIntermediate01": "Sleeping Intermediate",
         "Hut 1 SleepIntermediate02": "Sleeping Intermediate",
+        "Hut 1 SleepIntermediate03": "Sleeping Intermediate",
+        "Hut 1 SleepIntermediate04": "Sleeping Intermediate",
+        "Hut 1 SleepIntermediate05": "Sleeping Intermediate",
         "Hut 1 task04": "Cooking",
         "Hut 2": "The second hut.",
         "Hut 2 Main": "Connection between inside and outside of house",
@@ -180,11 +187,14 @@ nodes = {"Hut 1": "The first hut.",
         # "Hut 2 task03": "Sleeping",
         "Hut 2 SleepIntermediate01": "Sleeping Intermediate",
         "Hut 2 SleepIntermediate02": "Sleeping Intermediate",
+        "Hut 2 SleepIntermediate03": "Sleeping Intermediate",
+        "Hut 2 SleepIntermediate04": "Sleeping Intermediate",
+        "Hut 2 SleepIntermediate05": "Sleeping Intermediate",
         "Hut 2 Sleeping01":"Sleeping Node",
         "Hut 2 Sleeping02":"Sleeping Node",
         "Hut 2 Sleeping03":"Sleeping Node",
         "Hut 2 Sleeping04":"Sleeping Node",
-        "Hut 2 Sleeping05":"Sleeping Node",
+        # "Hut 2 Sleeping05":"Sleeping Node",
         "Hut 2 task04": "Cooking",
         "Well": "A water source providing clean and fresh water for the townfolks.",
         "Tavern": "A lively place where townfolks can socialize, exchange information.",
