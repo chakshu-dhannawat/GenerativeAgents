@@ -246,6 +246,16 @@ nodes = {"Hut 1": "The first hut.",
         #"Intermediate10":"Inbetween Nodes",
         }
 
+# Boolean to check if the task is completed
+taskCompleted = {"Well task01": False, "Well task02": False, "Well task03": False,
+                "Cattle Farm task01": False, "Cattle Farm task02": False, "Cattle Farm task03": False, "Cattle Farm task04": False,
+                "Shrine task01": False, "Shrine task02": False, "Shrine task03": False, "Shrine task04": False,
+                "Hut 1 task01": False, "Hut 1 task04": False,
+                "Hut 2 task01": False, "Hut 2 task04": False,
+                "Hut 3 task01": False, "Hut 3 task04": False,
+                "Fishing Pond task01": False, "Fishing Pond task02": False, "Fishing Pond task03": False, "Fishing Pond task04": False
+                }
+
 # hubs = [x for x in nodes.keys() if "task" not in x and "Intermediate" not in x]  
 hubs = ["Well","Cattle Farm","Shrine","Fishing Pond","Hut 1","Hut 2"]
 # hubs = ["Shrine","Cattle Farm","Well"]

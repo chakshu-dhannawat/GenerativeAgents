@@ -237,6 +237,8 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   def nextLocation(self,now,game):
+    self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
+    # move agent to tavern in start of afternoon phase
     locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
@@ -561,7 +563,27 @@ class Agent():
 
             if(not self.taskReach and self.destination==self.task): 
               self.taskReach = True
-              if("Sabotage" in TASK_EMOJI_MAP[self.task]): self.game.tasksDone -= 1
+              taskCompleted[self.task] = True
+              if("Bucket_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Well task01", "Well task02"])
+                taskCompleted[location] = False
+            
+              elif("Fence_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Cattle Farm task01", "Cattle Farm task03", "Cattle Farm task04"])
+                taskCompleted[location] = False
+
+              elif("Broom_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Shrine task01", "Shrine task02", "Shrine task03"])
+                taskCompleted[location] = False
+                
+              elif("FishingPole_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Fishing Pond task02", "Fishing Pond task03", "Fishing Pond task04"])
+                taskCompleted[location] = False
+
               elif(not self.werewolf): self.game.tasksDone += 1
 
             if(self.dest is None):
