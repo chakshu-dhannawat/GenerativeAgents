@@ -337,7 +337,7 @@ class Agent():
   
   def draw(self):
       
-      if(self.sleeping): return
+      # if(self.sleeping): return
       
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
@@ -568,7 +568,7 @@ class Agent():
             elif(self.dest != "Stop"):
               self.choose_location(self.dest)
 
-            if(self.sleepSoon and self.location_name in ["Hut 1","Hut 2"]):
+            if(self.sleepSoon and self.location_name in SLEEPING_NODES):
               self.sleepSoon = False
               self.sleeping = True
 
@@ -637,7 +637,7 @@ class Agent():
 
   def sleep(self):
       self.destination_path = []
-      self.dest = random.choice(['Hut 1','Hut 2'])
+      self.dest = random.choice(SLEEPING_NODES)
       self.sleepSoon = True
 
   def tavern(self,point):
