@@ -12,19 +12,7 @@ import random
 import math
 import emoji
 import time
-<<<<<<< Updated upstream
 from Generate_voiceover import generate_voiceover
-=======
-from tortoise import run_async
-import pyttsx3
-import asyncio
-from googletrans import Translator
-from gtts import gTTS
-import os
-from pydub import AudioSegment
-
-
->>>>>>> Stashed changes
 
 class Agent():
 
@@ -770,40 +758,3 @@ class Agent():
     # Blit the emoji onto the bubble
     emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
     self.win.blit(emoji_surface, emoji_rect)
-
-
-
-
-
-  
-
-<<<<<<< Updated upstream
-=======
-        # Blit the emoji onto the bubble
-        emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
-        self.win.blit(emoji_surface, emoji_rect)
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-
- 
-
-
-
-  
->>>>>>> Stashed changes
