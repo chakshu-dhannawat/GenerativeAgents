@@ -1168,7 +1168,7 @@ class Game:
               player.draw() 
       self.draw_fire()
       for i,player in enumerate(self.agents): 
-          if(self.alive[i]):
+          if(self.alive[i] and not player.inPopup_house1 and not player.inPopup_house2):
               player.drawBubble() 
 
       self.drawTaskEmoji()
@@ -1186,17 +1186,25 @@ class Game:
          self.draw_popup()
          self.draw_agent_in_popup('Hut 1')
          self.drawTaskEmoji_InsidePopup('Hut 1')
+
+         for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house1):
+              player.drawBubble() 
          self.draw_hover_agents_insidePopup('Hut 1')
+
          
       elif(self.house2Popup):
          self.draw_popup()
          self.draw_agent_in_popup('Hut 2')
          self.drawTaskEmoji_InsidePopup('Hut 2')
+         for i,player in enumerate(self.agents): 
+          if(self.alive[i] and player.inPopup_house2):
+              player.drawBubble() 
          self.draw_hover_agents_insidePopup('Hut 2')
       
       self.draw_button() 
-        
-      self.draw_coordinates()
+      # Only for testing 
+      # self.draw_coordinates()
       
     pygame.display.update()
 
