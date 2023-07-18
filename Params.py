@@ -15,7 +15,7 @@ MinDialogues = 5
 MaxDialogues = 8
 
 N_Questions=3
-N_Memories=3
+N_Memories=5
 N_Reflections=5
 
 # Diff IQ
