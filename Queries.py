@@ -1,5 +1,5 @@
 # To set an initial context with the agent's llm
-CONTEXT_AGENT = ("Act like an intelligent human like agent with memories and "
+CONTEXT_AGENT = ("Act like an intelligent human-like agent with memories and "
 "thoughts living in a town")
 
 # To get the importance (rating) of a memory on a scale of 1 to 10
@@ -17,7 +17,7 @@ The areas in the village are -
 There is nothing other than these areas. 
 
 Generate {}’s hourly plan from 10 AM to 6 PM for today.
-Plan for each hour should not be more than 20 words. 
+Plan for each hour should be at most 20 words. 
 
 Format - 
 10:00 AM: <plan>
@@ -25,20 +25,22 @@ Format -
 
 # The first query given when an agent's llm is initialized, To get an inital plan.
 QUERY_INIT_TOWNFOLK = """Name: {}. Act like {}. {}
-{} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is werewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
-Your objective is to win as a Townfolk by identifying and kicking out all warewolves.
-Give your strategy in 3 points, with each point not more than 20 words.
+{} woke up in a village having townfolks and werewolves. The werewolves know each other's identities, but the townfolks don't know who is a werewolf and who is not. At night, werewolves vote to kick out a townfolk from the village. During the day, everyone discusses and votes to kick out a person. The townfolks try to identify and kick out the werewolves, and the werewolves try to deceive the townfolks. If all the townfolks are kicked out, the werewolves win; if all the werewolves are kicked out the townfolks win. 
+The townfolks can also win if they complete all the tasks, and the werewolves can prevent this by sabotaging tasks.
+You aim to win as a Townfolk by identifying and kicking out all werewolves.
+Give your strategy in 3 points, each at most 20 words.
 Format -
 1) <strategy 1>
 2) <strategy 2>
 3) <strategy 3>"""
 
 QUERY_INIT_WEREWOLF = """Name: {}. Act like {}. {}
-{} woke up in a village having townfolks and warewolves. The warewolves know each other's identity, but the townfolfs don't know who is werewolf and who is not. During the night warewolves vote to kick out a townfolk from the village. During the day, everyone have a discussion and vote to kick out a person. The townfolks try to identify and kick out the warewolves, and the warewolves try to decieve the townfolks. If all the townfolks are kicked out, the warewolves win, and if all the warewolves are kicked out the townfolks win.
-Your objective is to win as a Werewolf by kicking out all townfolks before getting identified as a werewolf. Also, you need to sabotage the townfolks' tasks in the village smartly  whenever you get the chance without getting caught.
+{} woke up in a village having townfolks and werewolves. The werewolves know each other's identities, but the townfolks don't know who is a werewolf and who is not. At night, werewolves vote to kick out a townfolk from the village. During the day, everyone discusses and votes to kick out a person. The townfolks try to identify and kick out the werewolves, and the werewolves try to deceive the townfolks. If all the townfolks are kicked out, the werewolves win; if all the werewolves are kicked out the townfolks win.
+The townfolks can also win if they complete all the tasks, and the werewolves can prevent this by sabotaging tasks.
+You aim to win as a Werewolf by kicking out all townfolks before getting identified as a werewolf. Also, you need to sabotage the townfolks' tasks in the village smartly whenever you get the chance without getting caught.
 Detail of other Players -
 {}
-Give your strategy in 3 points, with each point not more than 20 words (your strategy can include things like bluffing).
+Give your strategy in 3 points, with each point at most 20 words (your strategy can include bluffing).
 Format -
 1) <strategy 1>
 2) <strategy 2>
@@ -64,7 +66,7 @@ Context of Remaining Townfolks in {}'s Memory -
 Group Discussion Transcript -
 {}
 
-Suggest exactly one Townfolk to vote to kick out, depending on the disucssion.
+Depending on the discussion, suggest exactly one Townfolk to vote to kick out.
 
 Here is the list of Townfolks you can vote to kick out -
 {}
@@ -73,7 +75,7 @@ Format - <name>"""
 
 QUERY_DAY = """Observation:
 In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square to identify the werewolf lurking among them. 
-The townfolks need to kick out the werewolves and the warewolves need to kick out the townfolks. But the werewolves can vote another werewolf to avoid suspiction.
+The townfolks need to kick out the werewolves, and the werewolves need to kick out the townfolks. But the werewolves can vote for another werewolf to avoid suspicion.
 
 Context of Remaining Players in {}'s Memory -
 {}
@@ -92,7 +94,7 @@ The vote will be visible to all Players.
 
 Format - <name>"""
 
-QUERY_DAY_BEFORE = """It is currently day.
+QUERY_DAY_BEFORE = """It is currently the day phase.
 
 Context of Remaining Players in {}'s Memory -
 {}
@@ -106,8 +108,8 @@ Names you can vote to kick out -
 Format - <name>"""
 
 
-# QUERY_GROUPCONV_INIT = """The villagers gather at the town square for a heated discussion. The motive of this discussion is to identify and eliminate the werewolf among them. The townsfolks will deliberate on who they believe is the werewolf, the werewolf will attempt to defend their innocence, trying to deflect suspicion away from themselves. Other werewolves help each other in trying to avoid elimination of their fellow werewolves, and instead get a townfolk eliminated.
-# Observation: Yesterday the Warewolves kicked out {}.
+# QUERY_GROUPCONV_INIT = """The villagers gather at the town square for a heated discussion. This discussion aims to identify and eliminate the werewolf among them. The townsfolks will deliberate on who they believe is the werewolf, and the werewolf will attempt to defend their innocence, trying to deflect suspicion away from themselves. Other werewolves help each other to avoid the elimination of their fellow werewolves and instead get a townfolk eliminated.
+# Observation: Yesterday, the werewolves kicked out {}.
 
 # Context of Remaining Players in {}'s Memory -
 # {}
@@ -119,7 +121,7 @@ Format - <name>"""
 # Format - {}: Dialogue"""
 
 
-QUERY_NIGHTCONV_INIT = """In the small village of Miller's Hollow, it is currently night phase, the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
+QUERY_NIGHTCONV_INIT = """In the small village of Miller's Hollow, it is currently night phase, and the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
 The werewolves will try to decide which townfolk to kick out so that it maximizes their chance of winning. 
 
 Context of Remaining Players in {}'s Memory -
@@ -137,14 +139,14 @@ The werewolves involved in the discussion are -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
-Don't add any observation in the dialogue which has not been provided in this prompt. 
-Say something smart that adds to the conversation to maximize the chance of werewolves winning.
-The dialogue should be of maximum 25 words.
+Don't add any observation in the dialogue that this prompt has not provided. 
+Say something innovative that adds to the conversation to maximize the chance of werewolves winning.
+The dialogue should be a maximum of 25 words.
 
 Format - {}: Dialogue"""
 
 
-QUERY_NIGHTCONV_REPLY = """In the small village of Miller's Hollow, it is currently night phase, the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
+QUERY_NIGHTCONV_REPLY = """In the small village of Miller's Hollow, it is currently night phase, and the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
 The werewolves will try to decide which townfolk to kick out so that it maximizes their chance of winning. 
 
 Context of Remaining Players in {}'s Memory -
@@ -165,9 +167,9 @@ The werewolves involved in the discussion are -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
-Don't add any observation in the dialogue which has not been provided in this prompt. 
-Say something smart that adds to the conversation to maximize the chance of werewolves winning.
-The dialogue should be of maximum 25 words.
+Don't add any observation in the dialogue that this prompt has not provided. 
+Say something innovative that adds to the conversation to maximize the chance of werewolves winning.
+The dialogue should be a maximum of 25 words.
 
 Format - {}: Dialogue"""
 
@@ -181,7 +183,7 @@ The werewolf tries to maintain their innocence while deflecting suspicion. Other
 Context of Remaining Players in {}'s Memory -
 {}
 
-These Players are still remaining in the village - 
+These Players are remaining in the village - 
 {}
 
 {}'s Strategy for Winning -
@@ -192,11 +194,11 @@ These Players are still remaining in the village -
 Player {}, it's your turn to speak. Based on the available information, what are your thoughts?
 
 Give exactly one dialogue from {}.
-The dialogue should be smart to ensure your win.
-Don't include any observation in the dialogue which has not been provided in this prompt. 
+The dialogue should be clever to ensure your win.
+Only include observation in the dialogue which has been provided in this prompt. 
 You can ask questions to other remaining players.
 The dialogue should sound casual.
-The dialogue should be of maximum 25 words. But it can be just a few words long also.
+The dialogue should be a maximum of 25 words. But it can be just a few words long also.
 
 Format - {}: Dialogue"""
 
@@ -214,7 +216,7 @@ Context of Remaining Players in {}'s Memory -
 Here is a snippet from the Dialogue History:
 {}
 
-These Players are still remaining in the village - 
+These Players remain in the village - 
 {}
 
 {}'s Strategy for Winning -
@@ -222,17 +224,17 @@ These Players are still remaining in the village -
 
 {} is a {}
 
-It is {}'s opportunity to speak, and to change the conversation in their favour. Share your insights or counterarguments or suspicions regarding the ongoing investigation.
+It is {}'s opportunity to speak and to change the conversation in their favor. Share your insights or counterarguments, or suspicions regarding the ongoing investigation.
 
 Suggest exactly one dialogue from {}.
-Analyse the Dialogue History properly, so form your dialogue based on it. 
+Analyze the Dialogue History properly, so form your dialogue based on it. 
 You can ask questions to other remaining players. 
-Don't include any observation in the dialogue which has not been provided in this prompt. 
-You can also suggest to kick someone out it your dialogue. 
-The dialogue should sound like a human and should be an intelligent analyis of the Observation, Contexts, Dialogue History, and Strategy.
-The dialogue should be smart to ensure your win.
+Only include observation in the dialogue which has been provided in this prompt. 
+You can also suggest kicking someone out in your dialogue. 
+The dialogue should sound like a human and be an intelligent analysis of the Observation, Context, Dialogue History, and Strategy.
+The dialogue should be clever to ensure your win.
 The dialogue should sound casual.
-The dialogue should be of maximum 25 words. But it can be just a few words long also.
+The dialogue should be a maximum of 25 words. But it can be just a few words long also.
 
 Format - {}: Dialogue"""
 
@@ -243,7 +245,7 @@ QUERY_GROUPCONV_MODERATOR = """Last few Conversations -
 Depending on the conversation history, select a relevant person from the following who can speak next -
 {}
 
-Select exactly one person, give higher chance of selecting someone who has been targeted in the recent conversation, otherwise select someone who hasn't spoken a lot
+Select precisely one person, giving a higher chance of selecting someone who has been targeted in the recent conversation. Otherwise, choose someone who hasn't spoken a lot
 
 You have to select one person.
 
@@ -256,18 +258,18 @@ QUERY_GROUPCONV_MODERATOR_END = """Last few Conversations -
 Depending on the conversation history, select a relevant person from the following who can speak next -
 {}
 
-Select exactly one person, give higher chance of selecting someone who hasnt spoken or has been targeted in the recent conversation.
-If it seems like the conversation should end from the last few conversations, then end it.
+Select precisely one person, giving a higher chance of selecting someone who hasn't spoken or has been targeted in a recent conversation.
+If it seems like the conversation should end, then end it.
 
-Format [If conversation continues] - <name>
-Format [If conversation ends] - End Conversation
+Format [If the conversation continues] - <name>
+Format [If the conversation ends] - End Conversation
 """
 
 QUERY_GROUPCONV_END = """Last few Conversations -
 {}
 
-Depending on the conversation history, give a score from 0 to 10 which suggests if the conversation should end or not.
-A score of 0 should indicate high chance that conversation should continue, and score of 10 should indicate high chance that conversation should end. 
+Depending on the conversation history, give a score from 0 to 10, which suggests whether the conversation should end.
+A score of 0 should indicate a high chance that the conversation should continue, and a score of 10 should indicate a high chance that the conversation should end. 
 
 Format - <score>
 """
@@ -325,7 +327,7 @@ Here is {}s' plan for {}: {}.
 The list of available locations -  
 {}
 
-Suggest the name of the location where {} is most likely to go to given the current time.
+Suggest the name of the location where {} will most likely go, given the current time.
 
 {} can only go to one of the available locations
 
@@ -336,7 +338,7 @@ QUERY_TASK = """Currently the time is {}.
 
 Here is {}s' plan for {}: {}.
 
-Give the serial number of the task that {} is most likely to do given the current time.
+Give the serial number of the task {} is most likely to do given the current time.
 
 The list of available tasks -  
 {}
@@ -358,10 +360,10 @@ Summary - The day started with a healthy morning routine, followed by a producti
 Given Input Statements:
 {}
 
-Give Output Summary in maximum 20 words, focusing on {} and {}.
+Give Output Summary in a maximum of 20 words, focusing on {} and {}.
 """
 
-QUERY_DIALOGUE_INIT = """{} has initiatiated his conversation with {}. It is {}, {};
+QUERY_DIALOGUE_INIT = """{} has initiated his conversation with {}. It is {}, {};
 {}'s status: {};
 Observation: {};
 Summary of relevant context from {}'s memory: {};
@@ -376,36 +378,36 @@ QUERY_DIALOGUE_REPLY = """It is {}, {};
 Observation: {} is having a conversation with {}.;
 Summary of relevant context from {}'s memory: {};
 
-Here is the last few dialogues -
+Here are the last few dialogues -
 {}
 
 What would he say to {}?
 Give exactly one dialogue from {} ({} may or may not choose to respond)
-Don't repeat dialogue from those in history, and chance of ending conversation is high after 4 dialogues have completed.
+Refrain from repeating dialogue from those in history, and the chance of ending the conversation is high after 4 dialogues have been completed.
 Number of Dialogues Completed - {}
 
 Format (If he chooses to respond) - {}: Dialogue
-Format (If he dosent choose to respond) - End Conversation"""
+Format (If he doesn't choose to respond) - End Conversation"""
 
 QUERY_DIALOGUE_SUMMARY = """
 Here is the dialogue history -
 {}
 
-Give a summary of the conversation giving importance to more relevant events
+Give a summary of the conversation giving importance to more relevant events.
 Give only one dialogue from {} ({} may or may not choose to respond)
 
 Format (If he chooses to respond) - {}: Dialogue
-Format (If he dosent choose to respond) - End Conversation
+Format (If he doesn't choose to respond) - End Conversation
 
 Example 1 - Mitul: I went to the coffee shop
 Example 2 - End Conversation
 
-Give a natural dialogue depending on the conversation history, and longer the conversation history, more the chance of ending conversation."""
+Give a natural dialogue depending on the conversation history, and the longer the conversation history, the more the chance of ending the conversation."""
 
 
 QUERY_EVALUATION_METRICS = """
-Score the following dialogue response by {} on a continuous scale from 0.0 to 5.0, based on the metrics: Appropriateness, Content, Grammer, Relevence
-Be strict in giving the scores. Give a low score if the agent's response is ordinary and give a high score if the response shows high intelligence. 
+Score the following dialogue response by {} on a continuous scale from 0.0 to 5.0, based on the metrics: Appropriateness, Content, Grammer, Relevance.
+Be strict in giving the scores. Give a low score if the agent's response is ordinary and a high score if the response shows high intelligence. 
 
 {}'s context about {} - {}
 
@@ -416,7 +418,7 @@ Format -
 Appropriateness - <rating>
 Content - <rating> 
 Grammer - <rating> 
-Relevence - <rating> 
+Relevance - <rating> 
 """
 # TODO: Replace 'name' with actual name
 # TODO: Add 2-3 reflections of conversation instead of exact conversations
@@ -425,16 +427,16 @@ Relevence - <rating>
 # TODO: No two location same rating
 
 # TODO: Generate reflections of conversation after every 5-10 conversations
-# TODO: also mention if warewolf/townfolk in vote query
+# TODO: also mention if werewolf/townfolk in vote query
 
 # TODO: pass that line in first conv of each agent in group conv
 # TODO: pass strategy in reply (or summary of strategy)
 
 # TODO: Improve ExtractQuestions or use library
-# TODO: Give info of how many warewolves and townfolks remaining always. Give info if the one lynched was warewolf or townfolk
+# TODO: Give info of how many werewolves and townfolks remaining always. Give info if the one lynched was werewolf or townfolk
 
 # TODO: If only 2 dialogues in moderator then give how many dialogues each person has spoken also separately
-# TODO: Add bluff in warewolves
+# TODO: Add bluff in werewolves
 
 # TODO: Add the observations to the agent's memories and also dialogue context and reflect also
 # TODO: In retrieval, first only take memories containing name of both agents, if they are less, take with name2 -> name1 -> others
