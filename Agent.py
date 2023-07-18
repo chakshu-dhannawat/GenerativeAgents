@@ -573,6 +573,7 @@ class Agent():
 
             if(self.sleepSoon and self.location_name in SLEEPING_NODES):
               self.sleepSoon = False
+
               self.sleeping = True
 
           else:
@@ -641,6 +642,7 @@ class Agent():
   def sleep(self):
       self.destination_path = []
       self.dest = random.choice(SLEEPING_NODES)
+      self.task = self.dest
       self.sleepSoon = True
 
   def tavern(self,point):
@@ -709,6 +711,7 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
+
     #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
     #EMOJI = {'Eat': eat_emoji }
 
