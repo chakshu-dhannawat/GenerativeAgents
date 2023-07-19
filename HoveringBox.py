@@ -189,8 +189,10 @@ class HoverTextBox_Agent:
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
       
-          
-      bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x-100, y+50))
+      if(x > 1700) :
+        bubble_rect = scaled_bubble_image.get_rect(bottomright=(x, y+50))
+      else:
+        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x-100, y+50))
       surface.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
