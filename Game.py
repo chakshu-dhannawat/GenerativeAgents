@@ -37,7 +37,7 @@ translator = Translator(to_lang='ja')
 Assests
 ====================
 '''
-
+sheriff_badge = pygame.transform.scale(pygame.image.load('Assets/sheriff_badge.png'), (10,10))
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 font3 = pygame.font.Font(None, 40)
@@ -603,7 +603,8 @@ class Game:
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
       threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.agents[voteId].name} voted to kick out {voteName} on {calendar.day} during the day phase",))
       threadObs.start()
-      votes[vote] += 1
+      if(self.agents[voteId].sheriff): votes[vote] += 2
+      else: votes[vote] += 1
       if prev is not None: self.agents[prev].isSpeaking = False
       self.agents[voteId].isSpeaking = True
       self.agents[voteId].msg = f"I vote to kick out {voteName}"
@@ -1408,6 +1409,15 @@ class Game:
       self.draw_window()
       
       calendar.increment(self.VelFactor*Clock_Speed/FPS)
+
+
+  def chooseSheriff(self):
+    townfolks = []
+    for agent in self.agents:
+      if agent.werewolf == False:
+          townfolks.append(agent)
+    sheriff = random.choice(townfolks)
+    sheriff.sheriff = True
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:

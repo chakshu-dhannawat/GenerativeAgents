@@ -30,6 +30,8 @@ class Agent():
     self.now = None
     self.busy = False
     self.hub = None
+
+    self.sheriff = False
     if "werewolf" in summary:
       self.werewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -362,6 +364,8 @@ class Agent():
               self.walkCount += 1
       else:
           self.win.blit(self.char, (int(self.x), int(self.y)))
+      if self.sheriff:
+         self.win.blit(sheriff_badge, (int(self.x), int(self.y)))
 
   # def move(self,VelFactor):
   #     if(self.sleeping): return
