@@ -371,7 +371,7 @@ class Agent():
       else:
           self.win.blit(self.char, (int(self.x), int(self.y)))
       if self.sheriff:
-         self.win.blit(sheriff_badge, (int(self.x), int(self.y)))
+         self.win.blit(sheriff_badge, (int(self.x-15), int(self.y-15)))
 
   # def move(self,VelFactor):
   #     if(self.sleeping): return

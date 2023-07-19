@@ -37,7 +37,7 @@ translator = Translator(to_lang='ja')
 Assests
 ====================
 '''
-sheriff_badge = pygame.transform.scale(pygame.image.load('Assets/sheriff_badge.png'), (10,10))
+sheriff_badge = pygame.transform.scale(pygame.image.load('Assets/sheriff_badge.png'), (20,20))
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 font3 = pygame.font.Font(None, 40)
