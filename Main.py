@@ -104,7 +104,7 @@ def game_logic():
     if(day==0): 
       log('\n======= Night Phase =======\n') 
       game.nightVote()
-    if(day==1): 
+    if(day==1):
       log('\n======= Morning Voting Phase =======\n')
       game.dayVote()
     if(day==2): 
