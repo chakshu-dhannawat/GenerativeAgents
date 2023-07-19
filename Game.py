@@ -808,8 +808,7 @@ class Game:
     first = True
     hours = 0
     while True:
-      if(calendar.dt.hour in [11]): break
-      
+      if(calendar.dt.hour in [2,14]): break
       if(calendar.dt.minute==0):
         hours = hours+1
       if(hours==2):
@@ -1218,7 +1217,7 @@ class Game:
      for key in self.HoverBox_agents:
         agent = self.agents[self.ids[key]]
         self.HoverBox_agents[key].update_position(agent.x, agent.y)
-        if self.planNow is not None:
+        if self.planNow is not None and agent.plan is not None:
           self.HoverBox_agents[key].plans = agent.nextHourPlan(self.planNow)
         
   def draw_fire(self):
