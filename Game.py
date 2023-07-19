@@ -807,7 +807,7 @@ class Game:
     planGen = False   
     first = True
     while True:
-      if(calendar.dt.hour in [11]): break
+      if(calendar.dt.hour in [2,14]): break
       hours = 0
       if(calendar.dt.minute==0):
         hours = hours+1
