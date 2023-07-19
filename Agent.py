@@ -30,6 +30,8 @@ class Agent():
     self.now = None
     self.busy = False
     self.hub = None
+    self.plan = None
+    self.board = False
 
     self.sheriff = False
     if "werewolf" in summary:
@@ -247,12 +249,13 @@ class Agent():
     if(newLocation=="Tavern"): newLocation = random.choice(hubs)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
-    self.dest = newLocation
+    # self.dest = newLocation
     self.hub = newLocation
     tasks, tasksList = getTasks(newLocation,game,self.werewolf)
     # print(self.name,tasksList,self.werewolf)
     if(len(tasksList)==0):
        self.task = None
+       self.dest = newLocation
        log(f"No Tasks at {newLocation}")
        return
     taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False,name='QUERY_TASK'))
@@ -265,7 +268,9 @@ class Agent():
       newLocation = tasksList[0]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
-    self.dest = newLocation
+    # self.dest = newLocation
+    self.dest = "Tavern"
+    self.board = True
     self.task = newLocation
 
 
@@ -565,6 +570,10 @@ class Agent():
           
           if len(self.destination_path)==0:
 
+            if(self.board and self.destination=="Tavern"):
+               self.board = False 
+               self.dest = self.task
+            
             if(not self.taskReach and self.destination==self.task): 
               self.taskReach = True
               taskCompleted[self.task] = True
