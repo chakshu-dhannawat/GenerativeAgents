@@ -18088,3 +18088,188 @@ Mana Yoshida's Plan for Wednesday July 18 -
 .....................
 
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/19/2023, 09:15:49
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Thursday July 19 -
+
+1) Observe voting patterns and behavior to deduce potential werewolves.
+2) Cooperate and communicate with trusted townfolks to narrow down suspects.
+3) Prioritize completing tasks to prevent werewolf sabotage and gain advantage.
+
+-----------------------
+
+
+Hina Sato's Strategy for Thursday July 19 -
+
+1) Observe voting patterns and discussions to identify suspicious behavior and players.
+2) Form alliances with trustworthy players and gather information about their suspicions.
+3) Prioritize completing tasks as it benefits both the townfolks and exposes werewolves who sabotage tasks.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Thursday July 19 -
+
+1) Observe and listen carefully to other townfolks and their accusations.
+2) As a farmer, offer to provide food for the town and gain trust.
+3) Keep track of who has been accused and voted out to identify patterns and potential werewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Thursday July 19 -
+
+1) Listen carefully to all arguments during discussions and take notes to keep track of suspicions.
+2) Work with other townfolks to confirm suspicions and vote together to kick out suspected werewolves.
+3) Prioritize completing tasks to prevent sabotage and gain time to identify werewolves through their behavior.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Thursday July 19 -
+
+Taichi Kato scratches his head, trying to understand the situation. He thinks of a strategy to win the game.
+
+1) Observe voting patterns and behavior, and keep a record of suspicions to identify werewolves.
+2) Complete tasks efficiently to increase chances of townfolk victory, while being cautious of possible sabotage.
+3) Form alliances with other townfolks and share information to strengthen the chances of identifying werewolves.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Thursday July 19 -
+
+1) Pretend to be a helpful townfolk and gain their trust by completing tasks.
+2) Spread rumors and cast doubt on other players to cause confusion and mistrust.
+3) Strategically vote to kick out townfolks while protecting fellow werewolf Mana Yoshida. Sabotage tasks discreetly.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Thursday July 19 -
+
+1) Act helpful and cooperative during the day, but at night, convince Yumi to vote out one townfolk at a time. 
+2) Sabotage tasks subtly and blame it on other townfolks to create chaos and suspicion among them.
+3) Use my knowledge as an electrician to gain trust and act as a mediator between the townfolks, while secretly pushing them towards making wrong decisions.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuka Suzuki's Plan for Thursday July 19 -
+
+10:00 AM : Complete Cattle Farm task04 - Repair the fences.
+11:00 AM : Complete Well task01 - Draw water from the well.
+12:00 PM : Complete Hut 1 task04 - Cook dinner.
+1:00 PM : Complete Fishing Pond task03 - Clean and prepare the fish for cooking.
+2:00 PM : Complete Fishing Pond task02 - Catch fish.
+3:00 PM : Complete Well task02 - Clean the well.
+4:00 PM : Complete Shrine task01 - Offer rituals.
+5:00 PM : Complete Cattle Farm task03 - Milk the cows and collect eggs.
+6:00 PM : Complete Cattle Farm task01 - Feed the animals.
+
+.....................
+
+
+Yumi Okada's Plan for Thursday July 19 -
+
+10:00 AM : Sabotage Hut 1 task by pretending to read books but not actually doing anything.
+11:00 AM : Head to the Cattle Farm and start the day by feeding the animals.
+12:00 PM : Take the opportunity to sabotage the Cattle Farm task by breaking the fences.
+1:00 PM : Sabotage the Well task by doing a hole in the bucket while drawing water.
+2:00 PM : Take a break and go to Hut 1 to read some books.
+3:00 PM : Take a break and head to the Well to draw water.
+4:00 PM : Pretend to be helping out by repairing the fences.
+5:00 PM : Head to the Fishing Pond to sabotage the task by breaking the fishing rod.
+6:00 PM : Act like you're helping with the Shrine maintenance, while secretly sabotaging it by breaking the broomstick.
+
+.....................
+
+
+Hina Sato's Plan for Thursday July 19 -
+
+10:00 AM : Discuss with trustworthy players and gather information about suspicious behavior.
+11:00 AM : Prioritize completing the Cattle Farm tasks and form alliances for the afternoon vote.
+12:00 PM : Prioritize completing the Well tasks and encourage other townfolks to do the same.
+1:00 PM : Gather with other townfolks to discuss and vote on kicking out a werewolf.
+2:00 PM : Head to the Shrine for morning meditation and complete the Shrine tasks.
+3:00 PM : Attend the evening rituals at the Shrine and complete the remaining Shrine tasks.
+4:00 PM : Complete the Fishing Pond tasks while keeping an eye out for any suspicious behavior.
+5:00 PM : Gather with other townfolks to discuss and vote on kicking out a werewolf.
+6:00 PM : Continue discussing with trustworthy players and share suspicions and observations.
+
+.....................
+
+
+Mana Yoshida's Plan for Thursday July 19 -
+
+10:00 AM : Take Fishing Pond task01 and break the fishing rod.
+11:00 AM : Act helpful again and offer to fix any electrical issues in the village.
+12:00 PM : Take Cattle Farm task02 and let the animals run wild by breaking the fences.
+1:00 PM : Convince Yumi to vote out a townfolk at night.
+2:00 PM : Take Well task03 and widen the hole in the bucket.
+3:00 PM : Take Well task02 and sabotage the well by adding dirt into it.
+4:00 PM : Act helpful and offer to fix any electrical issues in the village.
+5:00 PM : Take Hut 1 task04 and put salt instead of sugar in the food.
+6:00 PM : Take Shrine task04 and break the broomstick.
+
+.....................
+
+
+Riku Mori's Plan for Thursday July 19 -
+
+10:00 AM : Offer Rituals at the Shrine and draw water from the well.
+11:00 AM : Head to the Cattle Farm and feed the animals while milking the cows and collecting eggs.
+12:00 PM : Go to Hut 1 and read books while cooking.
+1:00 PM : Clean and prepare the caught fish for cooking.
+2:00 PM : Go to Hut 2 and read books while cooking.
+3:00 PM : Visit the Fishing Pond and catch fish while maintaining equipment and repairing damages.
+4:00 PM : Take a break and have lunch.
+5:00 PM : Start the day with cleaning and maintaining the Shrine.
+6:00 PM : Repair the fences in the Cattle Farm and clean the well.
+
+.....................
+
+
+Yuria Shimizu's Plan for Thursday July 19 -
+
+10:00 AM : Cook dinner using ingredients from the Cattle Farm and Fishing Pond.
+11:00 AM : Clean and maintain the Shrine, light candles, and offer more prayers.
+12:00 PM : Help repair fences at the Cattle Farm and maintain fishing equipment.
+1:00 PM : Take a break and have lunch.
+2:00 PM : Begin the day by drawing water from the well and offering prayers at the shrine.
+3:00 PM : Catch fish at the Fishing Pond and clean and prepare them for cooking.
+4:00 PM : End the day by sharing dinner with other townfolks and discussing the day's events.
+5:00 PM : Read books at Hut 1 to gain knowledge and skills.
+6:00 PM : Head to the Cattle Farm and feed the animals, then collect eggs and milk the cows.
+
+.....................
+
+
+Taichi Kato's Plan for Thursday July 19 -
+
+10:00 AM : End the day by relaxing and spending time with other townfolks.
+11:00 AM : Milk the cows and collect eggs at the Cattle Farm and light candles at the Shrine.
+12:00 PM : Clean the well and the Shrine and catch fish at the Fishing Pond.
+01:00 PM : Read books at Hut 1 and Hut 2 and maintain fishing equipment.
+02:00 PM : Read books at Hut 1 and Hut 2 and complete pending tasks.
+03:00 PM : Collect water from the well and feed the animals at the Cattle Farm.
+04:00 PM : Repair damages at the Fishing Pond and cook at Hut 1 and Hut 2.
+05:00 PM : Repair fences at the Cattle Farm and offer rituals at the Shrine.
+06:00 PM : Cook at Hut 1 and Hut 2 and clean and prepare the caught fish.
+
+.....................
+
+
