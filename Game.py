@@ -42,7 +42,7 @@ font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 font3 = pygame.font.Font(None, 40)
 
-bg = pygame.image.load(Path+'town.png')
+bg = pygame.image.load(Path+'town_final_bg.png')
 
 bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # bg2 = pygame.image.load(Path+'killing.gif')
