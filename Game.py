@@ -336,7 +336,7 @@ class Game:
       init_x,init_y = agent.x,agent.y
       size_x, size_y = 50, 50
       player_rect = pygame.Rect(init_x, init_y, size_x, size_y)
-      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent.name, agent.summary,"")
+      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent, agent.name, agent.summary,"")
       self.HoverBox_agents[agent.name] = hover_box_player
 
 

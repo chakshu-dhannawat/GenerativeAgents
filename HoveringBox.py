@@ -121,9 +121,10 @@ class HoverTextBox:
 
 
 class HoverTextBox_Agent:
-    def __init__(self, rectangle, font, text_color, box_color, name=None, desc=None, nextPlan=None):
+    def __init__(self, rectangle, font, text_color, box_color,agent, name=None, desc=None, nextPlan=None):
         self.rectangle = rectangle
         # self.text = text
+        self.agent = agent
         self.name = name
         self.desc = desc
         self.plans = nextPlan
@@ -131,7 +132,8 @@ class HoverTextBox_Agent:
         self.text_color = text_color
         self.box_color = box_color
         self.hovered = False
-
+        self.WIN_WIDTH = 1920
+        self.WIN_HEIGHT = 1080
     def handle_event(self, event):
         if event.type == pygame.MOUSEMOTION:
             if self.rectangle.collidepoint(event.pos):
@@ -209,3 +211,17 @@ class HoverTextBox_Agent:
             text_rect = text_surface.get_rect(centerx=bubble_rect.centerx, top=current_y)
             surface.blit(text_surface, text_rect)
             current_y += text_surface.get_height()
+
+      transparency = 100
+      radius = 35*3
+      transparency_surface = pygame.Surface((self.WIN_WIDTH,self.WIN_HEIGHT), pygame.SRCALPHA)
+      if self.agent.werewolf:
+          radius = radius*1.5
+          pygame.draw.circle(transparency_surface, (255, 0, 0, transparency), (x+self.agent.Character_Size[0]//2 +2, y+self.agent.Character_Size[0]//2+2), radius)
+      else:
+          pygame.draw.circle(transparency_surface, (0, 0, 255, transparency), (x+self.agent.Character_Size[0]//2 +2, y+self.agent.Character_Size[0]//2+2), radius)
+      
+      
+      surface.blit(transparency_surface, (0,0))
+
+    
