@@ -279,7 +279,7 @@ class Agent():
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     # self.dest = newLocation
-    self.dest = "Tavern"
+    self.dest = "List"
     self.board = True
     self.task = newLocation
 
@@ -580,7 +580,7 @@ class Agent():
           
           if len(self.destination_path)==0:
 
-            if(self.board and self.destination=="Tavern"):
+            if(self.board and self.destination=="List"):
                self.board = False 
                self.dest = self.task
             
