@@ -37,12 +37,12 @@ translator = Translator(to_lang='ja')
 Assests
 ====================
 '''
-
+sheriff_badge = pygame.transform.scale(pygame.image.load('Assets/sheriff_badge.png'), (20,20))
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 font3 = pygame.font.Font(None, 40)
 
-bg = pygame.image.load(Path+'town.png')
+bg = pygame.image.load(Path+'town_final_bg.png')
 
 bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # bg2 = pygame.image.load(Path+'killing.gif')
@@ -336,7 +336,7 @@ class Game:
       init_x,init_y = agent.x,agent.y
       size_x, size_y = 50, 50
       player_rect = pygame.Rect(init_x, init_y, size_x, size_y)
-      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent.name, agent.summary,"")
+      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent, agent.name, agent.summary,"")
       self.HoverBox_agents[agent.name] = hover_box_player
 
 
@@ -603,7 +603,8 @@ class Game:
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
       threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.agents[voteId].name} voted to kick out {voteName} on {calendar.day} during the day phase",))
       threadObs.start()
-      votes[vote] += 1
+      if(self.agents[voteId].sheriff): votes[vote] += 2
+      else: votes[vote] += 1
       if prev is not None: self.agents[prev].isSpeaking = False
       self.agents[voteId].isSpeaking = True
       self.agents[voteId].msg = f"I vote to kick out {voteName}"
@@ -628,6 +629,11 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+
+      #If sheriff is kicked
+      if self.agents[kick].sheriff:
+         self.chooseSheriff()
+
       self.farewell = True
       self.killing = True
       self.elimination = self.names[kick]
@@ -1403,6 +1409,16 @@ class Game:
       self.draw_window()
       
       calendar.increment(self.VelFactor*Clock_Speed/FPS)
+
+
+  def chooseSheriff(self):
+    townfolks = []
+    for i, agent in enumerate(self.agents):
+
+      if self.alive[i] and agent.werewolf == False:
+          townfolks.append(agent)
+    sheriff = random.choice(townfolks)
+    sheriff.sheriff = True
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:

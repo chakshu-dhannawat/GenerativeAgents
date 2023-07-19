@@ -12,6 +12,7 @@ import random
 import math
 import emoji
 import time
+
 from Generate_voiceover import generate_voiceover
 
 class Agent():
@@ -32,6 +33,8 @@ class Agent():
     self.hub = None
     self.plan = None
     self.board = False
+
+    self.sheriff = False
     if "werewolf" in summary:
       self.werewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -376,6 +379,8 @@ class Agent():
               self.walkCount += 1
       else:
           self.win.blit(self.char, (int(self.x), int(self.y)))
+      if self.sheriff:
+         self.win.blit(sheriff_badge, (int(self.x-15), int(self.y-15)))
 
   # def move(self,VelFactor):
   #     if(self.sleeping): return

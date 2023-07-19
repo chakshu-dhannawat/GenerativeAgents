@@ -59,7 +59,7 @@ log('\n=======Initializing Game=======\n')
 
 game = Game(agents)
 
-
+game.chooseSheriff()
 
 
 
