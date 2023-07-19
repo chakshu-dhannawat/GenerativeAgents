@@ -629,6 +629,11 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+
+      #If sheriff is kicked
+      if self.agents[kick].sheriff:
+         self.chooseSheriff()
+
       self.farewell = True
       self.killing = True
       self.elimination = self.names[kick]
@@ -1412,8 +1417,9 @@ class Game:
 
   def chooseSheriff(self):
     townfolks = []
-    for agent in self.agents:
-      if agent.werewolf == False:
+    for i, agent in enumerate(self.agents):
+
+      if self.alive[i] and agent.werewolf == False:
           townfolks.append(agent)
     sheriff = random.choice(townfolks)
     sheriff.sheriff = True
