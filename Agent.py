@@ -241,7 +241,10 @@ class Agent():
   def nextLocation(self,now,game):
     # self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
     # move agent to tavern in start of afternoon phase
-    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
+    try: 
+      locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[timeKey(now)],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
+    except:
+      locationName = random.choice(hubs) 
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
     if(newLocation=="Tavern"): newLocation = random.choice(hubs)
@@ -253,10 +256,16 @@ class Agent():
     # print(self.name,tasksList,self.werewolf)
     if(len(tasksList)==0):
        self.task = None
-       self.dest = newLocation
+       self.dest = 'Hut 1 Intermediate03'
        log(f"No Tasks at {newLocation}")
        return
-    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False,name='QUERY_TASK'))
+    try: 
+      taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[timeKey(now)],self.name,tasks),remember=False,name='QUERY_TASK'))
+    except:
+      self.task = None
+      self.dest = 'Hut 1 Intermediate03'
+      log(f"{self.name} could not choose a Task at {newLocation}")
+      return 
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
     # game.taskOccupied[newLocation][taskSr-1] = True
@@ -571,6 +580,7 @@ class Agent():
                self.dest = self.task
             
             if(not self.taskReach and self.destination==self.task): 
+              if("Sleeping" in self.task): return
               self.taskReach = True
               taskCompleted[self.task] = True
               if("Bucket_Sabotage" in TASK_EMOJI_MAP[self.task]): 
@@ -596,11 +606,12 @@ class Agent():
               elif(not self.werewolf): self.game.tasksDone += 1
 
             if(self.dest is None):
-              self.choose_random_location()
-              # pass
+              # self.choose_random_location()
+              pass
               
-            elif(self.dest != "Stop"):
+            elif(self.dest != "Stop" and self.dest != self.destination):
               self.choose_location(self.dest)
+              if(self.dest is not None and self.task is not None and self.dest==self.task): self.printPath()
 
             if(self.sleepSoon and self.location_name in SLEEPING_NODES):
               self.sleepSoon = False
@@ -676,6 +687,12 @@ class Agent():
       self.task = self.dest
       self.sleepSoon = True
 
+  def printPath(self):
+      pathString = f"{self.name} : "
+      for path in self.destination_path:
+        pathString += f"{path} > "
+      print(pathString)
+
   def tavern(self,point):
       (x,y) = point
       closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
@@ -742,6 +759,8 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
+
+    if(self.is_travelling): return
 
     #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
     #EMOJI = {'Eat': eat_emoji }

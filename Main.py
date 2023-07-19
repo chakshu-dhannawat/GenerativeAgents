@@ -43,10 +43,10 @@ class getAgents():
         thread.join()  
     return self.agents 
 
-# agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
+
 agents = getAgents().get()
-
-
+if(None in agents):
+  agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
 
 
 
@@ -104,7 +104,7 @@ def game_logic():
     if(day==0): 
       log('\n======= Night Phase =======\n') 
       game.nightVote()
-    if(day==1):
+    if(day==1): 
       log('\n======= Morning Voting Phase =======\n')
       game.dayVote()
     if(day==2): 

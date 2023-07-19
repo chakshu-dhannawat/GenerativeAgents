@@ -73,15 +73,15 @@ class GPT:
       response = openai.ChatCompletion.create(
           engine="gpt-35-turbo",
           messages = self.messages,
-          temperature=0.7,
+          temperature=0.75,
           max_tokens=1000,
-          request_timeout=10+10*tries,
+          request_timeout=10+5*tries,
           top_p=0.95,
           frequency_penalty=0,
           presence_penalty=0,
           stop=None)
     except: 
-      if(tries>3):
+      if(tries>1):
         raise Exception(f"Query Timeout - {qry}")
       return self.query(qry,remember,tries+1,input_ts)
 

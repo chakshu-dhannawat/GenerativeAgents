@@ -50,6 +50,12 @@ def getNextDay(today):
     tomm = gpt.query("Today is Wednesday February 13, tomorrow is")
     return tomm[:-1]
 
+def timeKey(time_string):
+    time_parts = time_string.split(":")
+    hours = int(time_parts[0])
+    rest = time_parts[1]
+    return f"{hours}:{rest}"
+
 def printPlan(plan,name,day):
     # items = re.split(r'\d+\)', plan)
     # items = [item.strip() for item in items if item.strip()]

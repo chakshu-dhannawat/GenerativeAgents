@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-import os
-N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Townfolk')])
-print(N_Farewell_T)
+from Util import *
 
-for _, _, files in os.walk('Assets/Farewell/Townfolk'):
-    print(files)
-=======
->>>>>>> Stashed changes
+print(timeKey("10:00 PM"))

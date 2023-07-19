@@ -806,13 +806,9 @@ class Game:
     threadPlan.start()   
     planGen = False   
     first = True
-    hours = 0
     while True:
       if(calendar.dt.hour in [2,14]): break
-      if(calendar.dt.minute==0):
-        hours = hours+1
-      if(hours==2):
-        hours = 0
+      if(calendar.dt.minute==0 and calendar.dt.hour%2==0):
         now = calendar.time
         if(not planGen):
            threadPlan.join()
@@ -850,7 +846,7 @@ class Game:
         if(not self.alive[i]): continue
         for j in range(self.n):
           if(i==j or not self.alive[j]): continue
-          if(self.agents[i].dest == self.agents[j].dest):
+          if(self.agents[i].hub == self.agents[j].hub):
             if(self.agents[j].task is not None):
               if(self.agents[j].werewolf and not self.agents[i].werewolf and "Sabotage" in TASK_EMOJI_MAP[self.agents[j].task]):
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
