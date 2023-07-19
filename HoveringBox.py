@@ -86,7 +86,7 @@ class HoverTextBox:
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
       if(self.name == "Electricity House" or self.name =="Shrine" or self.name == "Hut 1"):
-        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x, y))
+        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x, y+50))
       elif(self.name == "Fishing Pond"):
         bubble_rect = scaled_bubble_image.get_rect(topleft=(x, y))
       else:
