@@ -806,9 +806,10 @@ class Game:
     threadPlan.start()   
     planGen = False   
     first = True
+    hours = 0
     while True:
-      if(calendar.dt.hour in [2,14]): break
-      hours = 0
+      if(calendar.dt.hour in [11]): break
+      
       if(calendar.dt.minute==0):
         hours = hours+1
       if(hours==2):
