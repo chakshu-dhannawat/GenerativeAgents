@@ -159,6 +159,11 @@ reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHou
 cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
 house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
 bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
+electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task1.png"), EMOJI_SIZE)
+electric_repairWiring = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task2.png"), EMOJI_SIZE)
+electric_resources = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task3.png"), EMOJI_SIZE)
+electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage_task.png"), EMOJI_SIZE)
+
 
 
 # Create a dictionary of emojis
@@ -189,7 +194,11 @@ EMOJI = {
             'Fence_Sabotage': fence_sabotage_emoji,
             'Reading_Books': reading2_emoji,
             'Sleeping': sleeping_emoji ,
-            'Cooking' : cooking_emoji
+            'Cooking' : cooking_emoji,
+            'Electric Maintain': electric_maintain,
+            'Electric Repairing': electric_repairWiring,
+            'Electric Resources': electric_resources,
+            'Electric_Sabotage':electric_sabotage
         }
 
 
@@ -1370,12 +1379,14 @@ class Game:
   def check_agent_in_popup(self):
      for agent in self.agents:
         if agent.destination == "Hut 1 Main":
+          self.exit_agent_popup(agent, 'Hut 1 Main')
           agent.inPopup_house1 = True
         if agent.destination == "Hut 1":
           self.exit_agent_popup(agent, 'Hut 1')
           agent.inPopup_house1 = False
 
         if agent.destination == "Hut 2 Main":
+          self.exit_agent_popup(agent, 'Hut 2 Main')
           agent.inPopup_house2 = True
         if agent.destination == "Hut 2":
           self.exit_agent_popup(agent, 'Hut 2')
