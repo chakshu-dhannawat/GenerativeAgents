@@ -263,7 +263,10 @@ class Agent():
        log(f"No Tasks at {newLocation}")
        return
     try: 
+      if(self.werewolf): QUERY_TASK = QUERY_TASK_WEREWOLF
+      else: QUERY_TASK = QUERY_TASK_TOWNFOLK
       taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[timeKey(now)],self.name,tasks),remember=False,name='QUERY_TASK'))
+         
     except:
       self.task = None
       self.dest = 'Hut 1 Intermediate03'

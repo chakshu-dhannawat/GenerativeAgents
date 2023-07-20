@@ -356,7 +356,7 @@ Suggest the name of the location where {} will most likely go, given the current
 Format - <location_name>"""
 
 
-QUERY_TASK = """Currently the time is {}.
+QUERY_TASK_TOWNFOLK = """Currently the time is {}.
 
 Here is {}s' plan for {}: {}.
 
@@ -364,6 +364,22 @@ Give the serial number of the task {} is most likely to do given the current tim
 
 The list of available tasks -  
 {}
+
+Suggest exactly one task from the available tasks only
+
+Format - <sr number>"""
+
+QUERY_TASK_WEREWOLF = """Currently the time is {}.
+
+Here is {}s' plan for {}: {}.
+
+Give the serial number of the task {} is most likely to do given the current time.
+
+The list of available tasks -  
+{}
+
+You are a werewolf so you can choose sabotage tasks. If you sabotage tasks, then the taskbar progress of townfolks will decrease and if the taskbar progress is full then townfolks will win. But on the other hand, the townfolks will get suspicious of you if sabotage tasks and might vote you out.
+If you choose a normal task, then the taskbar progress will not increase.
 
 Suggest exactly one task from the available tasks only
 
