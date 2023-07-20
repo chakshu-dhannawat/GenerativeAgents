@@ -37,12 +37,12 @@ translator = Translator(to_lang='ja')
 Assests
 ====================
 '''
-
+sheriff_badge = pygame.transform.scale(pygame.image.load('Assets/sheriff_badge.png'), (40,40))
 font = pygame.font.SysFont('comicsans', 30, True)
 font2 = pygame.font.SysFont('consolas', 25, True)
 font3 = pygame.font.Font(None, 40)
 
-bg = pygame.image.load(Path+'town.png')
+bg = pygame.image.load(Path+'town_final_bg.png')
 
 bg_nodes = pygame.image.load(Path+'town_nodes_bg.jpg')
 # bg2 = pygame.image.load(Path+'killing.gif')
@@ -159,6 +159,11 @@ reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHou
 cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
 house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
 bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
+electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task1.png"), EMOJI_SIZE)
+electric_repairWiring = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task2.png"), EMOJI_SIZE)
+electric_resources = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task3.png"), EMOJI_SIZE)
+electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage_task.png"), EMOJI_SIZE)
+
 
 
 # Create a dictionary of emojis
@@ -189,7 +194,11 @@ EMOJI = {
             'Fence_Sabotage': fence_sabotage_emoji,
             'Reading_Books': reading2_emoji,
             'Sleeping': sleeping_emoji ,
-            'Cooking' : cooking_emoji
+            'Cooking' : cooking_emoji,
+            'Electric Maintain': electric_maintain,
+            'Electric Repairing': electric_repairWiring,
+            'Electric Resources': electric_resources,
+            'Electric_Sabotage':electric_sabotage
         }
 
 
@@ -336,7 +345,7 @@ class Game:
       init_x,init_y = agent.x,agent.y
       size_x, size_y = 50, 50
       player_rect = pygame.Rect(init_x, init_y, size_x, size_y)
-      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent.name, agent.summary,"")
+      hover_box_player = HoverTextBox_Agent(player_rect, font, (255, 255, 255), (0, 0, 255), agent, agent.name, agent.summary,"")
       self.HoverBox_agents[agent.name] = hover_box_player
 
 
@@ -603,7 +612,8 @@ class Game:
       log(f"{self.agents[voteId].name} voted to kick out {voteName}")
       threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.agents[voteId].name} voted to kick out {voteName} on {calendar.day} during the day phase",))
       threadObs.start()
-      votes[vote] += 1
+      if(self.agents[voteId].sheriff): votes[vote] += 2
+      else: votes[vote] += 1
       if prev is not None: self.agents[prev].isSpeaking = False
       self.agents[voteId].isSpeaking = True
       self.agents[voteId].msg = f"I vote to kick out {voteName}"
@@ -628,6 +638,11 @@ class Game:
       kick = votes.index(maxVotes)
       self.alive[kick] = 0
       self.kicked = self.names[kick]
+
+      #If sheriff is kicked
+      if self.agents[kick].sheriff:
+         self.chooseSheriff()
+
       self.farewell = True
       self.killing = True
       self.elimination = self.names[kick]
@@ -807,8 +822,8 @@ class Game:
     planGen = False   
     first = True
     while True:
-      if(calendar.dt.hour in [11]): break
-      if(calendar.dt.minute==0):
+      if(calendar.dt.hour in [2,14]): break
+      if(calendar.dt.minute==0 and calendar.dt.hour%2==0):
         now = calendar.time
         if(not planGen):
            threadPlan.join()
@@ -846,7 +861,7 @@ class Game:
         if(not self.alive[i]): continue
         for j in range(self.n):
           if(i==j or not self.alive[j]): continue
-          if(self.agents[i].dest == self.agents[j].dest):
+          if(self.agents[i].hub == self.agents[j].hub):
             if(self.agents[j].task is not None):
               if(self.agents[j].werewolf and not self.agents[i].werewolf and "Sabotage" in TASK_EMOJI_MAP[self.agents[j].task]):
                 self.agents[i].remember(f"{self.agents[i].name} saw {self.agents[j].name} doing a Sabotage Task - {nodes[self.agents[j].task]} at {calendar.time}") 
@@ -1213,7 +1228,7 @@ class Game:
      for key in self.HoverBox_agents:
         agent = self.agents[self.ids[key]]
         self.HoverBox_agents[key].update_position(agent.x, agent.y)
-        if self.planNow is not None:
+        if self.planNow is not None and agent.plan is not None:
           self.HoverBox_agents[key].plans = agent.nextHourPlan(self.planNow)
         
   def draw_fire(self):
@@ -1403,6 +1418,16 @@ class Game:
       self.draw_window()
       
       calendar.increment(self.VelFactor*Clock_Speed/FPS)
+
+
+  def chooseSheriff(self):
+    townfolks = []
+    for i, agent in enumerate(self.agents):
+
+      if self.alive[i] and agent.werewolf == False:
+          townfolks.append(agent)
+    sheriff = random.choice(townfolks)
+    sheriff.sheriff = True
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:

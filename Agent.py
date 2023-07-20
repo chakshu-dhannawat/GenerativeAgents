@@ -12,6 +12,7 @@ import random
 import math
 import emoji
 import time
+
 from Generate_voiceover import generate_voiceover
 
 class Agent():
@@ -30,6 +31,10 @@ class Agent():
     self.now = None
     self.busy = False
     self.hub = None
+    self.plan = None
+    self.board = False
+
+    self.sheriff = False
     if "werewolf" in summary:
       self.werewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -237,21 +242,33 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   def nextLocation(self,now,game):
-    locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[now],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
+    # self.destination_path = self.destination_path + town.shortestPath(self.location_name,"Tavern")
+    # move agent to tavern in start of afternoon phase
+    try: 
+      locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[timeKey(now)],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
+    except:
+      locationName = random.choice(hubs) 
     # locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,random.choice(list(self.plan.values())),self.name,getHubs()),remember=False)
     newLocation = extractHub(locationName)
     if(newLocation=="Tavern"): newLocation = random.choice(hubs)
     log(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to go to {newLocation} at {calendar.time}\n")
-    self.dest = newLocation
+    # self.dest = newLocation
     self.hub = newLocation
     tasks, tasksList = getTasks(newLocation,game,self.werewolf)
     # print(self.name,tasksList,self.werewolf)
     if(len(tasksList)==0):
        self.task = None
+       self.dest = 'Hut 1 Intermediate03'
        log(f"No Tasks at {newLocation}")
        return
-    taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[now],self.name,tasks),remember=False,name='QUERY_TASK'))
+    try: 
+      taskSr = extractImportance(self.brain.query(QUERY_TASK.format(now,self.name,now,self.plan[timeKey(now)],self.name,tasks),remember=False,name='QUERY_TASK'))
+    except:
+      self.task = None
+      self.dest = 'Hut 1 Intermediate03'
+      log(f"{self.name} could not choose a Task at {newLocation}")
+      return 
     # print(taskSr)
     # tasksList = [node for node in town.graph[newLocation] if "task" in node]
     # game.taskOccupied[newLocation][taskSr-1] = True
@@ -261,7 +278,9 @@ class Agent():
       newLocation = tasksList[0]
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
-    self.dest = newLocation
+    # self.dest = newLocation
+    self.dest = "List"
+    self.board = True
     self.task = newLocation
 
 
@@ -360,6 +379,8 @@ class Agent():
               self.walkCount += 1
       else:
           self.win.blit(self.char, (int(self.x), int(self.y)))
+      if self.sheriff:
+         self.win.blit(sheriff_badge, (int(self.x-15), int(self.y-15)))
 
   # def move(self,VelFactor):
   #     if(self.sleeping): return
@@ -559,20 +580,47 @@ class Agent():
           
           if len(self.destination_path)==0:
 
+            if(self.board and self.destination=="List"):
+               self.board = False 
+               self.dest = self.task
+            
             if(not self.taskReach and self.destination==self.task): 
+              # if("Sleeping" in self.task): return
               self.taskReach = True
-              if("Sabotage" in TASK_EMOJI_MAP[self.task]): self.game.tasksDone -= 1
-              elif(not self.werewolf): self.game.tasksDone += 1
+              taskCompleted[self.task] = True
+              if("Bucket_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Well task01", "Well task02"])
+                taskCompleted[location] = False
+            
+              elif("Fence_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Cattle Farm task01", "Cattle Farm task03", "Cattle Farm task04"])
+                taskCompleted[location] = False
+
+              elif("Broom_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Shrine task01", "Shrine task02", "Shrine task03"])
+                taskCompleted[location] = False
+                
+              elif("FishingPole_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Fishing Pond task02", "Fishing Pond task03", "Fishing Pond task04"])
+                taskCompleted[location] = False
+
+              elif(not self.werewolf and not "Sleeping" in self.task): self.game.tasksDone += 1
 
             if(self.dest is None):
-              self.choose_random_location()
-              # pass
+              # self.choose_random_location()
+              pass
               
-            elif(self.dest != "Stop"):
+            elif(self.dest != "Stop" and self.dest != self.destination):
               self.choose_location(self.dest)
+              # if(self.dest is not None and self.task is not None and self.dest==self.task): self.printPath()
 
             if(self.sleepSoon and self.location_name in SLEEPING_NODES):
               self.sleepSoon = False
+
               self.sleeping = True
 
           else:
@@ -641,7 +689,14 @@ class Agent():
   def sleep(self):
       self.destination_path = []
       self.dest = random.choice(SLEEPING_NODES)
+      self.task = self.dest
       self.sleepSoon = True
+
+  def printPath(self):
+      pathString = f"{self.name} : "
+      for path in self.destination_path:
+        pathString += f"{path} > "
+      print(pathString)
 
   def tavern(self,point):
       (x,y) = point
@@ -661,6 +716,7 @@ class Agent():
       x = self.x
       y = self.y
       bubble_image = pygame.image.load(Path+"speechbubble_png_blue.png")  # Replace "bubble.png" with the path to your predetermined image
+      bubble_image2 = pygame.image.load(Path+"onevoneelectricspeechbubble.png")
 
       # Render the text
       font_size = 22  # Desired font size
@@ -695,8 +751,12 @@ class Agent():
       # bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 - 50, bubble_width, bubble_height)
 
       # Blit the bubble image onto the surface
-      scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
-      bubble_rect = scaled_bubble_image.get_rect(bottomright=(x+bubble_width//4, y))
+      if(x<200):
+        scaled_bubble_image = pygame.transform.scale(bubble_image2, (bubble_width, bubble_height))
+        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x-bubble_width//4, y))
+      else:
+        scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
+        bubble_rect = scaled_bubble_image.get_rect(bottomright=(x+bubble_width//4, y))
       self.win.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
@@ -709,6 +769,9 @@ class Agent():
 
 
   def emoji_bubble(self, emoji):
+
+    if(self.is_travelling): return
+
     #eat_emoji = pygame.transform.scale(eat_emoji, EMOJI_SIZE)
     #EMOJI = {'Eat': eat_emoji }
 
@@ -720,7 +783,10 @@ class Agent():
     bubble_padding = 10
     bubble_width = emoji_surface.get_width() + bubble_padding * 2
     bubble_height = emoji_surface.get_height() + bubble_padding * 2
-    bubble_rect = pygame.Rect(x + bubble_width // 2 + 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    if(x > 1700):
+      bubble_rect = pygame.Rect(x - bubble_width // 2, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    else:
+      bubble_rect = pygame.Rect(x + bubble_width // 2 + 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
     # bubble_rect2 = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
     # Draw the bubble outline
@@ -733,8 +799,3 @@ class Agent():
     # Blit the emoji onto the bubble
     emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
     self.win.blit(emoji_surface, emoji_rect)
-
-
-
-  
-

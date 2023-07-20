@@ -9,7 +9,7 @@ from queue import Queue
 from HoveringBox import *
 
 try: 
-  with open("Logs\\logs.txt", 'w') as file: pass
+  with open("Logs/logs.txt", 'w') as file: pass
 except:
   os.makedirs("Logs", exist_ok=True)
 log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
@@ -43,10 +43,10 @@ class getAgents():
         thread.join()  
     return self.agents 
 
-# agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
+
 agents = getAgents().get()
-
-
+if(None in agents):
+  agents = [Agent(agent['name'],agent['description'],graphics[i]) for i,agent in enumerate(agentsDetails)]
 
 
 
@@ -59,7 +59,7 @@ log('\n=======Initializing Game=======\n')
 
 game = Game(agents)
 
-
+game.chooseSheriff()
 
 
 

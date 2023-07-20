@@ -131,10 +131,10 @@ def makeTown():
     town.addEdge("Intermediate04","Intermediate08"),
     town.addEdge("Intermediate04","Electricity House"),
     town.addEdge("Electricity House","Intermediate03"),
-    #town.addEdge("Electricity House","Electricity House task01"),
-    #town.addEdge("Electricity House task01","Electricity House task02"),
-    #town.addEdge("Electricity House task02","Electricity House task03"),
-    #town.addEdge("Electricity House task03","Electricity House task04"),
+    town.addEdge("Electricity House","Electricity House task01"),
+    town.addEdge("Electricity House task01","Electricity House task02"),
+    town.addEdge("Electricity House task02","Electricity House task03"),
+    town.addEdge("Electricity House task03","Electricity House task04"),
     town.addEdge("Shrine","Shrine task02"),
     town.addEdge("Shrine task01","Shrine task02"),
     town.addEdge("Shrine","Shrine task03"),
@@ -204,6 +204,7 @@ def makeTown():
     town.addEdge("Hut 2 Main","Hut 2 Intermediate06"),
     town.addEdge("Hut 2 Intermediate07","Hut 2 Intermediate06"),
     town.addEdge("Hut 2 task04","Hut 2 Intermediate07"),
+    town.addEdge("Intermediate02","List"),
     return town
 
 town = makeTown()
