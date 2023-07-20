@@ -156,10 +156,10 @@ reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHou
 cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
 house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
 bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
-electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task1.png"), EMOJI_SIZE)
+electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electricRepair.png"), EMOJI_SIZE)
 electric_repairWiring = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task2.png"), EMOJI_SIZE)
 electric_resources = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task3.png"), EMOJI_SIZE)
-electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage_task.png"), EMOJI_SIZE)
+electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage.png"), EMOJI_SIZE)
 
 
 
