@@ -204,6 +204,7 @@ def makeTown():
     town.addEdge("Hut 2 Main","Hut 2 Intermediate06"),
     town.addEdge("Hut 2 Intermediate07","Hut 2 Intermediate06"),
     town.addEdge("Hut 2 task04","Hut 2 Intermediate07"),
+    town.addEdge("Intermediate02","List"),
     return town
 
 town = makeTown()

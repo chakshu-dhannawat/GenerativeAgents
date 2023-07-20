@@ -279,7 +279,7 @@ class Agent():
     log(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     self.remember(f"\n{self.name} chose to do the task : {newLocation} at {calendar.time}\n")
     # self.dest = newLocation
-    self.dest = "Tavern"
+    self.dest = "List"
     self.board = True
     self.task = newLocation
 
@@ -580,7 +580,7 @@ class Agent():
           
           if len(self.destination_path)==0:
 
-            if(self.board and self.destination=="Tavern"):
+            if(self.board and self.destination=="List"):
                self.board = False 
                self.dest = self.task
             
@@ -778,7 +778,10 @@ class Agent():
     bubble_padding = 10
     bubble_width = emoji_surface.get_width() + bubble_padding * 2
     bubble_height = emoji_surface.get_height() + bubble_padding * 2
-    bubble_rect = pygame.Rect(x + bubble_width // 2 + 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    if(x > 1700):
+      bubble_rect = pygame.Rect(x - bubble_width // 2, y - bubble_height // 2 - 30, bubble_width, bubble_height)
+    else:
+      bubble_rect = pygame.Rect(x + bubble_width // 2 + 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
     # bubble_rect2 = pygame.Rect(x - bubble_width // 2 - 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
     # Draw the bubble outline
