@@ -585,7 +585,7 @@ class Agent():
                self.dest = self.task
             
             if(not self.taskReach and self.destination==self.task): 
-              if("Sleeping" in self.task): return
+              # if("Sleeping" in self.task): return
               self.taskReach = True
               taskCompleted[self.task] = True
               if("Bucket_Sabotage" in TASK_EMOJI_MAP[self.task]): 
@@ -608,7 +608,7 @@ class Agent():
                 location = random.choice(["Fishing Pond task02", "Fishing Pond task03", "Fishing Pond task04"])
                 taskCompleted[location] = False
 
-              elif(not self.werewolf): self.game.tasksDone += 1
+              elif(not self.werewolf and not "Sleeping" in self.task): self.game.tasksDone += 1
 
             if(self.dest is None):
               # self.choose_random_location()
