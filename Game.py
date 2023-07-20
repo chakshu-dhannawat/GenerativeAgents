@@ -22,9 +22,6 @@ from translate import Translator
 import pyautogui
 from HoveringBox import *
 
-
-pygame.font.init()
-pygame.init()
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
 speed = FPS*0.6
@@ -211,7 +208,7 @@ Werewolves Game
 
 class Game:
 
-  def __init__(self, agents):
+  def __init__(self, agents, window):
 
     self.names = [agent.name for agent in agents]
     self.ids = {}
@@ -261,7 +258,8 @@ class Game:
     self.bgId = -1
     self.VelFactor = 1
     self.planNow = None
-    self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
+    # self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
+    self.win = window
     pygame.display.set_caption("Werewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
@@ -284,7 +282,7 @@ class Game:
     self.start_phase = pygame.transform.scale(start_phase, DEFAULT_IMAGE_SIZE)
     self.end_phase = pygame.transform.scale(game_end, DEFAULT_IMAGE_SIZE)
     self.day_phase_show = False
-    self.day_phase_japanese_show = False
+    self.day_phase_japanese_show = True
     self.night_phase_show = False
     self.night_phase_japanese_show = False
     self.voting_phase_show = False
@@ -293,7 +291,7 @@ class Game:
     self.townfolks_win_japanese_show = False
     self.werewolves_win_show = False
     self.werewolves_win_japanese_show = False
-    self.start_phase_show = True
+    self.start_phase_show = False
     self.end_phase_show = False
     self.nobodyLynch = False
 
