@@ -616,7 +616,7 @@ class Agent():
               
             elif(self.dest != "Stop" and self.dest != self.destination):
               self.choose_location(self.dest)
-              if(self.dest is not None and self.task is not None and self.dest==self.task): self.printPath()
+              # if(self.dest is not None and self.task is not None and self.dest==self.task): self.printPath()
 
             if(self.sleepSoon and self.location_name in SLEEPING_NODES):
               self.sleepSoon = False

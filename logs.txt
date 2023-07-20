@@ -22592,3 +22592,1666 @@ Retrieved Memories-
 Mana Yoshida: I think Riku Mori is too smart for our good. We should vote him out.
 Yumi Okada: I agree with Mana. Riku's silence is suspicious. Let's vote him out.
 Mana Yoshida: I think we should kick out Hina Sato. Her analytical skills are dangerous for us werewolves.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/19/2023, 14:59:15
+
+=======Initializing Agents=======
+
+Hina Sato's Strategy for Thursday July 19 -
+
+1) Observe the behavior of players and note any inconsistencies or suspicious actions.
+2) Use logic to analyze the voting patterns and narrow down the list of potential werewolves.
+3) Collaborate with other townfolks to share information and make informed decisions during discussions and voting.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Thursday July 19 -
+
+1) Observe and analyze the behavior of each player to identify any suspicious activity.
+2) Build alliances with other townfolks to increase chances of identifying werewolves.
+3) Use persuasive skills during discussions to convince others to vote out suspected werewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Thursday July 19 -
+
+1) Observe and listen carefully to everyone's arguments and voting patterns to identify potential werewolves.
+2) Collaborate with other townfolks and form alliances to increase chances of identifying and kicking out werewolves.
+3) Prioritize completing tasks to ensure the townfolks win even if all werewolves are not identified and kicked out.
+
+-----------------------
+
+
+Riku Mori's Strategy for Thursday July 19 -
+
+1) Observe and note down suspicious behaviors of all players, especially during the night phase.
+2) Collaborate with other townfolks to discuss and share information to identify and vote out werewolves.
+3) Prioritize completing tasks to ensure a Townfolk victory, while being cautious of werewolf sabotage.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Thursday July 19 -
+
+Taichi Kato scratches his head, trying to come up with a strategy to identify and kick out all the werewolves in the village.
+
+1) Observe and listen to conversations for hints on suspicious behavior and voting patterns.
+2) Collaborate with other townfolks to narrow down the possible werewolves and vote them out.
+3) Complete tasks efficiently to win the game before the werewolves can sabotage them.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Thursday July 19 -
+
+1) Act friendly, build trust, and accuse others to mislead the townfolks.
+2) Sabotage the townfolks' tasks, but blame it on other townfolks to create conflicts.
+3) Vote with the majority, but switch sides when necessary to avoid being identified as a werewolf.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Thursday July 19 -
+
+1) Act like a helpful electrician and offer to fix the townfolks' electrical problems to gain their trust.
+2) Sabotage tasks during the night and blame it on other players to create suspicion and confusion.
+3) Vote to kick out townfolks who seem close to identifying werewolves and defend other werewolves to stay under the radar.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Riku Mori's Plan for Thursday July 19 -
+
+10:00 AM : Take a break for lunch. 
+11:00 AM : Head to the well to draw water and clean it. 
+12:00 PM : Offer rituals and light candles at the Shrine. 
+1:00 PM : Head to the Fishing Pond to catch fish and repair fishing equipment. 
+2:00 PM : Repair fences at the cattle farm and clean the Shrine. 
+3:00 PM : End the day by completing any pending tasks and rest for tomorrow.
+4:00 PM : Visit Hut 1 to read books and improve deduction skills. 
+5:00 PM : Visit the cattle farm to feed the animals and milk the cows. 
+6:00 PM : Visit Hut 2 to cook and collaborate with other townfolks. 
+
+.....................
+
+
+Mana Yoshida's Plan for Thursday July 19 -
+
+10:00 AM : Go to the Cattle Farm and sabotage task 02.
+11:00 AM : Take a break and observe other players' actions.
+12:00 PM : Offer to fix the electrical system in Hut 2 and sabotage task 01.
+1:00 PM : Go to the Shrine and sabotage task 01.
+2:00 PM : Go to the Well and sabotage task 02.
+3:00 PM : Offer to fix the electrical system in Hut 1 and sabotage task 04.
+4:00 PM : Take a break and observe other players' actions.
+5:00 PM : Take a break and observe other players' actions.
+6:00 PM : Go to the Fishing Pond and sabotage task 02.
+
+.....................
+
+
+Taichi Kato's Plan for Thursday July 19 -
+
+10:00 AM : Feed the animals and milk the cows and chickens.
+11:00 AM : Cook dinner at Hut 1 or Hut 2.
+12:00 PM : Draw water from the well and clean it.
+1:00 PM : Offer rituals at the shrine and light candles.
+2:00 PM : Repair the fences at the cattle farm.
+3:00 PM : Maintain and repair fishing equipment.
+4:00 PM : Catch fish at the fishing pond.
+5:00 PM : Read books at Hut 1 or Hut 2.
+6:00 PM : Clean and prepare the fish for cooking.
+
+.....................
+
+
+Hina Sato's Plan for Thursday July 19 -
+
+10:00 AM : Read books at Hut 2 and help with cooking dinner.
+11:00 AM : End the day by offering prayers at the Shrine and drawing water from the well.
+12:00 PM : Read books at Hut 1 and help with cooking lunch.
+1:00 PM : Offer rituals at the Shrine and light candles.
+2:00 PM : Start the day by offering prayers at the Shrine and drawing water from the well.
+3:00 PM : Feed the animals at the Cattle Farm and repair the fences.
+4:00 PM : Clean the well and maintain fishing equipment at the Fishing Pond.
+5:00 PM : Catch fish at the Fishing Pond and clean them for cooking.
+6:00 PM : Milk cows and collect eggs from chickens at the Cattle Farm and repair any damages.
+
+.....................
+
+
+Yuria Shimizu's Plan for Thursday July 19 -
+
+10:00 AM : Read books at Hut 1 and build alliances with other townfolks.
+11:00 AM : Attend the Shrine for meditation and spiritual solace before bedtime.
+12:00 PM : Continue building alliances and discuss suspicious activities with other townfolks.
+1:00 PM : Start the day with milking cows and collecting eggs at the Cattle Farm.
+2:00 PM : Catch fish at the Fishing Pond and cook lunch at Hut 1.
+3:00 PM : Offer rituals and light candles at the Shrine.
+4:00 PM : Repair fences at the Cattle Farm and build an alliance with other farmers.
+5:00 PM : Cook dinner at Hut 2 and continue analyzing player behavior.
+6:00 PM : Draw water from the well and clean the well at the Well.
+
+.....................
+
+
+Yumi Okada's Plan for Thursday July 19 -
+
+10:00 AM : Attend the werewolves meeting and discuss the next target.
+11:00 AM : Take a break and go to the Shrine to offer rituals and gain trust.
+12:00 PM : Go to Hut 2 and pretend to read books while sabotaging the cooking task.
+1:00 PM : Move to the Fishing Pond and act like you are trying to catch fish while actually sabotaging the fishing rod.
+2:00 PM : Head to the Well and sabotage the drawing water task while pretending to clean it.
+3:00 PM : Move to Cattle Farm and sabotage the feeding task while pretending to do it.
+4:00 PM : Go to the Well and sabotage the cleaning task while pretending to draw water.
+5:00 PM : Head to the Cattle Farm and start sabotaging the fences task while pretending to repair them.
+6:00 PM : Head to Hut 1 and pretend to read books while sabotaging the cooking task.
+
+.....................
+
+
+Yuka Suzuki's Plan for Thursday July 19 -
+
+10:00 AM : Read a book (Hut 1 task01), then draw water from the well (Well task01).
+11:00 AM : Read a book (Hut 1 task01), then offer rituals at the Shrine (Shrine task01).
+12:00 PM : Catch fish (Fishing Pond task02), then clean and prepare the fish for cooking (Fishing Pond task03).
+1:00 PM : Milk the cows and collect eggs (Cattle Farm task03), then maintain fishing equipment (Fishing Pond task04).
+2:00 PM : Light candles at the Shrine (Shrine task03), then read a book (Hut 2 task01).
+3:00 PM : Cook lunch (Hut 1 task04), then repair the fences (Cattle Farm task04).
+4:00 PM : Cook dinner (Hut 2 task04), then clean and maintain the Shrine (Shrine task02).
+5:00 PM : End of day. Rest and prepare for the next day's tasks.
+6:00 PM : Clean the well (Well task02), then feed the animals (Cattle Farm task01).
+
+.....................
+
+
+
+Yuka Suzuki chose to go to Hut 1 at 10:01 AM
+
+
+Hina Sato chose to go to Hut 2 at 10:01 AM
+
+
+Yuria Shimizu chose to go to Hut 1 at 10:01 AM
+
+
+Yumi Okada chose to go to Cattle Farm at 10:01 AM
+
+
+Taichi Kato chose to go to Cattle Farm at 10:02 AM
+
+
+Yuka Suzuki chose to do the task : Hut 1 task01 at 10:02 AM
+
+
+Hina Sato chose to do the task : Hut 2 task04 at 10:02 AM
+
+
+Yuria Shimizu chose to do the task : Hut 1 task01 at 10:02 AM
+
+
+Riku Mori chose to go to Well at 10:03 AM
+
+
+Taichi Kato chose to do the task : Cattle Farm task03 at 10:03 AM
+
+
+Mana Yoshida chose to go to Hut 1 at 10:03 AM
+
+
+Yumi Okada chose to do the task : Cattle Farm task04 at 10:03 AM
+
+
+Mana Yoshida chose to do the task : Hut 1 task04 at 10:05 AM
+
+
+Riku Mori chose to do the task : Well task02 at 10:16 AM
+
+Query -
+What is Yuka Suzuki's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuka Suzuki saw Mana Yoshida Cooking at 10:16 AM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Taichi Kato's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) Taichi Kato chose to go to Cattle Farm at 10:02 AM
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuka Suzuki: townfolk
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Yumi Okada: werewolf
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yumi Okada saw Taichi Kato Milking the cows and collecting eggs from the chickens. at 10:16 AM
+3) Yuria Shimizu: townfolk
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Yumi Okada: "Hey Taichi, have you seen Yuka and Yuria around? They were supposed to help me with the fences but haven't shown up yet."
+Taichi Kato: "No, I haven't seen them around. Maybe they're running late."
+Yumi Okada: "That's strange, they're usually punctual. Oh well, I'll just have to do it myself then."
+Taichi Kato: "I hope you can manage it alone. I need to finish up here before lunchtime."
+Yuka Suzuki: Hey, Mana! I saw you cooking earlier this morning. What were you making? It smelled delicious!
+Yumi Okada: "Thanks for letting me know. I hope they show up soon. Anyway, I gotta finish up these fences. Catch you later."
+Mana Yoshida: I made some rice and vegetable stir-fry. It's my go-to meal when I don't have much time.
+Taichi Kato: "I hope they show up soon. It's always better to have more help with the fences."
+
+End of Conversation
+Yuka Suzuki: That sounds really healthy! Do you have any other quick and easy recipes that you like to make?
+Mana Yoshida: Yes, I have a few more recipes that I like to make. But, I'm not sure if I can share them with you. They are family secrets, you know.
+Yuka Suzuki: I struggle to come up with quick meal ideas. Maybe you could teach me some of your cooking tips sometime?
+Mana Yoshida: Yeah, I have a few other recipes that I like to make. But I'll have to share them with you some other time. I need to head out for work now. See you later!
+
+End of Conversation
+
+Riku Mori chose to go to Shrine at 12:01 PM
+
+
+Yumi Okada chose to go to Hut 2 at 12:02 PM
+
+
+Hina Sato chose to go to Hut 1 at 12:02 PM
+
+
+Yuria Shimizu chose to go to Cattle Farm at 12:02 PM
+
+
+Yuka Suzuki chose to go to Fishing Pond at 12:02 PM
+
+
+Taichi Kato chose to go to Well at 12:03 PM
+
+
+Riku Mori chose to do the task : Shrine task03 at 12:03 PM
+
+
+Yumi Okada chose to do the task : Hut 2 task04 at 12:03 PM
+
+
+Mana Yoshida chose to go to Hut 2 at 12:03 PM
+
+
+Yuka Suzuki chose to do the task : Fishing Pond task03 at 12:05 PM
+
+
+Taichi Kato chose to do the task : Well task01 at 12:05 PM
+
+
+Yuria Shimizu chose to do the task : Cattle Farm task04 at 12:05 PM
+
+
+Hina Sato chose to do the task : Hut 1 task04 at 12:05 PM
+
+
+Mana Yoshida chose to do the task : Hut 2 task01 at 12:05 PM
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Reading Books at 12:06 PM
+2) Yumi Okada: werewolf
+3) Yumi Okada saw Taichi Kato Milking the cows and collecting eggs from the chickens. at 10:16 AM
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yumi Okada: "Hey Taichi, have you seen Yuka and Yuria around? They were supposed to help me with the fences but haven't shown up yet."
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/20/2023, 09:22:43
+
+=======Initializing Agents=======
+
+Yuria Shimizu's Strategy for Friday July 20 -
+
+1) Observe behavior and voting patterns to identify suspicious individuals.
+2) Build alliances and trust with other townfolks to increase chances of successful voting.
+3) Strategize and prioritize completing tasks to prevent werewolf sabotage and gain townfolks' trust.
+
+-----------------------
+
+
+Riku Mori's Strategy for Friday July 20 -
+
+1) Observe voting patterns and note suspicious behavior to identify potential werewolves.
+2) Collaborate with trusted townfolks and form alliances to gain more information and support.
+3) Deduce the identity of werewolves based on task sabotage and behavior during discussions and voting.
+
+-----------------------
+
+
+Hina Sato's Strategy for Friday July 20 -
+
+1) Observe and analyze voting patterns to identify potential werewolves.
+2) Build alliances with trusted townfolks to gain their support in voting out suspicious individuals.
+3) Complete tasks efficiently and observe which individuals are not contributing or are sabotaging, they may be werewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 20 -
+
+As Yuka Suzuki, my strategy to win as a Townfolk in the game of werewolves is as follows:
+
+1) Observe and listen carefully to everyone's arguments and opinions during the day to identify any inconsistencies or suspicious behavior.
+2) Collaborate with other Townfolks to narrow down the list of potential werewolves and vote to kick them out during the day.
+3) Ensure the completion of tasks and communicate with others to avoid any sabotage attempts by the werewolves.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 20 -
+
+As Taichi Kato, I would like to point out that due to my lack of intelligence, my strategies might not be the most effective, but here are three ways I would try to win as a Townfolk:
+
+1) Listen carefully to the discussion during the day and observe everyone's behavior. Suspect those who are too defensive or too quiet.
+2) Try to complete tasks as soon as possible to ensure the progress of the town. Keep an eye out for any sabotages by the werewolves.
+3) If I am suspicious of someone, gather evidence and present it to the group. But be careful not to reveal too much information and become a target for the werewolves.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 20 -
+
+1) Act as a helpful electrician to gain trust, while subtly sabotaging tasks to delay the townfolks' progress.
+2) Frame other werewolves, create chaos and suspicion among townfolks to deflect attention from myself.
+3) Use my werewolf knowledge to manipulate the werewolf vote and eliminate townfolks strategically. Bluff when necessary.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 20 -
+
+1) Act as a trustworthy townfolk farmer and always help with tasks to gain their trust.
+2) Bluff and frame innocent townfolks as werewolves, leading to their elimination.
+3) Secretly sabotage tasks while appearing to work on them, causing delays and mistrust among the townfolks.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuria Shimizu's Plan for Friday July 20 -
+
+10:00 AM : Build alliances with other townfolks.
+11:00 AM : Complete Cattle Farm task01 - Feeding the animals.
+12:00 PM : Complete Fishing Pond task02 - Catching fish.
+1:00 PM : Work on Cattle Farm task04 - Repairing the fences.
+2:00 PM : Attend Shrine task03 - Lighting candles and offering prayers.
+3:00 PM : Work on Cattle Farm task03 - Milking cows and collecting eggs.
+4:00 PM : Complete Hut 1 task04 - Cooking.
+5:00 PM : Head to Well and complete Well task01 - Drawing water.
+6:00 PM : Complete Shrine task02 - Cleaning and Maintenance.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 20 -
+
+10:00 AM : Finish the day with Fishing Pond task 04 - Maintaining the fishing equipment and repairing any damages.
+11:00 AM : Head to Well task 02 - Cleaning the well.
+12:00 PM : Go to Fishing Pond task 02 - Catching fish.
+1:00 PM : Work on Hut 1 task 04 - Cooking.
+2:00 PM : Continue with Cattle Farm task 03 - Milking the cows and collecting eggs from the chickens.
+3:00 PM : Take a break and have lunch.
+4:00 PM : Move to Cattle Farm task 01 - Feeding the animals.
+5:00 PM : Start with Hut 1 task 01 - Reading Books.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 20 -
+
+10:00 AM : Go to Hut 1 and perform task04 to cook food.
+11:00 AM : Visit the Fishing Pond and perform task02 to catch fish.
+12:00 PM : Visit the Shrine and perform task02 to clean and maintain the Shrine.
+1:00 PM : Visit the Well and perform task02 to clean the well.
+2:00 PM : Visit the Shrine and perform task01 to offer rituals.
+3:00 PM : Visit Hut 1 and perform task01 to read books.
+4:00 PM : Go to the Cattle Farm and perform task01 to feed the animals.
+5:00 PM : Visit the Cattle Farm and perform task04 to repair the fences.
+6:00 PM : Go to Hut 2 and perform task01 to read books.
+
+.....................
+
+
+Yuka Suzuki's Plan for Friday July 20 -
+
+10:00 AM : Take a break and read some books in Hut 1.
+11:00 AM : Clean and maintain the Shrine, offer rituals, and light candles.
+12:00 PM : Start the day by drawing water from the well and feeding the animals at the Cattle Farm.
+1:00 PM : Go fishing at the Fishing Pond and catch some fish.
+2:00 PM : Clean and prepare the fish for cooking and repair any fishing equipment.
+3:00 PM : Cook lunch in Hut 1 and distribute it among the townfolks.
+4:00 PM : Clean the well and maintain it before retiring for the day.
+5:00 PM : Cook dinner in Hut 2 and distribute it among the townfolks.
+6:00 PM : Repair the fences at the Cattle Farm and collect eggs from the chickens.
+
+.....................
+
+
+Mana Yoshida's Plan for Friday July 20 -
+
+10:00 AM : Take Shrine task 01 - Offering rituals. Mix up the items and make it look like a mistake.
+11:00 AM : Take Cattle Farm task 04 - Repairing the fences. Do not repair it properly.
+12:00 PM : Take Well task 03 - Doing hole in the bucket. Make a big hole and blame it on another townfolk.
+1:00 PM : Take Cattle Farm task 01 - Feeding animals. Overfeed the animals to make them sleepy.
+2:00 PM : Take Shrine task 04 - Break the broomstick. Break it and blame it on another townfolk.
+3:00 PM : Take Hut 1 task 04 - Cooking. Sabotage the dish by adding too much salt.
+4:00 PM : Take Fishing Pond task 02 - Catching fish. Let the fish go after catching them.
+5:00 PM : Take Well task 01 - Drawing water. Delay the task by loosening the rope.
+6:00 PM : Take Hut 2 task 01 - Reading books. Hide the book.
+
+.....................
+
+
+Hina Sato's Plan for Friday July 20 -
+
+10:00 AM : Complete Well task01- Draw water and observe other individuals in the area.
+11:00 AM : Complete Hut 1 task01- Read books and note down any suspicious activities around.
+12:00 PM : Complete Fishing Pond task02- Catch fish and interact with others for information.
+1:00 PM : Cook food for Hut 1 task04 and discuss the voting patterns with trusted townfolks.
+2:00 PM : Attend the town meeting and discuss any suspicious activities observed throughout the day.
+3:00 PM : Offer rituals at the Shrine and observe others' behavior in the area.
+4:00 PM : Complete Cattle Farm task01- Feed animals and keep an eye on suspicious individuals.
+5:00 PM : Complete Hut 2 task01- Read books and analyze the day's events for possible werewolves.
+6:00 PM : Complete Shrine task03- Light candles and discuss voting strategies with trusted townfolks.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 20 -
+
+10:00 AM : Take a break and attend the town meeting, try to manipulate the discussion towards innocent townfolks.
+11:00 AM : Sabotage the Fishing Pond task 04, break the equipment and blame it on someone else.
+12:00 PM : Offer to help with the Cattle Farm tasks and subtly sabotage them.
+1:00 PM : Sabotage the Cattle Farm task 04, create a fake malfunction and blame it on someone else.
+2:00 PM : Start the day by offering help in the Shrine tasks to gain trust.
+3:00 PM : Attend the town meeting, try to convince others to vote out innocent townfolks.
+4:00 PM : Offer to help with Hut 1 and Hut 2 tasks, secretly sabotage them.
+5:00 PM : Sabotage the Well task 02, create a fake malfunction and blame it on someone else. 
+6:00 PM : Attend the town meeting, try to manipulate the discussion towards voting out innocent townfolks.
+
+.....................
+
+
+
+Yuka Suzuki chose to go to Hut 1 at 10:02 AM
+
+
+Mana Yoshida chose to go to Shrine at 10:02 AM
+
+
+Yumi Okada chose to go to Shrine at 10:03 AM
+
+
+Yuria Shimizu chose to go to Hut 1 at 10:03 AM
+
+
+Riku Mori chose to go to Hut 1 at 10:03 AM
+
+
+Hina Sato chose to go to Well at 10:03 AM
+
+
+Taichi Kato chose to go to Fishing Pond at 10:03 AM
+
+
+Mana Yoshida chose to do the task : Shrine task01 at 10:04 AM
+
+
+Yuka Suzuki chose to do the task : Hut 1 task04 at 10:04 AM
+
+
+Riku Mori chose to do the task : Hut 1 task01 at 10:04 AM
+
+
+Hina Sato chose to do the task : Well task01 at 10:04 AM
+
+
+Yumi Okada chose to do the task : Shrine task04 at 10:05 AM
+
+
+Yuria Shimizu chose to do the task : Hut 1 task04 at 10:05 AM
+
+
+Taichi Kato chose to do the task : Fishing Pond task04 at 10:06 AM
+
+Query -
+What is Riku Mori's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+
+Query -
+What is Yuka Suzuki's observations about Riku Mori
+Retrieved Memories-
+1) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Mana Yoshida's observations about Yumi Okada
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuria Shimizu: townfolk
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+2) Yumi Okada: werewolf
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuria Shimizu: townfolk
+5) Yumi Okada chose to go to Shrine at 10:03 AM
+
+Yumi Okada: "Hey, Mana. I saw you doing those rituals earlier. What was that all about?"
+Mana Yoshida: "Oh, just offering some blessings to the spirits of the town. You know how important it is to keep them on our side."
+Yumi Okada: "Interesting. I've never been one for rituals myself, but I suppose it can't hurt."
+Mana Yoshida: "Well, it's always good to have a little extra help on our side. You never know when we might need it."
+
+End of Conversation
+Yuka Suzuki: Hi Riku, I noticed you were reading books earlier. What are you reading? I'm preparing some fish for dinner tonight, do you have any tips on cooking it?
+Riku Mori: I'm reading a book on deductive reasoning. As for cooking fish, I recommend seasoning it with lemon and herbs.
+Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+Riku Mori: It's a type of logical reasoning where conclusions are inferred from premises and evidence.
+Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+Riku Mori: It's a type of logical reasoning that involves drawing conclusions from given premises. It can be helpful in identifying patterns and solving problems.
+
+End of Conversation
+
+Riku Mori chose to go to Shrine at 12:01 PM
+
+
+Yuria Shimizu chose to go to Fishing Pond at 12:02 PM
+
+
+Taichi Kato chose to go to Fishing Pond at 12:02 PM
+
+
+Mana Yoshida chose to go to Well at 12:02 PM
+
+
+Yumi Okada chose to go to Cattle Farm at 12:02 PM
+
+
+Hina Sato chose to go to Fishing Pond at 12:03 PM
+
+
+Yuka Suzuki chose to go to Well at 12:03 PM
+
+
+Riku Mori chose to do the task : Shrine task02 at 12:03 PM
+
+
+Yuria Shimizu chose to do the task : Fishing Pond task02 at 12:04 PM
+
+
+Mana Yoshida chose to do the task : Well task03 at 12:04 PM
+
+
+Yumi Okada chose to do the task : Cattle Farm task04 at 12:05 PM
+
+
+Hina Sato chose to do the task : Fishing Pond task02 at 12:05 PM
+
+
+Taichi Kato chose to do the task : Fishing Pond task02 at 12:05 PM
+
+
+Yuka Suzuki chose to do the task : Well task02 at 12:06 PM
+
+Query -
+What is Hina Sato's observations about Taichi Kato
+Retrieved Memories-
+1) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Taichi Kato: Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb.
+5) Hina Sato chose to go to Fishing Pond at 12:03 PM
+
+Query -
+What is Taichi Kato's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Taichi Kato chose to go to Fishing Pond at 12:02 PM
+
+Query -
+What is Yuka Suzuki's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+3) Yuka Suzuki saw Mana Yoshida doing a Sabotage Task - Doing hole in the bucket. at 12:07 PM
+4) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+5) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+
+Hina Sato: Hey Taichi, nice catch! How did you manage to catch such a big fish?
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuka Suzuki: townfolk
+5) Yumi Okada: "Hey, Mana. I saw you doing those rituals earlier. What was that all about?"
+
+Taichi Kato: Thank you! I used a new bait I found at the general store.
+Yuka Suzuki: "Hey Mana, I saw you making a hole in the bucket. Do you mind explaining why you did that? It can cause problems for the village's water supply."
+Mana Yoshida: "I am an electrician, Yuka. I was just checking the bucket for any electrical faults."
+Yuka Suzuki: "I understand that you are an electrician, Mana, but making a hole in the bucket isn't a part of your job. Please be more careful in the future."
+Mana Yoshida: "I apologize, Yuka. I'll make sure to be more careful in the future."
+Hina Sato: Interesting, what kind of bait was it?
+Yuka Suzuki: "I hope you understand the importance of maintaining the well, Mana. We all need to work together to ensure the village has a steady water supply."
+
+End of Conversation
+Mana Yoshida: "I apologize, Yuka. I didn't mean to cause any harm. I'll be more careful next time."
+
+End of Conversation
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+2) Yumi Okada: werewolf
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuka Suzuki: townfolk
+5) Yuria Shimizu: townfolk
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+2) Yumi Okada: werewolf
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+2) Yumi Okada: werewolf
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuria Shimizu: townfolk
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+2) Yumi Okada: werewolf
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuria Shimizu: townfolk
+5) Yumi Okada chose to go to Cattle Farm at 12:02 PM
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+3) Yuria Shimizu: townfolk
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: townfolk
+3) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yumi Okada chose to go to Shrine at 10:03 AM
+
+Query -
+What is Mana Yoshida's observations about Yumi Okada
+Retrieved Memories-
+1) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+2) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+3) Yumi Okada: werewolf
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuria Shimizu: townfolk
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Mana Yoshida's observations about Taichi Kato
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Mana Yoshida's observations about Yuria Shimizu
+Retrieved Memories-
+1) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+2) Yuria Shimizu: townfolk
+3) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+4) Yumi Okada: werewolf
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) Yuka Suzuki: "Hey Mana, I saw you making a hole in the bucket. Do you mind explaining why you did that? It can cause problems for the village's water supply."
+4) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Mana Yoshida's observations about Hina Sato
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Mana Yoshida: "I am an electrician, Yuka. I was just checking the bucket for any electrical faults."
+
+Mana Yoshida: "Yuka is a smart and diligent townfolk. I suggest we kick out Yuria, who could convince others to vote against us."
+Yumi Okada: "I agree with Mana. Yuria's silence is suspicious. Let's kick her out before she convinces others to suspect us."
+Mana Yoshida: "Yuka is a valuable asset to the town. Let's kick out Riku, who might have caught me sabotaging the water supply."
+Yumi Okada: "Riku is too smart for us. Let's kick out Yuka, who has already earned the trust of the townfolks."
+
+End of Conversation
+
+Conversation Rating - 3.8333333333333335
+Turn Taking Ratio - 1.0
+Response Relevance - ([0.5516236638839225, 0.4486560263378241, 0.6018650083684194, 0.659235919084584], 0.5653451544186875)
+Agreement Metric - 0.1884483848062292
+Yuka Suzuki has been killed by the Werewolves
+
+
+
+======= Morning Voting Phase =======
+
+Currently it is Day, the Villagers will lynch someone...
+
+Query -
+What is Yuria Shimizu's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+3) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+5) Yuria Shimizu chose to go to Fishing Pond at 12:02 PM
+
+Query -
+What is Yuria Shimizu's observations about Yumi Okada
+Retrieved Memories-
+1) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+2) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+3) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+5) Yuria Shimizu chose to go to Fishing Pond at 12:02 PM
+
+Query -
+What is Yuria Shimizu's observations about Taichi Kato
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+3) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yuria Shimizu's observations about Hina Sato
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+3) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yuria Shimizu's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+3) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Yuria Shimizu's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+2) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+3) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+5) Yuria Shimizu chose to go to Fishing Pond at 12:02 PM
+
+Query -
+What is Hina Sato's observations about Yuria Shimizu
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Hina Sato's observations about Riku Mori
+Retrieved Memories-
+1) Hina Sato: Interesting, what kind of bait was it?
+2) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+3) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) Hina Sato: Hey Taichi, nice catch! How did you manage to catch such a big fish?
+
+Query -
+What is Hina Sato's observations about Yumi Okada
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Hina Sato's observations about Taichi Kato
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) Hina Sato: Interesting, what kind of bait was it?
+
+Query -
+What is Hina Sato's observations about Yuka Suzuki
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Hina Sato: Interesting, what kind of bait was it?
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Hina Sato's observations about Mana Yoshida
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) Hina Sato: Interesting, what kind of bait was it?
+3) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Taichi Kato's observations about Mana Yoshida
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Taichi Kato's observations about Yuria Shimizu
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Yumi Okada
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+3) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+4) Hina Sato: Interesting, what kind of bait was it?
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Taichi Kato's observations about Riku Mori
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Hina Sato: Interesting, what kind of bait was it?
+
+Query -
+What is Taichi Kato's observations about Yuka Suzuki
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Riku Mori's observations about Mana Yoshida
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+5) Riku Mori: It's a type of logical reasoning where conclusions are inferred from premises and evidence.
+
+Query -
+What is Riku Mori's observations about Yuria Shimizu
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+
+Query -
+What is Riku Mori's observations about Hina Sato
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+
+Query -
+What is Riku Mori's observations about Yumi Okada
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+
+Query -
+What is Riku Mori's observations about Taichi Kato
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) Riku Mori: It's a type of logical reasoning where conclusions are inferred from premises and evidence.
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Riku Mori's observations about Yuka Suzuki
+Retrieved Memories-
+1) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+2) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: townfolk
+3) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) Yuria Shimizu: townfolk
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+3) Yuka Suzuki: townfolk
+4) Yuria Shimizu: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: townfolk
+3) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+4) Yuka Suzuki: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+2) Yumi Okada: werewolf
+3) Yuria Shimizu: townfolk
+4) Yuka Suzuki: townfolk
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yuria Shimizu: townfolk
+
+Query -
+What is Yuka Suzuki's observations about Riku Mori
+Retrieved Memories-
+1) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+2) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+3) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+4) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Yuka Suzuki's observations about Hina Sato
+Retrieved Memories-
+1) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+2) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yuka Suzuki saw Mana Yoshida doing a Sabotage Task - Doing hole in the bucket. at 12:07 PM
+
+Query -
+What is Yuka Suzuki's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+5) Yuka Suzuki saw Mana Yoshida doing a Sabotage Task - Doing hole in the bucket. at 12:07 PM
+
+Query -
+What is Yuka Suzuki's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) Yuka Suzuki saw Mana Yoshida doing a Sabotage Task - Doing hole in the bucket. at 12:07 PM
+5) Yuka Suzuki: That sounds complicated. Do you use deductive reasoning when you go fishing?
+
+Query -
+What is Yuka Suzuki's observations about Taichi Kato
+Retrieved Memories-
+1) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+2) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yuka Suzuki saw Mana Yoshida doing a Sabotage Task - Doing hole in the bucket. at 12:07 PM
+
+Query -
+What is Yuka Suzuki's observations about Yumi Okada
+Retrieved Memories-
+1) Yuka Suzuki saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuka Suzuki saw Riku Mori Reading Books at 10:07 AM
+3) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki saw Mana Yoshida doing a Sabotage Task - Doing hole in the bucket. at 12:07 PM
+
+Query -
+What is Mana Yoshida's observations about Yumi Okada
+Retrieved Memories-
+1) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+2) Yumi Okada: werewolf
+3) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+4) Yuria Shimizu: townfolk
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Mana Yoshida's observations about Hina Sato
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+3) Yuka Suzuki: townfolk
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Mana Yoshida's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yuria Shimizu: townfolk
+2) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+3) Yumi Okada: werewolf
+4) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+2) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+5) Yuka Suzuki: "Hey Mana, I saw you making a hole in the bucket. Do you mind explaining why you did that? It can cause problems for the village's water supply."
+
+Query -
+What is Mana Yoshida's observations about Taichi Kato
+Retrieved Memories-
+1) Mana Yoshida saw Yuka Suzuki Cleaning the well. at 12:07 PM
+2) Mana Yoshida saw Yumi Okada Break the broomstick. at 10:08 AM
+3) Yuria Shimizu: townfolk
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yuka Suzuki: townfolk
+
+Hina Sato: Yumi, have you been completing your tasks? We can't have any werewolf sabotage.
+Yumi Okada: "I suspect Riku. Hina, have you noticed anything suspicious? Let's kick out Riku to stay safe."
+Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+Hina Sato: Yumi, your suspicion of Riku is unfounded. I trust Taichi's judgment and he vouched for Riku's innocence.
+Mana Yoshida: "Riku, I saw you fishing all day yesterday. How did you finish your tasks? Let's kick out Riku."
+Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+
+End of Conversation
+
+Conversation Rating - 3.525
+Turn Taking Ratio - 0.9999999999999999
+Response Relevance - ([0.5121456327096463, 0.8691029016473453, 0.4492399222694259, 0.7332448219439618, 0.7498713045335055, 0.8791834183501757], 0.6987980002423434)
+Agreement Metric - 0.13975960004846869
+
+Yumi Okada voted to kick out Mana Yoshida
+Riku Mori voted to kick out Mana Yoshida
+Hina Sato voted to kick out Mana Yoshida
+Mana Yoshida voted to kick out Riku Mori
+Taichi Kato voted to kick out Mana Yoshida
+Yuria Shimizu voted to kick out Mana Yoshida
+
+Mana Yoshida has been lynched by the Villagers
+
+======= Day Tasks Phase =======
+
+Riku Mori's Plan for Saturday July 21 -
+
+10:00 AM : Offer rituals for Shrine task01.
+11:00 AM : Cook for Hut 1 task04.
+12:00 PM : Feed the animals for Cattle Farm task01.
+1:00 PM : Repair fences for Cattle Farm task04.
+2:00 PM : Clean and maintain Shrine for Shrine task02.
+3:00 PM : Read books for Hut 1 task01.
+4:00 PM : Draw water from the well for Well task01.
+5:00 PM : Catch fish for Fishing Pond task02.
+
+.....................
+
+
+Yuria Shimizu's Plan for Saturday July 21 -
+
+10:00 AM : Draw water from the well and clean it.
+11:00 AM : Collect eggs from the chickens at the Cattle Farm and offer them at the Shrine.
+12:00 PM : Read books at Hut 1.
+1:00 PM : Clean and prepare the fish for cooking.
+2:00 PM : Cook dinner at Hut 2.
+3:00 PM : Head to the Cattle Farm and feed the animals.
+4:00 PM : Light candles at the Shrine and perform cleaning and maintenance tasks.
+5:00 PM : Repair the fence at the Cattle Farm.
+6:00 PM : Catch fish at the Fishing Pond.
+
+.....................
+
+
+Hina Sato's Plan for Saturday July 21 -
+
+10:00 AM : Complete Well task02. Clean the well.
+11:00 AM : Complete Cattle Farm task04. Repair fences.
+12:00 PM : End of day. Relax and spend time with townfolks.
+1:00 PM : Complete Cattle Farm task01. Feed the animals.
+2:00 PM : Complete Fishing Pond task02 and task03. Prepare fish for dinner.
+3:00 PM : Complete Cattle Farm task03. Milk cows and collect eggs.
+4:00 PM : Meditate at the Shrine and complete tasks 01-03.
+5:00 PM : Collect water from the well and complete Hut 1 task01.
+6:00 PM : Complete Hut 1 task04. Cook lunch with townfolks.
+
+.....................
+
+
+Taichi Kato's Plan for Saturday July 21 -
+
+10:00 AM : Go to the Electricity House and complete the assigned task.
+11:00 AM : Take a break and have lunch at Hut 1.
+12:00 PM : Visit the Shrine, offer rituals, and light candles.
+1:00 PM : Take a break and rest for the day.
+2:00 PM : Visit the Well and draw water and clean the well.
+3:00 PM : Go to the Fishing Pond and catch fish.
+4:00 PM : Visit Hut 2 and cook dinner for the townfolks.
+5:00 PM : Head to the Cattle Farm and milk the cows and collect eggs.
+6:00 PM : Repair the fences at the Cattle Farm.
+
+.....................
+
+
+Yumi Okada's Plan for Saturday July 21 -
+
+10:00 AM : Frame Riku for sabotaging Hut 2 tasks and gain the townfolks' trust.
+11:00 AM : Take up Cattle Farm task03 and sabotage it by not collecting all eggs.
+12:00 PM : Pretend to work on Hut 2 tasks while secretly sabotaging Well task02.
+1:00 PM : Frame Yuka for sabotaging the Shrine tasks and gain the townfolks' trust.
+2:00 PM : Sabotage the Well tasks while appearing to work on them.
+3:00 PM : Take up Fishing Pond task04 and pretend to work on it while sabotaging.
+4:00 PM : Take up Cattle Farm task01 and sabotage it by not feeding all animals.
+5:00 PM : Pretend to work on Hut 1 tasks while secretly sabotaging Fishing Pond task02.
+
+.....................
+
+
+
+Yumi Okada chose to go to Shrine at 10:03 AM
+
+
+Hina Sato chose to go to Well at 10:06 AM
+
+
+Riku Mori chose to go to Shrine at 10:07 AM
+
+
+Yuria Shimizu chose to go to Fishing Pond at 10:07 AM
+
+
+Taichi Kato chose to go to Cattle Farm at 10:07 AM
+
+
+Yumi Okada chose to do the task : Shrine task02 at 10:07 AM
+
+
+Hina Sato chose to do the task : Well task02 at 10:09 AM
+
+
+Riku Mori chose to do the task : Shrine task01 at 10:10 AM
+
+
+Taichi Kato chose to do the task : Cattle Farm task04 at 10:11 AM
+
+
+Yuria Shimizu chose to do the task : Fishing Pond task04 at 10:11 AM
+
+Query -
+What is Riku Mori's observations about Yumi Okada
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+5) Riku Mori saw Yumi Okada Cleaning and Maintenance of the Shrine. at 10:12 AM
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+3) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+4) Hina Sato: Yumi, your suspicion of Riku is unfounded. I trust Taichi's judgment and he vouched for Riku's innocence.
+5) Yumi Okada: "I suspect Riku. Hina, have you noticed anything suspicious? Let's kick out Riku to stay safe."
+
+Yumi Okada: "I saw you at the Offering Ritual earlier. Did you also see anyone suspicious there?"
+Riku Mori: I didn't see anyone suspicious, but I did notice Hina was deep in thought during the rituals.
+Yumi Okada: "Interesting, I didn't notice that. Thanks for the input."
+
+End of Conversation
+
+Yumi Okada chose to go to Shrine at 12:03 PM
+
+
+Hina Sato chose to go to Shrine at 12:06 PM
+
+
+Riku Mori chose to go to Cattle Farm at 12:06 PM
+
+
+Yuria Shimizu chose to go to Hut 1 at 12:06 PM
+
+
+Taichi Kato chose to go to Shrine at 12:07 PM
+
+
+Yumi Okada chose to do the task : Shrine task04 at 12:09 PM
+
+
+Yuria Shimizu chose to do the task : Hut 1 task01 at 12:10 PM
+
+
+Riku Mori chose to do the task : Cattle Farm task01 at 12:10 PM
+
+
+Hina Sato chose to do the task : Shrine task03 at 12:11 PM
+
+
+Taichi Kato chose to do the task : Shrine task03 at 12:11 PM
+
+Query -
+What is Hina Sato's observations about Yumi Okada
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Hina Sato: Yumi, your suspicion of Riku is unfounded. I trust Taichi's judgment and he vouched for Riku's innocence.
+5) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada saw Hina Sato Lighting Candles at the Shrine. at 12:12 PM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+5) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+
+Yumi Okada: "Hina, do you have a spare broomstick? I broke mine while working on Hut 2 tasks."
+Hina Sato: "I'm sorry Yumi, I don't have any spare broomstick. Maybe you can ask Taichi or Yuria if they have any spare."
+Yumi Okada: "Thanks, Hina. I'll ask them. It was nice talking to you."
+
+End of Conversation
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Yumi Okada saw Hina Sato Lighting Candles at the Shrine. at 12:12 PM
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+5) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Yumi Okada saw Taichi Kato Lighting Candles at the Shrine. at 12:12 PM
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+5) Yumi Okada saw Hina Sato Lighting Candles at the Shrine. at 12:12 PM
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Yumi Okada saw Hina Sato Lighting Candles at the Shrine. at 12:12 PM
+3) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+4) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+5) Yumi Okada: werewolf
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+3) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+4) Yumi Okada saw Taichi Kato Lighting Candles at the Shrine. at 12:12 PM
+5) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+
+Riku Mori has been killed by the Werewolves
+
+
+
+======= Morning Voting Phase =======
+
+Currently it is Day, the Villagers will lynch someone...
+
+Query -
+What is Yuria Shimizu's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+5) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+
+Query -
+What is Yuria Shimizu's observations about Yumi Okada
+Retrieved Memories-
+1) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+2) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+3) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+4) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+5) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+
+Query -
+What is Yuria Shimizu's observations about Taichi Kato
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+4) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+5) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+
+Query -
+What is Yuria Shimizu's observations about Hina Sato
+Retrieved Memories-
+1) Yuria Shimizu saw Riku Mori Reading Books at 10:08 AM
+2) Yuria Shimizu saw Yuka Suzuki Cooking at 10:08 AM
+3) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+4) Yuria Shimizu saw Hina Sato Catching fish. at 12:08 PM
+5) Yuria Shimizu saw Taichi Kato Catching fish. at 12:08 PM
+
+Query -
+What is Taichi Kato's observations about Yumi Okada
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Taichi Kato saw Yumi Okada doing a Sabotage Task - Break the broomstick. at 12:12 PM
+5) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+
+Query -
+What is Hina Sato's observations about Taichi Kato
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+3) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+4) Hina Sato saw Taichi Kato Lighting Candles at the Shrine. at 12:12 PM
+5) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+
+Query -
+What is Hina Sato's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+3) Hina Sato: Yumi, your suspicion of Riku is unfounded. I trust Taichi's judgment and he vouched for Riku's innocence.
+4) Hina Sato: Interesting, what kind of bait was it?
+5) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+
+Query -
+What is Taichi Kato's observations about Yuria Shimizu
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+5) Taichi Kato saw Hina Sato Lighting Candles at the Shrine. at 12:13 PM
+
+Query -
+What is Taichi Kato's observations about Hina Sato
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+3) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+4) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+5) Taichi Kato saw Hina Sato Lighting Candles at the Shrine. at 12:13 PM
+
+Query -
+What is Hina Sato's observations about Yumi Okada
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Hina Sato saw Yumi Okada doing a Sabotage Task - Break the broomstick. at 12:12 PM
+5) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+
+Query -
+What is Riku Mori's observations about Yumi Okada
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+5) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+
+Query -
+What is Taichi Kato's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+3) Hina Sato: Yumi, your suspicion of Riku is unfounded. I trust Taichi's judgment and he vouched for Riku's innocence.
+4) Taichi Kato saw Yuria Shimizu Catching fish. at 12:08 PM
+5) Taichi Kato saw Hina Sato Catching fish. at 12:07 PM
+
+Query -
+What is Riku Mori's observations about Taichi Kato
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+3) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+4) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+5) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+
+Query -
+What is Hina Sato's observations about Yuria Shimizu
+Retrieved Memories-
+1) Hina Sato saw Yuria Shimizu Catching fish. at 12:07 PM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Hina Sato saw Taichi Kato Lighting Candles at the Shrine. at 12:12 PM
+5) Hina Sato saw Taichi Kato Catching fish. at 12:07 PM
+
+Query -
+What is Riku Mori's observations about Yuria Shimizu
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+5) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+
+Query -
+What is Riku Mori's observations about Hina Sato
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori saw Yuria Shimizu Cooking at 10:07 AM
+3) Riku Mori saw Yuka Suzuki Cooking at 10:07 AM
+4) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+5) Yuka Suzuki: That sounds interesting, what's deductive reasoning?
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+2) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+3) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+4) Yumi Okada: werewolf
+5) Yumi Okada saw Taichi Kato Lighting Candles at the Shrine. at 12:12 PM
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+4) Yumi Okada saw Hina Sato Lighting Candles at the Shrine. at 12:12 PM
+5) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Yumi Okada saw Taichi Kato Lighting Candles at the Shrine. at 12:12 PM
+4) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+5) Yumi Okada saw Riku Mori Offering Rituals. at 10:12 AM
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: "I trust Taichi's observation. Hina's analysis is reliable. Riku and Yumi's suspicions seem baseless. Shall we kick out Mana?"
+3) Yumi Okada saw Hina Sato Lighting Candles at the Shrine. at 12:12 PM
+4) Yumi Okada saw Mana Yoshida Offering Rituals. at 10:07 AM
+5) Riku Mori: "Hina, Yumi's suspicion seems baseless. I observed Yuka and Yuria cooking together. I suspect Mana, who was absent."
+
+Hina Sato: Taichi, do you remember what bait you used to catch that fish? It may help identify the werewolf.
+Taichi Kato: "Yumi sabotaged, Riku is innocent, Hina was fishing and lighting candles. Mana has been absent. Should we vote to kick out Mana?"
+Yumi Okada: "I noticed Hina's constant participation. Is she distracting us from Mana's absence? Shall we vote to kick out Mana?"
+Hina Sato: Yumi's accusations and sabotage indicate she is likely a werewolf. I suggest we vote to kick out Yumi.
+Yuria Shimizu: "Taichi, Hina, Yumi, did any of you complete the tasks? Let's vote to kick out the werewolf who didn't."
+
+End of Conversation
+
+Conversation Rating - 3.65625
+Turn Taking Ratio - 1.0
+Response Relevance - ([0.3334411315469461, 0.7459053470964747, 0.68875076543231, 0.7482217059301235, 0.7051418658759783], 0.6442921631763665)
+Agreement Metric - 0.16107304079409163
+
+Yumi Okada voted to kick out Hina Sato
+Hina Sato voted to kick out Yumi Okada
+Taichi Kato voted to kick out Yumi Okada
+Yuria Shimizu voted to kick out Yumi Okada
+
+Yumi Okada has been lynched by the Villagers
+
+=== TOWNFOLKS WIN ===
