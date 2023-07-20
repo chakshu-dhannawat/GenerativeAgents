@@ -227,7 +227,7 @@ class Agent():
       # self.memory[id].lastAccess = calendar.dt
     m = ""
     for i,mem in enumerate(memories): m += f"{i+1}) {mem}\n"
-    log(f"Query -\n{query}\nRetrieved Memories-\n{m}")
+    # log(f"Query -\n{query}\nRetrieved Memories-\n{m}")
     return memories
 
   def reflect(self,n_questions=N_Questions, n_memories=N_Memories, n_reflections=N_Reflections):
