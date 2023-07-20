@@ -106,7 +106,8 @@ LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376),
                 'Shrine': (545, 992), 'Shrine task01': (270, 942), 'Shrine task02': (380, 1012), 'Shrine task03': (637, 1019), 'Shrine task04': (744, 916),
                 'Cattle Farm': (1434, 450), 'Cattle Farm task01': (1409, 345), 'Cattle Farm task02': (1881, 445), 'Cattle Farm task03': (1849, 338), 'Cattle Farm task04': (1833, 599), 
                 'Well': (928, 668), 'Well task01': (694, 650), 'Well task02': (737, 719), 'Well task03': (881, 724), 
-                'Electricity House': (320, 676), 'Tavern': (1320, 893), 
+                'Electricity House': (320, 676), 'Electricity House task01': (322, 750),  'Electricity House task02': (264,802),  'Electricity House task03': (173,775),  'Electricity House task04': (100,777), 
+                'Tavern': (1320, 893), 
                 'Predetermined 01': (1325, 816), 'Predetermined 02': (1389, 737), 'Predetermined 03': (1557, 718), 'Predetermined 04': (1654, 823), 'Predetermined 05': (1589, 947), 'Predetermined 06': (1407, 958), 
                 'Fishing Pond': (1111, 93), 'Fishing Pond task01': (1073, 136), 'Fishing Pond task02': (1238, 145), 'Fishing Pond task03': (1434, 159), 'Fishing Pond task04': (1729, 139), 
                 'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488) , 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251), 'Intermediate08': (475,425), 'Intermediate09': (963,430), 
@@ -200,6 +201,10 @@ nodes = {"Hut 1": "The first hut.",
         "Well": "A water source providing clean and fresh water for the townfolks.",
         "Tavern": "A lively place where townfolks can socialize, exchange information.",
         "Electricity House": "generates and distributes electricity power to the town.",
+        "Electricity House task01": "Maintaining the electricity generator or power source.",
+        "Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
+        "Electricity House task03": "Managing the distribution of electrical resources.",
+        "Electricity House task04": "Managing the distribution of electrical resources.",
         "Cattle Farm": "A dedicated area where livestock is raised for milk, meat, or other dairy products.",
         "Fishing Pond": "A designated spot for fishing activities.",
         "Shrine": "A sacred place where townfolks can pay homage, meditate, or seek spiritual solace.",
@@ -211,10 +216,6 @@ nodes = {"Hut 1": "The first hut.",
         "Cattle Farm task02": "Breaking the fences.",
         "Cattle Farm task03": "Milking the cows and collecting eggs from the chickens.",
         "Cattle Farm task04": "Repairing the fences.",
-        #"Electricity House task01": "Maintaining the electricity generator or power source.",
-        #"Electricity House task02": "Checking and repairing any electrical equipment or wiring.",
-        #"Electricity House task03": "Ensuring a stable power supply to the village.",
-        #"Electricity House task04": "Managing the distribution of electrical resources.",
         "Shrine task01": "Offering Rituals.",
         "Shrine task02": "Cleaning and Maintenance of the Shrine.",
         "Shrine task03": "Lighting Candles at the Shrine.",
@@ -256,11 +257,12 @@ taskCompleted = {"Well task01": False, "Well task02": False, "Well task03": Fals
                 "Hut 1 task01": False, "Hut 1 task04": False,
                 "Hut 2 task01": False, "Hut 2 task04": False,
                 "Hut 3 task01": False, "Hut 3 task04": False,
+                "Electricity House task01": False,"Electricity House task02": False,"Electricity House task03": False,"Electricity House task04": False,
                 "Fishing Pond task01": False, "Fishing Pond task02": False, "Fishing Pond task03": False, "Fishing Pond task04": False
                 }
 
 # hubs = [x for x in nodes.keys() if "task" not in x and "Intermediate" not in x]  
-hubs = ["Well","Cattle Farm","Shrine","Fishing Pond","Hut 1","Hut 2"]
+hubs = ["Well","Cattle Farm","Shrine","Fishing Pond","Hut 1","Hut 2","Electricity House"]
 # hubs = ["Shrine","Cattle Farm","Well"]
 
 
@@ -303,6 +305,10 @@ TASK_EMOJI_MAP = {
     # "Hut 2 task02": "Sleeping",
     # "Hut 2 task03": "Sleeping",
     "Hut 2 task04": "Cooking",
+    "Electricity House task01":'Electric Maintain',
+    "Electricity House task02":'Electric Repairing',
+    "Electricity House task03":'Electric Resources',
+    "Electricity House task04":'Electric_Sabotage',
     
 }
 
@@ -336,7 +342,7 @@ shrine_hover_textbox = HoverTextBox(shrine_rect, font, (255, 255, 255), (0, 0, 2
 
 # Electricity House
 electricity_house_rect = pygame.Rect(67, 514, 200, 120)
-electricity_house_hover_textbox = HoverTextBox(electricity_house_rect, font, (255, 255, 255), (0, 0, 255), 'Electricity House', nodes['Electricity House'], "")
+electricity_house_hover_textbox = HoverTextBox(electricity_house_rect, font, (255, 255, 255), (0, 0, 255), 'Electricity House', nodes['Electricity House'], f"Available Tasks: {nodes['Electricity House task01']}{nodes['Electricity House task02']}{nodes['Electricity House task03']}")
 
 # House 1
 house1_rect = pygame.Rect(187, 156, 250, 200)
@@ -379,4 +385,4 @@ hover_dict = {
 
 
 
-PDF_Name = time.strftime("Logs\\%Y-%m-%d %H-%M-%S.pdf", time.localtime(time.time()))
+PDF_Name = time.strftime("Logs/%Y-%m-%d %H-%M-%S.pdf", time.localtime(time.time()))

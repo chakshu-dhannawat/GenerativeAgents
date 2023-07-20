@@ -716,6 +716,7 @@ class Agent():
       x = self.x
       y = self.y
       bubble_image = pygame.image.load(Path+"speechbubble_png_blue.png")  # Replace "bubble.png" with the path to your predetermined image
+      bubble_image2 = pygame.image.load(Path+"onevoneelectricspeechbubble.png")
 
       # Render the text
       font_size = 22  # Desired font size
@@ -750,8 +751,12 @@ class Agent():
       # bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 - 50, bubble_width, bubble_height)
 
       # Blit the bubble image onto the surface
-      scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
-      bubble_rect = scaled_bubble_image.get_rect(bottomright=(x+bubble_width//4, y))
+      if(x<200):
+        scaled_bubble_image = pygame.transform.scale(bubble_image2, (bubble_width, bubble_height))
+        bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x-bubble_width//4, y))
+      else:
+        scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
+        bubble_rect = scaled_bubble_image.get_rect(bottomright=(x+bubble_width//4, y))
       self.win.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
