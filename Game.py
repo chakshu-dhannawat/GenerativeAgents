@@ -159,6 +159,12 @@ reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHou
 cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
 house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
 bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
+electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task1.png"), EMOJI_SIZE)
+electric_repairWiring = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task2.png"), EMOJI_SIZE)
+electric_resources = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task4.png"), EMOJI_SIZE)
+electric_investigation = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task5.png"), EMOJI_SIZE)
+electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage_task.png"), EMOJI_SIZE)
+
 
 
 # Create a dictionary of emojis
@@ -189,7 +195,12 @@ EMOJI = {
             'Fence_Sabotage': fence_sabotage_emoji,
             'Reading_Books': reading2_emoji,
             'Sleeping': sleeping_emoji ,
-            'Cooking' : cooking_emoji
+            'Cooking' : cooking_emoji,
+            'Electric Maintain': electric_maintain,
+            'Electric Repairing': electric_repairWiring,
+            'Electric Resources': electric_resources,
+            'Electric Investigation': electric_investigation,
+            'Electric_Sabotage':electric_sabotage
         }
 
 

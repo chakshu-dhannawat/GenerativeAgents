@@ -9,7 +9,7 @@ from queue import Queue
 from HoveringBox import *
 
 try: 
-  with open("Logs\\logs.txt", 'w') as file: pass
+  with open("Logs/logs.txt", 'w') as file: pass
 except:
   os.makedirs("Logs", exist_ok=True)
 log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
