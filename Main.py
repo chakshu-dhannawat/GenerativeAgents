@@ -74,7 +74,7 @@ log('\n=======Initializing Game=======\n')
 
 game = Game(agents, window)
 
-game.chooseSheriff()
+game.agent_sheriff = game.chooseSheriff()
 
 
 

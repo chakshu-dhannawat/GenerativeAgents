@@ -299,6 +299,9 @@ class Game:
     self.house2Popup = False
     self.convs = 0
     self.ClockPrev = Clock_Speed
+
+    self.choose_sheriff = False
+    self.agent_sheriff = None
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     self.HoverBox_agents = {}
     self.reset()
@@ -508,6 +511,10 @@ class Game:
     self.kicked = self.names[kick]
     self.killing = True
     self.elimination = self.kicked
+
+    if self.agents[kick].sheriff:
+      self.choose_sheriff = True
+
     threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been eliminated by the Werewolves on {calendar.day} during the Night Phase",))
     threadObs.start()
     log(f"{self.kicked} has been killed by the Werewolves\n\n")
@@ -639,7 +646,7 @@ class Game:
 
       #If sheriff is kicked
       if self.agents[kick].sheriff:
-         self.chooseSheriff()
+         self.choose_sheriff = True
 
       self.farewell = True
       self.killing = True
@@ -1114,6 +1121,21 @@ class Game:
       self.win.blit(text_surface,text_rect)
       self.nobodyLynch = False
       pygame.display.update()
+      time.sleep(3)  
+
+  def new_sheriff_choose(self) :
+      if(not self.choose_sheriff): return
+      self.win.blit(self.black_bg,(0,0))
+
+      new_sheriff = self.chooseSheriff()   # TODO: Pass query to self.agent_sheriff
+      text_surface = font2.render(f"{new_sheriff.name} was chosen as the new Sheriff", True, WHITE)
+      self.agent_sheriff = new_sheriff
+      text_rect = text_surface.get_rect()
+      text_rect.centerx = WIN_WIDTH // 2
+      text_rect.centery = WIN_HEIGHT // 2
+      self.win.blit(text_surface,text_rect)
+      self.choose_sheriff = False
+      pygame.display.update()
       time.sleep(3)     
   
   def draw_coordinates(self):
@@ -1169,6 +1191,9 @@ class Game:
 
     if(self.elimination is not None and not self.killing):
       self.drawElimination()
+
+    if(self.choose_sheriff):
+       self.new_sheriff_choose()
 
     if(not self.killing and self.elimination is None):
 
@@ -1428,6 +1453,7 @@ class Game:
           townfolks.append(agent)
     sheriff = random.choice(townfolks)
     sheriff.sheriff = True
+    return sheriff
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:
