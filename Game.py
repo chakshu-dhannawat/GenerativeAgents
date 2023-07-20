@@ -1379,12 +1379,14 @@ class Game:
   def check_agent_in_popup(self):
      for agent in self.agents:
         if agent.destination == "Hut 1 Main":
+          self.exit_agent_popup(agent, 'Hut 1 Main')
           agent.inPopup_house1 = True
         if agent.destination == "Hut 1":
           self.exit_agent_popup(agent, 'Hut 1')
           agent.inPopup_house1 = False
 
         if agent.destination == "Hut 2 Main":
+          self.exit_agent_popup(agent, 'Hut 2 Main')
           agent.inPopup_house2 = True
         if agent.destination == "Hut 2":
           self.exit_agent_popup(agent, 'Hut 2')

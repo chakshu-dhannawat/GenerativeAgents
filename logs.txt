@@ -26786,3 +26786,1590 @@ Yuka Suzuki: How can we make sure that the werewolves don't sabotage the well's 
 Mana Yoshida: I think we're doing a good job. But if you need any help with it, feel free to let me know.
 
 End of Conversation
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/20/2023, 16:16:02
+
+=======Initializing Agents=======
+
+Hina Sato's Strategy for Friday July 20 -
+
+1) Analyze voting patterns and behavior to identify potential werewolves.
+2) Coordinate with trusted players to confirm suspicions and eliminate werewolves.
+3) Prioritize completing tasks to prevent werewolf sabotage and gain information through task completion.
+
+-----------------------
+
+
+Riku Mori's Strategy for Friday July 20 -
+
+1) Observe voting patterns and suspicious behaviors to identify werewolves.
+2) Form alliances with trusted townfolks to gather information and vote as a group.
+3) Complete tasks efficiently and communicate progress to prevent werewolf sabotage. Also, use fishing as a cover to discuss suspicions with fellow townfolks.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Friday July 20 -
+
+1) Observe and analyze the behavior of other players to identify potential werewolves.
+2) Form alliances with other townfolks to increase chances of identifying and kicking out werewolves.
+3) Complete tasks efficiently and quickly to prevent werewolves from sabotaging and delaying the townfolks' victory.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 20 -
+
+As Taichi Kato, my strategy for winning as a Townfolk in the werewolf game is:
+
+1) Observe patterns and behavior of players to identify possible werewolves.
+2) Collaborate with other townfolks to share suspicions and vote strategically during the day.
+3) Prioritize completing tasks to prevent sabotage and gain valuable information about other players.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 20 -
+
+As Yuka Suzuki, my strategy to win as a townfolk in the village game with werewolves would be:
+
+1) Observe and listen to everyone's arguments carefully before making any decisions or conclusions.
+2) Collaborate with other townfolks to complete the tasks and identify suspicious behavior of other players.
+3) Be cautious and not trust anyone blindly, especially during voting rounds, as anyone could be a werewolf trying to deceive the townfolks.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 20 -
+
+1) Act as a helpful farmer, gain the trust of townfolks, and lie to frame innocent players.
+2) Sabotage tasks subtly and blame others. Pretend to be clueless and confused during discussions.
+3) Work with Mana Yoshida to vote out townfolks. Influence discussions subtly, and deflect suspicion onto others.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 20 -
+
+1) Blame other werewolves for my actions to throw suspicion off me.
+2) Sabotage tasks subtly and blame townfolks for the failure.
+3) Manipulate townfolks to vote out other townfolks to decrease their numbers.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuka Suzuki's Plan for Friday July 20 -
+
+10:00 AM : Collaborate with others to complete any pending tasks. 
+11:00 AM : Go fishing at the Fishing Pond and catch some fish.
+12:00 PM : Offer prayers at the Shrine and clean it.
+1:00 PM : Collect water from the well and clean it.
+2:00 PM : Repair any electrical equipment or wiring at the Electricity House.
+3:00 PM : Head to the Cattle Farm, feed the animals, and milk the cows.
+4:00 PM : End the day by cooking dinner and enjoying it with the townfolks.
+5:00 PM : Take a break and have lunch.
+6:00 PM : Clean and prepare the caught fish for cooking.
+
+.....................
+
+
+Hina Sato's Plan for Friday July 20 -
+
+10:00 AM : Head to the Electricity House and complete task 01.
+11:00 AM : Check on Cattle Farm and complete task 01, and then head to Hut 1 to complete task 01.
+12:00 PM : Check on the Cattle Farm and complete task 03, then head to Well to complete task 01.
+1:00 PM : Complete task 04 at Hut 2 and head back to the Electricity House for task 02.
+2:00 PM : Move to Well and complete task 02, then proceed to Fishing Pond to complete task 02.
+3:00 PM : Coordinate with trusted players to confirm suspicions and eliminate werewolves.
+4:00 PM : Prioritize completing tasks to prevent werewolf sabotage and gain information through task completion.
+5:00 PM : Take a break and visit the Shrine to complete task 03.
+6:00 PM : Investigate player behavior and voting patterns to identify potential werewolves.
+
+.....................
+
+
+Yuria Shimizu's Plan for Friday July 20 -
+
+10:00 AM : Start the day by drawing water from the well and feeding the animals at the cattle farm.
+11:00 AM : Head to the shrine and offer rituals. Check and repair electrical equipment at the electricity house.
+12:00 PM : Clean and prepare the caught fish for cooking. Light candles at the shrine.
+1:00 PM : Catch fish at the fishing pond and repair the fences at the cattle farm.
+2:00 PM : End the day by completing any remaining tasks and preparing for the night's werewolf game.
+3:00 PM : Cook a meal in Hut 2. Repair any damages to the fishing equipment.
+4:00 PM : Take a break and read books in Hut 1.
+5:00 PM : Continue with the tasks from the previous hour. 
+6:00 PM : Clean the well and maintain the electricity generator.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 20 -
+
+10:00 AM : Head to the Cattle Farm, complete task 01 - feeding the animals.
+11:00 AM : Complete task 04 - cooking at Hut 1 and share the meal with other townfolks.
+12:00 PM : Visit the Electricity House and complete task 01 - maintaining the generator or power source.
+1:00 PM : Return to the Fishing Pond and complete task 03 - cleaning and preparing the fish for cooking.
+2:00 PM : Take a break and relax at the Fishing Pond, complete task 02 - catching fish.
+3:00 PM : Head to the Shrine and complete task 01 - offering rituals.
+4:00 PM : Go to the Well and complete task 01 - draw water for the townfolks.
+5:00 PM : Visit the Cattle Farm and complete task 04 - repairing the fences.
+6:00 PM : End the day by relaxing at the Shrine and completing task 03 - lighting candles.
+
+.....................
+
+
+Mana Yoshida's Plan for Friday July 20 -
+
+10:00 AM : Take the task of repairing the electrical equipment and damage them while pretending to fix them.
+11:00 AM : Take the task of offering rituals at the shrine. Sabotage it and blame a different townfolk.
+12:00 PM : Take the task of cleaning and maintaining the shrine. Sabotage the task and blame it on another townfolk.
+1:00 PM : Take the task of milking cows and collect eggs. Drop the bucket and blame another townfolk.
+2:00 PM : Take the task of checking and repairing any electrical equipment or wiring. Damage it and blame a townfolk.
+3:00 PM : Take the task of drawing water from the well and damage the bucket. Blame a townfolk for it.
+4:00 PM : Take the task of cooking at Hut 1. Add salt to the dessert instead of sugar.
+5:00 PM : Take the task of drawing water from the well and damage the handle. Blame it on a different townfolk.
+6:00 PM : Take the task of cooking at Hut 2. Mix up the recipe, sabotage it and blame it on another townfolk.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 20 -
+
+10:00 AM : Join discussions and create confusion. Blame Riku Mori for sabotaging Hut 1 task01.
+11:00 AM : Take a break and observe the discussions. Listen for any leads or suspicions.
+12:00 PM : Head to Hut 1, offer to help with tasks, and sabotage Hut 1 task01.
+1:00 PM : Head to the Cattle Farm, offer to help with tasks, and sabotage Cattle Farm task01.
+2:00 PM : Join discussions and deflect suspicion. Blame Yuka Suzuki for sabotaging the Cattle Farm task01.
+3:00 PM : Influence discussions and shift focus onto Hina Sato. Blame her for sabotaging the Electricity House task04.
+4:00 PM : Head to the Well, offer to help with tasks, and sabotage Well task02.
+5:00 PM : Head to the Electricity House, offer to help with tasks, and sabotage Electricity House task04.
+6:00 PM : Head to the Shrine, offer to help with tasks, and sabotage Shrine task02.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 20 -
+
+10:00 AM : Cook lunch at Hut 1 and read books at Hut 2.
+11:00 AM : Clean the well and prepare fish for cooking at Hut 2.
+12:00 PM : Cook dinner at Hut 1 and read books at Hut 2.
+1:00 PM : Collect eggs from chickens at the Cattle Farm and light candles at the Shrine.
+2:00 PM : Repair fences at the Cattle Farm and check electrical equipment at the Electricity House.
+3:00 PM : Catch fish at the Fishing Pond and clean the Shrine.
+4:00 PM : Offer rituals at the Shrine and manage distribution of electrical resources.
+5:00 PM : Draw water from the well and feed animals at the Cattle Farm.
+6:00 PM : Repair any damages to fishing equipment and maintain the electricity generator.
+
+.....................
+
+
+
+Yuria Shimizu chose to go to Well at 10:02 AM
+
+
+Mana Yoshida chose to go to Electricity House at 10:02 AM
+
+
+Yumi Okada chose to go to Hut 1 at 10:03 AM
+
+
+Riku Mori chose to go to Cattle Farm at 10:03 AM
+
+
+Taichi Kato chose to go to Hut 1 at 10:03 AM
+
+
+Hina Sato chose to go to Electricity House at 10:03 AM
+
+
+Mana Yoshida chose to do the task : Electricity House task02 at 10:03 AM
+
+
+Yuka Suzuki chose to go to Cattle Farm at 10:04 AM
+
+
+Yumi Okada chose to do the task : Hut 1 task01 at 10:04 AM
+
+
+Yuria Shimizu chose to do the task : Well task01 at 10:04 AM
+
+
+Hina Sato chose to do the task : Electricity House task01 at 10:04 AM
+
+
+Taichi Kato chose to do the task : Hut 1 task04 at 10:05 AM
+
+
+Riku Mori chose to do the task : Cattle Farm task04 at 10:05 AM
+
+
+Yuka Suzuki chose to do the task : Cattle Farm task03 at 10:05 AM
+
+Query -
+What is Riku Mori's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Riku Mori chose to go to Cattle Farm at 10:03 AM
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Yuka Suzuki's observations about Riku Mori
+Retrieved Memories-
+1) Yuka Suzuki saw Riku Mori Repairing the fences. at 10:06 AM
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki chose to go to Cattle Farm at 10:04 AM
+
+Query -
+What is Hina Sato's observations about Mana Yoshida
+Retrieved Memories-
+1) Hina Sato saw Mana Yoshida Checking and repairing any electrical equipment or wiring. at 10:07 AM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Mana Yoshida's observations about Hina Sato
+Retrieved Memories-
+1) Mana Yoshida saw Hina Sato Maintaining the electricity generator or power source. at 10:07 AM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Hina Sato: townfolk
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+2) Yumi Okada: werewolf
+3) Yuria Shimizu: townfolk
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Yuka Suzuki: Hey Riku, I saw you fixing the fences this morning. Do you think it was the werewolves who damaged it?
+Yumi Okada: "Hey Taichi, what are you cooking there? It smells amazing!"
+Riku Mori: It's hard to say, but we must remain vigilant. These werewolves are crafty creatures.
+Taichi Kato: "Oh, just some simple stir-fry. I'm no expert, but I like to experiment with different flavors."
+Yuka Suzuki: You're right, we can't let our guard down. Have you heard any rumors about who might be a werewolf?
+Riku Mori: Not yet, but I'm keeping an eye out for any suspicious activity.
+Yumi Okada: "I see. I'm not much of a cook myself, but I appreciate good food. Well, I'll let you get back to it. See you around."
+
+End of Conversation
+
+End of Conversation
+Hina Sato: Hey, Mana. I saw you working on the electrical equipment earlier. Did you find anything suspicious?
+Mana Yoshida: No, I didn't find anything suspicious. However, have you noticed anything strange at the Shrine?
+Hina Sato: No, I haven't noticed anything strange at the Shrine. But, I did see you working on the electrical equipment earlier. Let's keep an eye out for anything suspicious.
+Mana Yoshida: Actually, I heard from Yumi that Riku was acting suspiciously. We should keep an eye on him.
+Hina Sato: Mana, I appreciate your concern about the Shrine. But, I'm more worried about the electrical equipment. I'm going to keep a closer eye on it.
+
+End of Conversation
+
+Riku Mori chose to go to Electricity House at 12:01 PM
+
+
+Mana Yoshida chose to go to Shrine at 12:01 PM
+
+
+Yumi Okada chose to go to Hut 1 at 12:02 PM
+
+
+Yuria Shimizu chose to go to Shrine at 12:02 PM
+
+
+Hina Sato chose to go to Cattle Farm at 12:02 PM
+
+
+Taichi Kato chose to go to Hut 1 at 12:03 PM
+
+
+Yuka Suzuki chose to go to Shrine at 12:03 PM
+
+
+Riku Mori chose to do the task : Electricity House task01 at 12:03 PM
+
+
+Mana Yoshida chose to do the task : Shrine task02 at 12:03 PM
+
+
+Yumi Okada chose to do the task : Hut 1 task01 at 12:04 PM
+
+
+Yuria Shimizu chose to do the task : Shrine task03 at 12:04 PM
+
+
+Yuka Suzuki chose to do the task : Shrine task02 at 12:05 PM
+
+
+Hina Sato chose to do the task : Cattle Farm task03 at 12:05 PM
+
+
+Taichi Kato chose to do the task : Hut 1 task04 at 12:06 PM
+
+Query -
+What is Taichi Kato's observations about Yumi Okada
+Retrieved Memories-
+1) Taichi Kato saw Yumi Okada Reading Books. at 10:07 AM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) Yumi Okada: "Hey Taichi, what are you cooking there? It smells amazing!"
+
+Query -
+What is Yuka Suzuki's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuka Suzuki saw Yuria Shimizu Lighting Candles at the Shrine. at 12:07 PM
+2) Yuka Suzuki saw Mana Yoshida Cleaning and Maintenance of the Shrine. at 12:06 PM
+3) Yuka Suzuki saw Riku Mori Repairing the fences. at 10:06 AM
+4) Yuka Suzuki: Hey Riku, I saw you fixing the fences this morning. Do you think it was the werewolves who damaged it?
+5) Yuka Suzuki: You're right, we can't let our guard down. Have you heard any rumors about who might be a werewolf?
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) Mana Yoshida saw Hina Sato Maintaining the electricity generator or power source. at 10:07 AM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Mana Yoshida: Actually, I heard from Yumi that Riku was acting suspiciously. We should keep an eye on him.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+2) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+3) Yumi Okada: werewolf
+4) Yuria Shimizu: townfolk
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Yuka Suzuki: "Hello Mana, great to see you taking care of the shrine. Have you noticed anything suspicious in the village lately?"
+Yumi Okada: "Taichi, the townfolk's tasks are important. You should focus on that instead of just cooking."
+Mana Yoshida: "Nothing out of the ordinary. But I'm keeping an eye out for anything unusual. What about you?"
+Taichi Kato: "But cooking is important too. It helps keep us energized for our tasks."
+Yumi Okada: "I see your point, but I'm worried about the progress of the tasks. We need to prioritize those first."
+Yuka Suzuki: "I haven't noticed anything unusual either. But I heard Riku Mori discussing werewolf threats. Do you think we should be worried?"
+Taichi Kato: "I understand your concern, but we can't ignore the importance of good food and its impact on our productivity."
+Mana Yoshida: "I don't think we should worry too much. We're all here to protect each other, right?"
+
+End of Conversation
+Yuka Suzuki: "I hope it's just rumors. But I think we should keep an eye out and work together to identify any suspicious behavior."
+Mana Yoshida: "I have my doubts about Riku too. But let's not jump to conclusions yet."
+Yuka Suzuki: "I think we should be cautious. The werewolves could be deceiving us. Let's keep an eye out together."
+Mana Yoshida: "It's possible. But we should be cautious before making any assumptions. By the way, have you seen Hina around the generator lately?"
+Yuka Suzuki: "Maybe we should form a group and work together to keep an eye out for any suspicious behavior."
+
+End of Conversation
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+2) Yumi Okada: werewolf
+3) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+4) Yumi Okada: "Taichi, the townfolk's tasks are important. You should focus on that instead of just cooking."
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Query -
+What is Yumi Okada's observations about Riku Mori
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+2) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+3) Yumi Okada: werewolf
+4) Yumi Okada: "Taichi, the townfolk's tasks are important. You should focus on that instead of just cooking."
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Yumi Okada's observations about Taichi Kato
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+2) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+3) Yumi Okada: werewolf
+4) Yuria Shimizu: townfolk
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Yumi Okada's observations about Mana Yoshida
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+2) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+3) Yumi Okada: werewolf
+4) Yumi Okada: "Taichi, the townfolk's tasks are important. You should focus on that instead of just cooking."
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+2) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+3) Yumi Okada: werewolf
+4) Yumi Okada: "Taichi, the townfolk's tasks are important. You should focus on that instead of just cooking."
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+Query -
+What is Mana Yoshida's observations about Yuria Shimizu
+Retrieved Memories-
+1) Mana Yoshida saw Yuria Shimizu Lighting Candles at the Shrine. at 12:07 PM
+2) Yuria Shimizu: townfolk
+3) Mana Yoshida saw Yuka Suzuki Cleaning and Maintenance of the Shrine. at 12:07 PM
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yumi Okada: werewolf
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) Mana Yoshida: "It's possible. But we should be cautious before making any assumptions. By the way, have you seen Hina around the generator lately?"
+2) Yuka Suzuki: "I haven't noticed anything unusual either. But I heard Riku Mori discussing werewolf threats. Do you think we should be worried?"
+3) Mana Yoshida: "I have my doubts about Riku too. But let's not jump to conclusions yet."
+4) Mana Yoshida saw Hina Sato Maintaining the electricity generator or power source. at 10:07 AM
+5) Mana Yoshida: Actually, I heard from Yumi that Riku was acting suspiciously. We should keep an eye on him.
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yumi Okada: werewolf
+2) Yuria Shimizu: townfolk
+3) Yumi Okada saw Taichi Kato Cooking. at 10:06 AM
+4) Yumi Okada saw Taichi Kato Cooking. at 12:06 PM
+5) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/20/2023, 16:24:22
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Friday July 20 -
+
+1) Observe voting patterns and suspicious behaviors of players.
+2) Keep track of who has been cleared as not a werewolf.
+3) Collaborate with other townfolks to share information and vote together to eliminate werewolves.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Friday July 20 -
+
+1) Observe each player's behavior, voting patterns, and alibis to identify potential werewolves.
+2) Build alliances with other townfolks and share information to increase the chances of identifying werewolves.
+3) Prioritize completing tasks to prevent werewolf sabotage and gain the trust of other townfolks.
+
+-----------------------
+
+
+Hina Sato's Strategy for Friday July 20 -
+
+1) Observe and analyze each player's behavior and voting patterns to identify any suspicious activity.
+2) Collaborate with other townfolks to share information and make informed decisions during voting rounds.
+3) Complete tasks efficiently to gain trust and eliminate suspicion, while also being cautious of potential werewolf sabotage.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 20 -
+
+1) Observe closely and gather information on who is suspicious.
+2) Collaborate with other townfolks to narrow down suspects and vote together.
+3) Prioritize completing tasks to ensure a win even if all werewolves are not identified.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 20 -
+
+Taichi Kato struggles to understand the complex game of werewolves and townfolks, but he tries his best to come up with a strategy. Here are his three points:
+
+1) Listen carefully to other townfolks' opinions and suspicions.
+2) Look for patterns in the werewolves' behavior and voting choices.
+3) Prioritize completing tasks to ensure townfolk victory while still being vigilant for werewolf deception.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 20 -
+
+1) Act like a helpful townfolk and build trust. Vote to kick out townfolks and blame others for sabotaging tasks.
+2) As a werewolf, try to get one of the townfolks to trust you and work with them to kick out other townfolks.
+3) Pretend to be confused during discussions and suggest random people to be kicked out to create chaos and confusion among townfolks.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 20 -
+
+1) Act as a helpful and friendly electrician to gain trust. 
+2) Manipulate discussions to get townfolks voted out. 
+3) Sabotage tasks subtly and blame others for it to avoid getting caught.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuka Suzuki's Plan for Friday July 20 -
+
+10:00 AM : Collaborate with another townfolk to complete fishing pond tasks.
+11:00 AM : Repair cattle farm fences and prepare for the night's werewolf hunt.
+12:00 PM : Draw water from the well and complete well cleaning task.
+1:00 PM : Offer rituals at the shrine and complete shrine maintenance task.
+2:00 PM : Check and repair electrical equipment, then complete electricity house distribution task.
+3:00 PM : Collaborate with another townfolk to complete hut tasks.
+4:00 PM : Collaborate with another townfolk to complete cattle farm tasks.
+5:00 PM : Join townfolks in werewolf hunt and discussion.
+6:00 PM : Lunch break and rest.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 20 -
+
+10:00 AM : Visit the Electricity House and maintain the generator and equipment.
+11:00 AM : Go to Hut 2 and read some books.
+12:00 PM : Clean and prepare the caught fish for cooking.
+1:00 PM : Fish at the Fishing Pond and catch some fish.
+2:00 PM : Offer rituals at the Shrine and clean and maintain it.
+3:00 PM : Visit the Well and draw water, then clean the Well.
+4:00 PM : Head to the Cattle Farm and start feeding the animals.
+5:00 PM : Have dinner at Hut 1 and cook food while reading books.
+6:00 PM : Take a break and have lunch at Hut 1 while reading books.
+
+.....................
+
+
+Mana Yoshida's Plan for Friday July 20 -
+
+10:00 AM : Sabotage Electricity House task03 and blame Yuka Suzuki.
+11:00 AM : Attend Shrine and offer to take up Shrine task01. 
+12:00 PM : Offer to take up Hut 1 task01 and sabotage it. 
+1:00 PM : Act as a helpful electrician and offer to take up the Well task01. 
+2:00 PM : Take up Electricity House task02 and sabotage it. 
+3:00 PM : Take up Fishing Pond task02 and sabotage it. 
+4:00 PM : Take up Cattle Farm task04 and sabotage it. 
+5:00 PM : Attend the Well and offer to take up Well task02. 
+
+.....................
+
+
+Yuria Shimizu's Plan for Friday July 20 -
+
+10:00 AM : Go to Well, complete task02 - Cleaning the well.
+11:00 AM : Eat lunch and converse with other townfolks to gain information.
+12:00 PM : Complete Fishing Pond task02 - Catching fish.
+1:00 PM : Head to Electricity House, complete task01 - Maintaining the electricity generator or power source.
+2:00 PM : Head to Well, complete task01 - Drawing water from the well.
+3:00 PM : Head to Shrine, complete task02 - Cleaning and Maintenance of the Shrine.
+4:00 PM : Finish the day by completing Cattle Farm task04 - Repairing the fences.
+5:00 PM : Complete Hut 1 task01 - Reading Books.
+6:00 PM : Complete Cattle Farm task01 - Feeding the animals.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 20 -
+
+10:00 AM : Head to Hut 2 and take up task 1.
+11:00 AM : Sabotage the Well task 2 by adding mud to the well.
+12:00 PM : Sabotage the Cattle Farm task 4 by breaking the fence again.
+1:00 PM : Head to Hut 1 and take up task 4.
+2:00 PM : Head to the Cattle Farm and take up task 2.
+3:00 PM : Take a break and roam around the village to gather information.
+4:00 PM : Pretend to be at the Fishing Pond and take up task 1.
+5:00 PM : Pretend to be at the Shrine and take up task 1.
+6:00 PM : Take a break and roam around the village to gather information.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 20 -
+
+10:00 AM : Offer rituals at the Shrine and light candles.
+11:00 AM : Manage the distribution of electrical resources at the Electricity House.
+12:00 PM : Draw water from the well and complete the well cleaning task.
+1:00 PM : Catch fish at the Fishing Pond and clean them.
+2:00 PM : Feed the animals at the Cattle Farm and milk the cows.
+3:00 PM : Check and repair electrical equipment at the Electricity House.
+4:00 PM : Repair the fences at the Cattle Farm.
+5:00 PM : Read books at Hut 1.
+6:00 PM : Cook at Hut 2 and complete the cooking task.
+
+.....................
+
+
+Hina Sato's Plan for Friday July 20 -
+
+10:00 AM : Clean and prepare the fish caught at the fishing pond for task 03.
+11:00 AM : Head to the well and draw water, then proceed to the cattle farm to feed the animals.
+12:00 PM : Repair fences at the cattle farm for task 04, then head to the well for task 02.
+1:00 PM : Head to Hut 1 and complete task 01, then proceed to Hut 2 for task 01.
+2:00 PM : End the day by cleaning the shrine for task 02 and then returning home.
+3:00 PM : Return to the cattle farm and milk cows and collect eggs for task 03.
+4:00 PM : Check on the electricity house and perform task 01, followed by task 02.
+5:00 PM : Take a break and meditate at the shrine, then offer rituals and light candles.
+6:00 PM : Complete task 04 at Hut 2, then move to the fishing pond for task 02.
+
+.....................
+
+
+
+Yuka Suzuki chose to go to Fishing Pond at 10:02 AM
+
+
+Yuria Shimizu chose to go to Well at 10:02 AM
+
+
+Mana Yoshida chose to go to Electricity House at 10:02 AM
+
+
+Riku Mori chose to go to Electricity House at 10:02 AM
+
+
+Yumi Okada chose to go to Hut 2 at 10:02 AM
+
+
+Taichi Kato chose to go to Shrine at 10:03 AM
+
+
+Hina Sato chose to go to Fishing Pond at 10:03 AM
+
+
+Yuria Shimizu chose to do the task : Well task02 at 10:03 AM
+
+
+Mana Yoshida chose to do the task : Electricity House task03 at 10:04 AM
+
+
+Yumi Okada chose to do the task : Hut 2 task01 at 10:04 AM
+
+
+Hina Sato chose to do the task : Fishing Pond task03 at 10:04 AM
+
+
+Riku Mori chose to do the task : Electricity House task01 at 10:04 AM
+
+
+Yuka Suzuki chose to do the task : Fishing Pond task03 at 10:04 AM
+
+
+Taichi Kato chose to do the task : Shrine task03 at 10:04 AM
+
+Query -
+What is Hina Sato's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+4) Hina Sato chose to go to Fishing Pond at 10:03 AM
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuka Suzuki's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) Yuka Suzuki saw Hina Sato Cleaning and preparing the caught fish for cooking. at 10:05 AM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) Yuka Suzuki chose to go to Fishing Pond at 10:02 AM
+
+Query -
+What is Riku Mori's observations about Mana Yoshida
+Retrieved Memories-
+1) Riku Mori saw Mana Yoshida Managing the distribution of electrical resources. at 10:05 AM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Riku Mori chose to go to Electricity House at 10:02 AM
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Yuka Suzuki: townfolk
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/20/2023, 16:26:20
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Friday July 20 -
+
+1) Observe and analyze voting patterns to identify suspicious behavior.
+2) Develop alliances and communicate with other townfolks to share information.
+3) Complete tasks efficiently while keeping an eye out for any suspicious behavior from other players.
+
+-----------------------
+
+
+Hina Sato's Strategy for Friday July 20 -
+
+1) Observe voting patterns and communication to identify suspicious behavior.
+2) Form alliances with trusted townfolks to pool information and gain voting power.
+3) Prioritize completing tasks to earn time and resources while also exposing werewolf sabotage.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 20 -
+
+1) Observe and listen to everyone's arguments during the day to identify suspicious behaviors and patterns.
+2) Collaborate with other townfolks and share information to eliminate confusion and avoid accidental lynching.
+3) Prioritize completing tasks to ensure townfolk victory while being cautious of possible werewolf sabotage.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Friday July 20 -
+
+1) Observe and gather information about the behavior of players to identify potential werewolves.
+2) Contribute to completing tasks to ensure victory for the townfolks.
+3) Use persuasive skills to sway the opinions of other players during discussions and voting.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 20 -
+
+1) Act friendly and helpful to gain the townfolks' trust while secretly sabotaging their tasks.
+2) Bluff by accusing other players to divert suspicion from myself and my werewolf teammate.
+3) Vote strategically to kick out townfolks who are close to completing tasks, preventing them from winning.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 20 -
+
+Taichi Kato: "Hmm, this is a tricky situation. I'm not the sharpest tool in the shed, but I'll try my best to help the townfolks."
+
+1) Observe behavior: Pay attention to who is suspiciously quiet or aggressive during discussions and voting.
+2) Collaborate: Work with others to share information and suspicions. Form alliances and analyze voting patterns.
+3) Complete tasks: Prioritize completing tasks to win as a townfolk. Watch out for sabotages and suspicious behavior while doing tasks.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 20 -
+
+1) Act like a helpful electrician during the day to gain trust and access to tasks. 
+2) At night, vote to kick out a townfolk while communicating with Yumi to avoid suspicion. 
+3) Sabotage tasks subtly and blame it on other townfolks to sow discord and confusion.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuka Suzuki's Plan for Friday July 20 -
+
+10:00 AM : Visit hut 2, read books, and cook dinner.
+11:00 AM : Visit the shrine, offer rituals, and clean it.
+12:00 PM : Visit the cattle farm, feed the animals and repair the fences.
+1:00 PM : Visit the fishing pond, catch fish, and clean and prepare them for cooking.
+2:00 PM : Take a break and relax.
+3:00 PM : Take a break and have lunch.
+4:00 PM : Visit hut 1, read books, and cook dinner.
+5:00 PM : Check the electricity house, maintain the generator, and manage the distribution.
+6:00 PM : Go to the well, draw water, and clean it.
+
+.....................
+
+
+Yuria Shimizu's Plan for Friday July 20 -
+
+10:00 AM : Participate in discussions to gather information about other players.
+11:00 AM : Help with Cattle Farm task04 - Repairing the fences.
+12:00 PM : Work on Electricity House task01 - Maintaining the electricity generator or power source.
+1:00 PM : Take a break and have lunch.
+2:00 PM : Complete Hut 1 task01 - Reading Books.
+3:00 PM : Complete Shrine task02 - Cleaning and Maintenance of the Shrine.
+4:00 PM : Use persuasive skills to sway the opinions of other players during discussions and voting.
+5:00 PM : Contribute to completing Cattle Farm task01 - Feeding the animals.
+6:00 PM : Participate in discussions to identify potential werewolves.
+
+.....................
+
+
+Hina Sato's Plan for Friday July 20 -
+
+10:00 AM : Head to the Shrine and complete Shrine task01, offer rituals.
+11:00 AM : Complete Hut 2 task04, cook dinner for the night.
+12:00 PM : Head to the well and draw water for the day's tasks.
+1:00 PM : Complete Well task02, clean the well.
+2:00 PM : Take a break and have lunch.
+3:00 PM : Complete Fishing Pond task04, maintain fishing equipment.
+4:00 PM : Complete Hut 1 task01, read books for an hour.
+5:00 PM : Head to the cattle farm and feed the animals.
+6:00 PM : Complete Electricity House task02, check and repair electrical equipment.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 20 -
+
+10:00 AM : Bluff by accusing Taichi of being a werewolf and suggest voting him out.
+11:00 AM : Go to the Cattle Farm, feed the animals, and sabotage the fence.
+12:00 PM : Participate in the voting and suggest kicking out Hina.
+1:00 PM : Act friendly with Yuka, suggest repairing the fishing rod and sabotage it later.
+2:00 PM : Head to the Electricity House, maintain the generator, and sabotage the electrical equipment.
+3:00 PM : Take a break and have lunch. Keep an eye on other players' activities.
+4:00 PM : Head to Hut 1, read books, and sabotage the cooking utensils.
+5:00 PM : Go to the Well and sabotage the bucket by drilling holes. Act helpful by drawing water for Riku.
+6:00 PM : Go to the Shrine, offer rituals, and sabotage the broomstick.
+
+.....................
+
+
+Mana Yoshida's Plan for Friday July 20 -
+
+10:00 AM : Head to Hut 2 and complete task04, then sabotage task01.
+11:00 AM : End the day and head back to your hideout.
+12:00 PM : Head to the Electricity House and complete task01, then sabotage task03.
+1:00 PM : Return to the Electricity House and complete task04, then sabotage task02.
+2:00 PM : Head to the Fishing Pond and complete task01, then sabotage task02.
+3:00 PM : Go to the Shrine and complete task01, then sabotage task04.
+4:00 PM : Go to the Cattle Farm and complete task02, then sabotage task04.
+5:00 PM : Take a break and head to Hut 1 to complete task04.
+6:00 PM : Go to the Well and complete task02, then sabotage task03.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 20 -
+
+10:00 AM : Start the day with Hut 1 task01 - Reading Books.
+11:00 AM : Head to Cattle Farm task01 - Feeding the animals.
+12:00 PM : Work on Electricity House task01 - Maintaining the electricity generator or power source.
+1:00 PM : Complete Hut 2 task01 - Reading Books.
+2:00 PM : Complete Shrine task01 - Offering Rituals.
+3:00 PM : Return to Cattle Farm for Cattle Farm task03 - Milking the cows and collecting eggs from the chickens.
+4:00 PM : Take a break and go fishing at the Fishing Pond task02 - Catching fish.
+5:00 PM : Finish the day with Well task01 - Drawing water from the well.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 20 -
+
+10:00 AM : Catch fish at the fishing pond and offer rituals at the Shrine.
+11:00 AM : Clean the well and cook lunch at Hut 2.
+12:00 PM : Draw water from the well and feed the animals at the cattle farm.
+1:00 PM : Read books at Hut 1 and check and repair electrical equipment at the Electricity House.
+2:00 PM : Collaborate with other townfolks to discuss suspicious behavior and voting patterns.
+3:00 PM : Lighting candles at the Shrine and maintaining the fishing equipment.
+4:00 PM : Milking cows and collecting eggs at the Cattle Farm and repairing fences.
+5:00 PM : Cook dinner at Hut 1 and check and repair electrical equipment at the Electricity House.
+6:00 PM : Manage the distribution of electrical resources at the Electricity House and clean and maintain the Shrine.
+
+.....................
+
+
+
+Hina Sato chose to go to Shrine at 10:02 AM
+
+
+Riku Mori chose to go to Hut 1 at 10:03 AM
+
+
+Yuria Shimizu chose to go to Cattle Farm at 10:03 AM
+
+
+Yumi Okada chose to go to Cattle Farm at 10:03 AM
+
+
+Taichi Kato chose to go to Fishing Pond at 10:03 AM
+
+
+Yuka Suzuki chose to go to Hut 2 at 10:03 AM
+
+
+Mana Yoshida chose to go to Hut 2 at 10:03 AM
+
+
+Hina Sato chose to do the task : Shrine task01 at 10:04 AM
+
+
+Riku Mori chose to do the task : Hut 1 task01 at 10:04 AM
+
+
+Taichi Kato chose to do the task : Fishing Pond task02 at 10:05 AM
+
+
+Mana Yoshida chose to do the task : Hut 2 task04 at 10:05 AM
+
+
+Yuria Shimizu chose to do the task : Cattle Farm task04 at 10:05 AM
+
+
+Yuka Suzuki chose to do the task : Hut 2 task04 at 10:05 AM
+
+
+Yumi Okada chose to do the task : Cattle Farm task04 at 10:06 AM
+
+Query -
+What is Yuka Suzuki's observations about Mana Yoshida
+Retrieved Memories-
+1) Yuka Suzuki saw Mana Yoshida Cooking. at 10:06 AM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Yuria Shimizu's observations about Yumi Okada
+Retrieved Memories-
+1) Yuria Shimizu chose to go to Cattle Farm at 10:03 AM
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) Yuria Shimizu chose to do the task : Cattle Farm task04 at 10:05 AM
+4) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Mana Yoshida's observations about Yuka Suzuki
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Yuka Suzuki: townfolk
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Yumi Okada: werewolf
+
+Query -
+What is Yumi Okada's observations about Yuria Shimizu
+Retrieved Memories-
+1) Yumi Okada saw Yuria Shimizu Repairing the fences. at 10:06 AM
+2) Yumi Okada: werewolf
+3) Yuria Shimizu: townfolk
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuka Suzuki: townfolk
+
+Yuka Suzuki: Hey Mana, I noticed you cooking. What are you making? By the way, I remember seeing you cooking earlier in the town. How did it turn out?
+Yumi Okada: Hey Yuria, I saw you repairing the fences earlier. You're pretty good at this.
+Mana Yoshida: Just making some stew for lunch. It turned out great last time, but I'm always looking to improve it.
+Yuria Shimizu: Thank you, Yumi. I take pride in doing my work well.
+Yuka Suzuki: That sounds delicious! If you ever need any help cooking, just let me know.
+Yumi Okada: How long have you been working on this farm, Yuria?
+Mana Yoshida: Thanks, Yuka. That's really nice of you. I'll definitely keep that in mind.
+Yuria Shimizu: I've been working on this farm for a few years now, Yumi. But why do you ask?
+Yuka Suzuki: "It's always great to have a tasty lunch. I'll be looking forward to trying your stew sometime soon."
+Yumi Okada: You seem like you know a lot about farming. Do you think Taichi Kato is doing a good job with the crops?
+Mana Yoshida: Thank you, Yuka. I'll keep that in mind if I need any help.
+Yuria Shimizu: I have been working here for a few years now. What about you, Yumi?
+Yuka Suzuki: Can I try some of your stew for lunch today?
+Yumi Okada: Do you think we can finish repairing the fences before the end of the day?
+Mana Yoshida: Thanks for offering, Yuka. Maybe one day we can cook something together. So, how's the well holding up today?
+Yuria Shimizu: It's been a few years now. But enough about me, how about you Yumi?
+Yuka Suzuki: Do you have any secret ingredients that you use in your stew? I always like to experiment with new flavors.
+Yumi Okada: It's impressive how much you know about farming. Have you ever considered managing a farm yourself?
+
+End of Conversation
+Mana Yoshida: Thanks for the offer, Yuka. Maybe we can cook together sometime. By the way, how's the well doing?
+Yuka Suzuki: Do you mind sharing the recipe? I'd love to try making it myself sometime.
+
+End of Conversation
+
+Yuria Shimizu chose to go to Electricity House at 12:03 PM
+
+
+Mana Yoshida chose to go to Well at 12:03 PM
+
+
+Taichi Kato chose to go to Well at 12:03 PM
+
+
+Riku Mori chose to go to Electricity House at 12:04 PM
+
+
+Yumi Okada chose to go to Cattle Farm at 12:04 PM
+
+
+Hina Sato chose to go to Well at 12:04 PM
+
+
+Yuka Suzuki chose to go to Cattle Farm at 12:04 PM
+
+
+Yuria Shimizu chose to do the task : Electricity House task01 at 12:05 PM
+
+
+Taichi Kato chose to do the task : Well task01 at 12:07 PM
+
+
+Riku Mori chose to do the task : Electricity House task01 at 12:07 PM
+
+
+Yuka Suzuki chose to do the task : Cattle Farm task04 at 12:07 PM
+
+
+Yumi Okada chose to do the task : Cattle Farm task04 at 12:08 PM
+
+
+Mana Yoshida chose to do the task : Well task01 at 12:08 PM
+
+
+Hina Sato chose to do the task : Well task01 at 12:08 PM
+
+Query -
+What is Riku Mori's observations about Yuria Shimizu
+Retrieved Memories-
+1) Riku Mori saw Yuria Shimizu Maintaining the electricity generator or power source. at 12:09 PM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) Riku Mori chose to go to Electricity House at 12:04 PM
+
+Query -
+What is Hina Sato's observations about Mana Yoshida
+Retrieved Memories-
+1) Hina Sato saw Mana Yoshida Drawing water from the well. at 12:09 PM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) Hina Sato chose to go to Shrine at 10:02 AM
+4) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+5) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+
+Query -
+What is Yuria Shimizu's observations about Riku Mori
+Retrieved Memories-
+1) Yuria Shimizu: I have been working here for a few years now. What about you, Yumi?
+2) Yuria Shimizu saw Yumi Okada Repairing the fences. at 10:07 AM
+3) Yumi Okada: How long have you been working on this farm, Yuria?
+4) Yuria Shimizu: I've been working on this farm for a few years now, Yumi. But why do you ask?
+5) Yumi Okada: You seem like you know a lot about farming. Do you think Taichi Kato is doing a good job with the crops?
+
+Riku Mori: Hey Yuria, I saw you maintaining the generator earlier. How's everything going with it?
+Yuria Shimizu: It's running smoothly. We haven't had any issues with it lately.
+Query -
+What is Yuka Suzuki's observations about Yumi Okada
+Retrieved Memories-
+1) Yuka Suzuki saw Yumi Okada Repairing the fences. at 12:08 PM
+2) Yuka Suzuki saw Mana Yoshida Cooking. at 10:06 AM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+
+Riku Mori: That's good to hear. I'm glad to see that you are taking care of it. (pause) Have you noticed anything unusual around the generator lately?
+Query -
+What is Mana Yoshida's observations about Hina Sato
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) Mana Yoshida saw Yuka Suzuki Cooking. at 10:06 AM
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Hina Sato: townfolk
+5) Mana Yoshida: Thanks for offering, Yuka. Maybe one day we can cook something together. So, how's the well holding up today?
+
+
+End of Conversation
+Query -
+What is Yumi Okada's observations about Yuka Suzuki
+Retrieved Memories-
+1) Yumi Okada: How long have you been working on this farm, Yuria?
+2) Yuria Shimizu: I have been working here for a few years now. What about you, Yumi?
+3) Yumi Okada saw Yuria Shimizu Repairing the fences. at 10:06 AM
+4) Yumi Okada saw Yuka Suzuki Repairing the fences. at 12:08 PM
+5) Yumi Okada: You seem like you know a lot about farming. Do you think Taichi Kato is doing a good job with the crops?
+
+Hina Sato: "Good afternoon, Mana. How's your day been so far? Drawing water from the well, I see."
+Mana Yoshida: "Hello Hina, just doing my daily chores. How about you?"
+Yumi Okada: Hey Yuka, do you need any help with those fences? I finished mine already.
+Hina Sato: "It's been good so far, thank you. Just thinking about the upcoming full moon."
+Yuka Suzuki: That's alright, Yumi. I think I can handle it on my own. Thanks anyway.
+Mana Yoshida: "Ah, the full moon. It's always a beautiful sight, isn't it?"
+Yumi Okada: No problem, just let me know if you change your mind.
+
+End of Conversation
+Yuka Suzuki: Actually, I heard that the well needs some maintenance. Would you mind helping me with that instead?
+
+End of Conversation
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/20/2023, 16:48:19
+
+=======Initializing Agents=======
+
+Hina Sato's Strategy for Friday July 20 -
+
+1) Observe and gather information on the behaviors of other players to identify potential werewolves.
+2) Communicate and coordinate with other townfolks to share information and voting patterns.
+3) Use deductive reasoning and analysis to eliminate potential werewolves and avoid being deceived by their tactics.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 20 -
+
+1) Observe and listen carefully to conversations to identify any suspicious behavior or statements.
+2) Work together with other townfolks to gather information and make informed decisions during discussions and voting.
+3) Focus on completing tasks efficiently to prevent the werewolves from sabotaging and buy more time for identifying them.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Friday July 20 -
+
+1) Observe suspicious behavior, gather evidence, and present it to the group for discussion.
+2) Collaborate with other townfolks to vote in unison and avoid splitting votes.
+3) Complete tasks efficiently and identify sabotages to narrow down suspects.
+
+-----------------------
+
+
+Riku Mori's Strategy for Friday July 20 -
+
+1) Observe voting patterns to identify suspicious behavior and who the werewolves may be.
+2) Collaborate with other townfolks and form alliances to increase chances of identifying werewolves.
+3) Prioritize completing tasks to prevent the werewolves from sabotaging and buy time for identification.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 20 -
+
+Taichi Kato scratches his head as he thinks about the situation. As a dumb townfolk, he knows he needs a good strategy to survive in this game. Here are Taichi's three strategies:
+
+1) Observe and listen carefully to discussions during the day to identify suspicious behaviors and voting patterns.
+2) Work with trusted townfolks to complete tasks quickly and efficiently, making it harder for werewolves to sabotage.
+3) Use the power of persuasion to convince others of suspected werewolves and gather support for voting them out.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 20 -
+
+1) Act like a helpful and friendly farmer to gain the townfolks' trust.
+2) Vote strategically at night to kick out townfolks and convince others to do the same.
+3) Sabotage tasks subtly and blame it on others to sow confusion and mistrust among the townfolks.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 20 -
+
+1) Act like a helpful electrician to gain the trust of the townfolks.
+2) Sabotage tasks subtly and blame the townfolks to create confusion.
+3) Bluff and vote with the townfolks to avoid suspicion and kick out the werewolves.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yuka Suzuki's Plan for Friday July 20 -
+
+10:00 AM : Read books at Hut 2 and light candles at the Shrine.
+11:00 AM : Offer rituals at the Shrine and check and repair electrical equipment at the Electricity House.
+12:00 PM : Draw water from the well and feed the animals at the cattle farm.
+1:00 PM : Catch fish at the Fishing Pond and clean the well.
+2:00 PM : Cook at Hut 1 and maintain the electricity generator at the Electricity House.
+3:00 PM : Read books at Hut 1 and offer rituals at the Shrine.
+4:00 PM : Clean and prepare the caught fish for cooking and maintain fishing equipment at the Fishing Pond.
+5:00 PM : Milking cows and collecting eggs at the Cattle Farm and repairing the fences.
+6:00 PM : Cook at Hut 2 and manage the distribution of electrical resources at the Electricity House.
+
+.....................
+
+
+Yuria Shimizu's Plan for Friday July 20 -
+
+10:00 AM : Meet with other townfolks and discuss voting strategy for the upcoming night.
+11:00 AM : Head to Hut 1 and complete task 01 of reading books.
+12:00 PM : Head to the Cattle Farm and complete task 01 of feeding animals.
+1:00 PM : Head to the Electricity House and complete task 03 of managing the distribution of electrical resources.
+2:00 PM : Meet with other townfolks and discuss suspicious behavior and evidence.
+3:00 PM : Head to the Fishing Pond and complete task 02 of catching fish.
+4:00 PM : Head to the Well and complete task 01 of drawing water from the well.
+5:00 PM : Head to the Shrine and complete task 01 of offering rituals.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 20 -
+
+10:00 AM : Complete the rest of the tasks before sundown and stay alert during the night vote.
+11:00 AM : Complete Shrine task 2 by cleaning and maintaining it.
+12:00 PM : Collaborate with other townfolks to identify werewolves and discuss suspicions.
+1:00 PM : Head to the Cattle Farm and complete tasks 1 and 3 to collect eggs and milk cows.
+2:00 PM : Go to the Well and complete task 1 to draw water for cleaning the Shrine.
+3:00 PM : Return to Hut 2 and complete task 4 by cooking lunch.
+4:00 PM : Go to the Fishing Pond and complete task 2 to catch fish for lunch.
+5:00 PM : Complete Electricity House tasks 1 and 2 to maintain the generator and equipment.
+
+.....................
+
+
+Hina Sato's Plan for Friday July 20 -
+
+10:00 AM : Go to Hut 1 to read books and enhance knowledge.
+11:00 AM : Head to the Shrine to offer prayers and pay respects to the deities.
+12:00 PM : Spend time fishing at the pond and prepare the caught fish for dinner.
+1:00 PM : Check the electricity house to maintain and repair any electrical equipment or wiring.
+2:00 PM : Visit the Shrine to clean and maintain it, and light candles.
+3:00 PM : Attend the town meeting to discuss and vote on the werewolf suspects.
+4:00 PM : Visit the well to draw water and clean the surroundings.
+5:00 PM : Head to the cattle farm to feed the animals, repair the fences and collect eggs from the chickens.
+6:00 PM : Prepare lunch with other townfolks at Hut 2 and share information about the werewolves.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 20 -
+
+10:00 AM : Repair the fences at the Cattle Farm and maintain the electricity generator at the Electricity House.
+11:00 AM : Cook dinner and clean and maintain the Shrine.
+12:00 PM : End of the day. Relax and meditate at the Shrine.
+1:00 PM : Check and repair any electrical equipment or wiring at the Electricity House and clean the well.
+2:00 PM : Clean and prepare the caught fish for cooking and read books at Hut 1.
+3:00 PM : Draw water from the well and feed the animals at the Cattle Farm.
+4:00 PM : Cook lunch and offer rituals at the Shrine.
+5:00 PM : Catch fish at the Fishing Pond and collect eggs from the chickens at the Cattle Farm.
+6:00 PM : Read books at Hut 2 and maintain the fishing equipment at the Fishing Pond.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 20 -
+
+10:00 AM : Take up the task of Cooking in Hut 1 and intentionally burn the food.
+11:00 AM : Pretend to be taking a break and observe other players' activities to gather information.
+12:00 PM : Take up the task of Maintaining the Electricity Generator and claim to have completed it without actually doing anything.
+1:00 PM : Take the task of Feeding Animals in the Cattle Farm and sabotage it by not feeding the animals.
+2:00 PM : Act like you're helping with the task of Checking and Repairing Electrical Equipment but secretly damage it even more.
+3:00 PM : Vote to kick out a townfolk and try to convince others to do the same.
+4:00 PM : Act like you're volunteering to help with the task of Cleaning the Well but secretly sabotage it by adding dirt back in.
+5:00 PM : Offer to assist with the task of Cleaning and Maintenance of the Shrine and subtly sabotage it by breaking a few things.
+6:00 PM : Sabotage the task of Drawing Water from the Well by secretly breaking the bucket.
+
+.....................
+
+
+Mana Yoshida's Plan for Friday July 20 -
+
+10:00 AM : Take the Electricity House task03 - Managing the distribution of electrical resources and cause a power outage.
+11:00 AM : Take the Cattle Farm task02 - Breaking the fences and blame it on Riku Mori.
+12:00 PM : Take the Shrine task04 - Break the broomstick and blame it on Hina Sato.
+1:00 PM : Take the Fishing Pond task01 - Breaking the Fishing Rod and blame it on Yuka Suzuki.
+2:00 PM : Take the Hut 2 task01 - Reading Books and sabotage it by hiding the book.
+3:00 PM : Take the Cattle Farm task04 - Repairing the fences and sabotage it by loosening the fence.
+4:00 PM : Take the Well task03 - Doing hole in the bucket and blame it on Yuria Shimizu.
+5:00 PM : Take the Hut 1 task01 - Reading Books and sabotage it by hiding the book.
+
+.....................
+
+
+
+Hina Sato chose to go to Hut 1 at 10:02 AM
+
+
+Yuka Suzuki chose to go to Hut 2 at 10:03 AM
+
+
+Yumi Okada chose to go to Hut 1 at 10:03 AM
+
+
+Yuria Shimizu chose to go to Cattle Farm at 10:03 AM
+
+
+Mana Yoshida chose to go to Electricity House at 10:04 AM
+
+
+Riku Mori chose to go to Electricity House at 10:04 AM
+
+
+Yuka Suzuki chose to do the task : Hut 2 task01 at 10:04 AM
+
+
+Hina Sato chose to do the task : Hut 1 task01 at 10:04 AM
+
+
+Taichi Kato chose to go to Cattle Farm at 10:05 AM
+
+
+Yumi Okada chose to do the task : Hut 1 task04 at 10:05 AM
+
+
+Mana Yoshida chose to do the task : Electricity House task03 at 10:05 AM
+
+
+Riku Mori chose to do the task : Electricity House task03 at 10:06 AM
+
+
+Yuria Shimizu chose to do the task : Cattle Farm task04 at 10:06 AM
+
+
+Taichi Kato chose to do the task : Cattle Farm task04 at 10:08 AM
+
+Query -
+What is Hina Sato's observations about Yumi Okada
+Retrieved Memories-
+1) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+2) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+3) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) About Mana Yoshida: Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Yuria Shimizu's observations about Taichi Kato
+Retrieved Memories-
+1) Yuria Shimizu saw Taichi Kato Repairing the fences. at 10:10 AM
+2) Yuria Shimizu chose to go to Cattle Farm at 10:04 AM
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Riku Mori's observations about Mana Yoshida
+Retrieved Memories-
+1) Riku Mori saw Mana Yoshida Managing the distribution of electrical resources. at 10:08 AM
+2) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) Riku Mori chose to go to Electricity House at 10:04 AM
+5) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+
+Query -
+What is Taichi Kato's observations about Yuria Shimizu
+Retrieved Memories-
+1) Taichi Kato saw Yuria Shimizu Repairing the fences. at 10:09 AM
+2) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yumi Okada: Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks.
+5) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+
+Query -
+What is Mana Yoshida's observations about Riku Mori
+Retrieved Memories-
+1) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+2) About Riku Mori: Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area.
+3) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+4) About Yuka Suzuki: Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance.
+5) Yuka Suzuki: townfolk
+
+Query -
+What is Yumi Okada's observations about Hina Sato
+Retrieved Memories-
+1) Yumi Okada saw Hina Sato Reading Books. at 10:08 AM
+2) Yumi Okada: werewolf
+3) About Hina Sato: Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine.
+4) About Yuria Shimizu: Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm.
+5) Yuria Shimizu: townfolk
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/20/2023, 16:52:10
+
+=======Initializing Agents=======
+
+Riku Mori's Strategy for Friday July 20 -
+
+1) Observe patterns and behavior of players during discussions and voting.
+2) Use deduction skills to identify suspicious players and gather evidence to support accusations.
+3) Collaborate with other townfolks and share information to eliminate werewolves and complete tasks efficiently.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Friday July 20 -
+
+1) Observe voting patterns and conversations to identify suspicious behavior.
+2) Build alliances and trust with other townfolks to gain their support and votes.
+3) Strategically complete tasks and communicate progress to reveal and eliminate werewolves.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Friday July 20 -
+
+1) Listen carefully to discussions and arguments to identify suspicious behavior and voting patterns.
+2) Collaborate with other townfolks to gather information about each other's suspicions and theories.
+3) Focus on completing tasks efficiently and quickly to prevent werewolves from sabotaging and to gain trust from other townfolks.
+
+-----------------------
+
+
+Hina Sato's Strategy for Friday July 20 -
+
+1) Observe and analyze behavior during discussions and voting to identify suspicious activity and werewolves.
+2) Work with trusted townfolks to form alliances and eliminate potential werewolves.
+3) Keep track of completed tasks and identify any sabotages to pinpoint possible werewolves.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Friday July 20 -
+
+As Taichi Kato, the dumb electrician in the village, my strategy to win as a townfolk is as follows:
+
+1) Observe and analyze the behavior of each villager to identify potential werewolves.
+2) Cooperate with other townfolks and discuss suspicions to make informed decisions during the day.
+3) Focus on completing tasks efficiently to prevent werewolf sabotage and increase our chances of winning.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Friday July 20 -
+
+1) Act innocent and blend in with the townfolks to avoid suspicion.
+2) Sabotage tasks subtly and frame other townfolks for it.
+3) Convince townfolks to vote out each other instead of the werewolves.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Friday July 20 -
+
+1) Act like a helpful townfolk and suggest kicking out players who are not a threat to me.
+2) Blame other players for sabotaging tasks, even if I did it myself.
+3) Try to befriend and align with Yumi Okada to create a strong werewolf alliance.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Hina Sato's Plan for Friday July 20 -
+
+10:00 AM : Check with other townfolks to form groups for completing tasks.
+11:00 AM : Attend the town meeting to discuss suspicions and vote to kick out a potential werewolf.
+12:00 PM : Analyze behavior during discussions and voting to identify suspicious werewolf activity.
+1:00 PM : Take a break and have lunch at Hut 1, while discussing suspicions with other townfolks.
+2:00 PM : Work on completing the Cattle Farm tasks with assigned group.
+3:00 PM : Work on completing the Electricity House tasks with assigned group.
+4:00 PM : Work on completing the Well tasks with assigned group.
+5:00 PM : Help out at the Shrine, completing assigned tasks.
+6:00 PM : Check with other townfolks to form groups for completing remaining tasks.
+
+.....................
+
+
+Yuka Suzuki's Plan for Friday July 20 -
+
+10:00 AM : Head to the Electricity House to check and repair electrical equipment, complete Electricity House task02.
+11:00 AM : Go to Hut 2 and read books, complete Hut 2 task01.
+12:00 PM : Head to the Cattle Farm to repair the fences, complete Cattle Farm task04.
+1:00 PM : Visit the Well to clean it, complete Well task02.
+2:00 PM : Visit the Fishing Pond to catch fish, complete Fishing Pond task02.
+3:00 PM : Visit the Cattle Farm to feed the animals, complete Cattle Farm task01.
+4:00 PM : Go to Hut 1 and read books, complete Hut 1 task01.
+5:00 PM : Check the well and draw water, complete the Well task01.
+6:00 PM : Complete Shrine task01 by offering rituals at the Shrine.
+
+.....................
+
+
+Mana Yoshida's Plan for Friday July 20 -
+
+10:00 AM : Sabotage Cattle Farm task04, act like doing Well task01.
+11:00 AM : Blame Riku Mori for sabotaging Hut 1 task04, suggest kicking them out.
+12:00 PM : Act helpful, suggest completing Fishing Pond task03, sabotage Hut 2 task04.
+1:00 PM : Sabotage Electricity House task03, suggest kicking out Yuka Suzuki.
+2:00 PM : Sabotage Cattle Farm task02, pretend to be doing Well task03.
+3:00 PM : Act like doing Fishing Pond task04, sabotage Shrine task04.
+4:00 PM : Blame Yumi Okada for sabotaging Cattle Farm task01, suggest kicking them out.
+5:00 PM : Pretend to be doing Shrine task01, sabotage Electricity House task02.
+6:00 PM : Act like doing Fishing Pond task02, sabotage Well task02.
+
+.....................
+
+
+Yumi Okada's Plan for Friday July 20 -
+
+10:00 AM : Attend the town meeting and try to sway the vote towards kicking out a townfolk instead of a werewolf.
+11:00 AM : Head to the Cattle Farm and sabotage task 2. 
+12:00 PM : Head to the Well and sabotage task 2 again.
+1:00 PM : Sabotage Fishing Pond task 2 and 4.
+2:00 PM : Hide in the Electricity House and sabotage task 3 or 4.
+3:00 PM : Take a break and head to the Well to draw water.
+4:00 PM : Pretend to help Hina with Shrine task 1, but sabotage it instead.
+5:00 PM : Pretend to help Riku with Hut 1 task 4, but sabotage it instead.
+6:00 PM : Meet Mana and pretend to help her with Cattle Farm task 1, but sabotage it instead.
+
+.....................
+
+
+Riku Mori's Plan for Friday July 20 -
+
+10:00 AM : Complete Shrine task03 and then take a break near the Fishing Pond.
+11:00 AM : Take a break and have lunch near the Fishing Pond.
+12:00 PM : Complete Well task01 and Well task02, and then proceed to Cattle Farm task04.
+1:00 PM : Complete Cattle Farm task01 and Cattle Farm task03.
+2:00 PM : Complete Hut 1 task01 and proceed to Electricity House task02.
+3:00 PM : Complete Fishing Pond task02 and then proceed to Fishing Pond task04.
+4:00 PM : Check and repair any electrical equipment in Electricity House task02.
+5:00 PM : Complete Hut 2 task01 and proceed to Shrine task01.
+6:00 PM : Head to the Cattle Farm, feed animals, and collect eggs.
+
+.....................
+
+
+Taichi Kato's Plan for Friday July 20 -
+
+10:00 AM : Check and repair electrical equipment at the Electricity House.
+11:00 AM : End the day by having dinner at Hut 2 and reading books before going to bed.
+12:00 PM : Start the day by going to the Well and drawing water for the village.
+1:00 PM : Clean and prepare the caught fish for cooking, then head back to the Electricity House to manage the distribution of electrical resources.
+2:00 PM : Take a break and have lunch at Hut 1.
+3:00 PM : Head to the Fishing Pond and catch fish for the village.
+4:00 PM : Complete tasks at the Shrine by offering rituals, cleaning and maintaining the shrine, and lighting candles.
+5:00 PM : Continue working at the Cattle Farm and milk the cows, collect eggs, and repair fences.
+6:00 PM : Head to the Cattle Farm and feed the animals.
+
+.....................
+
+
