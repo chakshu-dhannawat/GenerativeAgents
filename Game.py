@@ -309,6 +309,7 @@ class Game:
 
     self.choose_sheriff = False
     self.agent_sheriff = None
+    self.chooseSheriff()
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     self.HoverBox_agents = {}
     self.reset()
@@ -524,7 +525,8 @@ class Game:
     # self.agents[kick] = self.agent_sheriff
 
     if self.agents[kick].sheriff:
-      self.choose_sheriff = True
+      threadSheriff = threading.Thread(target=self.chooseSheriff)
+      threadSheriff.start()
 
     threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been eliminated by the Werewolves on {calendar.day} during the Night Phase",))
     threadObs.start()
@@ -657,7 +659,8 @@ class Game:
 
       #If sheriff is kicked
       if self.agents[kick].sheriff:
-         self.choose_sheriff = True
+        threadSheriff = threading.Thread(target=self.chooseSheriff)
+        threadSheriff.start()
 
       self.farewell = True
       self.killing = True
@@ -1135,12 +1138,9 @@ class Game:
       time.sleep(3)  
 
   def new_sheriff_choose(self) :
-      if(not self.choose_sheriff): return
+      if(not self.choose_sheriff or self.agent_sheriff is None): return
       self.win.blit(self.black_bg,(0,0))
-
-      new_sheriff = self.chooseSheriff()   # TODO: Pass query to self.agent_sheriff
-      text_surface = font2.render(f"{new_sheriff.name} was chosen as the new Sheriff", True, WHITE)
-      self.agent_sheriff = new_sheriff
+      text_surface = font2.render(f"{self.agent_sheriff.name} was chosen as the new Sheriff", True, WHITE)
       text_rect = text_surface.get_rect()
       text_rect.centerx = WIN_WIDTH // 2
       text_rect.centery = WIN_HEIGHT // 2
@@ -1474,14 +1474,39 @@ class Game:
 
 
   def chooseSheriff(self):
-    townfolks = []
-    for i, agent in enumerate(self.agents):
+    if(self.agent_sheriff is None):
+      townfolks = []
+      for i, agent in enumerate(self.agents):
+        if self.alive[i] and agent.werewolf == False:
+            townfolks.append(agent)
+      sheriff = random.choice(townfolks)
+      sheriff.sheriff = True
+      self.agent_sheriff = sheriff   
+      return  
+      
+    names = ""
+    j = 1
+    for i in range(self.n):
+      if(not self.alive[i]): continue
+      names = names + f"{j}) {self.names[i]}\n"
+      j += 1
+    names = names[:-1]
 
-      if self.alive[i] and agent.werewolf == False:
-          townfolks.append(agent)
-    sheriff = random.choice(townfolks)
-    sheriff.sheriff = True
-    return sheriff
+    voteName = self.agent_sheriff.brain.query(
+        QUERY_SHERIFF.format(names),name='QUERY_SHERIFF')
+    try:
+      vote = self.names.index(voteName)
+    except:
+      voteName = self.findName(voteName,self.agent_sheriff.name)
+      vote = self.names.index(voteName)
+
+    sheriff = self.agents[vote]
+    sheriff.sheriff = True  
+    log(f"{self.agent_sheriff.name} chose {sheriff.name} to be the next Sheriff")
+
+    self.agent_sheriff = sheriff
+    self.choose_sheriff = True
+
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:

@@ -401,6 +401,18 @@ Given Input Statements:
 Give Output Summary in a maximum of 20 words, focusing on {} and {}.
 """
 
+QUERY_SHERIFF = """You were a sheriff but you have been kicked out of the game - "Warewolves of Miller Hollow"
+Sheriff is a special character in the game, whose vote has a weightage of two.
+In this game, the sheriff who has been kicked needs to necessarily select the next sheriff.
+Now you have to select the next sheriff.
+
+These are the names who can select to be the next sheriff - 
+{}
+
+You need to select exactly one name necessarily.
+
+Format - <name>"""
+
 QUERY_DIALOGUE_INIT = """{} has initiated his conversation with {}. It is {}, {};
 {}'s status: {};
 Observation: {};
