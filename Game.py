@@ -218,8 +218,9 @@ Werewolves Game
 
 class Game:
 
-  def __init__(self, agents, window):
-
+  def __init__(self, agents):
+    pygame.font.init()
+    pygame.init()
     self.names = [agent.name for agent in agents]
     self.ids = {}
     for i,name in enumerate(self.names):
@@ -241,7 +242,8 @@ class Game:
     
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
-    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
+    self.bg_tasktable = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
     self.black_bg = pygame.transform.scale(black_bg, DEFAULT_IMAGE_SIZE)
     # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
@@ -268,8 +270,8 @@ class Game:
     self.bgId = -1
     self.VelFactor = 1
     self.planNow = None
-    # self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
-    self.win = window
+    self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
+    # self.win = None
     pygame.display.set_caption("Werewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
@@ -314,6 +316,11 @@ class Game:
     self.choose_sheriff = False
     self.agent_sheriff = None
     self.chooseSheriff()
+
+    for i in range(self.n):
+        if(self.alive[i]):
+           self.agents[i].remember(f"{self.agent_sheriff.name} was chosen as the new Sheriff")
+
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     self.HoverBox_agents = {}
     self.reset()
@@ -326,15 +333,17 @@ class Game:
     self.scroll_offset = 0
     self.scroll_speed = 10
     self.text_content = ['Transcript of Conversations']*2
+    for i in range(2):
+      self.text_content.append('')
     for i in range(self.n):
       self.agents[i].game = self
     self.tasksDone = 0
     
     self.rememberInit()
 
-    pyautogui.click(500, 500, button='left')
-    time.sleep(0.01)
-    pyautogui.moveTo(pyautogui.size()[0]-1,0)
+    # pyautogui.click(500, 500, button='left')
+    # time.sleep(0.01)
+    # pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
 
   def rememberInit(self):
@@ -454,7 +463,10 @@ class Game:
       self.agents[i].taskReach = False
   
   def nightVote(self):
-
+    # self.text_content.append(" -- -- ")
+    self.text_content.append(" -- NIGHT PHASE -- ")
+    # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     self.threadNight = threading.Thread(target=self.nightVoteContext)
     self.threadNight.start()
     # self.night_phase_show = True
@@ -574,7 +586,10 @@ class Game:
         thread.join()     
 
   def dayVote(self):
-
+    # self.text_content.append(" -- -- ")
+    self.text_content.append(" -- VOTING PHASE -- ")
+    # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     # self.voting_phase_show = True
     self.voting_phase_japanese_show = True
     log("Currently it is Day, the Villagers will lynch someone...\n")
@@ -844,6 +859,11 @@ class Game:
 
   def afternoon(self):
     # self.day_phase_show = True
+
+    # self.text_content.append(" -- -- ")
+    self.text_content.append(" -- MORNING PHASE -- ")
+    # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     self.day_phase_japanese_show = True
     threadPlan = threading.Thread(target=self.generatePlanDay)
     threadPlan.start()   
@@ -922,8 +942,8 @@ class Game:
       time.sleep(5)
       self.run = False
       pygame.quit()
-    if(players[1]>=players[0] or (not self.Night and players[1]>=players[0]-1)):
-      log('\n=== WeREWOLVES WIN ===')
+    if(players[1]>=players[0] or (not self.Night and players[1]>=players[0])):
+      log('\n=== WEREWOLVES WIN ===')
       self.werewolves_win_japanese_show = True
       time.sleep(5)
       self.run = False 
@@ -977,6 +997,7 @@ class Game:
         EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:2])),name='QUERY_GROUPCONV_END'))
         if(conv_n+EndScore>10): break
         history = history + '\n' + reply
+        self.text_content.append(reply)
         curr = 1 - curr
         reply = agents[curr].talk(agents[1-curr].name, reply, '\n'.join(lastFew[:3]), self.contexts[names[curr]][names[1-curr]], conv_n)
         if(reply is None): break
@@ -989,6 +1010,7 @@ class Game:
         agents[curr].isSpeaking = True
         history = history + '\n'
     log("\nEnd of Conversation")
+    self.text_content.append(" -- END OF CONVERSATION -- ")
     self.convs-=1
     agents[0].isSpeaking = False 
     agents[1].isSpeaking = False 
@@ -1076,6 +1098,7 @@ class Game:
           self.changePhase = False
           self.bgId=-1
           self.Night = False
+          self.bg = self.bg_tasktable
       else:
           self.bgId+=1
           self.bg = self.bgs[self.bgId]
@@ -1150,6 +1173,10 @@ class Game:
       if(not self.choose_sheriff or self.agent_sheriff is None): return
       self.win.blit(self.black_bg,(0,0))
       text_surface = font2.render(f"{self.agent_sheriff.name} was chosen as the new Sheriff", True, WHITE)
+
+      for i in range(self.n):
+        if(self.alive[i]):
+           self.agents[i].remember(f"{self.agent_sheriff.name} was chosen as the new Sheriff")
       text_rect = text_surface.get_rect()
       text_rect.centerx = WIN_WIDTH // 2
       text_rect.centery = WIN_HEIGHT // 2
@@ -1204,7 +1231,7 @@ class Game:
         # Split text into words
         words = reply.split()
         for word in words:
-            if len(line.split()) < 10:
+            if len(line.split()) < 8:
                 line += " " + word
             else:
                 text_lines.append(line.strip())
@@ -1225,8 +1252,9 @@ class Game:
       # Blit the visible portion of the text directly onto 'self.win'
       current_y = -self.scroll_offset
       for line in text_lines:
+        text_surface = font.render(line, True, BLACK)
         if current_y > 0 and current_y < 600:
-          text_surface = font.render(line, True, BLACK)
+          
           self.win.blit(text_surface, (image_rect.left+70, image_rect.top+110 + current_y))
         current_y += font.get_linesize()
 
@@ -1440,14 +1468,14 @@ class Game:
       
   def draw_hover_agents(self):
     for key in self.HoverBox_agents:
-      if self.HoverBox_agents[key].hovered and not agentMap[key].inPopup_house1 and not agentMap[key].inPopup_house2:
+      if self.HoverBox_agents[key].hovered and not agentMap[key].inPopup_house1 and not agentMap[key].inPopup_house2 and self.alive[self.ids[key]]:
         self.HoverBox_agents[key].hover_bubble(self.win)
         
   def draw_hover_agents_insidePopup(self,name):
     for key in self.HoverBox_agents:
-      if self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house1 and name == 'Hut 1':
+      if self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house1 and name == 'Hut 1' and self.alive[self.ids[key]]:
         self.HoverBox_agents[key].hover_bubble(self.win)
-      elif self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house2 and name == 'Hut 2':
+      elif self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house2 and name == 'Hut 2' and self.alive[self.ids[key]]:
         self.HoverBox_agents[key].hover_bubble(self.win)
         
   def draw_static_hover(self):
