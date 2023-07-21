@@ -21,6 +21,7 @@ from gtts import gTTS
 from translate import Translator
 import pyautogui
 from HoveringBox import *
+import textwrap
 
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
@@ -77,8 +78,11 @@ Button Assests [POPUP]
 button_font = pygame.font.Font(None, 24)
 button_color = (255, 153, 153) 
 house_popup = pygame.transform.scale(pygame.image.load('Assets/house_popup.png'), HOUSE_POPUP_SIZE)
-hut_button = pygame.transform.scale(pygame.image.load("Assets/button_house.png"), HOUSE_POPUP_SIZE)
+hut_button = pygame.image.load("Assets/button_house.png")
+transcript_button = pygame.image.load("Assets/transcript_button.png")
 hut_button = pygame.transform.scale(hut_button, POPUP_BUTTON_SIZE)
+transcript_button = pygame.transform.scale(transcript_button, POPUP_BUTTON_SIZE)
+
 # Hut 1
 hut1_button_x, hut1_button_y =  LOCATION_MAP['Hut 1']
 # hut1_button_x = hut1_button_x - 50
@@ -89,8 +93,8 @@ hut2_button_x, hut2_button_y =  LOCATION_MAP['Hut 2']
 hut2_button_x = hut2_button_x - 20
 hut2_button_y = hut2_button_y - 50
 
-transcript_button_x , transcript_button_y = (1700, 820)
-transcript_button = hut_button
+transcript_button_x , transcript_button_y = (1800, 40)
+# transcript_button = hut_button
 transcript_popup = pygame.transform.scale(pygame.image.load('Assets/transcript_box_blue.png'), (600, 800))
 
 transcript_bubble_topleft = (1300, 10)
@@ -317,7 +321,11 @@ class Game:
     self.initHover()
 
     self.playBgMusic()  
-
+    
+    # Transcript Code
+    self.scroll_offset = 0
+    self.scroll_speed = 10
+    self.text_content = ['Transcript of Conversations']*2
     for i in range(self.n):
       self.agents[i].game = self
     self.tasksDone = 0
@@ -739,6 +747,7 @@ class Game:
           dialogues += 1
           log(reply)
           history = history + reply
+          self.text_content.append(reply)
           lastFew.append(reply)
           if(len(lastFew)>4): lastFew.pop(0)
           if(dialogues>MaxDialogues): break
@@ -841,7 +850,7 @@ class Game:
     planGen = False   
     first = True
     while True:
-      if(calendar.dt.hour in [2, 14]): break
+      if(calendar.dt.hour in [12]): break
       if(calendar.dt.minute==0 and calendar.dt.hour%2==0):
         now = calendar.time
         if(not planGen):
@@ -1180,7 +1189,50 @@ class Game:
     if(self.transcriptPopup):
       image_rect = transcript_popup.get_rect()
       image_rect.topleft = transcript_bubble_topleft
-      self.win.blit(transcript_popup, image_rect)  
+
+      # text_content_lines = split_text_into_lines(self.text_content)
+
+      font_size = 22  # Desired font size
+      font = pygame.font.Font(None, font_size)
+
+      # Create lines of text with a maximum of 6 words per line
+      text_lines = []
+      
+
+      for reply in self.text_content:
+        line = ""
+        # Split text into words
+        words = reply.split()
+        for word in words:
+            if len(line.split()) < 10:
+                line += " " + word
+            else:
+                text_lines.append(line.strip())
+                line = word
+        text_lines.append(line.strip())
+
+
+      text_height = len(text_lines) * font.get_linesize()  # Calculate the total height of the text
+
+      # Update the scrolling offset to stay within the text boundaries
+      max_scroll = max(0, text_height - transcript_rect_height)
+      self.scroll_offset = max(0, min(self.scroll_offset, max_scroll))
+
+
+      # Blit the transcript_popup image on top of the background surface
+      self.win.blit(transcript_popup, image_rect)
+
+      # Blit the visible portion of the text directly onto 'self.win'
+      current_y = -self.scroll_offset
+      for line in text_lines:
+        if current_y > 0 and current_y < 600:
+          text_surface = font.render(line, True, BLACK)
+          self.win.blit(text_surface, (image_rect.left+70, image_rect.top+110 + current_y))
+        current_y += font.get_linesize()
+
+      
+
+      # self.win.blit(text_rect_surface, image_rect.topleft)
 
   def draw_agent_in_popup(self,name):
     if(name == 'Hut 1'):
@@ -1340,8 +1392,8 @@ class Game:
       #Transcript Window
       button_center3 = (transcript_button_x + button_radius, transcript_button_y + button_radius)
       pygame.draw.circle(self.win, button_color, button_center3, button_radius)
-      hut_button_rect = hut_button.get_rect(center=button_center3)
-      self.win.blit(hut_button, hut_button_rect)
+      transcript_button_rect = transcript_button.get_rect(center=button_center3)
+      self.win.blit(transcript_button, transcript_button_rect)
 
 
 
@@ -1453,6 +1505,11 @@ class Game:
         if event.type == pygame.MOUSEBUTTONDOWN:
           mouse_pos = pygame.mouse.get_pos()
           self.is_button_clicked(mouse_pos)
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 4:
+            self.scroll_offset -= self.scroll_speed
+
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 5:
+            self.scroll_offset += self.scroll_speed
      
         self.handleHovers(event) 
       
