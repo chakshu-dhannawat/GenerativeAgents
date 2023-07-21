@@ -316,6 +316,11 @@ class Game:
     self.choose_sheriff = False
     self.agent_sheriff = None
     self.chooseSheriff()
+
+    for i in range(self.n):
+        if(self.alive[i]):
+           self.agents[i].remember(f"{self.agent_sheriff.name} was chosen as the new Sheriff")
+
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     self.HoverBox_agents = {}
     self.reset()
@@ -328,6 +333,8 @@ class Game:
     self.scroll_offset = 0
     self.scroll_speed = 10
     self.text_content = ['Transcript of Conversations']*2
+    for i in range(2):
+      self.text_content.append('')
     for i in range(self.n):
       self.agents[i].game = self
     self.tasksDone = 0
@@ -456,7 +463,10 @@ class Game:
       self.agents[i].taskReach = False
   
   def nightVote(self):
-
+    # self.text_content.append(" -- -- ")
+    self.text_content.append(" -- NIGHT PHASE -- ")
+    # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     self.threadNight = threading.Thread(target=self.nightVoteContext)
     self.threadNight.start()
     # self.night_phase_show = True
@@ -576,7 +586,10 @@ class Game:
         thread.join()     
 
   def dayVote(self):
-
+    # self.text_content.append(" -- -- ")
+    self.text_content.append(" -- VOTING PHASE -- ")
+    # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     # self.voting_phase_show = True
     self.voting_phase_japanese_show = True
     log("Currently it is Day, the Villagers will lynch someone...\n")
@@ -846,6 +859,11 @@ class Game:
 
   def afternoon(self):
     # self.day_phase_show = True
+
+    # self.text_content.append(" -- -- ")
+    self.text_content.append(" -- MORNING PHASE -- ")
+    # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     self.day_phase_japanese_show = True
     threadPlan = threading.Thread(target=self.generatePlanDay)
     threadPlan.start()   
@@ -979,6 +997,7 @@ class Game:
         EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:2])),name='QUERY_GROUPCONV_END'))
         if(conv_n+EndScore>10): break
         history = history + '\n' + reply
+        self.text_content.append(reply)
         curr = 1 - curr
         reply = agents[curr].talk(agents[1-curr].name, reply, '\n'.join(lastFew[:3]), self.contexts[names[curr]][names[1-curr]], conv_n)
         if(reply is None): break
@@ -991,6 +1010,7 @@ class Game:
         agents[curr].isSpeaking = True
         history = history + '\n'
     log("\nEnd of Conversation")
+    self.text_content.append(" -- END OF CONVERSATION -- ")
     self.convs-=1
     agents[0].isSpeaking = False 
     agents[1].isSpeaking = False 
@@ -1153,6 +1173,10 @@ class Game:
       if(not self.choose_sheriff or self.agent_sheriff is None): return
       self.win.blit(self.black_bg,(0,0))
       text_surface = font2.render(f"{self.agent_sheriff.name} was chosen as the new Sheriff", True, WHITE)
+
+      for i in range(self.n):
+        if(self.alive[i]):
+           self.agents[i].remember(f"{self.agent_sheriff.name} was chosen as the new Sheriff")
       text_rect = text_surface.get_rect()
       text_rect.centerx = WIN_WIDTH // 2
       text_rect.centery = WIN_HEIGHT // 2
@@ -1207,7 +1231,7 @@ class Game:
         # Split text into words
         words = reply.split()
         for word in words:
-            if len(line.split()) < 10:
+            if len(line.split()) < 8:
                 line += " " + word
             else:
                 text_lines.append(line.strip())
@@ -1228,8 +1252,9 @@ class Game:
       # Blit the visible portion of the text directly onto 'self.win'
       current_y = -self.scroll_offset
       for line in text_lines:
+        text_surface = font.render(line, True, BLACK)
         if current_y > 0 and current_y < 600:
-          text_surface = font.render(line, True, BLACK)
+          
           self.win.blit(text_surface, (image_rect.left+70, image_rect.top+110 + current_y))
         current_y += font.get_linesize()
 
