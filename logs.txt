@@ -28834,7 +28834,7 @@ Taichi Kato's Plan for Friday July 20 -
 Yuria Shimizu's Plan for Friday July 20 -
 
 10:00 AM : Complete Well task01 (drawing water) and talk to townfolks near the well to gather information.
-11:00 AM : Head to Cattle Farm for task01 (feeding animals) and observe other townfolksï¿½ behavior.
+11:00 AM : Head to Cattle Farm for task01 (feeding animals) and observe other townfolks’ behavior.
 12:00 PM : Complete Electricity House task02 (checking and repairing electrical equipment) and gather information from other townfolks.
 1:00 PM : Complete Shrine task01 (offering rituals) and talk to other townfolks to gather information.
 2:00 PM : Work on Fishing Pond task02 (catching fish) and keep an eye out for suspicious activities.
@@ -30928,3 +30928,4 @@ Riku Mori chose Yuka Suzuki to be the next Sheriff
 ======= Morning Voting Phase =======
 
 Currently it is Day, the Villagers will lynch someone...
+
