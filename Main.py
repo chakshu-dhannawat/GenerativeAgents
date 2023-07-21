@@ -52,18 +52,6 @@ if(None in agents):
 
 
 
-'''
-====================
-Game Start Button
-====================
-'''
-
-game_start = Game_start()
-
-
-game_start.start()
-
-window = game_start.get_window()
 
 '''
 ====================
@@ -72,13 +60,21 @@ Initializing Game
 '''
 log('\n=======Initializing Game=======\n')
 
-game = Game(agents, window)
+game = Game(agents)
 
 
 
+'''
+====================
+Game Start Button
+====================
+'''
 
+game_start = Game_start(game.win)
 
+game_start.start()
 
+# window = game_start.get_window()
 
 
 '''

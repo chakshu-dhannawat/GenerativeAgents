@@ -218,8 +218,9 @@ Werewolves Game
 
 class Game:
 
-  def __init__(self, agents, window):
-
+  def __init__(self, agents):
+    pygame.font.init()
+    pygame.init()
     self.names = [agent.name for agent in agents]
     self.ids = {}
     for i,name in enumerate(self.names):
@@ -269,8 +270,8 @@ class Game:
     self.bgId = -1
     self.VelFactor = 1
     self.planNow = None
-    # self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
-    self.win = window
+    self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
+    # self.win = None
     pygame.display.set_caption("Werewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
@@ -333,9 +334,9 @@ class Game:
     
     self.rememberInit()
 
-    pyautogui.click(500, 500, button='left')
-    time.sleep(0.01)
-    pyautogui.moveTo(pyautogui.size()[0]-1,0)
+    # pyautogui.click(500, 500, button='left')
+    # time.sleep(0.01)
+    # pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
 
   def rememberInit(self):

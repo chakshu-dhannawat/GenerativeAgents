@@ -6,18 +6,17 @@ import pygame
 import pyautogui
 
 class Game_start():
-    def __init__(self):
+    def __init__(self, window):
 
         pygame.font.init()
         pygame.init()
-        self.window = None
+        self.window = window
         self.init_window()
 
     def init_window(self):
-        pygame.font.init()
-        pygame.init()
+        
 
-        self.window = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT), RESIZABLE)
+        # self.window = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT), RESIZABLE)
         pygame.display.set_caption("Werewolves of Miller Hollow")
 
         pyautogui.click(500, 500, button='left')
