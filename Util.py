@@ -7,6 +7,7 @@ from threading import Lock
 import os
 import pygame
 import random
+import textwrap
 
 lock = Lock()
 
@@ -297,6 +298,12 @@ def get_alpha(image, x, y):
     if 0 <= x < width and 0 <= y < height:
         return image.get_at((x, y)).a
     return 0
+  
+  
+  
+def split_text_into_lines(text):
+    lines = textwrap.wrap(text, width=6)
+    return "\n".join(lines)
 
 
 

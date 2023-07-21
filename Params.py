@@ -75,6 +75,8 @@ CONVERSATION_WORD_LIMIT = 6
 # VelFactor = 1
 POPUP_BUTTON_SIZE = (35,35)
 
+transcript_rect_width, transcript_rect_height = 400, 800
+
 
 
 HUT1_POPUP_CLOSE = (976, 19)
