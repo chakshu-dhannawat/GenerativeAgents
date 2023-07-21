@@ -7,6 +7,8 @@ import threading
 import time
 from queue import Queue
 from HoveringBox import *
+from pygame.locals import *
+from Game_start import Game_start
 
 try: 
   with open("Logs/logs.txt", 'w') as file: pass
@@ -52,14 +54,27 @@ if(None in agents):
 
 '''
 ====================
+Game Start Button
+====================
+'''
+
+game_start = Game_start()
+
+
+game_start.start()
+
+window = game_start.get_window()
+
+'''
+====================
 Initializing Game
 ====================
 '''
 log('\n=======Initializing Game=======\n')
 
-game = Game(agents)
+game = Game(agents, window)
 
-game.chooseSheriff()
+game.agent_sheriff = game.chooseSheriff()
 
 
 

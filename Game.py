@@ -22,9 +22,6 @@ from translate import Translator
 import pyautogui
 from HoveringBox import *
 
-
-pygame.font.init()
-pygame.init()
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 
 speed = FPS*0.6
@@ -91,6 +88,12 @@ hut1_button_y = hut1_button_y - 50
 hut2_button_x, hut2_button_y =  LOCATION_MAP['Hut 2']
 hut2_button_x = hut2_button_x - 20
 hut2_button_y = hut2_button_y - 50
+
+transcript_button_x , transcript_button_y = (1700, 820)
+transcript_button = hut_button
+transcript_popup = pygame.transform.scale(pygame.image.load('Assets/transcript_box_blue.png'), (600, 800))
+
+transcript_bubble_topleft = (1300, 10)
 
 '''
 ====================
@@ -159,10 +162,10 @@ reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHou
 cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
 house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
 bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
-electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task1.png"), EMOJI_SIZE)
+electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electricRepair.png"), EMOJI_SIZE)
 electric_repairWiring = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task2.png"), EMOJI_SIZE)
 electric_resources = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task3.png"), EMOJI_SIZE)
-electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage_task.png"), EMOJI_SIZE)
+electric_sabotage = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_sabotage.png"), EMOJI_SIZE)
 
 
 
@@ -211,7 +214,7 @@ Werewolves Game
 
 class Game:
 
-  def __init__(self, agents):
+  def __init__(self, agents, window):
 
     self.names = [agent.name for agent in agents]
     self.ids = {}
@@ -261,7 +264,8 @@ class Game:
     self.bgId = -1
     self.VelFactor = 1
     self.planNow = None
-    self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
+    # self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
+    self.win = window
     pygame.display.set_caption("Werewolves of Miller Hollow")
     self.clock = pygame.time.Clock()
     self.InitialPositions = InitialPositions
@@ -284,7 +288,7 @@ class Game:
     self.start_phase = pygame.transform.scale(start_phase, DEFAULT_IMAGE_SIZE)
     self.end_phase = pygame.transform.scale(game_end, DEFAULT_IMAGE_SIZE)
     self.day_phase_show = False
-    self.day_phase_japanese_show = False
+    self.day_phase_japanese_show = True
     self.night_phase_show = False
     self.night_phase_japanese_show = False
     self.voting_phase_show = False
@@ -293,14 +297,18 @@ class Game:
     self.townfolks_win_japanese_show = False
     self.werewolves_win_show = False
     self.werewolves_win_japanese_show = False
-    self.start_phase_show = True
+    self.start_phase_show = False
     self.end_phase_show = False
     self.nobodyLynch = False
 
     self.house1Popup = False
     self.house2Popup = False
+    self.transcriptPopup = False
     self.convs = 0
     self.ClockPrev = Clock_Speed
+
+    self.choose_sheriff = False
+    self.agent_sheriff = None
     # self.taskOccupied = {hub:[False]*(len([node for node in nodes.keys() if "task" in node and hub in node])) for hub in hubs}
     self.HoverBox_agents = {}
     self.reset()
@@ -510,6 +518,12 @@ class Game:
     self.kicked = self.names[kick]
     self.killing = True
     self.elimination = self.kicked
+
+    # self.agents[kick] = self.agent_sheriff
+
+    if self.agents[kick].sheriff:
+      self.choose_sheriff = True
+
     threadObs = threading.Thread(target=self.addObservationAll, args=(f"{self.kicked} has been eliminated by the Werewolves on {calendar.day} during the Night Phase",))
     threadObs.start()
     log(f"{self.kicked} has been killed by the Werewolves\n\n")
@@ -641,7 +655,7 @@ class Game:
 
       #If sheriff is kicked
       if self.agents[kick].sheriff:
-         self.chooseSheriff()
+         self.choose_sheriff = True
 
       self.farewell = True
       self.killing = True
@@ -822,7 +836,7 @@ class Game:
     planGen = False   
     first = True
     while True:
-      if(calendar.dt.hour in [2,14]): break
+      if(calendar.dt.hour in [2, 14]): break
       if(calendar.dt.minute==0 and calendar.dt.hour%2==0):
         now = calendar.time
         if(not planGen):
@@ -1116,6 +1130,21 @@ class Game:
       self.win.blit(text_surface,text_rect)
       self.nobodyLynch = False
       pygame.display.update()
+      time.sleep(3)  
+
+  def new_sheriff_choose(self) :
+      if(not self.choose_sheriff): return
+      self.win.blit(self.black_bg,(0,0))
+
+      new_sheriff = self.chooseSheriff()   # TODO: Pass query to self.agent_sheriff
+      text_surface = font2.render(f"{new_sheriff.name} was chosen as the new Sheriff", True, WHITE)
+      self.agent_sheriff = new_sheriff
+      text_rect = text_surface.get_rect()
+      text_rect.centerx = WIN_WIDTH // 2
+      text_rect.centery = WIN_HEIGHT // 2
+      self.win.blit(text_surface,text_rect)
+      self.choose_sheriff = False
+      pygame.display.update()
       time.sleep(3)     
   
   def draw_coordinates(self):
@@ -1144,7 +1173,12 @@ class Game:
     elif(self.house2Popup==True):
       image_rect = house_popup.get_rect()
       image_rect.center = (hut2_button_x, hut2_button_y)
-      self.win.blit(house_popup, image_rect)   
+      self.win.blit(house_popup, image_rect)  
+
+    if(self.transcriptPopup):
+      image_rect = transcript_popup.get_rect()
+      image_rect.topleft = transcript_bubble_topleft
+      self.win.blit(transcript_popup, image_rect)  
 
   def draw_agent_in_popup(self,name):
     if(name == 'Hut 1'):
@@ -1171,6 +1205,9 @@ class Game:
 
     if(self.elimination is not None and not self.killing):
       self.drawElimination()
+
+    if(self.choose_sheriff):
+       self.new_sheriff_choose()
 
     if(not self.killing and self.elimination is None):
 
@@ -1216,6 +1253,10 @@ class Game:
           if(self.alive[i] and player.inPopup_house2):
               player.drawBubble() 
          self.draw_hover_agents_insidePopup('Hut 2')
+
+      if(self.transcriptPopup):
+        self.draw_popup()
+        #TODO: Write function to display dynamic text in transcrit window
       
       self.draw_button() 
       # Only for testing 
@@ -1294,6 +1335,12 @@ class Game:
       hut_button_rect = hut_button.get_rect(center=button_center2)
       self.win.blit(hut_button, hut_button_rect)
 
+      #Transcript Window
+      button_center3 = (transcript_button_x + button_radius, transcript_button_y + button_radius)
+      pygame.draw.circle(self.win, button_color, button_center3, button_radius)
+      hut_button_rect = hut_button.get_rect(center=button_center3)
+      self.win.blit(hut_button, hut_button_rect)
+
 
 
   def draw_phase(self):
@@ -1370,6 +1417,8 @@ class Game:
         self.house1Popup = not self.house1Popup
     if hut2_button_x <= mouse_pos[0] <= hut2_button_x + 50 and hut2_button_y <= mouse_pos[1] <= hut2_button_y + 50:
         self.house2Popup = not self.house2Popup
+    if transcript_button_x <= mouse_pos[0] <= transcript_button_x + 50 and transcript_button_y <= mouse_pos[1] <= transcript_button_y + 50:
+        self.transcriptPopup = not self.transcriptPopup
 
   def exit_agent_popup(self, agent, node):
      agent.x,agent.y = LOCATION_MAP[node]
@@ -1430,6 +1479,7 @@ class Game:
           townfolks.append(agent)
     sheriff = random.choice(townfolks)
     sheriff.sheriff = True
+    return sheriff
         
   def checkSpeakingProximity(self):
       for player1 in self.agents:

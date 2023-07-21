@@ -62,6 +62,7 @@ Path = "Assets/"
 Emoji_Path = "Assets/emojis/"
 WIN_WIDTH = 1920
 WIN_HEIGHT = 1080
+DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 FPS = 60
 Clock_Speed = 60
 

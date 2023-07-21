@@ -611,6 +611,11 @@ class Agent():
                 location = random.choice(["Fishing Pond task02", "Fishing Pond task03", "Fishing Pond task04"])
                 taskCompleted[location] = False
 
+              elif("Electric_Sabotage" in TASK_EMOJI_MAP[self.task]): 
+                self.game.tasksDone -= 1
+                location = random.choice(["Electricity House task01", "Electricity House task02", "Electricity House task03"])
+                taskCompleted[location] = False
+
               elif(not self.werewolf and not "Sleeping" in self.task): self.game.tasksDone += 1
 
             if(self.dest is None):
