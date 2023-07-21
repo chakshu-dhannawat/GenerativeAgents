@@ -3,6 +3,7 @@ from pygame.locals import *
 from Params import *
 import sys
 import pygame
+import pyautogui
 
 class Game_start():
     def __init__(self):
@@ -18,6 +19,10 @@ class Game_start():
 
         self.window = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT), RESIZABLE)
         pygame.display.set_caption("Werewolves of Miller Hollow")
+
+        pyautogui.click(500, 500, button='left')
+        time.sleep(0.01)
+        pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
     def get_window(self):
 

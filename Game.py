@@ -441,6 +441,8 @@ class Game:
     for i in range(self.n):
       if(not self.alive[i] or self.werewolf[i]): continue
       self.agents[i].sleeping = False
+      self.agents[i].task = None
+      self.agents[i].taskReach = False
   
   def nightVote(self):
 

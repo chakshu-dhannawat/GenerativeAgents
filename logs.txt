@@ -30283,3 +30283,104 @@ Yumi Okada chose to do the task : Cattle Farm task03 at 10:04 AM
 
 Yuria Shimizu chose to do the task : Cattle Farm task04 at 10:05 AM
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/21/2023, 09:19:43
+
+=======Initializing Agents=======
+
+Hina Sato's Strategy for Saturday July 21 -
+
+1) Observe patterns and behavior of players to identify potential werewolves.
+2) Collaborate with other townfolks to share information and suspicions.
+3) Use deductive reasoning to eliminate suspects and vote strategically to maximize chances of identifying werewolves.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Saturday July 21 -
+
+1) Observe every player's behavior and voting pattern to identify suspicious activities.
+2) Use convincing skills to persuade others and create alliances to increase chances of werewolf identification.
+3) Participate in completing tasks and keep a close eye on other players to catch any sabotages.
+
+-----------------------
+
+
+Riku Mori's Strategy for Saturday July 21 -
+
+1) Observe werewolf voting patterns and behavior at night.
+2) Discuss with other townfolks and gather information during the day.
+3) Prioritize completing tasks while being aware of potential werewolf sabotage.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Saturday July 21 -
+
+1) Observe who talks the most and push for evidence-based discussion to identify werewolves.
+2) Team up with trusted townfolks and communicate privately to discuss suspicions and vote together.
+3) Prioritize completing tasks to ensure the townfolks win, while keeping an eye out for any werewolf sabotage.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Saturday July 21 -
+
+Taichi Kato wakes up and thinks to himself, "I have to be careful and smart to win this game. Here's my strategy:"
+
+1) Observe and listen to conversations to identify suspicious behavior and voting patterns.
+2) Contribute to discussions and try to lead the townfolks towards a logical decision.
+3) Work hard to complete tasks efficiently and catch any werewolf trying to sabotage them.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Saturday July 21 -
+
+1) Act like a helpful electrician and gain the trust of the townfolks. 
+2) Bluff and accuse innocent players to create confusion and suspicion.
+3) Sabotage tasks subtly and blame it on other players to avoid getting caught.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Saturday July 21 -
+
+1) Act as a helpful farmer by offering advice for tasks and helping with them. Gain trust by lying low.
+2) Sabotage tasks subtly by making small mistakes and blaming it on others. Accuse others of being werewolves to deflect suspicion.
+3) Vote with the townfolks to blend in, but secretly vote to kick out townfolks to increase the werewolf majority.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+Mana Yoshida: "I think we should kick out Riku Mori. He seems too analytical and might identify us."
+Yumi Okada: "I agree with Mana. Riku's analytical nature makes him dangerous. Let's kick him out."
+Mana Yoshida: "I think we should kick out Taichi Kato. He is too observant and might catch us in the act."
+
+End of Conversation
+
+Conversation Rating - 3.75
+Turn Taking Ratio - 1.0
+Response Relevance - ([0.641709717787593, 0.22128279708783305, 0.5270405148868493], 0.4633443432540918)
+Agreement Metric - 0.23167217162704587
+Riku Mori has been killed by the Werewolves
+
+
+
+======= Morning Voting Phase =======
+
+Currently it is Day, the Villagers will lynch someone...
+
+Mana Yoshida: "Yuka, what do you think we should do next? We need to work together to complete the tasks and identify the werewolf."
