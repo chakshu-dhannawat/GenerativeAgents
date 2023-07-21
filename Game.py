@@ -241,7 +241,8 @@ class Game:
     
     self.w = WIN_WIDTH
     self.h = WIN_HEIGHT
-    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE) 
+    self.bg = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
+    self.bg_tasktable = pygame.transform.scale(bg, DEFAULT_IMAGE_SIZE)
     self.black_bg = pygame.transform.scale(black_bg, DEFAULT_IMAGE_SIZE)
     # self.bg2 = pygame.transform.scale(bg2, DEFAULT_IMAGE_SIZE) 
     self.bgs = bgs
@@ -922,8 +923,8 @@ class Game:
       time.sleep(5)
       self.run = False
       pygame.quit()
-    if(players[1]>=players[0] or (not self.Night and players[1]>=players[0]-1)):
-      log('\n=== WeREWOLVES WIN ===')
+    if(players[1]>=players[0] or (not self.Night and players[1]>=players[0])):
+      log('\n=== WEREWOLVES WIN ===')
       self.werewolves_win_japanese_show = True
       time.sleep(5)
       self.run = False 
@@ -1076,6 +1077,7 @@ class Game:
           self.changePhase = False
           self.bgId=-1
           self.Night = False
+          self.bg = self.bg_tasktable
       else:
           self.bgId+=1
           self.bg = self.bgs[self.bgId]
@@ -1440,14 +1442,14 @@ class Game:
       
   def draw_hover_agents(self):
     for key in self.HoverBox_agents:
-      if self.HoverBox_agents[key].hovered and not agentMap[key].inPopup_house1 and not agentMap[key].inPopup_house2:
+      if self.HoverBox_agents[key].hovered and not agentMap[key].inPopup_house1 and not agentMap[key].inPopup_house2 and self.alive[self.ids[key]]:
         self.HoverBox_agents[key].hover_bubble(self.win)
         
   def draw_hover_agents_insidePopup(self,name):
     for key in self.HoverBox_agents:
-      if self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house1 and name == 'Hut 1':
+      if self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house1 and name == 'Hut 1' and self.alive[self.ids[key]]:
         self.HoverBox_agents[key].hover_bubble(self.win)
-      elif self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house2 and name == 'Hut 2':
+      elif self.HoverBox_agents[key].hovered and agentMap[key].inPopup_house2 and name == 'Hut 2' and self.alive[self.ids[key]]:
         self.HoverBox_agents[key].hover_bubble(self.win)
         
   def draw_static_hover(self):

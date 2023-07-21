@@ -122,9 +122,9 @@ def game_logic():
     if(day==1): 
       log('\n======= Morning Voting Phase =======\n')
       game.dayVote()
-    # if(day==2): 
-    #   log('\n======= Day Tasks Phase =======\n')
-    #   game.afternoon()
+    if(day==2): 
+      log('\n======= Day Tasks Phase =======\n')
+      game.afternoon()
     
     day = (day+1)%3
 
