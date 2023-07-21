@@ -464,6 +464,7 @@ class Game:
   
   def nightVote(self):
     # self.text_content.append(" -- -- ")
+    self.text_content.append("  ")
     self.text_content.append(" -- NIGHT PHASE -- ")
     # self.text_content.append(" -- -- ")
     self.text_content.append("  ")
@@ -1011,6 +1012,7 @@ class Game:
         history = history + '\n'
     log("\nEnd of Conversation")
     self.text_content.append(" -- END OF CONVERSATION -- ")
+    self.text_content.append("   ")
     self.convs-=1
     agents[0].isSpeaking = False 
     agents[1].isSpeaking = False 
@@ -1231,7 +1233,7 @@ class Game:
         # Split text into words
         words = reply.split()
         for word in words:
-            if len(line.split()) < 8:
+            if len(line.split()) < 9:
                 line += " " + word
             else:
                 text_lines.append(line.strip())
