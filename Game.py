@@ -89,6 +89,12 @@ hut2_button_x, hut2_button_y =  LOCATION_MAP['Hut 2']
 hut2_button_x = hut2_button_x - 20
 hut2_button_y = hut2_button_y - 50
 
+transcript_button_x , transcript_button_y = (1700, 820)
+transcript_button = hut_button
+transcript_popup = pygame.transform.scale(pygame.image.load('Assets/transcript_box_blue.png'), (600, 800))
+
+transcript_bubble_topleft = (1300, 10)
+
 '''
 ====================
 Fire 
@@ -297,6 +303,7 @@ class Game:
 
     self.house1Popup = False
     self.house2Popup = False
+    self.transcriptPopup = False
     self.convs = 0
     self.ClockPrev = Clock_Speed
 
@@ -1166,7 +1173,12 @@ class Game:
     elif(self.house2Popup==True):
       image_rect = house_popup.get_rect()
       image_rect.center = (hut2_button_x, hut2_button_y)
-      self.win.blit(house_popup, image_rect)   
+      self.win.blit(house_popup, image_rect)  
+
+    if(self.transcriptPopup):
+      image_rect = transcript_popup.get_rect()
+      image_rect.topleft = transcript_bubble_topleft
+      self.win.blit(transcript_popup, image_rect)  
 
   def draw_agent_in_popup(self,name):
     if(name == 'Hut 1'):
@@ -1241,6 +1253,10 @@ class Game:
           if(self.alive[i] and player.inPopup_house2):
               player.drawBubble() 
          self.draw_hover_agents_insidePopup('Hut 2')
+
+      if(self.transcriptPopup):
+        self.draw_popup()
+        #TODO: Write function to display dynamic text in transcrit window
       
       self.draw_button() 
       # Only for testing 
@@ -1319,6 +1335,12 @@ class Game:
       hut_button_rect = hut_button.get_rect(center=button_center2)
       self.win.blit(hut_button, hut_button_rect)
 
+      #Transcript Window
+      button_center3 = (transcript_button_x + button_radius, transcript_button_y + button_radius)
+      pygame.draw.circle(self.win, button_color, button_center3, button_radius)
+      hut_button_rect = hut_button.get_rect(center=button_center3)
+      self.win.blit(hut_button, hut_button_rect)
+
 
 
   def draw_phase(self):
@@ -1395,6 +1417,8 @@ class Game:
         self.house1Popup = not self.house1Popup
     if hut2_button_x <= mouse_pos[0] <= hut2_button_x + 50 and hut2_button_y <= mouse_pos[1] <= hut2_button_y + 50:
         self.house2Popup = not self.house2Popup
+    if transcript_button_x <= mouse_pos[0] <= transcript_button_x + 50 and transcript_button_y <= mouse_pos[1] <= transcript_button_y + 50:
+        self.transcriptPopup = not self.transcriptPopup
 
   def exit_agent_popup(self, agent, node):
      agent.x,agent.y = LOCATION_MAP[node]
