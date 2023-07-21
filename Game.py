@@ -323,9 +323,8 @@ class Game:
     
     # Transcript Code
     self.scroll_offset = 0
-    self.scroll_speed = 0
-    self.text_content = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.'
-
+    self.scroll_speed = 10
+    self.text_content = ['Transcript of Conversations']*2
     for i in range(self.n):
       self.agents[i].game = self
     self.tasksDone = 0
@@ -743,6 +742,7 @@ class Game:
           dialogues += 1
           log(reply)
           history = history + reply
+          self.text_content.append(reply)
           lastFew.append(reply)
           if(len(lastFew)>4): lastFew.pop(0)
           if(dialogues>MaxDialogues): break
@@ -1187,21 +1187,50 @@ class Game:
     if(self.transcriptPopup):
       image_rect = transcript_popup.get_rect()
       image_rect.topleft = transcript_bubble_topleft
-      text_content_lines = split_text_into_lines(self.text_content)
-      text_surface = font.render(text_content_lines, True, WHITE)
-      text_height = text_surface.get_height()
+
+      # text_content_lines = split_text_into_lines(self.text_content)
+
+      font_size = 22  # Desired font size
+      font = pygame.font.Font(None, font_size)
+
+      # Create lines of text with a maximum of 6 words per line
+      text_lines = []
+      
+
+      for reply in self.text_content:
+        line = ""
+        # Split text into words
+        words = reply.split()
+        for word in words:
+            if len(line.split()) < 6:
+                line += " " + word
+            else:
+                text_lines.append(line.strip())
+                line = word
+        text_lines.append(line.strip())
+
+
+      text_height = len(text_lines) * font.get_linesize()  # Calculate the total height of the text
 
       # Update the scrolling offset to stay within the text boundaries
       max_scroll = max(0, text_height - transcript_rect_height)
       self.scroll_offset = max(0, min(self.scroll_offset, max_scroll))
-      text_rect_surface = pygame.Surface((transcript_rect_width, transcript_rect_height))
 
-      # Blit the visible portion of the text
-      text_rect_surface.blit(text_surface, (0, -self.scroll_offset))
 
-      # Blit the text rect on top of the background surface
-      self.win.blit(transcript_popup, image_rect)  
-      self.win.blit(text_rect_surface, image_rect.topleft)
+      # Blit the transcript_popup image on top of the background surface
+      self.win.blit(transcript_popup, image_rect)
+
+      # Blit the visible portion of the text directly onto 'self.win'
+      current_y = -self.scroll_offset
+      for line in text_lines:
+        if current_y > 0 and current_y < 600:
+          text_surface = font.render(line, True, BLACK)
+          self.win.blit(text_surface, (image_rect.left+70, image_rect.top+110 + current_y))
+        current_y += font.get_linesize()
+
+      
+
+      # self.win.blit(text_rect_surface, image_rect.topleft)
 
   def draw_agent_in_popup(self,name):
     if(name == 'Hut 1'):
@@ -1475,10 +1504,10 @@ class Game:
           mouse_pos = pygame.mouse.get_pos()
           self.is_button_clicked(mouse_pos)
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 4:
-            self.scroll_offset += self.scroll_speed
+            self.scroll_offset -= self.scroll_speed
 
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 5:
-            self.scroll_offset -= self.scroll_speed
+            self.scroll_offset += self.scroll_speed
      
         self.handleHovers(event) 
       
