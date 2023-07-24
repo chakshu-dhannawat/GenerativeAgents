@@ -8,7 +8,7 @@ import os
 
 load_dotenv()
 
-# MongoDB connection
+# MongoDB connection [MongoDB接続]
 client = MongoClient(os.getenv('MongoDB_ID'))
 
 class DBHandler:
@@ -24,7 +24,7 @@ class DBHandler:
         for agent in agentsDetails:
             self.agentCollection[agent["name"]]=self.memoriesDB[agent["name"]]
 
-    # Adding and getting memories from the database
+    # Adding and getting memories from the database [データベースへのメモリーの追加と取得]
     def addMemories(self, name, memory):
         d = {'observation':memory.observation,
             'creation':memory.creation,
@@ -32,7 +32,7 @@ class DBHandler:
             'importance':memory.importance}
         self.agentCollection[name].insert_one(d)
     
-    # Getting all memories from the database
+    # Getting all memories from the database [データベースからすべてのメモリを取得する]
     def getAllMemories(self, name):
         d = self.agentCollection[name].find()
         memories_list = []
@@ -46,7 +46,7 @@ class DBHandler:
             memories_list.append(memory)
         return memories_list
     
-    # Getting a specific memory from the database
+    # Getting a specific memory from the database [データベースから特定のメモリを取得する]
     def updateMemories(self,name,memory_id,field,value):
         query = {'_id': memory_id}
         update = {'$set': {field: value}}
