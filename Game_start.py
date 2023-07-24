@@ -1,4 +1,5 @@
-# Imports
+# This file contains the class Game_start which is responsible for the start phase of the game
+
 from pygame.locals import *
 from Params import *
 import sys
