@@ -1,4 +1,5 @@
 # This file contains evaluation metrics for the dialogue system
+# [このファイルには、対話システムの評価指標が含まれています。]
 
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -19,7 +20,7 @@ Hina Sato: "I think we should investigate Taichi Kato's actions as well. We don'
 """
 
 
-# Turn-taking ratio metric
+# Turn-taking ratio metric [出番率指標]
 def get_turn_taking_ratio(dialogue):
     agents = set([line.split(":")[0].strip() for line in dialogue.split("\n")])
     agent_turns = {agent: dialogue.count(agent + ":") for agent in agents}
@@ -30,7 +31,7 @@ def get_turn_taking_ratio(dialogue):
 
 # --------------------------------------------------------------------------------
  
-# Response relevance metric
+# Response relevance metric [レスポンスの関連性指標]
 def calculate_response_relevance(dialogue):
     agents = []
     utterances = []
@@ -71,7 +72,7 @@ def calculate_response_relevance(dialogue):
 
 # --------------------------------------------------------------------------------
 
-# Conversation agreement metric
+# Conversation agreement metric [会話の一致の指標]
 def calculate_agreement_metric(dialogue):
     agents = []
     utterances = []
