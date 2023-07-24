@@ -1,4 +1,5 @@
 # This file extracts the frames from a GIF file and saves them as PNG files.
+# [このファイルはGIFファイルからフレームを抽出し、PNGファイルとして保存します。]
 
 from PIL import Image
 
@@ -16,7 +17,7 @@ def extract_frames(gif_path, num_frames):
     
     return frames
 
-# Example usage
+# Example usage [使用例]
 gif_path = 'Assets\\killing.gif'
 num_frames = 100
 

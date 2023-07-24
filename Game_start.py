@@ -5,7 +5,7 @@ from pygame.locals import *
 from Params import *
 import sys
 import pygame
-# import pyautogui
+import pyautogui
 
 # Class for the start phase of the game [試合開始フェーズのクラス]
 class Game_start():
@@ -19,17 +19,10 @@ class Game_start():
     def init_window(self):
         # Set the window size [ウィンドウサイズの設定]
         pygame.display.set_caption("Werewolves of Miller Hollow")
-<<<<<<< HEAD
         # Set the window icon [ウィンドウアイコンを設定する]
-        pyautogui.click(500, 500, button='left')
-        time.sleep(0.01)
-        pyautogui.moveTo(pyautogui.size()[0]-1,0)
-=======
-        # Set the window icon
         # pyautogui.click(500, 500, button='left')
         # time.sleep(0.01)
         # pyautogui.moveTo(pyautogui.size()[0]-1,0)
->>>>>>> ec95a93cc1a778cdfff222f5f831d1ef01162b99
 
     def get_window(self):
         return self.window

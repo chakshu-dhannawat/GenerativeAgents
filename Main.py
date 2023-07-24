@@ -1,4 +1,5 @@
 # This file is the main file of the game. It contains the main loop of the game and the game logic.
+# [このファイルはゲームのメインファイルです。ゲームのメインループとゲームロジックが含まれています。]
 
 from Agent import Agent  
 from Game import Game 
@@ -21,7 +22,7 @@ log(dt.now().strftime("%m/%d/%Y, %H:%M:%S"))
 
 '''
 ====================
-Initializing Agents
+Initializing Agents [エージェントの初期化]
 ====================
 '''
 log('\n=======Initializing Agents=======\n')
@@ -32,12 +33,12 @@ class getAgents():
   def __init__(self):
     self.agents = [None]*len(agentsDetails)
 
-  # Create the agents
+  # Create the agents [エージェントの作成]
   def makeAgent(self,i):
     self.agents[i] = Agent(agentsDetails[i]['name'],agentsDetails[i]['description'],graphics[i])
     agentMap[agentsDetails[i]['name']] = self.agents[i]
 
-  # Create the threads for each agent
+  # Create the threads for each agent [各エージェントのスレッドを作成する]
   def get(self):
     threads = []
     for i in range(len(agentsDetails)):
@@ -54,7 +55,7 @@ if(None in agents):
 
 '''
 ====================
-Initializing Game
+Initializing Game [ゲームの初期化]
 ====================
 '''
 log('\n=======Initializing Game=======\n')
@@ -65,7 +66,7 @@ game = Game(agents)
 
 '''
 ====================
-Game Start Button
+Game Start Button [試合開始ボタン]
 ====================
 '''
 
@@ -74,7 +75,7 @@ game_start.start()
 
 '''
 ====================
-Werewolf Game [LOGIC]
+Werewolf Game [LOGIC] [人狼ゲーム[ロジック]]
 ====================
 '''
 log('\n=======Werewolf Game=======\n')
@@ -103,7 +104,7 @@ def game_logic():
 
 '''
 ====================
-Werewolf Game [GRAPHICS]
+Werewolf Game [GRAPHICS] [人狼ゲーム [GRAPHICS]]
 ====================
 '''
 
@@ -114,15 +115,11 @@ def render():
 
 '''
 ====================
-Running Game using Multi-Threading
+Running Game using Multi-Threading [マルチスレッドによるゲームの実行]
 ====================
 '''
 
-
-# render_thread = threading.Thread(target=render)
 logic_thread = threading.Thread(target=game_logic)
-
-# render_thread.start()
 logic_thread.start()
 
 if __name__ == '__main__':
