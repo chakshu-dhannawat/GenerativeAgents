@@ -127,7 +127,7 @@ TavernNodes = [key for key in LOCATION_MAP.keys() if 'Predetermined' in key]
 TavernNodes.append('Tavern')
 TavernCoordinates = [LOCATION_MAP[key] for key in TavernNodes]
 
-TasksWin = 20
+TasksWin = 15
 TasksBarWidth = int(WIN_WIDTH*0.4)
 TasksBarHeight = 40
 TaskBarX = (WIN_WIDTH-TasksBarWidth)//2
