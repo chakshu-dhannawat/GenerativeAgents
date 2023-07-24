@@ -1,7 +1,10 @@
+# This file contains night time images of the village. It also contains the function to convert the day time images to night time images.
+
 from PIL import Image, ImageEnhance
 import numpy as np
 import time
 
+# Function to convert the day time images to night time images using brightness factor
 def convert_to_nighttime(input_image_path, output_image_path, brightness_factor=0.5):
     image = Image.open(input_image_path)
     enhancer = ImageEnhance.Brightness(image)

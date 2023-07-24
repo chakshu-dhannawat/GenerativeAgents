@@ -1,3 +1,5 @@
+# This file conatins Memories class which stores the memories of the agent. It also contains the Reflection class which is used to retrieve the memories.
+
 from GPT import GPT,getEmbedding
 from Util import extractImportance,log
 from Queries import *
@@ -9,25 +11,7 @@ import torch
 from sklearn.metrics.pairwise import cosine_similarity
 from datetime import datetime, timedelta
 
-# For Relevancy -
-
-# tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-# model = BertModel.from_pretrained('bert-base-uncased')
-
-# def getEmbedding(sentence):
-#   response = openai.Embedding.create(
-#       input="Your text string goes here",
-#       engine="text-embedding-ada-002" 
-#   )
-#   embeddings = response['data'][0]['embedding']
-#   return embeddings
-  # inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
-  # with torch.no_grad():
-  #     outputs = model(**inputs)
-  # sentence_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze().detach().numpy()
-  # return sentence_embedding
-
-
+# Calendar class to keep track of the time
 class Calendar:
 
   def __init__(self, day = "Tuesday February 13", time = "9:50 AM"):
@@ -68,11 +52,10 @@ class Calendar:
   def night(self):
     self.dt = self.dt.replace(hour=21, minute=0)
     self.getString()
-    
 
 calendar = Calendar()
 
-
+# Memory class to store the memories
 class Memory():
 
   def __init__(self, observation=''):
@@ -112,12 +95,9 @@ class Memory():
     # log(f"Relevancy - \n{query}\nMemory - \n{self.observation}\nRelevance Score- {relevance_score}")
     return 10*relevance_score
 
+# Function to get the memory with the highest retrieval score
 class Reflection(Memory):
 
   def __init__(self, observation, children=[]):
     super().__init__(observation)
     self.children = children
-
-# mem = Memory("I went to Mount Fuji during the weekend")
-# print(mem.importance)
-# print(mem.getRelevancy("What did you do during the weekend?"))
