@@ -1,3 +1,5 @@
+# This file contains all the parameters used in the game.
+
 import os
 import time
 import random
@@ -17,6 +19,8 @@ MaxDialogues = 8
 N_Questions=3
 N_Memories=5
 N_Reflections=5
+
+# --------------------------------Agent names descriptions for the game with varying IQ levels--------------------------------
 
 # Diff IQ
 agentsDetails = [
@@ -66,25 +70,20 @@ WIN_HEIGHT = 1080
 DEFAULT_IMAGE_SIZE = (WIN_WIDTH, WIN_HEIGHT)
 FPS = 60
 Clock_Speed = 60
-
 Character_Speed = 1.25
 
 
 HOUSE_POPUP_SIZE = (1024,748)
 HOVER_WORD_LIMIT = 8
 CONVERSATION_WORD_LIMIT = 6
-# VelFactor = 1
 POPUP_BUTTON_SIZE = (35,35)
 
 transcript_rect_width, transcript_rect_height = 400, 600
-
-
 
 HUT1_POPUP_CLOSE = (976, 19)
 HUT2_POPUP_CLOSE = ()
 
 N_Background = sum([len(files) for _, _, files in os.walk('Assets/Background')])
-
 N_Killing = sum([len(files) for _, _, files in os.walk('Assets/killing')])
 N_Farewell_T = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Townfolk')])
 N_Farewell_W = sum([len(files) for _, _, files in os.walk('Assets/Farewell/Werewolf')])
@@ -94,11 +93,12 @@ EMOJI_SIZE = (58, 47)
 FIRE_SIZE = (100, 81)
 FIRE_CENTER = (1427, 772)
 TavernCenter = (1434, 811)
-# Character_Size = (66, 54)
 Character_Sizes = [(random.randint(55, 66), random.randint(44, 54)) for _ in range(len(agentsDetails))]
 TavernRadius = 150
 
 SLEEPING_NODES = ['Hut 1 Sleeping01', 'Hut 1 Sleeping02', 'Hut 1 Sleeping03', 'Hut 1 Sleeping04','Hut 2 Sleeping01', 'Hut 2 Sleeping02', 'Hut 2 Sleeping03', 'Hut 2 Sleeping04']
+
+# Location of the nodes for agent movement
 LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376), 
                 "Hut 1 Intermediate01":(305, 336), "Hut 1 Intermediate02":(324, 245), "Hut 1 Intermediate03":(324, 157),"Hut 1 Intermediate04":(509, 336),"Hut 1 Intermediate05":(686, 336), "Hut 1 Intermediate06":(142, 464), "Hut 1 Intermediate07":(225,541),
                 "Hut 1 task01":(217,127), "Hut 1 task04":(287,542),"Hut 1 SleepIntermediate01":(478,282), "Hut 1 SleepIntermediate02":(678,280), "Hut 1 SleepIntermediate03":(712,142), "Hut 1 SleepIntermediate04":(862,245), "Hut 1 SleepIntermediate05":(929,222),
@@ -117,10 +117,11 @@ LOCATION_MAP = {'Hut 1': (475, 422), "Hut 1 Main": (135, 376),
                 'Intermediate01': (1101, 834), 'Intermediate02': (853, 834), 'Intermediate03': (662, 742), 'Intermediate04': (479, 488) , 'Intermediate05': (899, 481), 'Intermediate06': (1232, 504), 'Intermediate07': (1118, 251), 'Intermediate08': (475,425), 'Intermediate09': (963,430), 
                 'List':(900, 900)
                 }
+
+# Message Map for the agents
 MESSAGES_MAP = ["Hello!","How are you?",'Anata wa kawaii desu','Watashi wa Takeshi Desu','Hajimemashite','Otsukaresama deshita']
 
 Locations = ['Hut 1','Hut 2','Shrine','Well','Shrine','Shrine']
-# InitialPositions = [LOCATION_MAP[loc] for loc in Locations]
 
 
 TavernNodes = [key for key in LOCATION_MAP.keys() if 'Predetermined' in key]
@@ -152,7 +153,6 @@ Town
 
 townName = "Mk 1 Village"
 Initial = "Well"
-# InitialPositions = [LOCATION_MAP[Initial]]*10
 InitialPositions = ["Tavern","Well","Shrine","Fishing Pond","Electricity House","Cattle Farm","Tavern","Well","Shrine","Fishing Pond"]
 InitialPositions = [LOCATION_MAP[pos] for pos in InitialPositions]
 
@@ -169,10 +169,7 @@ nodes = {"Hut 1": "The first hut.",
         "Hut 1 Sleeping02":"Sleeping Node",
         "Hut 1 Sleeping03":"Sleeping Node",
         "Hut 1 Sleeping04":"Sleeping Node",
-        # "Hut 1 Sleeping05":"Sleeping Node",
         "Hut 1 task01": "Reading Books.",
-        # "Hut 1 task02": "Sleeping",
-        # "Hut 1 task03": "Sleeping",
         "Hut 1 SleepIntermediate01": "Sleeping Intermediate",
         "Hut 1 SleepIntermediate02": "Sleeping Intermediate",
         "Hut 1 SleepIntermediate03": "Sleeping Intermediate",
@@ -189,8 +186,6 @@ nodes = {"Hut 1": "The first hut.",
         "Hut 2 Intermediate06": "Inbetween Nodes",
         "Hut 2 Intermediate07": "Inbetween Nodes",
         "Hut 2 task01": "Reading Books.",
-        # "Hut 2 task02": "Sleeping",
-        # "Hut 2 task03": "Sleeping",
         "Hut 2 SleepIntermediate01": "Sleeping Intermediate",
         "Hut 2 SleepIntermediate02": "Sleeping Intermediate",
         "Hut 2 SleepIntermediate03": "Sleeping Intermediate",
@@ -200,7 +195,6 @@ nodes = {"Hut 1": "The first hut.",
         "Hut 2 Sleeping02":"Sleeping Node",
         "Hut 2 Sleeping03":"Sleeping Node",
         "Hut 2 Sleeping04":"Sleeping Node",
-        # "Hut 2 Sleeping05":"Sleeping Node",
         "Hut 2 task04": "Cooking.",
         "Well": "A water source providing clean and fresh water for the townfolks.",
         "Tavern": "A lively place where townfolks can socialize, exchange information.",
@@ -215,7 +209,6 @@ nodes = {"Hut 1": "The first hut.",
         "Well task01": "Drawing water from the well.",
         "Well task02": "Cleaning the well.",
         "Well task03": "Doing hole in the bucket.",
-        #"Well task04": "Monitoring the water level and quality of the well.",
         "Cattle Farm task01": "Feeding the animals.",
         "Cattle Farm task02": "Breaking the fences.",
         "Cattle Farm task03": "Milking the cows and collecting eggs from the chickens.",
@@ -224,10 +217,6 @@ nodes = {"Hut 1": "The first hut.",
         "Shrine task02": "Cleaning and Maintenance of the Shrine.",
         "Shrine task03": "Lighting Candles at the Shrine.",
         "Shrine task04": "Break the broomstick.",
-        # "Hut 1 task01": "Maintaining the cleanliness and tidiness of the houses.",
-        # "Hut 2 task01": "Repairing any damages or leaks in the houses.",
-        # "Hut 3 task01": "Collecting firewood or fuel for heating and cooking.",
-        #"Hut 3 task02": "Checking on elderly or vulnerable villagers, providing assistance if needed.",
         "Fishing Pond task01": "Breaking the Fishing Rod.",
         "Fishing Pond task02": "Catching fish.",
         "Fishing Pond task03": "Cleaning and preparing the caught fish for cooking.",
@@ -247,9 +236,6 @@ nodes = {"Hut 1": "The first hut.",
         "Predetermined 04":"Pre determined inbetween Nodes",
         "Predetermined 05":"Pre determined inbetween Nodes",
         "Predetermined 06":"Pre determined inbetween Nodes",
-        #"Intermediate08":"Inbetween Nodes",
-        #"Intermediate09":"Inbetween Nodes",
-        #"Intermediate10":"Inbetween Nodes",
         "List": "Agents write their daily activity here."
 
         }
@@ -265,11 +251,7 @@ taskCompleted = {"Well task01": False, "Well task02": False, "Well task03": Fals
                 "Fishing Pond task01": False, "Fishing Pond task02": False, "Fishing Pond task03": False, "Fishing Pond task04": False
                 }
 
-# hubs = [x for x in nodes.keys() if "task" not in x and "Intermediate" not in x]  
 hubs = ["Well","Cattle Farm","Shrine","Fishing Pond","Hut 1","Hut 2","Electricity House"]
-# hubs = ["Shrine","Cattle Farm","Well"]
-
-
 
 '''
 ====================
@@ -303,11 +285,8 @@ TASK_EMOJI_MAP = {
     "Hut 2 Sleeping02": "Sleeping",
     "Hut 2 Sleeping03": "Sleeping",
     "Hut 2 Sleeping04": "Sleeping",
-    # "Hut 1 task03": "Sleeping",
     "Hut 1 task04": "Cooking",
     "Hut 2 task01": "Reading_Books",
-    # "Hut 2 task02": "Sleeping",
-    # "Hut 2 task03": "Sleeping",
     "Hut 2 task04": "Cooking",
     "Electricity House task01":'Electric Maintain',
     "Electricity House task02":'Electric Repairing',
@@ -384,9 +363,5 @@ hover_dict = {
     'Well': well_hover_textbox
 }
 
-
-
-
-
-
+# Making pdf of the logs
 PDF_Name = time.strftime("Logs/%Y-%m-%d %H-%M-%S.pdf", time.localtime(time.time()))
