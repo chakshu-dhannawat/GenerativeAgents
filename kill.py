@@ -1,3 +1,5 @@
+# This file extracts the frames from a GIF file and saves them as PNG files.
+
 from PIL import Image
 
 def extract_frames(gif_path, num_frames):
