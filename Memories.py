@@ -1,17 +1,18 @@
 # This file conatins Memories class which stores the memories of the agent. It also contains the Reflection class which is used to retrieve the memories.
+# [このファイルには、エージェントの記憶を保存する Memories クラスが含まれています。また、記憶を取り出すための Reflection クラスも含まれています。]
 
 from GPT import GPT,getEmbedding
 from Util import extractImportance,log
 from Queries import *
 from Params import *
 import re
-# from transformers import BertTokenizer, BertModel
+# From transformers import BertTokenizer, BertModel [トランスフォーマーから またはBertTokenizer、BertModel]
 import numpy as np
 import torch
 from sklearn.metrics.pairwise import cosine_similarity
 from datetime import datetime, timedelta
 
-# Calendar class to keep track of the time
+# Calendar class to keep track of the time [時間を管理するカレンダークラス]
 class Calendar:
 
   def __init__(self, day = "Tuesday February 13", time = "9:50 AM"):
@@ -55,7 +56,7 @@ class Calendar:
 
 calendar = Calendar()
 
-# Memory class to store the memories
+# Memory class to store the memories [メモリーを保存するメモリークラス]
 class Memory():
 
   def __init__(self, observation=''):
@@ -64,7 +65,6 @@ class Memory():
     self.lastAccess = self.creation
     self.importance = 0
     self._id = ''
-    # self.getImportance()
 
   def retrievalScore(self, query):
     return Alpha_Recency*self.getRecency() + Alpha_Importance*self.importance + Alpha_Relevance*self.getRelevancy(query)
@@ -92,10 +92,9 @@ class Memory():
     query_embedding = np.array(getEmbedding(query))
     similarity_score = cosine_similarity(sentence_embedding.reshape(1, -1), query_embedding.reshape(1, -1))
     relevance_score = similarity_score[0][0]
-    # log(f"Relevancy - \n{query}\nMemory - \n{self.observation}\nRelevance Score- {relevance_score}")
     return 10*relevance_score
 
-# Function to get the memory with the highest retrieval score
+# Function to get the memory with the highest retrieval score [検索スコアが最も高い記憶を取得する機能]
 class Reflection(Memory):
 
   def __init__(self, observation, children=[]):

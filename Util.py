@@ -1,4 +1,5 @@
 # This file contains functions related to Plan Extraction, Plan Execution, and Plan Evaluation, Memory Retrieval, and Dialogue Generation.
+# [このファイルには、プラン抽出、プラン実行、プラン評価、メモリ検索、ダイアログ生成に関する関数が含まれています。]
 
 from GPT import GPT
 import re
@@ -204,48 +205,31 @@ def getAllDetails():
 
 def outline_character(image):
   border_width = 2
-  # Convert the image to a surface with per-pixel alpha
   image = image.convert_alpha()
-
-  # Get the width and height of the image
   width, height = image.get_size()
-
-  # Create a blank surface with per-pixel alpha
   outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
-
-  # Iterate over each pixel in the image
+  
   for x in range(width):
       for y in range(height):
-          # Get the color of the current pixel
           color = image.get_at((x, y))
-
-          # Check if the pixel is fully opaque
           if color.a > 0:
-              # Check if any of the neighboring pixels are transparent
               if (
                   get_alpha(image, x - 1, y) == 0
                   or get_alpha(image, x + 1, y) == 0
                   or get_alpha(image, x, y - 1) == 0
                   or get_alpha(image, x, y + 1) == 0
               ):
-                  # Set the color of the current pixel to the border color
                   color = RED
 
-          # Set the color of the current pixel on the outline image
           outline_image.set_at((x, y), color)
 
-  # Create a copy of the outline image to apply an additional border
   bordered_image = outline_image.copy()
 
-  # Iterate over each pixel in the outline image
   for x in range(width):
       for y in range(height):
-          # Get the color of the current pixel
           color = outline_image.get_at((x, y))
 
-          # Check if the pixel has the DARK_RED color
           if color == RED:
-              # Add an additional border to the pixel
               for i in range(border_width):
                   if (
                       x - i >= 0

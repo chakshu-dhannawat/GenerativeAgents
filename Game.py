@@ -19,7 +19,7 @@ import threading
 from evaluation_metric import *
 from gtts import gTTS
 from translate import Translator
-# import pyautogui
+import pyautogui
 from HoveringBox import *
 import textwrap
 
@@ -324,6 +324,9 @@ class Game:
     self.tasksDone = 0
     
     self.rememberInit()
+    pyautogui.click(500, 500, button='left')
+    time.sleep(0.01)
+    pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
 
   # Thread for Night Phase 
