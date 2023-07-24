@@ -270,6 +270,7 @@ class Game:
     self.bgId = -1
     self.VelFactor = 1
     self.planNow = None
+    self.show_house1 = True
     self.win = pygame.display.set_mode((self.w,self.h),RESIZABLE)
     # self.win = None
     pygame.display.set_caption("Werewolves of Miller Hollow")
@@ -1407,11 +1408,12 @@ class Game:
   def draw_button(self):
       button_radius = 25
 
-      # Hut 1
-      button_center1 = (hut1_button_x + button_radius, hut1_button_y + button_radius)
-      pygame.draw.circle(self.win, button_color, button_center1, button_radius)
-      hut_button_rect = hut_button.get_rect(center=button_center1)
-      self.win.blit(hut_button, hut_button_rect)
+      if(not hover_dict['Electricity House'].hovered):
+        # Hut 1
+        button_center1 = (hut1_button_x + button_radius, hut1_button_y + button_radius)
+        pygame.draw.circle(self.win, button_color, button_center1, button_radius)
+        hut_button_rect = hut_button.get_rect(center=button_center1)
+        self.win.blit(hut_button, hut_button_rect)
 
       #Hut 2
       button_center2 = (hut2_button_x + button_radius, hut2_button_y + button_radius)
