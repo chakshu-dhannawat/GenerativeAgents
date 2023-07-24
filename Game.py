@@ -19,7 +19,7 @@ import threading
 from evaluation_metric import *
 from gtts import gTTS
 from translate import Translator
-import pyautogui
+# import pyautogui
 from HoveringBox import *
 import textwrap
 
@@ -148,7 +148,7 @@ reading_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRead
 reading2_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseReading2.png"), EMOJI_SIZE)
 cleaning_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiHouseCleaning.png"), EMOJI_SIZE)
 house_repair_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiRepair.png"), EMOJI_SIZE)
-bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojiBathing.png"), EMOJI_SIZE)
+bathing_emoji = pygame.transform.scale(pygame.image.load(Emoji_Path + "emojibathing.png"), EMOJI_SIZE)
 electric_maintain = pygame.transform.scale(pygame.image.load(Emoji_Path + "electricRepair.png"), EMOJI_SIZE)
 electric_repairWiring = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task2.png"), EMOJI_SIZE)
 electric_resources = pygame.transform.scale(pygame.image.load(Emoji_Path + "electric_task3.png"), EMOJI_SIZE)

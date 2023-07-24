@@ -4,7 +4,7 @@ from pygame.locals import *
 from Params import *
 import sys
 import pygame
-import pyautogui
+# import pyautogui
 
 # Class for the start phase of the game
 class Game_start():
@@ -19,9 +19,9 @@ class Game_start():
         # Set the window size
         pygame.display.set_caption("Werewolves of Miller Hollow")
         # Set the window icon
-        pyautogui.click(500, 500, button='left')
-        time.sleep(0.01)
-        pyautogui.moveTo(pyautogui.size()[0]-1,0)
+        # pyautogui.click(500, 500, button='left')
+        # time.sleep(0.01)
+        # pyautogui.moveTo(pyautogui.size()[0]-1,0)
 
     def get_window(self):
         return self.window
