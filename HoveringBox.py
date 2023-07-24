@@ -1,3 +1,6 @@
+# This file contains the HoverTextBox class, which is used to create a box that appears when the mouse hovers over a particular location The box contains the name of the location and a description of the location. 
+# The box also contains the tasks that can be performed at that location.
+
 import pygame
 from Params import *
 
@@ -17,7 +20,8 @@ class HoverTextBox:
         pygame.draw.rect(surface, self.box_color, self.rectangle)
         text_surface = self.font.render(self.text, True, self.text_color)
         surface.blit(text_surface, (self.rectangle.x + 10, self.rectangle.y + 10))
-
+    
+    # Function to handle the event when the mouse hovers over the location
     def handle_event(self, event):
         if event.type == pygame.MOUSEMOTION:
             if self.rectangle.collidepoint(event.pos):
@@ -25,10 +29,12 @@ class HoverTextBox:
             else:
                 self.hovered = False
 
+    # Function to update the position of the box
     def update_position(self, x, y):
         self.rectangle.x = x
         self.rectangle.y = y
-        
+
+    # Function to display the box when the mouse hovers over the location    
     def hover_bubble(self,surface):
       Path = "Assets/"
       x = self.rectangle.x
@@ -94,6 +100,7 @@ class HoverTextBox:
         bubble_rect = scaled_bubble_image.get_rect(bottomright=(x, y))
       surface.blit(scaled_bubble_image, bubble_rect)
       task_print = False  
+
       # Blit the text onto the bubble
       current_y = bubble_rect.top + bubble_padding*2.3
       for i,line in enumerate(text_lines):
@@ -119,11 +126,9 @@ class HoverTextBox:
 
 
 
-
 class HoverTextBox_Agent:
     def __init__(self, rectangle, font, text_color, box_color,agent, name=None, desc=None, nextPlan=None):
         self.rectangle = rectangle
-        # self.text = text
         self.agent = agent
         self.name = name
         self.desc = desc
@@ -134,6 +139,7 @@ class HoverTextBox_Agent:
         self.hovered = False
         self.WIN_WIDTH = 1920
         self.WIN_HEIGHT = 1080
+
     def handle_event(self, event):
         if event.type == pygame.MOUSEMOTION:
             if self.rectangle.collidepoint(event.pos):
@@ -149,8 +155,7 @@ class HoverTextBox_Agent:
       Path = "Assets/"
       x = self.rectangle.x
       y = self.rectangle.y
-      bubble_image = pygame.image.load(Path+"agent_bubble.png")  # Replace "bubble.png" with the path to your predetermined image
-
+      bubble_image = pygame.image.load(Path+"agent_bubble.png")
       # Render the text
       font_size = 20  # Desired font size
       font = pygame.font.Font(None, font_size)
@@ -160,8 +165,6 @@ class HoverTextBox_Agent:
 
       # Split text into words
       words = self.desc.split()
-
-      # Create lines of text with a maximum of 6 words per line
       text_lines = []
       line = ""
       text_lines.append(self.name)
@@ -184,11 +187,11 @@ class HoverTextBox_Agent:
       bubble_padding = 20
       bubble_width = max_width + bubble_padding * 10
       bubble_height = total_height + bubble_padding * 8
-      # bubble_rect = pygame.Rect(x - bubble_width // 2 - 50, y - bubble_height // 2 - 50, bubble_width, bubble_height)
-
+      
       # Blit the bubble image onto the surface
       scaled_bubble_image = pygame.transform.scale(bubble_image, (bubble_width, bubble_height))
       
+      # setting the bubble position
       if(x > 1700) :
         bubble_rect = scaled_bubble_image.get_rect(bottomright=(x, y+50))
       else:
@@ -222,7 +225,6 @@ class HoverTextBox_Agent:
           pygame.draw.circle(transparency_surface, (255, 0, 0, transparency), (x+self.agent.Character_Size[0]//2 +2, y+self.agent.Character_Size[0]//2+2), radius)
       else:
           pygame.draw.circle(transparency_surface, (0, 0, 255, transparency), (x+self.agent.Character_Size[0]//2 +2, y+self.agent.Character_Size[0]//2+2), radius)
-      
       
       surface.blit(transparency_surface, (0,0))
 
