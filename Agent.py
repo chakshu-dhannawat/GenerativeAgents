@@ -1,5 +1,5 @@
 # This file contains the Agent class which is the main class for the agent
-
+#[このファイルには、エージェントのメインクラスであるエージェントクラスが含まれています。]
 from Memories import calendar, Memory, Reflection
 from Queries import *
 from Params import *
@@ -16,7 +16,8 @@ import emoji
 import time
 from Generate_voiceover import generate_voiceover
 
-# Agent initialization with a name, summary, and graphics
+# Agent initialization with a name, summary, and graphics 
+# [名前、概要、グラフィックを含むエージェントの初期化]
 class Agent():
 
   def __init__(self, name, summary, graphics):
@@ -38,6 +39,7 @@ class Agent():
     self.sheriff = False
 
     # Generating the plan for the day and the strategy for the day based on the summary of the agent 
+    # [エージェントのサマリーに基づいて、その日のプランと戦略を作成する。]
     if "werewolf" in summary:
       self.werewolf = True
       QUERY_INIT = QUERY_INIT_WEREWOLF.format(name, name, summary, name, details)
@@ -46,16 +48,17 @@ class Agent():
     else: QUERY_INIT = QUERY_INIT_TOWNFOLK.format(name, name, summary, name)
     self.strategy = self.brain.query(QUERY_INIT,name='QUERY_INIT')
 
-    # log the strategy and the plan for the day
+    # Log the strategy and the plan for the day
+    # [その日の戦略とプランを記録する]
     log(f"{self.name}'s Strategy for {calendar.day} -\n\n{self.strategy}\n\n-----------------------\n\n") 
     
     
-    # start the day with a detailed plan for the day
+    # Start the day with a detailed plan for the day
+    # [その日の詳細な計画を立てて1日を始める]
     strategies = extractQuestions(self.strategy)
 
     for strat in strategies:
       self.remember(strat)
-    # log('\n-----------------------\n')
 
     self.graphics = graphics
     self.Character_Size = None
@@ -102,7 +105,7 @@ class Agent():
     self.was_left = False
     self.was_right = False
 
-    self.walkTimer = random.randint(2000, 3000)  # Random timer between 2000ms and 3000ms
+    self.walkTimer = random.randint(2000, 3000)  # Random timer between 2000ms and 3000ms [2000ms～3000msのランダムタイマー]
     self.timer = 0
     self.directionTimer = self.walkTimer
 
@@ -114,7 +117,8 @@ class Agent():
     self.destination_y=-10
     self.is_travelling = False
     self.destination_path=[]
-    # Speaking Bubbles
+    
+    # Speaking Bubbles [スピーキング・バブル]
     self.isSpeaking = False
     self.msg = None
     self.sleeping = False
@@ -137,7 +141,6 @@ class Agent():
     self.win.blit(rotated_image, (self.kill_x, self.kill_y))
   
   def remember(self,observation):
-    #self.memory.append(Memory(observation.strip()))
     DB.addMemories(self.name, Memory(observation.strip()))
 
   def talk_context(self,person):
@@ -203,6 +206,7 @@ class Agent():
     return self.MinutePlan
 
   # Retrieving memories from the database and sorting them based on the retrieval score
+  # [データベースから記憶を検索し、検索スコアに基づいて並べ替える。]
   def retrieve(self, query, n):
     score = []
     memories_data = DB.getAllMemories(self.name)
@@ -218,6 +222,7 @@ class Agent():
     return memories
 
   # Reflecting on the memories retrieved and generating insights
+  # [検索された記憶を振り返り、洞察を生み出す]
   def reflect(self,n_questions=N_Questions, n_memories=N_Memories, n_reflections=N_Reflections):
     questions = extractQuestions(self.brain.query(QUERY_REFLECT_QUESTIONS.format(getMemories(self.memory),n_questions),remember=False,name='QUERY_REFLECT_QUESTIONS'))
     for question in questions:
@@ -229,6 +234,7 @@ class Agent():
         self.memory.append(Reflection(insight))
 
   # Generating a random location for the agent to move to
+  # [エージェントが移動するランダムな場所の生成]
   def nextLocation(self,now,game):
     try: 
       locationName = self.brain.query(QUERY_LOCATION.format(now,self.name,now,self.plan[timeKey(now)],getHubs(),self.name,self.name),remember=False,name='QUERY_LOCATION')
@@ -269,6 +275,7 @@ class Agent():
     self.task = newLocation
 
   # Loading the graphics for the agent based on movement
+  # [移動に基づくエージェントのグラフィックの読み込み]
   def graphics_load(self):
     self.Character_Size = random.choice(Character_Sizes)
     walk_right = []
@@ -280,8 +287,10 @@ class Agent():
     image_files = os.listdir(folder_path)
 
     # Detect if werewolf or townfolk
+    # [狼男か町民かを判断する。]
     if self.werewolf:
       # Load images into walkRight, walkLeft, walkUp, walkDown arrays
+      # [画像を walkRight, walkLeft, walkUp, walkDown 配列にロードする。]
       for file_name in image_files:
           if file_name.startswith('R'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
@@ -309,6 +318,7 @@ class Agent():
     else:
       # Townfolk
       # Load images into walkRight,walkLeft, walkUP, walkDown arrays
+      # [画像を walkRight, walkLeft, walkUp, walkDown 配列にロードする。]
       for file_name in image_files:
           if file_name.startswith('R'):
               temp = pygame.image.load(os.path.join(folder_path, file_name))
@@ -329,13 +339,13 @@ class Agent():
       self.char_rect = walk_down[0].get_rect() 
       return walk_right, walk_left, walk_up, walk_down, walk_down[0]
 
-  # drawing the speech bubble
+  # Drawing the speech bubble [吹き出しを描く]
   def drawBubble(self):
      if(self.sleeping): return
      if self.isSpeaking:
           self.speech_bubble()
   
-  # Drawing the agent on the screen and updating the screen
+  # Drawing the agent on the screen and updating the screen [エージェントをスクリーンに描画し、スクリーンを更新する。]
   def draw(self):
       if self.walkCount + 1 >= 30:
           self.walkCount = 0
@@ -358,10 +368,11 @@ class Agent():
       if self.sheriff:
          self.win.blit(sheriff_badge, (int(self.x-15), int(self.y-15)))
 
-  # Updating the agent's location and movement            
+  # Updating the agent's location and movement    
+  # [エージェントの位置と移動の更新]        
   def move(self, VelFactor):
       if(self.sleeping): return
-      #If agent has reached location
+      # If agent has reached location [エージェントが所在地に到着したかどうかの確認]
       if(abs(self.x - self.destination_x)<1+int(self.vel_x) and abs(self.y - self.destination_y)<1+int(self.vel_y)):
           self.left=False
           self.right=False
@@ -371,7 +382,7 @@ class Agent():
           self.location_name = self.destination
           self.is_travelling=False
           
-      # Move towards the destination
+      # Move towards the destination [目的地に向かう]
       if self.is_travelling:
           theta = math.atan2(self.destination_y - self.y, self.destination_x - self.x)
           self.vel_x = abs(math.cos(theta) * self.vel * VelFactor)
@@ -403,6 +414,7 @@ class Agent():
               self.down = False
           
           # Updation the location of the agent based on the direction of movement
+          # [エージェントの位置を移動方向に基づいて更新する。]
           if self.left and self.x > self.vel_x:
               self.x -= self.vel_x
               self.standing = False
@@ -431,6 +443,7 @@ class Agent():
               taskCompleted[self.task] = True
 
               # Checking if the task is a sabotage task and if it is, then the task is not completed
+              # [タスクがサボタージュ・タスクかどうかをチェックし、サボタージュ・タスクであればタスクは完了しない]
               if("Bucket_Sabotage" in TASK_EMOJI_MAP[self.task]): 
                 self.game.tasksDone -= 1
                 location = random.choice(["Well task01", "Well task02"])
@@ -532,6 +545,7 @@ class Agent():
       print(pathString)
 
   # Code for the agent to move to a specific location 
+  # [エージェントが特定の場所に移動するためのコード]
   def tavern(self,point):
       (x,y) = point
       closest_index = min(range(len(TavernCoordinates)), key=lambda idx: (x - TavernCoordinates[idx][0]) ** 2 + (y - TavernCoordinates[idx][1]) ** 2)
@@ -566,11 +580,13 @@ class Agent():
           total_height += text_surface.get_height()
 
       # Create the bubble rectangle around the text
+      # [テキストの周囲にバブル矩形を作成する]
       bubble_padding = 20
       bubble_width = max_width + bubble_padding * 10
       bubble_height = total_height + bubble_padding * 4
 
       # Blit the bubble image onto the surface
+      # [表面に泡のイメージ]
       if(x<200):
         scaled_bubble_image = pygame.transform.scale(bubble_image2, (bubble_width, bubble_height))
         bubble_rect = scaled_bubble_image.get_rect(bottomleft=(x-bubble_width//4, y))
@@ -580,6 +596,7 @@ class Agent():
       self.win.blit(scaled_bubble_image, bubble_rect)
 
       # Blit the text onto the bubble
+      # [テキストをバブルに]
       current_y = bubble_rect.top + bubble_padding
       for line in text_lines:
           text_surface = font.render(line, True, (0, 0, 0))
@@ -588,6 +605,7 @@ class Agent():
           current_y += text_surface.get_height()
 
   # Emoji Bubbles for showing tasks
+  # [タスクを示す絵文字バブル]
   def emoji_bubble(self, emoji):
 
     if(self.is_travelling): 
@@ -597,6 +615,7 @@ class Agent():
     emoji_surface = EMOJI[emoji]
 
     # Calculating the dimensions of the bubble based on the emoji size
+    # [絵文字のサイズに基づいてバブルの寸法を計算する]
     bubble_padding = 10
     bubble_width = emoji_surface.get_width() + bubble_padding * 2
     bubble_height = emoji_surface.get_height() + bubble_padding * 2
@@ -605,14 +624,14 @@ class Agent():
     else:
       bubble_rect = pygame.Rect(x + bubble_width // 2 + 30, y - bubble_height // 2 - 30, bubble_width, bubble_height)
 
-    # Draw the bubble outline
-    outline_width = 3  # Adjust the line width as desired
+    # Draw the bubble outline [バブルの輪郭を描く]
+    outline_width = 3  # Adjust the line width as desired [線幅を調整する]
     pygame.draw.ellipse(self.win, BLACK, bubble_rect, outline_width)
     bubble_rect.inflate_ip(-outline_width, -outline_width)
 
-    # Draw the bubble background
+    # Draw the bubble background [バブルの背景を描く]
     pygame.draw.ellipse(self.win, WHITE, bubble_rect,0)
     
-    # Blit the emoji onto the bubble
+    # Blit the emoji onto the bubble [絵文字をバブルに乗せる]
     emoji_rect = emoji_surface.get_rect(centerx=bubble_rect.centerx, top=bubble_rect.top + bubble_padding)
     self.win.blit(emoji_surface, emoji_rect)
