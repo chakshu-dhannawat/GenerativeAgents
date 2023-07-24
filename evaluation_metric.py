@@ -26,9 +26,6 @@ def get_turn_taking_ratio(dialogue):
         return 0
     return sum(list({agent: turns / total_turns for agent, turns in agent_turns.items()}.values()))
 
-# turn_taking_ratio = get_turn_taking_ratio(dialogue)
-# print("Turn-taking ratio:", turn_taking_ratio)
-
 # --------------------------------------------------------------------------------
  
 # Response relevance metric
@@ -109,7 +106,6 @@ def calculate_agreement_metric(dialogue):
     
     agreement_metric = agreement / count
     return agreement_metric
-
 
 # agreement_metric = calculate_agreement_metric(dialogue)
 # print("Agreement Metric:", agreement_metric*10)
