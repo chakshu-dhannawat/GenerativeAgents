@@ -1,5 +1,7 @@
 from PIL import Image
 
+# ----------------------Fire Animation----------------------
+
 fire_image = Image.open("Assets\\fire.png")
 
 total_frames = 40
@@ -7,6 +9,7 @@ rotation_angle = 0.25
 frame_width, frame_height = fire_image.size
 output_frames = []
 
+# Rotate the fire image by the rotation angle for each frame
 for i in range(total_frames):
     angle = (i - total_frames // 2) * rotation_angle
     rotated_image = fire_image.rotate(angle, resample=Image.BICUBIC, expand=True)
@@ -16,5 +19,6 @@ for i in range(total_frames):
     frame.paste(rotated_image, (x, y), rotated_image)
     output_frames.append(frame)
 
+# Save the frames as images
 for i, frame in enumerate(output_frames):
     frame.save(f"Assets\\Fire\\{i}.png")
