@@ -1,3 +1,5 @@
+# This file contains the class GPT which is responsible for THE API calls to OpenAI. Also updating the tokens used and logging the queries and responses.
+
 import os
 import openai
 import json
@@ -28,24 +30,10 @@ def addUsage(tokens):
     with open('usage.json', 'w') as f:
       json.dump(usage, f)
 
-# with open('usage.json', 'w') as f:
-#     json.dump(0, f)
-
 openai.api_type = os.getenv('OpenAI_Type')
-
 openai.api_base = os.getenv('OpenAI_Base')
-
 openai.api_version = os.getenv('OpenAI_Version')
-
 openai.api_key = os.getenv("OpenAI_API_KEY")
-
-# def getEmbedding(sentence):
-#   response = openai.Embedding.create(
-#       input=sentence,
-#       engine="text-embedding-ada-002" 
-#   )
-#   embeddings = response['data'][0]['embedding']
-#   return embeddings
 
 def getEmbedding(sentence):
     inputs = tokenizer(sentence, return_tensors='pt', truncation=True, padding=True)
@@ -55,16 +43,12 @@ def getEmbedding(sentence):
     return sentence_embedding
 
 class GPT:
-
-
   def __init__(self,context="You are an assistant giving to the point answers. Just tell the answers instead of forming whole sentences"):
-
     self.context = context
     self.messages = [{"role": "system", "content": context}]
 
 
   def query(self,qry,remember=True,tries=0,input_ts=None,name=''):
-
     self.messages.append({"role":"user", "content":qry})
     if(input_ts is None):
       input_ts = time.time()
@@ -103,7 +87,8 @@ class GPT:
     addUsage(response["usage"]["total_tokens"])
 
     return answer
-  
+
+  # function to get the response from the GPT  
   def log(self, input, output, input_ts, output_ts, tokens, name):
     text = f'=====================================================\n{name}\n=====================================================\nResponse Time : {round(output_ts-input_ts,2)} s\nTokens Used : {tokens}\n\n------------\nQUERY [{time.strftime("%H:%M:%S", time.localtime(input_ts))}]\n------------\n{input}\n\n------------\nOUTPUT [{time.strftime("%H:%M:%S", time.localtime(output_ts))}]\n------------\n{output}\n\n\n\n'
     with lock:
@@ -119,5 +104,4 @@ class GPT:
 
 
   def reset(self):
-
     self.messages = [{"role": "system", "content": self.context}]

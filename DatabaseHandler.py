@@ -1,3 +1,5 @@
+# This file contains the class DBHandler which is responsible for handling the database
+
 from pymongo import MongoClient
 from Memories import *
 from Params import agentsDetails

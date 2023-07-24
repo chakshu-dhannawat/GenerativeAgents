@@ -1,3 +1,5 @@
+# This file contains functions related to Plan Extraction, Plan Execution, and Plan Evaluation, Memory Retrieval, and Dialogue Generation.
+
 from GPT import GPT
 import re
 from Graph import Graph,town
@@ -42,8 +44,6 @@ def extractPlan(hourly):
       except:
         pass
 
-    # return plan
-    # TODO
     return shuffle_plan(plan)
 
 def getNextDay(today):
@@ -58,10 +58,6 @@ def timeKey(time_string):
     return f"{hours}:{rest}"
 
 def printPlan(plan,name,day):
-    # items = re.split(r'\d+\)', plan)
-    # items = [item.strip() for item in items if item.strip()]
-    # for i,item in enumerate(items):
-    #   log(f"{i+1})",item)
     planString = f"{name}'s Plan for {day} -\n\n"
     for key in plan.keys():
        planString += f"{key} : {plan[key]}\n"
@@ -87,7 +83,6 @@ def getTasks(hub,game,werewolf=False):
       tasksList = [node for node in nodes if "task" in node and hub in node]
     else:
       tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" not in TASK_EMOJI_MAP[node]] 
-    # tasksList = [task for i,task in enumerate(tasksList) if not game.taskOccupied[hub][i]]
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return tasks,tasksList
@@ -108,12 +103,6 @@ def getPeople():
       people = people + agentsDetails[i]['name'] + " - " + agentsDetails[i]['description'] + '; '
     return people
 
-# def getNames():
-#     people = ""
-#     for i in range(len(agentsDetails)):
-#       people = people + agentsDetails[i]['name'] + '; '
-#     return people
-
 def getMemories(stream, n=100):
     #TODO: Retrieve using timestamp
     if(len(stream)>n): stream = stream[-n:]
@@ -125,10 +114,6 @@ def getMemories(stream, n=100):
     return memories
 
 def extractHub(output):
-    # try:
-    #   a = nodes[output]
-    #   return output
-    # except:
     for node in hubs:
       if(node in output): return node 
     return "Tavern"
@@ -164,7 +149,6 @@ def getRetrievedMemories(stream):
 def getResponseRating(dialogue, response, context, agent1, agent2):
   gpt = GPT()
   rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response),name='QUERY_EVALUATION_METRICS')
-  # log(f"Dialogue Rating:\n{rating}")
   lines = rating.split('\n')
   ratings = []
   for line in lines:
@@ -173,25 +157,9 @@ def getResponseRating(dialogue, response, context, agent1, agent2):
       except:
         pass
   average_rating = sum(ratings) / len(ratings)
-  # log(f"Average Dialogue Rating: {average_rating}")
   return average_rating
 
 def extract_dialogue(dialogue):
-    # dialogue = re.search(': "(.*?)"', string)
-    # if dialogue:
-    #     return dialogue.group(1)
-    # elif(re.search(':"(.*?)"', string)):
-    #     return re.search(':"(.*?)"', string).group(1)
-    # elif(re.search(": '(.*?)'", string)):
-    #     return re.search(": '(.*?)'", string).group(1)
-    # elif(re.search(":'(.*?)'", string)):
-    #     return re.search(":'(.*?)'", string).group(1)
-    # elif(re.search(":(.*?)", string)):
-    #     return re.search(":(.*?)", string).group(1)
-    # elif(re.search(": (.*?)", string)):
-    #     return re.search(": (.*?)", string).group(1)
-    # return None
-
     dialogue = dialogue.split(':')[1].strip()
     if(dialogue[0] in ['\'','"']):
       dialogue = dialogue[1:-1]

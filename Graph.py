@@ -1,55 +1,7 @@
+# This file contains the graph structure of the village environment. Also finds the shortest path between two nodes.
+
 from Params import *
-import heapq
-
-# class Graph:
-
-#   def __init__(self):
-#     self.n = 0
-#     self.graph = []
-#     self.nodes = {}
-#     self.places = []
-
-#   def addNode(self,name):
-#     self.graph.append([])
-#     self.nodes[name] = self.n
-#     self.places.append(name)
-#     self.n += 1
-
-#   def addEdge(self,n1,n2):
-#     self.graph[self.nodes[n1]].append(self.nodes[n2])
-#     self.graph[self.nodes[n2]].append(self.nodes[n1])
-
-#   def getNodes(self,node):
-#     return [self.places[n] for n in self.graph[self.nodes[node]]]
-  
-#   def shortestPath(self, start, end):
-#       distances = [float('inf')] * self.n  # Initialize distances with infinity
-#       print(start)
-#       print(self.nodes)
-#       print(self.nodes[start])
-#       distances[self.nodes[start]] = 0  # Distance from start node to itself is 0
-#       pq = [(0, self.nodes[start])]  # Priority queue to store (distance, node) pairs
-#       visited = set()
-
-#       while pq:
-#           dist, node = heapq.heappop(pq)  # Extract node with minimum distance from pq
-#           if node == self.nodes[end]:
-#               # Reached the destination node, return the shortest distance
-#               return dist
-
-#           visited.add(node)
-
-#           for neighbor in self.graph[node]:
-#               if neighbor not in visited:
-#                   # Calculate the new distance from start to neighbor
-#                   new_dist = dist + 1  # Assuming all edges have weight 1
-#                   if new_dist < distances[neighbor]:
-#                       distances[neighbor] = new_dist
-#                       heapq.heappush(pq, (new_dist, neighbor))
-
-#       # If no path is found from start to end node
-#       return -1
-     
+import heapq     
 
 class Graph:
   
@@ -66,7 +18,8 @@ class Graph:
     temp2 = (n1,weight)
     self.graph[n1].append(temp1)
     self.graph[n2].append(temp2)
-    
+
+  # Find the shortest path between two nodes using Dijkstra's algorithm    
   def shortestPath(self,start,end):
     distance = {node: float('inf') for node in self.graph}
     distance[start] = 0
@@ -94,11 +47,9 @@ class Graph:
   
 
 # Village Based Environment
-
-
 places = list(nodes.keys())
 
-
+# Create the graph structure of the village
 def makeTown():
 
     town = Graph()    
@@ -116,17 +67,11 @@ def makeTown():
     town.addEdge("Fishing Pond","Fishing Pond task02"),
     town.addEdge("Fishing Pond task02","Fishing Pond task03"),
     town.addEdge("Fishing Pond task03","Fishing Pond task04"),
-    #town.addEdge("Fishing Pond","Fishing Pond task03"),
-    #town.addEdge("Intermediate10","Fishing Pond task03"),
-    #town.addEdge("Intermediate10","Fishing Pond task04"),
     town.addEdge("Intermediate06","Intermediate07"),
     town.addEdge("Intermediate09","Hut 2"),
     town.addEdge("Intermediate05","Intermediate09"),
     town.addEdge("Intermediate05","Intermediate06"),
     town.addEdge("Intermediate04","Intermediate05"),
-    #town.addEdge("Hut 2","Hut 2 task01"),
-    #town.addEdge("Hut 2","Hut 1"),
-    #town.addEdge("Hut 1","Hut 1 task01"),
     town.addEdge("Hut 1","Intermediate08"),
     town.addEdge("Intermediate04","Intermediate08"),
     town.addEdge("Intermediate04","Electricity House"),
@@ -142,11 +87,6 @@ def makeTown():
     town.addEdge("Shrine","Intermediate02"),
     town.addEdge("Intermediate02","Intermediate03"),
     town.addEdge("Intermediate01","Intermediate02"),
-    #town.addEdge("Intermediate05","Hut 3"),
-    #town.addEdge("Hut 3","Hut 3 task01"),
-    #town.addEdge("Hut 3","Hut 3 task02"),
-    #town.addEdge("Hut 3","Intermediate07"),
-    #town.addEdge("Hut 3","Intermediate02"),
     town.addEdge("Well","Intermediate01"),
     town.addEdge("Well","Intermediate05"),
     town.addEdge("Well","Well task03"),
@@ -160,7 +100,6 @@ def makeTown():
     town.addEdge("Predetermined 04","Predetermined 05"),
     town.addEdge("Predetermined 05","Predetermined 06"),
     town.addEdge("Tavern","Predetermined 06"),
-
     town.addEdge("Hut 1 Main","Hut 1"),
     town.addEdge("Hut 1 Main","Hut 1 Intermediate01"),
     town.addEdge("Hut 1 Intermediate01","Hut 1 Intermediate02"),
@@ -172,7 +111,6 @@ def makeTown():
     town.addEdge("Hut 1 SleepIntermediate01","Hut 1 Intermediate04"),
     town.addEdge("Hut 1 SleepIntermediate02","Hut 1 Intermediate05"),
     town.addEdge("Hut 1 SleepIntermediate01","Hut 1 Sleeping01"),
-    # town.addEdge("Hut 1 SleepIntermediate01","Hut 1 Sleeping05"),
     town.addEdge("Hut 1 SleepIntermediate02","Hut 1 SleepIntermediate03"),
     town.addEdge("Hut 1 SleepIntermediate02","Hut 1 SleepIntermediate04"),
     town.addEdge("Hut 1 SleepIntermediate04","Hut 1 SleepIntermediate05"),
@@ -182,7 +120,6 @@ def makeTown():
     town.addEdge("Hut 1 Main","Hut 1 Intermediate06"),
     town.addEdge("Hut 1 Intermediate07","Hut 1 Intermediate06"),
     town.addEdge("Hut 1 task04","Hut 1 Intermediate07"),
-
     town.addEdge("Hut 2 Main","Hut 2"),
     town.addEdge("Hut 2 Main","Hut 2 Intermediate01"),
     town.addEdge("Hut 2 Intermediate01","Hut 2 Intermediate02"),
@@ -194,7 +131,6 @@ def makeTown():
     town.addEdge("Hut 2 SleepIntermediate01","Hut 2 Intermediate04"),
     town.addEdge("Hut 2 SleepIntermediate02","Hut 2 Intermediate05"),
     town.addEdge("Hut 2 SleepIntermediate01","Hut 2 Sleeping01"),
-    # town.addEdge("Hut 1 SleepIntermediate01","Hut 1 Sleeping05"),
     town.addEdge("Hut 2 SleepIntermediate02","Hut 2 SleepIntermediate03"),
     town.addEdge("Hut 2 SleepIntermediate02","Hut 2 SleepIntermediate04"),
     town.addEdge("Hut 2 SleepIntermediate04","Hut 2 SleepIntermediate05"),
@@ -208,9 +144,3 @@ def makeTown():
     return town
 
 town = makeTown()
-
-# for i,node in enumerate(town.graph):
-#     print(places[i],end=':\t\t')
-#     for n2 in node:
-#       print(places[n2],end=", ")
-#     print()

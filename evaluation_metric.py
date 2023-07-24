@@ -1,3 +1,5 @@
+# This file contains evaluation metrics for the dialogue system
+
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re

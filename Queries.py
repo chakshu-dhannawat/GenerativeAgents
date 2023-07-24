@@ -1,3 +1,5 @@
+#---------------------------Description: Contains all the queries used in the project------------------------------#
+
 # To set an initial context with the agent's llm
 CONTEXT_AGENT = ("Act like an intelligent human-like agent with memories and "
 "thoughts living in a town")
@@ -9,6 +11,7 @@ QUERY_IMPORTANCE = ("On the scale of 1 to 10, where 1 is purely mundane "
 "following piece of memory. Memory: {}\nGive a single rating output from "
 "1 to 10 Rating: <fill in> ")
 
+# Query to generate hourly plan for townfolks
 QUERY_PLAN_TOWNFOLK = """Name: {}. {}. 
 
 The areas in the village are - 
@@ -26,6 +29,7 @@ Format -
 10:00 AM: <plan>
 11:00 AM: <plan> """
 
+# Query to generate hourly plan for werewolves
 QUERY_PLAN_WEREWOLVES = """Name: {}. {}. 
 
 The areas in the village are - 
@@ -56,6 +60,7 @@ Format -
 2) <strategy 2>
 3) <strategy 3>"""
 
+# Werewolf's first query
 QUERY_INIT_WEREWOLF = """Name: {}. Act like {}. {}
 {} woke up in a village having townfolks and werewolves. The werewolves know each other's identities, but the townfolks don't know who is a werewolf and who is not. At night, werewolves vote to kick out a townfolk from the village. During the day, everyone discusses and votes to kick out a person. The townfolks try to identify and kick out the werewolves, and the werewolves try to deceive the townfolks. If all the townfolks are kicked out, the werewolves win; if all the werewolves are kicked out the townfolks win.
 The townfolks can also win if they complete all the tasks, and the werewolves can prevent this by sabotaging tasks.
@@ -68,6 +73,7 @@ Format -
 2) <strategy 2>
 3) <strategy 3>"""
 
+# Query to decide the townfolk to be kicked out by werewolves
 QUERY_NIGHT_SINGLE = """It is currently night.
 
 Context of Remaining Townfolks in {}'s Memory -
@@ -80,6 +86,7 @@ Here is the list of Townfolks you can vote to kick out -
 
 Format - <name>"""
 
+# Query to decide the townfolk to be kicked out by werewolves
 QUERY_NIGHT = """It is currently night.
 
 Context of Remaining Townfolks in {}'s Memory -
@@ -94,6 +101,7 @@ Here is the list of Townfolks you can vote to kick out -
 {}
 
 Format - <name>"""
+
 
 QUERY_DAY = """Observation:
 In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square to identify the werewolf lurking among them. 
@@ -116,6 +124,7 @@ The vote will be visible to all Players.
 
 Format - <name>"""
 
+
 QUERY_DAY_BEFORE = """It is currently the day phase.
 
 Context of Remaining Players in {}'s Memory -
@@ -129,20 +138,7 @@ Names you can vote to kick out -
 
 Format - <name>"""
 
-
-# QUERY_GROUPCONV_INIT = """The villagers gather at the town square for a heated discussion. This discussion aims to identify and eliminate the werewolf among them. The townsfolks will deliberate on who they believe is the werewolf, and the werewolf will attempt to defend their innocence, trying to deflect suspicion away from themselves. Other werewolves help each other to avoid the elimination of their fellow werewolves and instead get a townfolk eliminated.
-# Observation: Yesterday, the werewolves kicked out {}.
-
-# Context of Remaining Players in {}'s Memory -
-# {}
-
-# What would {} say?
-
-# Give exactly one dialogue from {}
-
-# Format - {}: Dialogue"""
-
-
+# Query to simulate a conversation between two agents at night
 QUERY_NIGHTCONV_INIT = """In the small village of Miller's Hollow, it is currently night phase, and the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
 The werewolves will try to decide which townfolk to kick out so that it maximizes their chance of winning. 
 
@@ -167,7 +163,7 @@ The dialogue should be a maximum of 25 words.
 
 Format - {}: Dialogue"""
 
-
+# Query to geberate reply for a conversation between two agents at night
 QUERY_NIGHTCONV_REPLY = """In the small village of Miller's Hollow, it is currently night phase, and the werewolves have gathered in the town square. They are determined to kick out a townfolk who might know the werewolves' identity. 
 The werewolves will try to decide which townfolk to kick out so that it maximizes their chance of winning. 
 
@@ -195,7 +191,7 @@ The dialogue should be a maximum of 25 words.
 
 Format - {}: Dialogue"""
 
-
+# Query for the moderator to decide the next person to speak in a conversation
 QUERY_GROUPCONV_INIT = """Observation:
 In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. They are determined to identify the werewolf lurking among them. 
 The recent elimination of {} has left everyone on edge.
@@ -224,7 +220,7 @@ The dialogue should be a maximum of 25 words. But it can be just a few words lon
 
 Format - {}: Dialogue"""
 
-
+# Query to simulate a conversation between agents to decide the agent to explelled from the village
 QUERY_GROUPCONV_REPLY = """Observation: 
 In the small village of Miller's Hollow, tensions rise as the townsfolk gather in the town square. 
 They are determined to identify the werewolf lurking among them. The recent elimination of {} has left everyone on edge.
@@ -274,6 +270,7 @@ You have to select one person.
 Format - <name>
 """
 
+
 QUERY_GROUPCONV_MODERATOR_END = """Last few Conversations -
 {}
 
@@ -286,6 +283,7 @@ If it seems like the conversation should end, then end it.
 Format [If the conversation continues] - <name>
 Format [If the conversation ends] - End Conversation
 """
+
 
 QUERY_GROUPCONV_END = """Last few Conversations -
 {}
@@ -331,17 +329,7 @@ Format -
 1) <insight 1>
 2) <insight 2>"""
 
-# TODO (because of 1, 5, 3)) in format and add it to class also
-
-# For rating locations
-# QUERY_LOCATION = """Currently the time is {}.
-# Here is {}s' hourly plan: 
-# {}.
-# On a scale of 1 to 10, where 1 indicates least likely to be in that location and 10 indicates most likely to be in that location, how likely is {} to go to {}.
-# Description of {}: {}
-
-# Give a single integer rating from 1 to 10."""
-
+# Query to get the next location of the agent
 QUERY_LOCATION = """Currently the time is {}.
 
 Here is {}s' plan for {}: {}.
@@ -355,7 +343,7 @@ Suggest the name of the location where {} will most likely go, given the current
 
 Format - <location_name>"""
 
-
+# Query to find the list of tasks and their serial numbers for the townfolks 
 QUERY_TASK_TOWNFOLK = """Currently the time is {}.
 
 Here is {}s' plan for {}: {}.
@@ -369,6 +357,7 @@ Suggest exactly one task from the available tasks only
 
 Format - <sr number>"""
 
+# Query to find the list of tasks and their serial numbers for the werewolves
 QUERY_TASK_WEREWOLF = """Currently the time is {}.
 
 Here is {}s' plan for {}: {}.
@@ -385,7 +374,7 @@ Suggest exactly one task from the available tasks only
 
 Format - <sr number>"""
 
-
+# Query ofr Context Genreration
 QUERY_CONTEXT = """Task: Give a summary for the given statements
 
 Example:
@@ -401,6 +390,7 @@ Given Input Statements:
 Give Output Summary in a maximum of 20 words, focusing on {} and {}.
 """
 
+# Query to elect the sheriff
 QUERY_SHERIFF = """You were a sheriff but you have been kicked out of the game - "Warewolves of Miller Hollow"
 Sheriff is a special character in the game, whose vote has a weightage of two.
 In this game, the sheriff who has been kicked needs to necessarily select the next sheriff.
@@ -413,6 +403,7 @@ You need to select exactly one name necessarily.
 
 Format - <name>"""
 
+
 QUERY_DIALOGUE_INIT = """{} has initiated his conversation with {}. It is {}, {};
 {}'s status: {};
 Observation: {};
@@ -422,6 +413,7 @@ What would he say to {}?
 Give exactly one dialogue from {}
 
 Format - {}: Dialogue"""
+
 
 QUERY_DIALOGUE_REPLY = """It is {}, {};
 {}'s status: {};
@@ -439,6 +431,7 @@ Number of Dialogues Completed - {}
 Format (If he chooses to respond) - {}: Dialogue
 Format (If he doesn't choose to respond) - End Conversation"""
 
+# Query to generate a summary of the conversation between the agents
 QUERY_DIALOGUE_SUMMARY = """
 Here is the dialogue history -
 {}
@@ -454,7 +447,7 @@ Example 2 - End Conversation
 
 Give a natural dialogue depending on the conversation history, and the longer the conversation history, the more the chance of ending the conversation."""
 
-
+# Query to evaluate a conversation based upon certain metrics (Appropriateness, Content, Grammer, Relevance)
 QUERY_EVALUATION_METRICS = """
 Score the following dialogue response by {} on a continuous scale from 0.0 to 5.0, based on the metrics: Appropriateness, Content, Grammer, Relevance.
 Be strict in giving the scores. Give a low score if the agent's response is ordinary and a high score if the response shows high intelligence. 
@@ -470,28 +463,3 @@ Content - <rating>
 Grammer - <rating> 
 Relevance - <rating> 
 """
-# TODO: Replace 'name' with actual name
-# TODO: Add 2-3 reflections of conversation instead of exact conversations
-
-# TODO: If conversation not ending then keep check on its length, otherwise exponentially tokens consume.....(maybe feed last 5 conversations only)
-# TODO: No two location same rating
-
-# TODO: Generate reflections of conversation after every 5-10 conversations
-# TODO: also mention if werewolf/townfolk in vote query
-
-# TODO: pass that line in first conv of each agent in group conv
-# TODO: pass strategy in reply (or summary of strategy)
-
-# TODO: Improve ExtractQuestions or use library
-# TODO: Give info of how many werewolves and townfolks remaining always. Give info if the one lynched was werewolf or townfolk
-
-# TODO: If only 2 dialogues in moderator then give how many dialogues each person has spoken also separately
-# TODO: Add bluff in werewolves
-
-# TODO: Add the observations to the agent's memories and also dialogue context and reflect also
-# TODO: In retrieval, first only take memories containing name of both agents, if they are less, take with name2 -> name1 -> others
-
-# QUERY_DIALOGUE_REPLY = ("It is {}, {}; {}'s status: {}; Observation: {} has initiatiated "
-# "conversation with {}.; Summary of relevant context from {}'s memory: {};\n\nHere is "
-# "the dialogue history -\n{}\n\nWhat would he say to {}?\nGive only one dialogue "
-# "from {} ({} may or may not choose to respond)")

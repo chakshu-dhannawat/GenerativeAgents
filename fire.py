@@ -1,3 +1,5 @@
+# This file contains fire animation
+
 from PIL import Image
 
 # ----------------------Fire Animation----------------------
