@@ -1,10 +1,12 @@
+# This file is used to change the parameters in Params.py
+
 import math
 import ParamsOld as old
 from Params import *
 
+# Alter the following variables to change the size of the window
 original_size = (old.WIN_WIDTH,old.WIN_HEIGHT)
 new_size = (WIN_WIDTH, WIN_HEIGHT)
-
 
 def update_coordinate(coord):
     original_x, original_y = original_size
