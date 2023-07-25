@@ -1,4 +1,5 @@
 # This file contains the graph structure of the village environment. Also finds the shortest path between two nodes.
+# [このファイルには村環境のグラフ構造が含まれている。また、2つのノード間の最短経路を求める。]
 
 from Params import *
 import heapq     
@@ -19,7 +20,8 @@ class Graph:
     self.graph[n1].append(temp1)
     self.graph[n2].append(temp2)
 
-  # Find the shortest path between two nodes using Dijkstra's algorithm    
+  # Find the shortest path between two nodes using Dijkstra's algorithm
+  # [ダイクストラのアルゴリズムを使って2つのノード間の最短経路を求める]   
   def shortestPath(self,start,end):
     distance = {node: float('inf') for node in self.graph}
     distance[start] = 0
@@ -46,10 +48,10 @@ class Graph:
     
   
 
-# Village Based Environment
+# Village Based Environment [村に根ざした環境]
 places = list(nodes.keys())
 
-# Create the graph structure of the village
+# Create the graph structure of the village [村のグラフ構造を作る]
 def makeTown():
 
     town = Graph()    
