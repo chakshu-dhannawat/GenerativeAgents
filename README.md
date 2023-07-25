@@ -8,7 +8,7 @@ The game continues with alternating day and night phases until either all the we
 
 ### Tech Stacks
 ![](https://img.shields.io/badge/OpenAI-412991.svg?stylee&logo=OpenAI&logoColor=white)
- ![](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![](https://img.shields.io/badge/Python-3776AB.svg?stylee&logo=Python&logoColor=white)
 ![](https://img.shields.io/badge/Pygame-orange.svg?style=plastic&logo=pygame)
 
@@ -22,7 +22,6 @@ The game continues with alternating day and night phases until either all the we
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Project Motivation](#motivation)
 - [Game Instructions](#instructions)
 - [Contributors](#contributors)
 
@@ -64,7 +63,7 @@ OpenAI_Base = < your OpenAI_Base >
 OpenAI_Version = < your OpenAI_Version >
 ```
 
-### Project Motivation
+
 
 
 
