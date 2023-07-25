@@ -777,7 +777,7 @@ class Game:
           # currName = moderator.query(QUERY.format(history,names))
           
           if(votersN>2):
-            currName = moderator.query(QUERY.format('\n'.join(lastFew[:2]),names),name=queryName)
+            currName = moderator.query(QUERY.format('\n'.join(lastFew[-2:]),names),name=queryName)
             if("End Conversation" in currName): break
             try:
               curr = self.ids[currName]
@@ -788,16 +788,16 @@ class Game:
               except:
                 break
           else:
-            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:2])),name='QUERY_GROUPCONV_END'))
+            EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[-2:])),name='QUERY_GROUPCONV_END'))
             if(dialogues+EndScore>10): break
             if(dialogues==4): break 
             curr = voters[1-voters.index(curr)]
           
           if(night):
-            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew[:3]), remainingTownfolk, remainingWerewolf)
+            reply = self.agents[curr].nightconv(context[curr], '\n'.join(lastFew[-3:]), remainingTownfolk, remainingWerewolf)
           else:
             remaining = remainingWerewolf if self.werewolf[curr] else remainingTownfolk
-            reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew[:3]), remaining)
+            reply = self.agents[curr].groupconv(self.kicked, context[curr], '\n'.join(lastFew[-3:]), remaining)
 
           if(prev!=curr):
             try:
@@ -996,12 +996,12 @@ class Game:
         log(reply)
         lastFew.append(reply)
         conv_n += 1
-        EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[:2])),name='QUERY_GROUPCONV_END'))
+        EndScore = extractImportance(moderator.query(QUERY_GROUPCONV_END.format('\n'.join(lastFew[-2:])),name='QUERY_GROUPCONV_END'))
         if(conv_n+EndScore>10): break
         history = history + '\n' + reply
         self.text_content.append(reply)
         curr = 1 - curr
-        reply = agents[curr].talk(agents[1-curr].name, reply, '\n'.join(lastFew[:3]), self.contexts[names[curr]][names[1-curr]], conv_n)
+        reply = agents[curr].talk(agents[1-curr].name, reply, '\n'.join(lastFew[-3:]), self.contexts[names[curr]][names[1-curr]], conv_n)
         if(reply is None): break
         try:
           replyMsg = extract_dialogue(reply)
