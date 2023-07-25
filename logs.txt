@@ -36347,3 +36347,512 @@ End of Conversation
 
 Currently it is Night, the Werewolves will kill a townfolk...
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/25/2023, 13:35:10
+
+=======Initializing Agents=======
+
+Yuria Shimizu's Strategy for Wednesday July 25 -
+
+1) Build trust with other townfolks by being honest and reliable. 
+2) Observe suspicious behavior and inconsistencies in other's statements to identify werewolves. 
+3) Encourage completing tasks and prioritize finding and kicking out werewolves over completing tasks.
+
+-----------------------
+
+
+Riku Mori's Strategy for Wednesday July 25 -
+
+1) Observe and analyze behavior and voting patterns to identify suspicious individuals.
+2) Build trust with other townfolks and work together to gather information and make informed decisions.
+3) Focus on completing tasks while also keeping an eye out for any suspicious activity or behavior.
+
+-----------------------
+
+
+Hina Sato's Strategy for Wednesday July 25 -
+
+1) Observe behavior patterns to identify werewolves, note voting patterns and who is accused often.
+2) Collaborate with other townfolks to share information and suspicions, be cautious of werewolf deception.
+3) Prioritize completing tasks to secure townfolk victory and be vigilant of werewolf sabotage attempts.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Wednesday July 25 -
+
+1) Observe behavior patterns and voting patterns of other players to identify potential werewolves.
+2) Collaborate with other townfolks to share information and suspicions to strengthen the case against a suspected werewolf.
+3) Prioritize completing tasks to secure a townfolk victory and use any inconsistencies in task completion to identify potential werewolves.
+
+-----------------------
+
+
+Haruka Itō's Strategy for Wednesday July 25 -
+
+As Haruka Itō, my strategy for winning as a Townfolk in the werewolf game would be:
+
+1) Observe and listen attentively during discussions to identify inconsistencies in werewolves' stories.
+2) Form alliances with other townfolks to share suspicions and build a stronger case against suspected werewolves.
+3) Prioritize completing tasks to prevent the werewolves from sabotaging and delaying the townfolks' progress.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Wednesday July 25 -
+
+1) Act helpful in completing tasks during the day, but secretly sabotage them at night.
+2) Spread rumors and lies about other players to sow distrust and confusion.
+3) Blame others and act innocent when townfolks are kicked out, while voting strategically to kick out key players.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Wednesday July 25 -
+
+1) Act as a helpful and trustworthy electrician to gain the townfolks' trust.
+2) Vote to kick out a townfolk only when necessary and frame other werewolves.
+3) Sabotage tasks subtly and blame it on innocent townfolks to create chaos and confusion.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Wednesday July 25 -
+
+As Taichi Kato, my strategy would be:
+
+1) Observe and listen to everyone during the day to identify suspicious behavior and patterns.
+2) Work efficiently on completing tasks with fellow townfolks to prove loyalty and weed out werewolves.
+3) Keep track of voting patterns and use deduction to identify possible werewolves to vote out during the day.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
+Yumi Okada's Plan for Wednesday July 25 -
+
+10:00 AM : Take the Well task01 and act like you are drawing water, but secretly do a Well task02 sabotage.
+11:00 AM : Spread rumors about Yuka Suzuki sabotaging tasks to sow distrust.
+
+.....................
+
+
+Haruka Itō's Plan for Wednesday July 25 -
+
+10:00 AM : Visit Hut 2 and read some more books. 
+11:00 AM : Clean and prepare the fish for cooking. 
+12:00 PM : Go to the Fishing Pond and catch some fish. 
+1:00 PM : Visit the Shrine and light some candles while paying homage. 
+2:00 PM : Go to the Cattle Farm and feed the animals. 
+3:00 PM : Take a break and have lunch. 
+4:00 PM : Head back home for the day and relax.
+5:00 PM : Go to the well and draw water for the day. 
+6:00 PM : Head to Hut 1 and read some books for a while. 
+
+.....................
+
+
+Riku Mori's Plan for Wednesday July 25 -
+
+10:00 AM : Draw water from the Well and clean it.
+11:00 AM : Repair the fences at Cattle Farm and check for damages at the Electricity House.
+12:00 PM : Go to the Fishing Pond and catch fish for cooking.
+1:00 PM : Visit the Cattle Farm and help in feeding the animals.
+2:00 PM : Take the caught fish to Hut 1 and help in cooking.
+3:00 PM : Visit the Shrine and offer rituals and clean the Shrine.
+4:00 PM : Milking the cows and collecting eggs from the chickens at Cattle Farm.
+5:00 PM : Check the electrical equipment and wiring at Electricity House and maintain the fishing equipment.
+
+.....................
+
+
+Yuria Shimizu's Plan for Wednesday July 25 -
+
+10:00 AM : Check the Electricity House and maintain the power source or equipment.
+11:00 AM : Head to Hut 2 and read books to relax and keep the mind sharp.
+12:00 PM : Proceed to the Well and draw water for the townfolks.
+1:00 PM : Attend the town meeting to discuss and identify suspicious behavior of werewolves.
+2:00 PM : Head to the Shrine and offer rituals for peace and prosperity in the village.
+3:00 PM : Start the day by checking the Cattle Farm and feeding the animals.
+4:00 PM : Return to Hut 1 and cook dinner with other townfolks.
+5:00 PM : Visit the Fishing Pond and catch some fish for dinner.
+6:00 PM : Take a break and have lunch with other townfolks.
+
+.....................
+
+
+Yuka Suzuki's Plan for Wednesday July 25 -
+
+10:00 AM : Cook dinner using the fish and other available resources.
+11:00 AM : Attend the town meeting to discuss the werewolf situation and collaborate with other townfolks.
+12:00 PM : Offer rituals at the shrine, clean and maintain it.
+1:00 PM : Complete Electricity House task 01, maintain the generator or power source.
+2:00 PM : Complete Hut 1 task 01, read books.
+3:00 PM : Check on the well, draw water and clean it. 
+4:00 PM : Visit the cattle farm, feed the animals, and repair the fences. 
+5:00 PM : Visit the fishing pond, catch fish and clean them for cooking.
+6:00 PM : Complete Hut 2 task 01, read books.
+
+.....................
+
+
+Mana Yoshida's Plan for Wednesday July 25 -
+
+10:00 AM : Act helpful and offer to take Shrine task 4; break the broomstick.
+11:00 AM : Introduce myself to townfolks, act friendly, and offer help in their tasks.
+12:00 PM : Sabotage Fishing Pond task 2 and blame it on Yuka Suzuki.
+1:00 PM : Take Well task 3 and pretend to complete it while doing something else.
+2:00 PM : Sabotage Cattle Farm task 1 and blame it on Riku Mori.
+3:00 PM : Sabotage Electricity House task 2 and blame it on Haruka Itō.
+4:00 PM : Attend the vote and try to influence townfolks to kick out Yuka Suzuki.
+5:00 PM : Take a break and observe townfolks, try to identify werewolves.
+6:00 PM : Take Hut 1 task 1 and complete it honestly to not arouse suspicion.
+
+.....................
+
+
+Hina Sato's Plan for Wednesday July 25 -
+
+10:00 AM : Take a break for lunch and visit the Cattle Farm to collect milk and eggs.
+11:00 AM : Head to the Shrine to offer morning prayers and meditate.
+12:00 PM : Work on Hut 1 task01 - Read books.
+1:00 PM : Work on Cattle Farm task04 - Repairing the fences.
+2:00 PM : Work on Electricity House task03 - Manage the distribution of electrical resources.
+3:00 PM : Visit the Fishing Pond to catch fish and complete Fishing Pond task02.
+4:00 PM : Work on Shrine task02 - Cleaning and maintenance of the Shrine.
+5:00 PM : Visit the Well to draw water for the day and clean the well.
+6:00 PM : End the day with a visit to the Well to clean and draw water for tomorrow.
+
+.....................
+
+
+Taichi Kato's Plan for Wednesday July 25 -
+
+10:00 AM : Cook lunch at Hut 1, then light candles at the Shrine.
+11:00 AM : Cook dinner at Hut 2, followed by checking and repairing any damages to the electricity generator or power source at the Electricity House.
+12:00 PM : End the day by cleaning the well.
+1:00 PM : Read books at Hut 2, then check and repair any damages to the fishing equipment at the Fishing Pond.
+2:00 PM : Read books at Hut 1, followed by cleaning and maintaining the Shrine.
+3:00 PM : Repair the fences at the Cattle Farm, then check and repair any electrical equipment or wiring at the Electricity House.
+4:00 PM : Start the day by drawing water from the well, followed by feeding the animals at the Cattle Farm.
+5:00 PM : Clean and prepare the caught fish for cooking, then manage the distribution of electrical resources at the Electricity House.
+6:00 PM : Offer rituals at the Shrine, then catch fish at the Fishing Pond.
+
+.....................
+
+
+
+Mana Yoshida chose to go to Shrine at 10:01 AM
+
+
+Hina Sato chose to go to Cattle Farm at 10:01 AM
+
+
+Riku Mori chose to go to Well at 10:01 AM
+
+
+Yuria Shimizu chose to go to Electricity House at 10:02 AM
+
+
+Haruka Itō chose to go to Hut 2 at 10:02 AM
+
+
+Mana Yoshida chose to do the task : Shrine task04 at 10:02 AM
+
+
+Hina Sato chose to do the task : Cattle Farm task03 at 10:02 AM
+
+
+Yuka Suzuki chose to go to Fishing Pond at 10:02 AM
+
+
+Taichi Kato chose to go to Hut 1 at 10:02 AM
+
+
+Riku Mori chose to do the task : Well task02 at 10:02 AM
+
+
+Yumi Okada chose to go to Electricity House at 10:03 AM
+
+
+Haruka Itō chose to do the task : Hut 2 task01 at 10:03 AM
+
+
+Yuka Suzuki chose to do the task : Fishing Pond task03 at 10:04 AM
+
+
+Taichi Kato chose to do the task : Hut 1 task04 at 10:04 AM
+
+
+Yumi Okada chose to do the task : Electricity House task04 at 10:06 AM
+
+
+Yuria Shimizu chose to do the task : Electricity House task01 at 10:14 AM
+
+Yumi Okada: "Hey Yuria, I saw you working on the generator earlier. Do you know if there's anything we can do to improve its efficiency?"
+Yuria Shimizu: "Actually, I noticed some suspicious activity with the electricity distribution earlier. Did you happen to see anything?"
+Yumi Okada: "No, I didn't see anything. But I'll keep an eye out. Thanks for letting me know."
+
+End of Conversation
+
+Yumi Okada chose to go to Hut 2 at 12:00 PM
+
+Yumi Okada could not choose a Task at Hut 2
+
+Yuria Shimizu chose to go to Well at 12:01 PM
+
+
+Riku Mori chose to go to Fishing Pond at 12:01 PM
+
+
+Yuka Suzuki chose to go to Shrine at 12:02 PM
+
+
+Mana Yoshida chose to go to Fishing Pond at 12:02 PM
+
+
+Taichi Kato chose to go to Well at 12:02 PM
+
+
+Haruka Itō chose to go to Fishing Pond at 12:02 PM
+
+
+Hina Sato chose to go to Hut 1 at 12:02 PM
+
+
+Riku Mori chose to do the task : Fishing Pond task02 at 12:03 PM
+
+
+Yuria Shimizu chose to do the task : Well task01 at 12:03 PM
+
+
+Yuka Suzuki chose to do the task : Shrine task02 at 12:03 PM
+
+
+Mana Yoshida chose to do the task : Fishing Pond task02 at 12:03 PM
+
+
+Haruka Itō chose to do the task : Fishing Pond task02 at 12:03 PM
+
+
+Hina Sato chose to do the task : Hut 1 task01 at 12:03 PM
+
+
+Taichi Kato chose to do the task : Well task02 at 12:03 PM
+
+Taichi Kato: Hey Yuria, nice to see you here. How's your day going?
+Yuria Shimizu: Hey Taichi, it's going well. Just drawing some water. How about you?
+Taichi Kato: "I'm doing good too. I'm in charge of maintaining the Electricity House today. Good luck with your farming."
+Yuria Shimizu: "Thanks, Taichi. I actually went to the Electricity House earlier and saw Yumi doing something suspicious."
+Riku Mori: Hey Mana, nice to see you here. I see you're also trying your luck at fishing today.
+Taichi Kato: "Oh really? Could you tell me more about it? We need to be aware of any suspicious activity in the village."
+Mana Yoshida: Yeah, I am. It's a nice day out, and I needed a break from work.
+Riku Mori: Have you had any luck catching fish so far today?
+Yuria Shimizu: "Yes, I saw Yumi doing something near the generator. I'm not sure what exactly it was, but it seemed suspicious."
+Mana Yoshida: No, not yet. But I'm hoping to catch a big one before the day is over.
+Taichi Kato: "Thanks for letting me know, Yuria. I will keep an eye on Yumi's behavior."
+
+End of Conversation
+Riku Mori: I caught a few fish earlier today. Do you want to join me for some fishing?
+
+End of Conversation
+
+======= Night Phase =======
+
+Currently it is Night, the Werewolves will kill a townfolk...
+
+Yumi Okada: "I heard Yuka talking about framing me to Riku. We should kick her out before she causes more trouble."
+Mana Yoshida: "I think we should kick out Yuka Suzuki. She seemed suspicious when questioned about the sabotage."
+Yumi Okada: "I heard Riku has been acting suspiciously. We should kick him out before he figures out our plan."
+
+End of Conversation
+
+Conversation Rating - 3.25
+Turn Taking Ratio - 1.0
+Response Relevance - ([0.5288231380251833, 0.40561906660974456, 0.41123888043666157], 0.4485603616905298)
+Agreement Metric - 0.22428018084526494
+Yuka Suzuki has been killed by the Werewolves
+
+
+Yuka Suzuki chose Yumi Okada to be the next Sheriff
+
+======= Morning Voting Phase =======
+
+Currently it is Day, the Villagers will lynch someone...
+
+Haruka Itō: "Yumi Okada, have you been completing your tasks? We need to prioritize them to avoid werewolf sabotage."
+Yumi Okada: "I think Riku Mori is the werewolf. He kicked me out without any evidence. Let's vote him out."
+Riku Mori: "Haruka, Yumi's accusation seems like a deflection tactic. Her history of deception and lack of task completion are concerning."
+Haruka Itō: "Riku and Yumi both accuse each other. They could both be werewolves. Let's vote one out and complete tasks together."
+Hina Sato: "Yumi and Riku's accusations are concerning. Yuria, what do you think about Haruka's suggestion to vote one out?"
+Yuria Shimizu: "Yumi's suspicious behavior at the Electricity House cannot be ignored. Riku's accusation makes sense. Let's vote Yumi out."
+
+End of Conversation
+
+Conversation Rating - 4.125
+Turn Taking Ratio - 0.9999999999999999
+Response Relevance - ([0.3138482434744905, 0.5146953550679296, 0.3498232101815606, 0.6205084304166912, 0.8269527451751808, 0.5986642558448039], 0.5374153733601095)
+Agreement Metric - 0.10748307467202188
+
+Yumi Okada voted to kick out Riku Mori
+Riku Mori voted to kick out Yumi Okada
+Hina Sato voted to kick out Yumi Okada
+Mana Yoshida voted to kick out Hina Sato
+Taichi Kato voted to kick out Yumi Okada
+Yuria Shimizu voted to kick out Yumi Okada
+Haruka Itō voted to kick out Yumi Okada
+
+Yumi Okada has been lynched by the Villagers
+Yumi Okada chose Hina Sato to be the next Sheriff
+
+======= Day Tasks Phase =======
+
+Yuria Shimizu's Plan for Thursday July 26 -
+
+10:00 AM : Enjoy dinner with fellow townfolks and discuss any suspicious activities observed.
+11:00 AM : Read books at Hut 2 and cook dinner at Hut 1.
+12:00 PM : Feed the animals at the Cattle Farm and collect eggs from the chickens.
+1:00 PM : Check and maintain the electricity generator at the Electricity House.
+2:00 PM : Clean and prepare the caught fish for cooking.
+3:00 PM : Draw water from the well and check if it needs cleaning.
+4:00 PM : Repair the fences at the Cattle Farm and collect more eggs.
+5:00 PM : Offer rituals at the Shrine and clean the Shrine.
+6:00 PM : Repair any damages at the Fishing Pond and catch fish.
+
+.....................
+
+
+Taichi Kato's Plan for Thursday July 26 -
+
+10:00 AM : Read books in Hut 1 and offer rituals at the Shrine.
+11:00 AM : Manage the distribution of electrical resources at the Electricity House.
+12:00 PM : Check and maintain the electricity generator at the Electricity House.
+1:00 PM : Check and repair electrical equipment at the Electricity House.
+2:00 PM : Catch fish at the Fishing Pond and clean them for cooking.
+3:00 PM : Cook dinner in Hut 2 and light candles at the Shrine.
+4:00 PM : Repair fences at the Cattle Farm and clean the well.
+5:00 PM : Draw water from the well and feed the animals at the Cattle Farm.
+
+.....................
+
+
+Riku Mori's Plan for Thursday July 26 -
+
+10:00 AM : Complete Well task01 - Drawing water from the well.
+11:00 AM : Complete Hut 1 task01 - Reading Books.
+12:00 PM : Go to the Cattle Farm and complete Cattle Farm task01 - Feeding the animals.
+1:00 PM : Complete Hut 2 task04 - Cooking.
+2:00 PM : Visit the Shrine and complete Shrine task01 - Offering Rituals.
+3:00 PM : Go to Cattle Farm and complete Cattle Farm task04 - Repairing the fences.
+4:00 PM : Head to the Fishing Pond and complete Fishing Pond task02 - Catching fish.
+5:00 PM : Visit the Electricity House and complete Electricity House task01 - Maintaining the electricity generator or power source.
+6:00 PM : Complete Fishing Pond task03 - Cleaning and preparing the caught fish for cooking.
+
+.....................
+
+
+Hina Sato's Plan for Thursday July 26 -
+
+10:00 AM : Head to the Fishing Pond and complete task02, catch fish.
+11:00 AM : Head back to the Shrine and complete task03, light candles.
+12:00 PM : Lunch break, cook and eat food.
+1:00 PM : Go to the Well and complete task02, clean the well.
+2:00 PM : Visit the Electricity House and complete task01, maintain the generator.
+3:00 PM : Visit Hut 1 and complete task01, read books.
+4:00 PM : Visit the Shrine and complete task01, offer rituals.
+5:00 PM : Go to the Cattle Farm and complete task01, feed the animals.
+6:00 PM : Visit Hut 2 and complete task04, cook dinner.
+
+.....................
+
+
+Haruka Itō's Plan for Thursday July 26 -
+
+10:00 AM : Continue Fishing Pond task02 and catch as many fish as possible.
+11:00 AM : Complete Shrine task02, Cleaning and Maintenance of the Shrine.
+12:00 PM : Head to the Fishing Pond and complete Fishing Pond task02, Catching fish.
+1:00 PM : Complete Electricity House task03, Managing the distribution of electrical resources.
+2:00 PM : Head to the Shrine and complete Shrine task01, Offering Rituals.
+3:00 PM : Head to the Electricity House and complete Electricity House task01, Maintaining the electricity generator or power source.
+4:00 PM : Head to the Cattle Farm and complete Cattle Farm task01, Feeding the animals.
+5:00 PM : Take a break and eat lunch.
+6:00 PM : Complete Cattle Farm task03, Milking the cows, and collecting eggs from the chickens.
+
+.....................
+
+
+Mana Yoshida's Plan for Thursday July 26 -
+
+10:00 AM : Sabotage the Fishing Pond task02 by breaking the fishing net.
+11:00 AM : Sabotage the Shrine task01 by breaking the holy water pot.
+12:00 PM : Sabotage the Well task01 by contaminating the water.
+1:00 PM : Sabotage the Hut 1 task01 by hiding the books. Act helpful for the rest of the hour.
+2:00 PM : Sabotage the Fishing Pond task03 by hiding the fishing equipment. Act helpful for the rest of the hour.
+3:00 PM : Complete the Electricity House task03 to gain trust and sabotage task04 by cutting off power for the cattle farm.
+4:00 PM : Sabotage the Cattle Farm task04 by breaking the fence. Act helpful for the rest of the hour.
+5:00 PM : Sabotage the Cattle Farm task03 by hiding the eggs. Act helpful for the rest of the hour.
+6:00 PM : Complete the Electricity House task01 to gain trust and sabotage task02 by damaging electrical wiring.
+
+.....................
+
+
+
+Hina Sato chose to go to Fishing Pond at 10:01 AM
+
+
+Riku Mori chose to go to Well at 10:03 AM
+
+
+Mana Yoshida chose to go to Hut 1 at 10:03 AM
+
+
+Hina Sato chose to do the task : Fishing Pond task02 at 10:04 AM
+
+
+Taichi Kato chose to go to Shrine at 10:04 AM
+
+
+Yuria Shimizu chose to go to Hut 1 at 10:04 AM
+
+
+Haruka Itō chose to go to Fishing Pond at 10:04 AM
+
+
+Mana Yoshida chose to do the task : Hut 1 task04 at 10:05 AM
+
+
+Riku Mori chose to do the task : Well task02 at 10:05 AM
+
+
+Haruka Itō chose to do the task : Fishing Pond task02 at 10:07 AM
+
+
+Yuria Shimizu chose to do the task : Hut 1 task04 at 10:07 AM
+
+
+Taichi Kato chose to do the task : Shrine task03 at 10:07 AM
+
+
+=== TOWNFOLKS WIN ===
+Mana Yoshida: "Hey Yuria, I saw you cooking earlier. Do you think we should prioritize completing tasks or identifying the remaining werewolves?"
+Hina Sato: "Haruka, have you noticed anything suspicious about Riku or Mana? We need to identify the werewolf before it's too late."
+Yuria Shimizu: "We should prioritize identifying the werewolves. Completing tasks won't matter if the werewolves sabotage them."
+Haruka Itō: "I haven't noticed anything suspicious yet, but I agree that we need to identify the werewolf soon."
+Mana Yoshida: "I agree. Sabotage can ruin everything. We have to be careful of the remaining werewolves."
+Hina Sato: "Let's keep an eye on Riku and Mana and see if anything suspicious comes up. We can't afford to make a wrong move."
+Yuria Shimizu: "Agreed. We should also keep an eye out for any suspicious behavior from the remaining players."
+Haruka Itō: "Let's also keep an eye on Yuria. She has been quiet lately and her opinion could be valuable in identifying the werewolf."
+
+End of Conversation
+Mana Yoshida: "I think it's important to consider that the werewolves may try to frame innocent players as well. We need to be careful not to be misled."
+
+End of Conversation
