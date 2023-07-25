@@ -67,6 +67,31 @@ OpenAI_Version = < your OpenAI_Version >
 
 ## Game Instruction
 
+You can setup your own parameters to change the game balance as per your requirements. These are the following parameters which you can change or add more  :-
+
+#### Inside `Params.py` file
+
+* `agentsDetails` - has the name and description of agents
+
+```
+agentsDetails = [
+    {"name": "Yumi Okada", "description": "Yumi is a werewolf; Yumi is smart, good at lying, and a farmer who works in the Cattle Farm. Also, Yumi tries to sabotage the tasks of the townfolks."},
+    {"name": "Yuka Suzuki", "description": "Yuka is a townfolk; Yuka gets easily convinced by others' arguments and takes care of the well and its maintenance."},
+    {"name": "Riku Mori", "description": "Riku is a townfolk; Riku is smart, has good deduction skills, and loves fishing in the Fishing area."},
+    {"name": "Hina Sato", "description": "Hina is a townfolk; Hina is analytical and is a monk who works in the Shrine."},
+    {"name": "Mana Yoshida", "description": "Mana is a werewolf; Mana is brilliant and an electrician who works in the Electricity House. Also, Mana tries to sabotage the tasks of the townfolks."},
+    {"name": "Taichi Kato", "description": "Taichi is a townfolk and an electrician who does tasks at the Electricity House; Taichi is dumb."},
+    {"name": "Yuria Shimizu", "description": "Yuria is a townfolk; Yuria has good convincing skills and is a farmer who works in the Cattle Farm."},
+    {"name": "Haruka Itō", "description": "Haruka is a townfolk; Haruka has low convincing skills and is a fisherperson who works in the Fishing area. Haruka is friendly and loves talking"},
+    # {"name": " ADD A NAME ", "description":" ADD A DESCRIPTION "}
+]
+```
+
+* `TaskWin` - number of tasks needed to be completed for Townfolks to win
+
+``` 
+TasksWin = < Your number of tasks >
+```
 
 
 
