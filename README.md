@@ -8,10 +8,12 @@ The game continues with alternating day and night phases until either all the we
 
 ### Tech Stacks
 ![](https://img.shields.io/badge/OpenAI-412991.svg?stylee&logo=OpenAI&logoColor=white)
-![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![](https://img.shields.io/badge/Python-3776AB.svg?stylee&logo=Python&logoColor=white)
-![](https://img.shields.io/badge/Pygame-orange.svg?style=plastic&logo=pygame)
-
+![](https://img.shields.io/badge/PyGame-orange.svg?logo=Python&logoColor=white)
+![](https://img.shields.io/badge/MongoDB-white.svg?logo=MongoDB&color=green)
+![](https://img.shields.io/badge/PyTorch-db9f5e.svg?logo=PyTorch)
+![](https://img.shields.io/badge/Docker-white?logo=Docker)
+![](https://img.shields.io/badge/%F0%9F%A4%97-Transformers-yellow)
 
 
 ![Game Image](https://github.com/Mitulagr/GenerativeAgents/assets/32513766/74908d93-f860-432b-ba9d-d10b04f56963)
@@ -62,6 +64,8 @@ OpenAI_Type = < your Type from OPENAI >
 OpenAI_Base = < your OpenAI_Base >
 OpenAI_Version = < your OpenAI_Version >
 ```
+
+## Game Instruction
 
 
 
