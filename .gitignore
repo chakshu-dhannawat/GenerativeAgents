@@ -1,6 +1,6 @@
 logs.txt
 usage.json
 **/__pycache__/
-.env
+Config/.env
 Logs
 requirements.txt

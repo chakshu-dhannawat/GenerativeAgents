@@ -6,7 +6,7 @@ from Params import agentsDetails
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+load_dotenv('Config/.env')
 
 # MongoDB connection [MongoDB接続]
 client = MongoClient(os.getenv('MongoDB_ID'))
