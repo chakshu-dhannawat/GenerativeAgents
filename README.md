@@ -26,6 +26,7 @@ The game continues with alternating day and night phases until either all the we
 - [Configuration](#configuration)
 - [Game Instructions](#gameinstructions)
 - [Contributors](#contributors)
+- [Acknowledgements](#acknowledgements)
 
 
 ## Installation
@@ -93,6 +94,15 @@ agentsDetails = [
 TasksWin = < Your number of tasks >
 ```
 
+You can go through the code and change other parameters too but you have to be careful as you need to change multiple files and occurances.
+
+## Contributors
+
+<br/>
+
+<a href="https://github.com/Mitulagr/GenerativeAgents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Mitulagr/GenerativeAgents" />
+</a>
 
 
 
