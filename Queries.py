@@ -238,7 +238,7 @@ The werewolf tries to maintain their innocence while deflecting suspicion. Other
 Context of Remaining Players in {}'s Memory -
 {}
 
-Here is a snippet from the Dialogue History:
+Here is a snippet from the Dialogue History (last dialogue is the most recent):
 {}
 
 These Players remain in the village - 
