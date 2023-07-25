@@ -94,15 +94,16 @@ agentsDetails = [
 TasksWin = < Your number of tasks >
 ```
 
-You can go through the code and change other parameters too but you have to be careful as you need to change multiple files and occurances.
+You can go through the code and change other parameters too, but you must be careful as you need to change multiple files and occurrences.
 
 ## Contributors
 
 <br/>
 
-<a href="https://github.com/Mitulagr/GenerativeAgents/graphs/contributors">
+<a href="">
   <img src="https://contrib.rocks/image?repo=Mitulagr/GenerativeAgents" />
 </a>
+
 
 
 
