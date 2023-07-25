@@ -24,7 +24,7 @@ The game continues with alternating day and night phases until either all the we
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Game Instructions](#instructions)
+- [Game Instructions](#gameinstructions)
 - [Contributors](#contributors)
 
 
