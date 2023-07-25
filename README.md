@@ -6,9 +6,11 @@
 
   <p align="center">
     "Werewolves of Miller's Hollow" is a popular social deduction game where players are assigned roles as townfolks, werewolves, or special characters, and the goal is to either eliminate all the werewolves or have the werewolves outnumber the villagers or complete all the assigned tasks. 
-
+  </p>
+  <p>
     During the game, players participate in a series of day and night phases. During the night, the werewolves choose a villager to eliminate, and certain special characters may perform their unique abilities. During the day, the surviving players discuss and vote on who they believe is a werewolf. The player with the most votes is "lynched" and removed from the game. 
-
+  </p>
+  <p>
     The game continues with alternating day and night phases until either all the werewolves are eliminated, or the werewolves outnumber the villagers or util all the villagers complete all the tasks. It requires strategy, deduction, and persuasive skills to deceive or uncover the identities of the werewolves.
   </p>
 </div>
