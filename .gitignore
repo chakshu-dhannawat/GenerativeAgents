@@ -3,4 +3,3 @@ usage.json
 **/__pycache__/
 Config/.env
 Logs
-requirements.txt
