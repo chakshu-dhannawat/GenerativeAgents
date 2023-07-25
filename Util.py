@@ -1,3 +1,6 @@
+# This file contains functions related to Plan Extraction, Plan Execution, and Plan Evaluation, Memory Retrieval, and Dialogue Generation.
+# [このファイルには、プラン抽出、プラン実行、プラン評価、メモリ検索、ダイアログ生成に関する関数が含まれています。]
+
 from GPT import GPT
 import re
 from Graph import Graph,town
@@ -42,8 +45,6 @@ def extractPlan(hourly):
       except:
         pass
 
-    # return plan
-    # TODO
     return shuffle_plan(plan)
 
 def getNextDay(today):
@@ -58,10 +59,6 @@ def timeKey(time_string):
     return f"{hours}:{rest}"
 
 def printPlan(plan,name,day):
-    # items = re.split(r'\d+\)', plan)
-    # items = [item.strip() for item in items if item.strip()]
-    # for i,item in enumerate(items):
-    #   log(f"{i+1})",item)
     planString = f"{name}'s Plan for {day} -\n\n"
     for key in plan.keys():
        planString += f"{key} : {plan[key]}\n"
@@ -87,7 +84,6 @@ def getTasks(hub,game,werewolf=False):
       tasksList = [node for node in nodes if "task" in node and hub in node]
     else:
       tasksList = [node for node in nodes if "task" in node and hub in node and "Sabotage" not in TASK_EMOJI_MAP[node]] 
-    # tasksList = [task for i,task in enumerate(tasksList) if not game.taskOccupied[hub][i]]
     for i,node in enumerate(tasksList):
       tasks = tasks + f"{i+1}) " + node + " - " + nodes[node] + '\n'
     return tasks,tasksList
@@ -108,12 +104,6 @@ def getPeople():
       people = people + agentsDetails[i]['name'] + " - " + agentsDetails[i]['description'] + '; '
     return people
 
-# def getNames():
-#     people = ""
-#     for i in range(len(agentsDetails)):
-#       people = people + agentsDetails[i]['name'] + '; '
-#     return people
-
 def getMemories(stream, n=100):
     #TODO: Retrieve using timestamp
     if(len(stream)>n): stream = stream[-n:]
@@ -125,10 +115,6 @@ def getMemories(stream, n=100):
     return memories
 
 def extractHub(output):
-    # try:
-    #   a = nodes[output]
-    #   return output
-    # except:
     for node in hubs:
       if(node in output): return node 
     return "Tavern"
@@ -164,7 +150,6 @@ def getRetrievedMemories(stream):
 def getResponseRating(dialogue, response, context, agent1, agent2):
   gpt = GPT()
   rating = gpt.query(QUERY_EVALUATION_METRICS.format(agent2, agent2, agent1, context,agent1, dialogue, agent2, response),name='QUERY_EVALUATION_METRICS')
-  # log(f"Dialogue Rating:\n{rating}")
   lines = rating.split('\n')
   ratings = []
   for line in lines:
@@ -173,25 +158,9 @@ def getResponseRating(dialogue, response, context, agent1, agent2):
       except:
         pass
   average_rating = sum(ratings) / len(ratings)
-  # log(f"Average Dialogue Rating: {average_rating}")
   return average_rating
 
 def extract_dialogue(dialogue):
-    # dialogue = re.search(': "(.*?)"', string)
-    # if dialogue:
-    #     return dialogue.group(1)
-    # elif(re.search(':"(.*?)"', string)):
-    #     return re.search(':"(.*?)"', string).group(1)
-    # elif(re.search(": '(.*?)'", string)):
-    #     return re.search(": '(.*?)'", string).group(1)
-    # elif(re.search(":'(.*?)'", string)):
-    #     return re.search(":'(.*?)'", string).group(1)
-    # elif(re.search(":(.*?)", string)):
-    #     return re.search(":(.*?)", string).group(1)
-    # elif(re.search(": (.*?)", string)):
-    #     return re.search(": (.*?)", string).group(1)
-    # return None
-
     dialogue = dialogue.split(':')[1].strip()
     if(dialogue[0] in ['\'','"']):
       dialogue = dialogue[1:-1]
@@ -236,48 +205,31 @@ def getAllDetails():
 
 def outline_character(image):
   border_width = 2
-  # Convert the image to a surface with per-pixel alpha
   image = image.convert_alpha()
-
-  # Get the width and height of the image
   width, height = image.get_size()
-
-  # Create a blank surface with per-pixel alpha
   outline_image = pygame.Surface((width, height), pygame.SRCALPHA)
-
-  # Iterate over each pixel in the image
+  
   for x in range(width):
       for y in range(height):
-          # Get the color of the current pixel
           color = image.get_at((x, y))
-
-          # Check if the pixel is fully opaque
           if color.a > 0:
-              # Check if any of the neighboring pixels are transparent
               if (
                   get_alpha(image, x - 1, y) == 0
                   or get_alpha(image, x + 1, y) == 0
                   or get_alpha(image, x, y - 1) == 0
                   or get_alpha(image, x, y + 1) == 0
               ):
-                  # Set the color of the current pixel to the border color
                   color = RED
 
-          # Set the color of the current pixel on the outline image
           outline_image.set_at((x, y), color)
 
-  # Create a copy of the outline image to apply an additional border
   bordered_image = outline_image.copy()
 
-  # Iterate over each pixel in the outline image
   for x in range(width):
       for y in range(height):
-          # Get the color of the current pixel
           color = outline_image.get_at((x, y))
 
-          # Check if the pixel has the DARK_RED color
           if color == RED:
-              # Add an additional border to the pixel
               for i in range(border_width):
                   if (
                       x - i >= 0
