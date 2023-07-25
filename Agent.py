@@ -16,6 +16,7 @@ import emoji
 import time
 from Generate_voiceover import generate_voiceover
 
+
 # Agent initialization with a name, summary, and graphics 
 # [名前、概要、グラフィックを含むエージェントの初期化]
 class Agent():
