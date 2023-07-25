@@ -1,4 +1,5 @@
 # This file contains the class GPT which is responsible for THE API calls to OpenAI. Also updating the tokens used and logging the queries and responses.
+# [このファイルには、OpenAIのAPIコールを担当するクラスGPTが含まれています。また、使用されたトークンを更新し、クエリとレスポンスを記録します。]
 
 import os
 import openai
@@ -88,7 +89,7 @@ class GPT:
 
     return answer
 
-  # function to get the response from the GPT  
+  # Function to get the response from the GPT [GPTからの応答を取得する関数]
   def log(self, input, output, input_ts, output_ts, tokens, name):
     text = f'=====================================================\n{name}\n=====================================================\nResponse Time : {round(output_ts-input_ts,2)} s\nTokens Used : {tokens}\n\n------------\nQUERY [{time.strftime("%H:%M:%S", time.localtime(input_ts))}]\n------------\n{input}\n\n------------\nOUTPUT [{time.strftime("%H:%M:%S", time.localtime(output_ts))}]\n------------\n{output}\n\n\n\n'
     with lock:
