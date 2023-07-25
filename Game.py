@@ -808,7 +808,7 @@ class Game:
     planGen = False   
     first = True
     while True:
-      if(calendar.dt.hour in [12]): break
+      if(calendar.dt.hour in [2,14]): break
       if(calendar.dt.minute==0 and calendar.dt.hour%2==0):
         now = calendar.time
         if(not planGen):
