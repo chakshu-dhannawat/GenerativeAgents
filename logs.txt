@@ -35527,3 +35527,77 @@ Yuria Shimizu chose to do the task : Cattle Farm task04 at 10:03 AM
 
 Riku Mori chose to do the task : Electricity House task03 at 10:03 AM
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/25/2023, 10:10:09
+
+=======Initializing Agents=======
+
+Yuria Shimizu's Strategy for Wednesday July 25 -
+
+1) Observe werewolf voting patterns and identify potential suspects.
+2) Convince other townfolks to vote based on evidence and logic, not just emotions.
+3) Work with other townfolks to complete tasks efficiently and prevent werewolf sabotage.
+
+-----------------------
+
+
+Yuka Suzuki's Strategy for Wednesday July 25 -
+
+1) Observe behavior patterns of others and note suspicious activity.
+2) Try to form alliances with trusted townfolks to ensure better voting outcomes.
+3) Prioritize completing tasks to gain an advantage and eliminate werewolves' chance to sabotage.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Wednesday July 25 -
+
+As Taichi Kato, the dumb electrician in the town, my strategy to win as a Townfolk in the werewolf game would be:
+
+1) Observe behavior patterns and voting tendencies to identify suspicious players.
+2) Collaborate with other townfolks to narrow down suspects and vote strategically.
+3) Complete tasks as quickly and efficiently as possible to prevent werewolf sabotage.
+
+-----------------------
+
+
+Hina Sato's Strategy for Wednesday July 25 -
+
+1) Observe and analyze the voting patterns of the werewolves and the townfolks to identify potential suspects.
+2) Work closely with other townfolks to share information and discuss suspicions to increase chances of identifying werewolves.
+3) Keep track of completed tasks and be vigilant of any sabotages to ensure the townfolks win by completing all tasks.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Wednesday July 25 -
+
+1) Act friendly with townfolks and gain their trust; lie convincingly when accused of being a werewolf.
+2) Sabotage tasks subtly and blame it on other players; cause chaos and mistrust among townfolks.
+3) Vote for townfolks who are suspicious of me; manipulate other werewolf to vote with me.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Wednesday July 25 -
+
+1) Act like a helpful townfolk during the day and sabotage tasks at night as an electrician.
+2) Bluff as a detective to divert suspicion and accuse other players of being werewolves.
+3) Vote tactically to kick out townfolks while keeping werewolves safe and alive.
+
+-----------------------
+
+
+Riku Mori's Strategy for Wednesday July 25 -
+
+1) Observe voting patterns and behavior to deduce werewolf identity.
+2) Coordinate with trusted townfolks to complete tasks while keeping an eye on suspicious individuals.
+3) Use reverse psychology to trick werewolves into revealing their identity or voting for their own teammate.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+

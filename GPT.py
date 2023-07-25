@@ -18,7 +18,7 @@ from Params import PDF_Name
 from transformers import BertTokenizer, BertModel
 import torch
 
-load_dotenv()
+load_dotenv('Config/.env')
 lock = Lock()
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
