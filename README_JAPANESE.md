@@ -24,41 +24,41 @@
 
 ## 目次
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Game Instructions](#gameinstructions)
-- [Contributors](#contributors)
-- [Acknowledgements](#acknowledgements)
+- [インストール](#インストール)
+- [セットアップ](#セットアップ)
+- [ゲームの説明](#ゲームの説明)
+- [投稿者](#投稿者)
+- [謝辞](#謝辞)
 
 
-## Installation
+## インストール
 
-Fork the repository using the button at the top or [this link](https://github.com/Mitulagr/GenerativeAgents/fork).
+一番上のボタンを使ってリポジトリをフォークするか [this link](https://github.com/Mitulagr/GenerativeAgents/fork).
 
-Clone the repository by typing in the Terminal
+ターミナルで次のように入力して、リポジトリをクローンします。
 ```
 git clone https://github.com/< USERNAME >/GenerativeAgents.git
 ```
 
-Navigate inside the directory
+ディレクトリ内に移動する
 ```
 cd GenerativeAgents
 ```
 
-Install all the libraries by entering the following commands
+以下のコマンドを入力して、すべてのライブラリをインストールする。
 
 ```
 pip install -r requirements.txt
 ```
 
-Go to Config folder and create a `.env` file.
+Configフォルダに移動し、`.env` ファイルを作成する。
 
-Run the `Main.py` file
+Main.py`ファイルを実行する。
 
 
-## Configuration
+## セットアップ
 
-Setting up `.env` file
+.env`ファイルの設定
 
 ```
 MongoDB_ID = < your MongoDB url for connection >
@@ -68,13 +68,13 @@ OpenAI_Base = < your OpenAI_Base >
 OpenAI_Version = < your OpenAI_Version >
 ```
 
-## Game Instruction
+## ゲームの説明
 
-You can setup your own parameters to change the game balance as per your requirements. These are the following parameters which you can change or add more  :-
+ゲームバランスを変更するために独自のパラメータを設定することができます。以下のパラメータを変更または追加することができます。
 
-#### Inside `Params.py` file
+#### `Params.py` ファイルの中
 
-* `agentsDetails` - has the name and description of agents
+* `agentsDetails` - エージェントの名前と説明がある
 
 ```
 agentsDetails = [
@@ -90,15 +90,15 @@ agentsDetails = [
 ]
 ```
 
-* `TaskWin` - number of tasks needed to be completed for Townfolks to win
+* `TaskWin` - タウンフォークスの優勝に必要なタスク数
 
 ``` 
 TasksWin = < Your number of tasks >
 ```
 
-You can go through the code and change other parameters too, but you must be careful as you need to change multiple files and occurrences.
+しかし、複数のファイルやオカレンスを変更する必要があるため、注意が必要だ。
 
-## Contributors
+## 投稿者
 
 <br/>
 
@@ -108,9 +108,9 @@ You can go through the code and change other parameters too, but you must be car
 
 <br/>
 
-## Acknowledgement
+## 謝辞
 
-We would like to thank all the mentors for there valuable suggestions. Without them this project could never be the way it is. We all have learned a lot of skills in the course of this project. Their dedication and expertise have been pivotal in shaping our project's success, and we are deeply grateful for their constant encouragement and support. The knowledge and skills we have acquired under their guidance will undoubtedly have a lasting impact on our personal and professional growth. Thank you for being instrumental in making this journey a truly enriching and transformative experience for all of us.
+貴重なご指摘をいただいたすべてのメンターに感謝したい。彼らの存在なくして、このプロジェクトはあり得なかった。私たちは皆、このプロジェクトの過程で多くのスキルを学んだ。彼らの献身と専門知識は、私たちのプロジェクトを成功に導く上で極めて重要であり、彼らの絶え間ない励ましとサポートに深く感謝している。彼らの指導のもとで身につけた知識とスキルは、間違いなく私たちの個人的・職業的成長に永続的な影響を与えるだろう。この旅が、私たち全員にとって真に豊かで変容に満ちた経験となるよう尽力してくださったことに感謝します。
 
 
 
