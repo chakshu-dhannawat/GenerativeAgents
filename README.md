@@ -104,7 +104,7 @@ You can go through the code and change other parameters too, but you must be car
   <img src="https://contrib.rocks/image?repo=Mitulagr/GenerativeAgents" />
 </a>
 
-
+<br/>
 
 ## Acknowledgement
 
