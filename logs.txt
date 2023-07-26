@@ -36856,3 +36856,92 @@ End of Conversation
 Mana Yoshida: "I think it's important to consider that the werewolves may try to frame innocent players as well. We need to be careful not to be misled."
 
 End of Conversation
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+07/25/2023, 17:04:41
+
+=======Initializing Agents=======
+
+Yuka Suzuki's Strategy for Wednesday July 25 -
+
+1) Observe and analyze voting patterns to identify suspicious behavior.
+2) Build alliances with other townfolks and share information to increase chances of finding werewolves.
+3) Focus on completing tasks efficiently to avoid being sabotaged and increase chances of winning.
+
+-----------------------
+
+
+Hina Sato's Strategy for Wednesday July 25 -
+
+1) Observe and analyze voting patterns to identify werewolves.
+2) Build trust with other townfolks and confirm their innocence.
+3) Prioritize completing tasks to prevent werewolf sabotage and gain the townfolks' trust.
+
+-----------------------
+
+
+Yuria Shimizu's Strategy for Wednesday July 25 -
+
+1) Observe werewolf voting patterns and behavior at night to identify them.
+2) Contribute actively in day discussions and use good convincing skills to lead townfolks towards correct decisions.
+3) Focus on completing tasks to win as a townfolk and identify werewolves who sabotage tasks.
+
+-----------------------
+
+
+Riku Mori's Strategy for Wednesday July 25 -
+
+1) Observe voting patterns to identify werewolves and build a case against them.
+2) Use deductive reasoning to narrow down the list of suspected werewolves.
+3) Collaborate with trusted townfolks and complete tasks efficiently to gain their trust and flush out werewolves.
+
+-----------------------
+
+
+Haruka Itō's Strategy for Wednesday July 25 -
+
+1) I will actively participate in the discussions during the day to identify suspicious behavior and try to gather information about the werewolves.
+2) As a fisherperson, I will use my knowledge of the Fishing area to help complete tasks and prevent werewolf sabotage.
+3) I will focus on building alliances with other townfolks to increase our chances of identifying and kicking out the werewolves.
+
+-----------------------
+
+
+Yumi Okada's Strategy for Wednesday July 25 -
+
+1) Act friendly and helpful towards the townfolks to gain their trust.
+2) Sabotage tasks subtly and blame it on other players to divert suspicion.
+3) Use lies and manipulation to sway the townfolks' votes and protect other werewolves.
+
+-----------------------
+
+
+Taichi Kato's Strategy for Wednesday July 25 -
+
+As Taichi Kato, an electrician and a townfolk, my strategy to identify and kick out all werewolves in the village would be:
+
+1) Observe and analyze the voting patterns of the werewolves during the night, and identify any suspicious activities or voting trends. 
+2) Collaborate with other townfolks to complete tasks efficiently and identify any werewolf who is sabotaging the tasks.
+3) Keep track of who has been voted out and whether they were a werewolf or not. This helps to identify the werewolves and their tactics.
+
+-----------------------
+
+
+Mana Yoshida's Strategy for Wednesday July 25 -
+
+1) Pretend to be a helpful electrician and gain the trust of the townfolks.
+2) Target players who seem to be good at tasks and sabotage their progress.
+3) Bluff to convince others to vote out townfolks to gain their trust and shift suspicion away from the werewolves.
+
+-----------------------
+
+
+
+=======Initializing Game=======
+
+
+=======Werewolf Game=======
+
+
+======= Day Tasks Phase =======
+
