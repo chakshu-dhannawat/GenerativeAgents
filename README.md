@@ -4,7 +4,7 @@
 
 During the game, players participate in a series of day and night phases. During the night, the werewolves choose a villager to eliminate, and certain special characters may perform their unique abilities. During the day, the surviving players discuss and vote on who they believe is a werewolf. The player with the most votes is "lynched" and removed from the game. 
 
-The game continues with alternating day and night phases until either all the werewolves are eliminated, or the werewolves outnumber the villagers or util all the villagers complete all the tasks. It requires strategy, deduction, and persuasive skills to deceive or uncover the identities of the werewolves.
+The game continues with alternating day and night phases until either all the werewolves are eliminated, or the werewolves outnumber the villagers, or until all the villagers complete all the tasks. It requires strategy, deduction, and persuasive skills to deceive or uncover the identities of the werewolves.
 
 ### Tech Stacks
 ![](https://img.shields.io/badge/OpenAI-412991.svg?stylee&logo=OpenAI&logoColor=white)
