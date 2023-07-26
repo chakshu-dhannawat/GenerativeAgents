@@ -6,6 +6,8 @@ During the game, players participate in a series of day and night phases. During
 
 The game continues with alternating day and night phases until either all the werewolves are eliminated, or the werewolves outnumber the villagers, or until all the villagers complete all the tasks. It requires strategy, deduction, and persuasive skills to deceive or uncover the identities of the werewolves.
 
+### The code has Japanese comments for better understanding.
+
 ### Tech Stacks
 ![](https://img.shields.io/badge/OpenAI-412991.svg?stylee&logo=OpenAI&logoColor=white)
 ![](https://img.shields.io/badge/Python-3776AB.svg?stylee&logo=Python&logoColor=white)
@@ -110,3 +112,6 @@ You can go through the code and change other parameters too, but you must be car
 
 We would like to thank all the mentors for there valuable suggestions. Without them this project could never be the way it is. We all have learned a lot of skills in the course of this project. Their dedication and expertise have been pivotal in shaping our project's success, and we are deeply grateful for their constant encouragement and support. The knowledge and skills we have acquired under their guidance will undoubtedly have a lasting impact on our personal and professional growth. Thank you for being instrumental in making this journey a truly enriching and transformative experience for all of us.
 
+
+
+<hr>
