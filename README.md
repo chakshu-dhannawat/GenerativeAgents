@@ -1,6 +1,6 @@
 # GenerativeAgents - Werewolves of Miller's Hollow
 
-<a href="https://github.com/Mitulagr/GenerativeAgents/blob/master/README_JAPANESE.md">Japanese Readme</a> | [Simulation Video](https://drive.google.com/file/d/1uCw6dAqvbABtnKJIM2V4z2de2OBegIWQ/view?usp=sharing)
+<a href="https://github.com/Mitulagr/GenerativeAgents/blob/master/README_JAPANESE.md">Japanese Readme</a> | [Simulation Video](https://drive.google.com/file/d/1uCw6dAqvbABtnKJIM2V4z2de2OBegIWQ/view?usp=sharing) | [Research Paper](https://arxiv.org/abs/2304.03442)
 
 "Werewolves of Miller's Hollow" is a popular social deduction game where players are assigned roles as townfolks, werewolves, or special characters, and the goal is to either eliminate all the werewolves or have the werewolves outnumber the villagers or complete all the assigned tasks. 
 
@@ -125,6 +125,6 @@ You can go through the code and change other parameters too, but you must be car
 
 We would like to thank all the mentors for there valuable suggestions. Without them this project could never be the way it is. We all have learned a lot of skills in the course of this project. Their dedication and expertise have been pivotal in shaping our project's success, and we are deeply grateful for their constant encouragement and support. The knowledge and skills we have acquired under their guidance will undoubtedly have a lasting impact on our personal and professional growth. Thank you for being instrumental in making this journey a truly enriching and transformative experience for all of us.
 
-[Research Paper we referenced](https://arxiv.org/abs/2304.03442)
+We also thank the authors of the research paper, we got to learn a lot from the paper and that helped us make the project.
 
 <hr>
