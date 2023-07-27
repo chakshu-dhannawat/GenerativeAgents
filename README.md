@@ -1,6 +1,6 @@
 # GenerativeAgents - Werewolves of Miller's Hollow
 
-<a href="https://github.com/Mitulagr/GenerativeAgents/blob/master/README_JAPANESE.md">Japanese Readme</a> | [Simulation Video](https://drive.google.com/file/d/1uCw6dAqvbABtnKJIM2V4z2de2OBegIWQ/view?usp=sharing) | [Research Paper](https://arxiv.org/abs/2304.03442)
+<a href="https://github.com/Mitulagr/GenerativeAgents/blob/master/README_JAPANESE.md">Japanese Readme</a> | [Simulation Video](https://drive.google.com/file/d/1uCw6dAqvbABtnKJIM2V4z2de2OBegIWQ/view?usp=sharing) | [Research Paper Referenced](https://arxiv.org/abs/2304.03442)
 
 "Werewolves of Miller's Hollow" is a popular social deduction game where players are assigned roles as townfolks, werewolves, or special characters, and the goal is to either eliminate all the werewolves or have the werewolves outnumber the villagers or complete all the assigned tasks. 
 
