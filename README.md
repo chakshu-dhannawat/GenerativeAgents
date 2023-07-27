@@ -57,6 +57,17 @@ Go to Config folder and create a `.env` file.
 
 Run the `Main.py` file
 
+<hr>
+
+You can also pull the **Docker** image from [this link](https://hub.docker.com/r/harshagrawal523/werewolves-game-v5/tags)
+
+- To run the image run the following command
+
+```
+docker pull harshagrawal523/werewolves-game-v5:latest
+docker run -it -p 8080:8080 werewolves-game-v5
+```
+
 
 ## Configuration
 
